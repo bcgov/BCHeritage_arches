@@ -1,0 +1,27 @@
+{% extends "views/components/widgets/base.htm" %}
+{% load i18n %}
+
+{% block form %}
+<div class="row widget-wrapper">
+    <div class="form-group">
+        <label class="control-label widget-input-label" for="" data-bind="text:label"></label>
+        <!-- ko if: node -->
+        <i data-bind="css: {'ion-asterisk widget-label-required': node.isrequired}"></i>
+        <!-- /ko -->
+        <div class="col-xs-12">
+            <input type="text" style="max-width: 100px" data-bind="textInput: value, attr: {placeholder: placeholder, maxlength: maxLength, disabled: uneditable}" class="form-control input-lg widget-input">
+        </div>
+    </div>
+</div>
+{% endblock form %}
+
+{% block config_form %}
+<div class="node-config-item">
+    <div class="control-label">
+        {% trans "Disabled" %}
+    </div>
+    <div class="pad-no">
+        <div data-bind="component: { name: 'views/components/simple-switch', params: {value: uneditable, config:{label: '{% trans "Disable Editing" %}', subtitle: '{% trans "Prevent users from editing value" %}'}}}"></div>
+    </div>
+</div>
+{% endblock config_form %}

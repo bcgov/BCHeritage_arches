@@ -1,0 +1,68 @@
+{% load i18n %}
+{% load template_tags %}
+
+<!-- ko if: loading() -->
+<div class="hover-feature-body hover-feature-loading">
+    <i class="fa fa-spin fa-spinner"></i>
+    {% trans "Loading..." %}
+</div>
+<!--/ko-->
+
+<!-- ko if: !loading() -->
+<!-- ko if: PID -->
+<div class="hover-feature-title-bar">
+    {% block title %}
+    <div class="hover-feature-title">
+        <!-- Add nav to support accessing content for multiple features with overlapping geometry -->
+        <span class="hover-feature-nav-left disabled"><i class="fa fa-angle-left"></i></span>
+        {% trans "PID:" %} <span class="" data-bind="text: PID"></span>
+        <span class="hover-feature-nav-right disabled"><i class="fa fa-angle-right"></i></span>
+    </div>
+    {% endblock title %}
+</div>
+<!--/ko-->
+<!-- ko if: PID -->
+<div class="hover-feature-body">
+    {% block body %}
+    <div class="hover-feature-metadata">
+        {% trans "Owner Type:" %}
+        <span data-bind="text: OWNER_TYPE"></span>
+    </div>
+    <div class="hover-feature-metadata">
+        {% trans "Plan #:" %}
+        <span data-bind="text: PLAN_NUMBER"></span>
+    </div>
+    <div class="hover-feature-metadata">
+        {% trans "Parcel Class:" %}
+        <span data-bind="text: PARCEL_CLASS"></span>
+    </div>
+    <div class="hover-feature-metadata">
+        {% trans "Municipality:" %}
+        <span data-bind="text: MUNICIPALITY"></span>
+    </div>
+    <div class="hover-feature-metadata">
+        {% trans "Regonal District:" %}
+        <span data-bind="text: REGIONAL_DISTRICT"></span>
+    </div>
+    <div class="hover-feature-metadata">
+        {% trans "Parcel Status:" %}
+        <span data-bind="text: PARCEL_STATUS"></span>
+    </div>
+    <!-- ko if: $data.PARCEL_START_DATE -->
+    <div class="hover-feature-metadata">
+        {% trans "Parcel Start Date:" %}
+        <span data-bind="text: PARCEL_START_DATE"></span>
+    </div>
+    <!--/ko-->
+    <div class="hover-feature-metadata">
+        {% trans "Size (SQM):" %}
+        <span data-bind="text: FEATURE_AREA_SQM"></span>
+    </div>
+    {% endblock body %}
+</div>
+<!--/ko-->
+<div class="hover-feature-footer">
+    {% block footer %}
+    {% endblock footer %}
+</div>
+<!--/ko-->

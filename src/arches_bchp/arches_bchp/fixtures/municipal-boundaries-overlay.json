@@ -1,0 +1,50 @@
+[
+  {
+    "model": "models.mapsource",
+    "fields": {
+      "name": "municipal-boundaries-source",
+      "source": {
+        "type": "vector",
+        "tiles": [
+          "https://openmaps.gov.bc.ca/geo/pub/WHSE_LEGAL_ADMIN_BOUNDARIES.ABMS_MUNICIPALITIES_SP/ows?service=WMS&request=GetMap&layers=WHSE_LEGAL_ADMIN_BOUNDARIES.ABMS_MUNICIPALITIES_SP&styles=&format=pbf&transparent=true&version=1.1.1&height=512&width=512&srs=EPSG:3857&bbox={bbox-epsg-3857}"
+        ],
+        "tileSize": 512
+      }
+    }
+  },
+  {
+    "model": "models.maplayer",
+    "fields": {
+      "name": "Municipal Boundaries",
+      "layerdefinitions": [
+        {
+          "id": "municipal-boundaries",
+          "type": "line",
+          "source": "municipal-boundaries-source",
+          "source-layer": "WHSE_LEGAL_ADMIN_BOUNDARIES.ABMS_MUNICIPALITIES_SP"
+        },
+        {
+          "id": "municipal-boundaries-symbol",
+          "type": "symbol",
+          "source": "municipal-boundaries-source",
+          "source-layer": "WHSE_LEGAL_ADMIN_BOUNDARIES.ABMS_MUNICIPALITIES_SP",
+          "layout": {
+            "text-field": "{ADMIN_AREA_ABBREVIATION}"
+          },
+          "paint": {
+            "text-color": "#333333"
+          }
+        }
+      ],
+      "isoverlay": true,
+      "activated": true,
+      "icon": "none",
+      "addtomap": false,
+      "centerx": null,
+      "centery": null,
+      "zoom": null,
+      "legend": "",
+      "searchonly": false
+    }
+  }
+]

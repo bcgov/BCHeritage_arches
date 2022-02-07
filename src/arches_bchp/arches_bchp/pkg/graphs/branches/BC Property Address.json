@@ -1,0 +1,558 @@
+{
+    "graph": [
+        {
+            "author": "",
+            "cards": [
+                {
+                    "active": true,
+                    "cardid": "debd5faa-7bb4-11eb-9b0e-5254008afee6",
+                    "component_id": "f05e4d3a-53c1-11e8-b0ea-784f435179ea",
+                    "config": null,
+                    "constraints": [
+                        {
+                            "card_id": "debd5faa-7bb4-11eb-9b0e-5254008afee6",
+                            "constraintid": "e2f8a43a-e1f9-461d-8245-1ed3013b4f98",
+                            "nodes": [],
+                            "uniquetoallinstances": false
+                        }
+                    ],
+                    "cssclass": "",
+                    "description": "",
+                    "graph_id": "debd5adc-7bb4-11eb-9b0e-5254008afee6",
+                    "helpenabled": false,
+                    "helptext": null,
+                    "helptitle": null,
+                    "instructions": "Enter the address of the location.",
+                    "is_editable": true,
+                    "name": "BC Property Address",
+                    "nodegroup_id": "debd5c9e-7bb4-11eb-9b0e-5254008afee6",
+                    "sortorder": 1,
+                    "visible": true
+                },
+                {
+                    "active": true,
+                    "cardid": "51229bd0-7c43-11eb-8d0d-5254008afee6",
+                    "component_id": "f05e4d3a-53c1-11e8-b0ea-784f435179ea",
+                    "config": null,
+                    "constraints": [],
+                    "cssclass": null,
+                    "description": "The legal description of a property in BC. (Is this the same across Canada?)",
+                    "graph_id": "debd5adc-7bb4-11eb-9b0e-5254008afee6",
+                    "helpenabled": false,
+                    "helptext": null,
+                    "helptitle": null,
+                    "instructions": null,
+                    "is_editable": true,
+                    "name": "BC Property Legal Description",
+                    "nodegroup_id": "5122973e-7c43-11eb-8d0d-5254008afee6",
+                    "sortorder": null,
+                    "visible": true
+                }
+            ],
+            "cards_x_nodes_x_widgets": [
+                {
+                    "card_id": "51229bd0-7c43-11eb-8d0d-5254008afee6",
+                    "config": {
+                        "defaultValue": "",
+                        "label": "Legal Description",
+                        "maxLength": null,
+                        "placeholder": "Enter text",
+                        "uneditable": false,
+                        "width": "100%"
+                    },
+                    "id": "5122aa62-7c43-11eb-8d0d-5254008afee6",
+                    "label": "Legal Description",
+                    "node_id": "51229e0a-7c43-11eb-8d0d-5254008afee6",
+                    "sortorder": 2,
+                    "visible": true,
+                    "widget_id": "10000000-0000-0000-0000-000000000001"
+                },
+                {
+                    "card_id": "51229bd0-7c43-11eb-8d0d-5254008afee6",
+                    "config": {
+                        "defaultValue": "",
+                        "label": "Legal Number",
+                        "maxLength": null,
+                        "placeholder": "Enter text",
+                        "uneditable": false,
+                        "width": "100%"
+                    },
+                    "id": "5122a42c-7c43-11eb-8d0d-5254008afee6",
+                    "label": "Legal Number",
+                    "node_id": "5122a1c0-7c43-11eb-8d0d-5254008afee6",
+                    "sortorder": 1,
+                    "visible": true,
+                    "widget_id": "10000000-0000-0000-0000-000000000001"
+                },
+                {
+                    "card_id": "51229bd0-7c43-11eb-8d0d-5254008afee6",
+                    "config": {
+                        "defaultValue": "",
+                        "label": "Legal Type",
+                        "options": [],
+                        "placeholder": "Select an option"
+                    },
+                    "id": "5122a314-7c43-11eb-8d0d-5254008afee6",
+                    "label": "Legal Type",
+                    "node_id": "5122a008-7c43-11eb-8d0d-5254008afee6",
+                    "sortorder": 0,
+                    "visible": true,
+                    "widget_id": "10000000-0000-0000-0000-000000000002"
+                },
+                {
+                    "card_id": "debd5faa-7bb4-11eb-9b0e-5254008afee6",
+                    "config": {
+                        "defaultValue": "",
+                        "label": "Address Type",
+                        "options": [],
+                        "placeholder": "Select an option"
+                    },
+                    "id": "2f5812da-7bb9-11eb-86b3-5254008afee6",
+                    "label": "Address Type",
+                    "node_id": "05c32bc8-7bb7-11eb-9b92-5254008afee6",
+                    "sortorder": 0,
+                    "visible": true,
+                    "widget_id": "10000000-0000-0000-0000-000000000002"
+                },
+                {
+                    "card_id": "debd5faa-7bb4-11eb-9b0e-5254008afee6",
+                    "config": {
+                        "defaultValue": "",
+                        "label": "Street Number",
+                        "maxLength": null,
+                        "placeholder": "Enter text",
+                        "uneditable": false,
+                        "width": "100%"
+                    },
+                    "id": "2f56671e-7bb9-11eb-86b3-5254008afee6",
+                    "label": "Street Number",
+                    "node_id": "debd6298-7bb4-11eb-9b0e-5254008afee6",
+                    "sortorder": 1,
+                    "visible": true,
+                    "widget_id": "10000000-0000-0000-0000-000000000001"
+                },
+                {
+                    "card_id": "debd5faa-7bb4-11eb-9b0e-5254008afee6",
+                    "config": {
+                        "defaultValue": "",
+                        "label": "Street Name",
+                        "maxLength": null,
+                        "placeholder": "Enter text",
+                        "uneditable": false,
+                        "width": "100%"
+                    },
+                    "id": "2f572956-7bb9-11eb-86b3-5254008afee6",
+                    "label": "Street Name",
+                    "node_id": "debd63e2-7bb4-11eb-9b0e-5254008afee6",
+                    "sortorder": 2,
+                    "visible": true,
+                    "widget_id": "10000000-0000-0000-0000-000000000001"
+                },
+                {
+                    "card_id": "debd5faa-7bb4-11eb-9b0e-5254008afee6",
+                    "config": {
+                        "defaultValue": "",
+                        "label": "City",
+                        "maxLength": null,
+                        "placeholder": "Enter text",
+                        "uneditable": false,
+                        "width": "100%"
+                    },
+                    "id": "2f589bf6-7bb9-11eb-86b3-5254008afee6",
+                    "label": "City",
+                    "node_id": "debd6518-7bb4-11eb-9b0e-5254008afee6",
+                    "sortorder": 3,
+                    "visible": true,
+                    "widget_id": "10000000-0000-0000-0000-000000000001"
+                },
+                {
+                    "card_id": "debd5faa-7bb4-11eb-9b0e-5254008afee6",
+                    "config": {
+                        "defaultValue": "",
+                        "label": "Province",
+                        "options": [],
+                        "placeholder": "Select an option"
+                    },
+                    "id": "2f593318-7bb9-11eb-86b3-5254008afee6",
+                    "label": "Province",
+                    "node_id": "debd677a-7bb4-11eb-9b0e-5254008afee6",
+                    "sortorder": 4,
+                    "visible": true,
+                    "widget_id": "10000000-0000-0000-0000-000000000002"
+                },
+                {
+                    "card_id": "debd5faa-7bb4-11eb-9b0e-5254008afee6",
+                    "config": {
+                        "defaultValue": "",
+                        "label": "Postal Code",
+                        "maxLength": null,
+                        "placeholder": "Enter text",
+                        "uneditable": false,
+                        "width": "100%"
+                    },
+                    "id": "2f599b0a-7bb9-11eb-86b3-5254008afee6",
+                    "label": "Postal Code",
+                    "node_id": "debd6130-7bb4-11eb-9b0e-5254008afee6",
+                    "sortorder": 5,
+                    "visible": true,
+                    "widget_id": "10000000-0000-0000-0000-000000000001"
+                }
+            ],
+            "color": null,
+            "config": {},
+            "deploymentdate": null,
+            "deploymentfile": null,
+            "description": "",
+            "edges": [
+                {
+                    "description": null,
+                    "domainnode_id": "debd5c9e-7bb4-11eb-9b0e-5254008afee6",
+                    "edgeid": "05c32ff6-7bb7-11eb-9b92-5254008afee6",
+                    "graph_id": "debd5adc-7bb4-11eb-9b0e-5254008afee6",
+                    "name": null,
+                    "ontologyproperty": "http://www.cidoc-crm.org/cidoc-crm/P41i_was_classified_by",
+                    "rangenode_id": "05c32bc8-7bb7-11eb-9b92-5254008afee6"
+                },
+                {
+                    "description": null,
+                    "domainnode_id": "5122973e-7c43-11eb-8d0d-5254008afee6",
+                    "edgeid": "5122b354-7c43-11eb-8d0d-5254008afee6",
+                    "graph_id": "debd5adc-7bb4-11eb-9b0e-5254008afee6",
+                    "name": null,
+                    "ontologyproperty": "http://www.cidoc-crm.org/cidoc-crm/P140i_was_attributed_by",
+                    "rangenode_id": "51229e0a-7c43-11eb-8d0d-5254008afee6"
+                },
+                {
+                    "description": null,
+                    "domainnode_id": "5122973e-7c43-11eb-8d0d-5254008afee6",
+                    "edgeid": "5122b50c-7c43-11eb-8d0d-5254008afee6",
+                    "graph_id": "debd5adc-7bb4-11eb-9b0e-5254008afee6",
+                    "name": null,
+                    "ontologyproperty": "http://www.cidoc-crm.org/cidoc-crm/P140i_was_attributed_by",
+                    "rangenode_id": "5122a008-7c43-11eb-8d0d-5254008afee6"
+                },
+                {
+                    "description": null,
+                    "domainnode_id": "5122973e-7c43-11eb-8d0d-5254008afee6",
+                    "edgeid": "5122b656-7c43-11eb-8d0d-5254008afee6",
+                    "graph_id": "debd5adc-7bb4-11eb-9b0e-5254008afee6",
+                    "name": null,
+                    "ontologyproperty": "http://www.cidoc-crm.org/cidoc-crm/P140i_was_attributed_by",
+                    "rangenode_id": "5122a1c0-7c43-11eb-8d0d-5254008afee6"
+                },
+                {
+                    "description": null,
+                    "domainnode_id": "debd5c9e-7bb4-11eb-9b0e-5254008afee6",
+                    "edgeid": "5122b85e-7c43-11eb-8d0d-5254008afee6",
+                    "graph_id": "debd5adc-7bb4-11eb-9b0e-5254008afee6",
+                    "name": null,
+                    "ontologyproperty": "http://www.ics.forth.gr/isl/CRMdig/L54i_is_same-as",
+                    "rangenode_id": "5122973e-7c43-11eb-8d0d-5254008afee6"
+                },
+                {
+                    "description": null,
+                    "domainnode_id": "debd5c9e-7bb4-11eb-9b0e-5254008afee6",
+                    "edgeid": "debd6d88-7bb4-11eb-9b0e-5254008afee6",
+                    "graph_id": "debd5adc-7bb4-11eb-9b0e-5254008afee6",
+                    "name": null,
+                    "ontologyproperty": "http://www.cidoc-crm.org/cidoc-crm/P140i_was_attributed_by",
+                    "rangenode_id": "debd6298-7bb4-11eb-9b0e-5254008afee6"
+                },
+                {
+                    "description": null,
+                    "domainnode_id": "debd5c9e-7bb4-11eb-9b0e-5254008afee6",
+                    "edgeid": "debd6eaa-7bb4-11eb-9b0e-5254008afee6",
+                    "graph_id": "debd5adc-7bb4-11eb-9b0e-5254008afee6",
+                    "name": null,
+                    "ontologyproperty": "http://www.cidoc-crm.org/cidoc-crm/P140i_was_attributed_by",
+                    "rangenode_id": "debd63e2-7bb4-11eb-9b0e-5254008afee6"
+                },
+                {
+                    "description": null,
+                    "domainnode_id": "debd5c9e-7bb4-11eb-9b0e-5254008afee6",
+                    "edgeid": "debd6f86-7bb4-11eb-9b0e-5254008afee6",
+                    "graph_id": "debd5adc-7bb4-11eb-9b0e-5254008afee6",
+                    "name": null,
+                    "ontologyproperty": "http://www.cidoc-crm.org/cidoc-crm/P140i_was_attributed_by",
+                    "rangenode_id": "debd6518-7bb4-11eb-9b0e-5254008afee6"
+                },
+                {
+                    "description": null,
+                    "domainnode_id": "debd5c9e-7bb4-11eb-9b0e-5254008afee6",
+                    "edgeid": "debd7062-7bb4-11eb-9b0e-5254008afee6",
+                    "graph_id": "debd5adc-7bb4-11eb-9b0e-5254008afee6",
+                    "name": null,
+                    "ontologyproperty": "http://www.cidoc-crm.org/cidoc-crm/P140i_was_attributed_by",
+                    "rangenode_id": "debd677a-7bb4-11eb-9b0e-5254008afee6"
+                },
+                {
+                    "description": null,
+                    "domainnode_id": "debd5c9e-7bb4-11eb-9b0e-5254008afee6",
+                    "edgeid": "debd7134-7bb4-11eb-9b0e-5254008afee6",
+                    "graph_id": "debd5adc-7bb4-11eb-9b0e-5254008afee6",
+                    "name": null,
+                    "ontologyproperty": "http://www.cidoc-crm.org/cidoc-crm/P140i_was_attributed_by",
+                    "rangenode_id": "debd6130-7bb4-11eb-9b0e-5254008afee6"
+                }
+            ],
+            "functions_x_graphs": [],
+            "graphid": "debd5adc-7bb4-11eb-9b0e-5254008afee6",
+            "iconclass": "fa fa-map-marker",
+            "is_editable": true,
+            "isactive": true,
+            "isresource": false,
+            "jsonldcontext": null,
+            "name": "BC Property Address",
+            "nodegroups": [
+                {
+                    "cardinality": "n",
+                    "legacygroupid": null,
+                    "nodegroupid": "debd5c9e-7bb4-11eb-9b0e-5254008afee6",
+                    "parentnodegroup_id": null
+                },
+                {
+                    "cardinality": "1",
+                    "legacygroupid": null,
+                    "nodegroupid": "5122973e-7c43-11eb-8d0d-5254008afee6",
+                    "parentnodegroup_id": "debd5c9e-7bb4-11eb-9b0e-5254008afee6"
+                }
+            ],
+            "nodes": [
+                {
+                    "config": null,
+                    "datatype": "string",
+                    "description": null,
+                    "exportable": false,
+                    "fieldname": null,
+                    "graph_id": "debd5adc-7bb4-11eb-9b0e-5254008afee6",
+                    "is_collector": false,
+                    "isrequired": false,
+                    "issearchable": true,
+                    "istopnode": false,
+                    "name": "Postal Code",
+                    "nodegroup_id": "debd5c9e-7bb4-11eb-9b0e-5254008afee6",
+                    "nodeid": "debd6130-7bb4-11eb-9b0e-5254008afee6",
+                    "ontologyclass": "http://www.cidoc-crm.org/cidoc-crm/E13_Attribute_Assignment",
+                    "parentproperty": "http://www.cidoc-crm.org/cidoc-crm/P140i_was_attributed_by",
+                    "sortorder": 5
+                },
+                {
+                    "config": null,
+                    "datatype": "string",
+                    "description": "The numeric part of the Street Address. Eg 1283, 11b.",
+                    "exportable": false,
+                    "fieldname": null,
+                    "graph_id": "debd5adc-7bb4-11eb-9b0e-5254008afee6",
+                    "is_collector": false,
+                    "isrequired": false,
+                    "issearchable": true,
+                    "istopnode": false,
+                    "name": "Street Number",
+                    "nodegroup_id": "debd5c9e-7bb4-11eb-9b0e-5254008afee6",
+                    "nodeid": "debd6298-7bb4-11eb-9b0e-5254008afee6",
+                    "ontologyclass": "http://www.cidoc-crm.org/cidoc-crm/E13_Attribute_Assignment",
+                    "parentproperty": "http://www.cidoc-crm.org/cidoc-crm/P140i_was_attributed_by",
+                    "sortorder": 1
+                },
+                {
+                    "config": null,
+                    "datatype": "string",
+                    "description": null,
+                    "exportable": false,
+                    "fieldname": null,
+                    "graph_id": "debd5adc-7bb4-11eb-9b0e-5254008afee6",
+                    "is_collector": false,
+                    "isrequired": false,
+                    "issearchable": true,
+                    "istopnode": false,
+                    "name": "Street Name",
+                    "nodegroup_id": "debd5c9e-7bb4-11eb-9b0e-5254008afee6",
+                    "nodeid": "debd63e2-7bb4-11eb-9b0e-5254008afee6",
+                    "ontologyclass": "http://www.cidoc-crm.org/cidoc-crm/E13_Attribute_Assignment",
+                    "parentproperty": "http://www.cidoc-crm.org/cidoc-crm/P140i_was_attributed_by",
+                    "sortorder": 2
+                },
+                {
+                    "config": {},
+                    "datatype": "semantic",
+                    "description": "The legal description of a property in BC. (Is this the same across Canada?)",
+                    "exportable": false,
+                    "fieldname": null,
+                    "graph_id": "debd5adc-7bb4-11eb-9b0e-5254008afee6",
+                    "is_collector": true,
+                    "isrequired": false,
+                    "issearchable": true,
+                    "istopnode": false,
+                    "name": "BC Property Legal Description",
+                    "nodegroup_id": "5122973e-7c43-11eb-8d0d-5254008afee6",
+                    "nodeid": "5122973e-7c43-11eb-8d0d-5254008afee6",
+                    "ontologyclass": "http://www.ics.forth.gr/isl/CRMsci/S2_Sample_Taking",
+                    "parentproperty": "http://www.ics.forth.gr/isl/CRMdig/L54i_is_same-as",
+                    "sortorder": 0
+                },
+                {
+                    "config": null,
+                    "datatype": "string",
+                    "description": null,
+                    "exportable": false,
+                    "fieldname": null,
+                    "graph_id": "debd5adc-7bb4-11eb-9b0e-5254008afee6",
+                    "is_collector": false,
+                    "isrequired": false,
+                    "issearchable": true,
+                    "istopnode": false,
+                    "name": "Legal Description",
+                    "nodegroup_id": "5122973e-7c43-11eb-8d0d-5254008afee6",
+                    "nodeid": "51229e0a-7c43-11eb-8d0d-5254008afee6",
+                    "ontologyclass": "http://www.cidoc-crm.org/cidoc-crm/E13_Attribute_Assignment",
+                    "parentproperty": "http://www.cidoc-crm.org/cidoc-crm/P140i_was_attributed_by",
+                    "sortorder": 2
+                },
+                {
+                    "config": {
+                        "rdmCollection": "4abd197c-c660-4842-828e-1dc43856dc9c"
+                    },
+                    "datatype": "concept",
+                    "description": null,
+                    "exportable": false,
+                    "fieldname": null,
+                    "graph_id": "debd5adc-7bb4-11eb-9b0e-5254008afee6",
+                    "is_collector": false,
+                    "isrequired": false,
+                    "issearchable": true,
+                    "istopnode": false,
+                    "name": "Legal Type",
+                    "nodegroup_id": "5122973e-7c43-11eb-8d0d-5254008afee6",
+                    "nodeid": "5122a008-7c43-11eb-8d0d-5254008afee6",
+                    "ontologyclass": "http://www.cidoc-crm.org/cidoc-crm/E13_Attribute_Assignment",
+                    "parentproperty": "http://www.cidoc-crm.org/cidoc-crm/P140i_was_attributed_by",
+                    "sortorder": 0
+                },
+                {
+                    "config": null,
+                    "datatype": "string",
+                    "description": null,
+                    "exportable": false,
+                    "fieldname": null,
+                    "graph_id": "debd5adc-7bb4-11eb-9b0e-5254008afee6",
+                    "is_collector": false,
+                    "isrequired": false,
+                    "issearchable": true,
+                    "istopnode": false,
+                    "name": "Legal Number",
+                    "nodegroup_id": "5122973e-7c43-11eb-8d0d-5254008afee6",
+                    "nodeid": "5122a1c0-7c43-11eb-8d0d-5254008afee6",
+                    "ontologyclass": "http://www.cidoc-crm.org/cidoc-crm/E15_Identifier_Assignment",
+                    "parentproperty": "http://www.cidoc-crm.org/cidoc-crm/P140i_was_attributed_by",
+                    "sortorder": 1
+                },
+                {
+                    "config": {},
+                    "datatype": "semantic",
+                    "description": "Represents a single node in a graph",
+                    "exportable": false,
+                    "fieldname": "",
+                    "graph_id": "debd5adc-7bb4-11eb-9b0e-5254008afee6",
+                    "is_collector": true,
+                    "isrequired": false,
+                    "issearchable": true,
+                    "istopnode": true,
+                    "name": "BC Property Address",
+                    "nodegroup_id": "debd5c9e-7bb4-11eb-9b0e-5254008afee6",
+                    "nodeid": "debd5c9e-7bb4-11eb-9b0e-5254008afee6",
+                    "ontologyclass": "http://www.cidoc-crm.org/cidoc-crm/E45_Address",
+                    "parentproperty": "",
+                    "sortorder": 0
+                },
+                {
+                    "config": {
+                        "rdmCollection": "84e94d9a-0243-4bd8-8a84-3db288da9388"
+                    },
+                    "datatype": "concept",
+                    "description": null,
+                    "exportable": false,
+                    "fieldname": null,
+                    "graph_id": "debd5adc-7bb4-11eb-9b0e-5254008afee6",
+                    "is_collector": false,
+                    "isrequired": false,
+                    "issearchable": true,
+                    "istopnode": false,
+                    "name": "Address Type",
+                    "nodegroup_id": "debd5c9e-7bb4-11eb-9b0e-5254008afee6",
+                    "nodeid": "05c32bc8-7bb7-11eb-9b92-5254008afee6",
+                    "ontologyclass": "http://www.cidoc-crm.org/cidoc-crm/E17_Type_Assignment",
+                    "parentproperty": "http://www.cidoc-crm.org/cidoc-crm/P41i_was_classified_by",
+                    "sortorder": 0
+                },
+                {
+                    "config": null,
+                    "datatype": "string",
+                    "description": null,
+                    "exportable": false,
+                    "fieldname": null,
+                    "graph_id": "debd5adc-7bb4-11eb-9b0e-5254008afee6",
+                    "is_collector": false,
+                    "isrequired": false,
+                    "issearchable": true,
+                    "istopnode": false,
+                    "name": "City",
+                    "nodegroup_id": "debd5c9e-7bb4-11eb-9b0e-5254008afee6",
+                    "nodeid": "debd6518-7bb4-11eb-9b0e-5254008afee6",
+                    "ontologyclass": "http://www.cidoc-crm.org/cidoc-crm/E13_Attribute_Assignment",
+                    "parentproperty": "http://www.cidoc-crm.org/cidoc-crm/P140i_was_attributed_by",
+                    "sortorder": 3
+                },
+                {
+                    "config": {
+                        "rdmCollection": "6c8af3d5-1a39-45fc-89b7-f5131c3a28c5"
+                    },
+                    "datatype": "concept",
+                    "description": null,
+                    "exportable": false,
+                    "fieldname": null,
+                    "graph_id": "debd5adc-7bb4-11eb-9b0e-5254008afee6",
+                    "is_collector": false,
+                    "isrequired": false,
+                    "issearchable": true,
+                    "istopnode": false,
+                    "name": "Province",
+                    "nodegroup_id": "debd5c9e-7bb4-11eb-9b0e-5254008afee6",
+                    "nodeid": "debd677a-7bb4-11eb-9b0e-5254008afee6",
+                    "ontologyclass": "http://www.cidoc-crm.org/cidoc-crm/E13_Attribute_Assignment",
+                    "parentproperty": "http://www.cidoc-crm.org/cidoc-crm/P140i_was_attributed_by",
+                    "sortorder": 4
+                }
+            ],
+            "ontology_id": "e6e8db47-2ccf-11e6-927e-b8f6b115d7dd",
+            "relatable_resource_model_ids": [],
+            "resource_2_resource_constraints": [],
+            "root": {
+                "config": {},
+                "datatype": "semantic",
+                "description": "Represents a single node in a graph",
+                "exportable": false,
+                "fieldname": "",
+                "graph_id": "debd5adc-7bb4-11eb-9b0e-5254008afee6",
+                "is_collector": true,
+                "isrequired": false,
+                "issearchable": true,
+                "istopnode": true,
+                "name": "BC Property Address",
+                "nodegroup_id": "debd5c9e-7bb4-11eb-9b0e-5254008afee6",
+                "nodeid": "debd5c9e-7bb4-11eb-9b0e-5254008afee6",
+                "ontologyclass": "http://www.cidoc-crm.org/cidoc-crm/E45_Address",
+                "sortorder": 0
+            },
+            "slug": null,
+            "subtitle": "",
+            "template_id": "50000000-0000-0000-0000-000000000001",
+            "version": ""
+        }
+    ],
+    "metadata": {
+        "db": "PostgreSQL 12.6 on x86_64-pc-linux-gnu, compiled by gcc (GCC) 4.8.5 20150623 (Red Hat 4.8.5-44), 64-bit",
+        "git hash": "fatal: Not a git repository (or any of the parent directories): .git",
+        "os": "Linux",
+        "os version": "3.10.0-1127.el7.x86_64"
+    }
+}

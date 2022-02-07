@@ -1,0 +1,50 @@
+[
+  {
+    "model": "models.mapsource",
+    "fields": {
+      "name": "borden-grid-vector-source",
+      "source": {
+        "type": "vector",
+        "tiles": [
+          "https://openmaps.gov.bc.ca/geo/pub/WHSE_ARCHAEOLOGY.RAAD_BORDENGRID/ows?service=WMS&request=GetMap&layers=WHSE_ARCHAEOLOGY.RAAD_BORDENGRID&styles=&format=pbf&transparent=true&version=1.1.1&height=512&width=512&srs=EPSG:3857&bbox={bbox-epsg-3857}"
+        ],
+        "tileSize": 512
+      }
+    }
+  },
+  {
+    "model": "models.maplayer",
+    "fields": {
+      "name": "Borden Grid Vector",
+      "layerdefinitions": [
+        {
+          "id": "borden-grid-vector",
+          "type": "line",
+          "source": "borden-grid-vector-source",
+          "source-layer": "WHSE_ARCHAEOLOGY.RAAD_BORDENGRID"
+        },
+        {
+          "id": "borden-grid-vector-symbol",
+          "type": "symbol",
+          "source": "borden-grid-vector-source",
+          "source-layer": "WHSE_ARCHAEOLOGY.RAAD_BORDENGRID",
+          "layout": {
+            "text-field": "{ZBN}"
+          },
+          "paint": {
+            "text-color": "#00ff00"
+          }
+        }
+      ],
+      "isoverlay": true,
+      "activated": true,
+      "icon": "none",
+      "addtomap": false,
+      "centerx": null,
+      "centery": null,
+      "zoom": null,
+      "legend": "",
+      "searchonly": false
+    }
+  }
+]
