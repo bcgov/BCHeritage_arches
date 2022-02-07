@@ -1,0 +1,40 @@
+[
+  {
+    "model": "models.mapsource",
+    "fields": {
+      "name": "roads-source",
+      "source": {
+        "type": "vector",
+        "tiles": [
+          "https://openmaps.gov.bc.ca/geo/pub/WHSE_BASEMAPPING.DRA_DGTL_ROAD_ATLAS_MPAR_SP/ows?service=WMS&request=GetMap&layers=WHSE_BASEMAPPING.DRA_DGTL_ROAD_ATLAS_MPAR_SP&styles=&format=pbf&transparent=true&version=1.3.0&height=512&width=512&srs=EPSG:3857&bbox={bbox-epsg-3857}"
+        ],
+        "tileSize": 512
+      }
+    }
+  },
+  {
+    "model": "models.maplayer",
+    "fields": {
+      "name": "Roads",
+      "layerdefinitions": [
+        {
+          "id": "roads",
+          "type": "line",
+          "source": "roads-source",
+          "source-layer": "WHSE_BASEMAPPING.DRA_DGTL_ROAD_ATLAS_MPAR_SP",
+          "minzoom": 0,
+          "maxzoom": 20
+        }
+      ],
+      "isoverlay": true,
+      "activated": true,
+      "icon": "none",
+      "addtomap": false,
+      "centerx": null,
+      "centery": null,
+      "zoom": null,
+      "legend": "",
+      "searchonly": false
+    }
+  }
+]

@@ -1,0 +1,1 @@
+psql -o $1.csv -f $1.sql --csv -Upostgres -dfossils

@@ -1,0 +1,70 @@
+{
+    "resource_model_id": "82efcd14-82db-11ec-b8e6-5254008afee6",
+    "resource_model_name": "BC Fossil Public Submission Resource Model",
+    "nodes": [
+        {
+            "arches_nodeid": "fdece408-82e4-11ec-8bb0-5254008afee6",
+            "arches_node_name": "Email",
+            "file_field_name": "Email",
+            "data_type": "string",
+            "export": true
+        },
+        {
+            "arches_nodeid": "e3684412-83d7-11ec-ac3a-5254008afee6",
+            "arches_node_name": "Geometry Qualifier",
+            "file_field_name": "Geometry Qualifier",
+            "data_type": "concept",
+            "concept_export_value": "label",
+            "export": true
+        },
+        {
+            "arches_nodeid": "8731fef8-83d8-11ec-be0e-5254008afee6",
+            "arches_node_name": "Location Additional Information",
+            "file_field_name": "Location Additional Information",
+            "data_type": "string",
+            "export": true
+        },
+        {
+            "arches_nodeid": "88058110-83d8-11ec-be0e-5254008afee6",
+            "arches_node_name": "Location Description",
+            "file_field_name": "Location Description",
+            "data_type": "string",
+            "export": true
+        },
+        {
+            "arches_nodeid": "a7a473b0-83be-11ec-a0d2-5254008afee6",
+            "arches_node_name": "Location Map File",
+            "file_field_name": "Location Map File",
+            "data_type": "file-list",
+            "export": true
+        },
+        {
+            "arches_nodeid": "f5d959d0-82db-11ec-9073-5254008afee6",
+            "arches_node_name": "Observer Name",
+            "file_field_name": "Observer Name",
+            "data_type": "string",
+            "export": true
+        },
+        {
+            "arches_nodeid": "82db146a-82e4-11ec-9073-5254008afee6",
+            "arches_node_name": "Phone Number",
+            "file_field_name": "Phone Number",
+            "data_type": "string",
+            "export": true
+        },
+        {
+            "arches_nodeid": "c26e4a9c-82db-11ec-b00b-5254008afee6",
+            "arches_node_name": "Photographs",
+            "file_field_name": "Photographs",
+            "data_type": "file-list",
+            "export": true
+        },
+        {
+            "arches_nodeid": "cbe9284c-83be-11ec-805f-5254008afee6",
+            "arches_node_name": "Spatial Coordinates",
+            "file_field_name": "Spatial Coordinates",
+            "data_type": "geojson-feature-collection",
+            "export": true
+        }
+    ]
+}
