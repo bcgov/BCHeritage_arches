@@ -23,6 +23,7 @@ from arches.app.models import models
 from django.core.management.base import BaseCommand, CommandError
 from django.contrib.auth.models import User
 from django.contrib.auth.models import Group
+from arches_fossils.management.data.test_user_list import get_user_list
 
 
 class Command(BaseCommand):
@@ -78,14 +79,7 @@ class Command(BaseCommand):
             print("Not trying to add users")
 
     def get_profiles(self):
-        return (
-            {"name": "fossils_reviewer1", "email": "fossils_reviewer1@test.com", "password": "ExtAuth12345!",
-                "first_name": "Test", "last_name": "Reviewer1",
-                "groups": ["Graph Editor", "Resource Editor", "Resource Reviewer"]},
-            {"name": "fossils_editor1", "email": "fossils_editor1@test.com", "password": "ExtAuth12345!",
-             "first_name": "Test", "last_name": "Editor1",
-             "groups": ["Graph Editor", "Resource Editor"]},
-        )
+        return get_user_list()
 
     def delete_users(self):
         profiles = self.get_profiles()
