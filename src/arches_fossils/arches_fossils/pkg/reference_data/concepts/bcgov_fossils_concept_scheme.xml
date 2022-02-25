@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<rdf:RDF
+        xmlns:skos="http://www.w3.org/2004/02/skos/core#"
+        xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+        xmlns:dcterms="http://purl.org/dc/terms/"
+>
+    <skos:Concept rdf:about="http://localhost:8000/1de44847-b01a-4faa-b49d-f18cf4af2d4f">
+        <skos:inScheme>
+            <skos:ConceptScheme rdf:about="http://localhost:8000/a8c7e03a-6551-4f30-801e-458debad7d8f">
+                <dcterms:title xml:lang="en">{"id": "2d65eceb-beb3-4331-bf40-78d6a2a3d3f6", "value": "BC Fossils Thesauri"}</dcterms:title>
+                <skos:hasTopConcept rdf:resource="http://localhost:8000/1de44847-b01a-4faa-b49d-f18cf4af2d4f"/>
+                <skos:hasTopConcept rdf:resource="http://localhost:8000/2c93656c-19fd-40c3-ac73-eead26432b9b"/>
+            </skos:ConceptScheme>
+        </skos:inScheme>
+        <skos:narrower>
+            <skos:Concept rdf:about="http://localhost:8000/e18f67b9-71e5-4dbb-ac41-63263aebe734">
+                <skos:inScheme rdf:resource="http://localhost:8000/a8c7e03a-6551-4f30-801e-458debad7d8f"/>
+                <skos:prefLabel xml:lang="en">{"id": "d47cd333-ceb4-4781-b3d6-06baa73dcc0c", "value": "Microfossil"}</skos:prefLabel>
+            </skos:Concept>
+        </skos:narrower>
+        <skos:prefLabel xml:lang="en">{"id": "a6e3a434-c91a-44e8-a51a-f18982a7c5de", "value": "Fossil Size Category"}</skos:prefLabel>
+        <skos:narrower>
+            <skos:Concept rdf:about="http://localhost:8000/8a7e10ab-a0e9-4d00-b66a-270c3cacff2a">
+                <skos:inScheme rdf:resource="http://localhost:8000/a8c7e03a-6551-4f30-801e-458debad7d8f"/>
+                <skos:prefLabel xml:lang="en">{"id": "3433fd7a-b780-43a2-913b-3e4ff67e953b", "value": "Macrofossil"}</skos:prefLabel>
+            </skos:Concept>
+        </skos:narrower>
+    </skos:Concept>
+    <skos:Concept rdf:about="http://localhost:8000/3ae70e28-dd1a-4612-ad4c-aa961829b4c4">
+        <skos:prefLabel xml:lang="en">{"id": "3175011d-08a7-4269-a2c1-a551df58d207", "value": "Common"}</skos:prefLabel>
+        <skos:inScheme rdf:resource="http://localhost:8000/a8c7e03a-6551-4f30-801e-458debad7d8f"/>
+    </skos:Concept>
+    <skos:Concept rdf:about="http://localhost:8000/2c93656c-19fd-40c3-ac73-eead26432b9b">
+        <skos:inScheme rdf:resource="http://localhost:8000/a8c7e03a-6551-4f30-801e-458debad7d8f"/>
+        <skos:narrower rdf:resource="http://localhost:8000/3ae70e28-dd1a-4612-ad4c-aa961829b4c4"/>
+        <skos:prefLabel xml:lang="en">{"id": "e1912784-3f1a-4ddc-b251-d6477d83aca8", "value": "BC Fossil Type Name Type"}</skos:prefLabel>
+        <skos:narrower>
+            <skos:Concept rdf:about="http://localhost:8000/db6fd91b-f508-4514-a469-3cd7a9f8d9f5">
+                <skos:inScheme rdf:resource="http://localhost:8000/a8c7e03a-6551-4f30-801e-458debad7d8f"/>
+                <skos:prefLabel xml:lang="en">{"id": "6fd5e01b-372f-4140-a85d-7e47f7267965", "value": "Scientific"}</skos:prefLabel>
+            </skos:Concept>
+        </skos:narrower>
+    </skos:Concept>
+</rdf:RDF>
