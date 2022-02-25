@@ -23,7 +23,7 @@ from arches.app.models import models
 from django.core.management.base import BaseCommand, CommandError
 from django.contrib.auth.models import User
 from django.contrib.auth.models import Group
-from arches_fossils.management.data.test_user_list import get_user_list
+from ..data.test_user_list import get_user_list
 
 
 class Command(BaseCommand):
