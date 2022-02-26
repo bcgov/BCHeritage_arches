@@ -71,10 +71,10 @@ DATABASES = {
         "AUTOCOMMIT": True,
         "CONN_MAX_AGE": 0,
         "ENGINE": "django.contrib.gis.db.backends.postgis",
-        "HOST": "{ arches_fossils_db_host }",
-        "NAME": "{ arches_fossils_db_name }",
+        "HOST": "{ db_host }",
+        "NAME": "{ db_name }",
         "OPTIONS": {},
-        "PASSWORD": "{ arches_fossils_db_password }",
+        "PASSWORD": "{ db_password }",
         "PORT": "5432",
         "POSTGIS_TEMPLATE": "template_postgis",
         "TEST": {
@@ -84,7 +84,7 @@ DATABASES = {
             "NAME": None
         },
         "TIME_ZONE": None,
-        "USER": "{ arches_fossils_username }"
+        "USER": "{ db_username }"
     }
 }
 
