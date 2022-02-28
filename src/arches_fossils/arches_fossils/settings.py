@@ -110,7 +110,7 @@ INSTALLED_APPS = (
     'arches_fossils',
 )
 
-ALLOWED_HOSTS = [{ allowed_hosts }]
+# ALLOWED_HOSTS = [{ allowed_hosts }]
 
 SYSTEM_SETTINGS_LOCAL_PATH = os.path.join(APP_ROOT, 'system_settings', 'System_Settings.json')
 WSGI_APPLICATION = 'arches_fossils.wsgi.application'
