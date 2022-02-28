@@ -16,17 +16,17 @@ APP_NAME = 'arches_fossils'
 APP_ROOT = os.path.dirname(os.path.abspath(inspect.getfile(inspect.currentframe())))
 STATICFILES_DIRS = (os.path.join(APP_ROOT, 'media'),) + STATICFILES_DIRS
 
-###########
-# BCGov specific settings. Should these be externalized into separate file?
-###########
-
-# Whether we're behind the bcgov proxy server
-BCGOV_PROXY = True
-# PROXY prefix used - NB - cannot have leading "/", and must have trailing "/"
-BCGOV_PROXY_PREFIX = 'int/arches-fossils/'
-
-STATIC_URL = '/' + BCGOV_PROXY_PREFIX + 'media/'
-ADMIN_MEDIA_PREFIX = STATIC_URL + "admin/"
+# ###########
+# # BCGov specific settings. Should these be externalized into separate file?
+# ###########
+#
+# # Whether we're behind the bcgov proxy server
+# BCGOV_PROXY = True
+# # PROXY prefix used - NB - cannot have leading "/", and must have trailing "/"
+# BCGOV_PROXY_PREFIX = 'int/arches-fossils/'
+#
+# STATIC_URL = '/' + BCGOV_PROXY_PREFIX + 'media/'
+# ADMIN_MEDIA_PREFIX = STATIC_URL + "admin/"
 
 ###########
 # End BCGov specific settings.
@@ -41,8 +41,8 @@ TEMPLATES[0]['DIRS'].insert(0, os.path.join(APP_ROOT, 'templates'))
 
 LOCALE_PATHS.append(os.path.join(APP_ROOT, 'locale'))
 
-# SECURITY WARNING: keep the secret key used in production secret!
-SECRET_KEY = '{{ jenkins_secret_key }}'
+# # SECURITY WARNING: keep the secret key used in production secret!
+# SECRET_KEY = '{{ jenkins_secret_key }}'
 
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
@@ -55,7 +55,8 @@ ELASTICSEARCH_PREFIX = 'arches_fossils'
 ELASTICSEARCH_CUSTOM_INDEXES = []
 # [{
 #     'module': 'arches_fossils.search_indexes.sample_index.SampleIndex',
-#     'name': 'my_new_custom_index' <-- follow ES index naming rules
+#     'name': 'my_new_custom_index', <-- follow ES index naming rules
+#     'should_update_asynchronously': False  <-- denotes if asynchronously updating the index would affect custom functionality within the project.
 # }]
 
 KIBANA_URL = "http://localhost:5601/"
@@ -65,28 +66,28 @@ KIBANA_CONFIG_BASEPATH = "kibana"  # must match Kibana config.yml setting (serve
 LOAD_DEFAULT_ONTOLOGY = False
 LOAD_PACKAGE_ONTOLOGIES = True
 
-DATABASES = {
-    "default": {
-        "ATOMIC_REQUESTS": False,
-        "AUTOCOMMIT": True,
-        "CONN_MAX_AGE": 0,
-        "ENGINE": "django.contrib.gis.db.backends.postgis",
-        "HOST": "{ db_host }",
-        "NAME": "{ db_name }",
-        "OPTIONS": {},
-        "PASSWORD": "{ db_password }",
-        "PORT": "5432",
-        "POSTGIS_TEMPLATE": "template_postgis",
-        "TEST": {
-            "CHARSET": None,
-            "COLLATION": None,
-            "MIRROR": None,
-            "NAME": None
-        },
-        "TIME_ZONE": None,
-        "USER": "{ db_username }"
-    }
-}
+# DATABASES = {
+#     "default": {
+#         "ATOMIC_REQUESTS": False,
+#         "AUTOCOMMIT": True,
+#         "CONN_MAX_AGE": 0,
+#         "ENGINE": "django.contrib.gis.db.backends.postgis",
+#         "HOST": "{ db_host }",
+#         "NAME": "{ db_name }",
+#         "OPTIONS": {},
+#         "PASSWORD": "{ db_password }",
+#         "PORT": "5432",
+#         "POSTGIS_TEMPLATE": "template_postgis",
+#         "TEST": {
+#             "CHARSET": None,
+#             "COLLATION": None,
+#             "MIRROR": None,
+#             "NAME": None
+#         },
+#         "TIME_ZONE": None,
+#         "USER": "{ db_username }"
+#     }
+# }
 
 INSTALLED_APPS = (
     'django.contrib.admin',
@@ -212,33 +213,6 @@ DATE_FORMATS = {
     ],
 }
 
-AUTHENTICATION_BACKENDS = (
-    # "arches.app.utils.email_auth_backend.EmailAuthenticationBackend", #Comment out for IDIR
-    "oauth2_provider.backends.OAuth2Backend",
-    # "django.contrib.auth.backends.ModelBackend",  # this is default # Comment out for IDIR
-    # "django.contrib.auth.backends.RemoteUserBackend",
-    "arches_fossils.util.auth.backends.BCGovRemoteUserBackend",  # For IDIR authentication
-    "guardian.backends.ObjectPermissionBackend",
-    "arches.app.utils.permission_backend.PermissionBackend",
-)
-
-MIDDLEWARE = [
-    # 'debug_toolbar.middleware.DebugToolbarMiddleware',
-    "corsheaders.middleware.CorsMiddleware",
-    "django.middleware.security.SecurityMiddleware",
-    "django.contrib.sessions.middleware.SessionMiddleware",
-    # 'arches.app.utils.middleware.TokenMiddleware',
-    "django.middleware.locale.LocaleMiddleware",
-    "django.middleware.common.CommonMiddleware",
-    "django.middleware.csrf.CsrfViewMiddleware",
-    "arches.app.utils.middleware.ModifyAuthorizationHeader",
-    "oauth2_provider.middleware.OAuth2TokenMiddleware",
-    "django.contrib.auth.middleware.AuthenticationMiddleware",
-    "arches_fossils.util.auth.middleware.SiteminderMiddleware",
-    "django.contrib.messages.middleware.MessageMiddleware",
-    # "django.middleware.clickjacking.XFrameOptionsMiddleware",
-    "arches.app.utils.middleware.SetAnonymousUser",
-]
 # Identify the usernames and duration (seconds) for which you want to cache the time wheel
 CACHE_BY_USER = {'anonymous': 3600 * 24}
 TILE_CACHE_TIMEOUT = 600  # seconds
