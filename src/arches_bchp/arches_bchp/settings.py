@@ -12,30 +12,9 @@ try:
 except ImportError:
     pass
 
-try:
-    from arches_bchp.config import *
-except ImportError:
-    pass
-
-APP_NAME = BCHP_APP_NAME
+APP_NAME = 'arches_bchp'
 APP_ROOT = os.path.dirname(os.path.abspath(inspect.getfile(inspect.currentframe())))
 STATICFILES_DIRS = (os.path.join(APP_ROOT, 'media'),) + STATICFILES_DIRS
-
-###########
-# BCGov specific settings. Should these be externalized into separate file?
-###########
-
-# Whether we're behind the bcgov proxy server
-BCGOV_PROXY = True
-# PROXY prefix used - NB - cannot have leading "/", and must have trailing "/"
-BCGOV_PROXY_PREFIX = 'int/arches-bchp/'
-
-STATIC_URL = '/' + BCGOV_PROXY_PREFIX + 'media/'
-ADMIN_MEDIA_PREFIX = STATIC_URL + "admin/"
-
-###########
-# End BCGov specific settings.
-###########
 
 DATATYPE_LOCATIONS.append('arches_bchp.datatypes')
 FUNCTION_LOCATIONS.append('arches_bchp.functions')
@@ -47,7 +26,7 @@ TEMPLATES[0]['DIRS'].insert(0, os.path.join(APP_ROOT, 'templates'))
 LOCALE_PATHS.append(os.path.join(APP_ROOT, 'locale'))
 
 # SECURITY WARNING: keep the secret key used in production secret!
-SECRET_KEY = BCHP_SECRET_KEY
+# SECRET_KEY = ''
 
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
@@ -60,7 +39,8 @@ ELASTICSEARCH_PREFIX = 'arches_bchp'
 ELASTICSEARCH_CUSTOM_INDEXES = []
 # [{
 #     'module': 'arches_bchp.search_indexes.sample_index.SampleIndex',
-#     'name': 'my_new_custom_index' <-- follow ES index naming rules
+#     'name': 'my_new_custom_index', <-- follow ES index naming rules
+#     'should_update_asynchronously': False  <-- denotes if asynchronously updating the index would affect custom functionality within the project.
 # }]
 
 KIBANA_URL = "http://localhost:5601/"
@@ -70,28 +50,28 @@ KIBANA_CONFIG_BASEPATH = "kibana"  # must match Kibana config.yml setting (serve
 LOAD_DEFAULT_ONTOLOGY = False
 LOAD_PACKAGE_ONTOLOGIES = True
 
-DATABASES = {
-    "default": {
-        "ATOMIC_REQUESTS": False,
-        "AUTOCOMMIT": True,
-        "CONN_MAX_AGE": 0,
-        "ENGINE": "django.contrib.gis.db.backends.postgis",
-        "HOST": DATABASE_HOST,
-        "NAME": DATABASE_NAME,
-        "OPTIONS": {},
-        "PASSWORD": DATABASE_PASSWORD,
-        "PORT": DATABASE_PORT,
-        "POSTGIS_TEMPLATE": "template_postgis",
-        "TEST": {
-            "CHARSET": None,
-            "COLLATION": None,
-            "MIRROR": None,
-            "NAME": None
-        },
-        "TIME_ZONE": None,
-        "USER": DATABASE_USER
-    }
-}
+# DATABASES = {
+#     "default": {
+#         "ATOMIC_REQUESTS": False,
+#         "AUTOCOMMIT": True,
+#         "CONN_MAX_AGE": 0,
+#         "ENGINE": "django.contrib.gis.db.backends.postgis",
+#         "HOST": DATABASE_HOST,
+#         "NAME": DATABASE_NAME,
+#         "OPTIONS": {},
+#         "PASSWORD": DATABASE_PASSWORD,
+#         "PORT": DATABASE_PORT,
+#         "POSTGIS_TEMPLATE": "template_postgis",
+#         "TEST": {
+#             "CHARSET": None,
+#             "COLLATION": None,
+#             "MIRROR": None,
+#             "NAME": None
+#         },
+#         "TIME_ZONE": None,
+#         "USER": DATABASE_USER
+#     }
+# }
 
 INSTALLED_APPS = (
     'django.contrib.admin',
@@ -114,7 +94,7 @@ INSTALLED_APPS = (
     'arches_bchp',
 )
 
-ALLOWED_HOSTS = BCHP_ALLOWED_HOSTS
+# ALLOWED_HOSTS = []
 
 SYSTEM_SETTINGS_LOCAL_PATH = os.path.join(APP_ROOT, 'system_settings', 'System_Settings.json')
 WSGI_APPLICATION = 'arches_bchp.wsgi.application'
@@ -124,11 +104,11 @@ WSGI_APPLICATION = 'arches_bchp.wsgi.application'
 MEDIA_URL = '/files/'
 
 # Absolute filesystem path to the directory that will hold user-uploaded files.
-MEDIA_ROOT = os.path.join(APP_ROOT)
+MEDIA_ROOT =  os.path.join(APP_ROOT)
 
 # URL prefix for static files.
 # Example: "http://media.lawrence.com/static/"
-# STATIC_URL = '/'+BCGOV_PROXY_PREFIX+'media/'
+STATIC_URL = '/media/'
 
 # Absolute path to the directory static files should be collected to.
 # Don't put anything in this directory yourself; store your static files
@@ -137,7 +117,6 @@ MEDIA_ROOT = os.path.join(APP_ROOT)
 STATIC_ROOT = ''
 
 # when hosting Arches under a sub path set this value to the sub path eg : "/{sub_path}/"
-# FORCE_SCRIPT_NAME = "/int/arches-bchp/"
 FORCE_SCRIPT_NAME = None
 
 RESOURCE_IMPORT_LOG = os.path.join(APP_ROOT, 'logs', 'resource_import.log')
@@ -173,6 +152,7 @@ LOGGING = {
     }
 }
 
+
 # Sets default max upload size to 15MB
 DATA_UPLOAD_MAX_MEMORY_SIZE = 15728640
 
@@ -183,7 +163,11 @@ SESSION_COOKIE_NAME = 'arches_bchp'
 CACHES = {
     'default': {
         'BACKEND': 'django.core.cache.backends.dummy.DummyCache',
-    }
+    },
+    'user_permission': {
+        'BACKEND': 'django.core.cache.backends.db.DatabaseCache',
+        'LOCATION': 'user_permission_cache',
+    },
 }
 
 # Hide nodes and cards in a report that have no data
@@ -193,70 +177,24 @@ BYPASS_CARDINALITY_TILE_VALIDATION = False
 BYPASS_UNIQUE_CONSTRAINT_TILE_VALIDATION = False
 BYPASS_REQUIRED_VALUE_TILE_VALIDATION = False
 
-DATE_IMPORT_EXPORT_FORMAT = "%Y-%m-%d"  # Custom date format for dates imported from and exported to csv
+DATE_IMPORT_EXPORT_FORMAT = "%Y-%m-%d" # Custom date format for dates imported from and exported to csv
 
 # This is used to indicate whether the data in the CSV and SHP exports should be
 # ordered as seen in the resource cards or not.
 EXPORT_DATA_FIELDS_IN_CARD_ORDER = False
 
-DATE_FORMATS = {
-    # Keep index values the same for formats in the python and javascript arrays.
-    "Python": ["%Y-%m-%dT%H:%M:%S.%f%z", "%Y-%m-%dT%H:%M:%S%z", "%Y-%m-%d %H:%M:%S%z", "%Y-%m-%d", "%Y-%m", "%Y",
-               "-%Y"],
-    "JavaScript": ["YYYY-MM-DDTHH:mm:ss.sssZ", "YYYY-MM-DDTHH:mm:ssZ", "YYYY-MM-DD HH:mm:ssZ", "YYYY-MM-DD", "YYYY-MM",
-                   "YYYY", "-YYYY"],
-    "Elasticsearch": [
-        "yyyy-MM-dd'T'HH:mm:ss.SSSZZZZZ",
-        "yyyy-MM-dd'T'HH:mm:ss.SSSZ",
-        "yyyy-MM-dd'T'HH:mm:ssZZZZZ",
-        "yyyy-MM-dd'T'HH:mm:ssZ",
-        "yyyy-MM-dd HH:mm:ssZZZZZ",
-        "yyyy-MM-dd",
-        "yyyy-MM",
-        "yyyy",
-        "-yyyy",
-    ],
-}
-
-AUTHENTICATION_BACKENDS = (
-    # "arches.app.utils.email_auth_backend.EmailAuthenticationBackend", #Comment out for IDIR
-    "oauth2_provider.backends.OAuth2Backend",
-    # "django.contrib.auth.backends.ModelBackend",  # this is default # Comment out for IDIR
-    # "django.contrib.auth.backends.RemoteUserBackend",
-    "arches_bchp.util.auth.backends.BCGovRemoteUserBackend",  # For IDIR authentication
-    "guardian.backends.ObjectPermissionBackend",
-    "arches.app.utils.permission_backend.PermissionBackend",
-)
-
-MIDDLEWARE = [
-    # 'debug_toolbar.middleware.DebugToolbarMiddleware',
-    "corsheaders.middleware.CorsMiddleware",
-    "django.middleware.security.SecurityMiddleware",
-    "django.contrib.sessions.middleware.SessionMiddleware",
-    # 'arches.app.utils.middleware.TokenMiddleware',
-    "django.middleware.locale.LocaleMiddleware",
-    "django.middleware.common.CommonMiddleware",
-    "django.middleware.csrf.CsrfViewMiddleware",
-    "arches.app.utils.middleware.ModifyAuthorizationHeader",
-    "oauth2_provider.middleware.OAuth2TokenMiddleware",
-    "django.contrib.auth.middleware.AuthenticationMiddleware",
-    "arches_bchp.util.auth.middleware.SiteminderMiddleware",
-    "django.contrib.messages.middleware.MessageMiddleware",
-    # "django.middleware.clickjacking.XFrameOptionsMiddleware",
-    "arches.app.utils.middleware.SetAnonymousUser",
-]
-# Identify the usernames and duration (seconds) for which you want to cache the time wheel
+#Identify the usernames and duration (seconds) for which you want to cache the time wheel
 CACHE_BY_USER = {'anonymous': 3600 * 24}
-TILE_CACHE_TIMEOUT = 600  # seconds
-CLUSTER_DISTANCE_MAX = 5000  # meters
+TILE_CACHE_TIMEOUT = 600 #seconds
+CLUSTER_DISTANCE_MAX = 5000 #meters
 GRAPH_MODEL_CACHE_TIMEOUT = None
 
-MOBILE_OAUTH_CLIENT_ID = ''  # '9JCibwrWQ4hwuGn5fu2u1oRZSs9V6gK8Vu8hpRC4'
+MOBILE_OAUTH_CLIENT_ID = ''  #'9JCibwrWQ4hwuGn5fu2u1oRZSs9V6gK8Vu8hpRC4'
 MOBILE_DEFAULT_ONLINE_BASEMAP = {'default': 'mapbox://styles/mapbox/streets-v9'}
 MOBILE_IMAGE_SIZE_LIMITS = {
     # These limits are meant to be approximates. Expect to see uploaded sizes range +/- 20%
     # Not to exceed the limit defined in DATA_UPLOAD_MAX_MEMORY_SIZE
-    "full": min(1500000, DATA_UPLOAD_MAX_MEMORY_SIZE),  # ~1.5 Mb
+    "full": min(1500000, DATA_UPLOAD_MAX_MEMORY_SIZE), # ~1.5 Mb
     "thumb": 400,  # max width/height in pixels, this will maintain the aspect ratio of the original image
 }
 
@@ -273,6 +211,7 @@ NOCAPTCHA = True
 if DEBUG is True:
     SILENCED_SYSTEM_CHECKS = ["captcha.recaptcha_test_key_error"]
 
+
 # EMAIL_BACKEND = 'django.core.mail.backends.console.EmailBackend'  #<-- Only need to uncomment this for testing without an actual email server
 # EMAIL_USE_TLS = True
 # EMAIL_HOST = 'smtp.gmail.com'
@@ -282,18 +221,18 @@ EMAIL_HOST_USER = "xxxx@xxx.com"
 
 DEFAULT_FROM_EMAIL = EMAIL_HOST_USER
 
-CELERY_BROKER_URL = ""  # RabbitMQ --> "amqp://guest:guest@localhost",  Redis --> "redis://localhost:6379/0"
+CELERY_BROKER_URL = "" # RabbitMQ --> "amqp://guest:guest@localhost",  Redis --> "redis://localhost:6379/0"
 CELERY_ACCEPT_CONTENT = ['json']
-CELERY_RESULT_BACKEND = 'django-db'  # Use 'django-cache' if you want to use your cache as your backend
+CELERY_RESULT_BACKEND = 'django-db' # Use 'django-cache' if you want to use your cache as your backend
 CELERY_TASK_SERIALIZER = 'json'
+
 
 CELERY_SEARCH_EXPORT_EXPIRES = 24 * 3600  # seconds
 CELERY_SEARCH_EXPORT_CHECK = 3600  # seconds
 
 CELERY_BEAT_SCHEDULE = {
-    "delete-expired-search-export": {"task": "arches.app.tasks.delete_file", "schedule": CELERY_SEARCH_EXPORT_CHECK, },
-    "notification": {"task": "arches.app.tasks.message", "schedule": CELERY_SEARCH_EXPORT_CHECK,
-                     "args": ("Celery Beat is Running",), },
+    "delete-expired-search-export": {"task": "arches.app.tasks.delete_file", "schedule": CELERY_SEARCH_EXPORT_CHECK,},
+    "notification": {"task": "arches.app.tasks.message", "schedule": CELERY_SEARCH_EXPORT_CHECK, "args": ("Celery Beat is Running",),},
 }
 
 # Set to True if you want to send celery tasks to the broker without being able to detect celery.
@@ -343,14 +282,15 @@ LANGUAGE_CODE = "en"
 # {langcode}-{regioncode} eg: en, en-gb ....
 # a list of language codes can be found here http://www.i18nguy.com/unicode/language-identifiers.html
 LANGUAGES = [
-    #   ('de', _('German')),
-    #   ('en', _('English')),
-    #   ('en-gb', _('British English')),
-    #   ('es', _('Spanish')),
+#   ('de', _('German')),
+#   ('en', _('English')),
+#   ('en-gb', _('British English')),
+#   ('es', _('Spanish')),
 ]
 
 # override this to permenantly display/hide the language switcher
 SHOW_LANGUAGE_SWITCH = len(LANGUAGES) > 1
+
 
 try:
     from .package_settings import *
