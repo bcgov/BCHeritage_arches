@@ -74,10 +74,10 @@ along with this program. If not, see <http://www.gnu.org/licenses/>.
                 <div id="myNavbar" class="navbar-collapse collapse">
                     <ul class="nav navbar-nav navbar-right">
                         <li>
-                            <a href="#info-block-1">{% trans "Arches Features" %}</a>
+                            <a href="#info-block-1">{% trans "About" %}</a>
                         </li>
                         <li>
-                            <a href="{% url 'search_home' %}">{% trans "Search Arches" %}</a>
+                            <a href="{% url 'search_home' %}">{% trans "Search Sites" %}</a>
                         </li>
                         {% if user|can_create_resource_instance and user.username != 'anonymous' %}
                             <li>
@@ -164,9 +164,9 @@ along with this program. If not, see <http://www.gnu.org/licenses/>.
                                 <!-- LAYERS -->
                                 <!-- NEW LAYER -->
                                 <div class="tp-caption sft start text-bold v5-splash-caption" delay="4500" data-hoffset="0" data-y="400" data-speed="800" data-start="100" data-easing="Back.easeInOut" data-endspeed="300" data-x="0">
-                                    <h2>{% blocktrans %}Arches {{version}}{% endblocktrans %}</h2>
-                                    <p>{% trans "A web and mobile platform for" %}</p>
-                                    <p style="padding-bottom: 15px;">{% trans "managing your most important resource information" %}</p>
+                                    <h2>{% blocktrans %}BC Registry of Historic Places{% endblocktrans %}</h2>
+                                    <p>{% trans "Official Registry of historic places for British Columbia" %}</p>
+                                    <p style="padding-bottom: 15px;">{% blocktrans %}({{version}}){% endblocktrans %}</p>
                                 </div>
 
                                 <!-- Gradient -->
