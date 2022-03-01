@@ -95,7 +95,7 @@ define([
     ko.components.register('bchp-map-widget', {
         viewModel: viewModel,
         template: {
-            require: 'text!templates/views/components/widgets/map.htm'
+            require: 'text!templates/views/components/widgets/reports/map.htm'
         }
     });
     return viewModel;
