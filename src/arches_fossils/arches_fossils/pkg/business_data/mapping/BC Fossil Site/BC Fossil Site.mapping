@@ -1,6 +1,6 @@
 {
     "resource_model_id": "fac1b1b4-1034-11ec-8a7a-5254008afee6",
-    "resource_model_name": "BC Fossil Site Model",
+    "resource_model_name": "BC Fossil Site",
     "nodes": [
         {
             "arches_nodeid": "2336be78-1035-11ec-a3aa-5254008afee6",
@@ -18,30 +18,16 @@
             "export": true
         },
         {
+            "arches_nodeid": "64fead5e-9e40-11ec-b5f2-5254008afee6",
+            "arches_node_name": "Collection Events",
+            "file_field_name": "Collection Events",
+            "data_type": "resource-instance-list",
+            "export": true
+        },
+        {
             "arches_nodeid": "bd95bfc8-1035-11ec-b77f-5254008afee6",
             "arches_node_name": "Detailed Location",
             "file_field_name": "Detailed Location",
-            "data_type": "string",
-            "export": true
-        },
-        {
-            "arches_nodeid": "c52824f2-10ac-11ec-b77f-5254008afee6",
-            "arches_node_name": "Fossil ID",
-            "file_field_name": "Fossil ID",
-            "data_type": "string",
-            "export": true
-        },
-        {
-            "arches_nodeid": "16187d18-10c5-11ec-9a28-5254008afee6",
-            "arches_node_name": "Fossil Name",
-            "file_field_name": "Fossil Name",
-            "data_type": "string",
-            "export": true
-        },
-        {
-            "arches_nodeid": "4137df16-10c5-11ec-9415-5254008afee6",
-            "arches_node_name": "Fossil Name Type",
-            "file_field_name": "Fossil Name Type",
             "data_type": "string",
             "export": true
         },
@@ -96,6 +82,21 @@
             "export": true
         },
         {
+            "arches_nodeid": "2a1899e6-8083-11ec-a3f6-5254008afee6",
+            "arches_node_name": "Information Carrier",
+            "file_field_name": "Information Carrier",
+            "data_type": "file-list",
+            "export": true
+        },
+        {
+            "arches_nodeid": "2a189e00-8083-11ec-a3f6-5254008afee6",
+            "arches_node_name": "Information Carrier Format Type",
+            "file_field_name": "Information Carrier Format Type",
+            "data_type": "concept-list",
+            "concept_export_value": "label",
+            "export": true
+        },
+        {
             "arches_nodeid": "2336c030-1035-11ec-a3aa-5254008afee6",
             "arches_node_name": "Location Description",
             "file_field_name": "Location Description",
@@ -117,16 +118,9 @@
             "export": true
         },
         {
-            "arches_nodeid": "c1ffbaf8-1258-11ec-93be-5254008afee6",
-            "arches_node_name": "NTS Mapsheet Name",
-            "file_field_name": "NTS Mapsheet Name",
-            "data_type": "string",
-            "export": true
-        },
-        {
-            "arches_nodeid": "13019608-10a9-11ec-a3aa-5254008afee6",
-            "arches_node_name": "NTS Mapsheet Number",
-            "file_field_name": "NTS Mapsheet Number",
+            "arches_nodeid": "3a5a6254-9f0e-11ec-bb98-5254008afee6",
+            "arches_node_name": "New Site Name",
+            "file_field_name": "New Site Name",
             "data_type": "string",
             "export": true
         },
@@ -135,6 +129,13 @@
             "arches_node_name": "Parent Fossil Site",
             "file_field_name": "Parent Fossil Site",
             "data_type": "resource-instance",
+            "export": true
+        },
+        {
+            "arches_nodeid": "d9aa567e-9f0f-11ec-9a9b-5254008afee6",
+            "arches_node_name": "Protection Status",
+            "file_field_name": "Protection Status",
+            "data_type": "string",
             "export": true
         },
         {
@@ -150,6 +151,13 @@
             "file_field_name": "Setting Type",
             "data_type": "concept",
             "concept_export_value": "label",
+            "export": true
+        },
+        {
+            "arches_nodeid": "8d8b71ea-9b47-11ec-b9e6-5254008afee6",
+            "arches_node_name": "Site Name",
+            "file_field_name": "Site Name",
+            "data_type": "string",
             "export": true
         },
         {
