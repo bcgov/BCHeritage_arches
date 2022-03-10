@@ -29,7 +29,7 @@
                     "helptext": null,
                     "helptitle": null,
                     "instructions": null,
-                    "is_editable": true,
+                    "is_editable": false,
                     "name": "Company",
                     "nodegroup_id": "025083b8-9c1e-11ec-a5e5-5254008afee6",
                     "sortorder": null,
@@ -61,7 +61,7 @@
                     "helptext": null,
                     "helptitle": null,
                     "instructions": null,
-                    "is_editable": true,
+                    "is_editable": false,
                     "name": "Individual",
                     "nodegroup_id": "ad08062e-9c1d-11ec-9de4-5254008afee6",
                     "sortorder": null,
@@ -182,10 +182,31 @@
                     "rangenode_id": "f4473c4e-9c1d-11ec-810b-5254008afee6"
                 }
             ],
-            "functions_x_graphs": [],
+            "functions_x_graphs": [
+                {
+                    "config": {
+                        "description": {
+                            "nodegroup_id": "025083b8-9c1e-11ec-a5e5-5254008afee6",
+                            "string_template": "<Company Name>"
+                        },
+                        "map_popup": {
+                            "nodegroup_id": "",
+                            "string_template": ""
+                        },
+                        "name": {
+                            "nodegroup_id": "ad08062e-9c1d-11ec-9de4-5254008afee6",
+                            "string_template": "<Collector Last Name>, <Collector First Name>"
+                        },
+                        "triggering_nodegroups": []
+                    },
+                    "function_id": "60000000-0000-0000-0000-000000000001",
+                    "graph_id": "897e8250-9c1d-11ec-a82a-5254008afee6",
+                    "id": "24dc8f10-9f27-11ec-a721-5254008afee6"
+                }
+            ],
             "graphid": "897e8250-9c1d-11ec-a82a-5254008afee6",
             "iconclass": "fa fa-user",
-            "is_editable": true,
+            "is_editable": false,
             "isactive": true,
             "isresource": true,
             "jsonldcontext": null,
@@ -333,9 +354,7 @@
                 }
             ],
             "ontology_id": "e6e8db47-2ccf-11e6-927e-b8f6b115d7dd",
-            "relatable_resource_model_ids": [
-                "df3ee1ae-9c1c-11ec-964d-5254008afee6"
-            ],
+            "relatable_resource_model_ids": [],
             "resource_2_resource_constraints": [],
             "root": {
                 "config": null,

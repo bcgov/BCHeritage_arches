@@ -5,19 +5,19 @@
             "cards": [
                 {
                     "active": true,
-                    "cardid": "18d79168-9c1d-11ec-8ea2-5254008afee6",
+                    "cardid": "5e4ba65c-a079-11ec-bc6e-5254008afee6",
                     "component_id": "f05e4d3a-53c1-11e8-b0ea-784f435179ea",
                     "config": null,
                     "constraints": [
                         {
-                            "card_id": "18d79168-9c1d-11ec-8ea2-5254008afee6",
-                            "constraintid": "a8ffe8e0-44e1-4293-bafb-52c18b42e0d6",
+                            "card_id": "5e4ba65c-a079-11ec-bc6e-5254008afee6",
+                            "constraintid": "cd090a4d-5521-44df-9734-e13754652e9c",
                             "nodes": [],
                             "uniquetoallinstances": false
                         },
                         {
-                            "card_id": "18d79168-9c1d-11ec-8ea2-5254008afee6",
-                            "constraintid": "893679b8-538a-479e-b8f8-405183551de4",
+                            "card_id": "5e4ba65c-a079-11ec-bc6e-5254008afee6",
+                            "constraintid": "4f813911-6977-4ab9-9436-6caf7e6dbf59",
                             "nodes": [],
                             "uniquetoallinstances": false
                         }
@@ -29,10 +29,10 @@
                     "helptext": null,
                     "helptitle": null,
                     "instructions": null,
-                    "is_editable": true,
-                    "name": "Collection Date",
-                    "nodegroup_id": "18d76abc-9c1d-11ec-8ea2-5254008afee6",
-                    "sortorder": null,
+                    "is_editable": false,
+                    "name": "Fossils Collected",
+                    "nodegroup_id": "5e4b75ba-a079-11ec-bc6e-5254008afee6",
+                    "sortorder": 3,
                     "visible": true
                 },
                 {
@@ -145,9 +145,9 @@
                     "helptitle": null,
                     "instructions": null,
                     "is_editable": false,
-                    "name": "Collector",
+                    "name": "Collectors",
                     "nodegroup_id": "b7940db0-9c20-11ec-9b9a-5254008afee6",
-                    "sortorder": null,
+                    "sortorder": 2,
                     "visible": true
                 },
                 {
@@ -176,10 +176,42 @@
                     "helptext": null,
                     "helptitle": null,
                     "instructions": null,
-                    "is_editable": true,
+                    "is_editable": false,
                     "name": "Collection Notes",
                     "nodegroup_id": "df549864-9f19-11ec-8390-5254008afee6",
-                    "sortorder": null,
+                    "sortorder": 4,
+                    "visible": true
+                },
+                {
+                    "active": true,
+                    "cardid": "ebc52034-a07a-11ec-8bc4-5254008afee6",
+                    "component_id": "f05e4d3a-53c1-11e8-b0ea-784f435179ea",
+                    "config": null,
+                    "constraints": [
+                        {
+                            "card_id": "ebc52034-a07a-11ec-8bc4-5254008afee6",
+                            "constraintid": "a3c0c37e-0533-49a7-ba9b-fca49717db33",
+                            "nodes": [],
+                            "uniquetoallinstances": false
+                        },
+                        {
+                            "card_id": "ebc52034-a07a-11ec-8bc4-5254008afee6",
+                            "constraintid": "0bf91d6a-bf40-49cd-aa68-c82164de66b9",
+                            "nodes": [],
+                            "uniquetoallinstances": false
+                        }
+                    ],
+                    "cssclass": null,
+                    "description": "Years or year ranges that fossil collection took place.",
+                    "graph_id": "df3ee1ae-9c1c-11ec-964d-5254008afee6",
+                    "helpenabled": false,
+                    "helptext": null,
+                    "helptitle": null,
+                    "instructions": null,
+                    "is_editable": false,
+                    "name": "Collection Years",
+                    "nodegroup_id": "ebc4f8e8-a07a-11ec-8bc4-5254008afee6",
+                    "sortorder": 1,
                     "visible": true
                 }
             ],
@@ -200,6 +232,40 @@
                     "sortorder": 0,
                     "visible": true,
                     "widget_id": "10000000-0000-0000-0000-000000000005"
+                },
+                {
+                    "card_id": "ebc52034-a07a-11ec-8bc4-5254008afee6",
+                    "config": {
+                        "defaultValue": "",
+                        "label": "Collection End Year",
+                        "maxDate": false,
+                        "minDate": false,
+                        "placeholder": "Enter date",
+                        "viewMode": "years"
+                    },
+                    "id": "5372f5c6-a07b-11ec-a171-5254008afee6",
+                    "label": "Collection End Year",
+                    "node_id": "328a4e2c-a07b-11ec-959f-5254008afee6",
+                    "sortorder": 1,
+                    "visible": true,
+                    "widget_id": "10000000-0000-0000-0000-000000000004"
+                },
+                {
+                    "card_id": "ebc52034-a07a-11ec-8bc4-5254008afee6",
+                    "config": {
+                        "defaultValue": "",
+                        "label": "Collection Start Year",
+                        "maxDate": false,
+                        "minDate": false,
+                        "placeholder": "Enter date",
+                        "viewMode": "years"
+                    },
+                    "id": "53736e48-a07b-11ec-a171-5254008afee6",
+                    "label": "Collection Start Year",
+                    "node_id": "0bbd0096-a07b-11ec-855d-5254008afee6",
+                    "sortorder": 0,
+                    "visible": true,
+                    "widget_id": "10000000-0000-0000-0000-000000000004"
                 },
                 {
                     "card_id": "692d9ed2-9c1d-11ec-a5e5-5254008afee6",
@@ -352,12 +418,30 @@
             "edges": [
                 {
                     "description": null,
-                    "domainnode_id": "df3edef2-9c1c-11ec-964d-5254008afee6",
-                    "edgeid": "18d7c6e2-9c1d-11ec-8ea2-5254008afee6",
+                    "domainnode_id": "ebc4f8e8-a07a-11ec-8bc4-5254008afee6",
+                    "edgeid": "0bbd035c-a07b-11ec-855d-5254008afee6",
                     "graph_id": "df3ee1ae-9c1c-11ec-964d-5254008afee6",
                     "name": null,
                     "ontologyproperty": "http://www.cidoc-crm.org/cidoc-crm/P116_starts",
-                    "rangenode_id": "18d76abc-9c1d-11ec-8ea2-5254008afee6"
+                    "rangenode_id": "0bbd0096-a07b-11ec-855d-5254008afee6"
+                },
+                {
+                    "description": null,
+                    "domainnode_id": "ebc4f8e8-a07a-11ec-8bc4-5254008afee6",
+                    "edgeid": "328a51a6-a07b-11ec-959f-5254008afee6",
+                    "graph_id": "df3ee1ae-9c1c-11ec-964d-5254008afee6",
+                    "name": null,
+                    "ontologyproperty": "http://www.cidoc-crm.org/cidoc-crm/P115_finishes",
+                    "rangenode_id": "328a4e2c-a07b-11ec-959f-5254008afee6"
+                },
+                {
+                    "description": null,
+                    "domainnode_id": "df3edef2-9c1c-11ec-964d-5254008afee6",
+                    "edgeid": "5e4bdf96-a079-11ec-bc6e-5254008afee6",
+                    "graph_id": "df3ee1ae-9c1c-11ec-964d-5254008afee6",
+                    "name": null,
+                    "ontologyproperty": "http://www.cidoc-crm.org/cidoc-crm/P9i_forms_part_of",
+                    "rangenode_id": "5e4b75ba-a079-11ec-bc6e-5254008afee6"
                 },
                 {
                     "description": null,
@@ -466,9 +550,39 @@
                     "name": null,
                     "ontologyproperty": "http://www.ics.forth.gr/isl/CRMdig/L43i_is_annotated_by",
                     "rangenode_id": "df549864-9f19-11ec-8390-5254008afee6"
+                },
+                {
+                    "description": null,
+                    "domainnode_id": "df3edef2-9c1c-11ec-964d-5254008afee6",
+                    "edgeid": "ebc557de-a07a-11ec-8bc4-5254008afee6",
+                    "graph_id": "df3ee1ae-9c1c-11ec-964d-5254008afee6",
+                    "name": null,
+                    "ontologyproperty": "http://www.cidoc-crm.org/cidoc-crm/P117_occurs_during",
+                    "rangenode_id": "ebc4f8e8-a07a-11ec-8bc4-5254008afee6"
                 }
             ],
-            "functions_x_graphs": [],
+            "functions_x_graphs": [
+                {
+                    "config": {
+                        "description": {
+                            "nodegroup_id": "692d8e06-9c1d-11ec-a5e5-5254008afee6",
+                            "string_template": "<Detailed Location>, <Location Description>"
+                        },
+                        "map_popup": {
+                            "nodegroup_id": "",
+                            "string_template": ""
+                        },
+                        "name": {
+                            "nodegroup_id": "ebc4f8e8-a07a-11ec-8bc4-5254008afee6",
+                            "string_template": "<Collection Start Year>, <Collection End Year>"
+                        },
+                        "triggering_nodegroups": []
+                    },
+                    "function_id": "60000000-0000-0000-0000-000000000001",
+                    "graph_id": "df3ee1ae-9c1c-11ec-964d-5254008afee6",
+                    "id": "ca9bd100-a089-11ec-84c2-5254008afee6"
+                }
+            ],
             "graphid": "df3ee1ae-9c1c-11ec-964d-5254008afee6",
             "iconclass": "fa fa-suitcase",
             "is_editable": false,
@@ -480,7 +594,7 @@
                 {
                     "cardinality": "1",
                     "legacygroupid": null,
-                    "nodegroupid": "18d76abc-9c1d-11ec-8ea2-5254008afee6",
+                    "nodegroupid": "5e4b75ba-a079-11ec-bc6e-5254008afee6",
                     "parentnodegroup_id": null
                 },
                 {
@@ -518,6 +632,12 @@
                     "legacygroupid": null,
                     "nodegroupid": "df549864-9f19-11ec-8390-5254008afee6",
                     "parentnodegroup_id": null
+                },
+                {
+                    "cardinality": "n",
+                    "legacygroupid": null,
+                    "nodegroupid": "ebc4f8e8-a07a-11ec-8bc4-5254008afee6",
+                    "parentnodegroup_id": null
                 }
             ],
             "nodes": [
@@ -528,17 +648,64 @@
                     "datatype": "date",
                     "description": null,
                     "exportable": true,
-                    "fieldname": "coll_yr",
+                    "fieldname": null,
+                    "graph_id": "df3ee1ae-9c1c-11ec-964d-5254008afee6",
+                    "is_collector": false,
+                    "isrequired": true,
+                    "issearchable": true,
+                    "istopnode": false,
+                    "name": "Collection Start Year",
+                    "nodegroup_id": "ebc4f8e8-a07a-11ec-8bc4-5254008afee6",
+                    "nodeid": "0bbd0096-a07b-11ec-855d-5254008afee6",
+                    "ontologyclass": "http://www.cidoc-crm.org/cidoc-crm/E7_Activity",
+                    "parentproperty": "http://www.cidoc-crm.org/cidoc-crm/P116_starts",
+                    "sortorder": 0
+                },
+                {
+                    "config": {
+                        "dateFormat": "YYYY"
+                    },
+                    "datatype": "date",
+                    "description": null,
+                    "exportable": true,
+                    "fieldname": null,
+                    "graph_id": "df3ee1ae-9c1c-11ec-964d-5254008afee6",
+                    "is_collector": false,
+                    "isrequired": false,
+                    "issearchable": true,
+                    "istopnode": false,
+                    "name": "Collection End Year",
+                    "nodegroup_id": "ebc4f8e8-a07a-11ec-8bc4-5254008afee6",
+                    "nodeid": "328a4e2c-a07b-11ec-959f-5254008afee6",
+                    "ontologyclass": "http://www.cidoc-crm.org/cidoc-crm/E7_Activity",
+                    "parentproperty": "http://www.cidoc-crm.org/cidoc-crm/P115_finishes",
+                    "sortorder": 0
+                },
+                {
+                    "config": {
+                        "graphs": [
+                            {
+                                "graphid": "b53b6850-1c83-11ec-a9a2-5254008afee6",
+                                "name": "BC Fossil"
+                            }
+                        ],
+                        "searchDsl": "",
+                        "searchString": ""
+                    },
+                    "datatype": "resource-instance-list",
+                    "description": null,
+                    "exportable": false,
+                    "fieldname": null,
                     "graph_id": "df3ee1ae-9c1c-11ec-964d-5254008afee6",
                     "is_collector": true,
                     "isrequired": false,
                     "issearchable": true,
                     "istopnode": false,
-                    "name": "Collection Date",
-                    "nodegroup_id": "18d76abc-9c1d-11ec-8ea2-5254008afee6",
-                    "nodeid": "18d76abc-9c1d-11ec-8ea2-5254008afee6",
-                    "ontologyclass": "http://www.cidoc-crm.org/cidoc-crm/E8_Acquisition",
-                    "parentproperty": "http://www.cidoc-crm.org/cidoc-crm/P116_starts",
+                    "name": "Fossils Collected",
+                    "nodegroup_id": "5e4b75ba-a079-11ec-bc6e-5254008afee6",
+                    "nodeid": "5e4b75ba-a079-11ec-bc6e-5254008afee6",
+                    "ontologyclass": "http://www.cidoc-crm.org/cidoc-crm/E80_Part_Removal",
+                    "parentproperty": "http://www.cidoc-crm.org/cidoc-crm/P9i_forms_part_of",
                     "sortorder": 0
                 },
                 {
@@ -759,14 +926,14 @@
                     },
                     "datatype": "resource-instance-list",
                     "description": null,
-                    "exportable": false,
+                    "exportable": true,
                     "fieldname": null,
                     "graph_id": "df3ee1ae-9c1c-11ec-964d-5254008afee6",
                     "is_collector": true,
                     "isrequired": false,
                     "issearchable": true,
                     "istopnode": false,
-                    "name": "Collector",
+                    "name": "Collectors",
                     "nodegroup_id": "b7940db0-9c20-11ec-9b9a-5254008afee6",
                     "nodeid": "b7940db0-9c20-11ec-9b9a-5254008afee6",
                     "ontologyclass": "http://www.cidoc-crm.org/cidoc-crm/E39_Actor",
@@ -808,10 +975,31 @@
                     "ontologyclass": "http://www.ics.forth.gr/isl/CRMdig/D29_Annotation_Object",
                     "parentproperty": "http://www.ics.forth.gr/isl/CRMdig/L43i_is_annotated_by",
                     "sortorder": 0
+                },
+                {
+                    "config": null,
+                    "datatype": "semantic",
+                    "description": "Years or year ranges that fossil collection took place.",
+                    "exportable": false,
+                    "fieldname": null,
+                    "graph_id": "df3ee1ae-9c1c-11ec-964d-5254008afee6",
+                    "is_collector": true,
+                    "isrequired": false,
+                    "issearchable": true,
+                    "istopnode": false,
+                    "name": "Collection Years",
+                    "nodegroup_id": "ebc4f8e8-a07a-11ec-8bc4-5254008afee6",
+                    "nodeid": "ebc4f8e8-a07a-11ec-8bc4-5254008afee6",
+                    "ontologyclass": "http://www.cidoc-crm.org/cidoc-crm/E4_Period",
+                    "parentproperty": "http://www.cidoc-crm.org/cidoc-crm/P117_occurs_during",
+                    "sortorder": 0
                 }
             ],
             "ontology_id": "e6e8db47-2ccf-11e6-927e-b8f6b115d7dd",
-            "relatable_resource_model_ids": [],
+            "relatable_resource_model_ids": [
+                "fac1b1b4-1034-11ec-8a7a-5254008afee6",
+                "b53b6850-1c83-11ec-a9a2-5254008afee6"
+            ],
             "resource_2_resource_constraints": [],
             "root": {
                 "config": null,
