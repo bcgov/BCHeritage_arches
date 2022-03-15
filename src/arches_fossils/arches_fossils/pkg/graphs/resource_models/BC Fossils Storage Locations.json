@@ -355,17 +355,21 @@
             "functions_x_graphs": [
                 {
                     "config": {
-                        "description": {
-                            "nodegroup_id": "ba9258dc-14d5-11ec-a57a-5254008afee6",
-                            "string_template": "<Place Address>, <Address Type>"
-                        },
-                        "map_popup": {
-                            "nodegroup_id": "",
-                            "string_template": ""
-                        },
-                        "name": {
-                            "nodegroup_id": "ea5a7956-14d4-11ec-aa11-5254008afee6",
-                            "string_template": "<Storage Location Name>"
+                        "module": "arches.app.functions.primary_descriptors",
+                        "class_name": "PrimaryDescriptorsFunction",
+                        "descriptor_types": {
+                            "description": {
+                                "nodegroup_id": "ba9258dc-14d5-11ec-a57a-5254008afee6",
+                                "string_template": "<Place Address>, <Address Type>"
+                            },
+                            "map_popup": {
+                                "nodegroup_id": "",
+                                "string_template": ""
+                            },
+                            "name": {
+                                "nodegroup_id": "ea5a7956-14d4-11ec-aa11-5254008afee6",
+                                "string_template": "<Storage Location Name>"
+                            }
                         },
                         "triggering_nodegroups": []
                     },

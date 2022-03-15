@@ -895,17 +895,21 @@
             "functions_x_graphs": [
                 {
                     "config": {
-                        "description": {
-                            "nodegroup_id": "e83bb552-9fe6-11ec-9993-5254008afee6",
-                            "string_template": "<Fossil Common Names>"
-                        },
-                        "map_popup": {
-                            "nodegroup_id": "",
-                            "string_template": ""
-                        },
-                        "name": {
-                            "nodegroup_id": "e83bb552-9fe6-11ec-9993-5254008afee6",
-                            "string_template": "<Fossil Type>"
+                        "module": "arches.app.functions.primary_descriptors",
+                        "class_name": "PrimaryDescriptorsFunction",
+                        "descriptor_types": {
+                            "description": {
+                                "nodegroup_id": "e83bb552-9fe6-11ec-9993-5254008afee6",
+                                "string_template": "<Fossil Common Names>"
+                            },
+                            "map_popup": {
+                                "nodegroup_id": "",
+                                "string_template": ""
+                            },
+                            "name": {
+                                "nodegroup_id": "e83bb552-9fe6-11ec-9993-5254008afee6",
+                                "string_template": "<Fossil Type>"
+                            }
                         },
                         "triggering_nodegroups": []
                     },

@@ -564,17 +564,21 @@
             "functions_x_graphs": [
                 {
                     "config": {
-                        "description": {
-                            "nodegroup_id": "692d8e06-9c1d-11ec-a5e5-5254008afee6",
-                            "string_template": "<Detailed Location>, <Location Description>"
-                        },
-                        "map_popup": {
-                            "nodegroup_id": "",
-                            "string_template": ""
-                        },
-                        "name": {
-                            "nodegroup_id": "ebc4f8e8-a07a-11ec-8bc4-5254008afee6",
-                            "string_template": "<Collection Start Year>, <Collection End Year>"
+                        "module": "arches.app.functions.primary_descriptors",
+                        "class_name": "PrimaryDescriptorsFunction",
+                        "descriptor_types": {
+                            "description": {
+                                "nodegroup_id": "692d8e06-9c1d-11ec-a5e5-5254008afee6",
+                                "string_template": "<Detailed Location>, <Location Description>"
+                            },
+                            "map_popup": {
+                                "nodegroup_id": "",
+                                "string_template": ""
+                            },
+                            "name": {
+                                "nodegroup_id": "ebc4f8e8-a07a-11ec-8bc4-5254008afee6",
+                                "string_template": "<Collection Start Year>, <Collection End Year>"
+                            }
                         },
                         "triggering_nodegroups": []
                     },
