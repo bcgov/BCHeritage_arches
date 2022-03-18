@@ -16,28 +16,20 @@ details = {
         "descriptor_types": {
             "name": {
                 "type": "name",
-                "card_names": ["Fossil Type", "Fossil Common Names"],
+                "node_ids": [],
                 "first_only": True,
                 "show_name": False,
             },
             "description": {
                 "type": "description",
-                "card_names": [
-                    "Fossil Common Names",
-                    "Geological Significance Ranking Code",
-                    "Ranking Detail",
-                ],
+                "node_ids": [],
                 "first_only": False,
                 "delimiter": "<br>",
                 "show_name": True,
             },
             "map_popup": {
                 "type": "map_popup",
-                "card_names": [
-                    "Fossil Common Names",
-                    "Geological Significance Ranking Code",
-                    "Ranking Detail",
-                ],
+                "node_ids": [],
                 "first_only": False,
                 "delimiter": "<br>",
                 "show_name": True,
@@ -55,14 +47,14 @@ class BCFossilsDescriptors(AbstractPrimaryDescriptorsFunction):
         datatype_factory = DataTypeFactory()
         return_value = None
         try:
-            for name in config["card_names"]:
-                name_nodes = models.Node.objects.filter(graph=resource.graph_id).filter(
-                    name=name
-                )
-                if len(name_nodes) == 0:
-                    print("invalid node name %s in type %s" % (name, config["type"]))
-                    continue
-                name_node = name_nodes[0]
+            name_nodes = models.Node.objects.filter(graph=resource.graph_id).filter(
+                nodeid__in=config['node_ids']
+            )
+            for name_node in name_nodes:
+                # if len(name_nodes) == 0:
+                #     print("invalid node ID %s in type %s" % (nodeid, config["type"]))
+                #     continue
+                # name_node = name_nodes[0]
                 tiles = models.TileModel.objects.filter(
                     nodegroup_id=name_node.nodegroup_id
                 ).filter(resourceinstance_id=resource.resourceinstanceid)
@@ -75,14 +67,13 @@ class BCFossilsDescriptors(AbstractPrimaryDescriptorsFunction):
                 value = datatype.get_display_value(tiles[0], name_node)
                 if value and value != "None":
                     if config["first_only"]:
-                        return self._format_value(name, value, config)
+                        return self._format_value(name_node.name, value, config)
                     else:
                         if config["delimiter"] and return_value:
                             return_value += config["delimiter"]
                         elif not return_value:
                             return_value = ""
-                        return_value += self._format_value(name, value, config)
-
+                        return_value += self._format_value(name_node.name, value, config)
             return return_value
         except ValueError as e:
             print(e, "invalid nodegroupid participating in descriptor function.")
