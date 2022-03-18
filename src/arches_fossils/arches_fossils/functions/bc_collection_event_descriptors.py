@@ -7,12 +7,11 @@ from arches.app.datatypes.datatypes import DataTypeFactory
 from django.utils.translation import ugettext as _
 
 details = {
-    "functionid": "60000000-0000-0000-0000-000000001001",
     "name": "BC Fossils Descriptors",
     "type": "primarydescriptors",
     "description": "Function that provides the primary descriptors for BC Fossils resources",
     "defaultconfig": {
-        "module": "arches_fossils.functions.bc-fossils-descriptors",
+        "module": "arches_fossils.functions.bc_fossils_descriptors",
         "class_name": "BCFossilsDescriptors",
         "descriptor_types": {
             "name": {
@@ -44,23 +43,28 @@ details = {
 
 
 class BCFossilsDescriptors(AbstractPrimaryDescriptorsFunction):
-    _datatype_factory = None
     def get_primary_descriptor_from_nodes(self, resource, config):
+        datatype_factory = DataTypeFactory()
         return_value = None
         try:
-            # Name for CollectionEvent is a special case
-            if str(resource.graph_id) == "df3ee1ae-9c1c-11ec-964d-5254008afee6" and config["type"] == "name":
-                return self._get_site_name(resource)
-
-            node_ids = config['node_ids']
             name_nodes = models.Node.objects.filter(graph=resource.graph_id).filter(
                 nodeid__in=config['node_ids']
             )
-            sorted_name_nodes = sorted(name_nodes, key=lambda row: config['node_ids'].index(str(row.nodeid)), reverse=False)
+            for name_node in name_nodes:
+                # if len(name_nodes) == 0:
+                #     print("invalid node ID %s in type %s" % (nodeid, config["type"]))
+                #     continue
+                # name_node = name_nodes[0]
+                tiles = models.TileModel.objects.filter(
+                    nodegroup_id=name_node.nodegroup_id
+                ).filter(resourceinstance_id=resource.resourceinstanceid)
+                if not datatype_factory:
+                    datatype_factory = DataTypeFactory()
+                if len(tiles) == 0:
+                    continue
 
-            for name_node in sorted_name_nodes:
-                value = self._get_value_from_node(name_node, resource)
-
+                datatype = datatype_factory.get_instance(name_node.datatype)
+                value = datatype.get_display_value(tiles[0], name_node)
                 if value and value != "None":
                     if config["first_only"]:
                         return self._format_value(name_node.name, value, config)
@@ -74,42 +78,7 @@ class BCFossilsDescriptors(AbstractPrimaryDescriptorsFunction):
         except ValueError as e:
             print(e, "invalid nodegroupid participating in descriptor function.")
 
-    def _get_value_from_node(self, name_node, resourceinstanceid):
-        tile = models.TileModel.objects.filter(
-            nodegroup_id=name_node.nodegroup_id
-        ).filter(resourceinstance_id=resourceinstanceid).first()
-        if not tile:
-            return None
-        if not self._datatype_factory:
-            self._datatype_factory = DataTypeFactory()
-        datatype = self._datatype_factory.get_instance(name_node.datatype)
-        return datatype.get_display_value(tile, name_node)
-
-    def _get_site_name(self, resource):
-        display_value = ""
-        site = models.ResourceXResource.objects.filter(resourceinstanceidto=resource.resourceinstanceid).prefetch_related("resourceinstancefrom_graphid").first()
-
-        if not site:
-            return display_value
-        name_node = models.Node.objects.filter(graph=site.resourceinstancefrom_graphid) .filter(name="Site Name") .first()
-        start_date_node = models.Node.objects.filter(graph=resource.graph_id) .filter(name="Collection Start Year") .first()
-        if start_date_node:
-            display_value = self._get_value_from_node(
-                start_date_node, resource.resourceinstanceid
-            )
-
-        if not display_value:
-            display_value = "(?)"
-
-        if name_node:
-            display_value = display_value + " - " + self._get_value_from_node(name_node, site.resourceinstanceidfrom)
-
-        return display_value
-
     def _format_value(self, name, value, config):
         if config["show_name"]:
             return "%s: <b>%s</b>" % (name, value)
         return value
-
-    def _nodeid_to_sequence(self, id_list, row):
-        return id_list.index(row.nodeid)
