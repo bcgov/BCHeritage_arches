@@ -7,6 +7,7 @@ from arches.app.datatypes.datatypes import DataTypeFactory
 from django.utils.translation import ugettext as _
 
 details = {
+    "functionid": "60000000-0000-0000-0000-000000001001",
     "name": "BC Fossils Descriptors",
     "type": "primarydescriptors",
     "description": "Function that provides the primary descriptors for BC Fossils resources",
