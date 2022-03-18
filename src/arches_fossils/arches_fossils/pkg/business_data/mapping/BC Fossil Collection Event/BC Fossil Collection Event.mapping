@@ -1,0 +1,91 @@
+{
+    "resource_model_id": "df3ee1ae-9c1c-11ec-964d-5254008afee6",
+    "resource_model_name": "BC Fossil Collection Event",
+    "nodes": [
+        {
+            "arches_nodeid": "328a4e2c-a07b-11ec-959f-5254008afee6",
+            "arches_node_name": "Collection End Year",
+            "file_field_name": "Collection End Year",
+            "data_type": "date",
+            "export": true
+        },
+        {
+            "arches_nodeid": "df549864-9f19-11ec-8390-5254008afee6",
+            "arches_node_name": "Collection Notes",
+            "file_field_name": "Collection Notes",
+            "data_type": "string",
+            "export": true
+        },
+        {
+            "arches_nodeid": "0bbd0096-a07b-11ec-855d-5254008afee6",
+            "arches_node_name": "Collection Start Year",
+            "file_field_name": "Collection Start Year",
+            "data_type": "date",
+            "export": true
+        },
+        {
+            "arches_nodeid": "b7940db0-9c20-11ec-9b9a-5254008afee6",
+            "arches_node_name": "Collectors",
+            "file_field_name": "Collectors",
+            "data_type": "resource-instance-list",
+            "export": true
+        },
+        {
+            "arches_nodeid": "692da79c-9c1d-11ec-a5e5-5254008afee6",
+            "arches_node_name": "Detailed Location",
+            "file_field_name": "Detailed Location",
+            "data_type": "string",
+            "export": true
+        },
+        {
+            "arches_nodeid": "5e4b75ba-a079-11ec-bc6e-5254008afee6",
+            "arches_node_name": "Fossils Collected",
+            "file_field_name": "Fossils Collected",
+            "data_type": "resource-instance-list",
+            "export": true
+        },
+        {
+            "arches_nodeid": "692da0d0-9c1d-11ec-a5e5-5254008afee6",
+            "arches_node_name": "Geometry Qualifier",
+            "file_field_name": "Geometry Qualifier",
+            "data_type": "concept",
+            "concept_export_value": "label",
+            "export": true
+        },
+        {
+            "arches_nodeid": "692da3b4-9c1d-11ec-a5e5-5254008afee6",
+            "arches_node_name": "Location Description",
+            "file_field_name": "Location Description",
+            "data_type": "string",
+            "export": true
+        },
+        {
+            "arches_nodeid": "692da652-9c1d-11ec-a5e5-5254008afee6",
+            "arches_node_name": "Nearest Municipality",
+            "file_field_name": "Nearest Municipality",
+            "data_type": "string",
+            "export": true
+        },
+        {
+            "arches_nodeid": "692da8e6-9c1d-11ec-a5e5-5254008afee6",
+            "arches_node_name": "NTS Mapsheet Name",
+            "file_field_name": "NTS Mapsheet Name",
+            "data_type": "string",
+            "export": true
+        },
+        {
+            "arches_nodeid": "692d8456-9c1d-11ec-a5e5-5254008afee6",
+            "arches_node_name": "NTS Mapsheet Number",
+            "file_field_name": "NTS Mapsheet Number",
+            "data_type": "string",
+            "export": true
+        },
+        {
+            "arches_nodeid": "692d8938-9c1d-11ec-a5e5-5254008afee6",
+            "arches_node_name": "Spatial Coordinates Geometry",
+            "file_field_name": "Spatial Coordinates Geometry",
+            "data_type": "geojson-feature-collection",
+            "export": true
+        }
+    ]
+}

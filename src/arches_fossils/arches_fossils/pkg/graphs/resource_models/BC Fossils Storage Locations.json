@@ -355,23 +355,27 @@
             "functions_x_graphs": [
                 {
                     "config": {
-                        "description": {
-                            "nodegroup_id": "ba9258dc-14d5-11ec-a57a-5254008afee6",
-                            "string_template": "<Place Address>, <Address Type>"
-                        },
-                        "map_popup": {
-                            "nodegroup_id": "",
-                            "string_template": ""
-                        },
-                        "name": {
-                            "nodegroup_id": "ea5a7956-14d4-11ec-aa11-5254008afee6",
-                            "string_template": "<Storage Location Name>"
+                        "module": "arches.app.functions.primary_descriptors",
+                        "class_name": "PrimaryDescriptorsFunction",
+                        "descriptor_types": {
+                            "description": {
+                                "nodegroup_id": "ba9258dc-14d5-11ec-a57a-5254008afee6",
+                                "string_template": "<Place Address>, <Address Type>"
+                            },
+                            "map_popup": {
+                                "nodegroup_id": "",
+                                "string_template": ""
+                            },
+                            "name": {
+                                "nodegroup_id": "ea5a7956-14d4-11ec-aa11-5254008afee6",
+                                "string_template": "<Storage Location Name>"
+                            }
                         },
                         "triggering_nodegroups": []
                     },
                     "function_id": "60000000-0000-0000-0000-000000000001",
                     "graph_id": "3e6a2880-14d4-11ec-9df0-5254008afee6",
-                    "id": "50c24c08-1bdf-11ec-bfda-5254008afee6"
+                    "id": "56960728-9e43-11ec-aa11-5254008afee6"
                 }
             ],
             "graphid": "3e6a2880-14d4-11ec-9df0-5254008afee6",
@@ -751,7 +755,9 @@
                 }
             ],
             "ontology_id": "e6e8db47-2ccf-11e6-927e-b8f6b115d7dd",
-            "relatable_resource_model_ids": [],
+            "relatable_resource_model_ids": [
+                "b53b6850-1c83-11ec-a9a2-5254008afee6"
+            ],
             "resource_2_resource_constraints": [],
             "root": {
                 "config": null,
@@ -778,7 +784,7 @@
     ],
     "metadata": {
         "db": "PostgreSQL 12.6 on x86_64-pc-linux-gnu, compiled by gcc (GCC) 4.8.5 20150623 (Red Hat 4.8.5-44), 64-bit",
-        "git hash": "c7b6d59 2021-09-21 13:25:45 -0700",
+        "git hash": "d45bf14 2022-01-13 14:21:27 -0800",
         "os": "Linux",
         "os version": "3.10.0-1127.el7.x86_64"
     }

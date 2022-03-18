@@ -1,0 +1,392 @@
+{
+    "graph": [
+        {
+            "author": "Brett Ferguson",
+            "cards": [
+                {
+                    "active": true,
+                    "cardid": "0250afc8-9c1e-11ec-a5e5-5254008afee6",
+                    "component_id": "f05e4d3a-53c1-11e8-b0ea-784f435179ea",
+                    "config": null,
+                    "constraints": [
+                        {
+                            "card_id": "0250afc8-9c1e-11ec-a5e5-5254008afee6",
+                            "constraintid": "fbb71b52-1774-4e30-b2a6-9c11cb8c8542",
+                            "nodes": [],
+                            "uniquetoallinstances": false
+                        },
+                        {
+                            "card_id": "0250afc8-9c1e-11ec-a5e5-5254008afee6",
+                            "constraintid": "df8cf45f-06b4-4060-ad0b-0d350628d443",
+                            "nodes": [],
+                            "uniquetoallinstances": false
+                        }
+                    ],
+                    "cssclass": null,
+                    "description": null,
+                    "graph_id": "897e8250-9c1d-11ec-a82a-5254008afee6",
+                    "helpenabled": false,
+                    "helptext": null,
+                    "helptitle": null,
+                    "instructions": null,
+                    "is_editable": false,
+                    "name": "Company",
+                    "nodegroup_id": "025083b8-9c1e-11ec-a5e5-5254008afee6",
+                    "sortorder": null,
+                    "visible": true
+                },
+                {
+                    "active": true,
+                    "cardid": "ad082dc0-9c1d-11ec-9de4-5254008afee6",
+                    "component_id": "f05e4d3a-53c1-11e8-b0ea-784f435179ea",
+                    "config": null,
+                    "constraints": [
+                        {
+                            "card_id": "ad082dc0-9c1d-11ec-9de4-5254008afee6",
+                            "constraintid": "5d32b61c-fefe-438e-8332-256d371f13b1",
+                            "nodes": [],
+                            "uniquetoallinstances": false
+                        },
+                        {
+                            "card_id": "ad082dc0-9c1d-11ec-9de4-5254008afee6",
+                            "constraintid": "06cfbac5-632e-4c25-914f-a8b10b56bd1b",
+                            "nodes": [],
+                            "uniquetoallinstances": false
+                        }
+                    ],
+                    "cssclass": null,
+                    "description": null,
+                    "graph_id": "897e8250-9c1d-11ec-a82a-5254008afee6",
+                    "helpenabled": false,
+                    "helptext": null,
+                    "helptitle": null,
+                    "instructions": null,
+                    "is_editable": false,
+                    "name": "Individual",
+                    "nodegroup_id": "ad08062e-9c1d-11ec-9de4-5254008afee6",
+                    "sortorder": null,
+                    "visible": true
+                }
+            ],
+            "cards_x_nodes_x_widgets": [
+                {
+                    "card_id": "ad082dc0-9c1d-11ec-9de4-5254008afee6",
+                    "config": {
+                        "defaultValue": "",
+                        "label": "Collector First Name",
+                        "maxLength": null,
+                        "placeholder": "Enter text",
+                        "uneditable": false,
+                        "width": "100%"
+                    },
+                    "id": "eff98fc0-9f24-11ec-bd5f-5254008afee6",
+                    "label": "Collector First Name",
+                    "node_id": "db9369ca-9c1d-11ec-a82a-5254008afee6",
+                    "sortorder": 0,
+                    "visible": true,
+                    "widget_id": "10000000-0000-0000-0000-000000000001"
+                },
+                {
+                    "card_id": "ad082dc0-9c1d-11ec-9de4-5254008afee6",
+                    "config": {
+                        "defaultValue": "",
+                        "label": "Collector Last Name",
+                        "maxLength": null,
+                        "placeholder": "Enter text",
+                        "uneditable": false,
+                        "width": "100%"
+                    },
+                    "id": "effa1472-9f24-11ec-bd5f-5254008afee6",
+                    "label": "Collector Last Name",
+                    "node_id": "cf9b0a9c-9c1d-11ec-9f27-5254008afee6",
+                    "sortorder": 2,
+                    "visible": true,
+                    "widget_id": "10000000-0000-0000-0000-000000000001"
+                },
+                {
+                    "card_id": "ad082dc0-9c1d-11ec-9de4-5254008afee6",
+                    "config": {
+                        "defaultValue": "",
+                        "label": "Collector Middle Name",
+                        "maxLength": null,
+                        "placeholder": "Enter text",
+                        "uneditable": false,
+                        "width": "100%"
+                    },
+                    "id": "effa74ee-9f24-11ec-bd5f-5254008afee6",
+                    "label": "Collector Middle Name",
+                    "node_id": "f4473c4e-9c1d-11ec-810b-5254008afee6",
+                    "sortorder": 1,
+                    "visible": true,
+                    "widget_id": "10000000-0000-0000-0000-000000000001"
+                }
+            ],
+            "color": null,
+            "config": {},
+            "deploymentdate": null,
+            "deploymentfile": null,
+            "description": "",
+            "edges": [
+                {
+                    "description": null,
+                    "domainnode_id": "897e7f6c-9c1d-11ec-a82a-5254008afee6",
+                    "edgeid": "0250eaa6-9c1e-11ec-a5e5-5254008afee6",
+                    "graph_id": "897e8250-9c1d-11ec-a82a-5254008afee6",
+                    "name": null,
+                    "ontologyproperty": "http://www.cidoc-crm.org/cidoc-crm/P11i_participated_in",
+                    "rangenode_id": "025083b8-9c1e-11ec-a5e5-5254008afee6"
+                },
+                {
+                    "description": null,
+                    "domainnode_id": "025083b8-9c1e-11ec-a5e5-5254008afee6",
+                    "edgeid": "4a9c0f8e-9c1e-11ec-9de4-5254008afee6",
+                    "graph_id": "897e8250-9c1d-11ec-a82a-5254008afee6",
+                    "name": null,
+                    "ontologyproperty": "http://www.cidoc-crm.org/cidoc-crm/P1_is_identified_by",
+                    "rangenode_id": "4a9c0c3c-9c1e-11ec-9de4-5254008afee6"
+                },
+                {
+                    "description": null,
+                    "domainnode_id": "897e7f6c-9c1d-11ec-a82a-5254008afee6",
+                    "edgeid": "ad085f7a-9c1d-11ec-9de4-5254008afee6",
+                    "graph_id": "897e8250-9c1d-11ec-a82a-5254008afee6",
+                    "name": null,
+                    "ontologyproperty": "http://www.cidoc-crm.org/cidoc-crm/P1_is_identified_by",
+                    "rangenode_id": "ad08062e-9c1d-11ec-9de4-5254008afee6"
+                },
+                {
+                    "description": null,
+                    "domainnode_id": "ad08062e-9c1d-11ec-9de4-5254008afee6",
+                    "edgeid": "cf9b0d12-9c1d-11ec-9f27-5254008afee6",
+                    "graph_id": "897e8250-9c1d-11ec-a82a-5254008afee6",
+                    "name": null,
+                    "ontologyproperty": "http://www.cidoc-crm.org/cidoc-crm/P1_is_identified_by",
+                    "rangenode_id": "cf9b0a9c-9c1d-11ec-9f27-5254008afee6"
+                },
+                {
+                    "description": null,
+                    "domainnode_id": "ad08062e-9c1d-11ec-9de4-5254008afee6",
+                    "edgeid": "db936d12-9c1d-11ec-a82a-5254008afee6",
+                    "graph_id": "897e8250-9c1d-11ec-a82a-5254008afee6",
+                    "name": null,
+                    "ontologyproperty": "http://www.cidoc-crm.org/cidoc-crm/P1_is_identified_by",
+                    "rangenode_id": "db9369ca-9c1d-11ec-a82a-5254008afee6"
+                },
+                {
+                    "description": null,
+                    "domainnode_id": "ad08062e-9c1d-11ec-9de4-5254008afee6",
+                    "edgeid": "f4473f64-9c1d-11ec-810b-5254008afee6",
+                    "graph_id": "897e8250-9c1d-11ec-a82a-5254008afee6",
+                    "name": null,
+                    "ontologyproperty": "http://www.cidoc-crm.org/cidoc-crm/P1_is_identified_by",
+                    "rangenode_id": "f4473c4e-9c1d-11ec-810b-5254008afee6"
+                }
+            ],
+            "functions_x_graphs": [
+                {
+                    "config": {
+                        "module": "arches.app.functions.primary_descriptors",
+                        "class_name": "PrimaryDescriptorsFunction",
+                        "descriptor_types": {
+                            "description": {
+                                "nodegroup_id": "025083b8-9c1e-11ec-a5e5-5254008afee6",
+                                "string_template": "<Company Name>"
+                            },
+                            "map_popup": {
+                                "nodegroup_id": "",
+                                "string_template": ""
+                            },
+                            "name": {
+                                "nodegroup_id": "ad08062e-9c1d-11ec-9de4-5254008afee6",
+                                "string_template": "<Collector Last Name>, <Collector First Name>"
+                            }
+                        },
+                        "triggering_nodegroups": []
+                    },
+                    "function_id": "60000000-0000-0000-0000-000000000001",
+                    "graph_id": "897e8250-9c1d-11ec-a82a-5254008afee6",
+                    "id": "24dc8f10-9f27-11ec-a721-5254008afee6"
+                }
+            ],
+            "graphid": "897e8250-9c1d-11ec-a82a-5254008afee6",
+            "iconclass": "fa fa-user",
+            "is_editable": false,
+            "isactive": true,
+            "isresource": true,
+            "jsonldcontext": null,
+            "name": "BC Fossil Collector",
+            "nodegroups": [
+                {
+                    "cardinality": "1",
+                    "legacygroupid": null,
+                    "nodegroupid": "025083b8-9c1e-11ec-a5e5-5254008afee6",
+                    "parentnodegroup_id": null
+                },
+                {
+                    "cardinality": "1",
+                    "legacygroupid": null,
+                    "nodegroupid": "ad08062e-9c1d-11ec-9de4-5254008afee6",
+                    "parentnodegroup_id": null
+                }
+            ],
+            "nodes": [
+                {
+                    "config": null,
+                    "datatype": "semantic",
+                    "description": null,
+                    "exportable": false,
+                    "fieldname": null,
+                    "graph_id": "897e8250-9c1d-11ec-a82a-5254008afee6",
+                    "is_collector": true,
+                    "isrequired": false,
+                    "issearchable": true,
+                    "istopnode": false,
+                    "name": "Company",
+                    "nodegroup_id": "025083b8-9c1e-11ec-a5e5-5254008afee6",
+                    "nodeid": "025083b8-9c1e-11ec-a5e5-5254008afee6",
+                    "ontologyclass": "http://www.cidoc-crm.org/cidoc-crm/E15_Identifier_Assignment",
+                    "parentproperty": "http://www.cidoc-crm.org/cidoc-crm/P11i_participated_in",
+                    "sortorder": 0
+                },
+                {
+                    "config": null,
+                    "datatype": "string",
+                    "description": null,
+                    "exportable": true,
+                    "fieldname": "cmpny_nm",
+                    "graph_id": "897e8250-9c1d-11ec-a82a-5254008afee6",
+                    "is_collector": false,
+                    "isrequired": false,
+                    "issearchable": true,
+                    "istopnode": false,
+                    "name": "Company Name",
+                    "nodegroup_id": "025083b8-9c1e-11ec-a5e5-5254008afee6",
+                    "nodeid": "4a9c0c3c-9c1e-11ec-9de4-5254008afee6",
+                    "ontologyclass": "http://www.cidoc-crm.org/cidoc-crm/E82_Actor_Appellation",
+                    "parentproperty": "http://www.cidoc-crm.org/cidoc-crm/P1_is_identified_by",
+                    "sortorder": 0
+                },
+                {
+                    "config": null,
+                    "datatype": "semantic",
+                    "description": "",
+                    "exportable": false,
+                    "fieldname": null,
+                    "graph_id": "897e8250-9c1d-11ec-a82a-5254008afee6",
+                    "is_collector": false,
+                    "isrequired": false,
+                    "issearchable": true,
+                    "istopnode": true,
+                    "name": "BC Fossil Collector",
+                    "nodegroup_id": null,
+                    "nodeid": "897e7f6c-9c1d-11ec-a82a-5254008afee6",
+                    "ontologyclass": "http://www.cidoc-crm.org/cidoc-crm/E39_Actor",
+                    "parentproperty": "",
+                    "sortorder": 0
+                },
+                {
+                    "config": null,
+                    "datatype": "semantic",
+                    "description": null,
+                    "exportable": false,
+                    "fieldname": null,
+                    "graph_id": "897e8250-9c1d-11ec-a82a-5254008afee6",
+                    "is_collector": true,
+                    "isrequired": false,
+                    "issearchable": true,
+                    "istopnode": false,
+                    "name": "Individual",
+                    "nodegroup_id": "ad08062e-9c1d-11ec-9de4-5254008afee6",
+                    "nodeid": "ad08062e-9c1d-11ec-9de4-5254008afee6",
+                    "ontologyclass": "http://www.cidoc-crm.org/cidoc-crm/E42_Identifier",
+                    "parentproperty": "http://www.cidoc-crm.org/cidoc-crm/P1_is_identified_by",
+                    "sortorder": 0
+                },
+                {
+                    "config": null,
+                    "datatype": "string",
+                    "description": null,
+                    "exportable": true,
+                    "fieldname": "ind_lst_nm",
+                    "graph_id": "897e8250-9c1d-11ec-a82a-5254008afee6",
+                    "is_collector": false,
+                    "isrequired": false,
+                    "issearchable": true,
+                    "istopnode": false,
+                    "name": "Collector Last Name",
+                    "nodegroup_id": "ad08062e-9c1d-11ec-9de4-5254008afee6",
+                    "nodeid": "cf9b0a9c-9c1d-11ec-9f27-5254008afee6",
+                    "ontologyclass": "http://www.cidoc-crm.org/cidoc-crm/E82_Actor_Appellation",
+                    "parentproperty": "http://www.cidoc-crm.org/cidoc-crm/P1_is_identified_by",
+                    "sortorder": 0
+                },
+                {
+                    "config": null,
+                    "datatype": "string",
+                    "description": null,
+                    "exportable": true,
+                    "fieldname": "ind_fst_nm",
+                    "graph_id": "897e8250-9c1d-11ec-a82a-5254008afee6",
+                    "is_collector": false,
+                    "isrequired": false,
+                    "issearchable": true,
+                    "istopnode": false,
+                    "name": "Collector First Name",
+                    "nodegroup_id": "ad08062e-9c1d-11ec-9de4-5254008afee6",
+                    "nodeid": "db9369ca-9c1d-11ec-a82a-5254008afee6",
+                    "ontologyclass": "http://www.cidoc-crm.org/cidoc-crm/E82_Actor_Appellation",
+                    "parentproperty": "http://www.cidoc-crm.org/cidoc-crm/P1_is_identified_by",
+                    "sortorder": 0
+                },
+                {
+                    "config": null,
+                    "datatype": "string",
+                    "description": null,
+                    "exportable": true,
+                    "fieldname": "ind_mid_nm",
+                    "graph_id": "897e8250-9c1d-11ec-a82a-5254008afee6",
+                    "is_collector": false,
+                    "isrequired": false,
+                    "issearchable": true,
+                    "istopnode": false,
+                    "name": "Collector Middle Name",
+                    "nodegroup_id": "ad08062e-9c1d-11ec-9de4-5254008afee6",
+                    "nodeid": "f4473c4e-9c1d-11ec-810b-5254008afee6",
+                    "ontologyclass": "http://www.cidoc-crm.org/cidoc-crm/E82_Actor_Appellation",
+                    "parentproperty": "http://www.cidoc-crm.org/cidoc-crm/P1_is_identified_by",
+                    "sortorder": 0
+                }
+            ],
+            "ontology_id": "e6e8db47-2ccf-11e6-927e-b8f6b115d7dd",
+            "relatable_resource_model_ids": [],
+            "resource_2_resource_constraints": [],
+            "root": {
+                "config": null,
+                "datatype": "semantic",
+                "description": "",
+                "exportable": false,
+                "fieldname": null,
+                "graph_id": "897e8250-9c1d-11ec-a82a-5254008afee6",
+                "is_collector": false,
+                "isrequired": false,
+                "issearchable": true,
+                "istopnode": true,
+                "name": "BC Fossil Collector",
+                "nodegroup_id": null,
+                "nodeid": "897e7f6c-9c1d-11ec-a82a-5254008afee6",
+                "ontologyclass": "http://www.cidoc-crm.org/cidoc-crm/E39_Actor",
+                "sortorder": 0
+            },
+            "slug": null,
+            "subtitle": "Actor part of a fossil collection event",
+            "template_id": "50000000-0000-0000-0000-000000000001",
+            "version": ""
+        }
+    ],
+    "metadata": {
+        "db": "PostgreSQL 12.6 on x86_64-pc-linux-gnu, compiled by gcc (GCC) 4.8.5 20150623 (Red Hat 4.8.5-44), 64-bit",
+        "git hash": "d45bf14 2022-01-13 14:21:27 -0800",
+        "os": "Linux",
+        "os version": "3.10.0-1127.el7.x86_64"
+    }
+}
