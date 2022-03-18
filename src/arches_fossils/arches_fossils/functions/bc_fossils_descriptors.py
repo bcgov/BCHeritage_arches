@@ -58,20 +58,6 @@ class BCFossilsDescriptors(AbstractPrimaryDescriptorsFunction):
             sorted_name_nodes = sorted(name_nodes, key=lambda row: config['node_ids'].index(str(row.nodeid)), reverse=False)
 
             for name_node in sorted_name_nodes:
-                # if len(name_nodes) == 0:
-                #     print("invalid node ID %s in type %s" % (nodeid, config["type"]))
-                #     continue
-                # name_node = name_nodes[0]
-                # tiles = models.TileModel.objects.filter(
-                #     nodegroup_id=name_node.nodegroup_id
-                # ).filter(resourceinstance_id=resource.resourceinstanceid)
-                # if not datatype_factory:
-                #     datatype_factory = DataTypeFactory()
-                # if len(tiles) == 0:
-                #     continue
-                #
-                # datatype = datatype_factory.get_instance(name_node.datatype)
-                # value = datatype.get_display_value(tiles[0], name_node)
                 value = self._get_value_from_node(name_node, resource)
 
                 if value and value != "None":
