@@ -564,27 +564,41 @@
             "functions_x_graphs": [
                 {
                     "config": {
-                        "module": "arches.app.functions.primary_descriptors",
-                        "class_name": "PrimaryDescriptorsFunction",
+                        "class_name": "BCFossilsDescriptors",
                         "descriptor_types": {
                             "description": {
-                                "nodegroup_id": "692d8e06-9c1d-11ec-a5e5-5254008afee6",
-                                "string_template": "<Detailed Location>, <Location Description>"
+                                "delimiter": "<br>",
+                                "first_only": false,
+                                "node_ids": [
+                                    "b7940db0-9c20-11ec-9b9a-5254008afee6",
+                                    "692da3b4-9c1d-11ec-a5e5-5254008afee6"
+                                ],
+                                "show_name": true,
+                                "type": "description"
                             },
                             "map_popup": {
-                                "nodegroup_id": "",
-                                "string_template": ""
+                                "delimiter": "<br>",
+                                "first_only": false,
+                                "node_ids": [
+                                    "b7940db0-9c20-11ec-9b9a-5254008afee6",
+                                    "692da3b4-9c1d-11ec-a5e5-5254008afee6"
+                                ],
+                                "show_name": true,
+                                "type": "map_popup"
                             },
                             "name": {
-                                "nodegroup_id": "ebc4f8e8-a07a-11ec-8bc4-5254008afee6",
-                                "string_template": "<Collection Start Year>, <Collection End Year>"
+                                "first_only": true,
+                                "node_ids": [],
+                                "show_name": false,
+                                "type": "name"
                             }
                         },
+                        "module": "arches_fossils.functions.bc-fossils-descriptors",
                         "triggering_nodegroups": []
                     },
-                    "function_id": "60000000-0000-0000-0000-000000000001",
+                    "function_id": "60000000-0000-0000-0000-000000001001",
                     "graph_id": "df3ee1ae-9c1c-11ec-964d-5254008afee6",
-                    "id": "ca9bd100-a089-11ec-84c2-5254008afee6"
+                    "id": "7abd7740-a6ee-11ec-9144-5254008afee6"
                 }
             ],
             "graphid": "df3ee1ae-9c1c-11ec-964d-5254008afee6",
