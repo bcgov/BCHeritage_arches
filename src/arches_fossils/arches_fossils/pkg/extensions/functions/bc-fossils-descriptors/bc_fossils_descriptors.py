@@ -10,9 +10,10 @@ details = {
     "functionid": "60000000-0000-0000-0000-000000001001",
     "name": "BC Fossils Descriptors",
     "type": "primarydescriptors",
+    "modulename": "bc_fossils_descriptors.py",
     "description": "Function that provides the primary descriptors for BC Fossils resources",
     "defaultconfig": {
-        "module": "arches_fossils.functions.bc-fossils-descriptors",
+        "module": "arches_fossils.functions.bc_fossils_descriptors",
         "class_name": "BCFossilsDescriptors",
         "descriptor_types": {
             "name": {
