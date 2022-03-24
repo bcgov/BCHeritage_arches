@@ -3,6 +3,29 @@
     "resource_model_name": "BC Fossil",
     "nodes": [
         {
+            "arches_nodeid": "b049f862-a878-11ec-81a4-5254008afee6",
+            "arches_node_name": "Description",
+            "file_field_name": "Description",
+            "data_type": "string",
+            "export": true
+        },
+        {
+            "arches_nodeid": "b049faba-a878-11ec-81a4-5254008afee6",
+            "arches_node_name": "Description Language",
+            "file_field_name": "Description Language",
+            "data_type": "concept",
+            "concept_export_value": "label",
+            "export": true
+        },
+        {
+            "arches_nodeid": "b049f9ac-a878-11ec-81a4-5254008afee6",
+            "arches_node_name": "Description Type",
+            "file_field_name": "Description Type",
+            "data_type": "concept",
+            "concept_export_value": "label",
+            "export": true
+        },
+        {
             "arches_nodeid": "3fa9e3d4-1c86-11ec-967b-5254008afee6",
             "arches_node_name": "Educational Quality",
             "file_field_name": "Educational Quality",
@@ -42,6 +65,14 @@
             "arches_node_name": "Fossil Quality",
             "file_field_name": "Fossil Quality",
             "data_type": "string",
+            "export": true
+        },
+        {
+            "arches_nodeid": "914cb220-a85e-11ec-81a4-5254008afee6",
+            "arches_node_name": "Fossil Size Category",
+            "file_field_name": "Fossil Size Category",
+            "data_type": "concept-list",
+            "concept_export_value": "label",
             "export": true
         },
         {
@@ -164,13 +195,6 @@
             "export": true
         },
         {
-            "arches_nodeid": "900f6bc0-1c84-11ec-be13-5254008afee6",
-            "arches_node_name": "Override Significance",
-            "file_field_name": "Override Significance",
-            "data_type": "boolean",
-            "export": true
-        },
-        {
             "arches_nodeid": "477538c6-9fb1-11ec-9db6-5254008afee6",
             "arches_node_name": "Ranking Detail",
             "file_field_name": "Ranking Detail",
@@ -178,14 +202,14 @@
             "export": true
         },
         {
-            "arches_nodeid": "5d3bdffc-1c85-11ec-b77a-5254008afee6",
+            "arches_nodeid": "e3cf3dc4-a85e-11ec-b40a-5254008afee6",
             "arches_node_name": "Significance Ranking Code",
             "file_field_name": "Significance Ranking Code",
             "data_type": "boolean",
             "export": true
         },
         {
-            "arches_nodeid": "6734d038-9fb4-11ec-8672-5254008afee6",
+            "arches_nodeid": "e3cf4242-a85e-11ec-b40a-5254008afee6",
             "arches_node_name": "Significance Ranking Details",
             "file_field_name": "Significance Ranking Details",
             "data_type": "string",

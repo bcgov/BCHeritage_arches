@@ -23,7 +23,7 @@
                     "helptext": null,
                     "helptitle": null,
                     "instructions": "Enter the resource name and its respective type.",
-                    "is_editable": true,
+                    "is_editable": false,
                     "name": "Name",
                     "nodegroup_id": "49b837b0-10c7-11ec-81af-5254008afee6",
                     "sortorder": 0,
@@ -55,7 +55,7 @@
                     "helptext": null,
                     "helptitle": null,
                     "instructions": null,
-                    "is_editable": true,
+                    "is_editable": false,
                     "name": "Potential Ranking",
                     "nodegroup_id": "69230292-10c7-11ec-8a7a-5254008afee6",
                     "sortorder": 3,
@@ -74,7 +74,7 @@
                     "helptext": null,
                     "helptitle": null,
                     "instructions": "Enter a description and description type for the resource.",
-                    "is_editable": true,
+                    "is_editable": false,
                     "name": "Description",
                     "nodegroup_id": "7febebec-10c7-11ec-bbeb-5254008afee6",
                     "sortorder": 1,
@@ -100,7 +100,7 @@
                     "helptext": null,
                     "helptitle": null,
                     "instructions": null,
-                    "is_editable": true,
+                    "is_editable": false,
                     "name": "Area Boundary",
                     "nodegroup_id": "c6651266-10c6-11ec-adef-5254008afee6",
                     "sortorder": 2,
@@ -119,7 +119,7 @@
                     "helptext": null,
                     "helptitle": null,
                     "instructions": "Define the spatial location.",
-                    "is_editable": true,
+                    "is_editable": false,
                     "name": "Spatial Location",
                     "nodegroup_id": "c66518e2-10c6-11ec-adef-5254008afee6",
                     "sortorder": 0,
@@ -248,14 +248,54 @@
                     "rangenode_id": "c6651266-10c6-11ec-adef-5254008afee6"
                 }
             ],
-            "functions_x_graphs": [],
+            "functions_x_graphs": [
+                {
+                    "config": {
+                        "class_name": "BCFossilsDescriptors",
+                        "descriptor_types": {
+                            "description": {
+                                "delimiter": "<br>",
+                                "first_only": false,
+                                "node_ids": [
+                                    "69230292-10c7-11ec-8a7a-5254008afee6"
+                                ],
+                                "show_name": true,
+                                "type": "description"
+                            },
+                            "map_popup": {
+                                "delimiter": "<br><br>",
+                                "first_only": false,
+                                "node_ids": [
+                                    "7febfbb4-10c7-11ec-bbeb-5254008afee6",
+                                    "69230292-10c7-11ec-8a7a-5254008afee6"
+                                ],
+                                "show_name": true,
+                                "type": "map_popup"
+                            },
+                            "name": {
+                                "first_only": true,
+                                "node_ids": [
+                                    "49b837b0-10c7-11ec-81af-5254008afee6"
+                                ],
+                                "show_name": false,
+                                "type": "name"
+                            }
+                        },
+                        "module": "arches_fossils.functions.bc_fossils_descriptors",
+                        "triggering_nodegroups": []
+                    },
+                    "function_id": "60000000-0000-0000-0000-000000001001",
+                    "graph_id": "4d6c9226-10c6-11ec-9a94-5254008afee6",
+                    "id": "85603c22-a78f-11ec-8056-5254008afee6"
+                }
+            ],
             "graphid": "4d6c9226-10c6-11ec-9a94-5254008afee6",
             "iconclass": "fa fa-cubes",
-            "is_editable": true,
+            "is_editable": false,
             "isactive": true,
             "isresource": true,
             "jsonldcontext": null,
-            "name": "BC Fossil Interest Area Model",
+            "name": "BC Fossil Interest Area",
             "nodegroups": [
                 {
                     "cardinality": "n",
@@ -338,7 +378,7 @@
                     "isrequired": false,
                     "issearchable": true,
                     "istopnode": true,
-                    "name": "BC Fossil Interest Area Model",
+                    "name": "BC Fossil Interest Area",
                     "nodegroup_id": null,
                     "nodeid": "4d6c8e98-10c6-11ec-9a94-5254008afee6",
                     "ontologyclass": "http://www.cidoc-crm.org/cidoc-crm/E18_Physical_Thing",
@@ -347,7 +387,7 @@
                 },
                 {
                     "config": null,
-                    "datatype": "semantic",
+                    "datatype": "string",
                     "description": null,
                     "exportable": false,
                     "fieldname": null,
@@ -439,25 +479,25 @@
                 },
                 {
                     "config": {
-                        "addToMap": false,
-                        "advancedStyle": "",
+                        "addToMap": true,
+                        "advancedStyle": "[\n\t{\n\t\t\"id\": \"resources-fill-c66518e2-10c6-11ec-adef-5254008afee6\",\n\t\t\"type\": \"fill\",\n\t\t\"source\": \"resources-c66518e2-10c6-11ec-adef-5254008afee6\",\n\t\t\"source-layer\": \"c66518e2-10c6-11ec-adef-5254008afee6\",\n\t\t\"layout\": {\n\t\t\t\"visibility\": \"visible\"\n\t\t},\n\t\t\"filter\": [\n\t\t\t\"all\",\n\t\t\t[\n\t\t\t\t\"==\",\n\t\t\t\t\"$type\",\n\t\t\t\t\"Polygon\"\n\t\t\t],\n\t\t\t[\n\t\t\t\t\"==\",\n\t\t\t\t\"total\",\n\t\t\t\t1\n\t\t\t]\n\t\t],\n\t\t\"paint\": {\n\t\t\t\"fill-color\": \"rgba(197,56,56,0.2)\"\n\t\t}\n\t},\n\t{\n\t\t\"id\": \"resources-fill-c66518e2-10c6-11ec-adef-5254008afee6-click\",\n\t\t\"type\": \"fill\",\n\t\t\"source\": \"resources-c66518e2-10c6-11ec-adef-5254008afee6\",\n\t\t\"source-layer\": \"c66518e2-10c6-11ec-adef-5254008afee6\",\n\t\t\"layout\": {\n\t\t\t\"visibility\": \"visible\"\n\t\t},\n\t\t\"filter\": [\n\t\t\t\"all\",\n\t\t\t[\n\t\t\t\t\"==\",\n\t\t\t\t\"$type\",\n\t\t\t\t\"Polygon\"\n\t\t\t],\n\t\t\t[\n\t\t\t\t\"==\",\n\t\t\t\t\"total\",\n\t\t\t\t1\n\t\t\t],\n\t\t\t[\n\t\t\t\t\"==\",\n\t\t\t\t\"resourceinstanceid\",\n\t\t\t\t\"\"\n\t\t\t]\n\t\t],\n\t\t\"paint\": {\n\t\t\t\"fill-color\": \"rgba(130, 130, 130, 0.5)\"\n\t\t}\n\t},\n\t{\n\t\t\"id\": \"resources-fill-c66518e2-10c6-11ec-adef-5254008afee6-hover\",\n\t\t\"type\": \"fill\",\n\t\t\"source\": \"resources-c66518e2-10c6-11ec-adef-5254008afee6\",\n\t\t\"source-layer\": \"c66518e2-10c6-11ec-adef-5254008afee6\",\n\t\t\"layout\": {\n\t\t\t\"visibility\": \"visible\"\n\t\t},\n\t\t\"filter\": [\n\t\t\t\"all\",\n\t\t\t[\n\t\t\t\t\"==\",\n\t\t\t\t\"$type\",\n\t\t\t\t\"Polygon\"\n\t\t\t],\n\t\t\t[\n\t\t\t\t\"==\",\n\t\t\t\t\"total\",\n\t\t\t\t1\n\t\t\t],\n\t\t\t[\n\t\t\t\t\"==\",\n\t\t\t\t\"resourceinstanceid\",\n\t\t\t\t\"\"\n\t\t\t]\n\t\t],\n\t\t\"paint\": {\n\t\t\t\"fill-color\": \"rgba(130, 130, 130, 0.5)\"\n\t\t}\n\t},\n\t{\n\t\t\"id\": \"resources-poly-outline-c66518e2-10c6-11ec-adef-5254008afee6\",\n\t\t\"type\": \"line\",\n\t\t\"source\": \"resources-c66518e2-10c6-11ec-adef-5254008afee6\",\n\t\t\"source-layer\": \"c66518e2-10c6-11ec-adef-5254008afee6\",\n\t\t\"layout\": {\n\t\t\t\"visibility\": \"visible\"\n\t\t},\n\t\t\"filter\": [\n\t\t\t\"all\",\n\t\t\t[\n\t\t\t\t\"==\",\n\t\t\t\t\"$type\",\n\t\t\t\t\"Polygon\"\n\t\t\t],\n\t\t\t[\n\t\t\t\t\"==\",\n\t\t\t\t\"total\",\n\t\t\t\t1\n\t\t\t]\n\t\t],\n\t\t\"paint\": {\n\t\t\t\"line-width\": 3,\n\t\t\t\"line-color\": \"rgba(197,56,56,0.7)\"\n\t\t}\n\t},\n\t{\n\t\t\"id\": \"resources-poly-outline-c66518e2-10c6-11ec-adef-5254008afee6-hover\",\n\t\t\"type\": \"line\",\n\t\t\"source\": \"resources-c66518e2-10c6-11ec-adef-5254008afee6\",\n\t\t\"source-layer\": \"c66518e2-10c6-11ec-adef-5254008afee6\",\n\t\t\"layout\": {\n\t\t\t\"visibility\": \"visible\"\n\t\t},\n\t\t\"filter\": [\n\t\t\t\"all\",\n\t\t\t[\n\t\t\t\t\"==\",\n\t\t\t\t\"$type\",\n\t\t\t\t\"Polygon\"\n\t\t\t],\n\t\t\t[\n\t\t\t\t\"==\",\n\t\t\t\t\"total\",\n\t\t\t\t1\n\t\t\t],\n\t\t\t[\n\t\t\t\t\"==\",\n\t\t\t\t\"resourceinstanceid\",\n\t\t\t\t\"\"\n\t\t\t]\n\t\t],\n\t\t\"paint\": {\n\t\t\t\"line-width\": 4,\n\t\t\t\"line-color\": \"rgba(200, 200, 200, 0.7)\"\n\t\t}\n\t},\n\t{\n\t\t\"id\": \"resources-poly-outline-c66518e2-10c6-11ec-adef-5254008afee6-click\",\n\t\t\"type\": \"line\",\n\t\t\"source\": \"resources-c66518e2-10c6-11ec-adef-5254008afee6\",\n\t\t\"source-layer\": \"c66518e2-10c6-11ec-adef-5254008afee6\",\n\t\t\"layout\": {\n\t\t\t\"visibility\": \"visible\"\n\t\t},\n\t\t\"filter\": [\n\t\t\t\"all\",\n\t\t\t[\n\t\t\t\t\"==\",\n\t\t\t\t\"$type\",\n\t\t\t\t\"Polygon\"\n\t\t\t],\n\t\t\t[\n\t\t\t\t\"==\",\n\t\t\t\t\"total\",\n\t\t\t\t1\n\t\t\t],\n\t\t\t[\n\t\t\t\t\"==\",\n\t\t\t\t\"resourceinstanceid\",\n\t\t\t\t\"\"\n\t\t\t]\n\t\t],\n\t\t\"paint\": {\n\t\t\t\"line-width\": 4,\n\t\t\t\"line-color\": \"rgba(200, 200, 200, 0.7)\"\n\t\t}\n\t},\n\t{\n\t\t\"id\": \"resources-line-halo-c66518e2-10c6-11ec-adef-5254008afee6\",\n\t\t\"type\": \"line\",\n\t\t\"source\": \"resources-c66518e2-10c6-11ec-adef-5254008afee6\",\n\t\t\"source-layer\": \"c66518e2-10c6-11ec-adef-5254008afee6\",\n\t\t\"layout\": {\n\t\t\t\"visibility\": \"visible\"\n\t\t},\n\t\t\"filter\": [\n\t\t\t\"all\",\n\t\t\t[\n\t\t\t\t\"==\",\n\t\t\t\t\"$type\",\n\t\t\t\t\"LineString\"\n\t\t\t],\n\t\t\t[\n\t\t\t\t\"==\",\n\t\t\t\t\"total\",\n\t\t\t\t1\n\t\t\t]\n\t\t],\n\t\t\"paint\": {\n\t\t\t\"line-width\": 4,\n\t\t\t\"line-color\": \"rgba(200, 200, 200, 0.5)\"\n\t\t}\n\t},\n\t{\n\t\t\"id\": \"resources-line-c66518e2-10c6-11ec-adef-5254008afee6\",\n\t\t\"type\": \"line\",\n\t\t\"source\": \"resources-c66518e2-10c6-11ec-adef-5254008afee6\",\n\t\t\"source-layer\": \"c66518e2-10c6-11ec-adef-5254008afee6\",\n\t\t\"layout\": {\n\t\t\t\"visibility\": \"visible\"\n\t\t},\n\t\t\"filter\": [\n\t\t\t\"all\",\n\t\t\t[\n\t\t\t\t\"==\",\n\t\t\t\t\"$type\",\n\t\t\t\t\"LineString\"\n\t\t\t],\n\t\t\t[\n\t\t\t\t\"==\",\n\t\t\t\t\"total\",\n\t\t\t\t1\n\t\t\t]\n\t\t],\n\t\t\"paint\": {\n\t\t\t\"line-width\": 2,\n\t\t\t\"line-color\": \"rgba(130, 130, 130, 0.7)\"\n\t\t}\n\t},\n\t{\n\t\t\"id\": \"resources-line-halo-c66518e2-10c6-11ec-adef-5254008afee6-hover\",\n\t\t\"type\": \"line\",\n\t\t\"source\": \"resources-c66518e2-10c6-11ec-adef-5254008afee6\",\n\t\t\"source-layer\": \"c66518e2-10c6-11ec-adef-5254008afee6\",\n\t\t\"layout\": {\n\t\t\t\"visibility\": \"visible\"\n\t\t},\n\t\t\"filter\": [\n\t\t\t\"all\",\n\t\t\t[\n\t\t\t\t\"==\",\n\t\t\t\t\"$type\",\n\t\t\t\t\"LineString\"\n\t\t\t],\n\t\t\t[\n\t\t\t\t\"==\",\n\t\t\t\t\"total\",\n\t\t\t\t1\n\t\t\t],\n\t\t\t[\n\t\t\t\t\"==\",\n\t\t\t\t\"resourceinstanceid\",\n\t\t\t\t\"\"\n\t\t\t]\n\t\t],\n\t\t\"paint\": {\n\t\t\t\"line-width\": 8,\n\t\t\t\"line-color\": \"rgba(200, 200, 200, 0.5)\"\n\t\t}\n\t},\n\t{\n\t\t\"id\": \"resources-line-c66518e2-10c6-11ec-adef-5254008afee6-hover\",\n\t\t\"type\": \"line\",\n\t\t\"source\": \"resources-c66518e2-10c6-11ec-adef-5254008afee6\",\n\t\t\"source-layer\": \"c66518e2-10c6-11ec-adef-5254008afee6\",\n\t\t\"layout\": {\n\t\t\t\"visibility\": \"visible\"\n\t\t},\n\t\t\"filter\": [\n\t\t\t\"all\",\n\t\t\t[\n\t\t\t\t\"==\",\n\t\t\t\t\"$type\",\n\t\t\t\t\"LineString\"\n\t\t\t],\n\t\t\t[\n\t\t\t\t\"==\",\n\t\t\t\t\"total\",\n\t\t\t\t1\n\t\t\t],\n\t\t\t[\n\t\t\t\t\"==\",\n\t\t\t\t\"resourceinstanceid\",\n\t\t\t\t\"\"\n\t\t\t]\n\t\t],\n\t\t\"paint\": {\n\t\t\t\"line-width\": 4,\n\t\t\t\"line-color\": \"rgba(130, 130, 130, 0.7)\"\n\t\t}\n\t},\n\t{\n\t\t\"id\": \"resources-line-halo-c66518e2-10c6-11ec-adef-5254008afee6-click\",\n\t\t\"type\": \"line\",\n\t\t\"source\": \"resources-c66518e2-10c6-11ec-adef-5254008afee6\",\n\t\t\"source-layer\": \"c66518e2-10c6-11ec-adef-5254008afee6\",\n\t\t\"layout\": {\n\t\t\t\"visibility\": \"visible\"\n\t\t},\n\t\t\"filter\": [\n\t\t\t\"all\",\n\t\t\t[\n\t\t\t\t\"==\",\n\t\t\t\t\"$type\",\n\t\t\t\t\"LineString\"\n\t\t\t],\n\t\t\t[\n\t\t\t\t\"==\",\n\t\t\t\t\"total\",\n\t\t\t\t1\n\t\t\t],\n\t\t\t[\n\t\t\t\t\"==\",\n\t\t\t\t\"resourceinstanceid\",\n\t\t\t\t\"\"\n\t\t\t]\n\t\t],\n\t\t\"paint\": {\n\t\t\t\"line-width\": 8,\n\t\t\t\"line-color\": \"rgba(200, 200, 200, 0.5)\"\n\t\t}\n\t},\n\t{\n\t\t\"id\": \"resources-line-c66518e2-10c6-11ec-adef-5254008afee6-click\",\n\t\t\"type\": \"line\",\n\t\t\"source\": \"resources-c66518e2-10c6-11ec-adef-5254008afee6\",\n\t\t\"source-layer\": \"c66518e2-10c6-11ec-adef-5254008afee6\",\n\t\t\"layout\": {\n\t\t\t\"visibility\": \"visible\"\n\t\t},\n\t\t\"filter\": [\n\t\t\t\"all\",\n\t\t\t[\n\t\t\t\t\"==\",\n\t\t\t\t\"$type\",\n\t\t\t\t\"LineString\"\n\t\t\t],\n\t\t\t[\n\t\t\t\t\"==\",\n\t\t\t\t\"total\",\n\t\t\t\t1\n\t\t\t],\n\t\t\t[\n\t\t\t\t\"==\",\n\t\t\t\t\"resourceinstanceid\",\n\t\t\t\t\"\"\n\t\t\t]\n\t\t],\n\t\t\"paint\": {\n\t\t\t\"line-width\": 4,\n\t\t\t\"line-color\": \"rgba(130, 130, 130, 0.7)\"\n\t\t}\n\t},\n\t{\n\t\t\"id\": \"resources-point-halo-c66518e2-10c6-11ec-adef-5254008afee6-hover\",\n\t\t\"type\": \"circle\",\n\t\t\"source\": \"resources-c66518e2-10c6-11ec-adef-5254008afee6\",\n\t\t\"source-layer\": \"c66518e2-10c6-11ec-adef-5254008afee6\",\n\t\t\"layout\": {\n\t\t\t\"visibility\": \"visible\"\n\t\t},\n\t\t\"filter\": [\n\t\t\t\"all\",\n\t\t\t[\n\t\t\t\t\"==\",\n\t\t\t\t\"$type\",\n\t\t\t\t\"Point\"\n\t\t\t],\n\t\t\t[\n\t\t\t\t\"==\",\n\t\t\t\t\"total\",\n\t\t\t\t1\n\t\t\t],\n\t\t\t[\n\t\t\t\t\"==\",\n\t\t\t\t\"resourceinstanceid\",\n\t\t\t\t\"\"\n\t\t\t]\n\t\t],\n\t\t\"paint\": {\n\t\t\t\"circle-radius\": 8,\n\t\t\t\"circle-color\": \"rgba(200, 200, 200, 0.5)\"\n\t\t}\n\t},\n\t{\n\t\t\"id\": \"resources-point-c66518e2-10c6-11ec-adef-5254008afee6-hover\",\n\t\t\"type\": \"circle\",\n\t\t\"source\": \"resources-c66518e2-10c6-11ec-adef-5254008afee6\",\n\t\t\"source-layer\": \"c66518e2-10c6-11ec-adef-5254008afee6\",\n\t\t\"layout\": {\n\t\t\t\"visibility\": \"visible\"\n\t\t},\n\t\t\"filter\": [\n\t\t\t\"all\",\n\t\t\t[\n\t\t\t\t\"==\",\n\t\t\t\t\"$type\",\n\t\t\t\t\"Point\"\n\t\t\t],\n\t\t\t[\n\t\t\t\t\"==\",\n\t\t\t\t\"total\",\n\t\t\t\t1\n\t\t\t],\n\t\t\t[\n\t\t\t\t\"==\",\n\t\t\t\t\"resourceinstanceid\",\n\t\t\t\t\"\"\n\t\t\t]\n\t\t],\n\t\t\"paint\": {\n\t\t\t\"circle-radius\": 4,\n\t\t\t\"circle-color\": \"rgba(130, 130, 130, 0.7)\"\n\t\t}\n\t},\n\t{\n\t\t\"id\": \"resources-point-halo-c66518e2-10c6-11ec-adef-5254008afee6\",\n\t\t\"type\": \"circle\",\n\t\t\"source\": \"resources-c66518e2-10c6-11ec-adef-5254008afee6\",\n\t\t\"source-layer\": \"c66518e2-10c6-11ec-adef-5254008afee6\",\n\t\t\"layout\": {\n\t\t\t\"visibility\": \"visible\"\n\t\t},\n\t\t\"filter\": [\n\t\t\t\"all\",\n\t\t\t[\n\t\t\t\t\"==\",\n\t\t\t\t\"$type\",\n\t\t\t\t\"Point\"\n\t\t\t],\n\t\t\t[\n\t\t\t\t\"==\",\n\t\t\t\t\"total\",\n\t\t\t\t1\n\t\t\t]\n\t\t],\n\t\t\"paint\": {\n\t\t\t\"circle-radius\": 4,\n\t\t\t\"circle-color\": \"rgba(197,56,56,0.5)\"\n\t\t}\n\t},\n\t{\n\t\t\"id\": \"resources-point-c66518e2-10c6-11ec-adef-5254008afee6\",\n\t\t\"type\": \"circle\",\n\t\t\"source\": \"resources-c66518e2-10c6-11ec-adef-5254008afee6\",\n\t\t\"source-layer\": \"c66518e2-10c6-11ec-adef-5254008afee6\",\n\t\t\"layout\": {\n\t\t\t\"visibility\": \"visible\"\n\t\t},\n\t\t\"filter\": [\n\t\t\t\"all\",\n\t\t\t[\n\t\t\t\t\"==\",\n\t\t\t\t\"$type\",\n\t\t\t\t\"Point\"\n\t\t\t],\n\t\t\t[\n\t\t\t\t\"==\",\n\t\t\t\t\"total\",\n\t\t\t\t1\n\t\t\t]\n\t\t],\n\t\t\"paint\": {\n\t\t\t\"circle-radius\": 2,\n\t\t\t\"circle-color\": \"rgba(197,56,56,0.7)\"\n\t\t}\n\t},\n\t{\n\t\t\"id\": \"resources-point-halo-c66518e2-10c6-11ec-adef-5254008afee6-click\",\n\t\t\"type\": \"circle\",\n\t\t\"source\": \"resources-c66518e2-10c6-11ec-adef-5254008afee6\",\n\t\t\"source-layer\": \"c66518e2-10c6-11ec-adef-5254008afee6\",\n\t\t\"layout\": {\n\t\t\t\"visibility\": \"visible\"\n\t\t},\n\t\t\"filter\": [\n\t\t\t\"all\",\n\t\t\t[\n\t\t\t\t\"==\",\n\t\t\t\t\"$type\",\n\t\t\t\t\"Point\"\n\t\t\t],\n\t\t\t[\n\t\t\t\t\"==\",\n\t\t\t\t\"total\",\n\t\t\t\t1\n\t\t\t],\n\t\t\t[\n\t\t\t\t\"==\",\n\t\t\t\t\"resourceinstanceid\",\n\t\t\t\t\"\"\n\t\t\t]\n\t\t],\n\t\t\"paint\": {\n\t\t\t\"circle-radius\": 8,\n\t\t\t\"circle-color\": \"rgba(200, 200, 200, 0.5)\"\n\t\t}\n\t},\n\t{\n\t\t\"id\": \"resources-point-c66518e2-10c6-11ec-adef-5254008afee6-click\",\n\t\t\"type\": \"circle\",\n\t\t\"source\": \"resources-c66518e2-10c6-11ec-adef-5254008afee6\",\n\t\t\"source-layer\": \"c66518e2-10c6-11ec-adef-5254008afee6\",\n\t\t\"layout\": {\n\t\t\t\"visibility\": \"visible\"\n\t\t},\n\t\t\"filter\": [\n\t\t\t\"all\",\n\t\t\t[\n\t\t\t\t\"==\",\n\t\t\t\t\"$type\",\n\t\t\t\t\"Point\"\n\t\t\t],\n\t\t\t[\n\t\t\t\t\"==\",\n\t\t\t\t\"total\",\n\t\t\t\t1\n\t\t\t],\n\t\t\t[\n\t\t\t\t\"==\",\n\t\t\t\t\"resourceinstanceid\",\n\t\t\t\t\"\"\n\t\t\t]\n\t\t],\n\t\t\"paint\": {\n\t\t\t\"circle-radius\": 4,\n\t\t\t\"circle-color\": \"rgba(130, 130, 130, 0.7)\"\n\t\t}\n\t},\n\t{\n\t\t\"id\": \"resources-cluster-point-halo-c66518e2-10c6-11ec-adef-5254008afee6\",\n\t\t\"type\": \"circle\",\n\t\t\"source\": \"resources-c66518e2-10c6-11ec-adef-5254008afee6\",\n\t\t\"source-layer\": \"c66518e2-10c6-11ec-adef-5254008afee6\",\n\t\t\"layout\": {\n\t\t\t\"visibility\": \"visible\"\n\t\t},\n\t\t\"filter\": [\n\t\t\t\"all\",\n\t\t\t[\n\t\t\t\t\"==\",\n\t\t\t\t\"$type\",\n\t\t\t\t\"Point\"\n\t\t\t],\n\t\t\t[\n\t\t\t\t\">\",\n\t\t\t\t\"total\",\n\t\t\t\t1\n\t\t\t]\n\t\t],\n\t\t\"paint\": {\n\t\t\t\"circle-radius\": {\n\t\t\t\t\"property\": \"total\",\n\t\t\t\t\"stops\": [\n\t\t\t\t\t[\n\t\t\t\t\t\t0,\n\t\t\t\t\t\t22\n\t\t\t\t\t],\n\t\t\t\t\t[\n\t\t\t\t\t\t50,\n\t\t\t\t\t\t24\n\t\t\t\t\t],\n\t\t\t\t\t[\n\t\t\t\t\t\t100,\n\t\t\t\t\t\t26\n\t\t\t\t\t],\n\t\t\t\t\t[\n\t\t\t\t\t\t200,\n\t\t\t\t\t\t28\n\t\t\t\t\t],\n\t\t\t\t\t[\n\t\t\t\t\t\t400,\n\t\t\t\t\t\t30\n\t\t\t\t\t],\n\t\t\t\t\t[\n\t\t\t\t\t\t800,\n\t\t\t\t\t\t32\n\t\t\t\t\t],\n\t\t\t\t\t[\n\t\t\t\t\t\t1200,\n\t\t\t\t\t\t34\n\t\t\t\t\t],\n\t\t\t\t\t[\n\t\t\t\t\t\t1600,\n\t\t\t\t\t\t36\n\t\t\t\t\t],\n\t\t\t\t\t[\n\t\t\t\t\t\t2000,\n\t\t\t\t\t\t38\n\t\t\t\t\t],\n\t\t\t\t\t[\n\t\t\t\t\t\t2500,\n\t\t\t\t\t\t40\n\t\t\t\t\t],\n\t\t\t\t\t[\n\t\t\t\t\t\t3000,\n\t\t\t\t\t\t42\n\t\t\t\t\t],\n\t\t\t\t\t[\n\t\t\t\t\t\t4000,\n\t\t\t\t\t\t44\n\t\t\t\t\t],\n\t\t\t\t\t[\n\t\t\t\t\t\t5000,\n\t\t\t\t\t\t46\n\t\t\t\t\t]\n\t\t\t\t]\n\t\t\t},\n\t\t\t\"circle-color\": \"rgba(197,56,56,0.5)\"\n\t\t}\n\t},\n\t{\n\t\t\"id\": \"resources-cluster-point-c66518e2-10c6-11ec-adef-5254008afee6\",\n\t\t\"type\": \"circle\",\n\t\t\"source\": \"resources-c66518e2-10c6-11ec-adef-5254008afee6\",\n\t\t\"source-layer\": \"c66518e2-10c6-11ec-adef-5254008afee6\",\n\t\t\"layout\": {\n\t\t\t\"visibility\": \"visible\"\n\t\t},\n\t\t\"filter\": [\n\t\t\t\"all\",\n\t\t\t[\n\t\t\t\t\"==\",\n\t\t\t\t\"$type\",\n\t\t\t\t\"Point\"\n\t\t\t],\n\t\t\t[\n\t\t\t\t\">\",\n\t\t\t\t\"total\",\n\t\t\t\t1\n\t\t\t]\n\t\t],\n\t\t\"paint\": {\n\t\t\t\"circle-radius\": {\n\t\t\t\t\"property\": \"total\",\n\t\t\t\t\"type\": \"exponential\",\n\t\t\t\t\"stops\": [\n\t\t\t\t\t[\n\t\t\t\t\t\t0,\n\t\t\t\t\t\t12\n\t\t\t\t\t],\n\t\t\t\t\t[\n\t\t\t\t\t\t50,\n\t\t\t\t\t\t14\n\t\t\t\t\t],\n\t\t\t\t\t[\n\t\t\t\t\t\t100,\n\t\t\t\t\t\t16\n\t\t\t\t\t],\n\t\t\t\t\t[\n\t\t\t\t\t\t200,\n\t\t\t\t\t\t18\n\t\t\t\t\t],\n\t\t\t\t\t[\n\t\t\t\t\t\t400,\n\t\t\t\t\t\t20\n\t\t\t\t\t],\n\t\t\t\t\t[\n\t\t\t\t\t\t800,\n\t\t\t\t\t\t22\n\t\t\t\t\t],\n\t\t\t\t\t[\n\t\t\t\t\t\t1200,\n\t\t\t\t\t\t24\n\t\t\t\t\t],\n\t\t\t\t\t[\n\t\t\t\t\t\t1600,\n\t\t\t\t\t\t26\n\t\t\t\t\t],\n\t\t\t\t\t[\n\t\t\t\t\t\t2000,\n\t\t\t\t\t\t28\n\t\t\t\t\t],\n\t\t\t\t\t[\n\t\t\t\t\t\t2500,\n\t\t\t\t\t\t30\n\t\t\t\t\t],\n\t\t\t\t\t[\n\t\t\t\t\t\t3000,\n\t\t\t\t\t\t32\n\t\t\t\t\t],\n\t\t\t\t\t[\n\t\t\t\t\t\t4000,\n\t\t\t\t\t\t34\n\t\t\t\t\t],\n\t\t\t\t\t[\n\t\t\t\t\t\t5000,\n\t\t\t\t\t\t36\n\t\t\t\t\t]\n\t\t\t\t]\n\t\t\t},\n\t\t\t\"circle-color\": \"rgba(197,56,56,0.7)\"\n\t\t}\n\t},\n\t{\n\t\t\"id\": \"resources-cluster-count-c66518e2-10c6-11ec-adef-5254008afee6\",\n\t\t\"type\": \"symbol\",\n\t\t\"source\": \"resources-c66518e2-10c6-11ec-adef-5254008afee6\",\n\t\t\"source-layer\": \"c66518e2-10c6-11ec-adef-5254008afee6\",\n\t\t\"layout\": {\n\t\t\t\"text-field\": \"{total}\",\n\t\t\t\"text-size\": 10\n\t\t},\n\t\t\"paint\": {\n\t\t\t\"text-color\": \"#fff\"\n\t\t},\n\t\t\"filter\": [\n\t\t\t\"all\",\n\t\t\t[\n\t\t\t\t\">\",\n\t\t\t\t\"total\",\n\t\t\t\t1\n\t\t\t]\n\t\t]\n\t}\n]",
                         "advancedStyling": false,
                         "clusterDistance": 20,
                         "clusterMaxZoom": 5,
                         "clusterMinPoints": 3,
-                        "fillColor": "rgba(130, 130, 130, 0.5)",
+                        "fillColor": "rgba(197,56,56,0.2)",
                         "haloRadius": 4,
                         "haloWeight": 4,
                         "layerActivated": true,
-                        "layerIcon": "",
+                        "layerIcon": "fa fa-question",
                         "layerLegend": "",
                         "layerName": "",
                         "lineColor": "rgba(130, 130, 130, 0.7)",
                         "lineHaloColor": "rgba(200, 200, 200, 0.5)",
-                        "outlineColor": "rgba(200, 200, 200, 0.7)",
-                        "outlineWeight": 2,
-                        "pointColor": "rgba(130, 130, 130, 0.7)",
-                        "pointHaloColor": "rgba(200, 200, 200, 0.5)",
+                        "outlineColor": "rgba(197,56,56,0.7)",
+                        "outlineWeight": 3,
+                        "pointColor": "rgba(197,56,56,0.7)",
+                        "pointHaloColor": "rgba(197,56,56,0.5)",
                         "radius": 2,
                         "simplification": 0.3,
                         "weight": 2
@@ -513,7 +553,7 @@
                 "isrequired": false,
                 "issearchable": true,
                 "istopnode": true,
-                "name": "BC Fossil Interest Area Model",
+                "name": "BC Fossil Interest Area",
                 "nodegroup_id": null,
                 "nodeid": "4d6c8e98-10c6-11ec-9a94-5254008afee6",
                 "ontologyclass": "http://www.cidoc-crm.org/cidoc-crm/E18_Physical_Thing",
@@ -527,7 +567,7 @@
     ],
     "metadata": {
         "db": "PostgreSQL 12.6 on x86_64-pc-linux-gnu, compiled by gcc (GCC) 4.8.5 20150623 (Red Hat 4.8.5-44), 64-bit",
-        "git hash": "d45bf14 2022-01-13 14:21:27 -0800",
+        "git hash": "156980e 2022-03-18 12:55:37 -0700",
         "os": "Linux",
         "os version": "3.10.0-1127.el7.x86_64"
     }
