@@ -185,27 +185,40 @@
             "functions_x_graphs": [
                 {
                     "config": {
-                        "module": "arches.app.functions.primary_descriptors",
-                        "class_name": "PrimaryDescriptorsFunction",
+                        "class_name": "BCFossilsDescriptors",
                         "descriptor_types": {
                             "description": {
-                                "nodegroup_id": "025083b8-9c1e-11ec-a5e5-5254008afee6",
-                                "string_template": "<Company Name>"
+                                "delimiter": "<br>",
+                                "first_only": false,
+                                "node_ids": [],
+                                "show_name": true,
+                                "type": "description"
                             },
                             "map_popup": {
-                                "nodegroup_id": "",
-                                "string_template": ""
+                                "delimiter": "<br>",
+                                "first_only": false,
+                                "node_ids": [],
+                                "show_name": true,
+                                "type": "map_popup"
                             },
                             "name": {
-                                "nodegroup_id": "ad08062e-9c1d-11ec-9de4-5254008afee6",
-                                "string_template": "<Collector Last Name>, <Collector First Name>"
+                                "delimiter": ", ",
+                                "first_only": false,
+                                "node_ids": [
+                                    "db9369ca-9c1d-11ec-a82a-5254008afee6",
+                                    "cf9b0a9c-9c1d-11ec-9f27-5254008afee6",
+                                    "4a9c0c3c-9c1e-11ec-9de4-5254008afee6"
+                                ],
+                                "show_name": false,
+                                "type": "name"
                             }
                         },
+                        "module": "arches_fossils.functions.bc_fossils_descriptors",
                         "triggering_nodegroups": []
                     },
-                    "function_id": "60000000-0000-0000-0000-000000000001",
+                    "function_id": "60000000-0000-0000-0000-000000001001",
                     "graph_id": "897e8250-9c1d-11ec-a82a-5254008afee6",
-                    "id": "24dc8f10-9f27-11ec-a721-5254008afee6"
+                    "id": "879a1c22-a737-11ec-bc48-5254008afee6"
                 }
             ],
             "graphid": "897e8250-9c1d-11ec-a82a-5254008afee6",
@@ -385,7 +398,7 @@
     ],
     "metadata": {
         "db": "PostgreSQL 12.6 on x86_64-pc-linux-gnu, compiled by gcc (GCC) 4.8.5 20150623 (Red Hat 4.8.5-44), 64-bit",
-        "git hash": "d45bf14 2022-01-13 14:21:27 -0800",
+        "git hash": "156980e 2022-03-18 12:55:37 -0700",
         "os": "Linux",
         "os version": "3.10.0-1127.el7.x86_64"
     }
