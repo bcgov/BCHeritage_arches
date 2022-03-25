@@ -3,29 +3,6 @@
     "resource_model_name": "BC Fossil",
     "nodes": [
         {
-            "arches_nodeid": "b049f862-a878-11ec-81a4-5254008afee6",
-            "arches_node_name": "Description",
-            "file_field_name": "Description",
-            "data_type": "string",
-            "export": true
-        },
-        {
-            "arches_nodeid": "b049faba-a878-11ec-81a4-5254008afee6",
-            "arches_node_name": "Description Language",
-            "file_field_name": "Description Language",
-            "data_type": "concept",
-            "concept_export_value": "label",
-            "export": true
-        },
-        {
-            "arches_nodeid": "b049f9ac-a878-11ec-81a4-5254008afee6",
-            "arches_node_name": "Description Type",
-            "file_field_name": "Description Type",
-            "data_type": "concept",
-            "concept_export_value": "label",
-            "export": true
-        },
-        {
             "arches_nodeid": "3fa9e3d4-1c86-11ec-967b-5254008afee6",
             "arches_node_name": "Educational Quality",
             "file_field_name": "Educational Quality",
@@ -185,6 +162,21 @@
             "arches_node_name": "Min ICS Age",
             "file_field_name": "Min ICS Age",
             "data_type": "string",
+            "export": true
+        },
+        {
+            "arches_nodeid": "e776efd4-ab98-11ec-9344-5254008afee6",
+            "arches_node_name": "Note",
+            "file_field_name": "Note",
+            "data_type": "string",
+            "export": true
+        },
+        {
+            "arches_nodeid": "e776f114-ab98-11ec-9344-5254008afee6",
+            "arches_node_name": "Note Type",
+            "file_field_name": "Note Type",
+            "data_type": "concept",
+            "concept_export_value": "label",
             "export": true
         },
         {

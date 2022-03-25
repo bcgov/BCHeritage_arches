@@ -1,0 +1,58 @@
+{
+    "resource_model_id": "4d6c9226-10c6-11ec-9a94-5254008afee6",
+    "resource_model_name": "BC Fossil Interest Area",
+    "nodes": [
+        {
+            "arches_nodeid": "49b837b0-10c7-11ec-81af-5254008afee6",
+            "arches_node_name": "Area Name",
+            "file_field_name": "Area Name",
+            "data_type": "string",
+            "export": true
+        },
+        {
+            "arches_nodeid": "7febfbb4-10c7-11ec-bbeb-5254008afee6",
+            "arches_node_name": "Description",
+            "file_field_name": "Description",
+            "data_type": "string",
+            "export": true
+        },
+        {
+            "arches_nodeid": "7febfe20-10c7-11ec-bbeb-5254008afee6",
+            "arches_node_name": "Description Type",
+            "file_field_name": "Description Type",
+            "data_type": "concept",
+            "concept_export_value": "label",
+            "export": true
+        },
+        {
+            "arches_nodeid": "c6654042-10c6-11ec-adef-5254008afee6",
+            "arches_node_name": "Geometry Qualifier",
+            "file_field_name": "Geometry Qualifier",
+            "data_type": "concept",
+            "concept_export_value": "label",
+            "export": true
+        },
+        {
+            "arches_nodeid": "49b8408e-10c7-11ec-81af-5254008afee6",
+            "arches_node_name": "Name Type",
+            "file_field_name": "Name Type",
+            "data_type": "concept",
+            "concept_export_value": "label",
+            "export": true
+        },
+        {
+            "arches_nodeid": "69230292-10c7-11ec-8a7a-5254008afee6",
+            "arches_node_name": "Potential Ranking",
+            "file_field_name": "Potential Ranking",
+            "data_type": "string",
+            "export": true
+        },
+        {
+            "arches_nodeid": "c66518e2-10c6-11ec-adef-5254008afee6",
+            "arches_node_name": "Spatial Coordinates Geometry",
+            "file_field_name": "Spatial Coordinates Geometry",
+            "data_type": "geojson-feature-collection",
+            "export": true
+        }
+    ]
+}
