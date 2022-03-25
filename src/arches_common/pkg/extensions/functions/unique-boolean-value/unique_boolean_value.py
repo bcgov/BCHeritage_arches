@@ -22,7 +22,7 @@ details = {
 
 class UniqueBooleanValue(BaseFunction):
     def save(self, tile, request):
-        print("running before tile save")
+        # print("running before tile save")
         data = tile.data
         node_id = self.config["node_id"]
         node_value = data[node_id]
@@ -39,12 +39,11 @@ class UniqueBooleanValue(BaseFunction):
                     if datatype.values_match(node_value, other_tile.data[node_id]):
                         node = models.Node.objects.get(pk=node_id)
                         raise TileValidationError("%s must be unique within all %s values" % (node_value, node.name))
-            else:
-                print("Why are we here?")
-
+            # else:
+            #     print("Why are we here?")
 
     def post_save(self, tile, request):
-        print("running after tile save")
+        pass
 
     def on_import(self, tile, request):
         print("calling on import")
