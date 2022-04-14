@@ -23,46 +23,50 @@ details = {
 }
 
 
-class MapFilter(BaseSearchFilter):
+class MapFilterFossils(BaseSearchFilter):
     def append_dsl(self, search_results_object, permitted_nodegroups, include_provisional):
         search_query = Bool()
         querysting_params = self.request.GET.get(details["componentname"], "")
         spatial_filter = JSONDeserializer().deserialize(querysting_params)
+        print("Hi from MapFilter in FOSSILS!!")
         if "features" in spatial_filter:
+            print("\tspatial feature count: %s" % len(spatial_filter["features"]))
             if len(spatial_filter["features"]) > 0:
-                feature_geom = spatial_filter["features"][0]["geometry"]
-                feature_properties = {}
-                if "properties" in spatial_filter["features"][0]:
-                    feature_properties = spatial_filter["features"][0]["properties"]
-                buffer = {"width": 0, "unit": "ft"}
-                if "buffer" in feature_properties:
-                    buffer = feature_properties["buffer"]
-                search_buffer = _buffer(feature_geom, buffer["width"], buffer["unit"])
-                feature_geom = JSONDeserializer().deserialize(search_buffer.geojson)
-                geoshape = GeoShape(
-                    field="geometries.geom.features.geometry", type=feature_geom["type"], coordinates=feature_geom["coordinates"]
-                )
+                for feature in spatial_filter["features"]:
+                    feature_geom = feature["geometry"]
+                    feature_properties = {}
+                    if "properties" in feature:
+                        feature_properties = feature["properties"]
+                    buffer = {"width": 0, "unit": "ft"}
+                    if "buffer" in feature_properties:
+                        buffer = feature_properties["buffer"]
+                    search_buffer = _buffer(feature_geom, buffer["width"], buffer["unit"])
+                    feature_geom = JSONDeserializer().deserialize(search_buffer.geojson)
+                    geoshape = GeoShape(
+                        field="geometries.geom.features.geometry", type=feature_geom["type"], coordinates=feature_geom["coordinates"]
+                    )
 
-                invert_spatial_search = False
-                if "inverted" in feature_properties:
-                    invert_spatial_search = feature_properties["inverted"]
+                    invert_spatial_search = False
+                    if "inverted" in feature_properties:
+                        invert_spatial_search = feature_properties["inverted"]
 
-                spatial_query = Bool()
-                if invert_spatial_search is True:
-                    spatial_query.must_not(geoshape)
-                else:
-                    spatial_query.filter(geoshape)
+                    spatial_query = Bool()
+                    if invert_spatial_search is True:
+                        spatial_query.must_not(geoshape)
+                    else:
+                        spatial_query.filter(geoshape)
 
-                # get the nodegroup_ids that the user has permission to search
-                spatial_query.filter(Terms(field="geometries.nodegroup_id", terms=permitted_nodegroups))
+                    # get the nodegroup_ids that the user has permission to search
+                    spatial_query.filter(Terms(field="geometries.nodegroup_id", terms=permitted_nodegroups))
 
-                if include_provisional is False:
-                    spatial_query.filter(Terms(field="geometries.provisional", terms=["false"]))
+                    if include_provisional is False:
+                        spatial_query.filter(Terms(field="geometries.provisional", terms=["false"]))
 
-                elif include_provisional == "only provisional":
-                    spatial_query.filter(Terms(field="geometries.provisional", terms=["true"]))
+                    elif include_provisional == "only provisional":
+                        spatial_query.filter(Terms(field="geometries.provisional", terms=["true"]))
 
-                search_query.filter(Nested(path="geometries", query=spatial_query))
+                    search_query.filter(Nested(path="geometries", query=spatial_query))
+                    # print("Search query %s"%str(search_query))
 
         search_results_object["query"].add_query(search_query)
 

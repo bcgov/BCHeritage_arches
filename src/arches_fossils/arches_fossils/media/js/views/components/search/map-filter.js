@@ -13,11 +13,15 @@ define([
     'uuid',
     'geojsonhint',
 ], function($, _, arches, ko, BaseFilter, MapComponentViewModel, binFeatureCollection, mapStyles, turf, geohash,  geojsonExtent, uuid, geojsonhint) {
+    // Overrides the base map-filter.js Allows multiple geometries to be used as the map filter
+    //
+    // @todo - Need to find a way to extend not just override.
     var componentName = 'map-filter';
     return ko.components.register(componentName, {
         viewModel: BaseFilter.extend({
             initialize: function(options) {
                 var self = this;
+                console.log("HI from arches_fossils");
 
                 this.dependenciesLoaded = ko.observable(false)
 
@@ -79,17 +83,17 @@ define([
                             }
                         },
                         {
-                        "id": "geojson-search-buffer",
-                        "type": "fill",
-                        "layout": {
-                            "visibility": "visible"
-                        },
-                        "paint": {
-                            "fill-color": "#3bb2d0",
-                            "fill-outline-color": "#3bb2d0",
-                            "fill-opacity": 0.2
-                        },
-                        "source": "geojson-search-buffer-data"
+                            "id": "geojson-search-buffer",
+                            "type": "fill",
+                            "layout": {
+                                "visibility": "visible"
+                            },
+                            "paint": {
+                                "fill-color": "#3bb2d0",
+                                "fill-outline-color": "#3bb2d0",
+                                "fill-opacity": 0.2
+                            },
+                            "source": "geojson-search-buffer-data"
                         }
                     ]
                 );
@@ -192,7 +196,7 @@ define([
                             }
                         }
 
-                         if (!!feature.properties && !!feature.properties.inverted){
+                        if (!!feature.properties && !!feature.properties.inverted){
                             var inverted = feature.properties.inverted;
                             try{
                                 var bufferWidth = parseInt(buffer.width, 10);
@@ -271,7 +275,7 @@ define([
                     var agg = ko.unwrap(self.searchAggregations);
                     var features = [];
                     var mouseoverInstanceId = self.mouseoverInstanceId();
-                    
+
                     if (agg) {
                         _.each(agg.results, function(result) {
                             _.each(result._source.points, function(point) {
@@ -377,17 +381,20 @@ define([
                 });
                 this.map().addControl(this.draw);
                 this.map().on('draw.create', function(e) {
+                    /*
                     self.draw.getAll().features.forEach(function(feature){
                         if(feature.id !== e.features[0].id){
                             self.draw.delete(feature.id);
                         }
-                    })
-                    self.searchGeometries(e.features);
+                    });
+                     */
+                    // self.searchGeometries(e.features);
+                    self.searchGeometries(self.draw.getAll().features);
                     self.updateFilter();
                     self.drawMode(undefined);
                 });
                 this.map().on('draw.update', function(e) {
-                    self.searchGeometries(e.features);
+                    self.searchGeometries(self.draw.getAll().features);
                     self.updateFilter();
                 });
                 this.map().on("draw.modechange", function (e) {
