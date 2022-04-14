@@ -10,7 +10,9 @@ define([
                         map_popup: [{"key": "MAXIMUM_AGE_NAME", "title": "Max. Age:"},
                             {"key": "MINIMUM_AGE_NAME", "title": "Min Age:"},
                             {"key": "AGE_GROUP", "title": "Age Group:"},
-                            {"key": "GROUP_SUITE_NAME", "title": "Group Suite:"}]},
+                            {"key": "GROUP_SUITE_NAME", "title": "Group Suite:"},
+                            {"key": "ORIGINAL_DESCRIPTION", "title": "Description:"},
+                        ]},
                 "WHSE_CADASTRE.PMBC_PARCEL_FABRIC_POLY_SVW":
                     {displayname: [{"key": "PID", title:""}],
                         "map_popup": [{key: "OWNER_TYPE", title: "Owner Type: "},
@@ -34,8 +36,8 @@ define([
             },
 
             getPopupTemplate: function(feature){
-                return default_template;
-                // return toggle_template;
+                // return default_template;
+                return toggle_template;
 
             },
             processData: function(dataFeatures) {
@@ -62,10 +64,8 @@ define([
                         {
                             return (div[0].offsetWidth < div[0].scrollWidth ||
                                 div[0].offsetHeight < div[0].scrollHeight);
-
                         }
                     }
-
                 });
                 return dataFeatures;
             },
