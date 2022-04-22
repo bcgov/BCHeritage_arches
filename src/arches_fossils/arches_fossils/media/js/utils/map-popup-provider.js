@@ -1,8 +1,8 @@
 define([
     'knockout',
-    'text!templates/views/components/map_popup/toggle-map-popup.htm',
-    'text!templates/views/components/map-popup.htm'
-], function (ko, toggle_template, default_template) {
+    'underscore',
+    'text!templates/views/components/map_popup/toggle-map-popup.htm'
+], function (ko, _, toggle_template) {
     var popupDataProvider = {
             layerConfigs: {
                 "WHSE_MINERAL_TENURE.GEOL_BEDROCK_UNIT_POLY_SVW":
@@ -26,19 +26,25 @@ define([
                         ]}
 
             },
+            filterLayers: [
+                "WHSE_MINERAL_TENURE.GEOL_BEDROCK_UNIT_POLY_SVW",
+                "c66518e2-10c6-11ec-adef-5254008afee6" /* Important Areas Resource layer */
+            ],
 
-            isFeatureClickable: function(feature, context){
-                console.log("fossils_popup_provider.isFeatureClickable()")
-                // return defaultProvider.isFeatureClickable(feature);
+            isFeatureClickable: function(feature, drawMode){
+                // console.log("fossils_popup_provider.isFeatureClickable()")
+                if (typeof drawMode !== 'undefined' && drawMode !== null && drawMode !== 'filter_by_feature')
+                    return false;
                 if (feature.sourceLayer in popupDataProvider.layerConfigs)
                     return true;
                 return feature.properties.resourceinstanceid;
             },
 
-            getPopupTemplate: function(feature){
-                // return default_template;
+            getPopupTemplate: function(features){
                 return toggle_template;
-
+            },
+            isSelectableAsFilter: function(feature) {
+                return popupDataProvider.filterLayers.indexOf(feature.sourceLayer) !== -1;
             },
             processData: function(dataFeatures) {
                 console.log(dataFeatures);
@@ -87,6 +93,6 @@ define([
                     return returnValue;
                 });
             }
-        }
+        };
     return popupDataProvider;
 });
