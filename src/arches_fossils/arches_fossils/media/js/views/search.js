@@ -140,8 +140,10 @@ define([
                 this.updateRequest.abort();
             }
 
+            var request_type = (arches.urls.search_results.length + $.param(queryString).split('+').join('%20').length) < 2048 ? "GET": "POST";
+            // From package
             this.updateRequest = $.ajax({
-                type: "GET",
+                type: request_type,
                 url: arches.urls.search_results,
                 data: queryString,
                 context: this,
@@ -169,7 +171,10 @@ define([
                 },
                 complete: function(request, status) {
                     this.updateRequest = undefined;
-                    window.history.pushState({}, '', '?' + $.param(queryString).split('+').join('%20'));
+                    if(request_type === "GET")
+                    {
+                        window.history.pushState({}, '', '?' + $.param(queryString).split('+').join('%20'));
+                    }
                 }
             });
         }
