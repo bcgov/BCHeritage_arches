@@ -1,4 +1,6 @@
+import base64
 import logging
+import urllib.request
 from django.contrib.gis.geos import GEOSGeometry
 from django.db import connection
 from django.utils.translation import ugettext as _
@@ -27,8 +29,20 @@ class MapFilterFossils(BaseSearchFilter):
     def append_dsl(self, search_results_object, permitted_nodegroups, include_provisional):
         search_query = Bool()
         querysting_params = self.request.GET.get(details["componentname"], "")
+        if not querysting_params:
+            querysting_params = self.request.POST.get(details["componentname"], "")
+        print("Query params %s"%querysting_params)
         spatial_filter = JSONDeserializer().deserialize(querysting_params)
         print("Hi from MapFilter in FOSSILS!!")
+        if "external_features" in spatial_filter:
+            print("\t external feature count: %s" % len(spatial_filter["external_features"]))
+            for external_feature in spatial_filter["external_features"]:
+                url = str(base64.b64decode(external_feature), "utf-8")
+                print("url: %s\n" % url)
+                with urllib.request.urlopen(url) as response:
+                    myfilter = response.read()
+                    print("\t\t filter: %s" % myfilter)
+                
         if "features" in spatial_filter:
             print("\tspatial feature count: %s" % len(spatial_filter["features"]))
             if len(spatial_filter["features"]) > 0:

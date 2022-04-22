@@ -12,7 +12,9 @@ define([
     'geojson-extent',
     'uuid',
     'geojsonhint',
-], function($, _, arches, ko, BaseFilter, MapComponentViewModel, binFeatureCollection, mapStyles, turf, geohash,  geojsonExtent, uuid, geojsonhint) {
+    'utils/map-popup-provider',
+    'utils/map-filter-utils',
+], function ($, _, arches, ko, BaseFilter, MapComponentViewModel, binFeatureCollection, mapStyles, turf, geohash, geojsonExtent, uuid, geojsonhint, popupDataProvider, mapFilterUtils) {
     // Overrides the base map-filter.js Allows multiple geometries to be used as the map filter
     //
     // @todo - Need to find a way to extend not just override.
@@ -110,8 +112,9 @@ define([
                 };
 
                 this.searchGeometries = ko.observableArray(null);
+                // this.externalSearchGeometries = ko.observableArray(null);
                 this.searchAggregations = ko.observable();
-                this.drawMode = ko.observable();
+                this.selectedTool = ko.observable();
                 this.geoJSONString = ko.observable(undefined);
                 this.geoJSONErrors = ko.observableArray();
                 this.pageLoaded = false;
@@ -249,15 +252,35 @@ define([
                     class: 'leaflet-draw-draw-polygon',
                     drawMode: 'extent',
                     active: ko.observable(false)
-                }];
+                },
+                    {
+                        name: 'Feature',
+                        title: 'Search by Feature',
+                        icon: 'fa fa-pencil-square-o',
+                        class: 'leaflet-draw-draw-polygon',
+                        drawMode: 'filter_by_feature',
+                        active: ko.observable(false)
+
+                    }];
 
                 this.drawModes = _.pluck(this.spatialFilterTypes, 'drawMode');
 
-                this.drawMode.subscribe(function(selectedDrawTool){
+                this.selectText = ko.pureComputed(function()
+                {
+                    if (this.selectedTool && this.selectedTool() === 'filter_by_feature')
+                    {
+                        return 'Filter by feature';
+                    }
+                    return "";
+                }, this);
+
+                this.selectedTool.subscribe(function(selectedDrawTool){
                     if(!!selectedDrawTool){
                         if(selectedDrawTool === 'extent'){
                             this.searchByExtent();
-                        } else {
+                        }
+                        else if (selectedDrawTool !== 'filter_by_feature')
+                        {
                             this.draw.changeMode(selectedDrawTool);
                             self.map().draw_mode = selectedDrawTool;
                         }
@@ -391,7 +414,7 @@ define([
                     // self.searchGeometries(e.features);
                     self.searchGeometries(self.draw.getAll().features);
                     self.updateFilter();
-                    self.drawMode(undefined);
+                    self.selectedTool(undefined);
                 });
                 this.map().on('draw.update', function(e) {
                     self.searchGeometries(self.draw.getAll().features);
@@ -403,7 +426,7 @@ define([
             },
 
             searchByExtent: function() {
-                if (_.contains(this.drawModes, this.drawMode())) {
+                if (_.contains(this.drawModes, this.selectedTool())) {
                     this.draw.deleteAll();
                 }
                 var bounds = this.map().getBounds();
@@ -427,8 +450,91 @@ define([
                 });
                 this.searchGeometries([boundsFeature]);
                 this.updateFilter();
-                this.drawMode(undefined);
+                this.selectedTool(undefined);
             },
+
+            showSelectAsFilter: function(feature) {
+                return popupDataProvider.isSelectableAsFilter(feature) &&
+                    this.selectedTool && this.selectedTool() === 'filter_by_feature';
+            },
+            /*
+            isArchesGeometry: function(feature)
+            {
+                return feature.properties && ko.unwrap(feature.properties.resourceinstanceid);
+            },
+             */
+            selectFeatureAsFilter: function(feature) {
+                var searchFeatures;
+                if (mapFilterUtils.isArchesGeometry(feature)) {
+                    searchFeatures = mapFilterUtils.getGeometryFromResource(feature, function (resource) {
+                        return JSON.parse(resource["Area Boundary"]["Spatial Coordinates Geometry"]["@value"].replaceAll("'", "\"")).features;
+                    });
+                }
+                else
+                {
+                    searchFeatures = [mapFilterUtils.getFeatureFromWFS(feature, "WHSE_MINERAL_TENURE.GEOL_BEDROCK_UNIT_POLY_SVW")];
+                }
+                var featureSet = this.draw.getAll();
+                //var searchGeoms = this.externalSearchGeometries();
+                _.each(searchFeatures, function(searchFeature){
+                    featureSet.features.push(searchFeature);
+                    //searchGeoms.push(searchFeature);
+                });
+                this.draw.set(featureSet);
+                this.searchGeometries(this.draw.getAll().features);
+                this.updateFilter();
+                this.selectedTool(undefined);
+            },
+
+            /*
+            getFeatureFromWFS: function(feature, layer) {
+                var geometry;
+                var wmfUrl = "https://openmaps.gov.bc.ca/geo/ows?service=WFS&version=1.0.0&request=GetFeature"+
+                    "&typeNames="+layer+"&maxFeatures=100&outputFormat=application%2Fjson" +
+                    "&srsName=EPSG%3A4326&cql_filter=OBJECTID%3D{0}".replace("{0}", feature.properties.OBJECTID);
+                $.ajax(wmfUrl,
+                    {
+                        async: false,
+                        dataType: "json"
+                    }).success(function(data)
+                    {
+                        console.log("Got response: "+JSON.stringify(data));
+                        geometry = data.features[0];
+                        geometry.url = wmfUrl;
+                        console.log("Got geometry: "+JSON.stringify(geometry));
+                    }
+                ).error(function(jqXHR, textStatus, errorThrown){
+                    console.log("Unable to get geometry: "+textStatus);
+                });
+                return geometry;
+            },
+            getGeometryFromResource: function(feature)
+            {
+                var resourceGeometry;
+                this.updateRequest = $.ajax({
+                    async: false,
+                    type: "GET",
+                    url: arches.urls.api_resources(feature.properties.resourceinstanceid),
+                    data: "format=json",
+                    context: this,
+                    success: function(response) {
+                        var resourceFeatures =
+                            JSON.parse(response.resource["Area Boundary"]["Spatial Coordinates Geometry"]["@value"].replaceAll("'","\""))
+                        resourceGeometry = resourceFeatures.features;
+                    },
+                    error: function(response, status, error) {
+                        console.log(response);
+                        console.log(status);
+                        console.log(error);
+                    },
+                    complete: function(request, status) {
+                        // this.updateRequest = undefined;
+                        // window.history.pushState({}, '', '?' + $.param(queryString).split('+').join('%20'));
+                    }
+                });
+                return resourceGeometry;
+            },
+             */
 
             useMaxBuffer: function (unit, buffer, maxBuffer) {
                 res = false;
@@ -462,9 +568,20 @@ define([
                     };
                     feature.properties.inverted = this.filter.inverted();
                 }, this);
+                // This section for test of pulling external geometries directly from source URL
+                // var externalGeometryList = this.externalSearchGeometries();
+                // var drawnGeometries = _.filter(this.searchGeometries(), function(geometry) {
+                //     return !_.find(externalGeometryList,  function(externalGeom) {return geometry.id === externalGeom.id});
+                // });
+                // var selectedGeometries = _.map(externalGeometryList, function(geometry) {
+                //     console.log("Url length: "+geometry.url.length)
+                //     return btoa(geometry.url);
+                // });
                 this.filter.feature_collection({
                     "type": "FeatureCollection",
                     "features": this.searchGeometries()
+                    // "features": drawnGeometries
+                    // ,"external_features": selectedGeometries
                 });
             },
 
@@ -488,7 +605,7 @@ define([
                             this.filter.inverted(feature.properties.inverted);
                         }
                     }, this);
-                    this.drawMode(undefined);
+                    this.selectedTool(undefined);
                     this.geoJSONString(undefined);
                 }
             },

@@ -18,8 +18,10 @@ define([
 
             },
 
-            isFeatureClickable: function(feature, context){
+            isFeatureClickable: function(feature, drawMode){
                 console.log("bchp.isFeatureClickable()")
+                if (typeof drawMode !== 'undefined' && drawMode !== null)
+                    return false;
                 if (feature.sourceLayer in popupDataProvider.layerConfigs)
                     return true;
                 return feature.properties.resourceinstanceid;
