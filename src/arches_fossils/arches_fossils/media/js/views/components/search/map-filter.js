@@ -457,12 +457,6 @@ define([
                 return popupDataProvider.isSelectableAsFilter(feature) &&
                     this.selectedTool && this.selectedTool() === 'filter_by_feature';
             },
-            /*
-            isArchesGeometry: function(feature)
-            {
-                return feature.properties && ko.unwrap(feature.properties.resourceinstanceid);
-            },
-             */
             selectFeatureAsFilter: function(feature) {
                 var searchFeatures;
                 if (mapFilterUtils.isArchesGeometry(feature)) {
@@ -661,6 +655,7 @@ define([
                             "type": "FeatureCollection",
                             "features": mapQuery.features
                         });
+                        this.searchGeometries(this.draw.getAll().features);
                     }
                 }
                 // we need to add these observables here AFTER initial values have been discovered
@@ -701,6 +696,12 @@ define([
                 this.getFilter('term-filter').removeTag('Map Filter Enabled');
                 this.draw.deleteAll();
                 this.searchGeometries([]);
+            },
+
+            deleteFilter: function() {
+                this.draw.trash();
+                this.searchGeometries(this.draw.getAll().features);
+                this.updateFilter();
             },
 
             fitToAggregationBounds: function() {
