@@ -59,7 +59,7 @@
             {% trans "Report" %}
         </a>
         <!--/ko-->
-        <!-- ko if: showEditButton -->
+        <!-- ko if: mapCard.isArchesResource(feature) && showEditButton -->
         <a data-bind="click: function () {
             window.open(editURL + ko.unwrap(resourceinstanceid));
         }" href="javascript:void(0)">
