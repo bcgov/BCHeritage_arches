@@ -457,6 +457,9 @@ define([
                 return popupDataProvider.isSelectableAsFilter(feature) &&
                     this.selectedTool && this.selectedTool() === 'filter_by_feature';
             },
+            isArchesResource: function(feature) {
+                return feature.properties && !!ko.unwrap(feature.properties.resourceinstanceid);
+            },
             selectFeatureAsFilter: function(feature) {
                 var searchFeatures;
                 if (mapFilterUtils.isArchesGeometry(feature)) {
