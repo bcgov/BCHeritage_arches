@@ -11,13 +11,14 @@ define([
     'proj4',
     'views/components/map',
     'views/components/cards/select-feature-layers',
-    'text!templates/views/components/cards/map-popup.htm'
-], function(arches, $, _, ko, koMapping, uuid, geojsonExtent, geojsonhint, toGeoJSON, proj4, MapComponentViewModel, selectFeatureLayersFactory, popupTemplate) {
+    'text!templates/views/components/cards/map-popup.htm',
+    'utils/map-filter-utils'
+], function(arches, $, _, ko, koMapping, uuid, geojsonExtent, geojsonhint, toGeoJSON, proj4, MapComponentViewModel, selectFeatureLayersFactory, popupTemplate, externalUtils) {
     var viewModel = function(params) {
         var self = this;
         var padding = 40;
         var drawFeatures;
-        
+
         var resourceId = params.tile ? params.tile.resourceinstance_id : '';
         if (this.widgets === undefined) { // could be [], so checking specifically for undefined
             this.widgets = params.widgets || [];
@@ -38,6 +39,7 @@ define([
         this.bufferResult = ko.observable();
         this.bufferAddNew = ko.observable(false);
         this.allowAddNew = this.card && this.card.canAdd() && this.tile !== this.card.newTile;
+        this.selectText = ko.observable("Select Cadastral");
 
         var selectSource = this.selectSource();
         var selectSourceLayer = this.selectSourceLayer();
@@ -515,6 +517,10 @@ define([
                                 option.value = 'draw_polygon';
                                 option.text = arches.translations.mapAddPolygon;
                                 break;
+                            case 'Feature':
+                                option.value = 'select_feature';
+                                option.text = 'Select Cadastral Feature';
+                                break;
                             }
                             return option;
                         })
@@ -581,6 +587,20 @@ define([
                     addSelectFeatures(data.features);
                 });
             }
+        };
+
+        self.showSelectFeatureAsSource = function(feature)
+        {
+            if (self.selectedTool && self.selectedTool() === "select_feature")
+                return true;
+            return false;
+        };
+
+        self.selectFeatureAsSource = function(feature)
+        {
+            console.log(feature);
+            var myfeature  = externalUtils.getFeatureFromWFS(feature, 'WHSE_CADASTRE.PMBC_PARCEL_FABRIC_POLY_SVW');
+            addSelectFeatures([myfeature]);
         };
 
         var addFromGeoJSON = function(geoJSONString, nodeId) {
