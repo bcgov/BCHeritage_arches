@@ -22,7 +22,7 @@
 <dd>{% trans "None" %}</dd>
 <!-- /ko -->
 <dd data-bind="foreach: summaryDetails">
-    <div style='margin-bottom:2px' data-bind="text: JSON.stringify($data.geometry)"></div>
+  <div style='margin-bottom:2px' data-bind="text: JSON.stringify($data.geometry)"></div>
 </dd>
 {% endblock report %}
 
@@ -32,7 +32,7 @@
 </div>
 <div class="col-xs-12 pad-no crud-widget-container">
     <input style="display:inline-block;"
-           data-bind="select2Query: {
+        data-bind="select2Query: {
             select2Config: {
                 clickBubble: true,
                 value: geometryTypeList,
@@ -40,18 +40,18 @@
                 allowClear: true,
                 minimumInputLength: 0,
                 placeholder: '{% trans "Available Geometry Types" %}',
-    data: [{
-    text: '{% trans "Point" %}',
-    id: 'Point'
-    }, {
-    text: '{% trans "Line" %}',
-    id: 'Line'
-    }, {
-    text: '{% trans "Polygon" %}',
-    id: 'Polygon'
-    }]
-    }
-    }">
+                data: [{
+                    text: '{% trans "Point" %}',
+                    id: 'Point'
+                }, {
+                    text: '{% trans "Line" %}',
+                    id: 'Line'
+                }, {
+                    text: '{% trans "Polygon" %}',
+                    id: 'Polygon'
+                }]
+            }
+        }">
 </div>
 <div class="control-label">
     {% trans "Map Center Longitude" %}

@@ -17,7 +17,7 @@ define([
         var self = this;
         var padding = 40;
         var drawFeatures;
-
+        
         var resourceId = params.tile ? params.tile.resourceinstance_id : '';
         if (this.widgets === undefined) { // could be [], so checking specifically for undefined
             this.widgets = params.widgets || [];
@@ -503,18 +503,18 @@ define([
                         ko.unwrap(widget.config.geometryTypes).map(function(type) {
                             var option = {};
                             switch (ko.unwrap(type.id)) {
-                                case 'Point':
-                                    option.value = 'draw_point';
-                                    option.text = arches.translations.mapAddPoint;
-                                    break;
-                                case 'Line':
-                                    option.value = 'draw_line_string';
-                                    option.text = arches.translations.mapAddLine;
-                                    break;
-                                case 'Polygon':
-                                    option.value = 'draw_polygon';
-                                    option.text = arches.translations.mapAddPolygon;
-                                    break;
+                            case 'Point':
+                                option.value = 'draw_point';
+                                option.text = arches.translations.mapAddPoint;
+                                break;
+                            case 'Line':
+                                option.value = 'draw_line_string';
+                                option.text = arches.translations.mapAddLine;
+                                break;
+                            case 'Polygon':
+                                option.value = 'draw_polygon';
+                                option.text = arches.translations.mapAddPolygon;
+                                break;
                             }
                             return option;
                         })
@@ -727,16 +727,16 @@ define([
                     var coordinates = [];
                     var geomType = self.coordinateGeomType();
                     switch (geomType) {
-                        case 'Polygon':
-                            rawCoordinates.push(rawCoordinates[0]);
-                            coordinates = [rawCoordinates];
-                            break;
-                        case 'Point':
-                            coordinates = rawCoordinates[0];
-                            break;
-                        default:
-                            coordinates = rawCoordinates;
-                            break;
+                    case 'Polygon':
+                        rawCoordinates.push(rawCoordinates[0]);
+                        coordinates = [rawCoordinates];
+                        break;
+                    case 'Point':
+                        coordinates = rawCoordinates[0];
+                        break;
+                    default:
+                        coordinates = rawCoordinates;
+                        break;
                     }
                     addSelectFeatures([{
                         type: "Feature",
@@ -824,17 +824,17 @@ define([
             self.coordinateGeomType(null);
             var selectedTool = self.selectedTool();
             switch (selectedTool) {
-                case 'draw_point':
-                    self.coordinateGeomType('Point');
-                    break;
-                case 'draw_line_string':
-                    self.coordinateGeomType('LineString');
-                    break;
-                case 'draw_polygon':
-                    self.coordinateGeomType('Polygon');
-                    break;
-                default:
-                    break;
+            case 'draw_point':
+                self.coordinateGeomType('Point');
+                break;
+            case 'draw_line_string':
+                self.coordinateGeomType('LineString');
+                break;
+            case 'draw_polygon':
+                self.coordinateGeomType('Polygon');
+                break;
+            default:
+                break;
             }
             var selectedFeatureIds = self.selectedFeatureIds();
             var featureId = selectedFeatureIds[0];
@@ -871,17 +871,17 @@ define([
             var geomType = self.coordinateGeomType();
             var minCoordinates;
             switch (geomType) {
-                case 'Point':
-                    minCoordinates = 1;
-                    break;
-                case 'LineString':
-                    minCoordinates = 2;
-                    break;
-                case 'Polygon':
-                    minCoordinates = 3;
-                    break;
-                default:
-                    break;
+            case 'Point':
+                minCoordinates = 1;
+                break;
+            case 'LineString':
+                minCoordinates = 2;
+                break;
+            case 'Polygon':
+                minCoordinates = 3;
+                break;
+            default:
+                break;
             }
             return minCoordinates;
         });
