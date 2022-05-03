@@ -44,7 +44,7 @@
 <div class="hover-feature-footer">
     <div>
         {% block footer %}
-        <!-- ko if: mapCard.showSelectAsFilter(feature) -->
+        <!-- ko if: mapCard.showSelectAsFilter && mapCard.showSelectAsFilter(feature) -->
         <a data-bind="if: mapCard.showSelectAsFilter(feature), click: function () {
             mapCard.selectFeatureAsFilter(feature); }" href="javascript:void(0)">
             <i class="ion-ios-refresh-empty"></i>
@@ -59,7 +59,7 @@
             {% trans "Report" %}
         </a>
         <!--/ko-->
-        <!-- ko if: mapCard.isArchesResource(feature) && showEditButton -->
+        <!-- ko if:  mapCard.isArchesResource && mapCard.isArchesResource(feature) && showEditButton -->
         <a data-bind="click: function () {
             window.open(editURL + ko.unwrap(resourceinstanceid));
         }" href="javascript:void(0)">
