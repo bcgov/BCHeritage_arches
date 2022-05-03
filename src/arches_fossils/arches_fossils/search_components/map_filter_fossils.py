@@ -29,22 +29,17 @@ class MapFilterFossils(BaseSearchFilter):
     def append_dsl(self, search_results_object, permitted_nodegroups, include_provisional):
         search_query = Bool()
         querysting_params = self.request.GET.get(details["componentname"], "")
-        if not querysting_params:
+        try:
+            spatial_filter = JSONDeserializer().deserialize(querysting_params)
+            if spatial_filter["type"] == "BY_POST":
+                querysting_params = self.request.POST.get(details["componentname"], "")
+                spatial_filter = JSONDeserializer().deserialize(querysting_params)
+        except ValueError:
             querysting_params = self.request.POST.get(details["componentname"], "")
-        print("Query params %s"%querysting_params)
-        spatial_filter = JSONDeserializer().deserialize(querysting_params)
-        print("Hi from MapFilter in FOSSILS!!")
-        if "external_features" in spatial_filter:
-            print("\t external feature count: %s" % len(spatial_filter["external_features"]))
-            for external_feature in spatial_filter["external_features"]:
-                url = str(base64.b64decode(external_feature), "utf-8")
-                print("url: %s\n" % url)
-                with urllib.request.urlopen(url) as response:
-                    myfilter = response.read()
-                    print("\t\t filter: %s" % myfilter)
-                
+            spatial_filter = JSONDeserializer().deserialize(querysting_params)
+
         if "features" in spatial_filter:
-            print("\tspatial feature count: %s" % len(spatial_filter["features"]))
+            # print("\tspatial feature count: %s" % len(spatial_filter["features"]))
             if len(spatial_filter["features"]) > 0:
                 for feature in spatial_filter["features"]:
                     feature_geom = feature["geometry"]

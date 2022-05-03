@@ -141,11 +141,19 @@ define([
             }
 
             var request_type = (arches.urls.search_results.length + $.param(queryString).split('+').join('%20').length) < 2048 ? "GET": "POST";
+            var map_filter;
+            var url_data = '';
+            if (request_type === 'POST' && !!queryString['map-filter'])
+            {
+                map_filter = {'map-filter': queryString['map-filter']};
+                delete queryString['map-filter'];
+                url_data =  queryString;
+            }
             // From package
             this.updateRequest = $.ajax({
                 type: request_type,
-                url: arches.urls.search_results,
-                data: queryString,
+                url: arches.urls.search_results + (!!url_data ? '?'+new URLSearchParams(url_data).toString() : ''),
+                data: (!!map_filter ? map_filter : queryString),
                 context: this,
                 success: function(response) {
                     _.each(this.viewModel.sharedStateObject.searchResults, function(value, key, results) {
@@ -171,7 +179,11 @@ define([
                 },
                 complete: function(request, status) {
                     this.updateRequest = undefined;
-                    if(request_type === "GET")
+                    if (!!url_data)
+                    {
+                        window.history.pushState({}, '', '?' + $.param(url_data).split('+').join('%20'));
+                    }
+                    else
                     {
                         window.history.pushState({}, '', '?' + $.param(queryString).split('+').join('%20'));
                     }
