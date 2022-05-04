@@ -134,6 +134,16 @@ define([
                     val: 'ft'
                 }];
 
+                this.geometryOperations = [{
+                    name: 'Intersection',
+                    val: 'intersect'
+                },{
+                    name: 'Union',
+                    val: 'union'
+                }];
+
+                this.hasMultipleGeometries = ko.observable(false);
+
                 this.mapLinkData.subscribe(function(data) {
                     this.zoomToGeoJSON(data);
                 },this);
@@ -197,6 +207,22 @@ define([
                                     "message": 'Buffer unit must be either "ft" of "m"'
                                 });
                             }
+                        }
+
+                        if (!!feature.properties && !!feature.properties.geometryOperation){
+                            var geometryOperation = feature.properties.geometryOperation;
+                            try{
+                                if(geometryOperation !== 'intersect' && bufferUnit !== 'union'){
+                                    throw new Error('Whoops!');
+                                }
+                            }
+                            catch {
+                                hint.push({
+                                    "level": 'warning',
+                                    "message": 'Group operation be either "intersect" or "union"'
+                                });
+                            }
+
                         }
 
                         if (!!feature.properties && !!feature.properties.inverted){
@@ -364,6 +390,7 @@ define([
                     var filterUpdated = ko.computed(function() {
                         return JSON.stringify(ko.toJS(this.filter.feature_collection())) + this.filter.inverted();
                     }, this);
+
                     filterUpdated.subscribe(function() {
                         this.updateQuery();
                     }, this);
@@ -373,6 +400,10 @@ define([
                     }, this);
 
                     this.bufferUnit.subscribe(function(val) {
+                        this.updateFilter();
+                    }, this);
+
+                    this.geometryOperation.subscribe(function(val) {
                         this.updateFilter();
                     }, this);
 
@@ -483,56 +514,6 @@ define([
                 this.selectedTool(undefined);
             },
 
-            /*
-            getFeatureFromWFS: function(feature, layer) {
-                var geometry;
-                var wmfUrl = "https://openmaps.gov.bc.ca/geo/ows?service=WFS&version=1.0.0&request=GetFeature"+
-                    "&typeNames="+layer+"&maxFeatures=100&outputFormat=application%2Fjson" +
-                    "&srsName=EPSG%3A4326&cql_filter=OBJECTID%3D{0}".replace("{0}", feature.properties.OBJECTID);
-                $.ajax(wmfUrl,
-                    {
-                        async: false,
-                        dataType: "json"
-                    }).success(function(data)
-                    {
-                        console.log("Got response: "+JSON.stringify(data));
-                        geometry = data.features[0];
-                        geometry.url = wmfUrl;
-                        console.log("Got geometry: "+JSON.stringify(geometry));
-                    }
-                ).error(function(jqXHR, textStatus, errorThrown){
-                    console.log("Unable to get geometry: "+textStatus);
-                });
-                return geometry;
-            },
-            getGeometryFromResource: function(feature)
-            {
-                var resourceGeometry;
-                this.updateRequest = $.ajax({
-                    async: false,
-                    type: "GET",
-                    url: arches.urls.api_resources(feature.properties.resourceinstanceid),
-                    data: "format=json",
-                    context: this,
-                    success: function(response) {
-                        var resourceFeatures =
-                            JSON.parse(response.resource["Area Boundary"]["Spatial Coordinates Geometry"]["@value"].replaceAll("'","\""))
-                        resourceGeometry = resourceFeatures.features;
-                    },
-                    error: function(response, status, error) {
-                        console.log(response);
-                        console.log(status);
-                        console.log(error);
-                    },
-                    complete: function(request, status) {
-                        // this.updateRequest = undefined;
-                        // window.history.pushState({}, '', '?' + $.param(queryString).split('+').join('%20'));
-                    }
-                });
-                return resourceGeometry;
-            },
-             */
-
             useMaxBuffer: function (unit, buffer, maxBuffer) {
                 res = false;
                 if (unit === 'ft') {
@@ -576,6 +557,7 @@ define([
                 // });
                 this.filter.feature_collection({
                     "type": "FeatureCollection",
+                    "operation": this.geometryOperation(),
                     "features": this.searchGeometries()
                     // "features": drawnGeometries
                     // ,"external_features": selectedGeometries
@@ -633,6 +615,7 @@ define([
                     }
                     this.filter.feature_collection().features[0].properties['inverted'] = this.filter.inverted();
                     queryObj[componentName] = ko.toJSON(this.filter.feature_collection());
+                    this.hasMultipleGeometries( this.filter.feature_collection().features.length > 1);
                 } else {
                     delete queryObj[componentName];
                 }
@@ -643,6 +626,7 @@ define([
                 var query = this.query();
                 var buffer = 10;
                 var bufferUnit = 'm';
+                var geometryOperation = 'intersect';
                 var inverted = false;
                 var hasSpatialFilter = false;
                 if (componentName in query) {
@@ -664,6 +648,7 @@ define([
                 // we need to add these observables here AFTER initial values have been discovered
                 // because of the race nature of these variables' subscriptions
                 this.buffer = ko.observable(buffer).extend({ deferred: true });
+                this.geometryOperation = ko.observable(geometryOperation).extend( {deferred: true})
                 this.bufferUnit = ko.observable(bufferUnit).extend({ deferred: true });
                 this.filter.inverted = ko.observable(inverted).extend({ deferred: true });
                 if (hasSpatialFilter) {

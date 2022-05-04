@@ -51,6 +51,16 @@
             "></select>
         </div>
 
+        <!-- Geometry Operation (Intersect/Union) Definition -->
+        <!-- ko if: hasMultipleGeometries && hasMultipleGeometries() -->
+        <div class="geometry-operation-control form-control" data-bind="">
+            <h5 class="">{% trans "Geometry Results" %}</h5>
+            <div class="form-inline">
+                <select class="form-control" style="vertical-align: top;" data-bind="options: geometryOperations, optionsText:'name', optionsValue:'val', value: geometryOperation"></select>
+            </div>
+        </div>
+        <!--/ko-->
+
     </div>
     <!-- /ko-->
 

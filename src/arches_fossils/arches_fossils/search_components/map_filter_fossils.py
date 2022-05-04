@@ -41,6 +41,7 @@ class MapFilterFossils(BaseSearchFilter):
         if "features" in spatial_filter:
             # print("\tspatial feature count: %s" % len(spatial_filter["features"]))
             if len(spatial_filter["features"]) > 0:
+                spatial_query = Bool()
                 for feature in spatial_filter["features"]:
                     feature_geom = feature["geometry"]
                     feature_properties = {}
@@ -59,11 +60,13 @@ class MapFilterFossils(BaseSearchFilter):
                     if "inverted" in feature_properties:
                         invert_spatial_search = feature_properties["inverted"]
 
-                    spatial_query = Bool()
                     if invert_spatial_search is True:
                         spatial_query.must_not(geoshape)
                     else:
-                        spatial_query.filter(geoshape)
+                        if spatial_filter["operation"] == "union":
+                            spatial_query.should(geoshape)
+                        else:
+                            spatial_query.filter(geoshape)
 
                     # get the nodegroup_ids that the user has permission to search
                     spatial_query.filter(Terms(field="geometries.nodegroup_id", terms=permitted_nodegroups))
@@ -74,7 +77,7 @@ class MapFilterFossils(BaseSearchFilter):
                     elif include_provisional == "only provisional":
                         spatial_query.filter(Terms(field="geometries.provisional", terms=["true"]))
 
-                    search_query.filter(Nested(path="geometries", query=spatial_query))
+            search_query.filter(Nested(path="geometries", query=spatial_query))
                     # print("Search query %s"%str(search_query))
 
         search_results_object["query"].add_query(search_query)
