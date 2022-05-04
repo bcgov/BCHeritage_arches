@@ -302,11 +302,17 @@ define([
 
                 this.selectedTool.subscribe(function(selectedDrawTool){
                     if(!!selectedDrawTool){
+                        if (!!this.map().draw_mode && this.map().draw_mode.match(/^draw/)) {
+                            this.draw.trash();
+                        }
                         if(selectedDrawTool === 'extent'){
                             this.searchByExtent();
                         }
-                        else if (selectedDrawTool !== 'filter_by_feature')
-                        {
+                        else if (selectedDrawTool === 'filter_by_feature') {
+                            this.draw.changeMode('simple_select');
+                            self.map().draw_mode = 'simple_select';
+                        }
+                        else {
                             this.draw.changeMode(selectedDrawTool);
                             self.map().draw_mode = selectedDrawTool;
                         }
