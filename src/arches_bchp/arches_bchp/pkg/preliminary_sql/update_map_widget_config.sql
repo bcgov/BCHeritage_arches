@@ -1,0 +1,2 @@
+update widgets set defaultconfig = jsonb_set(defaultconfig, array['geometryTypes'],  defaultconfig->'geometryTypes'||'[{"id": "Feature", "text": "Select Feature"}]'::jsonb)
+where component = 'views/components/widgets/map';

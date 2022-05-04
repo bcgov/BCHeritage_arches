@@ -39,7 +39,7 @@ define([
         this.bufferResult = ko.observable();
         this.bufferAddNew = ko.observable(false);
         this.allowAddNew = this.card && this.card.canAdd() && this.tile !== this.card.newTile;
-        this.selectText = ko.observable("Select Cadastral");
+        this.selectText = ko.observable("Copy geometry");
 
         var selectSource = this.selectSource();
         var selectSourceLayer = this.selectSourceLayer();
