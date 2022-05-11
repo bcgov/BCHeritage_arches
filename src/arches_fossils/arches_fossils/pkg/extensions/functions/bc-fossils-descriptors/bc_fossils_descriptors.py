@@ -46,7 +46,8 @@ details = {
 
 class BCFossilsDescriptors(AbstractPrimaryDescriptorsFunction):
     _datatype_factory = None
-    def get_primary_descriptor_from_nodes(self, resource, config):
+
+    def get_primary_descriptor_from_nodes(self, resource, config, context=None):
         return_value = None
         try:
             # Name for CollectionEvent is a special case
