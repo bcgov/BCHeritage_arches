@@ -1031,7 +1031,7 @@
                     },
                     "function_id": "60000000-0000-0000-0000-000000000001",
                     "graph_id": "b53b6850-1c83-11ec-a9a2-5254008afee6",
-                    "id": "072b6e90-ac66-11ec-8566-5254008afee6"
+                    "id": "d27c3626-cc03-11ec-9c9c-5254008afee6"
                 },
                 {
                     "config": {
@@ -1043,7 +1043,7 @@
                     },
                     "function_id": "60000000-0000-0000-0000-000000002001",
                     "graph_id": "b53b6850-1c83-11ec-a9a2-5254008afee6",
-                    "id": "072b893e-ac66-11ec-8566-5254008afee6"
+                    "id": "d27c4c7e-cc03-11ec-9c9c-5254008afee6"
                 }
             ],
             "graphid": "b53b6850-1c83-11ec-a9a2-5254008afee6",
@@ -1052,7 +1052,7 @@
             "isactive": true,
             "isresource": true,
             "jsonldcontext": null,
-            "name": "BC Fossil",
+            "name": "BC Fossil Sample",
             "nodegroups": [
                 {
                     "cardinality": "n",
@@ -1135,6 +1135,7 @@
             ],
             "nodes": [
                 {
+                    "alias": "storage_information",
                     "config": null,
                     "datatype": "semantic",
                     "description": null,
@@ -1153,6 +1154,7 @@
                     "sortorder": 0
                 },
                 {
+                    "alias": "bc_fossil_classification",
                     "config": null,
                     "datatype": "semantic",
                     "description": null,
@@ -1171,6 +1173,7 @@
                     "sortorder": 0
                 },
                 {
+                    "alias": "fossil_quality_and_abundance",
                     "config": null,
                     "datatype": "semantic",
                     "description": null,
@@ -1189,6 +1192,7 @@
                     "sortorder": 0
                 },
                 {
+                    "alias": "educational_quality",
                     "config": null,
                     "datatype": "string",
                     "description": null,
@@ -1207,6 +1211,7 @@
                     "sortorder": 0
                 },
                 {
+                    "alias": "temporal_assessment",
                     "config": null,
                     "datatype": "semantic",
                     "description": "",
@@ -1225,6 +1230,7 @@
                     "sortorder": 0
                 },
                 {
+                    "alias": "start_date_unit",
                     "config": null,
                     "datatype": "semantic",
                     "description": null,
@@ -1243,6 +1249,7 @@
                     "sortorder": 0
                 },
                 {
+                    "alias": "max_geological_start_date",
                     "config": null,
                     "datatype": "string",
                     "description": null,
@@ -1261,6 +1268,7 @@
                     "sortorder": 0
                 },
                 {
+                    "alias": "max_start_date_unit",
                     "config": null,
                     "datatype": "semantic",
                     "description": null,
@@ -1279,6 +1287,7 @@
                     "sortorder": 0
                 },
                 {
+                    "alias": "geological_start_date",
                     "config": null,
                     "datatype": "string",
                     "description": null,
@@ -1297,6 +1306,7 @@
                     "sortorder": 0
                 },
                 {
+                    "alias": "geological_assessment",
                     "config": null,
                     "datatype": "semantic",
                     "description": "",
@@ -1315,6 +1325,7 @@
                     "sortorder": 0
                 },
                 {
+                    "alias": "geological_formation",
                     "config": null,
                     "datatype": "string",
                     "description": null,
@@ -1333,6 +1344,7 @@
                     "sortorder": 0
                 },
                 {
+                    "alias": "geological_significance_ranking_code",
                     "config": null,
                     "datatype": "string",
                     "description": "Should this be attached to the Fossil?",
@@ -1351,6 +1363,7 @@
                     "sortorder": 0
                 },
                 {
+                    "alias": "ranking_detail",
                     "config": null,
                     "datatype": "string",
                     "description": null,
@@ -1369,6 +1382,7 @@
                     "sortorder": 0
                 },
                 {
+                    "alias": "geological_member",
                     "config": null,
                     "datatype": "string",
                     "description": null,
@@ -1387,6 +1401,7 @@
                     "sortorder": 0
                 },
                 {
+                    "alias": "geological_group",
                     "config": null,
                     "datatype": "string",
                     "description": null,
@@ -1405,6 +1420,7 @@
                     "sortorder": 0
                 },
                 {
+                    "alias": "fossil_quality",
                     "config": null,
                     "datatype": "string",
                     "description": null,
@@ -1423,6 +1439,7 @@
                     "sortorder": 0
                 },
                 {
+                    "alias": "other_criteria_from_list",
                     "config": null,
                     "datatype": "string",
                     "description": "This needs to be clarified and better defined.",
@@ -1441,6 +1458,7 @@
                     "sortorder": 0
                 },
                 {
+                    "alias": "fossil_id",
                     "config": null,
                     "datatype": "string",
                     "description": null,
@@ -1459,6 +1477,7 @@
                     "sortorder": 0
                 },
                 {
+                    "alias": "fossil_abundance",
                     "config": null,
                     "datatype": "string",
                     "description": null,
@@ -1477,6 +1496,7 @@
                     "sortorder": 0
                 },
                 {
+                    "alias": "explicit_temporal_assessment",
                     "config": null,
                     "datatype": "semantic",
                     "description": null,
@@ -1495,6 +1515,7 @@
                     "sortorder": 0
                 },
                 {
+                    "alias": "current_location",
                     "config": {
                         "falseLabel": "No",
                         "trueLabel": "Yes"
@@ -1516,6 +1537,7 @@
                     "sortorder": 0
                 },
                 {
+                    "alias": "geological_age",
                     "config": null,
                     "datatype": "string",
                     "description": null,
@@ -1534,6 +1556,7 @@
                     "sortorder": 0
                 },
                 {
+                    "alias": "geological_period",
                     "config": null,
                     "datatype": "string",
                     "description": null,
@@ -1552,6 +1575,7 @@
                     "sortorder": 0
                 },
                 {
+                    "alias": "fossil_size_category",
                     "config": {
                         "rdmCollection": "7d13e6cd-6b98-4886-b574-05a1e109dd67"
                     },
@@ -1572,6 +1596,7 @@
                     "sortorder": 0
                 },
                 {
+                    "alias": "geological_epoch",
                     "config": null,
                     "datatype": "semantic",
                     "description": null,
@@ -1590,6 +1615,7 @@
                     "sortorder": 0
                 },
                 {
+                    "alias": "fossil_storage_location",
                     "config": {
                         "graphs": [
                             {
@@ -1617,6 +1643,7 @@
                     "sortorder": 0
                 },
                 {
+                    "alias": "geological_eon",
                     "config": null,
                     "datatype": "string",
                     "description": null,
@@ -1635,6 +1662,7 @@
                     "sortorder": 0
                 },
                 {
+                    "alias": "max_epoch",
                     "config": null,
                     "datatype": "string",
                     "description": null,
@@ -1653,6 +1681,7 @@
                     "sortorder": 0
                 },
                 {
+                    "alias": "bc_fossil",
                     "config": null,
                     "datatype": "semantic",
                     "description": "",
@@ -1663,7 +1692,7 @@
                     "isrequired": false,
                     "issearchable": true,
                     "istopnode": true,
-                    "name": "BC Fossil",
+                    "name": "BC Fossil Sample",
                     "nodegroup_id": null,
                     "nodeid": "b53b5bbc-1c83-11ec-a9a2-5254008afee6",
                     "ontologyclass": "http://www.cidoc-crm.org/cidoc-crm/E1_CRM_Entity",
@@ -1671,6 +1700,7 @@
                     "sortorder": 0
                 },
                 {
+                    "alias": "ics_age",
                     "config": null,
                     "datatype": "semantic",
                     "description": null,
@@ -1689,6 +1719,7 @@
                     "sortorder": 0
                 },
                 {
+                    "alias": "min_epoch",
                     "config": null,
                     "datatype": "string",
                     "description": null,
@@ -1707,6 +1738,7 @@
                     "sortorder": 0
                 },
                 {
+                    "alias": "geological_era",
                     "config": null,
                     "datatype": "string",
                     "description": null,
@@ -1725,6 +1757,7 @@
                     "sortorder": 0
                 },
                 {
+                    "alias": "storage_reference",
                     "config": null,
                     "datatype": "string",
                     "description": null,
@@ -1743,6 +1776,7 @@
                     "sortorder": 0
                 },
                 {
+                    "alias": "min_ics_age",
                     "config": null,
                     "datatype": "string",
                     "description": null,
@@ -1761,6 +1795,7 @@
                     "sortorder": 0
                 },
                 {
+                    "alias": "max_ics_age",
                     "config": null,
                     "datatype": "string",
                     "description": null,
@@ -1779,6 +1814,7 @@
                     "sortorder": 0
                 },
                 {
+                    "alias": "significance_ranking_code",
                     "config": {
                         "falseLabel": "Non-significant",
                         "trueLabel": "Significant"
@@ -1800,6 +1836,7 @@
                     "sortorder": 0
                 },
                 {
+                    "alias": "significance_ranking_details",
                     "config": null,
                     "datatype": "string",
                     "description": null,
@@ -1818,6 +1855,7 @@
                     "sortorder": 0
                 },
                 {
+                    "alias": "fossil_occurrence_site_id",
                     "config": null,
                     "datatype": "number",
                     "description": null,
@@ -1836,6 +1874,7 @@
                     "sortorder": 0
                 },
                 {
+                    "alias": "fossil_notes",
                     "config": null,
                     "datatype": "semantic",
                     "description": "",
@@ -1854,6 +1893,7 @@
                     "sortorder": 0
                 },
                 {
+                    "alias": "note",
                     "config": null,
                     "datatype": "string",
                     "description": null,
@@ -1872,6 +1912,7 @@
                     "sortorder": 0
                 },
                 {
+                    "alias": "note_type",
                     "config": {
                         "rdmCollection": "33eb1163-f29f-4dba-9d51-d191574dfda2"
                     },
@@ -1892,6 +1933,7 @@
                     "sortorder": 0
                 },
                 {
+                    "alias": "fossil_type",
                     "config": null,
                     "datatype": "string",
                     "description": "",
@@ -1910,6 +1952,7 @@
                     "sortorder": 0
                 },
                 {
+                    "alias": "fossil_common_names",
                     "config": null,
                     "datatype": "string",
                     "description": null,
@@ -1932,6 +1975,7 @@
             "relatable_resource_model_ids": [],
             "resource_2_resource_constraints": [],
             "root": {
+                "alias": "bc_fossil",
                 "config": null,
                 "datatype": "semantic",
                 "description": "",
@@ -1942,7 +1986,7 @@
                 "isrequired": false,
                 "issearchable": true,
                 "istopnode": true,
-                "name": "BC Fossil",
+                "name": "BC Fossil Sample",
                 "nodegroup_id": null,
                 "nodeid": "b53b5bbc-1c83-11ec-a9a2-5254008afee6",
                 "ontologyclass": "http://www.cidoc-crm.org/cidoc-crm/E1_CRM_Entity",
@@ -1956,7 +2000,7 @@
     ],
     "metadata": {
         "db": "PostgreSQL 12.6 on x86_64-pc-linux-gnu, compiled by gcc (GCC) 4.8.5 20150623 (Red Hat 4.8.5-44), 64-bit",
-        "git hash": "559c333 2022-03-22 18:49:41 -0700",
+        "git hash": "756342c 2022-04-22 08:49:31 -0700",
         "os": "Linux",
         "os version": "3.10.0-1127.el7.x86_64"
     }
