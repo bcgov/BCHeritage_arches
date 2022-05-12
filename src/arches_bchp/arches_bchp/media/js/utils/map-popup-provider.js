@@ -20,7 +20,7 @@ define([
 
             isFeatureClickable: function(feature, drawMode){
                 console.log("bchp.isFeatureClickable()")
-                if (typeof drawMode !== 'undefined' && drawMode !== null  && drawMode !== 'select_feature')
+                if (typeof drawMode !== 'undefined' && drawMode !== null && drawMode !== "" && drawMode !== 'select_feature')
                     return false;
                 if (feature.sourceLayer in popupDataProvider.layerConfigs)
                     return true;
