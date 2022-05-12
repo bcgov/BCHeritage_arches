@@ -11,9 +11,8 @@ define([
     'proj4',
     'views/components/map',
     'views/components/cards/select-feature-layers',
-    'text!templates/views/components/cards/map-popup.htm',
     'utils/map-filter-utils'
-], function(arches, $, _, ko, koMapping, uuid, geojsonExtent, geojsonhint, toGeoJSON, proj4, MapComponentViewModel, selectFeatureLayersFactory, popupTemplate, externalUtils) {
+], function(arches, $, _, ko, koMapping, uuid, geojsonExtent, geojsonhint, toGeoJSON, proj4, MapComponentViewModel, selectFeatureLayersFactory, externalUtils) {
     var viewModel = function(params) {
         var self = this;
         var padding = 40;
@@ -542,8 +541,6 @@ define([
             if (tool && tool !== 'select_feature') return false;
             return feature.properties.resourceinstanceid || self.isSelectable(feature);
         };
-
-        this.popupTemplate = popupTemplate;
 
         self.isSelectable = function(feature) {
             var selectLayerIds = selectFeatureLayers.map(function(layer) {
