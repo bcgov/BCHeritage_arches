@@ -18,9 +18,11 @@ define([
 
             },
 
-            isFeatureClickable: function(feature, drawMode){
-                console.log("bchp.isFeatureClickable()")
-                if (typeof drawMode !== 'undefined' && drawMode !== null && drawMode !== "" && drawMode !== 'select_feature')
+            isFeatureClickable: function(feature, map){
+                // console.log("bchp.isFeatureClickable()")
+                const selectedFeatureIds = ko.unwrap(map.selectedFeatureIds);
+                const selectedTool = ko.unwrap(map.selectedTool);
+                if ((typeof selectedTool !== 'undefined' && selectedTool !== null) || selectedFeatureIds && selectedFeatureIds.length)
                     return false;
                 if (feature.sourceLayer in popupDataProvider.layerConfigs)
                     return true;

@@ -25,7 +25,7 @@ details = {
 class BordenNumberDataType(BaseDataType):
     borden_number_format = re.compile('[A-Z][a-z][A-Z][a-z]-\d{1,3}')
 
-    def validate(self, value, row_number=None, source=None, node=None, nodeid=None):
+    def validate(self, value, row_number=None, source=None, node=None, nodeid=None, strict=False):
         errors = []
         try:
             if not self.borden_number_format.match(value):

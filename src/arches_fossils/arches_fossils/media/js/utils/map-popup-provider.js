@@ -31,9 +31,13 @@ define([
                 "c66518e2-10c6-11ec-adef-5254008afee6" /* Important Areas Resource layer */
             ],
 
-            isFeatureClickable: function(feature, drawMode){
+            isFeatureClickable: function(feature, map){
                 // console.log("fossils_popup_provider.isFeatureClickable()")
-                if (typeof drawMode !== 'undefined' && drawMode !== null && drawMode !== 'filter_by_feature')
+                const selectedFeatureIds = ko.unwrap(map.selectedFeatureIds);
+                const selectedTool = ko.unwrap(map.selectedTool);
+                if ((typeof selectedTool !== 'undefined' && selectedTool !== null) || selectedFeatureIds && selectedFeatureIds.length)
+                    
+                if (typeof drawMode !== 'undefined' && drawMode !== null && drawMode !== '' && drawMode !== 'filter_by_feature')
                     return false;
                 if (feature.sourceLayer in popupDataProvider.layerConfigs)
                     return true;
