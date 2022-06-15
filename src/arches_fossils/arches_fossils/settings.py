@@ -16,22 +16,6 @@ APP_NAME = 'arches_fossils'
 APP_ROOT = os.path.dirname(os.path.abspath(inspect.getfile(inspect.currentframe())))
 STATICFILES_DIRS = (os.path.join(APP_ROOT, 'media'),) + STATICFILES_DIRS
 
-# ###########
-# # BCGov specific settings. Should these be externalized into separate file?
-# ###########
-#
-# # Whether we're behind the bcgov proxy server
-# BCGOV_PROXY = True
-# # PROXY prefix used - NB - cannot have leading "/", and must have trailing "/"
-# BCGOV_PROXY_PREFIX = 'int/arches-fossils/'
-#
-# STATIC_URL = '/' + BCGOV_PROXY_PREFIX + 'media/'
-# ADMIN_MEDIA_PREFIX = STATIC_URL + "admin/"
-
-###########
-# End BCGov specific settings.
-###########
-
 DATATYPE_LOCATIONS.append('arches_fossils.datatypes')
 FUNCTION_LOCATIONS.append('arches_fossils.functions')
 SEARCH_COMPONENT_LOCATIONS.append('arches_fossils.search_components')
@@ -90,24 +74,25 @@ LOAD_PACKAGE_ONTOLOGIES = True
 # }
 
 INSTALLED_APPS = (
-    'django.contrib.admin',
-    'django.contrib.auth',
-    'django.contrib.contenttypes',
-    'django.contrib.sessions',
-    'django.contrib.messages',
-    'django.contrib.staticfiles',
-    'django.contrib.gis',
-    'arches',
-    'arches.app.models',
-    'arches.management',
-    'guardian',
-    'captcha',
-    'revproxy',
-    'corsheaders',
-    'oauth2_provider',
-    'django_celery_results',
-    'compressor',
-    'arches_fossils',
+    "django.contrib.admin",
+    "django.contrib.auth",
+    "django.contrib.contenttypes",
+    "django.contrib.sessions",
+    "django.contrib.messages",
+    "django.contrib.staticfiles",
+    "django.contrib.gis",
+    "arches",
+    "arches.app.models",
+    "arches.management",
+    "guardian",
+    "captcha",
+    "revproxy",
+    "corsheaders",
+    "oauth2_provider",
+    "django_celery_results",
+    "compressor",
+    # "silk",
+    "arches_fossils",
 )
 
 # ALLOWED_HOSTS = [{ allowed_hosts }]
@@ -178,7 +163,11 @@ SESSION_COOKIE_NAME = 'arches_fossils'
 CACHES = {
     'default': {
         'BACKEND': 'django.core.cache.backends.dummy.DummyCache',
-    }
+    },
+    'user_permission': {
+        'BACKEND': 'django.core.cache.backends.db.DatabaseCache',
+        'LOCATION': 'user_permission_cache',
+    },
 }
 
 # Hide nodes and cards in a report that have no data

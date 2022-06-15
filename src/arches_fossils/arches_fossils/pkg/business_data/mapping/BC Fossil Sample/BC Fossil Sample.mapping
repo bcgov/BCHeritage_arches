@@ -3,7 +3,14 @@
     "resource_model_name": "BC Fossil Sample",
     "nodes": [
         {
-            "arches_nodeid": "80841c72-ac40-11ec-bded-5254008afee6",
+            "arches_nodeid": "72bb8338-e353-11ec-9e3c-5254008afee6",
+            "arches_node_name": "Classification Uncertain",
+            "file_field_name": "Classification Uncertain",
+            "data_type": "boolean",
+            "export": true
+        },
+        {
+            "arches_nodeid": "8205ada0-e367-11ec-b856-5254008afee6",
             "arches_node_name": "Current Location",
             "file_field_name": "Current Location",
             "data_type": "boolean",
@@ -64,13 +71,6 @@
             "arches_node_name": "Fossil Storage Location",
             "file_field_name": "Fossil Storage Location",
             "data_type": "resource-instance",
-            "export": true
-        },
-        {
-            "arches_nodeid": "e83bb552-9fe6-11ec-9993-5254008afee6",
-            "arches_node_name": "Fossil Type",
-            "file_field_name": "Fossil Type",
-            "data_type": "string",
             "export": true
         },
         {
@@ -137,6 +137,13 @@
             "export": true
         },
         {
+            "arches_nodeid": "22dcdd96-d168-11ec-aa91-5254008afee6",
+            "arches_node_name": "Location Uncertain",
+            "file_field_name": "Location Uncertain",
+            "data_type": "boolean",
+            "export": true
+        },
+        {
             "arches_nodeid": "a5bdeee6-9fe3-11ec-9cc7-5254008afee6",
             "arches_node_name": "Max Epoch",
             "file_field_name": "Max Epoch",
@@ -172,21 +179,6 @@
             "export": true
         },
         {
-            "arches_nodeid": "e776efd4-ab98-11ec-9344-5254008afee6",
-            "arches_node_name": "Note",
-            "file_field_name": "Note",
-            "data_type": "string",
-            "export": true
-        },
-        {
-            "arches_nodeid": "e776f114-ab98-11ec-9344-5254008afee6",
-            "arches_node_name": "Note Type",
-            "file_field_name": "Note Type",
-            "data_type": "concept",
-            "concept_export_value": "label",
-            "export": true
-        },
-        {
             "arches_nodeid": "4ed08b74-1c86-11ec-b06f-5254008afee6",
             "arches_node_name": "Other Criteria From List",
             "file_field_name": "Other Criteria From List",
@@ -198,6 +190,21 @@
             "arches_node_name": "Ranking Detail",
             "file_field_name": "Ranking Detail",
             "data_type": "string",
+            "export": true
+        },
+        {
+            "arches_nodeid": "e776efd4-ab98-11ec-9344-5254008afee6",
+            "arches_node_name": "Sample Note",
+            "file_field_name": "Sample Note",
+            "data_type": "string",
+            "export": true
+        },
+        {
+            "arches_nodeid": "e776f114-ab98-11ec-9344-5254008afee6",
+            "arches_node_name": "Sample Note Type",
+            "file_field_name": "Sample Note Type",
+            "data_type": "concept",
+            "concept_export_value": "label",
             "export": true
         },
         {
@@ -215,9 +222,31 @@
             "export": true
         },
         {
+            "arches_nodeid": "d0527102-d168-11ec-8fe4-5254008afee6",
+            "arches_node_name": "Storage Note",
+            "file_field_name": "Storage Note",
+            "data_type": "string",
+            "export": true
+        },
+        {
+            "arches_nodeid": "d052724c-d168-11ec-8fe4-5254008afee6",
+            "arches_node_name": "Storage Note Type",
+            "file_field_name": "Storage Note Type",
+            "data_type": "concept",
+            "concept_export_value": "label",
+            "export": true
+        },
+        {
             "arches_nodeid": "b984f3d6-a031-11ec-89de-5254008afee6",
             "arches_node_name": "Storage Reference",
             "file_field_name": "Storage Reference",
+            "data_type": "string",
+            "export": true
+        },
+        {
+            "arches_nodeid": "e83bb552-9fe6-11ec-9993-5254008afee6",
+            "arches_node_name": "Taxonomic Classification",
+            "file_field_name": "Taxonomic Classification",
             "data_type": "string",
             "export": true
         }
