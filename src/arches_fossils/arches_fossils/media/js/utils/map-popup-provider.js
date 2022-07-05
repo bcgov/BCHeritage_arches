@@ -28,7 +28,8 @@ define([
             },
             filterLayers: [
                 "WHSE_MINERAL_TENURE.GEOL_BEDROCK_UNIT_POLY_SVW",
-                "c66518e2-10c6-11ec-adef-5254008afee6" /* Important Areas Resource layer */
+                "c66518e2-10c6-11ec-adef-5254008afee6", /* Important Areas Resource layer */
+                "2336968c-1035-11ec-a3aa-5254008afee6", /* Fossil Site layer */
             ],
 
             isFeatureClickable: function(feature, map){
