@@ -266,7 +266,7 @@
                     "helptext": null,
                     "helptitle": null,
                     "instructions": null,
-                    "is_editable": false,
+                    "is_editable": true,
                     "name": "Explicit Temporal Assessment",
                     "nodegroup_id": "7d4ecb62-9fe1-11ec-8d99-5254008afee6",
                     "sortorder": null,
@@ -285,7 +285,7 @@
                     "helptext": null,
                     "helptitle": null,
                     "instructions": "Used to record text descriptions associated with the storage information.",
-                    "is_editable": true,
+                    "is_editable": false,
                     "name": "Storage Notes",
                     "nodegroup_id": "d0526888-d168-11ec-8fe4-5254008afee6",
                     "sortorder": null,
@@ -304,7 +304,7 @@
                     "helptext": null,
                     "helptitle": null,
                     "instructions": null,
-                    "is_editable": true,
+                    "is_editable": false,
                     "name": "Significance Ranking Code",
                     "nodegroup_id": "e3cf3dc4-a85e-11ec-b40a-5254008afee6",
                     "sortorder": 1,
@@ -559,7 +559,7 @@
                 {
                     "card_id": "0ce78634-a031-11ec-913f-5254008afee6",
                     "config": {
-                        "defaultValue": null,
+                        "defaultValue": false,
                         "label": "Location Uncertain",
                         "subtitle": "Click to switch"
                     },
@@ -568,7 +568,7 @@
                     "node_id": "22dcdd96-d168-11ec-aa91-5254008afee6",
                     "sortorder": 3,
                     "visible": true,
-                    "widget_id": "10000000-0000-0000-0000-000000000003"
+                    "widget_id": "10000000-0000-0000-0000-000000000006"
                 },
                 {
                     "card_id": "0ce78634-a031-11ec-913f-5254008afee6",
@@ -1203,7 +1203,7 @@
                     },
                     "function_id": "60000000-0000-0000-0000-000000000001",
                     "graph_id": "b53b6850-1c83-11ec-a9a2-5254008afee6",
-                    "id": "20e40b20-e376-11ec-a0ed-5254008afee6"
+                    "id": "228b47c4-f2f6-11ec-9f52-5254008afee6"
                 },
                 {
                     "config": {
@@ -1215,7 +1215,7 @@
                     },
                     "function_id": "60000000-0000-0000-0000-000000002001",
                     "graph_id": "b53b6850-1c83-11ec-a9a2-5254008afee6",
-                    "id": "20e427cc-e376-11ec-a0ed-5254008afee6"
+                    "id": "228b61c8-f2f6-11ec-9f52-5254008afee6"
                 }
             ],
             "graphid": "b53b6850-1c83-11ec-a9a2-5254008afee6",
@@ -2281,7 +2281,7 @@
     ],
     "metadata": {
         "db": "PostgreSQL 12.6 on x86_64-pc-linux-gnu, compiled by gcc (GCC) 4.8.5 20150623 (Red Hat 4.8.5-44), 64-bit",
-        "git hash": "7f759b7 2022-06-01 14:26:40 -0700",
+        "git hash": "9a077ea 2022-06-27 16:40:13 -0700",
         "os": "Linux",
         "os version": "3.10.0-1127.el7.x86_64"
     }
