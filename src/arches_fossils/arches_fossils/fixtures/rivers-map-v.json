@@ -24,6 +24,18 @@
           "source-layer": "WHSE_BASEMAPPING.FWA_RIVERS_POLY",
           "minzoom": 0,
           "maxzoom": 20
+        },
+        {
+          "id": "rivers-symbol",
+          "type": "symbol",
+          "source": "rivers-source",
+          "source-layer": "WHSE_BASEMAPPING.FWA_RIVERS_POLY",
+          "layout": {
+            "text-field": "{GNIS_NAME_1}"
+          },
+          "paint": {
+            "text-color": "#0505aa"
+          }
         }
       ],
       "isoverlay": true,

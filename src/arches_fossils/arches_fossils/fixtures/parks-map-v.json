@@ -24,6 +24,18 @@
           "source-layer": "WHSE_TANTALIS.TA_PARK_ECORES_PA_SVW",
           "minzoom": 0,
           "maxzoom": 20
+        },
+        {
+          "id": "parks-symbol",
+          "type": "symbol",
+          "source": "parks-source",
+          "source-layer": "WHSE_TANTALIS.TA_PARK_ECORES_PA_SVW",
+          "layout": {
+            "text-field": "{PROTECTED_LANDS_NAME}"
+          },
+          "paint": {
+            "text-color": "#0505aa"
+          }
         }
       ],
       "isoverlay": true,

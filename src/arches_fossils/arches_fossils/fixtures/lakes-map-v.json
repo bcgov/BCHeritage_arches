@@ -24,6 +24,18 @@
           "source-layer": "WHSE_BASEMAPPING.FWA_LAKES_POLY",
           "minzoom": 0,
           "maxzoom": 20
+        },
+        {
+          "id": "lakes-symbol",
+          "type": "symbol",
+          "source": "lakes-source",
+          "source-layer": "WHSE_BASEMAPPING.FWA_LAKES_POLY",
+          "layout": {
+            "text-field": "{GNIS_NAME_1}"
+          },
+          "paint": {
+            "text-color": "#0505aa"
+          }
         }
       ],
       "isoverlay": true,

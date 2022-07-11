@@ -24,6 +24,18 @@
           "source-layer": "WHSE_BASEMAPPING.FWA_STREAM_NETWORKS_SP",
           "minzoom": 0,
           "maxzoom": 20
+        },
+        {
+          "id": "stream-networks-symbol",
+          "type": "symbol",
+          "source": "stream-networks-source",
+          "source-layer": "WHSE_BASEMAPPING.FWA_STREAM_NETWORKS_SP",
+          "layout": {
+            "text-field": "{GNIS_NAME}"
+          },
+          "paint": {
+            "text-color": "#0505aa"
+          }
         }
       ],
       "isoverlay": true,
