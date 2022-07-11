@@ -42,7 +42,7 @@ class UniqueBooleanValue(BaseFunction):
             # else:
             #     print("Why are we here?")
 
-    def post_save(self, tile, request):
+    def post_save(self, tile, request, context):
         pass
 
     def on_import(self, tile, request):

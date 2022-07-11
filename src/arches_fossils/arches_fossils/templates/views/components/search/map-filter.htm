@@ -60,6 +60,14 @@
             </div>
         </div>
         <!--/ko-->
+        <!-- ko if: !!featureSearchError()  -->
+        <div class="geojson-error-list">
+            {% trans "Search has following errors that must be resolved:" %}
+            <ul>
+                <li data-bind="text: featureSearchError"></li>
+            </ul>
+        </div>
+        <!--/ko-->
 
     </div>
     <!-- /ko-->

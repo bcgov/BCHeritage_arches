@@ -14,7 +14,8 @@ define([
     'geojsonhint',
     'utils/map-popup-provider',
     'utils/map-filter-utils',
-], function ($, _, arches, ko, BaseFilter, MapComponentViewModel, binFeatureCollection, mapStyles, turf, geohash, geojsonExtent, uuid, geojsonhint, popupDataProvider, mapFilterUtils) {
+    'utils/resource-geom-callback-factory',
+], function ($, _, arches, ko, BaseFilter, MapComponentViewModel, binFeatureCollection, mapStyles, turf, geohash, geojsonExtent, uuid, geojsonhint, popupDataProvider, mapFilterUtils, geomCallbackFactory) {
     // Overrides the base map-filter.js Allows multiple geometries to be used as the map filter
     //
     // @todo - Need to find a way to extend not just override.
@@ -119,6 +120,7 @@ define([
                 this.geoJSONErrors = ko.observableArray();
                 this.pageLoaded = false;
                 this.maxBuffer = 100000;
+                this.featureSearchError = ko.observable();
                 this.maxBufferUnits = 'm';
                 this.maxZoom = arches.mapDefaultMaxZoom;
                 this.filter.feature_collection = ko.observable({
@@ -212,7 +214,7 @@ define([
                         if (!!feature.properties && !!feature.properties.geometryOperation){
                             var geometryOperation = feature.properties.geometryOperation;
                             try{
-                                if(geometryOperation !== 'intersect' && bufferUnit !== 'union'){
+                                if(geometryOperation !== 'intersect' && geometryOperation !== 'union'){
                                     throw new Error('Whoops!');
                                 }
                             }
@@ -499,10 +501,18 @@ define([
             },
             selectFeatureAsFilter: function(feature) {
                 var searchFeatures;
+                this.featureSearchError(null);
                 if (mapFilterUtils.isArchesGeometry(feature)) {
-                    searchFeatures = mapFilterUtils.getGeometryFromResource(feature, function (resource) {
-                        return JSON.parse(resource["Area Boundary"]["Spatial Coordinates Geometry"]["@value"].replaceAll("'", "\"")).features;
-                    });
+                    let callbackFunction = geomCallbackFactory.getCallbackForFeature(feature);
+                    if (!!callbackFunction)
+                    {
+                        searchFeatures = mapFilterUtils.getGeometryFromResource(feature, callbackFunction);
+                    }
+                    else
+                    {
+                        this.featureSearchError('Resource layer has not been configured as a map filter' + feature.sourceLayer);
+                        return;
+                    }
                 }
                 else
                 {

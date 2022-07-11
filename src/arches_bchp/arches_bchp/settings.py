@@ -74,24 +74,25 @@ LOAD_PACKAGE_ONTOLOGIES = True
 # }
 
 INSTALLED_APPS = (
-    'django.contrib.admin',
-    'django.contrib.auth',
-    'django.contrib.contenttypes',
-    'django.contrib.sessions',
-    'django.contrib.messages',
-    'django.contrib.staticfiles',
-    'django.contrib.gis',
-    'arches',
-    'arches.app.models',
-    'arches.management',
-    'guardian',
-    'captcha',
-    'revproxy',
-    'corsheaders',
-    'oauth2_provider',
-    'django_celery_results',
-    'compressor',
-    'arches_bchp',
+    "django.contrib.admin",
+    "django.contrib.auth",
+    "django.contrib.contenttypes",
+    "django.contrib.sessions",
+    "django.contrib.messages",
+    "django.contrib.staticfiles",
+    "django.contrib.gis",
+    "arches",
+    "arches.app.models",
+    "arches.management",
+    "guardian",
+    "captcha",
+    "revproxy",
+    "corsheaders",
+    "oauth2_provider",
+    "django_celery_results",
+    "compressor",
+    # "silk",
+    "arches_bchp",
 )
 
 # ALLOWED_HOSTS = []
@@ -283,7 +284,7 @@ LANGUAGE_CODE = "en"
 # a list of language codes can be found here http://www.i18nguy.com/unicode/language-identifiers.html
 LANGUAGES = [
 #   ('de', _('German')),
-#   ('en', _('English')),
+   ('en', _('English')),
 #   ('en-gb', _('British English')),
 #   ('es', _('Spanish')),
 ]

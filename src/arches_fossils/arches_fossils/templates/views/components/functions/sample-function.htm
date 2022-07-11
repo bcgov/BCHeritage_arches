@@ -11,4 +11,18 @@
       </div>
     </div>
   </div>
+  <div class="row widget-container">
+    <div class="form-group">
+      <div class="relative">
+        <label class="col-xs-12 control-label widget-input-label"> {% trans "Node Names" %}</label>
+      </div>
+
+      <div class="col-xs-12">
+        <select data-placeholder="{% trans "Select a card from which to choose nodes to power your primary name identifier." %}"
+        data-bind="selectedOptions: node_id,
+        options: cards, optionsText: 'name', optionsValue: 'nodeid', chosen: {width: '100%',
+        allow_single_deselect: false, disable_search_threshold: 15}"></select>
+      </div>
+    </div>
+  </div>
 </div>

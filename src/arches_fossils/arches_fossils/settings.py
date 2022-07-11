@@ -14,23 +14,7 @@ except ImportError:
 
 APP_NAME = 'arches_fossils'
 APP_ROOT = os.path.dirname(os.path.abspath(inspect.getfile(inspect.currentframe())))
-STATICFILES_DIRS = (os.path.join(APP_ROOT, 'media'),) + STATICFILES_DIRS
-
-# ###########
-# # BCGov specific settings. Should these be externalized into separate file?
-# ###########
-#
-# # Whether we're behind the bcgov proxy server
-# BCGOV_PROXY = True
-# # PROXY prefix used - NB - cannot have leading "/", and must have trailing "/"
-# BCGOV_PROXY_PREFIX = 'int/arches-fossils/'
-#
-# STATIC_URL = '/' + BCGOV_PROXY_PREFIX + 'media/'
-# ADMIN_MEDIA_PREFIX = STATIC_URL + "admin/"
-
-###########
-# End BCGov specific settings.
-###########
+STATICFILES_DIRS =  (os.path.join(APP_ROOT, 'media'),) + STATICFILES_DIRS
 
 DATATYPE_LOCATIONS.append('arches_fossils.datatypes')
 FUNCTION_LOCATIONS.append('arches_fossils.functions')
@@ -90,24 +74,25 @@ LOAD_PACKAGE_ONTOLOGIES = True
 # }
 
 INSTALLED_APPS = (
-    'django.contrib.admin',
-    'django.contrib.auth',
-    'django.contrib.contenttypes',
-    'django.contrib.sessions',
-    'django.contrib.messages',
-    'django.contrib.staticfiles',
-    'django.contrib.gis',
-    'arches',
-    'arches.app.models',
-    'arches.management',
-    'guardian',
-    'captcha',
-    'revproxy',
-    'corsheaders',
-    'oauth2_provider',
-    'django_celery_results',
-    'compressor',
-    'arches_fossils',
+    "django.contrib.admin",
+    "django.contrib.auth",
+    "django.contrib.contenttypes",
+    "django.contrib.sessions",
+    "django.contrib.messages",
+    "django.contrib.staticfiles",
+    "django.contrib.gis",
+    "arches",
+    "arches.app.models",
+    "arches.management",
+    "guardian",
+    "captcha",
+    "revproxy",
+    "corsheaders",
+    "oauth2_provider",
+    "django_celery_results",
+    "compressor",
+    # "silk",
+    "arches_fossils",
 )
 
 # ALLOWED_HOSTS = [{ allowed_hosts }]
@@ -178,7 +163,11 @@ SESSION_COOKIE_NAME = 'arches_fossils'
 CACHES = {
     'default': {
         'BACKEND': 'django.core.cache.backends.dummy.DummyCache',
-    }
+    },
+    'user_permission': {
+        'BACKEND': 'django.core.cache.backends.db.DatabaseCache',
+        'LOCATION': 'user_permission_cache',
+    },
 }
 
 # Hide nodes and cards in a report that have no data
@@ -194,37 +183,18 @@ DATE_IMPORT_EXPORT_FORMAT = "%Y-%m-%d"  # Custom date format for dates imported 
 # ordered as seen in the resource cards or not.
 EXPORT_DATA_FIELDS_IN_CARD_ORDER = False
 
-DATE_FORMATS = {
-    # Keep index values the same for formats in the python and javascript arrays.
-    "Python": ["%Y-%m-%dT%H:%M:%S.%f%z", "%Y-%m-%dT%H:%M:%S%z", "%Y-%m-%d %H:%M:%S%z", "%Y-%m-%d", "%Y-%m", "%Y",
-               "-%Y"],
-    "JavaScript": ["YYYY-MM-DDTHH:mm:ss.sssZ", "YYYY-MM-DDTHH:mm:ssZ", "YYYY-MM-DD HH:mm:ssZ", "YYYY-MM-DD", "YYYY-MM",
-                   "YYYY", "-YYYY"],
-    "Elasticsearch": [
-        "yyyy-MM-dd'T'HH:mm:ss.SSSZZZZZ",
-        "yyyy-MM-dd'T'HH:mm:ss.SSSZ",
-        "yyyy-MM-dd'T'HH:mm:ssZZZZZ",
-        "yyyy-MM-dd'T'HH:mm:ssZ",
-        "yyyy-MM-dd HH:mm:ssZZZZZ",
-        "yyyy-MM-dd",
-        "yyyy-MM",
-        "yyyy",
-        "-yyyy",
-    ],
-}
-
-# Identify the usernames and duration (seconds) for which you want to cache the time wheel
+#Identify the usernames and duration (seconds) for which you want to cache the time wheel
 CACHE_BY_USER = {'anonymous': 3600 * 24}
-TILE_CACHE_TIMEOUT = 600  # seconds
-CLUSTER_DISTANCE_MAX = 5000  # meters
+TILE_CACHE_TIMEOUT = 600 #seconds
+CLUSTER_DISTANCE_MAX = 5000 #meters
 GRAPH_MODEL_CACHE_TIMEOUT = None
 
-MOBILE_OAUTH_CLIENT_ID = ''  # '9JCibwrWQ4hwuGn5fu2u1oRZSs9V6gK8Vu8hpRC4'
+MOBILE_OAUTH_CLIENT_ID = ''  #'9JCibwrWQ4hwuGn5fu2u1oRZSs9V6gK8Vu8hpRC4'
 MOBILE_DEFAULT_ONLINE_BASEMAP = {'default': 'mapbox://styles/mapbox/streets-v9'}
 MOBILE_IMAGE_SIZE_LIMITS = {
     # These limits are meant to be approximates. Expect to see uploaded sizes range +/- 20%
     # Not to exceed the limit defined in DATA_UPLOAD_MAX_MEMORY_SIZE
-    "full": min(1500000, DATA_UPLOAD_MAX_MEMORY_SIZE),  # ~1.5 Mb
+    "full": min(1500000, DATA_UPLOAD_MAX_MEMORY_SIZE), # ~1.5 Mb
     "thumb": 400,  # max width/height in pixels, this will maintain the aspect ratio of the original image
 }
 
@@ -241,6 +211,7 @@ NOCAPTCHA = True
 if DEBUG is True:
     SILENCED_SYSTEM_CHECKS = ["captcha.recaptcha_test_key_error"]
 
+
 # EMAIL_BACKEND = 'django.core.mail.backends.console.EmailBackend'  #<-- Only need to uncomment this for testing without an actual email server
 # EMAIL_USE_TLS = True
 # EMAIL_HOST = 'smtp.gmail.com'
@@ -252,16 +223,15 @@ DEFAULT_FROM_EMAIL = EMAIL_HOST_USER
 
 CELERY_BROKER_URL = ""  # RabbitMQ --> "amqp://guest:guest@localhost",  Redis --> "redis://localhost:6379/0"
 CELERY_ACCEPT_CONTENT = ['json']
-CELERY_RESULT_BACKEND = 'django-db'  # Use 'django-cache' if you want to use your cache as your backend
+CELERY_RESULT_BACKEND = 'django-db' # Use 'django-cache' if you want to use your cache as your backend
 CELERY_TASK_SERIALIZER = 'json'
 
 CELERY_SEARCH_EXPORT_EXPIRES = 24 * 3600  # seconds
 CELERY_SEARCH_EXPORT_CHECK = 3600  # seconds
 
 CELERY_BEAT_SCHEDULE = {
-    "delete-expired-search-export": {"task": "arches.app.tasks.delete_file", "schedule": CELERY_SEARCH_EXPORT_CHECK, },
-    "notification": {"task": "arches.app.tasks.message", "schedule": CELERY_SEARCH_EXPORT_CHECK,
-                     "args": ("Celery Beat is Running",), },
+    "delete-expired-search-export": {"task": "arches.app.tasks.delete_file", "schedule": CELERY_SEARCH_EXPORT_CHECK,},
+    "notification": {"task": "arches.app.tasks.message", "schedule": CELERY_SEARCH_EXPORT_CHECK, "args": ("Celery Beat is Running",),},
 }
 
 # Set to True if you want to send celery tasks to the broker without being able to detect celery.
@@ -312,7 +282,7 @@ LANGUAGE_CODE = "en"
 # a list of language codes can be found here http://www.i18nguy.com/unicode/language-identifiers.html
 LANGUAGES = [
     #   ('de', _('German')),
-    #   ('en', _('English')),
+       ('en', _('English')),
     #   ('en-gb', _('British English')),
     #   ('es', _('Spanish')),
 ]
