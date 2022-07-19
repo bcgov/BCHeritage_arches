@@ -117,11 +117,11 @@ class BCFossilsDescriptors(AbstractPrimaryDescriptorsFunction):
                 graph__name='BC Fossil Sample'
             ).first()
 
-        # if not self._geologic_period_node:
-        #     self._formation_node = models.Node.objects.filter(
-        #         alias='period',
-        #         graph__name='BC Fossil Sample'
-        #     ).first()
+        if not self._geologic_period_node:
+            self._formation_node = models.Node.objects.filter(
+                alias='period',
+                graph__name='BC Fossil Sample'
+            ).first()
 
         fossil_sample_values = models.ResourceXResource.objects.filter(
             resourceinstanceidfrom=resource.resourceinstanceid,
