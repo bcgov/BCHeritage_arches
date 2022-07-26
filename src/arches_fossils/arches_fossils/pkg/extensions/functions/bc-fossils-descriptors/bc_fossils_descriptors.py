@@ -1,9 +1,5 @@
-import json
-import uuid
 from arches.app.functions.primary_descriptors import AbstractPrimaryDescriptorsFunction
 from arches.app.models import models
-from arches.app.models.tile import Tile
-from arches.app.models.models import Node
 from arches.app.datatypes.datatypes import DataTypeFactory
 from django.utils.translation import ugettext as _
 
@@ -47,26 +43,32 @@ details = {
 
 class BCFossilsDescriptors(AbstractPrimaryDescriptorsFunction):
     _datatype_factory = None
-    _formation_node = None
-    _geologic_period_node = None
-    _collected_fossils_node = None
+    _formation_node = models.Node.objects.filter(
+        alias='geological_formation',
+        graph__name='BC Fossil Sample'
+    ).first()
+    _geologic_period_node = models.Node.objects.filter(
+        alias='period',
+        graph__name='BC Fossil Sample'
+    ).first()
+    _collected_fossils_node = models.Node.objects.filter( alias="fossils_collected" ).first()
+    _collection_event_graph_id = models.GraphModel.objects.filter(name="BC Fossil Collection Event").filter(isresource=True).values(
+        "graphid").first()["graphid"]
+    _coll_event_samples_values_config = [{"node": _formation_node, "label": "Formation"},
+                                         {"node": _geologic_period_node, "label": "Period"}]
+    _coll_event_popup_order = ["Detailed Location", "Formation", "Period", "Fossils Collected"]
+    _coll_event_card_order = ["Detailed Location", "Period", "Fossils Collected"]
 
     def get_primary_descriptor_from_nodes(self, resource, config, context=None):
         return_value = None
+        display_values = {}
+
         try:
-            # print("Config: %s" % config)
-            # print("Context: %s" % context)
-            # print("Resource: %s" % resource)
-            # Name for CollectionEvent is a special case
-            if str(resource.graph_id) == "df3ee1ae-9c1c-11ec-964d-5254008afee6" and config["type"] == "name":
+            if resource.graph_id == self._collection_event_graph_id and config["type"] == "name":
                 return self._get_site_name(resource)
 
-            if str(resource.graph_id) == "df3ee1ae-9c1c-11ec-964d-5254008afee6" and config["type"] == "map_popup":
-                formations = self._get_formations(resource)
-                if formations:
-                    if not return_value:
-                        return_value = ""
-                    return_value += self._format_value("Formation", formations, config)
+            if resource.graph_id == self._collection_event_graph_id:
+                display_values = self._get_sample_values(resource, self._coll_event_samples_values_config)
 
             name_nodes = models.Node.objects.filter(graph=resource.graph_id).filter(
                 nodeid__in=config['node_ids']
@@ -75,16 +77,20 @@ class BCFossilsDescriptors(AbstractPrimaryDescriptorsFunction):
 
             for name_node in sorted_name_nodes:
                 value = self._get_value_from_node(name_node, resource)
-
-                if value and value != "None":
+                if value:
                     if config["first_only"]:
                         return self._format_value(name_node.name, value, config)
-                    else:
-                        if config["delimiter"] and return_value:
-                            return_value += config["delimiter"]
-                        elif not return_value:
+                    display_values[name_node.name] = value
+
+            if resource.graph_id == BCFossilsDescriptors._collection_event_graph_id:
+                for label in (
+                        BCFossilsDescriptors._coll_event_popup_order if config["type"] == "map_popup" else BCFossilsDescriptors._coll_event_card_order):
+                    if label in display_values:
+                        if not return_value:
                             return_value = ""
-                        return_value += self._format_value(name_node.name, value, config)
+                        else:
+                            return_value += config["delimiter"]
+                        return_value += self._format_value(label, display_values[label], config)
             return return_value
         except ValueError as e:
             print(e, "invalid nodegroupid participating in descriptor function.")
@@ -104,50 +110,33 @@ class BCFossilsDescriptors(AbstractPrimaryDescriptorsFunction):
             self._datatype_factory = DataTypeFactory()
         return self._datatype_factory
 
-    def _get_formations(self, resource):
+    def _get_sample_values(self, resource, values_config):
         # print("Resource: %s" % resource.resourceinstanceid)
-        if not self._collected_fossils_node:
-            self._collected_fossils_node = models.Node.objects.filter(
-                alias="fossils_collected"
-            ).first()
-
-        if not self._formation_node:
-            self._formation_node = models.Node.objects.filter(
-                alias='geological_formation',
-                graph__name='BC Fossil Sample'
-            ).first()
-
-        if not self._geologic_period_node:
-            self._formation_node = models.Node.objects.filter(
-                alias='period',
-                graph__name='BC Fossil Sample'
-            ).first()
+        return_values = {}
 
         fossil_sample_values = models.ResourceXResource.objects.filter(
             resourceinstanceidfrom=resource.resourceinstanceid,
-            nodeid=self._collected_fossils_node.nodeid
+            nodeid=BCFossilsDescriptors._collected_fossils_node.nodeid
         ).values_list('resourceinstanceidto', flat=True)
 
-        tiles = models.TileModel.objects.filter(
-            nodegroup_id=self._formation_node.nodegroup_id,
-            resourceinstance_id__in=fossil_sample_values
-        ).all()
+        for child_values in values_config:
+            tiles = models.TileModel.objects.filter(
+                nodegroup_id=child_values["node"].nodegroup_id,
+                resourceinstance_id__in=fossil_sample_values
+            ).all()
 
-        if len(tiles) == 0:
-            return None
+            if len(tiles) != 0:
+                datatype = self._get_datatype_factory().get_instance(child_values["node"].datatype)
 
-        datatype = self._get_datatype_factory().get_instance(self._formation_node.datatype)
+                values = []
+                for tile in tiles:
+                    period_value = datatype.get_display_value(tile, child_values["node"])
+                    if period_value:
+                        values.append(period_value)
 
-        formations = []
-        for tile in tiles:
-            formation_value = datatype.get_display_value(tile, self._formation_node)
-            if formation_value:
-                formations.append(formation_value)
-
-        if len(formations) > 0:
-            return ', '.join(list(set(formations)))
-        else:
-            return None
+                if len(values) > 0:
+                    return_values[child_values["label"]] = ', '.join(list(set(values)))
+        return return_values
 
     def _get_site_name(self, resource):
         display_value = "("
