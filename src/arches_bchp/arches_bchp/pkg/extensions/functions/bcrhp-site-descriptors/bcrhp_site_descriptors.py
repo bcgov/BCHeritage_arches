@@ -43,15 +43,15 @@ details = {
 
 class BCRHPSiteDescriptors(AbstractPrimaryDescriptorsFunction):
     _datatype_factory = DataTypeFactory()
-    _graph_name = 'BC Heritage Resource New'
+    _graph_name = 'BC Heritage Resource'
     # For Name part of descriptor
     _site_name_type_node = models.Node.objects.filter(
         alias='name_type',
-        graph__name='BC Heritage Resource New'
+        graph__name='BC Heritage Resource'
     ).first()
     _site_name_node = models.Node.objects.filter(
         alias='name',
-        graph__name='BC Heritage Resource New'
+        graph__name='BC Heritage Resource'
     ).first()
 
     _description_order = ['Borden Number']
@@ -115,8 +115,10 @@ class BCRHPSiteDescriptors(AbstractPrimaryDescriptorsFunction):
             nodegroup_id=BCRHPSiteDescriptors._site_name_node.nodegroup_id
         ).filter(resourceinstance_id=resource.resourceinstanceid).all():
             if name_type_datatype.get_display_value(tile, BCRHPSiteDescriptors._site_name_type_node) == 'Primary':
-                if display_value:
+                name = name_datatype.get_display_value(tile, BCRHPSiteDescriptors._site_name_node)
+                if display_value and name:
                     display_value = display_value + ",<br>"
-                display_value = display_value + name_datatype.get_display_value(tile, BCRHPSiteDescriptors._site_name_node)
+                if name:
+                    display_value = display_value + name
 
         return display_value
