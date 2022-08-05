@@ -43,25 +43,35 @@ details = {
 
 class BCFossilsDescriptors(AbstractPrimaryDescriptorsFunction):
     _datatype_factory = None
-    _formation_node = models.Node.objects.filter(
-        alias='geological_formation',
-        graph__name='BC Fossil Sample'
-    ).first()
-    _geologic_period_node = models.Node.objects.filter(
-        alias='period',
-        graph__name='BC Fossil Sample'
-    ).first()
-    _collected_fossils_node = models.Node.objects.filter( alias="fossils_collected" ).first()
-    _collection_event_graph_id = models.GraphModel.objects.filter(name="BC Fossil Collection Event").filter(isresource=True).values(
-        "graphid").first()["graphid"]
+    _formation_node = None
+    _geologic_period_node = None
+    _collected_fossils_node = None
+    _collection_event_graph_id = None
     _coll_event_samples_values_config = [{"node": _formation_node, "label": "Formation"},
                                          {"node": _geologic_period_node, "label": "Period"}]
     _coll_event_popup_order = ["Detailed Location", "Formation", "Period", "Fossils Collected"]
     _coll_event_card_order = ["Detailed Location", "Period", "Fossils Collected"]
 
+    @staticmethod
+    def initialize_static_data():
+        BCFossilsDescriptors._formation_node = models.Node.objects.filter(
+            alias='geological_formation',
+            graph__name='BC Fossil Sample'
+        ).first()
+        BCFossilsDescriptors._geologic_period_node = models.Node.objects.filter(
+            alias='period',
+            graph__name='BC Fossil Sample'
+        ).first()
+        BCFossilsDescriptors._collected_fossils_node = models.Node.objects.filter( alias="fossils_collected" ).first()
+        BCFossilsDescriptors._collection_event_graph_id = models.GraphModel.objects.filter(name="BC Fossil Collection Event").filter(isresource=True).values(
+            "graphid").first()["graphid"]
+
     def get_primary_descriptor_from_nodes(self, resource, config, context=None):
         return_value = None
         display_values = {}
+
+        if BCFossilsDescriptors._formation_node is None:
+            BCFossilsDescriptors.initialize_static_data()
 
         try:
             if resource.graph_id == self._collection_event_graph_id and config["type"] == "name":
