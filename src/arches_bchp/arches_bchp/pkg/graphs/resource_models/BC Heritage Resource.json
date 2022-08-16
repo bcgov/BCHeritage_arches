@@ -42,7 +42,7 @@
                     "helptext": null,
                     "helptitle": null,
                     "instructions": null,
-                    "is_editable": false,
+                    "is_editable": true,
                     "name": "Decision History",
                     "nodegroup_id": "0c533c8e-0d07-11ed-a6f1-5254008afee6",
                     "sortorder": 9,
@@ -137,7 +137,7 @@
                     "helptext": null,
                     "helptitle": null,
                     "instructions": null,
-                    "is_editable": false,
+                    "is_editable": true,
                     "name": "BC Property Legal Description",
                     "nodegroup_id": "1b622ab6-0d0f-11ed-98c2-5254008afee6",
                     "sortorder": null,
@@ -156,7 +156,7 @@
                     "helptext": null,
                     "helptitle": null,
                     "instructions": "Enter the address of the location.",
-                    "is_editable": false,
+                    "is_editable": true,
                     "name": "BC Property Address",
                     "nodegroup_id": "1b622e58-0d0f-11ed-98c2-5254008afee6",
                     "sortorder": 1,
@@ -194,7 +194,7 @@
                     "helptext": null,
                     "helptitle": null,
                     "instructions": "Define the spatial location.",
-                    "is_editable": false,
+                    "is_editable": true,
                     "name": "Spatial Location",
                     "nodegroup_id": "1b6235b0-0d0f-11ed-98c2-5254008afee6",
                     "sortorder": 0,
@@ -213,7 +213,7 @@
                     "helptext": null,
                     "helptitle": null,
                     "instructions": null,
-                    "is_editable": false,
+                    "is_editable": true,
                     "name": "BC Heritage Resource Place",
                     "nodegroup_id": "1b62393e-0d0f-11ed-98c2-5254008afee6",
                     "sortorder": 6,
@@ -245,7 +245,7 @@
                     "helptext": null,
                     "helptitle": null,
                     "instructions": null,
-                    "is_editable": false,
+                    "is_editable": true,
                     "name": "Borden Number",
                     "nodegroup_id": "e5ecf044-0d06-11ed-86c8-5254008afee6",
                     "sortorder": 0,
@@ -264,7 +264,7 @@
                     "helptext": null,
                     "helptitle": null,
                     "instructions": "Define the resource's designation or protection status.",
-                    "is_editable": false,
+                    "is_editable": true,
                     "name": "Designation or Protection",
                     "nodegroup_id": "6cc30064-0d06-11ed-8804-5254008afee6",
                     "sortorder": 0,
@@ -283,7 +283,7 @@
                     "helptext": null,
                     "helptitle": null,
                     "instructions": null,
-                    "is_editable": false,
+                    "is_editable": true,
                     "name": "BC Right",
                     "nodegroup_id": "6cc30474-0d06-11ed-8804-5254008afee6",
                     "sortorder": 7,
@@ -302,7 +302,7 @@
                     "helptext": null,
                     "helptitle": null,
                     "instructions": null,
-                    "is_editable": false,
+                    "is_editable": true,
                     "name": "Heritage Class",
                     "nodegroup_id": "7599be12-0d06-11ed-a4d8-5254008afee6",
                     "sortorder": 8,
@@ -328,7 +328,7 @@
                     "helptext": null,
                     "helptitle": null,
                     "instructions": null,
-                    "is_editable": false,
+                    "is_editable": true,
                     "name": "BC Statment of Significance",
                     "nodegroup_id": "7a171192-0d06-11ed-b43a-5254008afee6",
                     "sortorder": 4,
@@ -347,7 +347,7 @@
                     "helptext": null,
                     "helptitle": null,
                     "instructions": null,
-                    "is_editable": false,
+                    "is_editable": true,
                     "name": "BC Heritage Function",
                     "nodegroup_id": "895887a2-0d07-11ed-a4d8-5254008afee6",
                     "sortorder": 2,
@@ -398,7 +398,7 @@
                     "helptext": null,
                     "helptitle": null,
                     "instructions": null,
-                    "is_editable": false,
+                    "is_editable": true,
                     "name": "Site Names",
                     "nodegroup_id": "32d004b6-0d05-11ed-a4d8-5254008afee6",
                     "sortorder": 1,
@@ -858,6 +858,23 @@
                     "widget_id": "10000000-0000-0000-0000-000000000101"
                 },
                 {
+                    "card_id": "1b622c8c-0d0f-11ed-98c2-5254008afee6",
+                    "config": {
+                        "defaultValue": "",
+                        "label": "Legal Address Notes",
+                        "maxLength": null,
+                        "placeholder": "Enter text",
+                        "uneditable": false,
+                        "width": "100%"
+                    },
+                    "id": "6304429a-260a-4ee0-a295-3b6c060cb7c1",
+                    "label": "Legal Address Notes",
+                    "node_id": "15656a28-1a67-11ed-b83c-5254008afee6",
+                    "sortorder": 3,
+                    "visible": true,
+                    "widget_id": "10000000-0000-0000-0000-000000000005"
+                },
+                {
                     "card_id": "6cc302c6-0d06-11ed-8804-5254008afee6",
                     "config": {
                         "dateFormat": "YYYY-MM-DD",
@@ -1256,6 +1273,23 @@
                     "sortorder": 0,
                     "visible": true,
                     "widget_id": "10000000-0000-0000-0000-000000000002"
+                },
+                {
+                    "card_id": "1b623006-0d0f-11ed-98c2-5254008afee6",
+                    "config": {
+                        "defaultValue": "",
+                        "label": "Civic Address Notes",
+                        "maxLength": null,
+                        "placeholder": "Enter text",
+                        "uneditable": false,
+                        "width": "100%"
+                    },
+                    "id": "beec8149-5c8f-46fa-826f-9a23c5b08f11",
+                    "label": "Civic Address Notes",
+                    "node_id": "a1032cd8-1a66-11ed-a3cf-5254008afee6",
+                    "sortorder": 6,
+                    "visible": true,
+                    "widget_id": "10000000-0000-0000-0000-000000000005"
                 },
                 {
                     "card_id": "ff265109-cb1b-4672-9f31-74cc45e6e5ae",
@@ -1767,6 +1801,15 @@
                 },
                 {
                     "description": null,
+                    "domainnode_id": "1b622ab6-0d0f-11ed-98c2-5254008afee6",
+                    "edgeid": "74924e7e-eb83-4b50-bc88-640b8681f785",
+                    "graph_id": "cef9c510-e3e6-4057-ac08-89ad926180b4",
+                    "name": null,
+                    "ontologyproperty": "http://www.cidoc-crm.org/cidoc-crm/P3_has_note",
+                    "rangenode_id": "15656a28-1a67-11ed-b83c-5254008afee6"
+                },
+                {
+                    "description": null,
                     "domainnode_id": "7599be12-0d06-11ed-a4d8-5254008afee6",
                     "edgeid": "7599cb14-0d06-11ed-a4d8-5254008afee6",
                     "graph_id": "cef9c510-e3e6-4057-ac08-89ad926180b4",
@@ -1884,6 +1927,15 @@
                 },
                 {
                     "description": null,
+                    "domainnode_id": "1b622e58-0d0f-11ed-98c2-5254008afee6",
+                    "edgeid": "e51f7d05-40b0-4ed7-bcad-2bfb29b00bbd",
+                    "graph_id": "cef9c510-e3e6-4057-ac08-89ad926180b4",
+                    "name": null,
+                    "ontologyproperty": "http://www.cidoc-crm.org/cidoc-crm/P3_has_note",
+                    "rangenode_id": "a1032cd8-1a66-11ed-a3cf-5254008afee6"
+                },
+                {
+                    "description": null,
                     "domainnode_id": "19d560d2-0d05-11ed-a4d8-5254008afee6",
                     "edgeid": "f3781d8e-a650-4f3f-b98a-37effe7b4003",
                     "graph_id": "cef9c510-e3e6-4057-ac08-89ad926180b4",
@@ -1947,12 +1999,12 @@
                     },
                     "function_id": "60000000-0000-0000-0000-000000001002",
                     "graph_id": "cef9c510-e3e6-4057-ac08-89ad926180b4",
-                    "id": "c200c00a-52d7-4218-b246-5453904272bc"
+                    "id": "d8099370-93df-4f7a-80b7-97f2744aac88"
                 }
             ],
             "graphid": "cef9c510-e3e6-4057-ac08-89ad926180b4",
             "iconclass": "fa fa-bank",
-            "is_editable": false,
+            "is_editable": true,
             "isactive": true,
             "isresource": true,
             "jsonldcontext": null,
@@ -2400,6 +2452,26 @@
                     "nodeid": "10215210-0d07-11ed-8ef7-5254008afee6",
                     "ontologyclass": "http://www.cidoc-crm.org/cidoc-crm/E55_Type",
                     "parentproperty": "http://www.cidoc-crm.org/cidoc-crm/P130_shows_features_of",
+                    "sortorder": 0
+                },
+                {
+                    "alias": "legal_address_notes",
+                    "config": null,
+                    "datatype": "string",
+                    "description": null,
+                    "exportable": true,
+                    "fieldname": null,
+                    "graph_id": "cef9c510-e3e6-4057-ac08-89ad926180b4",
+                    "hascustomalias": false,
+                    "is_collector": false,
+                    "isrequired": false,
+                    "issearchable": true,
+                    "istopnode": false,
+                    "name": "Legal Address Notes",
+                    "nodegroup_id": "1b622ab6-0d0f-11ed-98c2-5254008afee6",
+                    "nodeid": "15656a28-1a67-11ed-b83c-5254008afee6",
+                    "ontologyclass": "http://www.cidoc-crm.org/cidoc-crm/E62_String",
+                    "parentproperty": "http://www.cidoc-crm.org/cidoc-crm/P3_has_note",
                     "sortorder": 0
                 },
                 {
@@ -3461,6 +3533,26 @@
                     "sortorder": 0
                 },
                 {
+                    "alias": "civic_address_notes",
+                    "config": null,
+                    "datatype": "string",
+                    "description": null,
+                    "exportable": true,
+                    "fieldname": null,
+                    "graph_id": "cef9c510-e3e6-4057-ac08-89ad926180b4",
+                    "hascustomalias": false,
+                    "is_collector": false,
+                    "isrequired": false,
+                    "issearchable": true,
+                    "istopnode": false,
+                    "name": "Civic Address Notes",
+                    "nodegroup_id": "1b622e58-0d0f-11ed-98c2-5254008afee6",
+                    "nodeid": "a1032cd8-1a66-11ed-a3cf-5254008afee6",
+                    "ontologyclass": "http://www.cidoc-crm.org/cidoc-crm/E62_String",
+                    "parentproperty": "http://www.cidoc-crm.org/cidoc-crm/P3_has_note",
+                    "sortorder": 0
+                },
+                {
                     "alias": "name",
                     "config": null,
                     "datatype": "string",
@@ -3601,7 +3693,7 @@
     ],
     "metadata": {
         "db": "PostgreSQL 12.6 on x86_64-pc-linux-gnu, compiled by gcc (GCC) 4.8.5 20150623 (Red Hat 4.8.5-44), 64-bit",
-        "git hash": "756e630 2022-08-05 14:05:47 -0700",
+        "git hash": "6b845ee 2022-08-11 16:03:19 -0700",
         "os": "Linux",
         "os version": "3.10.0-1127.el7.x86_64"
     }
