@@ -516,7 +516,7 @@ define([
                 }
                 else
                 {
-                    searchFeatures = [mapFilterUtils.getFeatureFromWFS(feature, "WHSE_MINERAL_TENURE.GEOL_BEDROCK_UNIT_POLY_SVW")];
+                    searchFeatures = [mapFilterUtils.getFeatureFromWFS(feature, feature.sourceLayer)];
                 }
                 var featureSet = this.draw.getAll();
                 //var searchGeoms = this.externalSearchGeometries();

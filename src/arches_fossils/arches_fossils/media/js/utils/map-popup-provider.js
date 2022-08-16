@@ -23,11 +23,27 @@ define([
                             {key: "PARCEL_STATUS", title: "Parcel Status: "},
                             {key: "PARCEL_START_DATE", title: "Parcel Start Date: "},
                             {key: "FEATURE_AREA_SQM", title: "Size (SQM): "},
-                        ]}
+                        ]},
+                "WHSE_ADMIN_BOUNDARIES.EBC_REGIONAL_DISTRICTS_SP":
+                    {
+                        displayname: [{"key": "REGIONAL_DISTRICT_NAME", title: ""}],
+                        "map_popup": [{key: "REGIONAL_DISTRICT_ID", title: "District ID: "},
+                        ]
+                    },
+                "WHSE_TANTALIS.TA_PARK_ECORES_PA_SVW":
+                    {
+                        displayname: [{"key": "PROTECTED_LANDS_NAME", title: ""}],
+                        "map_popup": [{key: "PROTECTED_LANDS_DESIGNATION", title: "Designation: "},
+                            {key: "PARK_CLASS", title: "Class: "},
+                            {key: "ESTABLISHMENT_DATE", title: "Established: "},
+                        ]
+                    }
 
             },
             filterLayers: [
                 "WHSE_MINERAL_TENURE.GEOL_BEDROCK_UNIT_POLY_SVW",
+                "WHSE_ADMIN_BOUNDARIES.EBC_REGIONAL_DISTRICTS_SP",
+                "WHSE_TANTALIS.TA_PARK_ECORES_PA_SVW",
                 "c66518e2-10c6-11ec-adef-5254008afee6", /* Important Areas Resource layer */
                 "2336968c-1035-11ec-a3aa-5254008afee6", /* Fossil Site layer */
             ],

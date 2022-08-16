@@ -23,7 +23,11 @@
           "source": "bedrock-geology-source",
           "source-layer": "WHSE_MINERAL_TENURE.GEOL_BEDROCK_UNIT_POLY_SVW",
           "minzoom": 0,
-          "maxzoom": 20
+          "maxzoom": 20,
+          "paint": {
+            "line-color": "#bbbbbb",
+            "line-width": 2
+          }
         },
         {
           "id": "bedrock-geology-fill",
@@ -36,6 +40,20 @@
           "minzoom": 0,
           "maxzoom": 20,
           "source-layer": "WHSE_MINERAL_TENURE.GEOL_BEDROCK_UNIT_POLY_SVW"
+        },
+        {
+          "id": "bedrock-geology-symbol",
+          "type": "symbol",
+          "source": "bedrock-geology-source",
+          "source-layer": "WHSE_MINERAL_TENURE.GEOL_BEDROCK_UNIT_POLY_SVW",
+          "layout": {
+            "text-field": "{STRATIGRAPHIC_NAME}",
+            "text-font": ["Open Sans Italic","Arial Unicode MS Regular"],
+            "text-size": 12
+          },
+          "paint": {
+            "text-color": "#666666"
+          }
         }
       ],
       "isoverlay": true,
