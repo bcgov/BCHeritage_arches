@@ -23,7 +23,12 @@
           "source": "regional-district-boundaries-source",
           "source-layer": "WHSE_ADMIN_BOUNDARIES.EBC_REGIONAL_DISTRICTS_SP",
           "minzoom": 0,
-          "maxzoom": 20
+          "maxzoom": 20,
+          "paint": {
+            "line-color": "#7777aa",
+            "line-width": 3,
+            "line-offset": 2
+          }
         },
         {
           "id": "regional-district-boundaries-symbol",
@@ -37,7 +42,7 @@
             "text-size": 20
           },
           "paint": {
-            "text-color": "#666666"
+            "text-color": "#7777aa"
           }
         }
       ],

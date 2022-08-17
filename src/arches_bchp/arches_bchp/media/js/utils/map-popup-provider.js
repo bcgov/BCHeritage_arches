@@ -1,6 +1,6 @@
 define([
     'knockout',
-    'text!templates/views/components/toggle-map-popup.htm'
+    'text!templates/views/components/map_popup/toggle-map-popup.htm'
 ], function (ko, default_template) {
     var popupDataProvider = {
             layerConfigs: {
@@ -14,9 +14,19 @@ define([
                             {key: "PARCEL_STATUS", title: "Parcel Status: "},
                             {key: "PARCEL_START_DATE", title: "Parcel Start Date: "},
                             {key: "FEATURE_AREA_SQM", title: "Size (SQM): "},
-                        ]}
+                        ]},
+                "WHSE_ADMIN_BOUNDARIES.EBC_REGIONAL_DISTRICTS_SP":
+                    {
+                        displayname: [{"key": "REGIONAL_DISTRICT_NAME", title: ""}],
+                        "map_popup": [{key: "REGIONAL_DISTRICT_ID", title: "District ID: "},
+                        ]
+                    },
 
             },
+        filterLayers: [
+            "WHSE_ADMIN_BOUNDARIES.EBC_REGIONAL_DISTRICTS_SP",
+            /* "c66518e2-10c6-11ec-adef-5254008afee6", Important Areas Resource layer */
+        ],
 
             isFeatureClickable: function(feature, map){
                 // console.log("bchp.isFeatureClickable()")
@@ -31,6 +41,9 @@ define([
 
             getPopupTemplate: function(feature){
                 return default_template;
+            },
+            isSelectableAsFilter: function(feature) {
+                return popupDataProvider.filterLayers.indexOf(feature.sourceLayer) !== -1;
             },
 
             processData: function(dataFeatures) {
