@@ -1,0 +1,32 @@
+{
+  "name": "Cadastral ParcelMap",
+  "sources": {
+    "cadastral-vector-source": {
+      "type": "vector",
+      "tiles": [
+        "https://openmaps.gov.bc.ca/geo/pub/WHSE_CADASTRE.PMBC_PARCEL_FABRIC_POLY_SVW/ows?service=WMS&request=GetMap&layers=WHSE_CADASTRE.PMBC_PARCEL_FABRIC_POLY_SVW&styles=&format=pbf&transparent=true&version=1.1.1&height=512&width=512&srs=EPSG:3857&bbox={bbox-epsg-3857}"
+      ],
+      "tileSize": 512
+    }
+  },
+  "layers": [
+    {
+      "id": "cadastral-vector",
+      "type": "line",
+      "source": "cadastral-vector-source",
+      "source-layer": "WHSE_CADASTRE.PMBC_PARCEL_FABRIC_POLY_SVW",
+      "minzoom": 13
+    },
+    {
+      "id": "cadastral-vector-fill",
+      "type": "fill",
+      "source": "cadastral-vector-source",
+      "source-layer": "WHSE_CADASTRE.PMBC_PARCEL_FABRIC_POLY_SVW",
+      "minzoom": 13,
+      "paint": {
+        "fill-color": "#004400",
+        "fill-opacity": 0.1
+      }
+    }
+  ]
+}

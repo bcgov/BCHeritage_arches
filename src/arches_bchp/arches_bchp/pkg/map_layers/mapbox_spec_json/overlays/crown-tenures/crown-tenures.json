@@ -1,0 +1,32 @@
+{
+  "name": "Crown Tenures",
+  "sources": {
+    "crown-tenures-source": {
+      "type": "vector",
+      "tiles": [
+        "https://openmaps.gov.bc.ca/geo/pub/WHSE_TANTALIS.TA_CROWN_TENURES_SVW/ows?service=WMS&request=GetMap&layers=WHSE_TANTALIS.TA_CROWN_TENURES_SVW&styles=&format=pbf&transparent=true&version=1.1.1&height=512&width=512&srs=EPSG:3857&bbox={bbox-epsg-3857}"
+      ],
+      "tileSize": 512
+    }
+  },
+  "layers": [
+    {
+      "id": "crown-tenures",
+      "type": "line",
+      "source": "crown-tenures-source",
+      "source-layer": "WHSE_TANTALIS.TA_CROWN_TENURES_SVW"
+    },
+    {
+      "id": "crown-tenures-symbol",
+      "type": "symbol",
+      "source": "crown-tenures-source",
+      "source-layer": "WHSE_TANTALIS.TA_CROWN_TENURES_SVW",
+      "layout": {
+        "text-field": "{CROWN_LANDS_FILE}"
+      },
+      "paint": {
+        "text-color": "#333333"
+      }
+    }
+  ]
+}
