@@ -1,7 +1,9 @@
 define([
     'knockout',
-    'text!templates/views/components/map_popup/toggle-map-popup.htm'
-], function (ko, default_template) {
+    'underscore',
+    'text!templates/views/components/map_popup/toggle-map-popup.htm',
+    'text!templates/views/components/map_popup/edit-map-popup.htm'
+], function (ko, _, default_template, edit_popup) {
     var popupDataProvider = {
             layerConfigs: {
                 "WHSE_CADASTRE.PMBC_PARCEL_FABRIC_POLY_SVW":
@@ -66,6 +68,14 @@ define([
 
             isFeatureClickable: function(feature, map){
                 // console.log("bchp.isFeatureClickable()")
+                // console.log(`Context: ${map.context}`);
+                if (map.context === "resource-editor" &&
+                    feature.sourceLayer === "WHSE_CADASTRE.PMBC_PARCEL_FABRIC_POLY_SVW" ||
+                    !!feature.properties.resourceinstanceid
+                )
+                {
+                    return true;
+                }
                 const selectedFeatureIds = ko.unwrap(map.selectedFeatureIds);
                 const selectedTool = ko.unwrap(map.selectedTool);
                 if ((typeof selectedTool !== 'undefined' && selectedTool !== null) || selectedFeatureIds && selectedFeatureIds.length)
@@ -75,7 +85,9 @@ define([
                 return feature.properties.resourceinstanceid;
             },
 
-            getPopupTemplate: function(feature){
+            getPopupTemplate: function(features){
+                if (_.some(features, function(feature) {return feature.sourceLayer === "WHSE_CADASTRE.PMBC_PARCEL_FABRIC_POLY_SVW"}))
+                    return edit_popup;
                 return default_template;
             },
             isSelectableAsFilter: function(feature) {

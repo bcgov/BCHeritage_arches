@@ -572,11 +572,10 @@ define([
 
         self.selectFeature = function(feature) {
             try {
-                var geometry = JSON.parse(feature.properties.geojson);
                 var newFeature = {
                     "type": "Feature",
                     "properties": {},
-                    "geometry": geometry
+                    "geometry": feature.geometry
                 };
                 addSelectFeatures([newFeature]);
             } catch(e) {
