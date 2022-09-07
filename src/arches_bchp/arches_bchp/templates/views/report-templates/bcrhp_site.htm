@@ -1,6 +1,27 @@
 {% extends "views/report-templates/default.htm" %}
 {% load i18n %}
 
+{% block report_title_bar %}
+<!-- Report Title Bar -->
+<div class="relative report-title-bar">
+
+    <!-- BCRHP Title Block -->
+    <div class="report-toolbar-preview ep-form-toolbar">
+        <h4 class="report-toolbar-title"><span class="bc-report-title" data-bind="html: report.get('name')"></span> -
+            <span class="bc-report-title" data-bind="html: report.get('displayname') "></span></h4>
+
+        <!-- Tools -->
+        <div class="ep-form-toolbar-tools mar-no flex" style="position: relative; height: inherit">
+            <p class="report-print-date">{% trans "Report Date:" %} <span data-bind="text: reportDate"></span></p>
+            <div class="report-print-date" style="position: absolute; margin-top: 30px; margin-left: -11px;"
+                 data-bind="component: { name: 'views/components/simple-switch', params: {value: hideEmptyNodes, config:{ label: '{% trans " Hide Null Values " %}', subtitle: ''}}}">
+        </div>
+    </div>
+</div>
+</div>
+{% endblock report_title_bar %}
+
+
 {% block header %}
 <div>
     <!-- ko if: featureCount() > 0 || report.preview -->
@@ -11,6 +32,214 @@
     <!-- /ko -->
 </div>
 {% endblock header %}
+
+{% block body %}
+<!--ko if: hasProvisionalData() && (editorContext === false) -->
+<div class="report-provisional-flag">{% trans 'This resource has provisional edits (not displayed in this report) that
+    are pending review' %}
+</div>
+<!--/ko-->
+<!--ko if: hasProvisionalData() && (editorContext === true && report.userisreviewer === true) -->
+<div class="report-provisional-flag">{% trans 'This resource has provisional edits (not displayed in this report) that
+    are pending review' %}
+</div>
+<!--/ko-->
+<!--ko if: hasProvisionalData() && (editorContext === true && report.userisreviewer === false) -->
+<div class="report-provisional-flag">{% trans 'This resource has provisional edits that are pending review' %}</div>
+<!--/ko-->
+
+<div class="rp-report-section relative rp-report-section-root">
+    <div class="rp-report-section-title">
+        <!-- ko foreach: { data: report.cards, as: 'card' } -->
+        <!-- ko if: $parent.hideEmptyNodes() === false || card.tiles().length > 0 -->
+        <!-- ko if: $index() !== 0 -->
+        <hr class="rp-tile-separator"><!-- /ko -->
+        <div class="rp-card-section">
+            <!-- ko component: {
+                name: card.model.cardComponentLookup[card.model.component_id()].componentname,
+                params: {
+                    state: 'report',
+                    preview: $parent.report.preview,
+                    card: card,
+                    pageVm: {...$root, report: $parent.report},
+                    hideEmptyNodes: $parent.hideEmptyNodes
+                }
+            } --> <!-- /ko -->
+        </div>
+        <!-- /ko -->
+        <!-- /ko -->
+    </div>
+</div>
+{% endblock body %}
+
+{% block summary %}
+<div class="relative report-title-bar">
+
+    <!-- Title Block Summary -->
+    <div class="report-toolbar-preview ep-form-toolbar">
+        <h4 class="report-toolbar-title"><span class="bc-report-title" data-bind="text: report.get('name')"></span> -
+            <span class="bc-report-title" data-bind="html: report.get('displayname') "></span></h4>
+
+        <!-- Tools -->
+        <div class="ep-form-toolbar-tools mar-no flex">
+            <p class="report-print-date">{% trans "Report Date:" %} <span data-bind="text: reportDate"></span></p>
+        </div>
+    </div>
+</div>
+
+<div class="rp-report-container-preview">
+    <div class="rp-report-section relative rp-report-section-root">
+        <div class="rp-report-section-title">
+            <div class="rp-card-section">
+                <table>
+                    <tr>
+                        <td>
+                            <!-- ko let: { card: getCardWithName('Site Names') } -->
+                            <!-- ko let: { widget: getWidgetWithLabel(card, 'Name') } -->
+                            <!-- ko foreach: { data: card.tiles, as: 'tile' } -->
+                            <dl class="dl-horizontal" data-bind="css: {'provisional': ko.unwrap(tile.provisionaledits) !== null && tile.userisreviewer === false}">
+                                <!-- ko if: tileIndex() === 0 -->
+                                <dt data-bind="text: widget.label()"></dt>
+                                <!-- /ko -->
+                                <dd data-bind="component: {
+                                            name: widget.widgetLookup[widget.widget_id()].name,
+                                            params: {
+                                                tile: tile,
+                                                node: widget.node,
+                                                config: widget.config,
+                                                label: widget.label(),
+                                                value: tile.data[widget.attributes.node_id()],
+                                                state: 'display_value',
+                                            }
+                                        }, click: function(){console.log(card);}"></dd>
+                            </dl>
+                            <!-- /ko -->
+                            <!-- /ko -->
+                            <!-- /ko -->
+                        </td>
+
+                        <td>
+                            <!-- ko let: { card: getCardWithName('Borden Number') } -->
+                            <!-- ko let: { widget: getWidgetWithLabel(card, 'Borden Number') } -->
+                            <!-- ko foreach: { data: card.tiles, as: 'tile' } -->
+                            <dl class="dl-horizontal" data-bind="css: {'provisional': ko.unwrap(tile.provisionaledits) !== null && tile.userisreviewer === false}">
+                                <!-- ko if: tileIndex() === 0 -->
+                                <dt data-bind="text: widget.label()"></dt>
+                                <!-- /ko -->
+                                <dd data-bind="component: {
+                                            name: widget.widgetLookup[widget.widget_id()].name,
+                                            params: {
+                                                tile: tile,
+                                                node: widget.node,
+                                                config: widget.config,
+                                                label: widget.label(),
+                                                value: tile.data[widget.attributes.node_id()],
+                                                state: 'display_value',
+                                            }
+                                        }, click: function(){console.log(card);}"></dd>
+                            </dl>
+                            <!-- /ko -->
+                            <!-- /ko -->
+                            <!-- /ko -->
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <!--dl class="dl-horizontal" data-bind="css: {'provisional': ko.unwrap(tile.provisionaledits) !== null && tile.userisreviewer === false}"-->
+                            <dl class="dl-horizontal">
+                            <dt>Civic Address</dt>
+                            <dd>To Do</dd>
+                            </dl>
+                        </td>
+                        <td>
+                            <!-- ko let: { card: getCardWithName('BC Right') } -->
+                            <!-- ko let: { widget: getWidgetWithLabel(card, 'Registry Types') } -->
+                            <!-- ko foreach: { data: card.tiles, as: 'tile' } -->
+                            <dl class="dl-horizontal" data-bind="css: {'provisional': ko.unwrap(tile.provisionaledits) !== null && tile.userisreviewer === false}">
+                                <!-- ko if: tileIndex() === 0 -->
+                                <dt data-bind="text: widget.label()"></dt>
+                                <!-- /ko -->
+                                <dd data-bind="component: {
+                                            name: widget.widgetLookup[widget.widget_id()].name,
+                                            params: {
+                                                tile: tile,
+                                                node: widget.node,
+                                                config: widget.config,
+                                                label: widget.label(),
+                                                value: tile.data[widget.attributes.node_id()],
+                                                state: 'display_value',
+                                            }
+                                        }, click: function(){console.log(card);}"></dd>
+                            </dl>
+                            <!-- /ko -->
+                            <!-- /ko -->
+                            <!-- /ko -->
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                        </td>
+                        <td>
+                            <!-- ko let: { card: getCardWithName(['BC Right', 'Designation or Protection']) } -->
+                            <!-- ko let: { widget: getWidgetWithLabel(card, 'Authority') } -->
+                            <!-- ko foreach: { data: card.tiles, as: 'tile' } -->
+                            <dl class="dl-horizontal" data-bind="css: {'provisional': ko.unwrap(tile.provisionaledits) !== null && tile.userisreviewer === false}">
+                                <!-- ko if: tileIndex() === 0 -->
+                                <dt data-bind="text: widget.label()"></dt>
+                                <!-- /ko -->
+                                <dd data-bind="component: {
+                                            name: widget.widgetLookup[widget.widget_id()].name,
+                                            params: {
+                                                tile: tile,
+                                                node: widget.node,
+                                                config: widget.config,
+                                                label: widget.label(),
+                                                value: tile.data[widget.attributes.node_id()],
+                                                state: 'display_value',
+                                            }
+                                        }, click: function(){console.log(card);}"></dd>
+                            </dl>
+                            <!-- /ko -->
+                            <!-- /ko -->
+                            <!-- /ko -->
+                        </td>
+                    </tr>
+                    <tr>
+                        <td colspan="2">
+                            <!-- ko let: { card: getCardWithName('BC Statment of Significance') } -->
+                            <!-- ko let: { widget: getWidgetWithLabel(card, 'Significance Description') } -->
+                            <!-- ko foreach: { data: card.tiles, as: 'tile' } -->
+                            <dl class="dl-horizontal" data-bind="css: {'provisional': ko.unwrap(tile.provisionaledits) !== null && tile.userisreviewer === false}">
+                                <!-- ko if: tileIndex() === 0 -->
+                                <dt data-bind="text: widget.label()"></dt>
+                                <!-- /ko -->
+                                <!-- ko if: tileIndex() !== 0 -->
+                                <dt data-bind="text: tileIndex"></dt>
+                                <!-- /ko -->
+                                <dd data-bind="component: {
+                                            name: widget.widgetLookup[widget.widget_id()].name,
+                                            params: {
+                                                tile: tile,
+                                                node: widget.node,
+                                                config: widget.config,
+                                                label: 'hi',
+                                                displayfullvalue: true,
+                                                value: tile.data[widget.attributes.node_id()],
+                                                state: 'display_value',
+                                            }
+                                        }, click: function(){console.log(card);}"></dd>
+                            </dl>
+                            <!-- /ko -->
+                            <!-- /ko -->
+                            <!-- /ko -->
+                        </td>
+                    </tr>
+                </table>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock summary %}
 
 {% block header_form %}
 <!-- ko component: {

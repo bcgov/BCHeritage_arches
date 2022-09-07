@@ -147,7 +147,18 @@
                     "active": true,
                     "cardid": "1b623006-0d0f-11ed-98c2-5254008afee6",
                     "component_id": "f05e4d3a-53c1-11e8-b0ea-784f435179ea",
-                    "config": null,
+                    "config": {
+                        "groupedCardIds": [],
+                        "sortedWidgetIds": [
+                            "1b623f4c-0d0f-11ed-98c2-5254008afee6",
+                            "1b624e60-0d0f-11ed-98c2-5254008afee6",
+                            "1b625194-0d0f-11ed-98c2-5254008afee6",
+                            "1b624082-0d0f-11ed-98c2-5254008afee6",
+                            "1b62419a-0d0f-11ed-98c2-5254008afee6",
+                            "1b625414-0d0f-11ed-98c2-5254008afee6",
+                            "a1032cd8-1a66-11ed-a3cf-5254008afee6"
+                        ]
+                    },
                     "constraints": [],
                     "cssclass": "",
                     "description": "",
@@ -1310,7 +1321,9 @@
                 }
             ],
             "color": "rgba(178,25,25,1)",
-            "config": {},
+            "config": {
+                "basemap": "streets"
+            },
             "deploymentdate": null,
             "deploymentfile": null,
             "description": "",
@@ -3720,7 +3733,7 @@
             },
             "slug": null,
             "subtitle": "",
-            "template_id": "50000000-0000-0000-0000-000000000002",
+            "template_id": "50000000-0000-0000-0000-000000000005",
             "version": ""
         }
     ],
