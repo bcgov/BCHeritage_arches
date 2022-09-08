@@ -2,58 +2,65 @@
 {% load i18n %}
 
 {% block display_value %}
-  <!-- ko let: {widget: streetNumber()} -->
-  <div>
-  <span data-bind="component: {
-                                            name: streetNumber().widgetLookup[streetNumber().widget_id()].name,
-                                            params: {
-                                                tile: tile(),
-                                                node: streetNumber().node,
-                                                config: streetNumber().config,
-                                                label: streetNumber().label(),
-                                                value: tile().data[streetNumber().attributes.node_id()],
-                                                state: 'display_value',
-                                            }
-                                        }, click: function(){console.log(card);}">
-    </span>
-  <span data-bind="component: {
-                                            name: streetName().widgetLookup[streetName().widget_id()].name,
-                                            params: {
-                                                tile: tile(),
-                                                node: streetName().node,
-                                                config: streetName().config,
-                                                label: streetName().label(),
-                                                value: tile().data[streetName().attributes.node_id()],
-                                                state: 'display_value',
-                                            }
-                                        }, click: function(){console.log(card);}">
-    </span>
-  </div>
-  <div>
-  <span data-bind="component: {
-                                            name: city().widgetLookup[city().widget_id()].name,
-                                            params: {
-                                                tile: tile(),
-                                                node: city().node,
-                                                config: city().config,
-                                                label: city().label(),
-                                                value: tile().data[city().attributes.node_id()],
-                                                state: 'display_value',
-                                            }
-                                        }, click: function(){console.log(card);}">
-    </span>,
+<div>
+    <!-- ko let: {addressPart: streetNumber()} -->
     <span data-bind="component: {
-                                            name: province().widgetLookup[province().widget_id()].name,
+                                            name: addressPart.widgetLookup[addressPart.widget_id()].name,
                                             params: {
                                                 tile: tile(),
-                                                node: province().node,
-                                                config: province().config,
-                                                label: province().label(),
-                                                value: tile().data[province().attributes.node_id()],
+                                                node: addressPart.node,
+                                                config: addressPart.config,
+                                                label: addressPart.label(),
+                                                value: tile().data[addressPart.attributes.node_id()],
                                                 state: 'display_value',
                                             }
                                         }, click: function(){console.log(card);}">
     </span>
-  </div>
     <!-- /ko -->
-    {% endblock display_value %}
+    <!-- ko let: {addressPart: streetName()} -->
+    <span data-bind="component: {
+                                            name: addressPart.widgetLookup[addressPart.widget_id()].name,
+                                            params: {
+                                                tile: tile(),
+                                                node: addressPart.node,
+                                                config: addressPart.config,
+                                                label: addressPart.label(),
+                                                value: tile().data[addressPart.attributes.node_id()],
+                                                state: 'display_value',
+                                            }
+                                        }, click: function(){console.log(card);}">
+    </span>
+    <!-- /ko -->
+</div>
+<div>
+    <!-- ko let: {addressPart: city()} -->
+    <span data-bind="component: {
+                                            name: addressPart.widgetLookup[addressPart.widget_id()].name,
+                                            params: {
+                                                tile: tile(),
+                                                node: addressPart.node,
+                                                config: addressPart.config,
+                                                label: addressPart.label(),
+                                                value: tile().data[addressPart.attributes.node_id()],
+                                                state: 'display_value',
+                                            }
+                                        }, click: function(){console.log(card);}">
+    </span>
+    <!-- /ko -->
+    ,
+    <!-- ko let: {addressPart: province()} -->
+    <span data-bind="component: {
+                                            name: addressPart.widgetLookup[addressPart.widget_id()].name,
+                                            params: {
+                                                tile: tile(),
+                                                node: addressPart.node,
+                                                config: addressPart.config,
+                                                label: addressPart.label(),
+                                                value: tile().data[addressPart.attributes.node_id()],
+                                                state: 'display_value',
+                                            }
+                                        }, click: function(){console.log(card);}">
+    </span>
+    <!-- /ko -->
+</div>
+{% endblock display_value %}

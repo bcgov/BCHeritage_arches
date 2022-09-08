@@ -91,7 +91,7 @@
     <div class="rp-report-section relative rp-report-section-root">
         <div class="rp-report-section-title">
             <div class="rp-card-section">
-                <table style="margin-right: 60px; margin-left: -50px">
+                <table style="margin-right: 200px; margin-left: -50px">
                     <tr>
                         <td>
                             <!-- ko let: { card: getCardWithName('Site Names') } -->
@@ -149,13 +149,12 @@
                             <!-- ko let: { widget: getWidgetWithLabel(card, 'Borden Number') } -->
                             <!-- ko foreach: { data: card.tiles, as: 'tile' } -->
                             <dl class="dl-horizontal" data-bind="css: {'provisional': ko.unwrap(tile.provisionaledits) !== null && tile.userisreviewer === false}">
-                            <dt>Civic Address</dt>
+                            <dt data-bind="text: 'Civic Address '+($index()+1)">Civic Address</dt>
                                 <dd data-bind="component: {
                                             name: 'civic-address-widget',
                                             params: {
                                                 tile: tile,
                                                 card: card,
-                                                label: 'hi',
                                                 value: tile.data,
                                                 state: 'display_value',
                                             }
