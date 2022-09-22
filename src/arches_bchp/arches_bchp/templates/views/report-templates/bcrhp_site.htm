@@ -14,7 +14,7 @@
         <div class="ep-form-toolbar-tools mar-no flex" style="position: relative; height: inherit">
             <p class="report-print-date">{% trans "Report Date:" %} <span data-bind="text: reportDate"></span></p>
             <div class="report-print-date" style="position: absolute; margin-top: 30px; margin-left: -11px;"
-                 data-bind="component: { name: 'views/components/simple-switch', params: {value: hideEmptyNodes, config:{ label: '{% trans " Hide Null Values " %}', subtitle: ''}}}">
+                 data-bind="component: { name: 'views/components/simple-switch', params: {value: hideEmptyNodes, config:{ label: '{% trans "Hide Null Values" %}', subtitle: ''}}}">
         </div>
     </div>
 </div>
@@ -91,13 +91,14 @@
     <div class="rp-report-section relative rp-report-section-root">
         <div class="rp-report-section-title">
             <div class="rp-card-section">
-                <table style="margin-right: 200px; margin-left: -50px">
+                <div style="float: left; width: 75%">
+                <table class="bc-summary-table" >
                     <tr>
                         <td>
                             <!-- ko let: { card: getCardWithName('Site Names') } -->
                             <!-- ko let: { widget: getWidgetWithLabel(card, 'Name') } -->
                             <!-- ko foreach: { data: card.tiles, as: 'tile' } -->
-                            <dl class="dl-horizontal" data-bind="css: {'provisional': ko.unwrap(tile.provisionaledits) !== null && tile.userisreviewer === false}">
+                            <dl class="dl-horizontal dl-horizontal-bc" data-bind="css: {'provisional': ko.unwrap(tile.provisionaledits) !== null && tile.userisreviewer === false}">
                                 <!-- ko if: tileIndex() === 0 -->
                                 <dt data-bind="text: widget.label()"></dt>
                                 <!-- /ko -->
@@ -122,7 +123,7 @@
                             <!-- ko let: { card: getCardWithName('Borden Number') } -->
                             <!-- ko let: { widget: getWidgetWithLabel(card, 'Borden Number') } -->
                             <!-- ko foreach: { data: card.tiles, as: 'tile' } -->
-                            <dl class="dl-horizontal" data-bind="css: {'provisional': ko.unwrap(tile.provisionaledits) !== null && tile.userisreviewer === false}">
+                            <dl class="dl-horizontal dl-horizontal-bc" data-bind="css: {'provisional': ko.unwrap(tile.provisionaledits) !== null && tile.userisreviewer === false}">
                                 <!-- ko if: tileIndex() === 0 -->
                                 <dt data-bind="text: widget.label()"></dt>
                                 <!-- /ko -->
@@ -148,7 +149,7 @@
                             <!-- ko let: { card: getCardWithName(['BC Heritage Resource Place', 'BC Property Address']) } -->
                             <!-- ko let: { widget: getWidgetWithLabel(card, 'Borden Number') } -->
                             <!-- ko foreach: { data: card.tiles, as: 'tile' } -->
-                            <dl class="dl-horizontal" data-bind="css: {'provisional': ko.unwrap(tile.provisionaledits) !== null && tile.userisreviewer === false}">
+                            <dl class="dl-horizontal dl-horizontal-bc" data-bind="css: {'provisional': ko.unwrap(tile.provisionaledits) !== null && tile.userisreviewer === false}">
                             <dt data-bind="text: 'Civic Address '+($index()+1)">Civic Address</dt>
                                 <dd data-bind="component: {
                                             name: 'civic-address-widget',
@@ -168,7 +169,7 @@
                             <!-- ko let: { card: getCardWithName('BC Right') } -->
                             <!-- ko let: { widget: getWidgetWithLabel(card, 'Registry Types') } -->
                             <!-- ko foreach: { data: card.tiles, as: 'tile' } -->
-                            <dl class="dl-horizontal" data-bind="css: {'provisional': ko.unwrap(tile.provisionaledits) !== null && tile.userisreviewer === false}">
+                            <dl class="dl-horizontal dl-horizontal-bc" data-bind="css: {'provisional': ko.unwrap(tile.provisionaledits) !== null && tile.userisreviewer === false}">
                                 <!-- ko if: tileIndex() === 0 -->
                                 <dt data-bind="text: widget.label()"></dt>
                                 <!-- /ko -->
@@ -196,7 +197,7 @@
                             <!-- ko let: { card: getCardWithName(['BC Right', 'Designation or Protection']) } -->
                             <!-- ko let: { widget: getWidgetWithLabel(card, 'Authority') } -->
                             <!-- ko foreach: { data: card.tiles, as: 'tile' } -->
-                            <dl class="dl-horizontal" data-bind="css: {'provisional': ko.unwrap(tile.provisionaledits) !== null && tile.userisreviewer === false}">
+                            <dl class="dl-horizontal dl-horizontal-bc" data-bind="css: {'provisional': ko.unwrap(tile.provisionaledits) !== null && tile.userisreviewer === false}">
                                 <!-- ko if: tileIndex() === 0 -->
                                 <dt data-bind="text: widget.label()"></dt>
                                 <!-- /ko -->
@@ -218,11 +219,11 @@
                         </td>
                     </tr>
                     <tr>
-                        <td colspan="2">
+                        <td class="bc-top-offset" colspan="2">
                             <!-- ko let: { card: getCardWithName('BC Statment of Significance') } -->
                             <!-- ko let: { widget: getWidgetWithLabel(card, 'Significance Description') } -->
                             <!-- ko foreach: { data: card.tiles, as: 'tile' } -->
-                            <dl class="dl-horizontal" data-bind="css: {'provisional': ko.unwrap(tile.provisionaledits) !== null && tile.userisreviewer === false}">
+                            <dl class="dl-horizontal dl-horizontal-bc" data-bind="css: {'provisional': ko.unwrap(tile.provisionaledits) !== null && tile.userisreviewer === false}">
                                 <!-- ko if: tileIndex() === 0 -->
                                 <dt data-bind="text: widget.label()"></dt>
                                 <!-- /ko -->
@@ -235,7 +236,6 @@
                                                 tile: tile,
                                                 node: widget.node,
                                                 config: widget.config,
-                                                label: 'hi',
                                                 displayfullvalue: true,
                                                 value: tile.data[widget.attributes.node_id()],
                                                 state: 'display_value',
@@ -248,6 +248,31 @@
                         </td>
                     </tr>
                 </table>
+                </div>
+                <div class="bc-details-images">
+                <!-- ko let: { mycard: getCardWithName('Site Images') } -->
+                <!-- ko let: { mywidget: getWidgetWithLabel(mycard, 'Site Image') } -->
+                <dl class="dl-vertical">
+                    <dt></dt>
+                    <dd>
+                        <!-- ko foreach: { data: mycard.tiles, as: 'mytile' } -->
+                        <span data-bind="component: {
+                                            name: 'photo-widget',
+                                            params: {
+                                                tile: mytile,
+                                                node: mywidget.node,
+                                                config: mywidget.config,
+                                                value: mytile.data[mywidget.attributes.node_id()],
+                                                state: 'display_value',
+                                            }
+                                        }, click: function(){console.log(mycard);}"></span>
+                        <!-- /ko -->
+
+                    </dd>
+                </dl>
+                <!-- /ko -->
+                <!-- /ko -->
+                </div>
             </div>
         </div>
     </div>

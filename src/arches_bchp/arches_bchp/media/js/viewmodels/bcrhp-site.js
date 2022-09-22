@@ -9,8 +9,6 @@ define([
 ], function($, _, ko, koMapping, arches, MapReportViewModel) {
     return function(params) {
         var self = this;
-        var summaryCardNames = ["Site Names", "Borden Number" ];
-        var summaryCardWidgets = {"Site Names": ["name"], "Borden Number": ["borden_number"] };
 
         MapReportViewModel.apply(this, [params]);
         this.isSummaryCard = function(cardName) {
@@ -57,26 +55,5 @@ define([
             return null;
         };
 
-        this.hi = ko.observable("hi");
-        this.summaryCards = ko.computed(function(){
-            let summaryCardList = [];
-            let findFunction = this.getCardWithName;
-            summaryCardNames.forEach(function(cardName)
-            {
-                let card = self.getCardWithName(cardName);
-                if (!!card)
-                {
-                    summaryCardList.push(card);
-                }
-            });
-            return summaryCardList;
-            /*
-            let allCards = this.report.cards;
-            let summaryCards = _.filter(allCards, function(card) {
-                return summaryCardNames.indexOf(card.model.name()) > 0;
-            });
-            return summaryCards;
-             */
-        }, this);
     };
 });
