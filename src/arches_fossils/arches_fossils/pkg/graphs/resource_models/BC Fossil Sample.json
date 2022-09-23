@@ -144,7 +144,7 @@
                     "helptext": null,
                     "helptitle": null,
                     "instructions": null,
-                    "is_editable": true,
+                    "is_editable": false,
                     "name": "Temporal Assessment",
                     "nodegroup_id": "45eeaf6e-9fb1-11ec-9db6-5254008afee6",
                     "sortorder": 1,
@@ -285,7 +285,7 @@
                     "helptext": null,
                     "helptitle": null,
                     "instructions": "Used to record text descriptions associated with the storage information.",
-                    "is_editable": false,
+                    "is_editable": true,
                     "name": "Storage Notes",
                     "nodegroup_id": "d0526888-d168-11ec-8fe4-5254008afee6",
                     "sortorder": null,
@@ -794,6 +794,15 @@
                 },
                 {
                     "description": null,
+                    "domainnode_id": "45eeaf6e-9fb1-11ec-9db6-5254008afee6",
+                    "edgeid": "3c0f16ac-1680-4424-8a57-a709fa3538dd",
+                    "graph_id": "b53b6850-1c83-11ec-a9a2-5254008afee6",
+                    "name": null,
+                    "ontologyproperty": "http://www.cidoc-crm.org/cidoc-crm/P116_starts",
+                    "rangenode_id": "7ae3c9f0-03d1-11ed-ae89-5254008afee6"
+                },
+                {
+                    "description": null,
                     "domainnode_id": "b53b5bbc-1c83-11ec-a9a2-5254008afee6",
                     "edgeid": "3faa657a-1c86-11ec-967b-5254008afee6",
                     "graph_id": "b53b6850-1c83-11ec-a9a2-5254008afee6",
@@ -1028,6 +1037,15 @@
                 },
                 {
                     "description": null,
+                    "domainnode_id": "45eeaf6e-9fb1-11ec-9db6-5254008afee6",
+                    "edgeid": "a68a2f46-f73e-48fc-8df6-0c05925e3a71",
+                    "graph_id": "b53b6850-1c83-11ec-a9a2-5254008afee6",
+                    "name": null,
+                    "ontologyproperty": "http://www.cidoc-crm.org/cidoc-crm/P116_starts",
+                    "rangenode_id": "65b5f170-03d1-11ed-aaa6-5254008afee6"
+                },
+                {
+                    "description": null,
                     "domainnode_id": "7d4ecb62-9fe1-11ec-8d99-5254008afee6",
                     "edgeid": "b5547e6e-9fe4-11ec-89bc-5254008afee6",
                     "graph_id": "b53b6850-1c83-11ec-a9a2-5254008afee6",
@@ -1178,6 +1196,15 @@
                     "name": null,
                     "ontologyproperty": "http://www.cidoc-crm.org/cidoc-crm/P16_used_specific_object",
                     "rangenode_id": "e83bb552-9fe6-11ec-9993-5254008afee6"
+                },
+                {
+                    "description": null,
+                    "domainnode_id": "45eeaf6e-9fb1-11ec-9db6-5254008afee6",
+                    "edgeid": "eae34928-5ffa-4d89-ab17-6970b01ab970",
+                    "graph_id": "b53b6850-1c83-11ec-a9a2-5254008afee6",
+                    "name": null,
+                    "ontologyproperty": "http://www.cidoc-crm.org/cidoc-crm/P116_starts",
+                    "rangenode_id": "86e1b7da-03d1-11ed-b472-5254008afee6"
                 }
             ],
             "functions_x_graphs": [
@@ -1465,7 +1492,7 @@
                     "nodeid": "45eebd6a-9fb1-11ec-9db6-5254008afee6",
                     "ontologyclass": "http://www.cidoc-crm.org/cidoc-crm/E18_Physical_Thing",
                     "parentproperty": "http://www.cidoc-crm.org/cidoc-crm/P92_brought_into_existence",
-                    "sortorder": 0
+                    "sortorder": 5
                 },
                 {
                     "alias": "max_start_date_unit",
@@ -1503,7 +1530,7 @@
                     "nodeid": "45eec0b2-9fb1-11ec-9db6-5254008afee6",
                     "ontologyclass": "http://www.cidoc-crm.org/cidoc-crm/E18_Physical_Thing",
                     "parentproperty": "http://www.cidoc-crm.org/cidoc-crm/P92_brought_into_existence",
-                    "sortorder": 0
+                    "sortorder": 4
                 },
                 {
                     "alias": "geological_assessment",
@@ -1696,6 +1723,25 @@
                     "sortorder": 0
                 },
                 {
+                    "alias": "era",
+                    "config": null,
+                    "datatype": "string",
+                    "description": null,
+                    "exportable": false,
+                    "fieldname": null,
+                    "graph_id": "b53b6850-1c83-11ec-a9a2-5254008afee6",
+                    "is_collector": false,
+                    "isrequired": false,
+                    "issearchable": true,
+                    "istopnode": false,
+                    "name": "Era",
+                    "nodegroup_id": "45eeaf6e-9fb1-11ec-9db6-5254008afee6",
+                    "nodeid": "65b5f170-03d1-11ed-aaa6-5254008afee6",
+                    "ontologyclass": "http://www.cidoc-crm.org/cidoc-crm/E63_Beginning_of_Existence",
+                    "parentproperty": "http://www.cidoc-crm.org/cidoc-crm/P116_starts",
+                    "sortorder": 0
+                },
+                {
                     "alias": "classification_uncertain",
                     "config": {
                         "falseLabel": "No",
@@ -1715,6 +1761,25 @@
                     "nodeid": "72bb8338-e353-11ec-9e3c-5254008afee6",
                     "ontologyclass": "http://www.cidoc-crm.org/cidoc-crm/E13_Attribute_Assignment",
                     "parentproperty": "http://www.cidoc-crm.org/cidoc-crm/P140i_was_attributed_by",
+                    "sortorder": 0
+                },
+                {
+                    "alias": "eon",
+                    "config": null,
+                    "datatype": "string",
+                    "description": null,
+                    "exportable": false,
+                    "fieldname": null,
+                    "graph_id": "b53b6850-1c83-11ec-a9a2-5254008afee6",
+                    "is_collector": false,
+                    "isrequired": false,
+                    "issearchable": true,
+                    "istopnode": false,
+                    "name": "Eon",
+                    "nodegroup_id": "45eeaf6e-9fb1-11ec-9db6-5254008afee6",
+                    "nodeid": "7ae3c9f0-03d1-11ed-ae89-5254008afee6",
+                    "ontologyclass": "http://www.cidoc-crm.org/cidoc-crm/E63_Beginning_of_Existence",
+                    "parentproperty": "http://www.cidoc-crm.org/cidoc-crm/P116_starts",
                     "sortorder": 0
                 },
                 {
@@ -1775,6 +1840,25 @@
                     "nodeid": "84b85dca-9fe4-11ec-9db6-5254008afee6",
                     "ontologyclass": "http://www.cidoc-crm.org/cidoc-crm/E65_Creation",
                     "parentproperty": "http://www.cidoc-crm.org/cidoc-crm/P117_occurs_during",
+                    "sortorder": 0
+                },
+                {
+                    "alias": "period",
+                    "config": null,
+                    "datatype": "string",
+                    "description": null,
+                    "exportable": false,
+                    "fieldname": null,
+                    "graph_id": "b53b6850-1c83-11ec-a9a2-5254008afee6",
+                    "is_collector": false,
+                    "isrequired": false,
+                    "issearchable": true,
+                    "istopnode": false,
+                    "name": "Period",
+                    "nodegroup_id": "45eeaf6e-9fb1-11ec-9db6-5254008afee6",
+                    "nodeid": "86e1b7da-03d1-11ed-b472-5254008afee6",
+                    "ontologyclass": "http://www.cidoc-crm.org/cidoc-crm/E63_Beginning_of_Existence",
+                    "parentproperty": "http://www.cidoc-crm.org/cidoc-crm/P116_starts",
                     "sortorder": 0
                 },
                 {
@@ -2057,7 +2141,7 @@
                 {
                     "alias": "storage_note_type",
                     "config": {
-                        "rdmCollection": "33eb1163-f29f-4dba-9d51-d191574dfda2"
+                        "rdmCollection": "8d33ccb2-9fca-4d3b-bf07-dd0f00adb52d"
                     },
                     "datatype": "concept",
                     "description": null,

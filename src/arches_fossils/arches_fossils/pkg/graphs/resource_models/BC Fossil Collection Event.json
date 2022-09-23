@@ -29,7 +29,7 @@
                     "helptext": null,
                     "helptitle": null,
                     "instructions": null,
-                    "is_editable": true,
+                    "is_editable": false,
                     "name": "Fossils Collected",
                     "nodegroup_id": "5e4b75ba-a079-11ec-bc6e-5254008afee6",
                     "sortorder": 3,
@@ -48,7 +48,7 @@
                     "helptext": null,
                     "helptitle": null,
                     "instructions": null,
-                    "is_editable": true,
+                    "is_editable": false,
                     "name": "NTS Mapsheet Number",
                     "nodegroup_id": "692d8456-9c1d-11ec-a5e5-5254008afee6",
                     "sortorder": 5,
@@ -67,7 +67,7 @@
                     "helptext": null,
                     "helptitle": null,
                     "instructions": "Define the spatial location.",
-                    "is_editable": true,
+                    "is_editable": false,
                     "name": "Spatial Location",
                     "nodegroup_id": "692d8938-9c1d-11ec-a5e5-5254008afee6",
                     "sortorder": 2,
@@ -86,7 +86,7 @@
                     "helptext": null,
                     "helptitle": null,
                     "instructions": "Describe the location of the resource.",
-                    "is_editable": true,
+                    "is_editable": false,
                     "name": "Location Description",
                     "nodegroup_id": "692d8e06-9c1d-11ec-a5e5-5254008afee6",
                     "sortorder": 1,
@@ -112,7 +112,7 @@
                     "helptext": null,
                     "helptitle": null,
                     "instructions": null,
-                    "is_editable": true,
+                    "is_editable": false,
                     "name": "BC Fossil Site Location",
                     "nodegroup_id": "692d9c2a-9c1d-11ec-a5e5-5254008afee6",
                     "sortorder": 0,
@@ -138,7 +138,7 @@
                     "helptext": null,
                     "helptitle": null,
                     "instructions": "Used to record text descriptions associated with a resource. Where appropriate different types of description may be recorded.",
-                    "is_editable": true,
+                    "is_editable": false,
                     "name": "Collection Notes",
                     "nodegroup_id": "9207c3fe-ab96-11ec-87fd-5254008afee6",
                     "sortorder": null,
@@ -170,7 +170,7 @@
                     "helptext": null,
                     "helptitle": null,
                     "instructions": null,
-                    "is_editable": true,
+                    "is_editable": false,
                     "name": "Collectors",
                     "nodegroup_id": "b7940db0-9c20-11ec-9b9a-5254008afee6",
                     "sortorder": 2,
@@ -202,7 +202,7 @@
                     "helptext": null,
                     "helptitle": null,
                     "instructions": null,
-                    "is_editable": true,
+                    "is_editable": false,
                     "name": "Collection Years",
                     "nodegroup_id": "ebc4f8e8-a07a-11ec-8bc4-5254008afee6",
                     "sortorder": 1,
@@ -605,8 +605,9 @@
                                 "delimiter": "<br>",
                                 "first_only": false,
                                 "node_ids": [
-                                    "b7940db0-9c20-11ec-9b9a-5254008afee6",
-                                    "692da3b4-9c1d-11ec-a5e5-5254008afee6"
+                                    "692da3b4-9c1d-11ec-a5e5-5254008afee6",
+                                    "692da79c-9c1d-11ec-a5e5-5254008afee6",
+                                    "5e4b75ba-a079-11ec-bc6e-5254008afee6"
                                 ],
                                 "show_name": true,
                                 "type": "description"
@@ -615,7 +616,8 @@
                                 "delimiter": "<br>",
                                 "first_only": false,
                                 "node_ids": [
-                                    "b7940db0-9c20-11ec-9b9a-5254008afee6",
+                                    "692da79c-9c1d-11ec-a5e5-5254008afee6",
+                                    "5e4b75ba-a079-11ec-bc6e-5254008afee6",
                                     "692da3b4-9c1d-11ec-a5e5-5254008afee6"
                                 ],
                                 "show_name": true,
@@ -623,7 +625,11 @@
                             },
                             "name": {
                                 "first_only": true,
-                                "node_ids": [],
+                                "node_ids": [
+                                    "328a4e2c-a07b-11ec-959f-5254008afee6",
+                                    "0bbd0096-a07b-11ec-855d-5254008afee6",
+                                    "263d0df0-f2ef-11ec-8e30-5254008afee6"
+                                ],
                                 "show_name": false,
                                 "type": "name"
                             }
@@ -633,12 +639,12 @@
                     },
                     "function_id": "60000000-0000-0000-0000-000000001001",
                     "graph_id": "df3ee1ae-9c1c-11ec-964d-5254008afee6",
-                    "id": "cf6a9da8-f2ee-11ec-a92d-5254008afee6"
+                    "id": "2202a0ea-f2f6-11ec-9f52-5254008afee6"
                 }
             ],
             "graphid": "df3ee1ae-9c1c-11ec-964d-5254008afee6",
             "iconclass": "fa fa-suitcase",
-            "is_editable": true,
+            "is_editable": false,
             "isactive": true,
             "isresource": true,
             "jsonldcontext": null,
@@ -702,7 +708,7 @@
                     "datatype": "date",
                     "description": null,
                     "exportable": true,
-                    "fieldname": null,
+                    "fieldname": "collstyr",
                     "graph_id": "df3ee1ae-9c1c-11ec-964d-5254008afee6",
                     "is_collector": false,
                     "isrequired": true,
@@ -742,7 +748,7 @@
                     "datatype": "date",
                     "description": null,
                     "exportable": true,
-                    "fieldname": null,
+                    "fieldname": "collendyr",
                     "graph_id": "df3ee1ae-9c1c-11ec-964d-5254008afee6",
                     "is_collector": false,
                     "isrequired": false,
@@ -1004,7 +1010,7 @@
                     "datatype": "string",
                     "description": null,
                     "exportable": true,
-                    "fieldname": null,
+                    "fieldname": "note",
                     "graph_id": "df3ee1ae-9c1c-11ec-964d-5254008afee6",
                     "is_collector": false,
                     "isrequired": false,
@@ -1025,7 +1031,7 @@
                     "datatype": "concept",
                     "description": null,
                     "exportable": true,
-                    "fieldname": null,
+                    "fieldname": "notetyp",
                     "graph_id": "df3ee1ae-9c1c-11ec-964d-5254008afee6",
                     "is_collector": false,
                     "isrequired": false,
@@ -1072,7 +1078,7 @@
                     "datatype": "resource-instance-list",
                     "description": null,
                     "exportable": true,
-                    "fieldname": null,
+                    "fieldname": "collctrs",
                     "graph_id": "df3ee1ae-9c1c-11ec-964d-5254008afee6",
                     "is_collector": true,
                     "isrequired": false,
@@ -1153,7 +1159,7 @@
     ],
     "metadata": {
         "db": "PostgreSQL 12.6 on x86_64-pc-linux-gnu, compiled by gcc (GCC) 4.8.5 20150623 (Red Hat 4.8.5-44), 64-bit",
-        "git hash": "ad9a648 2022-06-14 13:05:17 -0700",
+        "git hash": "9a077ea 2022-06-27 16:40:13 -0700",
         "os": "Linux",
         "os version": "3.10.0-1127.el7.x86_64"
     }

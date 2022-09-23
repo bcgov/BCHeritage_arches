@@ -2,6 +2,90 @@
     width: 100%;
 }
 
+.hover-feature-expand {
+    text-align: right;
+}
+
 .workbench-card-sidepanel-body {
     height: 100%;
 }
+
+.search-listing-body {
+    overflow-y: scroll;
+}
+
+.bc-report-title {
+    display: inline-block;
+    vertical-align: top;
+}
+
+.ep-graph-title-icon {
+    vertical-align: top;
+}
+.ep-graph-title {
+    font-size: 1.4em;
+}
+.jstree-anchor {
+    height: 100% !important;
+}
+
+
+
+/* Rules for BCRHP Details panel */
+table.bc-summary-table td {
+    vertical-align: top;
+}
+
+.bc-top-offset {
+    padding-top: 25px;
+}
+
+.bc-details-images {
+    float: right;
+    margin-right: 25px;
+}
+
+.bc-top-offset {
+    padding-top: 50px;
+}
+
+.bc-details-images {
+    float: right;
+    margin-right: 25px;
+}
+
+@media (min-width: 1366px)
+{
+    .dl-horizontal dd {
+        margin-left: 170px !important;
+    }
+    .dl-horizontal dt {
+        width: 150px !important;
+    }
+    .dl-horizontal dt {
+        width: 150px !important;
+    }
+    .bc-details-images {
+        margin-right: 25px;
+    }
+
+}
+@media (min-width: 768px)
+{
+    .dl-horizontal dd {
+        margin-left: 170px !important;
+    }
+    .dl-horizontal dt {
+        width: 150px !important;
+    }
+    .dl-horizontal dt {
+        width: 150px !important;
+    }
+    .bc-details-images {
+        margin-right: 5px;
+    }
+
+}
+
+
+

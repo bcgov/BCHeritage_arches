@@ -1,7 +1,8 @@
 define([
+    'jquery',
     'knockout',
     'arches',
-], function (ko , arches) {
+], function ($, ko , arches) {
     var mapFilterUtils = {
         WFS_URL: "https://openmaps.gov.bc.ca/geo/ows?service=WFS&version=1.0.0&request=GetFeature"+
             "&typeNames={layer}&maxFeatures=100&outputFormat=application%2Fjson" +
@@ -21,14 +22,14 @@ define([
                 {
                     async: false,
                     dataType: "json"
-                }).success(function(data)
+                }).done(function(data)
                 {
                     console.log("Got response: "+JSON.stringify(data));
                     geometry = data.features[0];
                     geometry.url = wmfUrl;
                     console.log("Got geometry: "+JSON.stringify(geometry));
                 }
-            ).error(function(jqXHR, textStatus, errorThrown){
+            ).fail(function(jqXHR, textStatus, errorThrown){
                 console.log("Unable to get geometry: "+textStatus);
             });
             return geometry;

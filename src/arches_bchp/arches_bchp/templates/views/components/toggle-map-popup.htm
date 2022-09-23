@@ -18,7 +18,7 @@
     <div style="display: flex;">
         <div data-bind="visible: $parent.popupFeatures.length > 1, click: function(){$parent.advanceFeature('left')}" class="hover-feature-nav-left"><i class="fa fa-angle-left"></i></div>
         <div data-bind="visible: $parent.popupFeatures.length > 1, click: function(){$parent.advanceFeature('right')}" class="hover-feature-nav-right"><i class="fa fa-angle-right"></i></div>
-        <div class="hover-feature-title" data-bind="text: displayname"></div>
+        <div class="hover-feature-title" data-bind="html: displayname"></div>
     </div>
     {% endblock title %}
 </div>

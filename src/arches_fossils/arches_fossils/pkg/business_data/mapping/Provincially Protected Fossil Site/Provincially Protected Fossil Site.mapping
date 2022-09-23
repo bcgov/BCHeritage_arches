@@ -1,0 +1,179 @@
+{
+    "resource_model_id": "dd19a93a-0202-11ed-a511-0050568377a0",
+    "resource_model_name": "Provincially Protected Fossil Site",
+    "nodes": [
+        {
+            "arches_nodeid": "dd1a1d16-0202-11ed-a511-0050568377a0",
+            "arches_node_name": "Administrative Subdivision Name",
+            "file_field_name": "Administrative Subdivision Name",
+            "data_type": "string",
+            "export": true
+        },
+        {
+            "arches_nodeid": "dd1a1ff0-0202-11ed-a511-0050568377a0",
+            "arches_node_name": "Administrative Subdivision Type",
+            "file_field_name": "Administrative Subdivision Type",
+            "data_type": "concept",
+            "concept_export_value": "label",
+            "export": true
+        },
+        {
+            "arches_nodeid": "dd19f4b2-0202-11ed-a511-0050568377a0",
+            "arches_node_name": "Collection Events",
+            "file_field_name": "Collection Events",
+            "data_type": "resource-instance-list",
+            "export": true
+        },
+        {
+            "arches_nodeid": "dd1a1730-0202-11ed-a511-0050568377a0",
+            "arches_node_name": "Description",
+            "file_field_name": "Description",
+            "data_type": "string",
+            "export": true
+        },
+        {
+            "arches_nodeid": "dd1a19c4-0202-11ed-a511-0050568377a0",
+            "arches_node_name": "Description Type",
+            "file_field_name": "Description Type",
+            "data_type": "concept",
+            "concept_export_value": "label",
+            "export": true
+        },
+        {
+            "arches_nodeid": "dd1a2dce-0202-11ed-a511-0050568377a0",
+            "arches_node_name": "Detailed Location",
+            "file_field_name": "Detailed Location",
+            "data_type": "string",
+            "export": true
+        },
+        {
+            "arches_nodeid": "dd19eecc-0202-11ed-a511-0050568377a0",
+            "arches_node_name": "Geographical Name",
+            "file_field_name": "Geographical Name",
+            "data_type": "string",
+            "export": true
+        },
+        {
+            "arches_nodeid": "dd1a14e2-0202-11ed-a511-0050568377a0",
+            "arches_node_name": "Geological Formation",
+            "file_field_name": "Geological Formation",
+            "data_type": "string",
+            "export": true
+        },
+        {
+            "arches_nodeid": "dd1a2464-0202-11ed-a511-0050568377a0",
+            "arches_node_name": "Geological Group",
+            "file_field_name": "Geological Group",
+            "data_type": "string",
+            "export": true
+        },
+        {
+            "arches_nodeid": "dd1a2194-0202-11ed-a511-0050568377a0",
+            "arches_node_name": "Geological Member",
+            "file_field_name": "Geological Member",
+            "data_type": "string",
+            "export": true
+        },
+        {
+            "arches_nodeid": "dd1a25c2-0202-11ed-a511-0050568377a0",
+            "arches_node_name": "Geological Significance Ranking Code",
+            "file_field_name": "Geological Significance Ranking Code",
+            "data_type": "string",
+            "export": true
+        },
+        {
+            "arches_nodeid": "dd1a3080-0202-11ed-a511-0050568377a0",
+            "arches_node_name": "Geological Start Date",
+            "file_field_name": "Geological Start Date",
+            "data_type": "string",
+            "export": true
+        },
+        {
+            "arches_nodeid": "dd1a1b90-0202-11ed-a511-0050568377a0",
+            "arches_node_name": "Geometry Qualifier",
+            "file_field_name": "Geometry Qualifier",
+            "data_type": "concept",
+            "concept_export_value": "label",
+            "export": true
+        },
+        {
+            "arches_nodeid": "dd19debe-0202-11ed-a511-0050568377a0",
+            "arches_node_name": "Information Carrier",
+            "file_field_name": "Information Carrier",
+            "data_type": "file-list",
+            "export": true
+        },
+        {
+            "arches_nodeid": "dd1a22fc-0202-11ed-a511-0050568377a0",
+            "arches_node_name": "Information Carrier Format Type",
+            "file_field_name": "Information Carrier Format Type",
+            "data_type": "concept-list",
+            "concept_export_value": "label",
+            "export": true
+        },
+        {
+            "arches_nodeid": "dd1a1e7e-0202-11ed-a511-0050568377a0",
+            "arches_node_name": "Location Description",
+            "file_field_name": "Location Description",
+            "data_type": "string",
+            "export": true
+        },
+        {
+            "arches_nodeid": "dd1a29d2-0202-11ed-a511-0050568377a0",
+            "arches_node_name": "Max Geological Start Date",
+            "file_field_name": "Max Geological Start Date",
+            "data_type": "string",
+            "export": true
+        },
+        {
+            "arches_nodeid": "dd1a2b30-0202-11ed-a511-0050568377a0",
+            "arches_node_name": "Nearest Municipality",
+            "file_field_name": "Nearest Municipality",
+            "data_type": "string",
+            "export": true
+        },
+        {
+            "arches_nodeid": "dd1a0e5c-0202-11ed-a511-0050568377a0",
+            "arches_node_name": "Parent Fossil Site",
+            "file_field_name": "Parent Fossil Site",
+            "data_type": "resource-instance",
+            "export": true
+        },
+        {
+            "arches_nodeid": "dd1a05b0-0202-11ed-a511-0050568377a0",
+            "arches_node_name": "Protection Status",
+            "file_field_name": "Protection Status",
+            "data_type": "string",
+            "export": true
+        },
+        {
+            "arches_nodeid": "dd1a2874-0202-11ed-a511-0050568377a0",
+            "arches_node_name": "Ranking Detail",
+            "file_field_name": "Ranking Detail",
+            "data_type": "string",
+            "export": true
+        },
+        {
+            "arches_nodeid": "dd19cda2-0202-11ed-a511-0050568377a0",
+            "arches_node_name": "Setting Type",
+            "file_field_name": "Setting Type",
+            "data_type": "concept",
+            "concept_export_value": "label",
+            "export": true
+        },
+        {
+            "arches_nodeid": "dd19fa84-0202-11ed-a511-0050568377a0",
+            "arches_node_name": "Site Name",
+            "file_field_name": "Site Name",
+            "data_type": "string",
+            "export": true
+        },
+        {
+            "arches_nodeid": "dd19c7c6-0202-11ed-a511-0050568377a0",
+            "arches_node_name": "Spatial Coordinates Geometry",
+            "file_field_name": "Spatial Coordinates Geometry",
+            "data_type": "geojson-feature-collection",
+            "export": true
+        }
+    ]
+}

@@ -1,0 +1,18 @@
+{% extends "views/components/widgets/base.htm" %}
+{% load i18n %}
+
+{% block display_value %}
+<!-- ko if: reportImages().length > 0 -->
+<dd>
+    <div id="report-image-grid" class="report-image-grid">
+        <!-- ko foreach: reportImages() -->
+        <div class="rp-image-grid-item">
+            <a id="" class="" target="_blank" data-bind="attr: {href: url}">
+                <img class="img-responsive" data-bind="attr: {src: url, alt: name}">
+            </a>
+        </div>
+        <!-- /ko -->
+    </div>
+</dd>
+<!-- /ko -->
+{% endblock display_value %}

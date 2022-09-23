@@ -1,0 +1,14 @@
+{% extends "views/components/map_popup/toggle-map-popup.htm" %}
+{% load i18n %}
+
+{% block footer %}
+<!-- ko if: !!mapCard.showSelectFeatureAsSource && mapCard.showSelectFeatureAsSource(feature) -->
+<a data-bind="if: mapCard.showSelectFeatureAsSource(feature), click: function () {
+    mapCard.selectFeature(feature);
+}" href="javascript:void(0)">
+    <i class="ion-ios-refresh-empty"></i>
+    <span data-bind="text: mapCard.selectText"></span>
+</a>
+<!--/ko-->
+{{ block.super }}
+{% endblock footer %}
