@@ -136,7 +136,14 @@
                     "cardid": "45eeb964-9fb1-11ec-9db6-5254008afee6",
                     "component_id": "f05e4d3a-53c1-11e8-b0ea-784f435179ea",
                     "config": null,
-                    "constraints": [],
+                    "constraints": [
+                        {
+                            "card_id": "45eeb964-9fb1-11ec-9db6-5254008afee6",
+                            "constraintid": "21b50e15-0fdb-4089-970f-fe611922bdbb",
+                            "nodes": [],
+                            "uniquetoallinstances": false
+                        }
+                    ],
                     "cssclass": null,
                     "description": "",
                     "graph_id": "b53b6850-1c83-11ec-a9a2-5254008afee6",
@@ -285,7 +292,7 @@
                     "helptext": null,
                     "helptitle": null,
                     "instructions": "Used to record text descriptions associated with the storage information.",
-                    "is_editable": true,
+                    "is_editable": false,
                     "name": "Storage Notes",
                     "nodegroup_id": "d0526888-d168-11ec-8fe4-5254008afee6",
                     "sortorder": null,
@@ -389,6 +396,40 @@
                 }
             ],
             "cards_x_nodes_x_widgets": [
+                {
+                    "card_id": "45eeb964-9fb1-11ec-9db6-5254008afee6",
+                    "config": {
+                        "defaultValue": "",
+                        "label": "Period",
+                        "maxLength": null,
+                        "placeholder": "Enter text",
+                        "uneditable": false,
+                        "width": "100%"
+                    },
+                    "id": "1a834422-48ed-4172-87e2-e4c3e764c67f",
+                    "label": "Period",
+                    "node_id": "86e1b7da-03d1-11ed-b472-5254008afee6",
+                    "sortorder": 2,
+                    "visible": true,
+                    "widget_id": "10000000-0000-0000-0000-000000000001"
+                },
+                {
+                    "card_id": "45eeb964-9fb1-11ec-9db6-5254008afee6",
+                    "config": {
+                        "defaultValue": "",
+                        "label": "Max Geological Start Date",
+                        "maxLength": null,
+                        "placeholder": "Enter text",
+                        "uneditable": false,
+                        "width": "100%"
+                    },
+                    "id": "3d7cdfba-c524-4110-af26-8db97fa92df7",
+                    "label": "Max Geological Start Date",
+                    "node_id": "45eebd6a-9fb1-11ec-9db6-5254008afee6",
+                    "sortorder": 3,
+                    "visible": true,
+                    "widget_id": "10000000-0000-0000-0000-000000000001"
+                },
                 {
                     "card_id": "4775343e-9fb1-11ec-9db6-5254008afee6",
                     "config": {
@@ -543,6 +584,40 @@
                     "widget_id": "10000000-0000-0000-0000-000000000001"
                 },
                 {
+                    "card_id": "45eeb964-9fb1-11ec-9db6-5254008afee6",
+                    "config": {
+                        "defaultValue": "",
+                        "label": "Era",
+                        "maxLength": null,
+                        "placeholder": "Enter text",
+                        "uneditable": false,
+                        "width": "100%"
+                    },
+                    "id": "7d13462b-85ef-4ccb-9942-d8ed0ed89f90",
+                    "label": "Era",
+                    "node_id": "65b5f170-03d1-11ed-aaa6-5254008afee6",
+                    "sortorder": 1,
+                    "visible": true,
+                    "widget_id": "10000000-0000-0000-0000-000000000001"
+                },
+                {
+                    "card_id": "45eeb964-9fb1-11ec-9db6-5254008afee6",
+                    "config": {
+                        "defaultValue": "",
+                        "label": "Eon",
+                        "maxLength": null,
+                        "placeholder": "Enter text",
+                        "uneditable": false,
+                        "width": "100%"
+                    },
+                    "id": "81d9246c-df0b-4e09-963b-ab55eeef5ee0",
+                    "label": "Eon",
+                    "node_id": "7ae3c9f0-03d1-11ed-ae89-5254008afee6",
+                    "sortorder": 0,
+                    "visible": true,
+                    "widget_id": "10000000-0000-0000-0000-000000000001"
+                },
+                {
                     "card_id": "e83bb8fe-9fe6-11ec-9993-5254008afee6",
                     "config": {
                         "defaultValue": false,
@@ -555,6 +630,23 @@
                     "sortorder": 0,
                     "visible": true,
                     "widget_id": "10000000-0000-0000-0000-000000000006"
+                },
+                {
+                    "card_id": "45eeb964-9fb1-11ec-9db6-5254008afee6",
+                    "config": {
+                        "defaultValue": "",
+                        "label": "Geological Start Date",
+                        "maxLength": null,
+                        "placeholder": "Enter text",
+                        "uneditable": false,
+                        "width": "100%"
+                    },
+                    "id": "9b3cd926-706b-4918-9e83-17527073660e",
+                    "label": "Geological Start Date",
+                    "node_id": "45eec0b2-9fb1-11ec-9db6-5254008afee6",
+                    "sortorder": 4,
+                    "visible": true,
+                    "widget_id": "10000000-0000-0000-0000-000000000001"
                 },
                 {
                     "card_id": "0ce78634-a031-11ec-913f-5254008afee6",
@@ -1210,6 +1302,18 @@
             "functions_x_graphs": [
                 {
                     "config": {
+                        "node_id": "8205ada0-e367-11ec-b856-5254008afee6",
+                        "triggering_nodegroups": [
+                            "0ce75c04-a031-11ec-913f-5254008afee6"
+                        ],
+                        "unique_value": true
+                    },
+                    "function_id": "60000000-0000-0000-0000-000000002001",
+                    "graph_id": "b53b6850-1c83-11ec-a9a2-5254008afee6",
+                    "id": "0cf00fd3-9c37-4c98-8bb5-19bcb84eb7da"
+                },
+                {
+                    "config": {
                         "class_name": "PrimaryDescriptorsFunction",
                         "descriptor_types": {
                             "description": {
@@ -1230,19 +1334,7 @@
                     },
                     "function_id": "60000000-0000-0000-0000-000000000001",
                     "graph_id": "b53b6850-1c83-11ec-a9a2-5254008afee6",
-                    "id": "228b47c4-f2f6-11ec-9f52-5254008afee6"
-                },
-                {
-                    "config": {
-                        "node_id": "8205ada0-e367-11ec-b856-5254008afee6",
-                        "triggering_nodegroups": [
-                            "0ce75c04-a031-11ec-913f-5254008afee6"
-                        ],
-                        "unique_value": true
-                    },
-                    "function_id": "60000000-0000-0000-0000-000000002001",
-                    "graph_id": "b53b6850-1c83-11ec-a9a2-5254008afee6",
-                    "id": "228b61c8-f2f6-11ec-9f52-5254008afee6"
+                    "id": "7a98dfb7-6cd3-4915-bee2-55a59bcc90ad"
                 }
             ],
             "graphid": "b53b6850-1c83-11ec-a9a2-5254008afee6",
@@ -1347,6 +1439,7 @@
                     "exportable": false,
                     "fieldname": null,
                     "graph_id": "b53b6850-1c83-11ec-a9a2-5254008afee6",
+                    "hascustomalias": false,
                     "is_collector": true,
                     "isrequired": false,
                     "issearchable": true,
@@ -1369,6 +1462,7 @@
                     "exportable": false,
                     "fieldname": null,
                     "graph_id": "b53b6850-1c83-11ec-a9a2-5254008afee6",
+                    "hascustomalias": false,
                     "is_collector": false,
                     "isrequired": false,
                     "issearchable": true,
@@ -1388,6 +1482,7 @@
                     "exportable": false,
                     "fieldname": null,
                     "graph_id": "b53b6850-1c83-11ec-a9a2-5254008afee6",
+                    "hascustomalias": false,
                     "is_collector": true,
                     "isrequired": false,
                     "issearchable": true,
@@ -1407,6 +1502,7 @@
                     "exportable": false,
                     "fieldname": null,
                     "graph_id": "b53b6850-1c83-11ec-a9a2-5254008afee6",
+                    "hascustomalias": false,
                     "is_collector": true,
                     "isrequired": false,
                     "issearchable": true,
@@ -1426,6 +1522,7 @@
                     "exportable": false,
                     "fieldname": null,
                     "graph_id": "b53b6850-1c83-11ec-a9a2-5254008afee6",
+                    "hascustomalias": false,
                     "is_collector": true,
                     "isrequired": false,
                     "issearchable": true,
@@ -1445,6 +1542,7 @@
                     "exportable": false,
                     "fieldname": null,
                     "graph_id": "b53b6850-1c83-11ec-a9a2-5254008afee6",
+                    "hascustomalias": false,
                     "is_collector": true,
                     "isrequired": false,
                     "issearchable": true,
@@ -1464,6 +1562,7 @@
                     "exportable": false,
                     "fieldname": null,
                     "graph_id": "b53b6850-1c83-11ec-a9a2-5254008afee6",
+                    "hascustomalias": false,
                     "is_collector": false,
                     "isrequired": false,
                     "issearchable": true,
@@ -1483,6 +1582,7 @@
                     "exportable": false,
                     "fieldname": null,
                     "graph_id": "b53b6850-1c83-11ec-a9a2-5254008afee6",
+                    "hascustomalias": false,
                     "is_collector": false,
                     "isrequired": false,
                     "issearchable": true,
@@ -1492,7 +1592,7 @@
                     "nodeid": "45eebd6a-9fb1-11ec-9db6-5254008afee6",
                     "ontologyclass": "http://www.cidoc-crm.org/cidoc-crm/E18_Physical_Thing",
                     "parentproperty": "http://www.cidoc-crm.org/cidoc-crm/P92_brought_into_existence",
-                    "sortorder": 5
+                    "sortorder": 0
                 },
                 {
                     "alias": "max_start_date_unit",
@@ -1502,6 +1602,7 @@
                     "exportable": false,
                     "fieldname": null,
                     "graph_id": "b53b6850-1c83-11ec-a9a2-5254008afee6",
+                    "hascustomalias": false,
                     "is_collector": false,
                     "isrequired": false,
                     "issearchable": true,
@@ -1521,6 +1622,7 @@
                     "exportable": false,
                     "fieldname": null,
                     "graph_id": "b53b6850-1c83-11ec-a9a2-5254008afee6",
+                    "hascustomalias": false,
                     "is_collector": false,
                     "isrequired": false,
                     "issearchable": true,
@@ -1530,7 +1632,7 @@
                     "nodeid": "45eec0b2-9fb1-11ec-9db6-5254008afee6",
                     "ontologyclass": "http://www.cidoc-crm.org/cidoc-crm/E18_Physical_Thing",
                     "parentproperty": "http://www.cidoc-crm.org/cidoc-crm/P92_brought_into_existence",
-                    "sortorder": 4
+                    "sortorder": 0
                 },
                 {
                     "alias": "geological_assessment",
@@ -1540,6 +1642,7 @@
                     "exportable": false,
                     "fieldname": null,
                     "graph_id": "b53b6850-1c83-11ec-a9a2-5254008afee6",
+                    "hascustomalias": false,
                     "is_collector": true,
                     "isrequired": false,
                     "issearchable": true,
@@ -1559,6 +1662,7 @@
                     "exportable": false,
                     "fieldname": null,
                     "graph_id": "b53b6850-1c83-11ec-a9a2-5254008afee6",
+                    "hascustomalias": false,
                     "is_collector": false,
                     "isrequired": false,
                     "issearchable": true,
@@ -1578,6 +1682,7 @@
                     "exportable": false,
                     "fieldname": null,
                     "graph_id": "b53b6850-1c83-11ec-a9a2-5254008afee6",
+                    "hascustomalias": false,
                     "is_collector": false,
                     "isrequired": false,
                     "issearchable": true,
@@ -1597,6 +1702,7 @@
                     "exportable": false,
                     "fieldname": null,
                     "graph_id": "b53b6850-1c83-11ec-a9a2-5254008afee6",
+                    "hascustomalias": false,
                     "is_collector": false,
                     "isrequired": false,
                     "issearchable": true,
@@ -1616,6 +1722,7 @@
                     "exportable": false,
                     "fieldname": null,
                     "graph_id": "b53b6850-1c83-11ec-a9a2-5254008afee6",
+                    "hascustomalias": false,
                     "is_collector": false,
                     "isrequired": false,
                     "issearchable": true,
@@ -1635,6 +1742,7 @@
                     "exportable": false,
                     "fieldname": null,
                     "graph_id": "b53b6850-1c83-11ec-a9a2-5254008afee6",
+                    "hascustomalias": false,
                     "is_collector": false,
                     "isrequired": false,
                     "issearchable": true,
@@ -1654,6 +1762,7 @@
                     "exportable": false,
                     "fieldname": null,
                     "graph_id": "b53b6850-1c83-11ec-a9a2-5254008afee6",
+                    "hascustomalias": false,
                     "is_collector": false,
                     "isrequired": false,
                     "issearchable": true,
@@ -1673,6 +1782,7 @@
                     "exportable": false,
                     "fieldname": null,
                     "graph_id": "b53b6850-1c83-11ec-a9a2-5254008afee6",
+                    "hascustomalias": false,
                     "is_collector": true,
                     "isrequired": false,
                     "issearchable": true,
@@ -1692,6 +1802,7 @@
                     "exportable": false,
                     "fieldname": null,
                     "graph_id": "b53b6850-1c83-11ec-a9a2-5254008afee6",
+                    "hascustomalias": false,
                     "is_collector": true,
                     "isrequired": false,
                     "issearchable": true,
@@ -1711,6 +1822,7 @@
                     "exportable": false,
                     "fieldname": null,
                     "graph_id": "b53b6850-1c83-11ec-a9a2-5254008afee6",
+                    "hascustomalias": false,
                     "is_collector": false,
                     "isrequired": false,
                     "issearchable": true,
@@ -1730,6 +1842,7 @@
                     "exportable": false,
                     "fieldname": null,
                     "graph_id": "b53b6850-1c83-11ec-a9a2-5254008afee6",
+                    "hascustomalias": false,
                     "is_collector": false,
                     "isrequired": false,
                     "issearchable": true,
@@ -1752,6 +1865,7 @@
                     "exportable": false,
                     "fieldname": null,
                     "graph_id": "b53b6850-1c83-11ec-a9a2-5254008afee6",
+                    "hascustomalias": false,
                     "is_collector": false,
                     "isrequired": false,
                     "issearchable": true,
@@ -1771,6 +1885,7 @@
                     "exportable": false,
                     "fieldname": null,
                     "graph_id": "b53b6850-1c83-11ec-a9a2-5254008afee6",
+                    "hascustomalias": false,
                     "is_collector": false,
                     "isrequired": false,
                     "issearchable": true,
@@ -1790,6 +1905,7 @@
                     "exportable": false,
                     "fieldname": null,
                     "graph_id": "b53b6850-1c83-11ec-a9a2-5254008afee6",
+                    "hascustomalias": false,
                     "is_collector": true,
                     "isrequired": false,
                     "issearchable": true,
@@ -1812,6 +1928,7 @@
                     "exportable": false,
                     "fieldname": null,
                     "graph_id": "b53b6850-1c83-11ec-a9a2-5254008afee6",
+                    "hascustomalias": false,
                     "is_collector": false,
                     "isrequired": true,
                     "issearchable": true,
@@ -1831,6 +1948,7 @@
                     "exportable": false,
                     "fieldname": null,
                     "graph_id": "b53b6850-1c83-11ec-a9a2-5254008afee6",
+                    "hascustomalias": false,
                     "is_collector": false,
                     "isrequired": false,
                     "issearchable": true,
@@ -1850,6 +1968,7 @@
                     "exportable": false,
                     "fieldname": null,
                     "graph_id": "b53b6850-1c83-11ec-a9a2-5254008afee6",
+                    "hascustomalias": false,
                     "is_collector": false,
                     "isrequired": false,
                     "issearchable": true,
@@ -1869,6 +1988,7 @@
                     "exportable": false,
                     "fieldname": null,
                     "graph_id": "b53b6850-1c83-11ec-a9a2-5254008afee6",
+                    "hascustomalias": false,
                     "is_collector": false,
                     "isrequired": false,
                     "issearchable": true,
@@ -1890,6 +2010,7 @@
                     "exportable": false,
                     "fieldname": null,
                     "graph_id": "b53b6850-1c83-11ec-a9a2-5254008afee6",
+                    "hascustomalias": false,
                     "is_collector": false,
                     "isrequired": false,
                     "issearchable": true,
@@ -1909,6 +2030,7 @@
                     "exportable": false,
                     "fieldname": null,
                     "graph_id": "b53b6850-1c83-11ec-a9a2-5254008afee6",
+                    "hascustomalias": false,
                     "is_collector": false,
                     "isrequired": false,
                     "issearchable": true,
@@ -1937,6 +2059,7 @@
                     "exportable": true,
                     "fieldname": null,
                     "graph_id": "b53b6850-1c83-11ec-a9a2-5254008afee6",
+                    "hascustomalias": false,
                     "is_collector": false,
                     "isrequired": false,
                     "issearchable": true,
@@ -1956,6 +2079,7 @@
                     "exportable": false,
                     "fieldname": null,
                     "graph_id": "b53b6850-1c83-11ec-a9a2-5254008afee6",
+                    "hascustomalias": false,
                     "is_collector": false,
                     "isrequired": false,
                     "issearchable": true,
@@ -1975,6 +2099,7 @@
                     "exportable": false,
                     "fieldname": null,
                     "graph_id": "b53b6850-1c83-11ec-a9a2-5254008afee6",
+                    "hascustomalias": false,
                     "is_collector": false,
                     "isrequired": false,
                     "issearchable": true,
@@ -1994,6 +2119,7 @@
                     "exportable": false,
                     "fieldname": null,
                     "graph_id": "b53b6850-1c83-11ec-a9a2-5254008afee6",
+                    "hascustomalias": false,
                     "is_collector": false,
                     "isrequired": false,
                     "issearchable": true,
@@ -2013,6 +2139,7 @@
                     "exportable": false,
                     "fieldname": null,
                     "graph_id": "b53b6850-1c83-11ec-a9a2-5254008afee6",
+                    "hascustomalias": false,
                     "is_collector": false,
                     "isrequired": false,
                     "issearchable": true,
@@ -2032,6 +2159,7 @@
                     "exportable": false,
                     "fieldname": null,
                     "graph_id": "b53b6850-1c83-11ec-a9a2-5254008afee6",
+                    "hascustomalias": false,
                     "is_collector": false,
                     "isrequired": false,
                     "issearchable": true,
@@ -2051,6 +2179,7 @@
                     "exportable": false,
                     "fieldname": null,
                     "graph_id": "b53b6850-1c83-11ec-a9a2-5254008afee6",
+                    "hascustomalias": false,
                     "is_collector": false,
                     "isrequired": false,
                     "issearchable": true,
@@ -2070,6 +2199,7 @@
                     "exportable": true,
                     "fieldname": null,
                     "graph_id": "b53b6850-1c83-11ec-a9a2-5254008afee6",
+                    "hascustomalias": false,
                     "is_collector": false,
                     "isrequired": false,
                     "issearchable": true,
@@ -2089,6 +2219,7 @@
                     "exportable": false,
                     "fieldname": null,
                     "graph_id": "b53b6850-1c83-11ec-a9a2-5254008afee6",
+                    "hascustomalias": false,
                     "is_collector": false,
                     "isrequired": false,
                     "issearchable": true,
@@ -2108,6 +2239,7 @@
                     "exportable": false,
                     "fieldname": null,
                     "graph_id": "b53b6850-1c83-11ec-a9a2-5254008afee6",
+                    "hascustomalias": false,
                     "is_collector": true,
                     "isrequired": false,
                     "issearchable": true,
@@ -2127,6 +2259,7 @@
                     "exportable": false,
                     "fieldname": null,
                     "graph_id": "b53b6850-1c83-11ec-a9a2-5254008afee6",
+                    "hascustomalias": false,
                     "is_collector": false,
                     "isrequired": false,
                     "issearchable": true,
@@ -2148,6 +2281,7 @@
                     "exportable": false,
                     "fieldname": null,
                     "graph_id": "b53b6850-1c83-11ec-a9a2-5254008afee6",
+                    "hascustomalias": false,
                     "is_collector": false,
                     "isrequired": false,
                     "issearchable": true,
@@ -2167,6 +2301,7 @@
                     "exportable": false,
                     "fieldname": null,
                     "graph_id": "b53b6850-1c83-11ec-a9a2-5254008afee6",
+                    "hascustomalias": false,
                     "is_collector": false,
                     "isrequired": false,
                     "issearchable": true,
@@ -2189,6 +2324,7 @@
                     "exportable": false,
                     "fieldname": null,
                     "graph_id": "b53b6850-1c83-11ec-a9a2-5254008afee6",
+                    "hascustomalias": false,
                     "is_collector": true,
                     "isrequired": false,
                     "issearchable": true,
@@ -2208,6 +2344,7 @@
                     "exportable": false,
                     "fieldname": null,
                     "graph_id": "b53b6850-1c83-11ec-a9a2-5254008afee6",
+                    "hascustomalias": false,
                     "is_collector": false,
                     "isrequired": false,
                     "issearchable": true,
@@ -2227,6 +2364,7 @@
                     "exportable": false,
                     "fieldname": null,
                     "graph_id": "b53b6850-1c83-11ec-a9a2-5254008afee6",
+                    "hascustomalias": false,
                     "is_collector": true,
                     "isrequired": false,
                     "issearchable": true,
@@ -2246,6 +2384,7 @@
                     "exportable": false,
                     "fieldname": null,
                     "graph_id": "b53b6850-1c83-11ec-a9a2-5254008afee6",
+                    "hascustomalias": false,
                     "is_collector": true,
                     "isrequired": false,
                     "issearchable": true,
@@ -2265,6 +2404,7 @@
                     "exportable": false,
                     "fieldname": null,
                     "graph_id": "b53b6850-1c83-11ec-a9a2-5254008afee6",
+                    "hascustomalias": false,
                     "is_collector": false,
                     "isrequired": false,
                     "issearchable": true,
@@ -2286,6 +2426,7 @@
                     "exportable": false,
                     "fieldname": null,
                     "graph_id": "b53b6850-1c83-11ec-a9a2-5254008afee6",
+                    "hascustomalias": false,
                     "is_collector": false,
                     "isrequired": false,
                     "issearchable": true,
@@ -2305,6 +2446,7 @@
                     "exportable": false,
                     "fieldname": null,
                     "graph_id": "b53b6850-1c83-11ec-a9a2-5254008afee6",
+                    "hascustomalias": false,
                     "is_collector": true,
                     "isrequired": false,
                     "issearchable": true,
@@ -2324,6 +2466,7 @@
                     "exportable": false,
                     "fieldname": null,
                     "graph_id": "b53b6850-1c83-11ec-a9a2-5254008afee6",
+                    "hascustomalias": false,
                     "is_collector": false,
                     "isrequired": false,
                     "issearchable": true,
@@ -2347,6 +2490,7 @@
                 "exportable": false,
                 "fieldname": null,
                 "graph_id": "b53b6850-1c83-11ec-a9a2-5254008afee6",
+                "hascustomalias": false,
                 "is_collector": false,
                 "isrequired": false,
                 "issearchable": true,
@@ -2365,7 +2509,7 @@
     ],
     "metadata": {
         "db": "PostgreSQL 12.6 on x86_64-pc-linux-gnu, compiled by gcc (GCC) 4.8.5 20150623 (Red Hat 4.8.5-44), 64-bit",
-        "git hash": "9a077ea 2022-06-27 16:40:13 -0700",
+        "git hash": "6e02a9a 2022-09-08 14:37:26 -0700",
         "os": "Linux",
         "os version": "3.10.0-1127.el7.x86_64"
     }
