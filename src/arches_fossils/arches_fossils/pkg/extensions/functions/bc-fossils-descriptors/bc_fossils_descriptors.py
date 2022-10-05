@@ -104,6 +104,14 @@ class BCFossilsDescriptors(AbstractPrimaryDescriptorsFunction):
                         else:
                             return_value += config["delimiter"]
                         return_value += self._format_value(label, display_values[label], config)
+            else:
+                for key in display_values.keys():
+                    if not return_value:
+                        return_value = ""
+                    else:
+                        return_value += config["delimiter"]
+                    return_value += self._format_value(key, display_values[key], config)
+
             return return_value
         except ValueError as e:
             print(e, "invalid nodegroupid participating in descriptor function.")

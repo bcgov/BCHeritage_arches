@@ -42,7 +42,7 @@ details = {
 
 
 class BCFossilTypeDescriptors(AbstractPrimaryDescriptorsFunction):
-    _type_graph_name = "BC Fossil Type Model2"
+    _type_graph_name = "BC Fossil Type Model"
     _datatype_factory = None
     _parent_name_node = None
     _taxonomic_rank_node = None
@@ -110,7 +110,6 @@ class BCFossilTypeDescriptors(AbstractPrimaryDescriptorsFunction):
             return None
         datatype = self._get_datatype_factory().get_instance(name_node.datatype)
         display_value = datatype.get_display_value(tile, name_node)
-        print("Name: %s"%display_value)
         return display_value if display_value is not None else ""
 
     def _get_datatype_factory(self):
