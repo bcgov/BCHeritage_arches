@@ -1,4 +1,5 @@
-define(['knockout', 'underscore', 'viewmodels/widget'], function (ko, _, WidgetViewModel) {
+define(['knockout', 'underscore', 'viewmodels/widget', 'templates/views/components/widgets/civic-address-widget.htm'],
+    function (ko, _, WidgetViewModel, defaultCivicAddressWidgetTemplate) {
     /**
     * registers a text-widget component for use in forms
     * @function external:"ko.components".text-widget
@@ -45,6 +46,6 @@ define(['knockout', 'underscore', 'viewmodels/widget'], function (ko, _, WidgetV
             });
 
         },
-        template: { require: 'text!templates/views/components/widgets/civic-address-widget.htm' }
+        template: defaultCivicAddressWidgetTemplate
     });
 });

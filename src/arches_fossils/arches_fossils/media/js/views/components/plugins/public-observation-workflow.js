@@ -3,8 +3,9 @@ define([
     'jquery',
     'arches',
     'viewmodels/workflow',
-    'viewmodels/workflow-step'
-], function(ko, $, arches, Workflow) {
+    'viewmodels/workflow-step',
+    'templates/views/components/plugins/public-observation-workflow.htm'
+], function(ko, $, arches, Workflow, WorkflowStep, defaultWorkflowTemplate) {
     return ko.components.register('public-observation-workflow', {
         viewModel: function(params) {
             this.componentName = 'public-observation-workflow';
@@ -158,6 +159,6 @@ define([
 
             Workflow.apply(this, [params]);
         },
-        template: { require: 'text!templates/views/components/plugins/public-observation-workflow.htm' }
+        template: defaultWorkflowTemplate
     });
 });

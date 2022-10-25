@@ -15,7 +15,8 @@ define([
     'utils/map-popup-provider',
     'utils/map-filter-utils',
     'utils/resource-geom-callback-factory',
-], function ($, _, arches, ko, BaseFilter, MapComponentViewModel, binFeatureCollection, mapStyles, turf, geohash, geojsonExtent, uuid, geojsonhint, popupDataProvider, mapFilterUtils, geomCallbackFactory) {
+    'templates/views/components/search/map-filter.htm'
+], function ($, _, arches, ko, BaseFilter, MapComponentViewModel, binFeatureCollection, mapStyles, turf, geohash, geojsonExtent, uuid, geojsonhint, popupDataProvider, mapFilterUtils, geomCallbackFactory, defaultMapFilterTemplate) {
     // Overrides the base map-filter.js Allows multiple geometries to be used as the map filter
     //
     // @todo - Need to find a way to extend not just override.
@@ -732,6 +733,6 @@ define([
                 }
             }
         }),
-        template: { require: 'text!templates/views/components/search/map-filter.htm' }
+        template: defaultMapFilterTemplate
     });
 });

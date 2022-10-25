@@ -6,8 +6,8 @@ define(['jquery',
     'viewmodels/function',
     'bindings/chosen',
     'views/components/simple-switch',
-    ''],
-function($, _, arches, ko, koMapping, FunctionViewModel, chosen) {
+    'templates/views/components/functions/bc-fossils-descriptors.htm'],
+function($, _, arches, ko, koMapping, FunctionViewModel, chosen, simpleSwitch, defaultFossilsDescriptorsTemplate) {
     return ko.components.register('views/components/functions/bc-fossil-type-descriptors', {
         viewModel: function(params) {
             FunctionViewModel.apply(this, arguments);
@@ -74,8 +74,6 @@ function($, _, arches, ko, koMapping, FunctionViewModel, chosen) {
 
             window.setTimeout(function(){$("select[data-bind^=chosen]").trigger("chosen:updated");}, 300);
         },
-        template: {
-            require: 'text!templates/views/components/functions/bc-fossils-descriptors.htm'
-        }
+        template: defaultFossilsDescriptorsTemplate
     });
 });

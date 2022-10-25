@@ -13,10 +13,8 @@ details = {
     "classname": "BordenNumberDataType",
     "defaultwidget": borden_number_widget,
     "defaultconfig": {"format": "AaAa-000"},
-    # "configcomponent": "views/components/datatypes/string",
-    "configcomponent": "",
+    "configcomponent": "views/components/datatypes/string",
     "configname": "string-datatype-config",
-    # "configname": "",
     "isgeometric": False,
     "issearchable": True,
 }

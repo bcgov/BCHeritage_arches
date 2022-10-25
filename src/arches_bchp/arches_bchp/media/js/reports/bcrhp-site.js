@@ -2,7 +2,9 @@ define(['underscore',
     'knockout',
     'knockout-mapping',
     'viewmodels/bcrhp-site',
-    'reports/map-header'], function(_, ko, koMapping, MapReportViewModel) {
+    'reports/map-header',
+    'templates/views/report-templates/bcrhp_site.htm'
+], function(_, ko, koMapping, MapReportViewModel, MapHeader, defaultSiteTemplate) {
     var siteViewModel = MapReportViewModel;
     /*
     siteViewModel.extend({
@@ -14,6 +16,6 @@ define(['underscore',
      */
     return ko.components.register('bcrhp-site-report', {
         viewModel: siteViewModel,
-        template: {require: 'text!report-templates/bcrhp_site'}
+        template: defaultSiteTemplate
     });
 });

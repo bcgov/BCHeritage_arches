@@ -7,7 +7,7 @@ from django.urls.resolvers import RegexPattern
 
 class BCRegexPattern(RegexPattern):
     def __init__(self, regexpattern):
-        super().__init__(regexpattern._regex.replace(r"^", r"^"+settings.BCGOV_PROXY_PREFIX), regexpattern.name, regexpattern._is_endpoint)
+        super().__init__(regexpattern.regex.pattern.replace(r"^", r"^"+settings.BCGOV_PROXY_PREFIX, 1), regexpattern.name, regexpattern._is_endpoint)
 
 bc_url_resolver = url(r'^', include('arches.urls'))
 

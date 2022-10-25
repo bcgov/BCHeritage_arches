@@ -10,14 +10,24 @@
                     "config": null,
                     "constraints": [],
                     "cssclass": "",
-                    "description": "Used to hold identifiers necessary to link a given resource to records in an external (perhaps legacy) system.",
+                    "description": {
+                        "en": "Used to hold identifiers necessary to link a given resource to records in an external (perhaps legacy) system."
+                    },
                     "graph_id": "ccbd1537-ac5e-11e6-84a5-026d961c88e6",
                     "helpenabled": false,
-                    "helptext": null,
-                    "helptitle": null,
-                    "instructions": "Enter information for identifiers of the resource from other external sources.",
+                    "helptext": {
+                        "en": null
+                    },
+                    "helptitle": {
+                        "en": null
+                    },
+                    "instructions": {
+                        "en": "Enter information for identifiers of the resource from other external sources."
+                    },
                     "is_editable": true,
-                    "name": "External Identifier",
+                    "name": {
+                        "en": "External Identifier"
+                    },
                     "nodegroup_id": "235685a3-e743-11e6-84a6-026d961c88e6",
                     "sortorder": null,
                     "visible": true
@@ -29,14 +39,24 @@
                     "config": null,
                     "constraints": [],
                     "cssclass": "",
-                    "description": "Generic branch for capturing free-form written descriptive information.\nIntended to be evolution from v3 description branch from HIP 3. Created semantic description node with description string and description type hanging off of it. Description (semantic node) becomes a grouping node (type and string).  \n\nThis branch meets technical business rules for CRM compliance but CRM experts have said that this is an inappropriate implementation of E62.\n\nConnects to all resources with P140i",
+                    "description": {
+                        "en": "Generic branch for capturing free-form written descriptive information.\nIntended to be evolution from v3 description branch from HIP 3. Created semantic description node with description string and description type hanging off of it. Description (semantic node) becomes a grouping node (type and string).  \n\nThis branch meets technical business rules for CRM compliance but CRM experts have said that this is an inappropriate implementation of E62.\n\nConnects to all resources with P140i"
+                    },
                     "graph_id": "ccbd1537-ac5e-11e6-84a5-026d961c88e6",
                     "helpenabled": false,
-                    "helptext": null,
-                    "helptitle": null,
-                    "instructions": "Enter a description and description type for the resource.",
+                    "helptext": {
+                        "en": null
+                    },
+                    "helptitle": {
+                        "en": null
+                    },
+                    "instructions": {
+                        "en": "Enter a description and description type for the resource."
+                    },
                     "is_editable": true,
-                    "name": "Description",
+                    "name": {
+                        "en": "Description"
+                    },
                     "nodegroup_id": "3abb05c5-e743-11e6-84a6-026d961c88e6",
                     "sortorder": null,
                     "visible": true
@@ -48,14 +68,24 @@
                     "config": null,
                     "constraints": [],
                     "cssclass": "",
-                    "description": "Start/End dates for resources.  Assumed to be typed and within calendar time. \n\nConnects to Activity (E7) and Historical Event (E5) resource models via P114\nConnects to Heritage Resource (E18) and Heritage Resource Group (E27) resource models via P12i\nConnects to Actor (E39) resource model via P11i",
+                    "description": {
+                        "en": "Start/End dates for resources.  Assumed to be typed and within calendar time. \n\nConnects to Activity (E7) and Historical Event (E5) resource models via P114\nConnects to Heritage Resource (E18) and Heritage Resource Group (E27) resource models via P12i\nConnects to Actor (E39) resource model via P11i"
+                    },
                     "graph_id": "ccbd1537-ac5e-11e6-84a5-026d961c88e6",
                     "helpenabled": false,
-                    "helptext": null,
-                    "helptitle": null,
-                    "instructions": "Record the start and end dates of the resource's existence.",
+                    "helptext": {
+                        "en": null
+                    },
+                    "helptitle": {
+                        "en": null
+                    },
+                    "instructions": {
+                        "en": "Record the start and end dates of the resource's existence."
+                    },
                     "is_editable": true,
-                    "name": "Existence",
+                    "name": {
+                        "en": "Existence"
+                    },
                     "nodegroup_id": "4eb5c5b5-e743-11e6-84a6-026d961c88e6",
                     "sortorder": null,
                     "visible": true
@@ -67,14 +97,24 @@
                     "config": null,
                     "constraints": [],
                     "cssclass": "",
-                    "description": "Phase Type Assignment for the Actor resource model.\n\nConnects to Actor E39 via P41i",
+                    "description": {
+                        "en": "Phase Type Assignment for the Actor resource model.\n\nConnects to Actor E39 via P41i"
+                    },
                     "graph_id": "ccbd1537-ac5e-11e6-84a5-026d961c88e6",
                     "helpenabled": false,
-                    "helptext": null,
-                    "helptitle": null,
-                    "instructions": "Define one Actor Type, n cultural periods, and (optionally) one from/to date range. Additional Actor Types or date ranges requires additional entries",
+                    "helptext": {
+                        "en": null
+                    },
+                    "helptitle": {
+                        "en": null
+                    },
+                    "instructions": {
+                        "en": "Define one Actor Type, n cultural periods, and (optionally) one from/to date range. Additional Actor Types or date ranges requires additional entries"
+                    },
                     "is_editable": true,
-                    "name": "Actor Phase",
+                    "name": {
+                        "en": "Actor Phase"
+                    },
                     "nodegroup_id": "5f6460fb-e743-11e6-84a6-026d961c88e6",
                     "sortorder": null,
                     "visible": true
@@ -86,14 +126,24 @@
                     "config": null,
                     "constraints": [],
                     "cssclass": "",
-                    "description": "Represents a single node in a graph",
+                    "description": {
+                        "en": "Represents a single node in a graph"
+                    },
                     "graph_id": "ccbd1537-ac5e-11e6-84a5-026d961c88e6",
                     "helpenabled": false,
-                    "helptext": null,
-                    "helptitle": null,
-                    "instructions": "Enter the address of the location.",
+                    "helptext": {
+                        "en": null
+                    },
+                    "helptitle": {
+                        "en": null
+                    },
+                    "instructions": {
+                        "en": "Enter the address of the location."
+                    },
                     "is_editable": true,
-                    "name": "Address",
+                    "name": {
+                        "en": "Address"
+                    },
                     "nodegroup_id": "be9d6e15-e742-11e6-84a6-026d961c88e6",
                     "sortorder": 1,
                     "visible": true
@@ -105,14 +155,24 @@
                     "config": null,
                     "constraints": [],
                     "cssclass": "",
-                    "description": "Represents a single node in a graph",
+                    "description": {
+                        "en": "Represents a single node in a graph"
+                    },
                     "graph_id": "ccbd1537-ac5e-11e6-84a5-026d961c88e6",
                     "helpenabled": false,
-                    "helptext": null,
-                    "helptitle": null,
-                    "instructions": "Describe the location of the resource.",
+                    "helptext": {
+                        "en": null
+                    },
+                    "helptitle": {
+                        "en": null
+                    },
+                    "instructions": {
+                        "en": "Describe the location of the resource."
+                    },
                     "is_editable": true,
-                    "name": "Description Location",
+                    "name": {
+                        "en": "Description Location"
+                    },
                     "nodegroup_id": "be9d6e18-e742-11e6-84a6-026d961c88e6",
                     "sortorder": 3,
                     "visible": true
@@ -124,14 +184,24 @@
                     "config": null,
                     "constraints": [],
                     "cssclass": "",
-                    "description": "Represents a single node in a graph",
+                    "description": {
+                        "en": "Represents a single node in a graph"
+                    },
                     "graph_id": "ccbd1537-ac5e-11e6-84a5-026d961c88e6",
                     "helpenabled": false,
-                    "helptext": null,
-                    "helptitle": null,
-                    "instructions": "Define the spatial location.",
+                    "helptext": {
+                        "en": null
+                    },
+                    "helptitle": {
+                        "en": null
+                    },
+                    "instructions": {
+                        "en": "Define the spatial location."
+                    },
                     "is_editable": true,
-                    "name": "Spatial Location",
+                    "name": {
+                        "en": "Spatial Location"
+                    },
                     "nodegroup_id": "be9d6e1b-e742-11e6-84a6-026d961c88e6",
                     "sortorder": 0,
                     "visible": true
@@ -143,14 +213,24 @@
                     "config": null,
                     "constraints": [],
                     "cssclass": "",
-                    "description": "Represents a single node in a graph",
+                    "description": {
+                        "en": "Represents a single node in a graph"
+                    },
                     "graph_id": "ccbd1537-ac5e-11e6-84a5-026d961c88e6",
                     "helpenabled": false,
-                    "helptext": null,
-                    "helptitle": null,
-                    "instructions": "Enter the cadastral reference number.",
+                    "helptext": {
+                        "en": null
+                    },
+                    "helptitle": {
+                        "en": null
+                    },
+                    "instructions": {
+                        "en": "Enter the cadastral reference number."
+                    },
                     "is_editable": true,
-                    "name": "Cadastral Reference",
+                    "name": {
+                        "en": "Cadastral Reference"
+                    },
                     "nodegroup_id": "be9d6e1e-e742-11e6-84a6-026d961c88e6",
                     "sortorder": 4,
                     "visible": true
@@ -162,14 +242,24 @@
                     "config": null,
                     "constraints": [],
                     "cssclass": "",
-                    "description": "Represents a single node in a graph",
+                    "description": {
+                        "en": "Represents a single node in a graph"
+                    },
                     "graph_id": "ccbd1537-ac5e-11e6-84a5-026d961c88e6",
                     "helpenabled": false,
-                    "helptext": null,
-                    "helptitle": null,
-                    "instructions": "Select the administrative/governmental subdivision name and type.",
+                    "helptext": {
+                        "en": null
+                    },
+                    "helptitle": {
+                        "en": null
+                    },
+                    "instructions": {
+                        "en": "Select the administrative/governmental subdivision name and type."
+                    },
                     "is_editable": true,
-                    "name": "Administration Subdivision",
+                    "name": {
+                        "en": "Administration Subdivision"
+                    },
                     "nodegroup_id": "be9d6e21-e742-11e6-84a6-026d961c88e6",
                     "sortorder": 2,
                     "visible": true
@@ -181,14 +271,24 @@
                     "config": null,
                     "constraints": [],
                     "cssclass": "",
-                    "description": "For Actor resources: Describes the former and current residences of an Actor resource. Relates to Actor E39 with P74 \nFor Activity and Historic Event: Describes the location of where an activity or historic event took place. Relates to Activity E7 with P7. Relates to Historical Event E5 with P7\n",
+                    "description": {
+                        "en": "For Actor resources: Describes the former and current residences of an Actor resource. Relates to Actor E39 with P74 \nFor Activity and Historic Event: Describes the location of where an activity or historic event took place. Relates to Activity E7 with P7. Relates to Historical Event E5 with P7\n"
+                    },
                     "graph_id": "ccbd1537-ac5e-11e6-84a5-026d961c88e6",
                     "helpenabled": false,
-                    "helptext": null,
-                    "helptitle": null,
-                    "instructions": null,
+                    "helptext": {
+                        "en": null
+                    },
+                    "helptitle": {
+                        "en": null
+                    },
+                    "instructions": {
+                        "en": null
+                    },
                     "is_editable": true,
-                    "name": "Place 2",
+                    "name": {
+                        "en": "Place 2"
+                    },
                     "nodegroup_id": "be9d6e24-e742-11e6-84a6-026d961c88e6",
                     "sortorder": null,
                     "visible": true
@@ -200,14 +300,24 @@
                     "config": null,
                     "constraints": [],
                     "cssclass": "",
-                    "description": "An informative word used for resource information retrieval that indicates the content of a resource.\n\nRelates to resources via P2.",
+                    "description": {
+                        "en": "An informative word used for resource information retrieval that indicates the content of a resource.\n\nRelates to resources via P2."
+                    },
                     "graph_id": "ccbd1537-ac5e-11e6-84a5-026d961c88e6",
                     "helpenabled": false,
-                    "helptext": null,
-                    "helptitle": null,
-                    "instructions": "Select keywords associated with the resource.",
+                    "helptext": {
+                        "en": null
+                    },
+                    "helptitle": {
+                        "en": null
+                    },
+                    "instructions": {
+                        "en": "Select keywords associated with the resource."
+                    },
                     "is_editable": true,
-                    "name": "Keyword",
+                    "name": {
+                        "en": "Keyword"
+                    },
                     "nodegroup_id": "e1c9d577-e742-11e6-84a6-026d961c88e6",
                     "sortorder": null,
                     "visible": true
@@ -219,14 +329,24 @@
                     "config": null,
                     "constraints": [],
                     "cssclass": "",
-                    "description": "Describes an appellation assigned to an Actor Resource.\n\nRelates to resource model via P131",
+                    "description": {
+                        "en": "Describes an appellation assigned to an Actor Resource.\n\nRelates to resource model via P131"
+                    },
                     "graph_id": "ccbd1537-ac5e-11e6-84a5-026d961c88e6",
                     "helpenabled": false,
-                    "helptext": null,
-                    "helptitle": null,
-                    "instructions": "Enter the Actor name and respective name type.",
+                    "helptext": {
+                        "en": null
+                    },
+                    "helptitle": {
+                        "en": null
+                    },
+                    "instructions": {
+                        "en": "Enter the Actor name and respective name type."
+                    },
                     "is_editable": true,
-                    "name": "Appellation",
+                    "name": {
+                        "en": "Appellation"
+                    },
                     "nodegroup_id": "eb6ccd23-e742-11e6-84a6-026d961c88e6",
                     "sortorder": null,
                     "visible": true
@@ -237,7 +357,9 @@
             "config": {},
             "deploymentdate": null,
             "deploymentfile": null,
-            "description": "This resource model describes actor resources such as individual people and groups of people. ",
+            "description": {
+                "en": "This resource model describes actor resources such as individual people and groups of people. "
+            },
             "edges": [
                 {
                     "description": null,
@@ -559,10 +681,11 @@
             "graphid": "ccbd1537-ac5e-11e6-84a5-026d961c88e6",
             "iconclass": "fa fa-users",
             "is_editable": true,
-            "isactive": true,
             "isresource": true,
             "jsonldcontext": null,
-            "name": "Actor Resource Model",
+            "name": {
+                "en": "Actor Resource Model"
+            },
             "nodegroups": [
                 {
                     "cardinality": "n",
@@ -639,12 +762,14 @@
             ],
             "nodes": [
                 {
-                    "config": null,
+                    "alias": "external_xref",
+                    "config": {},
                     "datatype": "string",
                     "description": "",
                     "exportable": false,
                     "fieldname": "",
                     "graph_id": "ccbd1537-ac5e-11e6-84a5-026d961c88e6",
+                    "hascustomalias": false,
                     "is_collector": true,
                     "isrequired": false,
                     "issearchable": true,
@@ -657,6 +782,7 @@
                     "sortorder": 0
                 },
                 {
+                    "alias": "external_identifier_type",
                     "config": {
                         "rdmCollection": "a4bfeafb-7a04-43fd-b812-331105ce78b3"
                     },
@@ -665,6 +791,7 @@
                     "exportable": false,
                     "fieldname": "",
                     "graph_id": "ccbd1537-ac5e-11e6-84a5-026d961c88e6",
+                    "hascustomalias": false,
                     "is_collector": false,
                     "isrequired": false,
                     "issearchable": true,
@@ -677,7 +804,11 @@
                     "sortorder": 0
                 },
                 {
+                    "alias": "external_source",
                     "config": {
+                        "i18n_config": {
+                            "fn": "arches.app.datatypes.datatypes.DomainDataType"
+                        },
                         "options": []
                     },
                     "datatype": "domain-value",
@@ -685,6 +816,7 @@
                     "exportable": false,
                     "fieldname": "",
                     "graph_id": "ccbd1537-ac5e-11e6-84a5-026d961c88e6",
+                    "hascustomalias": false,
                     "is_collector": false,
                     "isrequired": false,
                     "issearchable": true,
@@ -697,12 +829,14 @@
                     "sortorder": 0
                 },
                 {
-                    "config": null,
+                    "alias": "description_assignment",
+                    "config": {},
                     "datatype": "semantic",
                     "description": "",
                     "exportable": false,
                     "fieldname": "",
                     "graph_id": "ccbd1537-ac5e-11e6-84a5-026d961c88e6",
+                    "hascustomalias": false,
                     "is_collector": true,
                     "isrequired": false,
                     "issearchable": true,
@@ -715,12 +849,14 @@
                     "sortorder": 0
                 },
                 {
-                    "config": null,
+                    "alias": "description",
+                    "config": {},
                     "datatype": "string",
                     "description": "Represents a single node in a graph",
                     "exportable": false,
                     "fieldname": "",
                     "graph_id": "ccbd1537-ac5e-11e6-84a5-026d961c88e6",
+                    "hascustomalias": false,
                     "is_collector": false,
                     "isrequired": false,
                     "issearchable": true,
@@ -733,6 +869,7 @@
                     "sortorder": 0
                 },
                 {
+                    "alias": "description_type",
                     "config": {
                         "rdmCollection": null
                     },
@@ -741,6 +878,7 @@
                     "exportable": false,
                     "fieldname": "",
                     "graph_id": "ccbd1537-ac5e-11e6-84a5-026d961c88e6",
+                    "hascustomalias": false,
                     "is_collector": false,
                     "isrequired": false,
                     "issearchable": true,
@@ -753,12 +891,14 @@
                     "sortorder": 0
                 },
                 {
-                    "config": null,
+                    "alias": "existence_event",
+                    "config": {},
                     "datatype": "semantic",
                     "description": "",
                     "exportable": false,
                     "fieldname": "",
                     "graph_id": "ccbd1537-ac5e-11e6-84a5-026d961c88e6",
+                    "hascustomalias": false,
                     "is_collector": true,
                     "isrequired": false,
                     "issearchable": true,
@@ -771,6 +911,7 @@
                     "sortorder": 0
                 },
                 {
+                    "alias": "end_date_of_existence",
                     "config": {
                         "dateFormat": "YYYY-MM-DD"
                     },
@@ -779,6 +920,7 @@
                     "exportable": false,
                     "fieldname": "",
                     "graph_id": "ccbd1537-ac5e-11e6-84a5-026d961c88e6",
+                    "hascustomalias": false,
                     "is_collector": false,
                     "isrequired": false,
                     "issearchable": true,
@@ -791,12 +933,14 @@
                     "sortorder": 0
                 },
                 {
-                    "config": null,
+                    "alias": "beginning_of_existence_time_span",
+                    "config": {},
                     "datatype": "semantic",
                     "description": "Represents a single node in a graph",
                     "exportable": false,
                     "fieldname": "",
                     "graph_id": "ccbd1537-ac5e-11e6-84a5-026d961c88e6",
+                    "hascustomalias": false,
                     "is_collector": false,
                     "isrequired": false,
                     "issearchable": true,
@@ -809,12 +953,14 @@
                     "sortorder": 0
                 },
                 {
-                    "config": null,
+                    "alias": "end_of_existence_time_span",
+                    "config": {},
                     "datatype": "semantic",
                     "description": "Represents a single node in a graph",
                     "exportable": false,
                     "fieldname": "",
                     "graph_id": "ccbd1537-ac5e-11e6-84a5-026d961c88e6",
+                    "hascustomalias": false,
                     "is_collector": false,
                     "isrequired": false,
                     "issearchable": true,
@@ -827,6 +973,7 @@
                     "sortorder": 0
                 },
                 {
+                    "alias": "start_date_of_existence",
                     "config": {
                         "dateFormat": "YYYY-MM-DD"
                     },
@@ -835,6 +982,7 @@
                     "exportable": false,
                     "fieldname": "",
                     "graph_id": "ccbd1537-ac5e-11e6-84a5-026d961c88e6",
+                    "hascustomalias": false,
                     "is_collector": false,
                     "isrequired": false,
                     "issearchable": true,
@@ -847,6 +995,7 @@
                     "sortorder": 0
                 },
                 {
+                    "alias": "start_date_type",
                     "config": {
                         "rdmCollection": "216ee2fb-4197-4f84-84dd-3a38d59480fb"
                     },
@@ -855,6 +1004,7 @@
                     "exportable": false,
                     "fieldname": "",
                     "graph_id": "ccbd1537-ac5e-11e6-84a5-026d961c88e6",
+                    "hascustomalias": false,
                     "is_collector": false,
                     "isrequired": false,
                     "issearchable": true,
@@ -867,12 +1017,14 @@
                     "sortorder": 0
                 },
                 {
-                    "config": null,
+                    "alias": "end_of_existence",
+                    "config": {},
                     "datatype": "semantic",
                     "description": "",
                     "exportable": false,
                     "fieldname": "",
                     "graph_id": "ccbd1537-ac5e-11e6-84a5-026d961c88e6",
+                    "hascustomalias": false,
                     "is_collector": false,
                     "isrequired": false,
                     "issearchable": true,
@@ -885,12 +1037,14 @@
                     "sortorder": 0
                 },
                 {
-                    "config": null,
+                    "alias": "beginning_of_existence",
+                    "config": {},
                     "datatype": "semantic",
                     "description": "",
                     "exportable": false,
                     "fieldname": "",
                     "graph_id": "ccbd1537-ac5e-11e6-84a5-026d961c88e6",
+                    "hascustomalias": false,
                     "is_collector": false,
                     "isrequired": false,
                     "issearchable": true,
@@ -903,6 +1057,7 @@
                     "sortorder": 0
                 },
                 {
+                    "alias": "end_date_type",
                     "config": {
                         "rdmCollection": "873866bb-d7c6-46a7-94fd-8a085d8eff57"
                     },
@@ -911,6 +1066,7 @@
                     "exportable": false,
                     "fieldname": "",
                     "graph_id": "ccbd1537-ac5e-11e6-84a5-026d961c88e6",
+                    "hascustomalias": false,
                     "is_collector": false,
                     "isrequired": false,
                     "issearchable": true,
@@ -923,12 +1079,14 @@
                     "sortorder": 0
                 },
                 {
-                    "config": null,
+                    "alias": "actor_type_phase_assignment",
+                    "config": {},
                     "datatype": "semantic",
                     "description": "",
                     "exportable": false,
                     "fieldname": "",
                     "graph_id": "ccbd1537-ac5e-11e6-84a5-026d961c88e6",
+                    "hascustomalias": false,
                     "is_collector": true,
                     "isrequired": false,
                     "issearchable": true,
@@ -941,6 +1099,7 @@
                     "sortorder": 0
                 },
                 {
+                    "alias": "actor_type",
                     "config": {
                         "rdmCollection": null
                     },
@@ -949,6 +1108,7 @@
                     "exportable": false,
                     "fieldname": "",
                     "graph_id": "ccbd1537-ac5e-11e6-84a5-026d961c88e6",
+                    "hascustomalias": false,
                     "is_collector": false,
                     "isrequired": false,
                     "issearchable": true,
@@ -961,6 +1121,7 @@
                     "sortorder": 0
                 },
                 {
+                    "alias": "actor_type_from_date",
                     "config": {
                         "dateFormat": "YYYY-MM-DD"
                     },
@@ -969,6 +1130,7 @@
                     "exportable": false,
                     "fieldname": "",
                     "graph_id": "ccbd1537-ac5e-11e6-84a5-026d961c88e6",
+                    "hascustomalias": false,
                     "is_collector": false,
                     "isrequired": false,
                     "issearchable": true,
@@ -981,6 +1143,7 @@
                     "sortorder": 0
                 },
                 {
+                    "alias": "cultural_period",
                     "config": {
                         "rdmCollection": "5dd9d81d-6501-4d3f-89f2-ebb0038d2df5"
                     },
@@ -989,6 +1152,7 @@
                     "exportable": false,
                     "fieldname": "",
                     "graph_id": "ccbd1537-ac5e-11e6-84a5-026d961c88e6",
+                    "hascustomalias": false,
                     "is_collector": false,
                     "isrequired": false,
                     "issearchable": true,
@@ -1001,6 +1165,7 @@
                     "sortorder": 0
                 },
                 {
+                    "alias": "actor_type_to_date",
                     "config": {
                         "dateFormat": "YYYY-MM-DD"
                     },
@@ -1009,6 +1174,7 @@
                     "exportable": false,
                     "fieldname": "",
                     "graph_id": "ccbd1537-ac5e-11e6-84a5-026d961c88e6",
+                    "hascustomalias": false,
                     "is_collector": false,
                     "isrequired": false,
                     "issearchable": true,
@@ -1021,12 +1187,14 @@
                     "sortorder": 0
                 },
                 {
-                    "config": null,
+                    "alias": "actor_type_time_span",
+                    "config": {},
                     "datatype": "semantic",
                     "description": "Represents a single node in a graph",
                     "exportable": false,
                     "fieldname": "",
                     "graph_id": "ccbd1537-ac5e-11e6-84a5-026d961c88e6",
+                    "hascustomalias": false,
                     "is_collector": false,
                     "isrequired": false,
                     "issearchable": true,
@@ -1039,12 +1207,14 @@
                     "sortorder": 0
                 },
                 {
-                    "config": null,
+                    "alias": "place_address",
+                    "config": {},
                     "datatype": "string",
                     "description": "Represents a single node in a graph",
                     "exportable": false,
                     "fieldname": "",
                     "graph_id": "ccbd1537-ac5e-11e6-84a5-026d961c88e6",
+                    "hascustomalias": false,
                     "is_collector": true,
                     "isrequired": false,
                     "issearchable": true,
@@ -1057,12 +1227,14 @@
                     "sortorder": 0
                 },
                 {
-                    "config": null,
+                    "alias": "place_description_assignment",
+                    "config": {},
                     "datatype": "semantic",
                     "description": "Represents a single node in a graph",
                     "exportable": false,
                     "fieldname": "",
                     "graph_id": "ccbd1537-ac5e-11e6-84a5-026d961c88e6",
+                    "hascustomalias": false,
                     "is_collector": true,
                     "isrequired": false,
                     "issearchable": true,
@@ -1075,6 +1247,7 @@
                     "sortorder": 0
                 },
                 {
+                    "alias": "spatial_coordinates_geometry",
                     "config": {
                         "addToMap": false,
                         "advancedStyle": "",
@@ -1106,6 +1279,7 @@
                     "exportable": false,
                     "fieldname": "",
                     "graph_id": "ccbd1537-ac5e-11e6-84a5-026d961c88e6",
+                    "hascustomalias": false,
                     "is_collector": true,
                     "isrequired": false,
                     "issearchable": true,
@@ -1118,12 +1292,14 @@
                     "sortorder": 0
                 },
                 {
-                    "config": null,
+                    "alias": "cadastral_reference",
+                    "config": {},
                     "datatype": "string",
                     "description": "Represents a single node in a graph",
                     "exportable": false,
                     "fieldname": "",
                     "graph_id": "ccbd1537-ac5e-11e6-84a5-026d961c88e6",
+                    "hascustomalias": false,
                     "is_collector": true,
                     "isrequired": false,
                     "issearchable": true,
@@ -1136,12 +1312,14 @@
                     "sortorder": 0
                 },
                 {
-                    "config": null,
+                    "alias": "administration_subdivision",
+                    "config": {},
                     "datatype": "semantic",
                     "description": "Represents a single node in a graph",
                     "exportable": false,
                     "fieldname": "",
                     "graph_id": "ccbd1537-ac5e-11e6-84a5-026d961c88e6",
+                    "hascustomalias": false,
                     "is_collector": true,
                     "isrequired": false,
                     "issearchable": true,
@@ -1154,12 +1332,14 @@
                     "sortorder": 0
                 },
                 {
-                    "config": null,
+                    "alias": "place",
+                    "config": {},
                     "datatype": "semantic",
                     "description": "",
                     "exportable": false,
                     "fieldname": "",
                     "graph_id": "ccbd1537-ac5e-11e6-84a5-026d961c88e6",
+                    "hascustomalias": false,
                     "is_collector": true,
                     "isrequired": false,
                     "issearchable": true,
@@ -1172,6 +1352,7 @@
                     "sortorder": 0
                 },
                 {
+                    "alias": "address_type",
                     "config": {
                         "rdmCollection": null
                     },
@@ -1180,6 +1361,7 @@
                     "exportable": false,
                     "fieldname": "",
                     "graph_id": "ccbd1537-ac5e-11e6-84a5-026d961c88e6",
+                    "hascustomalias": false,
                     "is_collector": false,
                     "isrequired": false,
                     "issearchable": true,
@@ -1192,12 +1374,14 @@
                     "sortorder": 0
                 },
                 {
-                    "config": null,
+                    "alias": "administrative_subdivision_name",
+                    "config": {},
                     "datatype": "string",
                     "description": "Represents a single node in a graph",
                     "exportable": false,
                     "fieldname": "",
                     "graph_id": "ccbd1537-ac5e-11e6-84a5-026d961c88e6",
+                    "hascustomalias": false,
                     "is_collector": false,
                     "isrequired": false,
                     "issearchable": true,
@@ -1210,6 +1394,7 @@
                     "sortorder": 0
                 },
                 {
+                    "alias": "administrative_subdivision_type",
                     "config": {
                         "rdmCollection": "d5230d60-0eb9-483d-90f4-9965eaca0292"
                     },
@@ -1218,6 +1403,7 @@
                     "exportable": false,
                     "fieldname": "",
                     "graph_id": "ccbd1537-ac5e-11e6-84a5-026d961c88e6",
+                    "hascustomalias": false,
                     "is_collector": false,
                     "isrequired": false,
                     "issearchable": true,
@@ -1230,12 +1416,14 @@
                     "sortorder": 0
                 },
                 {
-                    "config": null,
+                    "alias": "place_description",
+                    "config": {},
                     "datatype": "string",
                     "description": "Represents a single node in a graph",
                     "exportable": false,
                     "fieldname": "",
                     "graph_id": "ccbd1537-ac5e-11e6-84a5-026d961c88e6",
+                    "hascustomalias": false,
                     "is_collector": false,
                     "isrequired": false,
                     "issearchable": true,
@@ -1248,6 +1436,7 @@
                     "sortorder": 0
                 },
                 {
+                    "alias": "geometry_qualifier",
                     "config": {
                         "rdmCollection": null
                     },
@@ -1256,6 +1445,7 @@
                     "exportable": false,
                     "fieldname": "",
                     "graph_id": "ccbd1537-ac5e-11e6-84a5-026d961c88e6",
+                    "hascustomalias": false,
                     "is_collector": false,
                     "isrequired": false,
                     "issearchable": true,
@@ -1268,12 +1458,14 @@
                     "sortorder": 0
                 },
                 {
+                    "alias": "actor",
                     "config": {},
                     "datatype": "semantic",
                     "description": "",
                     "exportable": false,
                     "fieldname": "",
                     "graph_id": "ccbd1537-ac5e-11e6-84a5-026d961c88e6",
+                    "hascustomalias": false,
                     "is_collector": false,
                     "isrequired": false,
                     "issearchable": true,
@@ -1286,6 +1478,7 @@
                     "sortorder": 0
                 },
                 {
+                    "alias": "keyword",
                     "config": {
                         "rdmCollection": "4063c7c5-485b-432b-9dfb-4f81cb6b5cfd"
                     },
@@ -1294,6 +1487,7 @@
                     "exportable": false,
                     "fieldname": "",
                     "graph_id": "ccbd1537-ac5e-11e6-84a5-026d961c88e6",
+                    "hascustomalias": false,
                     "is_collector": true,
                     "isrequired": false,
                     "issearchable": true,
@@ -1306,12 +1500,14 @@
                     "sortorder": 0
                 },
                 {
-                    "config": null,
+                    "alias": "appellation",
+                    "config": {},
                     "datatype": "string",
                     "description": "",
                     "exportable": false,
                     "fieldname": "",
                     "graph_id": "ccbd1537-ac5e-11e6-84a5-026d961c88e6",
+                    "hascustomalias": false,
                     "is_collector": true,
                     "isrequired": false,
                     "issearchable": true,
@@ -1324,6 +1520,7 @@
                     "sortorder": 0
                 },
                 {
+                    "alias": "appellation_type",
                     "config": {
                         "rdmCollection": "051b5950-2c1e-49ff-af0d-dfbaa971d2fa"
                     },
@@ -1332,6 +1529,7 @@
                     "exportable": false,
                     "fieldname": "",
                     "graph_id": "ccbd1537-ac5e-11e6-84a5-026d961c88e6",
+                    "hascustomalias": false,
                     "is_collector": false,
                     "isrequired": false,
                     "issearchable": true,
@@ -1345,15 +1543,24 @@
                 }
             ],
             "ontology_id": "e6e8db47-2ccf-11e6-927e-b8f6b115d7dd",
+            "publication": {
+                "graph_id": "ccbd1537-ac5e-11e6-84a5-026d961c88e6",
+                "notes": null,
+                "publicationid": "5a672246-53f7-11ed-b0e5-5254004d77d3",
+                "published_time": "2022-10-24T18:55:35.708",
+                "user_id": 1
+            },
             "relatable_resource_model_ids": [],
             "resource_2_resource_constraints": [],
             "root": {
+                "alias": "actor",
                 "config": {},
                 "datatype": "semantic",
                 "description": "",
                 "exportable": false,
                 "fieldname": "",
                 "graph_id": "ccbd1537-ac5e-11e6-84a5-026d961c88e6",
+                "hascustomalias": false,
                 "is_collector": false,
                 "isrequired": false,
                 "issearchable": true,
@@ -1365,15 +1572,17 @@
                 "sortorder": 0
             },
             "slug": null,
-            "subtitle": "Describes actor resources such as individual people and groups of people. ",
+            "subtitle": {
+                "en": "Describes actor resources such as individual people and groups of people. "
+            },
             "template_id": "50000000-0000-0000-0000-000000000001",
             "version": ""
         }
     ],
     "metadata": {
-        "db": "PostgreSQL 12.6 on x86_64-pc-linux-gnu, compiled by gcc (GCC) 4.8.5 20150623 (Red Hat 4.8.5-44), 64-bit",
-        "git hash": "439f585 2021-10-26 14:45:09 -0700",
+        "db": "PostgreSQL 12.12 on x86_64-pc-linux-gnu, compiled by gcc (GCC) 4.8.5 20150623 (Red Hat 4.8.5-44), 64-bit",
+        "git hash": "/bin/sh: git: command not found",
         "os": "Linux",
-        "os version": "3.10.0-1127.el7.x86_64"
+        "os version": "3.10.0-1160.76.1.el7.x86_64"
     }
 }
