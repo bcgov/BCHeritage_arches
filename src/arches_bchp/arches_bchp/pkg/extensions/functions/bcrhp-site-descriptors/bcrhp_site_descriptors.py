@@ -43,15 +43,16 @@ details = {
 
 class BCRHPSiteDescriptors(AbstractPrimaryDescriptorsFunction):
     _datatype_factory = DataTypeFactory()
-    _graph_name = 'BC Heritage Resource'
     # For Name part of descriptor
+    en_graph = {"en": "BC Heritage Resource"}
+
     _site_name_type_node = models.Node.objects.filter(
         alias='name_type',
-        graph__name='BC Heritage Resource'
+        graph__name__contains=en_graph
     ).first()
     _site_name_node = models.Node.objects.filter(
         alias='name',
-        graph__name='BC Heritage Resource'
+        graph__name__contains=en_graph
     ).first()
 
     _description_order = ['Borden Number']
@@ -106,13 +107,12 @@ class BCRHPSiteDescriptors(AbstractPrimaryDescriptorsFunction):
         return value
 
     def _get_site_name(self, resource):
-
         name_datatype = BCRHPSiteDescriptors._datatype_factory.get_instance(BCRHPSiteDescriptors._site_name_node.datatype)
         name_type_datatype = BCRHPSiteDescriptors._datatype_factory.get_instance(BCRHPSiteDescriptors._site_name_type_node.datatype)
         display_value = ''
 
         for tile in models.TileModel.objects.filter(
-            nodegroup_id=BCRHPSiteDescriptors._site_name_node.nodegroup_id
+                nodegroup_id=BCRHPSiteDescriptors._site_name_node.nodegroup_id
         ).filter(resourceinstance_id=resource.resourceinstanceid).all():
             if name_type_datatype.get_display_value(tile, BCRHPSiteDescriptors._site_name_type_node) == 'Primary':
                 name = name_datatype.get_display_value(tile, BCRHPSiteDescriptors._site_name_node)

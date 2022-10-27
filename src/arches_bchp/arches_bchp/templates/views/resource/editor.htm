@@ -40,7 +40,7 @@ along with this program. If not, see <http://www.gnu.org/licenses/>.
     <div style="height: inherit;" class="flex">
         <div class="left-panel graph-designer" data-bind="resizableSidepanel:true">
             <div class="left-panel-inner-container">
-                <div class="jstree jstree-default" data-bind="visible: true" style="display: none;">
+                <div class="jstree jstree-default" data-bind="visible: true, css: {'jstree-rtl': activeLanguageDir() == 'rtl' }" style="display: none;">
                     <div class="header">
                         <div class="list-filter" data-bind="">
                             <input type="text" class="form-control" style="width: 100%;" placeholder="{% trans 'Find a card...' %}" data-bind="textInput: filter, event: {keypress: filterEnterKeyHandler}">
@@ -288,8 +288,6 @@ along with this program. If not, see <http://www.gnu.org/licenses/>.
     </div>
 </div>
 {% endblock main_content %}
-
-{% block tabs %}{% endblock tabs %}
 
 {% block pre_require_js %}
 {{block.super}}

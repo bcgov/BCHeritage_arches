@@ -2,6 +2,7 @@ from arches.app.datatypes.base import BaseDataType
 from arches.app.models import models
 from arches.app.models.system_settings import settings
 from arches.app.search.elasticsearch_dsl_builder import Bool, Match, Range, Term, Terms, Nested, Exists, RangeDSLException
+from arches.app.search.search_term import SearchTerm
 import re
 
 borden_number_widget = models.Widget.objects.get(name="borden-number-widget")
@@ -71,13 +72,12 @@ class BordenNumberDataType(BaseDataType):
         terms = []
         if nodevalue is not None:
             if settings.WORDS_PER_SEARCH_TERM is None or (len(nodevalue.split(" ")) < settings.WORDS_PER_SEARCH_TERM):
-                terms.append(nodevalue)
+                terms.append(SearchTerm(value=nodevalue, lang="en"))
         return terms
 
     def append_search_filters(self, value, node, query, request):
         try:
             if value["val"] != "":
-                print("Value "+value["val"])
                 match_type = "phrase_prefix" if "~" in value["op"] else "phrase"
                 match_query = Match(field="tiles.data.%s" % (str(node.pk)), query=value["val"], type=match_type)
                 if "!" in value["op"]:
