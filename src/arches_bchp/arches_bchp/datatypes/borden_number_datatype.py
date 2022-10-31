@@ -10,17 +10,15 @@ borden_number_widget = models.Widget.objects.get(name="borden-number-widget")
 details = {
     "datatype": "borden-number-datatype",
     "iconclass": "fa fa-file-code-o",
-    "modulename": "datatypes.py",
+    "modulename": "borden_number_datatype.py",
     "classname": "BordenNumberDataType",
     "defaultwidget": borden_number_widget,
-    "defaultconfig": {"format": "AaAa-000"},
+    "defaultconfig": {"format": "AaAa-000", "pgDataType": "jsonb"},
     "configcomponent": "views/components/datatypes/string",
     "configname": "string-datatype-config",
     "isgeometric": False,
     "issearchable": True,
 }
-
-# @todo - Should subclass StringDataType not Base Data type to remove redundant logic
 
 
 class BordenNumberDataType(StringDataType):
