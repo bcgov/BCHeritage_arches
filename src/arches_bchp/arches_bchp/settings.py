@@ -53,9 +53,6 @@ DEBUG = True
 
 ROOT_URLCONF = 'arches_bchp.urls'
 
-# Modify this line as needed for your project to connect to elasticsearch with a password that you generate
-ELASTICSEARCH_CONNECTION_OPTIONS = {"timeout": 30, "verify_certs": False, "basic_auth": ("arches_bchp", "arches_bchp")}
-
 # a prefix to append to all elasticsearch indexes, note: must be lower case
 ELASTICSEARCH_PREFIX = 'arches_bchp'
 
