@@ -141,6 +141,6 @@ define([
                     return returnValue;
                 });
             }
-        }
+        };
     return popupDataProvider;
 });
