@@ -42,7 +42,7 @@ details = {
 
 
 class BCFossilTypeDescriptors(AbstractPrimaryDescriptorsFunction):
-    _type_graph_name = "BC Fossil Type Model"
+    _type_graph_name = {"en": "BC Fossil Type Model"}
     _datatype_factory = None
     _parent_name_node = None
     _taxonomic_rank_node = None
@@ -56,15 +56,15 @@ class BCFossilTypeDescriptors(AbstractPrimaryDescriptorsFunction):
     def initialize_static_data():
         BCFossilTypeDescriptors._name_node = models.Node.objects.filter(
             alias='name',
-            graph__name=BCFossilTypeDescriptors._type_graph_name
+            graph__name__contains=BCFossilTypeDescriptors._type_graph_name
         ).first()
         BCFossilTypeDescriptors._parent_name_node = models.Node.objects.filter(
             alias='parent_name',
-            graph__name=BCFossilTypeDescriptors._type_graph_name
+            graph__name__contains=BCFossilTypeDescriptors._type_graph_name
         ).first()
         BCFossilTypeDescriptors._taxonomic_rank_node = models.Node.objects.filter(
             alias='taxonomic_rank',
-            graph__name=BCFossilTypeDescriptors._type_graph_name
+            graph__name__contains=BCFossilTypeDescriptors._type_graph_name
         ).first()
 
         BCFossilTypeDescriptors._fossil_type_graph_id = \
@@ -81,7 +81,7 @@ class BCFossilTypeDescriptors(AbstractPrimaryDescriptorsFunction):
             else:
                 tmp_node = models.Node.objects.filter(
                     alias='default_significance',
-                    graph__name=BCFossilTypeDescriptors._type_graph_name
+                    graph__name__contains=BCFossilTypeDescriptors._type_graph_name
                 ).first()
                 return_value = self._get_value_from_node(tmp_node, resource.resourceinstanceid)
                 if return_value is None:
@@ -89,7 +89,7 @@ class BCFossilTypeDescriptors(AbstractPrimaryDescriptorsFunction):
                 return_value += " "
                 tmp_node = models.Node.objects.filter(
                     alias='size_category',
-                    graph__name=BCFossilTypeDescriptors._type_graph_name
+                    graph__name__contains=BCFossilTypeDescriptors._type_graph_name
                 ).first()
                 # print("Tmp Node: %s"%tmp_node)
                 tmp_value = self._get_value_from_node(tmp_node, resource.resourceinstanceid)

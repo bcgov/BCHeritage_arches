@@ -1,7 +1,7 @@
 define([
     'knockout',
     'underscore',
-    'text!templates/views/components/map_popup/toggle-map-popup.htm'
+    'templates/views/components/map_popup/toggle-map-popup.htm'
 ], function (ko, _, toggle_template) {
     var popupDataProvider = {
             layerConfigs: {
