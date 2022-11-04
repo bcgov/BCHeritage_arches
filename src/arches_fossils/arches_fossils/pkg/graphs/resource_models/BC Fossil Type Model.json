@@ -23,14 +23,24 @@
                         }
                     ],
                     "cssclass": null,
-                    "description": "A Fossil Type's default significance. This is the typical significance of a Fossil Type, however it can be overridden by a specific fossil of this type (eg if a Fossil Type is found in an unusual location or quantity).",
+                    "description": {
+                        "en": "A Fossil Type's default significance. This is the typical significance of a Fossil Type, however it can be overridden by a specific fossil of this type (eg if a Fossil Type is found in an unusual location or quantity)."
+                    },
                     "graph_id": "86700278-117b-11ec-90d4-5254008afee6",
                     "helpenabled": false,
-                    "helptext": null,
-                    "helptitle": null,
-                    "instructions": null,
-                    "is_editable": false,
-                    "name": "Default Significance",
+                    "helptext": {
+                        "en": null
+                    },
+                    "helptitle": {
+                        "en": null
+                    },
+                    "instructions": {
+                        "en": null
+                    },
+                    "is_editable": true,
+                    "name": {
+                        "en": "Default Significance"
+                    },
                     "nodegroup_id": "297a1b46-1bec-11ec-a686-5254008afee6",
                     "sortorder": 2,
                     "visible": true
@@ -55,14 +65,24 @@
                         }
                     ],
                     "cssclass": null,
-                    "description": "The Size Category of the Fossil Type.",
+                    "description": {
+                        "en": "The Size Category of the Fossil Type."
+                    },
                     "graph_id": "86700278-117b-11ec-90d4-5254008afee6",
                     "helpenabled": false,
-                    "helptext": null,
-                    "helptitle": null,
-                    "instructions": null,
-                    "is_editable": false,
-                    "name": "Size Category",
+                    "helptext": {
+                        "en": null
+                    },
+                    "helptitle": {
+                        "en": null
+                    },
+                    "instructions": {
+                        "en": null
+                    },
+                    "is_editable": true,
+                    "name": {
+                        "en": "Size Category"
+                    },
                     "nodegroup_id": "db0004ac-1be7-11ec-a686-5254008afee6",
                     "sortorder": 1,
                     "visible": true
@@ -90,11 +110,19 @@
                     "description": null,
                     "graph_id": "86700278-117b-11ec-90d4-5254008afee6",
                     "helpenabled": false,
-                    "helptext": null,
-                    "helptitle": null,
-                    "instructions": null,
-                    "is_editable": false,
-                    "name": "Fossil Name",
+                    "helptext": {
+                        "en": null
+                    },
+                    "helptitle": {
+                        "en": null
+                    },
+                    "instructions": {
+                        "en": null
+                    },
+                    "is_editable": true,
+                    "name": {
+                        "en": "Fossil Name"
+                    },
                     "nodegroup_id": "fdbc5a08-1be8-11ec-abe5-5254008afee6",
                     "sortorder": 0,
                     "visible": true
@@ -109,7 +137,9 @@
                         "subtitle": "Click to switch"
                     },
                     "id": "63c90974-1bec-11ec-9906-5254008afee6",
-                    "label": "Default Significance",
+                    "label": {
+                        "en": "Default Significance"
+                    },
                     "node_id": "297a1b46-1bec-11ec-a686-5254008afee6",
                     "sortorder": 0,
                     "visible": true,
@@ -119,12 +149,19 @@
                     "card_id": "fdbc9f0e-1be8-11ec-abe5-5254008afee6",
                     "config": {
                         "defaultValue": "",
+                        "i18n_properties": [
+                            "placeholder"
+                        ],
                         "label": "Taxonomic Rank",
                         "options": [],
-                        "placeholder": "Select an option"
+                        "placeholder": {
+                            "en": "Select an option"
+                        }
                     },
                     "id": "681c53ce-1beb-11ec-83a5-5254008afee6",
-                    "label": "Taxonomic Rank",
+                    "label": {
+                        "en": "Taxonomic Rank"
+                    },
                     "node_id": "2a309dcc-1beb-11ec-a4b1-5254008afee6",
                     "sortorder": 2,
                     "visible": true,
@@ -133,15 +170,27 @@
                 {
                     "card_id": "fdbc9f0e-1be8-11ec-abe5-5254008afee6",
                     "config": {
-                        "defaultValue": "",
+                        "defaultValue": {
+                            "en": {
+                                "direction": "ltr",
+                                "value": ""
+                            }
+                        },
+                        "i18n_properties": [
+                            "placeholder"
+                        ],
                         "label": "Name",
                         "maxLength": null,
-                        "placeholder": "Enter text",
+                        "placeholder": {
+                            "en": "Enter text"
+                        },
                         "uneditable": false,
                         "width": "100%"
                     },
                     "id": "681cfc02-1beb-11ec-83a5-5254008afee6",
-                    "label": "Name",
+                    "label": {
+                        "en": "Name"
+                    },
                     "node_id": "fdbc5a08-1be8-11ec-abe5-5254008afee6",
                     "sortorder": 3,
                     "visible": true,
@@ -151,6 +200,9 @@
                     "card_id": "fdbc9f0e-1be8-11ec-abe5-5254008afee6",
                     "config": {
                         "defaultValue": "",
+                        "i18n_properties": [
+                            "placeholder"
+                        ],
                         "label": "Name Type",
                         "options": [
                             {
@@ -170,11 +222,15 @@
                                 "text": "Scientific"
                             }
                         ],
-                        "placeholder": "Select an option",
+                        "placeholder": {
+                            "en": "Select an option"
+                        },
                         "url": "/int/arches-fossils/concepts/dropdown?conceptid=79bb1dcf-733b-4a15-90ad-2c7144b80f5f"
                     },
                     "id": "688794fa-b0aa-11ec-83e6-5254008afee6",
-                    "label": "Name Type",
+                    "label": {
+                        "en": "Name Type"
+                    },
                     "node_id": "a9428406-b0a9-11ec-a223-5254008afee6",
                     "sortorder": 0,
                     "visible": true,
@@ -187,7 +243,9 @@
                         "label": "Primary Scientific Name"
                     },
                     "id": "68880c1e-b0aa-11ec-83e6-5254008afee6",
-                    "label": "Primary Scientific Name",
+                    "label": {
+                        "en": "Primary Scientific Name"
+                    },
                     "node_id": "c5a49ffe-b0a8-11ec-8c81-5254008afee6",
                     "sortorder": 1,
                     "visible": true,
@@ -197,11 +255,18 @@
                     "card_id": "fdbc9f0e-1be8-11ec-abe5-5254008afee6",
                     "config": {
                         "defaultResourceInstance": [],
+                        "i18n_properties": [
+                            "placeholder"
+                        ],
                         "label": "Parent Name",
-                        "placeholder": ""
+                        "placeholder": {
+                            "en": ""
+                        }
                     },
                     "id": "68886100-b0aa-11ec-83e6-5254008afee6",
-                    "label": "Parent Name",
+                    "label": {
+                        "en": "Parent Name"
+                    },
                     "node_id": "c9e8976a-b0a7-11ec-8342-5254008afee6",
                     "sortorder": 4,
                     "visible": true,
@@ -211,14 +276,21 @@
                     "card_id": "db012580-1be7-11ec-a686-5254008afee6",
                     "config": {
                         "defaultValue": "",
+                        "i18n_properties": [
+                            "placeholder"
+                        ],
                         "label": "Size Category",
                         "maxLength": null,
-                        "placeholder": "Enter text",
+                        "placeholder": {
+                            "en": "Enter text"
+                        },
                         "uneditable": false,
                         "width": "100%"
                     },
                     "id": "f98108cc-1be7-11ec-9dee-5254008afee6",
-                    "label": "Size Category",
+                    "label": {
+                        "en": "Size Category"
+                    },
                     "node_id": "db0004ac-1be7-11ec-a686-5254008afee6",
                     "sortorder": 0,
                     "visible": true,
@@ -229,7 +301,9 @@
             "config": {},
             "deploymentdate": null,
             "deploymentfile": null,
-            "description": "",
+            "description": {
+                "en": ""
+            },
             "edges": [
                 {
                     "description": null,
@@ -328,16 +402,17 @@
                     },
                     "function_id": "60000000-0000-0000-0000-000000001002",
                     "graph_id": "86700278-117b-11ec-90d4-5254008afee6",
-                    "id": "6a5ea757-7c52-4524-b82e-8a6d95bb5276"
+                    "id": "a55e68f8-8079-491b-9b1e-31cf243b5699"
                 }
             ],
             "graphid": "86700278-117b-11ec-90d4-5254008afee6",
             "iconclass": "fa fa-table",
-            "is_editable": false,
-            "isactive": true,
+            "is_editable": true,
             "isresource": true,
             "jsonldcontext": null,
-            "name": "BC Fossil Type Model",
+            "name": {
+                "en": "BC Fossil Type Model"
+            },
             "nodegroups": [
                 {
                     "cardinality": "1",
@@ -362,8 +437,16 @@
                 {
                     "alias": "default_significance",
                     "config": {
-                        "falseLabel": "No",
-                        "trueLabel": "Yes"
+                        "falseLabel": {
+                            "en": "No"
+                        },
+                        "i18n_properties": [
+                            "trueLabel",
+                            "falseLabel"
+                        ],
+                        "trueLabel": {
+                            "en": "Yes"
+                        }
                     },
                     "datatype": "boolean",
                     "description": "A Fossil Type's default significance. This is the typical significance of a Fossil Type, however it can be overridden by a specific fossil of this type (eg if a Fossil Type is found in an unusual location or quantity).",
@@ -406,7 +489,7 @@
                 },
                 {
                     "alias": "bc_fossil_type_model",
-                    "config": null,
+                    "config": {},
                     "datatype": "semantic",
                     "description": "",
                     "exportable": false,
@@ -449,8 +532,16 @@
                 {
                     "alias": "primary_scientific_name",
                     "config": {
-                        "falseLabel": "Alternate",
-                        "trueLabel": "Primary"
+                        "falseLabel": {
+                            "en": "Alternate"
+                        },
+                        "i18n_properties": [
+                            "trueLabel",
+                            "falseLabel"
+                        ],
+                        "trueLabel": {
+                            "en": "Primary"
+                        }
                     },
                     "datatype": "boolean",
                     "description": "Identifies whether this name is the primary (official) scientific name for the fossil type, or whether it is an alternate scientific name",
@@ -517,7 +608,7 @@
                 },
                 {
                     "alias": "name",
-                    "config": null,
+                    "config": {},
                     "datatype": "string",
                     "description": null,
                     "exportable": false,
@@ -537,14 +628,18 @@
                 }
             ],
             "ontology_id": "e6e8db47-2ccf-11e6-927e-b8f6b115d7dd",
-            "relatable_resource_model_ids": [
-                "86700278-117b-11ec-90d4-5254008afee6",
-                "86700278-117b-11ec-90d4-5254008afee6"
-            ],
+            "publication": {
+                "graph_id": "86700278-117b-11ec-90d4-5254008afee6",
+                "notes": null,
+                "publicationid": "61858928-53f7-11ed-b5f0-5254004d77d3",
+                "published_time": "2022-10-24T18:55:47.652",
+                "user_id": 1
+            },
+            "relatable_resource_model_ids": [],
             "resource_2_resource_constraints": [],
             "root": {
                 "alias": "bc_fossil_type_model",
-                "config": null,
+                "config": {},
                 "datatype": "semantic",
                 "description": "",
                 "exportable": false,
@@ -562,15 +657,17 @@
                 "sortorder": 0
             },
             "slug": null,
-            "subtitle": "",
+            "subtitle": {
+                "en": ""
+            },
             "template_id": "50000000-0000-0000-0000-000000000001",
             "version": ""
         }
     ],
     "metadata": {
-        "db": "PostgreSQL 12.6 on x86_64-pc-linux-gnu, compiled by gcc (GCC) 4.8.5 20150623 (Red Hat 4.8.5-44), 64-bit",
-        "git hash": "6e02a9a 2022-09-08 14:37:26 -0700",
+        "db": "PostgreSQL 12.12 on x86_64-pc-linux-gnu, compiled by gcc (GCC) 4.8.5 20150623 (Red Hat 4.8.5-44), 64-bit",
+        "git hash": "/bin/sh: git: command not found",
         "os": "Linux",
-        "os version": "3.10.0-1127.el7.x86_64"
+        "os version": "3.10.0-1160.76.1.el7.x86_64"
     }
 }

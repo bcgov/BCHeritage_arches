@@ -26,11 +26,19 @@
                     "description": null,
                     "graph_id": "82efcd14-82db-11ec-b8e6-5254008afee6",
                     "helpenabled": false,
-                    "helptext": null,
-                    "helptitle": null,
-                    "instructions": null,
+                    "helptext": {
+                        "en": null
+                    },
+                    "helptitle": {
+                        "en": null
+                    },
+                    "instructions": {
+                        "en": null
+                    },
                     "is_editable": true,
-                    "name": "Location Description",
+                    "name": {
+                        "en": "Location Description"
+                    },
                     "nodegroup_id": "0d429c06-83d8-11ec-9043-5254008afee6",
                     "sortorder": 1,
                     "visible": true
@@ -58,11 +66,19 @@
                     "description": null,
                     "graph_id": "82efcd14-82db-11ec-b8e6-5254008afee6",
                     "helpenabled": false,
-                    "helptext": null,
-                    "helptitle": null,
-                    "instructions": null,
+                    "helptext": {
+                        "en": null
+                    },
+                    "helptitle": {
+                        "en": null
+                    },
+                    "instructions": {
+                        "en": null
+                    },
                     "is_editable": true,
-                    "name": "Location Map File",
+                    "name": {
+                        "en": "Location Map File"
+                    },
                     "nodegroup_id": "a7a473b0-83be-11ec-a0d2-5254008afee6",
                     "sortorder": 2,
                     "visible": true
@@ -87,14 +103,24 @@
                         }
                     ],
                     "cssclass": null,
-                    "description": "Person that made the observation",
+                    "description": {
+                        "en": "Person that made the observation"
+                    },
                     "graph_id": "82efcd14-82db-11ec-b8e6-5254008afee6",
                     "helpenabled": false,
-                    "helptext": null,
-                    "helptitle": null,
-                    "instructions": null,
+                    "helptext": {
+                        "en": null
+                    },
+                    "helptitle": {
+                        "en": null
+                    },
+                    "instructions": {
+                        "en": null
+                    },
                     "is_editable": true,
-                    "name": "Observed By",
+                    "name": {
+                        "en": "Observed By"
+                    },
                     "nodegroup_id": "ac37b2f4-82db-11ec-96d0-5254008afee6",
                     "sortorder": 0,
                     "visible": true
@@ -122,11 +148,19 @@
                     "description": null,
                     "graph_id": "82efcd14-82db-11ec-b8e6-5254008afee6",
                     "helpenabled": false,
-                    "helptext": null,
-                    "helptitle": null,
-                    "instructions": null,
+                    "helptext": {
+                        "en": null
+                    },
+                    "helptitle": {
+                        "en": null
+                    },
+                    "instructions": {
+                        "en": null
+                    },
                     "is_editable": true,
-                    "name": "Photographs",
+                    "name": {
+                        "en": "Photographs"
+                    },
                     "nodegroup_id": "c26e4a9c-82db-11ec-b00b-5254008afee6",
                     "sortorder": 4,
                     "visible": true
@@ -154,11 +188,19 @@
                     "description": null,
                     "graph_id": "82efcd14-82db-11ec-b8e6-5254008afee6",
                     "helpenabled": false,
-                    "helptext": null,
-                    "helptitle": null,
-                    "instructions": null,
+                    "helptext": {
+                        "en": null
+                    },
+                    "helptitle": {
+                        "en": null
+                    },
+                    "instructions": {
+                        "en": null
+                    },
                     "is_editable": true,
-                    "name": "Spatial Coordinates",
+                    "name": {
+                        "en": "Spatial Coordinates"
+                    },
                     "nodegroup_id": "cbe9284c-83be-11ec-805f-5254008afee6",
                     "sortorder": 3,
                     "visible": true
@@ -176,7 +218,9 @@
                         "width": "100%"
                     },
                     "id": "360de730-83d8-11ec-805f-5254008afee6",
-                    "label": "Location Description",
+                    "label": {
+                        "en": "Location Description"
+                    },
                     "node_id": "0d429c06-83d8-11ec-9043-5254008afee6",
                     "sortorder": 0,
                     "visible": true,
@@ -191,7 +235,9 @@
                         "rerender": true
                     },
                     "id": "4644be00-82f5-11ec-8bb0-5254008afee6",
-                    "label": "Photographs",
+                    "label": {
+                        "en": "Photographs"
+                    },
                     "node_id": "c26e4a9c-82db-11ec-b00b-5254008afee6",
                     "sortorder": 0,
                     "visible": true,
@@ -200,15 +246,27 @@
                 {
                     "card_id": "0d42c5be-83d8-11ec-9043-5254008afee6",
                     "config": {
-                        "defaultValue": "",
+                        "defaultValue": {
+                            "en": {
+                                "direction": "ltr",
+                                "value": ""
+                            }
+                        },
+                        "i18n_properties": [
+                            "placeholder"
+                        ],
                         "label": "Detailed Description of the Location",
                         "maxLength": null,
-                        "placeholder": "Enter text",
+                        "placeholder": {
+                            "en": "Enter text"
+                        },
                         "uneditable": false,
                         "width": "100%"
                     },
                     "id": "7b628c12-83da-11ec-805f-5254008afee6",
-                    "label": "Detailed Description of the Location",
+                    "label": {
+                        "en": "Detailed Description of the Location"
+                    },
                     "node_id": "88058110-83d8-11ec-be0e-5254008afee6",
                     "sortorder": 1,
                     "visible": true,
@@ -217,15 +275,27 @@
                 {
                     "card_id": "0d42c5be-83d8-11ec-9043-5254008afee6",
                     "config": {
-                        "defaultValue": "",
+                        "defaultValue": {
+                            "en": {
+                                "direction": "ltr",
+                                "value": ""
+                            }
+                        },
+                        "i18n_properties": [
+                            "placeholder"
+                        ],
                         "label": "Additional Information",
                         "maxLength": null,
-                        "placeholder": "Enter text",
+                        "placeholder": {
+                            "en": "Enter text"
+                        },
                         "uneditable": false,
                         "width": "100%"
                     },
                     "id": "7b63076e-83da-11ec-805f-5254008afee6",
-                    "label": "Additional Information",
+                    "label": {
+                        "en": "Additional Information"
+                    },
                     "node_id": "8731fef8-83d8-11ec-be0e-5254008afee6",
                     "sortorder": 2,
                     "visible": true,
@@ -234,15 +304,27 @@
                 {
                     "card_id": "ac37dbb2-82db-11ec-96d0-5254008afee6",
                     "config": {
-                        "defaultValue": "",
+                        "defaultValue": {
+                            "en": {
+                                "direction": "ltr",
+                                "value": ""
+                            }
+                        },
+                        "i18n_properties": [
+                            "placeholder"
+                        ],
                         "label": "Observer Name",
                         "maxLength": null,
-                        "placeholder": "Enter text",
+                        "placeholder": {
+                            "en": "Enter text"
+                        },
                         "uneditable": false,
                         "width": "100%"
                     },
                     "id": "9f064876-837f-11ec-9fde-5254008afee6",
-                    "label": "Observer Name",
+                    "label": {
+                        "en": "Observer Name"
+                    },
                     "node_id": "f5d959d0-82db-11ec-9073-5254008afee6",
                     "sortorder": 0,
                     "visible": true,
@@ -251,15 +333,27 @@
                 {
                     "card_id": "ac37dbb2-82db-11ec-96d0-5254008afee6",
                     "config": {
-                        "defaultValue": "",
+                        "defaultValue": {
+                            "en": {
+                                "direction": "ltr",
+                                "value": ""
+                            }
+                        },
+                        "i18n_properties": [
+                            "placeholder"
+                        ],
                         "label": "Phone Number",
                         "maxLength": null,
-                        "placeholder": "Enter text",
+                        "placeholder": {
+                            "en": "Enter text"
+                        },
                         "uneditable": false,
                         "width": "100%"
                     },
                     "id": "9f06c436-837f-11ec-9fde-5254008afee6",
-                    "label": "Phone Number",
+                    "label": {
+                        "en": "Phone Number"
+                    },
                     "node_id": "82db146a-82e4-11ec-9073-5254008afee6",
                     "sortorder": 1,
                     "visible": true,
@@ -268,15 +362,27 @@
                 {
                     "card_id": "ac37dbb2-82db-11ec-96d0-5254008afee6",
                     "config": {
-                        "defaultValue": "",
+                        "defaultValue": {
+                            "en": {
+                                "direction": "ltr",
+                                "value": ""
+                            }
+                        },
+                        "i18n_properties": [
+                            "placeholder"
+                        ],
                         "label": "Email",
                         "maxLength": null,
-                        "placeholder": "Enter text",
+                        "placeholder": {
+                            "en": "Enter text"
+                        },
                         "uneditable": false,
                         "width": "100%"
                     },
                     "id": "9f0723fe-837f-11ec-9fde-5254008afee6",
-                    "label": "Email",
+                    "label": {
+                        "en": "Email"
+                    },
                     "node_id": "fdece408-82e4-11ec-8bb0-5254008afee6",
                     "sortorder": 2,
                     "visible": true,
@@ -286,12 +392,19 @@
                     "card_id": "cbe9538a-83be-11ec-805f-5254008afee6",
                     "config": {
                         "defaultValue": "",
+                        "i18n_properties": [
+                            "placeholder"
+                        ],
                         "label": "Geometry Qualifier",
                         "options": [],
-                        "placeholder": "Select an option"
+                        "placeholder": {
+                            "en": "Select an option"
+                        }
                     },
                     "id": "b6995568-83da-11ec-88cb-5254008afee6",
-                    "label": "Geometry Qualifier",
+                    "label": {
+                        "en": "Geometry Qualifier"
+                    },
                     "node_id": "e3684412-83d7-11ec-ac3a-5254008afee6",
                     "sortorder": 1,
                     "visible": true,
@@ -332,7 +445,9 @@
                         "zoom": 10
                     },
                     "id": "b699bdd2-83da-11ec-88cb-5254008afee6",
-                    "label": "Spatial Coordinates",
+                    "label": {
+                        "en": "Spatial Coordinates"
+                    },
                     "node_id": "cbe9284c-83be-11ec-805f-5254008afee6",
                     "sortorder": 0,
                     "visible": true,
@@ -343,7 +458,9 @@
             "config": {},
             "deploymentdate": null,
             "deploymentfile": null,
-            "description": "",
+            "description": {
+                "en": ""
+            },
             "edges": [
                 {
                     "description": null,
@@ -448,7 +565,6 @@
             "functions_x_graphs": [
                 {
                     "config": {
-                        "module": "arches.app.functions.primary_descriptors",
                         "class_name": "PrimaryDescriptorsFunction",
                         "descriptor_types": {
                             "description": {
@@ -464,20 +580,22 @@
                                 "string_template": "<Observer Name>"
                             }
                         },
+                        "module": "arches.app.functions.primary_descriptors",
                         "triggering_nodegroups": []
                     },
                     "function_id": "60000000-0000-0000-0000-000000000001",
                     "graph_id": "82efcd14-82db-11ec-b8e6-5254008afee6",
-                    "id": "578b8e6e-9e43-11ec-aa11-5254008afee6"
+                    "id": "a414b031-13aa-49b6-a614-a3d14d291f3e"
                 }
             ],
             "graphid": "82efcd14-82db-11ec-b8e6-5254008afee6",
             "iconclass": "fa fa-envelope",
             "is_editable": true,
-            "isactive": true,
             "isresource": true,
             "jsonldcontext": null,
-            "name": "BC Fossil Public Submission Resource Model",
+            "name": {
+                "en": "BC Fossil Public Submission Resource Model"
+            },
             "nodegroups": [
                 {
                     "cardinality": "1",
@@ -512,12 +630,14 @@
             ],
             "nodes": [
                 {
-                    "config": null,
+                    "alias": "location_description_assignment",
+                    "config": {},
                     "datatype": "semantic",
                     "description": null,
                     "exportable": false,
                     "fieldname": null,
                     "graph_id": "82efcd14-82db-11ec-b8e6-5254008afee6",
+                    "hascustomalias": false,
                     "is_collector": true,
                     "isrequired": false,
                     "issearchable": true,
@@ -530,12 +650,14 @@
                     "sortorder": 0
                 },
                 {
-                    "config": null,
+                    "alias": "phone_number",
+                    "config": {},
                     "datatype": "string",
                     "description": null,
                     "exportable": false,
                     "fieldname": null,
                     "graph_id": "82efcd14-82db-11ec-b8e6-5254008afee6",
+                    "hascustomalias": false,
                     "is_collector": false,
                     "isrequired": false,
                     "issearchable": true,
@@ -548,12 +670,14 @@
                     "sortorder": 0
                 },
                 {
-                    "config": null,
+                    "alias": "bc_fossil_public_submission_resource_model",
+                    "config": {},
                     "datatype": "semantic",
                     "description": "",
                     "exportable": false,
                     "fieldname": null,
                     "graph_id": "82efcd14-82db-11ec-b8e6-5254008afee6",
+                    "hascustomalias": false,
                     "is_collector": false,
                     "isrequired": false,
                     "issearchable": true,
@@ -566,12 +690,14 @@
                     "sortorder": 0
                 },
                 {
-                    "config": null,
+                    "alias": "location_additional_information",
+                    "config": {},
                     "datatype": "string",
                     "description": null,
                     "exportable": false,
                     "fieldname": null,
                     "graph_id": "82efcd14-82db-11ec-b8e6-5254008afee6",
+                    "hascustomalias": false,
                     "is_collector": false,
                     "isrequired": false,
                     "issearchable": true,
@@ -584,12 +710,14 @@
                     "sortorder": 0
                 },
                 {
-                    "config": null,
+                    "alias": "location_description",
+                    "config": {},
                     "datatype": "string",
                     "description": null,
                     "exportable": false,
                     "fieldname": null,
                     "graph_id": "82efcd14-82db-11ec-b8e6-5254008afee6",
+                    "hascustomalias": false,
                     "is_collector": false,
                     "isrequired": false,
                     "issearchable": true,
@@ -602,6 +730,7 @@
                     "sortorder": 0
                 },
                 {
+                    "alias": "location_map_file",
                     "config": {
                         "activateMax": false,
                         "maxFileSize": null,
@@ -612,6 +741,7 @@
                     "exportable": false,
                     "fieldname": null,
                     "graph_id": "82efcd14-82db-11ec-b8e6-5254008afee6",
+                    "hascustomalias": false,
                     "is_collector": true,
                     "isrequired": false,
                     "issearchable": true,
@@ -624,12 +754,14 @@
                     "sortorder": 0
                 },
                 {
-                    "config": null,
+                    "alias": "observed_by",
+                    "config": {},
                     "datatype": "semantic",
                     "description": "Person that made the observation",
                     "exportable": false,
                     "fieldname": null,
                     "graph_id": "82efcd14-82db-11ec-b8e6-5254008afee6",
+                    "hascustomalias": false,
                     "is_collector": true,
                     "isrequired": false,
                     "issearchable": true,
@@ -642,6 +774,7 @@
                     "sortorder": 0
                 },
                 {
+                    "alias": "photographs",
                     "config": {
                         "activateMax": false,
                         "maxFileSize": null,
@@ -652,6 +785,7 @@
                     "exportable": false,
                     "fieldname": null,
                     "graph_id": "82efcd14-82db-11ec-b8e6-5254008afee6",
+                    "hascustomalias": false,
                     "is_collector": true,
                     "isrequired": false,
                     "issearchable": true,
@@ -664,6 +798,7 @@
                     "sortorder": 0
                 },
                 {
+                    "alias": "spatial_coordinates",
                     "config": {
                         "addToMap": false,
                         "advancedStyle": "",
@@ -693,6 +828,7 @@
                     "exportable": false,
                     "fieldname": null,
                     "graph_id": "82efcd14-82db-11ec-b8e6-5254008afee6",
+                    "hascustomalias": false,
                     "is_collector": true,
                     "isrequired": false,
                     "issearchable": true,
@@ -705,6 +841,7 @@
                     "sortorder": 0
                 },
                 {
+                    "alias": "geometry_qualifier",
                     "config": {
                         "rdmCollection": "97a4cbc3-59e5-4271-b849-a8635d137d26"
                     },
@@ -713,6 +850,7 @@
                     "exportable": false,
                     "fieldname": null,
                     "graph_id": "82efcd14-82db-11ec-b8e6-5254008afee6",
+                    "hascustomalias": false,
                     "is_collector": false,
                     "isrequired": false,
                     "issearchable": true,
@@ -725,12 +863,14 @@
                     "sortorder": 0
                 },
                 {
-                    "config": null,
+                    "alias": "observer_name",
+                    "config": {},
                     "datatype": "string",
                     "description": null,
                     "exportable": false,
                     "fieldname": null,
                     "graph_id": "82efcd14-82db-11ec-b8e6-5254008afee6",
+                    "hascustomalias": false,
                     "is_collector": false,
                     "isrequired": false,
                     "issearchable": true,
@@ -743,12 +883,14 @@
                     "sortorder": 0
                 },
                 {
-                    "config": null,
+                    "alias": "email",
+                    "config": {},
                     "datatype": "string",
                     "description": null,
                     "exportable": false,
                     "fieldname": null,
                     "graph_id": "82efcd14-82db-11ec-b8e6-5254008afee6",
+                    "hascustomalias": false,
                     "is_collector": false,
                     "isrequired": false,
                     "issearchable": true,
@@ -762,15 +904,24 @@
                 }
             ],
             "ontology_id": "e6e8db47-2ccf-11e6-927e-b8f6b115d7dd",
+            "publication": {
+                "graph_id": "82efcd14-82db-11ec-b8e6-5254008afee6",
+                "notes": null,
+                "publicationid": "61e9b9ca-53f7-11ed-b5f0-5254004d77d3",
+                "published_time": "2022-10-24T18:55:48.308",
+                "user_id": 1
+            },
             "relatable_resource_model_ids": [],
             "resource_2_resource_constraints": [],
             "root": {
-                "config": null,
+                "alias": "bc_fossil_public_submission_resource_model",
+                "config": {},
                 "datatype": "semantic",
                 "description": "",
                 "exportable": false,
                 "fieldname": null,
                 "graph_id": "82efcd14-82db-11ec-b8e6-5254008afee6",
+                "hascustomalias": false,
                 "is_collector": false,
                 "isrequired": false,
                 "issearchable": true,
@@ -782,15 +933,17 @@
                 "sortorder": 0
             },
             "slug": null,
-            "subtitle": "",
+            "subtitle": {
+                "en": ""
+            },
             "template_id": "50000000-0000-0000-0000-000000000001",
             "version": ""
         }
     ],
     "metadata": {
-        "db": "PostgreSQL 12.6 on x86_64-pc-linux-gnu, compiled by gcc (GCC) 4.8.5 20150623 (Red Hat 4.8.5-44), 64-bit",
-        "git hash": "d45bf14 2022-01-13 14:21:27 -0800",
+        "db": "PostgreSQL 12.12 on x86_64-pc-linux-gnu, compiled by gcc (GCC) 4.8.5 20150623 (Red Hat 4.8.5-44), 64-bit",
+        "git hash": "/bin/sh: git: command not found",
         "os": "Linux",
-        "os version": "3.10.0-1127.el7.x86_64"
+        "os version": "3.10.0-1160.76.1.el7.x86_64"
     }
 }
