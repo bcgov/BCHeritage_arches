@@ -7,6 +7,7 @@ define([
     'viewmodels/alert',
     'search-components',
     'views/base-manager',
+    'datatype-config-components',
     'views/components/simple-switch'
 ], function($, _, ko, koMapping, arches, AlertViewModel, SearchComponents, BaseManagerView) {
     // a method to track the old and new values of a subscribable
