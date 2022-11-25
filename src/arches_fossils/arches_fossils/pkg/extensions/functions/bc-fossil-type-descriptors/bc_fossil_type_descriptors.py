@@ -42,7 +42,7 @@ details = {
 
 
 class BCFossilTypeDescriptors(AbstractPrimaryDescriptorsFunction):
-    _type_graph_name = {"en": "BC Fossil Type Model"}
+    _type_graph_name = {"en": "BC Fossil Type"}
     _datatype_factory = None
     _parent_name_node = None
     _taxonomic_rank_node = None
