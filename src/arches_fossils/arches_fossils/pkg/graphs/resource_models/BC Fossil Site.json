@@ -168,7 +168,7 @@
                         "en": "Collection Events"
                     },
                     "nodegroup_id": "64fead5e-9e40-11ec-b5f2-5254008afee6",
-                    "sortorder": 4,
+                    "sortorder": 5,
                     "visible": true
                 },
                 {
@@ -243,6 +243,40 @@
                     },
                     "nodegroup_id": "478b47c2-10a7-11ec-98c9-5254008afee6",
                     "sortorder": 0,
+                    "visible": true
+                },
+                {
+                    "active": true,
+                    "cardid": "d08d1e4c-70d7-11ed-9c1b-5254004d77d3",
+                    "component_id": "f05e4d3a-53c1-11e8-b0ea-784f435179ea",
+                    "config": null,
+                    "constraints": [
+                        {
+                            "card_id": "d08d1e4c-70d7-11ed-9c1b-5254004d77d3",
+                            "constraintid": "0685f8c5-8a0c-427d-afa1-f29a7057114f",
+                            "nodes": [],
+                            "uniquetoallinstances": false
+                        }
+                    ],
+                    "cssclass": null,
+                    "description": "",
+                    "graph_id": "fac1b1b4-1034-11ec-8a7a-5254008afee6",
+                    "helpenabled": false,
+                    "helptext": {
+                        "en": ""
+                    },
+                    "helptitle": {
+                        "en": ""
+                    },
+                    "instructions": {
+                        "en": ""
+                    },
+                    "is_editable": true,
+                    "name": {
+                        "en": "Significance Ranking Code"
+                    },
+                    "nodegroup_id": "d08d1b72-70d7-11ed-9c1b-5254004d77d3",
+                    "sortorder": 4,
                     "visible": true
                 },
                 {
@@ -366,6 +400,28 @@
                     "sortorder": 0,
                     "visible": true,
                     "widget_id": "10000000-0000-0000-0000-000000000001"
+                },
+                {
+                    "card_id": "d08d1e4c-70d7-11ed-9c1b-5254004d77d3",
+                    "config": {
+                        "defaultValue": "",
+                        "i18n_properties": [
+                            "placeholder"
+                        ],
+                        "label": "Significance Ranking Code",
+                        "options": [],
+                        "placeholder": {
+                            "en": "Select an option"
+                        }
+                    },
+                    "id": "3443ba14-b211-4ed3-a55b-86fb1055a141",
+                    "label": {
+                        "en": "Significance Ranking Code"
+                    },
+                    "node_id": "d08d1b72-70d7-11ed-9c1b-5254004d77d3",
+                    "sortorder": 0,
+                    "visible": true,
+                    "widget_id": "10000000-0000-0000-0000-000000000002"
                 },
                 {
                     "card_id": "f71e22ba-10aa-11ec-b169-5254008afee6",
@@ -506,6 +562,149 @@
                     "sortorder": 0,
                     "visible": true,
                     "widget_id": "10000000-0000-0000-0000-000000000001"
+                },
+                {
+                    "card_id": "d08d1e4c-70d7-11ed-9c1b-5254004d77d3",
+                    "config": {
+                        "defaultValue": "",
+                        "i18n_properties": [
+                            "placeholder"
+                        ],
+                        "label": "Significance Ranking Details",
+                        "options": [
+                            {
+                                "children": [],
+                                "collector": "",
+                                "conceptid": "9e3150c7-8350-4373-ac78-4da05a9b8b2e",
+                                "id": "1ba9d078-f47d-4a9d-965c-ae0f8588d97b",
+                                "sortorder": "",
+                                "text": "Abundance value"
+                            },
+                            {
+                                "children": [],
+                                "collector": "",
+                                "conceptid": "b5a7541e-9f0f-4bcb-8499-6469c056f730",
+                                "id": "739225a4-6b77-44af-8449-ff49e453a5ec",
+                                "sortorder": "",
+                                "text": "Age determination"
+                            },
+                            {
+                                "children": [],
+                                "collector": "",
+                                "conceptid": "37546e29-5c2c-4eb8-96ef-0ce85c62b0f2",
+                                "id": "2424a415-24b1-42ec-977d-10effccf8696",
+                                "sortorder": "",
+                                "text": "Diversity value"
+                            },
+                            {
+                                "children": [],
+                                "collector": "",
+                                "conceptid": "ee4c9b5e-49bb-4397-970f-b54112218afa",
+                                "id": "5b20e860-5f4e-46c8-9645-8b1db65aae1a",
+                                "sortorder": "",
+                                "text": "Exceptional preservation"
+                            },
+                            {
+                                "children": [],
+                                "collector": "",
+                                "conceptid": "96941abf-ab36-4acb-8717-485ca84d7ccf",
+                                "id": "341b60a6-2376-4a7c-a0f5-a8ef007892eb",
+                                "sortorder": "",
+                                "text": "Heritage value"
+                            },
+                            {
+                                "children": [],
+                                "collector": "",
+                                "conceptid": "d8c5c009-7326-45f8-ae3d-8d58957a602f",
+                                "id": "36e6e81f-7527-46d9-a9a9-5f0c7e19b89c",
+                                "sortorder": "",
+                                "text": "Holotype"
+                            },
+                            {
+                                "children": [],
+                                "collector": "",
+                                "conceptid": "79120b00-6978-4189-b957-486b32fa2771",
+                                "id": "7702c30c-3067-4910-a4a9-e4fefc60cb16",
+                                "sortorder": "",
+                                "text": "Paleobiogeographic interpretation"
+                            },
+                            {
+                                "children": [],
+                                "collector": "",
+                                "conceptid": "41f0f998-ff59-4323-a6e3-2293f55a2d44",
+                                "id": "42fa8258-5121-4bff-8e78-3784fface31d",
+                                "sortorder": "",
+                                "text": "Paleoclimate interpretation"
+                            },
+                            {
+                                "children": [],
+                                "collector": "",
+                                "conceptid": "4b564b35-4c73-404c-9de9-cc6149b6b994",
+                                "id": "ee81274b-8807-43dc-b056-4cddccb2a911",
+                                "sortorder": "",
+                                "text": "Paleoecological interpretation"
+                            },
+                            {
+                                "children": [],
+                                "collector": "",
+                                "conceptid": "7887a861-a64e-4354-bea8-1ed713a161ab",
+                                "id": "9857ab3b-b571-4c67-a32c-772ad2e30307",
+                                "sortorder": "",
+                                "text": "Paleoenvironmental interpretation"
+                            },
+                            {
+                                "children": [],
+                                "collector": "",
+                                "conceptid": "54c45925-d3cd-47e5-b0c5-3b08579995e4",
+                                "id": "82062d1e-7393-458b-97c9-0e7e5eca5e42",
+                                "sortorder": "",
+                                "text": "Paleogeographic interpretation"
+                            },
+                            {
+                                "children": [],
+                                "collector": "",
+                                "conceptid": "4fb09e05-be19-47f5-81e9-e8ddc2260b70",
+                                "id": "26e2f466-314a-4844-a877-28fc277dd9ad",
+                                "sortorder": "",
+                                "text": "Rare"
+                            },
+                            {
+                                "children": [],
+                                "collector": "",
+                                "conceptid": "0a475a91-19ab-4c48-8212-c717ba29ebc6",
+                                "id": "71678bb8-1809-4f2e-bccd-604bf7ae733f",
+                                "sortorder": "",
+                                "text": "Taxonomic value"
+                            },
+                            {
+                                "children": [],
+                                "collector": "",
+                                "conceptid": "5da69431-8970-43d0-9c75-7ef67b1d45d9",
+                                "id": "d5d39cc2-ccfc-4522-8061-f392da4961ab",
+                                "sortorder": "",
+                                "text": "Vertebrate"
+                            },
+                            {
+                                "children": [],
+                                "collector": "",
+                                "conceptid": "747e4ed6-db4d-4bc9-bea4-96132346ba77",
+                                "id": "94154c32-8e7b-4244-a921-52959c85ba7e",
+                                "sortorder": "",
+                                "text": "youngest reported occurrence"
+                            }
+                        ],
+                        "placeholder": {
+                            "en": "Select an option"
+                        }
+                    },
+                    "id": "a39aaef5-6ac2-4a27-85f4-3603099dedeb",
+                    "label": {
+                        "en": "Significance Ranking Details"
+                    },
+                    "node_id": "d08d204a-70d7-11ed-9c1b-5254004d77d3",
+                    "sortorder": 1,
+                    "visible": true,
+                    "widget_id": "10000000-0000-0000-0000-000000000013"
                 },
                 {
                     "card_id": "2336b4f0-1035-11ec-a3aa-5254008afee6",
@@ -694,6 +893,15 @@
                 },
                 {
                     "description": null,
+                    "domainnode_id": "fac1a660-1034-11ec-8a7a-5254008afee6",
+                    "edgeid": "223b2c2a-1c54-4c8a-a95e-41b50e38dbd6",
+                    "graph_id": "fac1b1b4-1034-11ec-8a7a-5254008afee6",
+                    "name": null,
+                    "ontologyproperty": "http://www.cidoc-crm.org/cidoc-crm/P132_overlaps_with",
+                    "rangenode_id": "d08d1b72-70d7-11ed-9c1b-5254004d77d3"
+                },
+                {
+                    "description": null,
                     "domainnode_id": "2336b112-1035-11ec-a3aa-5254008afee6",
                     "edgeid": "2336e7b8-1035-11ec-a3aa-5254008afee6",
                     "graph_id": "fac1b1b4-1034-11ec-8a7a-5254008afee6",
@@ -784,6 +992,15 @@
                 },
                 {
                     "description": null,
+                    "domainnode_id": "d08d1b72-70d7-11ed-9c1b-5254004d77d3",
+                    "edgeid": "d08d3b48-70d7-11ed-9c1b-5254004d77d3",
+                    "graph_id": "fac1b1b4-1034-11ec-8a7a-5254008afee6",
+                    "name": null,
+                    "ontologyproperty": "http://www.cidoc-crm.org/cidoc-crm/P15i_influenced",
+                    "rangenode_id": "d08d204a-70d7-11ed-9c1b-5254004d77d3"
+                },
+                {
+                    "description": null,
                     "domainnode_id": "fac1a660-1034-11ec-8a7a-5254008afee6",
                     "edgeid": "f71e62ca-10aa-11ec-b169-5254008afee6",
                     "graph_id": "fac1b1b4-1034-11ec-8a7a-5254008afee6",
@@ -815,7 +1032,7 @@
                     },
                     "function_id": "60000000-0000-0000-0000-000000000001",
                     "graph_id": "fac1b1b4-1034-11ec-8a7a-5254008afee6",
-                    "id": "045ec779-8470-4cb4-85bc-dae26f67d494"
+                    "id": "6f77af48-6632-4e50-99a9-4c96a6a8cd77"
                 }
             ],
             "graphid": "fac1b1b4-1034-11ec-8a7a-5254008afee6",
@@ -872,6 +1089,12 @@
                 {
                     "cardinality": "1",
                     "legacygroupid": null,
+                    "nodegroupid": "d08d1b72-70d7-11ed-9c1b-5254004d77d3",
+                    "parentnodegroup_id": null
+                },
+                {
+                    "cardinality": "1",
+                    "legacygroupid": null,
                     "nodegroupid": "f71decaa-10aa-11ec-b169-5254008afee6",
                     "parentnodegroup_id": null
                 }
@@ -895,7 +1118,7 @@
                     "nodeid": "1224f846-ab96-11ec-8eb6-5254008afee6",
                     "ontologyclass": "http://www.cidoc-crm.org/cidoc-crm/E33_Linguistic_Object",
                     "parentproperty": "http://www.cidoc-crm.org/cidoc-crm/P129i_is_subject_of",
-                    "sortorder": 2
+                    "sortorder": 0
                 },
                 {
                     "alias": "description",
@@ -957,7 +1180,7 @@
                     "nodeid": "23368b42-1035-11ec-a3aa-5254008afee6",
                     "ontologyclass": "http://www.cidoc-crm.org/cidoc-crm/E53_Place",
                     "parentproperty": "http://www.cidoc-crm.org/cidoc-crm/P156_occupies",
-                    "sortorder": 1
+                    "sortorder": 0
                 },
                 {
                     "alias": "spatial_coordinates_geometry",
@@ -1113,7 +1336,7 @@
                     "nodeid": "64fead5e-9e40-11ec-b5f2-5254008afee6",
                     "ontologyclass": "http://www.cidoc-crm.org/cidoc-crm/E5_Event",
                     "parentproperty": "http://www.cidoc-crm.org/cidoc-crm/P12i_was_present_at",
-                    "sortorder": 5
+                    "sortorder": 0
                 },
                 {
                     "alias": "fossil_site_name",
@@ -1182,6 +1405,50 @@
                     "sortorder": 0
                 },
                 {
+                    "alias": "significance_ranking_code",
+                    "config": {
+                        "rdmCollection": "43b6403a-9f4a-4c27-ab31-7dafae0b2980"
+                    },
+                    "datatype": "concept",
+                    "description": "",
+                    "exportable": false,
+                    "fieldname": null,
+                    "graph_id": "fac1b1b4-1034-11ec-8a7a-5254008afee6",
+                    "hascustomalias": false,
+                    "is_collector": true,
+                    "isrequired": false,
+                    "issearchable": true,
+                    "istopnode": false,
+                    "name": "Significance Ranking Code",
+                    "nodegroup_id": "d08d1b72-70d7-11ed-9c1b-5254004d77d3",
+                    "nodeid": "d08d1b72-70d7-11ed-9c1b-5254004d77d3",
+                    "ontologyclass": "http://www.cidoc-crm.org/cidoc-crm/E13_Attribute_Assignment",
+                    "parentproperty": "http://www.cidoc-crm.org/cidoc-crm/P132_overlaps_with",
+                    "sortorder": 0
+                },
+                {
+                    "alias": "significance_ranking_details",
+                    "config": {
+                        "rdmCollection": "5776a0d2-0e15-45ca-9d9d-7a007bd90f67"
+                    },
+                    "datatype": "concept-list",
+                    "description": null,
+                    "exportable": false,
+                    "fieldname": null,
+                    "graph_id": "fac1b1b4-1034-11ec-8a7a-5254008afee6",
+                    "hascustomalias": false,
+                    "is_collector": false,
+                    "isrequired": false,
+                    "issearchable": true,
+                    "istopnode": false,
+                    "name": "Significance Ranking Details",
+                    "nodegroup_id": "d08d1b72-70d7-11ed-9c1b-5254004d77d3",
+                    "nodeid": "d08d204a-70d7-11ed-9c1b-5254004d77d3",
+                    "ontologyclass": "http://www.ics.forth.gr/isl/CRMsci/S6_Data_Evaluation",
+                    "parentproperty": "http://www.cidoc-crm.org/cidoc-crm/P15i_influenced",
+                    "sortorder": 0
+                },
+                {
                     "alias": "fossil_sub_sites",
                     "config": {
                         "graphs": [
@@ -1235,8 +1502,8 @@
             "publication": {
                 "graph_id": "fac1b1b4-1034-11ec-8a7a-5254008afee6",
                 "notes": null,
-                "publicationid": "1ebd264c-662a-11ed-8b68-5254004d77d3",
-                "published_time": "2022-11-16T21:44:20.872",
+                "publicationid": "fb838942-70d7-11ed-a1ed-5254004d77d3",
+                "published_time": "2022-11-30T11:54:05.833",
                 "user_id": 1
             },
             "relatable_resource_model_ids": [],

@@ -49,8 +49,8 @@ class BCFossilsDescriptors(AbstractPrimaryDescriptorsFunction):
     _collected_fossils_node = None
     _collection_event_graph_id = None
     _coll_event_samples_values_config = None
-    _coll_event_popup_order = ["Detailed Location", "Formation", "Period", "Fossils Collected"]
-    _coll_event_card_order = ["Detailed Location", "Period", "Fossils Collected"]
+    _coll_event_popup_order = ["Detailed Location", "Formation", "Period", "Samples Collected"]
+    _coll_event_card_order = ["Detailed Location", "Period", "Samples Collected"]
 
     @staticmethod
     def initialize_static_data():
@@ -63,7 +63,7 @@ class BCFossilsDescriptors(AbstractPrimaryDescriptorsFunction):
             graph__name__contains=BCFossilsDescriptors._sample_graph_name
         ).first()
         BCFossilsDescriptors._collected_fossils_node = models.Node.objects.filter(
-            alias="fossils_collected",
+            alias="samples_collected",
         ).first()
         BCFossilsDescriptors._collection_event_graph_id = \
         models.GraphModel.objects.filter(
