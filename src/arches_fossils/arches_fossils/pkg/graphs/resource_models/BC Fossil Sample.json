@@ -103,7 +103,7 @@
                     "instructions": {
                         "en": ""
                     },
-                    "is_editable": false,
+                    "is_editable": true,
                     "name": {
                         "en": "Stratigraphy"
                     },
@@ -164,7 +164,7 @@
                     "instructions": {
                         "en": ""
                     },
-                    "is_editable": false,
+                    "is_editable": true,
                     "name": {
                         "en": "Fossil Occurrence Site ID"
                     },
@@ -225,7 +225,7 @@
                     "instructions": {
                         "en": ""
                     },
-                    "is_editable": false,
+                    "is_editable": true,
                     "name": {
                         "en": "Fossil ID"
                     },
@@ -2072,18 +2072,6 @@
             "functions_x_graphs": [
                 {
                     "config": {
-                        "node_id": "7f2c823e-6c51-11ed-9b7d-5254004d77d3",
-                        "triggering_nodegroups": [
-                            "7f2c2dde-6c51-11ed-9b7d-5254004d77d3"
-                        ],
-                        "unique_value": true
-                    },
-                    "function_id": "60000000-0000-0000-0000-000000002001",
-                    "graph_id": "7f2c2082-6c51-11ed-9b7d-5254004d77d3",
-                    "id": "47e57258-6a64-4c18-b71e-a987233967fd"
-                },
-                {
-                    "config": {
                         "class_name": "PrimaryDescriptorsFunction",
                         "descriptor_types": {
                             "description": {
@@ -2104,12 +2092,24 @@
                     },
                     "function_id": "60000000-0000-0000-0000-000000000001",
                     "graph_id": "7f2c2082-6c51-11ed-9b7d-5254004d77d3",
-                    "id": "8e7b6138-6f46-4137-8c96-041bfa3534d5"
+                    "id": "69fae865-afa0-415e-8a46-d55f4e18f03c"
+                },
+                {
+                    "config": {
+                        "node_id": "7f2c823e-6c51-11ed-9b7d-5254004d77d3",
+                        "triggering_nodegroups": [
+                            "7f2c2dde-6c51-11ed-9b7d-5254004d77d3"
+                        ],
+                        "unique_value": true
+                    },
+                    "function_id": "60000000-0000-0000-0000-000000002001",
+                    "graph_id": "7f2c2082-6c51-11ed-9b7d-5254004d77d3",
+                    "id": "9b369334-25f7-4cb9-a1c9-653cdd36e042"
                 }
             ],
             "graphid": "7f2c2082-6c51-11ed-9b7d-5254004d77d3",
             "iconclass": "fa fa-puzzle-piece",
-            "is_editable": false,
+            "is_editable": true,
             "isresource": true,
             "jsonldcontext": null,
             "name": {
@@ -3032,7 +3032,7 @@
                 {
                     "alias": "trace_fossil",
                     "config": {
-                        "rdmCollection": "deef968f-74b4-4652-b5c3-01b0b05f5929"
+                        "rdmCollection": "735326ec-5ed9-4a08-a922-05b238c33c83"
                     },
                     "datatype": "concept",
                     "description": null,
@@ -3318,7 +3318,7 @@
                 {
                     "alias": "fossil_part",
                     "config": {
-                        "rdmCollection": "4259d07f-dce1-4722-91bd-c95ea1c16718"
+                        "rdmCollection": "6c3d56ce-9f5a-417c-8e47-cbe6a1369acf"
                     },
                     "datatype": "concept",
                     "description": null,
@@ -3710,8 +3710,8 @@
             "publication": {
                 "graph_id": "7f2c2082-6c51-11ed-9b7d-5254004d77d3",
                 "notes": null,
-                "publicationid": "8008ef72-71a5-11ed-a6a5-5254004d77d3",
-                "published_time": "2022-12-01T12:25:14.996",
+                "publicationid": "cb2857a0-75c8-11ed-8a4d-5254004d77d3",
+                "published_time": "2022-12-06T18:47:58.068",
                 "user_id": 1
             },
             "relatable_resource_model_ids": [],
