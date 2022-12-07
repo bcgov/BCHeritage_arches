@@ -11,10 +11,12 @@ arches_fossils/settings_local.py
 arches_fossils/business_data/*.csv
 arches_fossils/mangement/data/*.py
 
-arches_bchp/staticfiles
-arches_bchp/webpack/webpack-stats.json
-arches_bchp/webpack/webpack-user-config.js
+arches_fossils/staticfiles
+arches_fossils/webpack/webpack-stats.json
+arches_fossils/webpack/webpack-user-config.js
 node_modules
 
+# Files copied from arches_common
+arches_fossils/media/css/project.css
 .vscode/
 CACHE
