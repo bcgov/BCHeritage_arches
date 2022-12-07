@@ -103,7 +103,7 @@
                     "instructions": {
                         "en": ""
                     },
-                    "is_editable": false,
+                    "is_editable": true,
                     "name": {
                         "en": "Stratigraphy"
                     },
@@ -130,7 +130,7 @@
                     "instructions": {
                         "en": ""
                     },
-                    "is_editable": false,
+                    "is_editable": true,
                     "name": {
                         "en": "Repository Information"
                     },
@@ -164,7 +164,7 @@
                     "instructions": {
                         "en": ""
                     },
-                    "is_editable": false,
+                    "is_editable": true,
                     "name": {
                         "en": "Fossil Occurrence Site ID"
                     },
@@ -191,7 +191,7 @@
                     "instructions": {
                         "en": ""
                     },
-                    "is_editable": false,
+                    "is_editable": true,
                     "name": {
                         "en": "Geological Age"
                     },
@@ -225,7 +225,7 @@
                     "instructions": {
                         "en": ""
                     },
-                    "is_editable": false,
+                    "is_editable": true,
                     "name": {
                         "en": "Fossil ID"
                     },
@@ -259,7 +259,7 @@
                     "instructions": {
                         "en": ""
                     },
-                    "is_editable": false,
+                    "is_editable": true,
                     "name": {
                         "en": "BC Fossil Identification"
                     },
@@ -554,7 +554,7 @@
                         "i18n_properties": [
                             "placeholder"
                         ],
-                        "label": "Geological Group",
+                        "label": "Geological Group or Lithodemic/Lithotectonic Grouping",
                         "options": [],
                         "placeholder": {
                             "en": "Select an option"
@@ -562,7 +562,7 @@
                     },
                     "id": "711c425e-6f46-11ed-9e7f-5254004d77d3",
                     "label": {
-                        "en": "Geological Group"
+                        "en": "Geological Group or Lithodemic/Lithotectonic Grouping"
                     },
                     "node_id": "711c30ac-6f46-11ed-9e7f-5254004d77d3",
                     "sortorder": 0,
@@ -573,11 +573,11 @@
                     "card_id": "711c2e68-6f46-11ed-9e7f-5254004d77d3",
                     "config": {
                         "defaultValue": null,
-                        "label": "Stratigraphic Name Uncertain"
+                        "label": "Informal Name or Map Unit Uncertain"
                     },
                     "id": "711c4466-6f46-11ed-9e7f-5254004d77d3",
                     "label": {
-                        "en": "Stratigraphic Name Uncertain"
+                        "en": "Informal Name or Map Unit Uncertain"
                     },
                     "node_id": "711c373c-6f46-11ed-9e7f-5254004d77d3",
                     "sortorder": 7,
@@ -655,7 +655,7 @@
                         "i18n_properties": [
                             "placeholder"
                         ],
-                        "label": "Other Stratigraphic Name",
+                        "label": "Informal Name or Map Unit",
                         "maxLength": null,
                         "placeholder": {
                             "en": "Enter text"
@@ -665,7 +665,7 @@
                     },
                     "id": "711c498e-6f46-11ed-9e7f-5254004d77d3",
                     "label": {
-                        "en": "Other Stratigraphic Name"
+                        "en": "Informal Name or Map Unit"
                     },
                     "node_id": "711c3548-6f46-11ed-9e7f-5254004d77d3",
                     "sortorder": 6,
@@ -2101,7 +2101,7 @@
             ],
             "graphid": "7f2c2082-6c51-11ed-9b7d-5254004d77d3",
             "iconclass": "fa fa-puzzle-piece",
-            "is_editable": false,
+            "is_editable": true,
             "isresource": true,
             "jsonldcontext": null,
             "name": {
@@ -2393,14 +2393,14 @@
                     "alias": "stratigraphic_name_uncertain",
                     "config": {
                         "falseLabel": {
-                            "en": "Stratigraphic Name Certain"
+                            "en": "Informal Name or Map Unit Certain"
                         },
                         "i18n_properties": [
                             "trueLabel",
                             "falseLabel"
                         ],
                         "trueLabel": {
-                            "en": "Stratigraphic Name Uncertain"
+                            "en": "Informal Name or Map Unit Uncertain"
                         }
                     },
                     "datatype": "boolean",
@@ -3702,8 +3702,8 @@
             "publication": {
                 "graph_id": "7f2c2082-6c51-11ed-9b7d-5254004d77d3",
                 "notes": null,
-                "publicationid": "c199a46c-7642-11ed-9a43-5254004d77d3",
-                "published_time": "2022-12-07T09:21:00.634",
+                "publicationid": "561c6172-764a-11ed-8506-5254004d77d3",
+                "published_time": "2022-12-07T10:15:16.271",
                 "user_id": 1
             },
             "relatable_resource_model_ids": [],
