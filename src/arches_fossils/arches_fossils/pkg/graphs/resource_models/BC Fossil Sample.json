@@ -103,7 +103,7 @@
                     "instructions": {
                         "en": ""
                     },
-                    "is_editable": true,
+                    "is_editable": false,
                     "name": {
                         "en": "Stratigraphy"
                     },
@@ -130,7 +130,7 @@
                     "instructions": {
                         "en": ""
                     },
-                    "is_editable": true,
+                    "is_editable": false,
                     "name": {
                         "en": "Repository Information"
                     },
@@ -164,7 +164,7 @@
                     "instructions": {
                         "en": ""
                     },
-                    "is_editable": true,
+                    "is_editable": false,
                     "name": {
                         "en": "Fossil Occurrence Site ID"
                     },
@@ -191,7 +191,7 @@
                     "instructions": {
                         "en": ""
                     },
-                    "is_editable": true,
+                    "is_editable": false,
                     "name": {
                         "en": "Geological Age"
                     },
@@ -225,7 +225,7 @@
                     "instructions": {
                         "en": ""
                     },
-                    "is_editable": true,
+                    "is_editable": false,
                     "name": {
                         "en": "Fossil ID"
                     },
@@ -249,9 +249,9 @@
                     "cssclass": null,
                     "description": "",
                     "graph_id": "7f2c2082-6c51-11ed-9b7d-5254004d77d3",
-                    "helpenabled": false,
+                    "helpenabled": true,
                     "helptext": {
-                        "en": ""
+                        "en": "<p><strong>Fossil Common Names</strong> - To add</p>\n\n<p><strong>Common Name Uncertain</strong> - To add</p>\n\n<p><strong>Scientific Name</strong> - Assign formal higher taxonomic name, especially if specimen is not identifiable to Genus and species name (e.g., Actinopterygii).</p>\n\n<p><strong>Open Nomenclature Term</strong> - To add</p>\n\n<p><strong>Other Scientific Name </strong>- To add</p>\n\n<p><strong>Fossil Identification Uncertain</strong> - To add</p>\n\n<p><strong>Fossil Size Category</strong> - To add</p>\n\n<p><strong>Additional Taxonomic Information</strong> - Note any alternate scientific names (e.g., if taxon name changed over time such as Alnus crispoides = Alnus hollandiana) or informal taxonomic designation of a name (e.g., actinopterygian). Do not repeat common names here.</p>\n\n<p><strong>Fossil Part</strong> - Select the type of fossil part&nbsp; (tooth, bone, fish scale, shell, leaf, needle).</p>\n\n<p><strong>Other Fossil Part or Fossil Part Details</strong> - To add</p>\n\n<p><strong>Trace Fossil</strong> - Select the type of trace fossil (burrow, track, gastrolith, coprolite, etc).</p>\n\n<p><strong>Other Trace Fossil or Trace Fossil Details</strong> - To add</p>\n\n<p><strong>Fossil Condition</strong> - Select if specimen is complete, fragment or unidentifiable.</p>\n\n<p><strong>Fossil Preservation</strong> - Select the preservation (original material, mineralization, mold, cast, imprint, compression, carbonized impression, recrystallization).</p>\n\n<p><strong>Fossil Notes</strong> - To add (maximum 80 characters)</p>\n"
                     },
                     "helptitle": {
                         "en": ""
@@ -259,7 +259,7 @@
                     "instructions": {
                         "en": ""
                     },
-                    "is_editable": true,
+                    "is_editable": false,
                     "name": {
                         "en": "BC Fossil Identification"
                     },
@@ -291,13 +291,13 @@
                     "graph_id": "7f2c2082-6c51-11ed-9b7d-5254004d77d3",
                     "helpenabled": false,
                     "helptext": {
-                        "en": ""
+                        "en": "<p><strong>Fossil Abundance</strong> -</p>\n"
                     },
                     "helptitle": {
                         "en": ""
                     },
                     "instructions": {
-                        "en": ""
+                        "en": "Note how many specimens or if an assemblage is present."
                     },
                     "is_editable": true,
                     "name": {
@@ -382,6 +382,14 @@
                             {
                                 "children": [],
                                 "collector": "",
+                                "conceptid": "96941abf-ab36-4acb-8717-485ca84d7ccf",
+                                "id": "341b60a6-2376-4a7c-a0f5-a8ef007892eb",
+                                "sortorder": "",
+                                "text": "Heritage value"
+                            },
+                            {
+                                "children": [],
+                                "collector": "",
                                 "conceptid": "d8c5c009-7326-45f8-ae3d-8d58957a602f",
                                 "id": "36e6e81f-7527-46d9-a9a9-5f0c7e19b89c",
                                 "sortorder": "",
@@ -450,14 +458,6 @@
                                 "id": "d5d39cc2-ccfc-4522-8061-f392da4961ab",
                                 "sortorder": "",
                                 "text": "Vertebrate"
-                            },
-                            {
-                                "children": [],
-                                "collector": "",
-                                "conceptid": "747e4ed6-db4d-4bc9-bea4-96132346ba77",
-                                "id": "94154c32-8e7b-4244-a921-52959c85ba7e",
-                                "sortorder": "",
-                                "text": "youngest reported occurrence"
                             }
                         ],
                         "placeholder": {
@@ -486,7 +486,7 @@
                     "node_id": "3045501e-6c52-11ed-9e1a-5254004d77d3",
                     "sortorder": 0,
                     "visible": true,
-                    "widget_id": "10000000-0000-0000-0000-000000000006"
+                    "widget_id": "0346bc9c-d235-4313-adc8-d0e210b2ef25"
                 },
                 {
                     "card_id": "80f6864e-6f3c-11ed-92e2-5254004d77d3",
@@ -1137,11 +1137,11 @@
                     "card_id": "80f6864e-6f3c-11ed-92e2-5254004d77d3",
                     "config": {
                         "defaultValue": null,
-                        "label": ""
+                        "label": "Common Name Uncertain"
                     },
                     "id": "80f6a7b4-6f3c-11ed-92e2-5254004d77d3",
                     "label": {
-                        "en": ""
+                        "en": "Common Name Uncertain"
                     },
                     "node_id": "80f693be-6f3c-11ed-92e2-5254004d77d3",
                     "sortorder": 1,
@@ -1290,14 +1290,6 @@
                                 "id": "d5d39cc2-ccfc-4522-8061-f392da4961ab",
                                 "sortorder": "",
                                 "text": "Vertebrate"
-                            },
-                            {
-                                "children": [],
-                                "collector": "",
-                                "conceptid": "747e4ed6-db4d-4bc9-bea4-96132346ba77",
-                                "id": "94154c32-8e7b-4244-a921-52959c85ba7e",
-                                "sortorder": "",
-                                "text": "youngest reported occurrence"
                             }
                         ],
                         "placeholder": {
@@ -1454,11 +1446,11 @@
                     "card_id": "80f6864e-6f3c-11ed-92e2-5254004d77d3",
                     "config": {
                         "defaultValue": null,
-                        "label": ""
+                        "label": "Fossil Significant"
                     },
                     "id": "80f6b74a-6f3c-11ed-92e2-5254004d77d3",
                     "label": {
-                        "en": ""
+                        "en": "Fossil Significant"
                     },
                     "node_id": "80f69daa-6f3c-11ed-92e2-5254004d77d3",
                     "sortorder": 8,
@@ -1491,11 +1483,11 @@
                     "card_id": "80f6864e-6f3c-11ed-92e2-5254004d77d3",
                     "config": {
                         "defaultValue": null,
-                        "label": ""
+                        "label": "Fossil Identification Uncertain"
                     },
                     "id": "94b245c8-0aca-4090-b655-8e3032e36878",
                     "label": {
-                        "en": ""
+                        "en": "Fossil Identification Uncertain"
                     },
                     "node_id": "05921fc2-6f41-11ed-9ed7-5254004d77d3",
                     "sortorder": 5,
@@ -2109,7 +2101,7 @@
             ],
             "graphid": "7f2c2082-6c51-11ed-9b7d-5254004d77d3",
             "iconclass": "fa fa-puzzle-piece",
-            "is_editable": true,
+            "is_editable": false,
             "isresource": true,
             "jsonldcontext": null,
             "name": {
@@ -3710,8 +3702,8 @@
             "publication": {
                 "graph_id": "7f2c2082-6c51-11ed-9b7d-5254004d77d3",
                 "notes": null,
-                "publicationid": "cb2857a0-75c8-11ed-8a4d-5254004d77d3",
-                "published_time": "2022-12-06T18:47:58.068",
+                "publicationid": "c199a46c-7642-11ed-9a43-5254004d77d3",
+                "published_time": "2022-12-07T09:21:00.634",
                 "user_id": 1
             },
             "relatable_resource_model_ids": [],

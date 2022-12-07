@@ -4,8 +4,6 @@
 {% block form %}
 <div class="row widget-wrapper">
     <div class="form-group">
-        <label class="control-label widget-input-label" data-bind="text:label">
-        </label>
         <!-- ko if: node -->
         <i data-bind="css: {'ion-asterisk widget-label-required': node.isrequired}"></i>
         <!-- /ko -->
@@ -26,11 +24,8 @@
 {% block config_form %}
 <div>
     <div class="form-group">
-        <div class="control-label">
-            <span data-bind="text: $root.translations.defaultValue"></span>
-        </div>
         <div class="col-xs-12">
-            <label class="form-checkbox form-normal form-primary form-text"
+            <label class="form-checkbox form-normal form-primary form-text form-boolean-checkbox"
                 data-bind="css: {
                     'active': isSelected()
                 },
@@ -45,7 +40,7 @@
 
 {% block report %}
 <!-- ko if: ko.unwrap(value) === true -->
-<dt data-bind="text: label"></dt>
+<!--dt data-bind="text: label"></dt-->
 <dd data-bind="text: displayValue() || $root.translations.none"></dd>
 <!-- /ko -->
 {% endblock report %}
