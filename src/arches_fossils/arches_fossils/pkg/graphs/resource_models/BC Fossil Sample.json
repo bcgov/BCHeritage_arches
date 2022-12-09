@@ -2184,6 +2184,18 @@
             "functions_x_graphs": [
                 {
                     "config": {
+                        "node_id": "7f2c823e-6c51-11ed-9b7d-5254004d77d3",
+                        "triggering_nodegroups": [
+                            "7f2c2dde-6c51-11ed-9b7d-5254004d77d3"
+                        ],
+                        "unique_value": true
+                    },
+                    "function_id": "60000000-0000-0000-0000-000000002001",
+                    "graph_id": "7f2c2082-6c51-11ed-9b7d-5254004d77d3",
+                    "id": "a113c933-674f-4c32-b4c7-00992f43f562"
+                },
+                {
+                    "config": {
                         "class_name": "PrimaryDescriptorsFunction",
                         "descriptor_types": {
                             "description": {
@@ -2204,24 +2216,12 @@
                     },
                     "function_id": "60000000-0000-0000-0000-000000000001",
                     "graph_id": "7f2c2082-6c51-11ed-9b7d-5254004d77d3",
-                    "id": "3e4421a1-6993-4ff3-85c5-15ad0405896a"
-                },
-                {
-                    "config": {
-                        "node_id": "7f2c823e-6c51-11ed-9b7d-5254004d77d3",
-                        "triggering_nodegroups": [
-                            "7f2c2dde-6c51-11ed-9b7d-5254004d77d3"
-                        ],
-                        "unique_value": true
-                    },
-                    "function_id": "60000000-0000-0000-0000-000000002001",
-                    "graph_id": "7f2c2082-6c51-11ed-9b7d-5254004d77d3",
-                    "id": "bae06582-4688-4a20-8796-8a01ba824cc6"
+                    "id": "df6fe587-29f5-4542-8cd0-4ce9c9c68587"
                 }
             ],
             "graphid": "7f2c2082-6c51-11ed-9b7d-5254004d77d3",
             "iconclass": "fa fa-puzzle-piece",
-            "is_editable": true,
+            "is_editable": false,
             "isresource": true,
             "jsonldcontext": null,
             "name": {
@@ -2437,7 +2437,7 @@
                 {
                     "alias": "geological_group",
                     "config": {
-                        "rdmCollection": null
+                        "rdmCollection": "1d5f0d46-d2d9-4a1e-826e-b68ada021ed3"
                     },
                     "datatype": "concept-list",
                     "description": null,
@@ -2512,7 +2512,7 @@
                 {
                     "alias": "geological_member",
                     "config": {
-                        "rdmCollection": null
+                        "rdmCollection": "38a03bf4-045e-4f8a-9898-a596d3045e55"
                     },
                     "datatype": "concept-list",
                     "description": null,
@@ -2565,7 +2565,7 @@
                 {
                     "alias": "geological_formation",
                     "config": {
-                        "rdmCollection": null
+                        "rdmCollection": "93af3576-7716-47b2-a16c-933b9cf6ed4f"
                     },
                     "datatype": "concept-list",
                     "description": null,
@@ -3758,7 +3758,7 @@
                 {
                     "alias": "informal_map_unit_or_name",
                     "config": {
-                        "rdmCollection": null
+                        "rdmCollection": "bc3b01e1-cccf-4f77-a62e-e578bb6c199f"
                     },
                     "datatype": "concept-list",
                     "description": null,
@@ -3804,8 +3804,8 @@
             "publication": {
                 "graph_id": "7f2c2082-6c51-11ed-9b7d-5254004d77d3",
                 "notes": null,
-                "publicationid": "53de5c54-77fc-11ed-b2de-5254004d77d3",
-                "published_time": "2022-12-09T14:01:54.090",
+                "publicationid": "d3d8289a-7815-11ed-8d5f-5254004d77d3",
+                "published_time": "2022-12-09T17:04:26.215",
                 "user_id": 1
             },
             "relatable_resource_model_ids": [],
