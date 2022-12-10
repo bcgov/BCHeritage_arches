@@ -69,7 +69,7 @@
                     "instructions": {
                         "en": ""
                     },
-                    "is_editable": false,
+                    "is_editable": true,
                     "name": {
                         "en": "Samples Collected"
                     },
@@ -96,7 +96,7 @@
                     "instructions": {
                         "en": ""
                     },
-                    "is_editable": false,
+                    "is_editable": true,
                     "name": {
                         "en": "NTS Mapsheet Number"
                     },
@@ -125,7 +125,7 @@
                     "instructions": {
                         "en": "Define the spatial location."
                     },
-                    "is_editable": false,
+                    "is_editable": true,
                     "name": {
                         "en": "Spatial Location"
                     },
@@ -154,7 +154,7 @@
                     "instructions": {
                         "en": "Describe the location of the resource."
                     },
-                    "is_editable": false,
+                    "is_editable": true,
                     "name": {
                         "en": "Location Description"
                     },
@@ -188,7 +188,7 @@
                     "instructions": {
                         "en": ""
                     },
-                    "is_editable": false,
+                    "is_editable": true,
                     "name": {
                         "en": "BC Fossil Site Location"
                     },
@@ -222,7 +222,7 @@
                     "instructions": {
                         "en": "Used to record text descriptions associated with a resource. Where appropriate different types of description may be recorded."
                     },
-                    "is_editable": false,
+                    "is_editable": true,
                     "name": {
                         "en": "Collection Notes"
                     },
@@ -262,7 +262,7 @@
                     "instructions": {
                         "en": ""
                     },
-                    "is_editable": false,
+                    "is_editable": true,
                     "name": {
                         "en": "Collectors"
                     },
@@ -304,7 +304,7 @@
                     "instructions": {
                         "en": ""
                     },
-                    "is_editable": false,
+                    "is_editable": true,
                     "name": {
                         "en": "Historical Data"
                     },
@@ -346,7 +346,7 @@
                     "instructions": {
                         "en": ""
                     },
-                    "is_editable": false,
+                    "is_editable": true,
                     "name": {
                         "en": "Collection Years"
                     },
@@ -396,6 +396,28 @@
                 }
             ],
             "cards_x_nodes_x_widgets": [
+                {
+                    "card_id": "692d8c12-9c1d-11ec-a5e5-5254008afee6",
+                    "config": {
+                        "defaultValue": "",
+                        "i18n_properties": [
+                            "placeholder"
+                        ],
+                        "label": "Locational Precision",
+                        "options": [],
+                        "placeholder": {
+                            "en": "Select an option"
+                        }
+                    },
+                    "id": "1f7cc515-a7f3-4166-8f5b-956a4c1b3e94",
+                    "label": {
+                        "en": "Locational Precision"
+                    },
+                    "node_id": "9e93ab8c-9c1f-11ec-964d-5254008afee6",
+                    "sortorder": null,
+                    "visible": true,
+                    "widget_id": "10000000-0000-0000-0000-000000000002"
+                },
                 {
                     "card_id": "2371431c-70d9-11ed-9e2c-5254004d77d3",
                     "config": {
@@ -741,7 +763,7 @@
                         "en": "Spatial Coordinates Geometry"
                     },
                     "node_id": "692d8938-9c1d-11ec-a5e5-5254008afee6",
-                    "sortorder": null,
+                    "sortorder": 0,
                     "visible": true,
                     "widget_id": "10000000-0000-0000-0000-000000000007"
                 },
@@ -763,7 +785,7 @@
                         "en": "Geometry Qualifier"
                     },
                     "node_id": "692da0d0-9c1d-11ec-a5e5-5254008afee6",
-                    "sortorder": null,
+                    "sortorder": 1,
                     "visible": true,
                     "widget_id": "10000000-0000-0000-0000-000000000002"
                 },
@@ -1218,12 +1240,12 @@
                     },
                     "function_id": "60000000-0000-0000-0000-000000001001",
                     "graph_id": "df3ee1ae-9c1c-11ec-964d-5254008afee6",
-                    "id": "dc08bd2f-d2c5-4600-9f1d-95bcf2979390"
+                    "id": "3bb7e53c-6cde-4146-af09-2efaa729f897"
                 }
             ],
             "graphid": "df3ee1ae-9c1c-11ec-964d-5254008afee6",
             "iconclass": "fa fa-suitcase",
-            "is_editable": false,
+            "is_editable": true,
             "isresource": true,
             "jsonldcontext": null,
             "name": {
@@ -1574,7 +1596,7 @@
                 {
                     "alias": "geometry_qualifier",
                     "config": {
-                        "rdmCollection": "97a4cbc3-59e5-4271-b849-a8635d137d26"
+                        "rdmCollection": "85fd6ca4-9539-4784-8889-09c794878bfb"
                     },
                     "datatype": "concept",
                     "description": "Represents a single node in a graph",
@@ -1781,8 +1803,10 @@
                 },
                 {
                     "alias": "precision",
-                    "config": {},
-                    "datatype": "semantic",
+                    "config": {
+                        "rdmCollection": "7310e0e1-6902-4852-a09c-5c72ca27afe0"
+                    },
+                    "datatype": "concept",
                     "description": null,
                     "exportable": false,
                     "fieldname": null,
@@ -1873,11 +1897,15 @@
             "publication": {
                 "graph_id": "df3ee1ae-9c1c-11ec-964d-5254008afee6",
                 "notes": null,
-                "publicationid": "fa68b20c-763c-11ed-9004-5254004d77d3",
-                "published_time": "2022-12-07T08:39:38.963",
+                "publicationid": "1d2aa806-782a-11ed-8b39-5254004d77d3",
+                "published_time": "2022-12-09T19:29:39.164",
                 "user_id": 1
             },
-            "relatable_resource_model_ids": [],
+            "relatable_resource_model_ids": [
+                "fac1b1b4-1034-11ec-8a7a-5254008afee6",
+                "7f2c2082-6c51-11ed-9b7d-5254004d77d3",
+                "897e8250-9c1d-11ec-a82a-5254008afee6"
+            ],
             "resource_2_resource_constraints": [],
             "root": {
                 "alias": "bc_fossil_collection_event",
