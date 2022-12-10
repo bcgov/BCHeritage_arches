@@ -503,6 +503,35 @@
                     "widget_id": "10000000-0000-0000-0000-000000000013"
                 },
                 {
+                    "card_id": "80f6864e-6f3c-11ed-92e2-5254004d77d3",
+                    "config": {
+                        "defaultValue": {
+                            "en": {
+                                "direction": "ltr",
+                                "value": ""
+                            }
+                        },
+                        "i18n_properties": [
+                            "placeholder"
+                        ],
+                        "label": "Unlisted Scientific Name",
+                        "maxLength": "80",
+                        "placeholder": {
+                            "en": "Enter a taxonomic name if not listed in the list of Scientific Names"
+                        },
+                        "uneditable": false,
+                        "width": "100%"
+                    },
+                    "id": "385f7bf6-43df-4884-b968-ab7ebee69ee3",
+                    "label": {
+                        "en": "Unlisted Scientific Name"
+                    },
+                    "node_id": "9b87dc3e-781e-11ed-8d5f-5254004d77d3",
+                    "sortorder": 6,
+                    "visible": true,
+                    "widget_id": "10000000-0000-0000-0000-000000000001"
+                },
+                {
                     "card_id": "304553ca-6c52-11ed-9e1a-5254004d77d3",
                     "config": {
                         "defaultValue": null,
@@ -542,7 +571,7 @@
                         "en": "Fossil Notes"
                     },
                     "node_id": "4990ec52-71a4-11ed-a6a5-5254004d77d3",
-                    "sortorder": 16,
+                    "sortorder": 17,
                     "visible": true,
                     "widget_id": "10000000-0000-0000-0000-000000000001"
                 },
@@ -1109,7 +1138,7 @@
                         "en": "Fossil Size Category"
                     },
                     "node_id": "80f69f30-6f3c-11ed-92e2-5254004d77d3",
-                    "sortorder": 6,
+                    "sortorder": 7,
                     "visible": true,
                     "widget_id": "10000000-0000-0000-0000-000000000009"
                 },
@@ -1148,7 +1177,7 @@
                         "en": "Fossil Condition"
                     },
                     "node_id": "80f6922e-6f3c-11ed-92e2-5254004d77d3",
-                    "sortorder": 14,
+                    "sortorder": 15,
                     "visible": true,
                     "widget_id": "10000000-0000-0000-0000-000000000002"
                 },
@@ -1161,7 +1190,7 @@
                         ],
                         "label": "Fossil Common Name",
                         "placeholder": {
-                            "en": ""
+                            "en": "Select Common Name"
                         }
                     },
                     "id": "80f6a6c4-6f3c-11ed-92e2-5254004d77d3",
@@ -1198,7 +1227,7 @@
                         "label": "Fossil Part",
                         "options": [],
                         "placeholder": {
-                            "en": "Select an option"
+                            "en": "Select a Fossil Part"
                         }
                     },
                     "id": "80f6a8a4-6f3c-11ed-92e2-5254004d77d3",
@@ -1206,7 +1235,7 @@
                         "en": "Fossil Part"
                     },
                     "node_id": "80f68d7e-6f3c-11ed-92e2-5254004d77d3",
-                    "sortorder": 10,
+                    "sortorder": 11,
                     "visible": true,
                     "widget_id": "10000000-0000-0000-0000-000000000002"
                 },
@@ -1342,7 +1371,7 @@
                         "en": "Significance Ranking Details"
                     },
                     "node_id": "80f68be4-6f3c-11ed-92e2-5254004d77d3",
-                    "sortorder": 9,
+                    "sortorder": 10,
                     "visible": true,
                     "widget_id": "10000000-0000-0000-0000-000000000013"
                 },
@@ -1374,14 +1403,14 @@
                         "i18n_properties": [
                             "placeholder"
                         ],
-                        "label": "Other Scientific Name",
+                        "label": "Related Species Name",
                         "placeholder": {
-                            "en": "Select Genus/Species of qualification"
+                            "en": "Select related Species"
                         }
                     },
                     "id": "80f6ac6e-6f3c-11ed-92e2-5254004d77d3",
                     "label": {
-                        "en": "Other Scientific Name"
+                        "en": "Related Species Name"
                     },
                     "node_id": "80f68a40-6f3c-11ed-92e2-5254004d77d3",
                     "sortorder": 4,
@@ -1434,7 +1463,7 @@
                         "en": "Additional Taxonomic Information"
                     },
                     "node_id": "80f69a62-6f3c-11ed-92e2-5254004d77d3",
-                    "sortorder": 7,
+                    "sortorder": 8,
                     "visible": true,
                     "widget_id": "10000000-0000-0000-0000-000000000001"
                 },
@@ -1448,7 +1477,7 @@
                         "label": "Open Nomenclature Term",
                         "options": [],
                         "placeholder": {
-                            "en": "Select relationship"
+                            "en": "Select Open Nomentclature Term"
                         }
                     },
                     "id": "80f6b556-6f3c-11ed-92e2-5254004d77d3",
@@ -1478,7 +1507,7 @@
                         "en": "Fossil Preservation"
                     },
                     "node_id": "80f6a0ca-6f3c-11ed-92e2-5254004d77d3",
-                    "sortorder": 15,
+                    "sortorder": 16,
                     "visible": true,
                     "widget_id": "10000000-0000-0000-0000-000000000002"
                 },
@@ -1493,7 +1522,7 @@
                         "en": "Fossil Significant"
                     },
                     "node_id": "80f69daa-6f3c-11ed-92e2-5254004d77d3",
-                    "sortorder": 8,
+                    "sortorder": 9,
                     "visible": true,
                     "widget_id": "0346bc9c-d235-4313-adc8-d0e210b2ef25"
                 },
@@ -1559,7 +1588,7 @@
                         "en": "Other Fossil Part or Fossil Part Details"
                     },
                     "node_id": "98434562-71a3-11ed-a266-5254004d77d3",
-                    "sortorder": 11,
+                    "sortorder": 12,
                     "visible": true,
                     "widget_id": "10000000-0000-0000-0000-000000000001"
                 },
@@ -1610,7 +1639,7 @@
                         "en": "Trace Fossil"
                     },
                     "node_id": "80d0a452-6f40-11ed-82a5-5254004d77d3",
-                    "sortorder": 12,
+                    "sortorder": 13,
                     "visible": true,
                     "widget_id": "10000000-0000-0000-0000-000000000002"
                 },
@@ -1690,7 +1719,7 @@
                         "en": "Other Trace Fossil or Trace Fossil Details"
                     },
                     "node_id": "2f45022a-71a4-11ed-afc4-5254004d77d3",
-                    "sortorder": 13,
+                    "sortorder": 14,
                     "visible": true,
                     "widget_id": "10000000-0000-0000-0000-000000000001"
                 }
@@ -1738,6 +1767,15 @@
                     "name": null,
                     "ontologyproperty": "http://www.cidoc-crm.org/cidoc-crm/P15i_influenced",
                     "rangenode_id": "3045501e-6c52-11ed-9e1a-5254004d77d3"
+                },
+                {
+                    "description": null,
+                    "domainnode_id": "80f6909e-6f3c-11ed-92e2-5254004d77d3",
+                    "edgeid": "563ad207-98b4-4619-aff6-2ad6c0c0d9c3",
+                    "graph_id": "7f2c2082-6c51-11ed-9b7d-5254004d77d3",
+                    "name": null,
+                    "ontologyproperty": "http://www.cidoc-crm.org/cidoc-crm/P1_is_identified_by",
+                    "rangenode_id": "9b87dc3e-781e-11ed-8d5f-5254004d77d3"
                 },
                 {
                     "description": null,
@@ -3734,6 +3772,28 @@
                     "sortorder": 0
                 },
                 {
+                    "alias": "unlisted_scientific_name",
+                    "config": {
+                        "en": ""
+                    },
+                    "datatype": "string",
+                    "description": null,
+                    "exportable": false,
+                    "fieldname": null,
+                    "graph_id": "7f2c2082-6c51-11ed-9b7d-5254004d77d3",
+                    "hascustomalias": false,
+                    "is_collector": false,
+                    "isrequired": false,
+                    "issearchable": true,
+                    "istopnode": false,
+                    "name": "Unlisted Scientific Name",
+                    "nodegroup_id": "80f68310-6f3c-11ed-92e2-5254004d77d3",
+                    "nodeid": "9b87dc3e-781e-11ed-8d5f-5254004d77d3",
+                    "ontologyclass": "http://www.cidoc-crm.org/cidoc-crm/E42_Identifier",
+                    "parentproperty": "http://www.cidoc-crm.org/cidoc-crm/P1_is_identified_by",
+                    "sortorder": 0
+                },
+                {
                     "alias": "fossil_abundance",
                     "config": {
                         "rdmCollection": "a727f7c8-b11a-4dc2-962c-b23baf9eb046"
@@ -3804,8 +3864,8 @@
             "publication": {
                 "graph_id": "7f2c2082-6c51-11ed-9b7d-5254004d77d3",
                 "notes": null,
-                "publicationid": "d3d8289a-7815-11ed-8d5f-5254004d77d3",
-                "published_time": "2022-12-09T17:04:26.215",
+                "publicationid": "3d27f3fc-7820-11ed-8e1e-5254004d77d3",
+                "published_time": "2022-12-09T18:18:57.866",
                 "user_id": 1
             },
             "relatable_resource_model_ids": [],
