@@ -45,7 +45,7 @@ class BCFossilsDescriptors(AbstractPrimaryDescriptorsFunction):
     _sample_graph_name = {"en": "BC Fossil Sample"}
     _datatype_factory = None
     _formation_node = None
-    _geologic_period_node = None
+    _geologic_minimum_time_node = None
     _collected_fossils_node = None
     _collection_event_graph_id = None
     _coll_event_samples_values_config = None
@@ -58,8 +58,8 @@ class BCFossilsDescriptors(AbstractPrimaryDescriptorsFunction):
             alias='geological_formation',
             graph__name__contains=BCFossilsDescriptors._sample_graph_name
         ).first()
-        BCFossilsDescriptors._geologic_period_node = models.Node.objects.filter(
-            alias='period',
+        BCFossilsDescriptors._geologic_minimum_time_node = models.Node.objects.filter(
+            alias='minimum_time',
             graph__name__contains=BCFossilsDescriptors._sample_graph_name
         ).first()
         BCFossilsDescriptors._collected_fossils_node = models.Node.objects.filter(
@@ -72,7 +72,7 @@ class BCFossilsDescriptors(AbstractPrimaryDescriptorsFunction):
             "graphid").first()["graphid"]
         BCFossilsDescriptors._coll_event_samples_values_config = [
             {"node": BCFossilsDescriptors._formation_node, "label": "Formation"},
-            {"node": BCFossilsDescriptors._geologic_period_node, "label": "Period"}]
+            {"node": BCFossilsDescriptors._geologic_minimum_time_node, "label": "Period"}]
 
     def get_primary_descriptor_from_nodes(self, resource, config, context=None):
         return_value = None
