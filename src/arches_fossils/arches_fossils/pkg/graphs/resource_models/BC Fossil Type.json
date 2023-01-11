@@ -5,27 +5,19 @@
             "cards": [
                 {
                     "active": true,
-                    "cardid": "297a543a-1bec-11ec-a686-5254008afee6",
+                    "cardid": "0f9d2510-6e5b-4c1a-a77c-7d64946d409a",
                     "component_id": "f05e4d3a-53c1-11e8-b0ea-784f435179ea",
                     "config": null,
                     "constraints": [
                         {
-                            "card_id": "297a543a-1bec-11ec-a686-5254008afee6",
-                            "constraintid": "a8d6c785-6b84-44e8-be0d-224fd1536db6",
-                            "nodes": [],
-                            "uniquetoallinstances": false
-                        },
-                        {
-                            "card_id": "297a543a-1bec-11ec-a686-5254008afee6",
-                            "constraintid": "6dbe4f61-59b2-438a-ae13-33d6da46afdb",
+                            "card_id": "0f9d2510-6e5b-4c1a-a77c-7d64946d409a",
+                            "constraintid": "5330f76f-04e6-46c2-9a85-a6b080231517",
                             "nodes": [],
                             "uniquetoallinstances": false
                         }
                     ],
                     "cssclass": null,
-                    "description": {
-                        "en": "A Fossil Type's default significance. This is the typical significance of a Fossil Type, however it can be overridden by a specific fossil of this type (eg if a Fossil Type is found in an unusual location or quantity)."
-                    },
+                    "description": null,
                     "graph_id": "86700278-117b-11ec-90d4-5254008afee6",
                     "helpenabled": false,
                     "helptext": {
@@ -39,35 +31,33 @@
                     },
                     "is_editable": true,
                     "name": {
-                        "en": "Default Significance"
+                        "en": "New Node"
                     },
-                    "nodegroup_id": "297a1b46-1bec-11ec-a686-5254008afee6",
-                    "sortorder": 2,
+                    "nodegroup_id": "2283545e-7d5e-11ed-9ee0-5254004d77d3",
+                    "sortorder": null,
                     "visible": true
                 },
                 {
                     "active": true,
-                    "cardid": "db012580-1be7-11ec-a686-5254008afee6",
+                    "cardid": "d5e4c90a-33f7-4eb7-a513-cdfe5a47628e",
                     "component_id": "f05e4d3a-53c1-11e8-b0ea-784f435179ea",
                     "config": null,
                     "constraints": [
                         {
-                            "card_id": "db012580-1be7-11ec-a686-5254008afee6",
-                            "constraintid": "080326db-8665-49e5-9cb2-a41b291e8ea0",
+                            "card_id": "d5e4c90a-33f7-4eb7-a513-cdfe5a47628e",
+                            "constraintid": "8ca03240-e0a0-4ed2-8413-ddbe4f45def1",
                             "nodes": [],
                             "uniquetoallinstances": false
                         },
                         {
-                            "card_id": "db012580-1be7-11ec-a686-5254008afee6",
-                            "constraintid": "63bc3cc5-2860-40bc-b67b-a41922932a7b",
+                            "card_id": "d5e4c90a-33f7-4eb7-a513-cdfe5a47628e",
+                            "constraintid": "7b9df183-7a40-4d57-a1ab-6efa9dd65336",
                             "nodes": [],
                             "uniquetoallinstances": false
                         }
                     ],
                     "cssclass": null,
-                    "description": {
-                        "en": "The Size Category of the Fossil Type."
-                    },
+                    "description": null,
                     "graph_id": "86700278-117b-11ec-90d4-5254008afee6",
                     "helpenabled": false,
                     "helptext": {
@@ -81,10 +71,10 @@
                     },
                     "is_editable": true,
                     "name": {
-                        "en": "Size Category"
+                        "en": "Alternate Names"
                     },
-                    "nodegroup_id": "db0004ac-1be7-11ec-a686-5254008afee6",
-                    "sortorder": 1,
+                    "nodegroup_id": "f04d36ac-7d6d-11ed-96b7-5254004d77d3",
+                    "sortorder": null,
                     "visible": true
                 },
                 {
@@ -130,20 +120,65 @@
             ],
             "cards_x_nodes_x_widgets": [
                 {
-                    "card_id": "297a543a-1bec-11ec-a686-5254008afee6",
+                    "card_id": "0f9d2510-6e5b-4c1a-a77c-7d64946d409a",
                     "config": {
-                        "defaultValue": false,
-                        "label": "Default Significance",
-                        "subtitle": "Click to switch"
+                        "defaultValue": "",
+                        "i18n_properties": [
+                            "placeholder"
+                        ],
+                        "label": "Size Category",
+                        "options": [
+                            {
+                                "children": [],
+                                "collector": "",
+                                "conceptid": "8a7e10ab-a0e9-4d00-b66a-270c3cacff2a",
+                                "id": "3433fd7a-b780-43a2-913b-3e4ff67e953b",
+                                "sortorder": "",
+                                "text": "Macrofossil"
+                            },
+                            {
+                                "children": [],
+                                "collector": "",
+                                "conceptid": "e18f67b9-71e5-4dbb-ac41-63263aebe734",
+                                "id": "d47cd333-ceb4-4781-b3d6-06baa73dcc0c",
+                                "sortorder": "",
+                                "text": "Microfossil"
+                            }
+                        ],
+                        "placeholder": {
+                            "en": "Select an option"
+                        },
+                        "url": "/int/arches-fossils/concepts/dropdown?conceptid=7d13e6cd-6b98-4886-b574-05a1e109dd67"
                     },
-                    "id": "63c90974-1bec-11ec-9906-5254008afee6",
+                    "id": "1e9fc7d6-8ece-4b88-884b-7c8bc40594fa",
                     "label": {
-                        "en": "Default Significance"
+                        "en": "Size Category"
                     },
-                    "node_id": "297a1b46-1bec-11ec-a686-5254008afee6",
+                    "node_id": "622802ca-7d5f-11ed-822d-5254004d77d3",
                     "sortorder": 0,
                     "visible": true,
-                    "widget_id": "10000000-0000-0000-0000-000000000006"
+                    "widget_id": "10000000-0000-0000-0000-000000000009"
+                },
+                {
+                    "card_id": "d5e4c90a-33f7-4eb7-a513-cdfe5a47628e",
+                    "config": {
+                        "defaultResourceInstance": [],
+                        "i18n_properties": [
+                            "placeholder"
+                        ],
+                        "label": "Alternate Names",
+                        "placeholder": {
+                            "en": ""
+                        }
+                    },
+                    "id": "66e90b8d-3fbd-4ea5-8a1e-74535351f52e",
+                    "label": {
+                        "en": "Alternate Names"
+                    },
+                    "node_id": "f04d36ac-7d6d-11ed-96b7-5254004d77d3",
+                    "sortorder": 0,
+                    "visible": true,
+                    "widget_id": "ff3c400a-76ec-11e7-a793-784f435179ea"
                 },
                 {
                     "card_id": "fdbc9f0e-1be8-11ec-abe5-5254008afee6",
@@ -273,28 +308,19 @@
                     "widget_id": "31f3728c-7613-11e7-a139-784f435179ea"
                 },
                 {
-                    "card_id": "db012580-1be7-11ec-a686-5254008afee6",
+                    "card_id": "0f9d2510-6e5b-4c1a-a77c-7d64946d409a",
                     "config": {
-                        "defaultValue": "",
-                        "i18n_properties": [
-                            "placeholder"
-                        ],
-                        "label": "Size Category",
-                        "maxLength": null,
-                        "placeholder": {
-                            "en": "Enter text"
-                        },
-                        "uneditable": false,
-                        "width": "100%"
+                        "defaultValue": null,
+                        "label": "Default Significance"
                     },
-                    "id": "f98108cc-1be7-11ec-9dee-5254008afee6",
+                    "id": "e98a76b0-4a59-4023-8fab-7c93d774a3e1",
                     "label": {
-                        "en": "Size Category"
+                        "en": "Default Significance"
                     },
-                    "node_id": "db0004ac-1be7-11ec-a686-5254008afee6",
-                    "sortorder": 0,
+                    "node_id": "d3768f1e-7d5f-11ed-8723-5254004d77d3",
+                    "sortorder": 1,
                     "visible": true,
-                    "widget_id": "10000000-0000-0000-0000-000000000001"
+                    "widget_id": "10000000-0000-0000-0000-000000000006"
                 }
             ],
             "color": null,
@@ -308,11 +334,20 @@
                 {
                     "description": null,
                     "domainnode_id": "866ffc60-117b-11ec-90d4-5254008afee6",
-                    "edgeid": "297a96f2-1bec-11ec-a686-5254008afee6",
+                    "edgeid": "102c5157-7e3d-4841-a95f-b93be927d9fd",
                     "graph_id": "86700278-117b-11ec-90d4-5254008afee6",
                     "name": null,
-                    "ontologyproperty": "http://www.cidoc-crm.org/cidoc-crm/P140i_was_attributed_by",
-                    "rangenode_id": "297a1b46-1bec-11ec-a686-5254008afee6"
+                    "ontologyproperty": "http://www.ics.forth.gr/isl/CRMdig/L54_is_same-as",
+                    "rangenode_id": "f04d36ac-7d6d-11ed-96b7-5254004d77d3"
+                },
+                {
+                    "description": null,
+                    "domainnode_id": "2283545e-7d5e-11ed-9ee0-5254004d77d3",
+                    "edgeid": "1ae85e81-e61c-411d-90ba-fe5d2660b8b1",
+                    "graph_id": "86700278-117b-11ec-90d4-5254008afee6",
+                    "name": null,
+                    "ontologyproperty": "http://www.ics.forth.gr/isl/CRMdig/L54_is_same-as",
+                    "rangenode_id": "622802ca-7d5f-11ed-822d-5254004d77d3"
                 },
                 {
                     "description": null,
@@ -325,12 +360,30 @@
                 },
                 {
                     "description": null,
+                    "domainnode_id": "2283545e-7d5e-11ed-9ee0-5254004d77d3",
+                    "edgeid": "940e5c7c-8779-4ba2-b5b0-c524b7f11169",
+                    "graph_id": "86700278-117b-11ec-90d4-5254008afee6",
+                    "name": null,
+                    "ontologyproperty": "http://www.cidoc-crm.org/cidoc-crm/P140i_was_attributed_by",
+                    "rangenode_id": "d3768f1e-7d5f-11ed-8723-5254004d77d3"
+                },
+                {
+                    "description": null,
                     "domainnode_id": "fdbc5a08-1be8-11ec-abe5-5254008afee6",
                     "edgeid": "a94286a4-b0a9-11ec-a223-5254008afee6",
                     "graph_id": "86700278-117b-11ec-90d4-5254008afee6",
                     "name": null,
                     "ontologyproperty": "http://www.cidoc-crm.org/cidoc-crm/P41i_was_classified_by",
                     "rangenode_id": "a9428406-b0a9-11ec-a223-5254008afee6"
+                },
+                {
+                    "description": null,
+                    "domainnode_id": "866ffc60-117b-11ec-90d4-5254008afee6",
+                    "edgeid": "ac1c713f-9a8c-43ec-875b-dd1839c0e6ad",
+                    "graph_id": "86700278-117b-11ec-90d4-5254008afee6",
+                    "name": null,
+                    "ontologyproperty": "http://www.cidoc-crm.org/cidoc-crm/P140i_was_attributed_by",
+                    "rangenode_id": "2283545e-7d5e-11ed-9ee0-5254004d77d3"
                 },
                 {
                     "description": null,
@@ -349,15 +402,6 @@
                     "name": null,
                     "ontologyproperty": "http://www.ics.forth.gr/isl/CRMdig/L54i_is_same-as",
                     "rangenode_id": "c9e8976a-b0a7-11ec-8342-5254008afee6"
-                },
-                {
-                    "description": null,
-                    "domainnode_id": "866ffc60-117b-11ec-90d4-5254008afee6",
-                    "edgeid": "db019a7e-1be7-11ec-a686-5254008afee6",
-                    "graph_id": "86700278-117b-11ec-90d4-5254008afee6",
-                    "name": null,
-                    "ontologyproperty": "http://www.cidoc-crm.org/cidoc-crm/P140i_was_attributed_by",
-                    "rangenode_id": "db0004ac-1be7-11ec-a686-5254008afee6"
                 },
                 {
                     "description": null,
@@ -402,7 +446,7 @@
                     },
                     "function_id": "60000000-0000-0000-0000-000000001002",
                     "graph_id": "86700278-117b-11ec-90d4-5254008afee6",
-                    "id": "6655db6e-f7e4-4120-8377-1ce9a725295c"
+                    "id": "9e4aca3e-e84f-4f9b-807e-47cba0a6d79e"
                 }
             ],
             "graphid": "86700278-117b-11ec-90d4-5254008afee6",
@@ -417,13 +461,13 @@
                 {
                     "cardinality": "1",
                     "legacygroupid": null,
-                    "nodegroupid": "297a1b46-1bec-11ec-a686-5254008afee6",
+                    "nodegroupid": "2283545e-7d5e-11ed-9ee0-5254004d77d3",
                     "parentnodegroup_id": null
                 },
                 {
                     "cardinality": "1",
                     "legacygroupid": null,
-                    "nodegroupid": "db0004ac-1be7-11ec-a686-5254008afee6",
+                    "nodegroupid": "f04d36ac-7d6d-11ed-96b7-5254004d77d3",
                     "parentnodegroup_id": null
                 },
                 {
@@ -435,21 +479,12 @@
             ],
             "nodes": [
                 {
-                    "alias": "default_significance",
+                    "alias": "fossil_attributes",
                     "config": {
-                        "falseLabel": {
-                            "en": "No"
-                        },
-                        "i18n_properties": [
-                            "trueLabel",
-                            "falseLabel"
-                        ],
-                        "trueLabel": {
-                            "en": "Yes"
-                        }
+                        "en": ""
                     },
-                    "datatype": "boolean",
-                    "description": "A Fossil Type's default significance. This is the typical significance of a Fossil Type, however it can be overridden by a specific fossil of this type (eg if a Fossil Type is found in an unusual location or quantity).",
+                    "datatype": "semantic",
+                    "description": null,
                     "exportable": false,
                     "fieldname": null,
                     "graph_id": "86700278-117b-11ec-90d4-5254008afee6",
@@ -458,10 +493,10 @@
                     "isrequired": false,
                     "issearchable": true,
                     "istopnode": false,
-                    "name": "Default Significance",
-                    "nodegroup_id": "297a1b46-1bec-11ec-a686-5254008afee6",
-                    "nodeid": "297a1b46-1bec-11ec-a686-5254008afee6",
-                    "ontologyclass": "http://www.ics.forth.gr/isl/CRMsci/S5_Inference_Making",
+                    "name": "Fossil Attributes",
+                    "nodegroup_id": "2283545e-7d5e-11ed-9ee0-5254004d77d3",
+                    "nodeid": "2283545e-7d5e-11ed-9ee0-5254004d77d3",
+                    "ontologyclass": "http://www.cidoc-crm.org/cidoc-crm/E13_Attribute_Assignment",
                     "parentproperty": "http://www.cidoc-crm.org/cidoc-crm/P140i_was_attributed_by",
                     "sortorder": 0
                 },
@@ -485,6 +520,28 @@
                     "nodeid": "2a309dcc-1beb-11ec-a4b1-5254008afee6",
                     "ontologyclass": "http://www.cidoc-crm.org/cidoc-crm/E55_Type",
                     "parentproperty": "http://www.cidoc-crm.org/cidoc-crm/P2_has_type",
+                    "sortorder": 0
+                },
+                {
+                    "alias": "size_category",
+                    "config": {
+                        "rdmCollection": "7d13e6cd-6b98-4886-b574-05a1e109dd67"
+                    },
+                    "datatype": "concept",
+                    "description": null,
+                    "exportable": false,
+                    "fieldname": null,
+                    "graph_id": "86700278-117b-11ec-90d4-5254008afee6",
+                    "hascustomalias": false,
+                    "is_collector": false,
+                    "isrequired": false,
+                    "issearchable": true,
+                    "istopnode": false,
+                    "name": "Size Category",
+                    "nodegroup_id": "2283545e-7d5e-11ed-9ee0-5254004d77d3",
+                    "nodeid": "622802ca-7d5f-11ed-822d-5254004d77d3",
+                    "ontologyclass": "http://www.cidoc-crm.org/cidoc-crm/E26_Physical_Feature",
+                    "parentproperty": "http://www.ics.forth.gr/isl/CRMdig/L54_is_same-as",
                     "sortorder": 0
                 },
                 {
@@ -585,12 +642,51 @@
                     "sortorder": 0
                 },
                 {
-                    "alias": "size_category",
+                    "alias": "default_significance",
                     "config": {
-                        "rdmCollection": "7d13e6cd-6b98-4886-b574-05a1e109dd67"
+                        "falseLabel": {
+                            "en": "Common"
+                        },
+                        "i18n_properties": [
+                            "trueLabel",
+                            "falseLabel"
+                        ],
+                        "trueLabel": {
+                            "en": "Significant"
+                        }
                     },
-                    "datatype": "concept",
-                    "description": "The Size Category of the Fossil Type.",
+                    "datatype": "boolean",
+                    "description": null,
+                    "exportable": false,
+                    "fieldname": null,
+                    "graph_id": "86700278-117b-11ec-90d4-5254008afee6",
+                    "hascustomalias": false,
+                    "is_collector": false,
+                    "isrequired": false,
+                    "issearchable": true,
+                    "istopnode": false,
+                    "name": "Default Significance",
+                    "nodegroup_id": "2283545e-7d5e-11ed-9ee0-5254004d77d3",
+                    "nodeid": "d3768f1e-7d5f-11ed-8723-5254004d77d3",
+                    "ontologyclass": "http://www.ics.forth.gr/isl/CRMsci/S5_Inference_Making",
+                    "parentproperty": "http://www.cidoc-crm.org/cidoc-crm/P140i_was_attributed_by",
+                    "sortorder": 0
+                },
+                {
+                    "alias": "alternate_names",
+                    "config": {
+                        "graphs": [
+                            {
+                                "graphid": "86700278-117b-11ec-90d4-5254008afee6",
+                                "name": "BC Fossil Type"
+                            }
+                        ],
+                        "rdmCollection": null,
+                        "searchDsl": "",
+                        "searchString": ""
+                    },
+                    "datatype": "resource-instance-list",
+                    "description": null,
                     "exportable": false,
                     "fieldname": null,
                     "graph_id": "86700278-117b-11ec-90d4-5254008afee6",
@@ -599,11 +695,11 @@
                     "isrequired": false,
                     "issearchable": true,
                     "istopnode": false,
-                    "name": "Size Category",
-                    "nodegroup_id": "db0004ac-1be7-11ec-a686-5254008afee6",
-                    "nodeid": "db0004ac-1be7-11ec-a686-5254008afee6",
-                    "ontologyclass": "http://www.ics.forth.gr/isl/CRMarchaeo/A6_Group_Declaration_Event",
-                    "parentproperty": "http://www.cidoc-crm.org/cidoc-crm/P140i_was_attributed_by",
+                    "name": "Alternate Names",
+                    "nodegroup_id": "f04d36ac-7d6d-11ed-96b7-5254004d77d3",
+                    "nodeid": "f04d36ac-7d6d-11ed-96b7-5254004d77d3",
+                    "ontologyclass": "http://www.cidoc-crm.org/cidoc-crm/E41_Appellation",
+                    "parentproperty": "http://www.ics.forth.gr/isl/CRMdig/L54_is_same-as",
                     "sortorder": 0
                 },
                 {
@@ -631,8 +727,8 @@
             "publication": {
                 "graph_id": "86700278-117b-11ec-90d4-5254008afee6",
                 "notes": null,
-                "publicationid": "a1d82006-782a-11ed-8b2d-5254004d77d3",
-                "published_time": "2022-12-09T19:33:21.760",
+                "publicationid": "26d83de8-7d6e-11ed-8a91-5254004d77d3",
+                "published_time": "2022-12-16T12:19:16.993",
                 "user_id": 1
             },
             "relatable_resource_model_ids": [

@@ -1,6 +1,8 @@
 from arches.app.functions.primary_descriptors import AbstractPrimaryDescriptorsFunction
 from arches.app.models import models
 from arches.app.datatypes.datatypes import DataTypeFactory
+from arches.settings import LANGUAGE_CODE
+
 from django.utils.translation import ugettext as _
 
 details = {
@@ -77,22 +79,25 @@ class BCFossilTypeDescriptors(AbstractPrimaryDescriptorsFunction):
 
         try:
             if config["type"] == "name":
-                return self._get_name(resource)
+                return self._get_name(resource, context)
             else:
-                tmp_node = models.Node.objects.filter(
-                    alias='default_significance',
-                    graph__name__contains=BCFossilTypeDescriptors._type_graph_name
-                ).first()
-                return_value = self._get_value_from_node(tmp_node, resource.resourceinstanceid)
-                if return_value is None:
-                    return_value = ""
-                return_value += " "
+
                 tmp_node = models.Node.objects.filter(
                     alias='size_category',
                     graph__name__contains=BCFossilTypeDescriptors._type_graph_name
                 ).first()
-                # print("Tmp Node: %s"%tmp_node)
-                tmp_value = self._get_value_from_node(tmp_node, resource.resourceinstanceid)
+                return_value = self._get_value_from_node(tmp_node, resource.resourceinstanceid, context)
+
+                if return_value is None:
+                    return_value = ""
+                return_value += "<br>"
+
+                tmp_node = models.Node.objects.filter(
+                    alias='default_significance',
+                    graph__name__contains=BCFossilTypeDescriptors._type_graph_name
+                ).first()
+                tmp_value = self._get_value_from_node(tmp_node, resource.resourceinstanceid, context)
+
                 if tmp_value is not None:
                     return_value += tmp_value
                 return return_value if return_value is not None else ""
@@ -100,7 +105,7 @@ class BCFossilTypeDescriptors(AbstractPrimaryDescriptorsFunction):
         except ValueError as e:
             print(e, "invalid nodegroupid participating in descriptor function.")
 
-    def _get_value_from_node(self, name_node, resourceinstanceid):
+    def _get_value_from_node(self, name_node, resourceinstanceid, context):
 
         tile = models.TileModel.objects.filter(
             nodegroup_id=name_node.nodegroup_id
@@ -108,8 +113,31 @@ class BCFossilTypeDescriptors(AbstractPrimaryDescriptorsFunction):
         if not tile:
             # print("No tile")
             return None
+        # print("Name Node Config: %s " % str(name_node.config))
+        # print("Name Node ID: %s " % str(name_node.nodeid))
+        # print("Name Node Datatype: %s " % str(name_node.datatype))
+        #
+        # print("Tile: %s " % str(tile))
         datatype = self._get_datatype_factory().get_instance(name_node.datatype)
-        display_value = datatype.get_display_value(tile, name_node)
+        # print("Datatype 2: %s" % datatype)
+        language = None
+        # print("Datatype tile data: %s" % datatype.get_tile_data(tile))
+        if context is not None and "language" in context:
+            language = context["language"]
+        else:
+            language = LANGUAGE_CODE
+
+        if name_node.datatype == "boolean" and 'trueLabel' in name_node.config:
+            value = (datatype.get_tile_data(tile))[str(name_node.nodeid)]
+            if value is None:
+                return None
+            else:
+                return name_node.config['trueLabel'][language] if (datatype.get_tile_data(tile))[
+                    str(name_node.nodeid)] else \
+                    name_node.config['falseLabel'][language]
+
+        display_value = datatype.get_display_value(tile, name_node, language=language)
+        # print("Display value: %s" % display_value)
         return display_value if display_value is not None else ""
 
     def _get_datatype_factory(self):
@@ -117,7 +145,7 @@ class BCFossilTypeDescriptors(AbstractPrimaryDescriptorsFunction):
             self._datatype_factory = DataTypeFactory()
         return self._datatype_factory
 
-    def _get_parent_name(self, resource):
+    def _get_parent_name(self, resource, context):
         # print("Resource: %s" % resource.resourceinstanceid)
 
         parent_value = models.ResourceXResource.objects.filter(
@@ -125,18 +153,18 @@ class BCFossilTypeDescriptors(AbstractPrimaryDescriptorsFunction):
             nodeid=BCFossilTypeDescriptors._parent_name_node.nodeid
         ).first()
 
-        return self._get_value_from_node(self._name_node, parent_value.resourceinstanceidto)
+        return self._get_value_from_node(self._name_node, parent_value.resourceinstanceidto, context)
 
-    def _get_name(self, resource):
+    def _get_name(self, resource, context):
         display_value = ""
         taxonomic_rank = self._get_value_from_node(
-            self._taxonomic_rank_node, resource.resourceinstanceid
+            self._taxonomic_rank_node, resource.resourceinstanceid, context
         )
         if taxonomic_rank == 'Species':
-            display_value = self._get_parent_name(resource)+" "
+            display_value = self._get_parent_name(resource, context)+" "
 
         display_value += self._get_value_from_node(
-            self._name_node, resource.resourceinstanceid
+            self._name_node, resource.resourceinstanceid, context
         )
 
         return display_value
