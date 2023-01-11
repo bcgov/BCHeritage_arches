@@ -18,15 +18,26 @@
       "minzoom": 0,
       "maxzoom": 20,
       "paint": {
-        "line-color": "#228822",
-        "line-width": 2
+        "line-color": [
+          "case",
+          ["match", ["get","PROTECTED_LANDS_CODE"], ["PA"], true, false], "#999900",
+          ["match", ["get","PROTECTED_LANDS_CODE"], ["PP"], true, false], "#990000",
+          ["match", ["get","PROTECTED_LANDS_CODE"], ["OI"], true, false], "#000099",
+          "#228822" ],
+        "line-width": 2,
+        "line-dasharray": [5,3,2,3]
       }
     },
     {
       "id": "parks-fill",
       "type": "fill",
       "paint": {
-        "fill-color": "#004400",
+        "fill-color": [
+          "case",
+          ["match", ["get","PROTECTED_LANDS_CODE"], ["PA"], true, false], "#999900",
+          ["match", ["get","PROTECTED_LANDS_CODE"], ["PP"], true, false], "#990000",
+          ["match", ["get","PROTECTED_LANDS_CODE"], ["OI"], true, false], "#000044",
+          "#004400" ],
         "fill-opacity": 0.1
       },
       "source": "parks-source",

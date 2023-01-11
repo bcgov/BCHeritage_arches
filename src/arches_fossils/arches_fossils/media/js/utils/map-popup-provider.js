@@ -6,12 +6,10 @@ define([
     var popupDataProvider = {
             layerConfigs: {
                 "WHSE_MINERAL_TENURE.GEOL_BEDROCK_UNIT_POLY_SVW":
-                    { displayname: [{"key": "PROJECT_NAME", title:""}],
-                        map_popup: [{"key": "MAXIMUM_AGE_NAME", "title": "Max. Age:"},
-                            {"key": "MINIMUM_AGE_NAME", "title": "Min Age:"},
-                            {"key": "AGE_GROUP", "title": "Age Group:"},
-                            {"key": "GROUP_SUITE_NAME", "title": "Group Suite:"},
-                            {"key": "ORIGINAL_DESCRIPTION", "title": "Description:"},
+                    { displayname: [{"key": "STRATIGRAPHIC_UNIT_CODE", title:""}],
+                        map_popup: [{"key": "STRATIGRAPHIC_NAME", "title": "Strat Name:"},
+                            {"key": "STRATIGRAPHIC_AGE_NAME", "title": "Strat Name:"},
+                            {"key": "ROCK_TYPE_DESCRIPTION", "title": "Rock Type:"}
                         ]},
                 "WHSE_CADASTRE.PMBC_PARCEL_FABRIC_POLY_SVW":
                     {displayname: [{"key": "PID", title:""}],
@@ -37,13 +35,22 @@ define([
                             {key: "PARK_CLASS", title: "Class: "},
                             {key: "ESTABLISHMENT_DATE", title: "Established: "},
                         ]
+                    },
+                "WHSE_ADMIN_BOUNDARIES.CLAB_NATIONAL_PARKS":
+                    {
+                        displayname: [{"key": "ENGLISH_NAME", title: ""}],
+                        "map_popup": [{key: "FRENCH_NAME", title: "French Name: "},
+                            {key: "LOCAL_NAME", title: "Local Name: "},
+                        ]
                     }
+
 
             },
             filterLayers: [
                 "WHSE_MINERAL_TENURE.GEOL_BEDROCK_UNIT_POLY_SVW",
                 "WHSE_ADMIN_BOUNDARIES.EBC_REGIONAL_DISTRICTS_SP",
                 "WHSE_TANTALIS.TA_PARK_ECORES_PA_SVW",
+                "WHSE_ADMIN_BOUNDARIES.CLAB_NATIONAL_PARKS",
                 "c66518e2-10c6-11ec-adef-5254008afee6", /* Important Areas Resource layer */
                 "2336968c-1035-11ec-a3aa-5254008afee6", /* Fossil Site layer */
             ],
