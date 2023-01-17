@@ -1,8 +1,9 @@
 define(['jquery',
     'knockout',
     'viewmodels/function',
-    'bindings/chosen'],
-function($, ko, FunctionViewModel, chosen) {
+    'bindings/chosen',
+    'templates/views/components/functions/sample-function.htm'],
+function($, ko, FunctionViewModel, chosen, sampleFunctionTemplate) {
     return ko.components.register('views/components/functions/sample-function', {
         viewModel: function(params) {
             FunctionViewModel.apply(this, arguments);
@@ -16,8 +17,6 @@ function($, ko, FunctionViewModel, chosen) {
 
             window.setTimeout(function(){$("select[data-bind^=chosen]").trigger("chosen:updated");}, 300);
         },
-        template: {
-            require: 'text!templates/views/components/functions/sample-function.htm'
-        }
+        template: sampleFunctionTemplate
     });
 });

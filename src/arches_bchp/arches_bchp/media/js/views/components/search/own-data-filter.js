@@ -1,7 +1,8 @@
 define([
     'knockout',
     'views/components/search/base-filter',
-], function(ko, BaseFilter) {
+    'templates/views/components/search/own-data-filter.htm'
+], function(ko, BaseFilter, defaultFilterView) {
     var componentName = 'own-data-filter';
     return ko.components.register(componentName, {
         viewModel: BaseFilter.extend({
@@ -18,6 +19,6 @@ define([
             },
 
         }),
-        template: { require: 'text!templates/views/components/search/own-data-filter.htm' }
+        template: defaultFilterView
     });
 });

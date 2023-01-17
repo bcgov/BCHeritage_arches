@@ -42,32 +42,37 @@ details = {
 
 
 class BCFossilsDescriptors(AbstractPrimaryDescriptorsFunction):
+    _sample_graph_name = {"en": "BC Fossil Sample"}
     _datatype_factory = None
     _formation_node = None
-    _geologic_period_node = None
+    _geologic_minimum_time_node = None
     _collected_fossils_node = None
     _collection_event_graph_id = None
     _coll_event_samples_values_config = None
-    _coll_event_popup_order = ["Detailed Location", "Formation", "Period", "Fossils Collected"]
-    _coll_event_card_order = ["Detailed Location", "Period", "Fossils Collected"]
+    _coll_event_popup_order = ["Detailed Location", "Formation", "Period", "Samples Collected"]
+    _coll_event_card_order = ["Detailed Location", "Period", "Samples Collected"]
 
     @staticmethod
     def initialize_static_data():
         BCFossilsDescriptors._formation_node = models.Node.objects.filter(
             alias='geological_formation',
-            graph__name='BC Fossil Sample'
+            graph__name__contains=BCFossilsDescriptors._sample_graph_name
         ).first()
-        BCFossilsDescriptors._geologic_period_node = models.Node.objects.filter(
-            alias='period',
-            graph__name='BC Fossil Sample'
+        BCFossilsDescriptors._geologic_minimum_time_node = models.Node.objects.filter(
+            alias='minimum_time',
+            graph__name__contains=BCFossilsDescriptors._sample_graph_name
         ).first()
-        BCFossilsDescriptors._collected_fossils_node = models.Node.objects.filter(alias="fossils_collected").first()
+        BCFossilsDescriptors._collected_fossils_node = models.Node.objects.filter(
+            alias="samples_collected",
+        ).first()
         BCFossilsDescriptors._collection_event_graph_id = \
-        models.GraphModel.objects.filter(name="BC Fossil Collection Event").filter(isresource=True).values(
+        models.GraphModel.objects.filter(
+            name__contains={"en": "BC Fossil Collection Event"}
+        ).filter(isresource=True).values(
             "graphid").first()["graphid"]
         BCFossilsDescriptors._coll_event_samples_values_config = [
             {"node": BCFossilsDescriptors._formation_node, "label": "Formation"},
-            {"node": BCFossilsDescriptors._geologic_period_node, "label": "Period"}]
+            {"node": BCFossilsDescriptors._geologic_minimum_time_node, "label": "Period"}]
 
     def get_primary_descriptor_from_nodes(self, resource, config, context=None):
         return_value = None
@@ -104,6 +109,14 @@ class BCFossilsDescriptors(AbstractPrimaryDescriptorsFunction):
                         else:
                             return_value += config["delimiter"]
                         return_value += self._format_value(label, display_values[label], config)
+            else:
+                for key in display_values.keys():
+                    if not return_value:
+                        return_value = ""
+                    else:
+                        return_value += config["delimiter"]
+                    return_value += self._format_value(key, display_values[key], config)
+
             return return_value
         except ValueError as e:
             print(e, "invalid nodegroupid participating in descriptor function.")

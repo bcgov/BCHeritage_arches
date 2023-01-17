@@ -13,11 +13,19 @@
                     "description": "",
                     "graph_id": "3caf329f-b8f7-11e6-84a5-026d961c88e6",
                     "helpenabled": false,
-                    "helptext": null,
-                    "helptitle": null,
-                    "instructions": "Select the date of the publication for the information resource.",
+                    "helptext": {
+                        "en": null
+                    },
+                    "helptitle": {
+                        "en": null
+                    },
+                    "instructions": {
+                        "en": "Select the date of the publication for the information resource."
+                    },
                     "is_editable": true,
-                    "name": "Publication Date",
+                    "name": {
+                        "en": "Publication Date"
+                    },
                     "nodegroup_id": "04f4f8cb-e74b-11e6-84a6-026d961c88e6",
                     "sortorder": 0,
                     "visible": true
@@ -29,14 +37,24 @@
                     "config": null,
                     "constraints": [],
                     "cssclass": "",
-                    "description": "This branch describes the publication of an Information Resource.\n\nConnects to Information Resource (E73) with -P128",
+                    "description": {
+                        "en": "This branch describes the publication of an Information Resource.\n\nConnects to Information Resource (E73) with -P128"
+                    },
                     "graph_id": "3caf329f-b8f7-11e6-84a5-026d961c88e6",
                     "helpenabled": false,
-                    "helptext": null,
-                    "helptitle": null,
-                    "instructions": null,
+                    "helptext": {
+                        "en": null
+                    },
+                    "helptitle": {
+                        "en": null
+                    },
+                    "instructions": {
+                        "en": null
+                    },
                     "is_editable": true,
-                    "name": "Publication Event",
+                    "name": {
+                        "en": "Publication Event"
+                    },
                     "nodegroup_id": "04f4f8ce-e74b-11e6-84a6-026d961c88e6",
                     "sortorder": null,
                     "visible": true
@@ -48,14 +66,24 @@
                     "config": null,
                     "constraints": [],
                     "cssclass": "",
-                    "description": "Describes the creators, contributors, type, and date of a creation and/or update event of an information resource.",
+                    "description": {
+                        "en": "Describes the creators, contributors, type, and date of a creation and/or update event of an information resource."
+                    },
                     "graph_id": "3caf329f-b8f7-11e6-84a5-026d961c88e6",
                     "helpenabled": false,
-                    "helptext": null,
-                    "helptitle": null,
-                    "instructions": "Describe the information resource  and its date of creation",
+                    "helptext": {
+                        "en": null
+                    },
+                    "helptitle": {
+                        "en": null
+                    },
+                    "instructions": {
+                        "en": "Describe the information resource  and its date of creation"
+                    },
                     "is_editable": true,
-                    "name": "Information Resource Creation Event",
+                    "name": {
+                        "en": "Information Resource Creation Event"
+                    },
                     "nodegroup_id": "141e22cd-e74b-11e6-84a6-026d961c88e6",
                     "sortorder": null,
                     "visible": true
@@ -67,14 +95,24 @@
                     "config": null,
                     "constraints": [],
                     "cssclass": "",
-                    "description": "Defines time span for which the Information Resource is relevant.\nApplies to: Information Resource",
+                    "description": {
+                        "en": "Defines time span for which the Information Resource is relevant.\nApplies to: Information Resource"
+                    },
                     "graph_id": "3caf329f-b8f7-11e6-84a5-026d961c88e6",
                     "helpenabled": false,
-                    "helptext": null,
-                    "helptitle": null,
-                    "instructions": "Describe the temporal coverage of the information resource's subject. ",
+                    "helptext": {
+                        "en": null
+                    },
+                    "helptitle": {
+                        "en": null
+                    },
+                    "instructions": {
+                        "en": "Describe the temporal coverage of the information resource's subject. "
+                    },
                     "is_editable": true,
-                    "name": "Temporal Coverage",
+                    "name": {
+                        "en": "Temporal Coverage"
+                    },
                     "nodegroup_id": "20e6d9cd-e74b-11e6-84a6-026d961c88e6",
                     "sortorder": null,
                     "visible": true
@@ -86,14 +124,24 @@
                     "config": null,
                     "constraints": [],
                     "cssclass": "",
-                    "description": "Generic branch for capturing free-form written descriptive information.\nIntended to be evolution from v3 description branch from HIP 3. Created semantic description node with description string and description type hanging off of it. Description (semantic node) becomes a grouping node (type and string).  \n\nThis branch meets technical business rules for CRM compliance but CRM experts have said that this is an inappropriate implementation of E62.\n\nConnects to all resources with P140i",
+                    "description": {
+                        "en": "Generic branch for capturing free-form written descriptive information.\nIntended to be evolution from v3 description branch from HIP 3. Created semantic description node with description string and description type hanging off of it. Description (semantic node) becomes a grouping node (type and string).  \n\nThis branch meets technical business rules for CRM compliance but CRM experts have said that this is an inappropriate implementation of E62.\n\nConnects to all resources with P140i"
+                    },
                     "graph_id": "3caf329f-b8f7-11e6-84a5-026d961c88e6",
                     "helpenabled": false,
-                    "helptext": null,
-                    "helptitle": null,
-                    "instructions": "Enter a description and description type for the resource.",
+                    "helptext": {
+                        "en": null
+                    },
+                    "helptitle": {
+                        "en": null
+                    },
+                    "instructions": {
+                        "en": "Enter a description and description type for the resource."
+                    },
                     "is_editable": true,
-                    "name": "Description",
+                    "name": {
+                        "en": "Description"
+                    },
                     "nodegroup_id": "7cdf3069-e74a-11e6-84a6-026d961c88e6",
                     "sortorder": null,
                     "visible": true
@@ -105,14 +153,24 @@
                     "config": null,
                     "constraints": [],
                     "cssclass": "",
-                    "description": "Represents a single node in a graph",
+                    "description": {
+                        "en": "Represents a single node in a graph"
+                    },
                     "graph_id": "3caf329f-b8f7-11e6-84a5-026d961c88e6",
                     "helpenabled": false,
-                    "helptext": null,
-                    "helptitle": null,
-                    "instructions": "Select the administrative/governmental subdivision name and type.",
+                    "helptext": {
+                        "en": null
+                    },
+                    "helptitle": {
+                        "en": null
+                    },
+                    "instructions": {
+                        "en": "Select the administrative/governmental subdivision name and type."
+                    },
                     "is_editable": true,
-                    "name": "Administration Subdivision",
+                    "name": {
+                        "en": "Administration Subdivision"
+                    },
                     "nodegroup_id": "86a103e3-e74a-11e6-84a6-026d961c88e6",
                     "sortorder": 1,
                     "visible": true
@@ -124,14 +182,24 @@
                     "config": null,
                     "constraints": [],
                     "cssclass": "",
-                    "description": "Describes the location of an information resource. Relates to Information Resource E73 with P67",
+                    "description": {
+                        "en": "Describes the location of an information resource. Relates to Information Resource E73 with P67"
+                    },
                     "graph_id": "3caf329f-b8f7-11e6-84a5-026d961c88e6",
                     "helpenabled": false,
-                    "helptext": null,
-                    "helptitle": null,
-                    "instructions": null,
+                    "helptext": {
+                        "en": null
+                    },
+                    "helptitle": {
+                        "en": null
+                    },
+                    "instructions": {
+                        "en": null
+                    },
                     "is_editable": true,
-                    "name": "Place 3",
+                    "name": {
+                        "en": "Place 3"
+                    },
                     "nodegroup_id": "86a103e6-e74a-11e6-84a6-026d961c88e6",
                     "sortorder": null,
                     "visible": true
@@ -143,14 +211,24 @@
                     "config": null,
                     "constraints": [],
                     "cssclass": "",
-                    "description": "Represents a single node in a graph",
+                    "description": {
+                        "en": "Represents a single node in a graph"
+                    },
                     "graph_id": "3caf329f-b8f7-11e6-84a5-026d961c88e6",
                     "helpenabled": false,
-                    "helptext": null,
-                    "helptitle": null,
-                    "instructions": "Define the spatial location.",
+                    "helptext": {
+                        "en": null
+                    },
+                    "helptitle": {
+                        "en": null
+                    },
+                    "instructions": {
+                        "en": "Define the spatial location."
+                    },
                     "is_editable": true,
-                    "name": "Spatial Location",
+                    "name": {
+                        "en": "Spatial Location"
+                    },
                     "nodegroup_id": "86a103e9-e74a-11e6-84a6-026d961c88e6",
                     "sortorder": 0,
                     "visible": true
@@ -162,14 +240,24 @@
                     "config": null,
                     "constraints": [],
                     "cssclass": "",
-                    "description": "Represents a single node in a graph",
+                    "description": {
+                        "en": "Represents a single node in a graph"
+                    },
                     "graph_id": "3caf329f-b8f7-11e6-84a5-026d961c88e6",
                     "helpenabled": false,
-                    "helptext": null,
-                    "helptitle": null,
-                    "instructions": "Describe the location of the resource.",
+                    "helptext": {
+                        "en": null
+                    },
+                    "helptitle": {
+                        "en": null
+                    },
+                    "instructions": {
+                        "en": "Describe the location of the resource."
+                    },
                     "is_editable": true,
-                    "name": "Description Location",
+                    "name": {
+                        "en": "Description Location"
+                    },
                     "nodegroup_id": "86a103ec-e74a-11e6-84a6-026d961c88e6",
                     "sortorder": 2,
                     "visible": true
@@ -181,14 +269,24 @@
                     "config": null,
                     "constraints": [],
                     "cssclass": "",
-                    "description": "Used to define legal privileges associated with an Information Resource.",
+                    "description": {
+                        "en": "Used to define legal privileges associated with an Information Resource."
+                    },
                     "graph_id": "3caf329f-b8f7-11e6-84a5-026d961c88e6",
                     "helpenabled": false,
-                    "helptext": null,
-                    "helptitle": null,
-                    "instructions": "Describe the copyright for the information resource.",
+                    "helptext": {
+                        "en": null
+                    },
+                    "helptitle": {
+                        "en": null
+                    },
+                    "instructions": {
+                        "en": "Describe the copyright for the information resource."
+                    },
                     "is_editable": true,
-                    "name": "Information Resource Copyright",
+                    "name": {
+                        "en": "Information Resource Copyright"
+                    },
                     "nodegroup_id": "94d998b7-e74a-11e6-84a6-026d961c88e6",
                     "sortorder": null,
                     "visible": true
@@ -200,14 +298,24 @@
                     "config": null,
                     "constraints": [],
                     "cssclass": "",
-                    "description": "An object or substance used to record and accumulate data",
+                    "description": {
+                        "en": "An object or substance used to record and accumulate data"
+                    },
                     "graph_id": "3caf329f-b8f7-11e6-84a5-026d961c88e6",
                     "helpenabled": false,
-                    "helptext": null,
-                    "helptitle": null,
-                    "instructions": "Select the information carrier for the information resource.",
+                    "helptext": {
+                        "en": null
+                    },
+                    "helptitle": {
+                        "en": null
+                    },
+                    "instructions": {
+                        "en": "Select the information carrier for the information resource."
+                    },
                     "is_editable": true,
-                    "name": "Information Carrier",
+                    "name": {
+                        "en": "Information Carrier"
+                    },
                     "nodegroup_id": "9f210d2d-e74a-11e6-84a6-026d961c88e6",
                     "sortorder": null,
                     "visible": true
@@ -219,14 +327,24 @@
                     "config": null,
                     "constraints": [],
                     "cssclass": "",
-                    "description": "Describes the title of an Information Resource.",
+                    "description": {
+                        "en": "Describes the title of an Information Resource."
+                    },
                     "graph_id": "3caf329f-b8f7-11e6-84a5-026d961c88e6",
                     "helpenabled": false,
-                    "helptext": null,
-                    "helptitle": null,
-                    "instructions": "Enter the information resource's title and the type of that title. ",
+                    "helptext": {
+                        "en": null
+                    },
+                    "helptitle": {
+                        "en": null
+                    },
+                    "instructions": {
+                        "en": "Enter the information resource's title and the type of that title. "
+                    },
                     "is_editable": true,
-                    "name": "Title",
+                    "name": {
+                        "en": "Title"
+                    },
                     "nodegroup_id": "aa4096f1-e74a-11e6-84a6-026d961c88e6",
                     "sortorder": null,
                     "visible": true
@@ -238,14 +356,24 @@
                     "config": null,
                     "constraints": [],
                     "cssclass": "",
-                    "description": "An informative word used for resource information retrieval that indicates the content of a resource.\n\nRelates to resources via P2.",
+                    "description": {
+                        "en": "An informative word used for resource information retrieval that indicates the content of a resource.\n\nRelates to resources via P2."
+                    },
                     "graph_id": "3caf329f-b8f7-11e6-84a5-026d961c88e6",
                     "helpenabled": false,
-                    "helptext": null,
-                    "helptitle": null,
-                    "instructions": "Select keywords associated with the resource.",
+                    "helptext": {
+                        "en": null
+                    },
+                    "helptitle": {
+                        "en": null
+                    },
+                    "instructions": {
+                        "en": "Select keywords associated with the resource."
+                    },
                     "is_editable": true,
-                    "name": "Keyword",
+                    "name": {
+                        "en": "Keyword"
+                    },
                     "nodegroup_id": "b5f5b1ed-e74a-11e6-84a6-026d961c88e6",
                     "sortorder": null,
                     "visible": true
@@ -257,14 +385,24 @@
                     "config": null,
                     "constraints": [],
                     "cssclass": "",
-                    "description": "Used to hold identifiers necessary to link a given resource to records in an external (perhaps legacy) system.",
+                    "description": {
+                        "en": "Used to hold identifiers necessary to link a given resource to records in an external (perhaps legacy) system."
+                    },
                     "graph_id": "3caf329f-b8f7-11e6-84a5-026d961c88e6",
                     "helpenabled": false,
-                    "helptext": null,
-                    "helptitle": null,
-                    "instructions": "Enter information for identifiers of the resource from other external sources.",
+                    "helptext": {
+                        "en": null
+                    },
+                    "helptitle": {
+                        "en": null
+                    },
+                    "instructions": {
+                        "en": "Enter information for identifiers of the resource from other external sources."
+                    },
                     "is_editable": true,
-                    "name": "External Identifier",
+                    "name": {
+                        "en": "External Identifier"
+                    },
                     "nodegroup_id": "c0df1e05-e74a-11e6-84a6-026d961c88e6",
                     "sortorder": null,
                     "visible": true
@@ -276,14 +414,24 @@
                     "config": null,
                     "constraints": [],
                     "cssclass": "",
-                    "description": "This branch describes the language of an Information Resource.",
+                    "description": {
+                        "en": "This branch describes the language of an Information Resource."
+                    },
                     "graph_id": "3caf329f-b8f7-11e6-84a5-026d961c88e6",
                     "helpenabled": false,
-                    "helptext": null,
-                    "helptitle": null,
-                    "instructions": "Select language of the information resource.",
+                    "helptext": {
+                        "en": null
+                    },
+                    "helptitle": {
+                        "en": null
+                    },
+                    "instructions": {
+                        "en": "Select language of the information resource."
+                    },
                     "is_editable": true,
-                    "name": "Language",
+                    "name": {
+                        "en": "Language"
+                    },
                     "nodegroup_id": "cc16f563-e74a-11e6-84a6-026d961c88e6",
                     "sortorder": null,
                     "visible": true
@@ -298,7 +446,9 @@
             },
             "deploymentdate": null,
             "deploymentfile": null,
-            "description": "This resource model defines information resources, such as images, reports, and publications. ",
+            "description": {
+                "en": "This resource model defines information resources, such as images, reports, and publications. "
+            },
             "edges": [
                 {
                     "description": null,
@@ -611,10 +761,11 @@
             "graphid": "3caf329f-b8f7-11e6-84a5-026d961c88e6",
             "iconclass": "fa fa-file-text-o",
             "is_editable": true,
-            "isactive": true,
             "isresource": true,
             "jsonldcontext": null,
-            "name": "Information Resource Model",
+            "name": {
+                "en": "Information Resource Model"
+            },
             "nodegroups": [
                 {
                     "cardinality": "1",
@@ -709,12 +860,14 @@
             ],
             "nodes": [
                 {
-                    "config": null,
+                    "alias": "publication_event",
+                    "config": {},
                     "datatype": "semantic",
                     "description": "",
                     "exportable": false,
                     "fieldname": "",
                     "graph_id": "3caf329f-b8f7-11e6-84a5-026d961c88e6",
+                    "hascustomalias": false,
                     "is_collector": true,
                     "isrequired": false,
                     "issearchable": true,
@@ -727,12 +880,14 @@
                     "sortorder": 0
                 },
                 {
-                    "config": null,
+                    "alias": "publication",
+                    "config": {},
                     "datatype": "semantic",
                     "description": "",
                     "exportable": false,
                     "fieldname": "",
                     "graph_id": "3caf329f-b8f7-11e6-84a5-026d961c88e6",
+                    "hascustomalias": false,
                     "is_collector": true,
                     "isrequired": false,
                     "issearchable": true,
@@ -745,6 +900,7 @@
                     "sortorder": 0
                 },
                 {
+                    "alias": "date_of_publication",
                     "config": {
                         "dateFormat": "YYYY-MM-DD"
                     },
@@ -753,6 +909,7 @@
                     "exportable": false,
                     "fieldname": "",
                     "graph_id": "3caf329f-b8f7-11e6-84a5-026d961c88e6",
+                    "hascustomalias": false,
                     "is_collector": false,
                     "isrequired": false,
                     "issearchable": true,
@@ -765,12 +922,14 @@
                     "sortorder": 0
                 },
                 {
-                    "config": null,
+                    "alias": "time_span_publication_event",
+                    "config": {},
                     "datatype": "semantic",
                     "description": "Represents a single node in a graph",
                     "exportable": false,
                     "fieldname": "",
                     "graph_id": "3caf329f-b8f7-11e6-84a5-026d961c88e6",
+                    "hascustomalias": false,
                     "is_collector": false,
                     "isrequired": false,
                     "issearchable": true,
@@ -783,12 +942,14 @@
                     "sortorder": 0
                 },
                 {
-                    "config": null,
+                    "alias": "resource_creation_event",
+                    "config": {},
                     "datatype": "semantic",
                     "description": "",
                     "exportable": false,
                     "fieldname": "",
                     "graph_id": "3caf329f-b8f7-11e6-84a5-026d961c88e6",
+                    "hascustomalias": false,
                     "is_collector": true,
                     "isrequired": false,
                     "issearchable": true,
@@ -801,12 +962,14 @@
                     "sortorder": 0
                 },
                 {
-                    "config": null,
+                    "alias": "time_span_of_resource_creation_event",
+                    "config": {},
                     "datatype": "semantic",
                     "description": "Represents a single node in a graph",
                     "exportable": false,
                     "fieldname": "",
                     "graph_id": "3caf329f-b8f7-11e6-84a5-026d961c88e6",
+                    "hascustomalias": false,
                     "is_collector": false,
                     "isrequired": false,
                     "issearchable": true,
@@ -819,12 +982,14 @@
                     "sortorder": 0
                 },
                 {
-                    "config": null,
+                    "alias": "information_resource_type_assignment",
+                    "config": {},
                     "datatype": "semantic",
                     "description": "Represents a single node in a graph",
                     "exportable": false,
                     "fieldname": "",
                     "graph_id": "3caf329f-b8f7-11e6-84a5-026d961c88e6",
+                    "hascustomalias": false,
                     "is_collector": false,
                     "isrequired": false,
                     "issearchable": true,
@@ -837,6 +1002,7 @@
                     "sortorder": 0
                 },
                 {
+                    "alias": "date_of_creation",
                     "config": {
                         "dateFormat": "YYYY-MM-DD"
                     },
@@ -845,6 +1011,7 @@
                     "exportable": false,
                     "fieldname": "",
                     "graph_id": "3caf329f-b8f7-11e6-84a5-026d961c88e6",
+                    "hascustomalias": false,
                     "is_collector": false,
                     "isrequired": false,
                     "issearchable": true,
@@ -857,6 +1024,7 @@
                     "sortorder": 0
                 },
                 {
+                    "alias": "information_resource_type",
                     "config": {
                         "rdmCollection": "fb67e800-51cd-4890-9ec3-92b49d46ab5f"
                     },
@@ -865,6 +1033,7 @@
                     "exportable": false,
                     "fieldname": "",
                     "graph_id": "3caf329f-b8f7-11e6-84a5-026d961c88e6",
+                    "hascustomalias": false,
                     "is_collector": false,
                     "isrequired": false,
                     "issearchable": true,
@@ -877,12 +1046,14 @@
                     "sortorder": 0
                 },
                 {
-                    "config": null,
+                    "alias": "temporal_coverage",
+                    "config": {},
                     "datatype": "semantic",
                     "description": "",
                     "exportable": false,
                     "fieldname": "",
                     "graph_id": "3caf329f-b8f7-11e6-84a5-026d961c88e6",
+                    "hascustomalias": false,
                     "is_collector": true,
                     "isrequired": false,
                     "issearchable": true,
@@ -895,12 +1066,14 @@
                     "sortorder": 0
                 },
                 {
-                    "config": null,
+                    "alias": "temporal_coverage_timespan",
+                    "config": {},
                     "datatype": "string",
                     "description": "Represents a single node in a graph",
                     "exportable": false,
                     "fieldname": "",
                     "graph_id": "3caf329f-b8f7-11e6-84a5-026d961c88e6",
+                    "hascustomalias": false,
                     "is_collector": false,
                     "isrequired": false,
                     "issearchable": true,
@@ -913,12 +1086,14 @@
                     "sortorder": 0
                 },
                 {
+                    "alias": "information_resource",
                     "config": {},
                     "datatype": "semantic",
                     "description": "",
                     "exportable": false,
                     "fieldname": "",
                     "graph_id": "3caf329f-b8f7-11e6-84a5-026d961c88e6",
+                    "hascustomalias": false,
                     "is_collector": false,
                     "isrequired": false,
                     "issearchable": true,
@@ -931,12 +1106,14 @@
                     "sortorder": 0
                 },
                 {
-                    "config": null,
+                    "alias": "description_assignment",
+                    "config": {},
                     "datatype": "semantic",
                     "description": "",
                     "exportable": false,
                     "fieldname": "",
                     "graph_id": "3caf329f-b8f7-11e6-84a5-026d961c88e6",
+                    "hascustomalias": false,
                     "is_collector": true,
                     "isrequired": false,
                     "issearchable": true,
@@ -949,12 +1126,14 @@
                     "sortorder": 0
                 },
                 {
-                    "config": null,
+                    "alias": "description",
+                    "config": {},
                     "datatype": "string",
                     "description": "Represents a single node in a graph",
                     "exportable": false,
                     "fieldname": "",
                     "graph_id": "3caf329f-b8f7-11e6-84a5-026d961c88e6",
+                    "hascustomalias": false,
                     "is_collector": false,
                     "isrequired": false,
                     "issearchable": true,
@@ -967,6 +1146,7 @@
                     "sortorder": 0
                 },
                 {
+                    "alias": "description_type",
                     "config": {
                         "rdmCollection": null
                     },
@@ -975,6 +1155,7 @@
                     "exportable": false,
                     "fieldname": "",
                     "graph_id": "3caf329f-b8f7-11e6-84a5-026d961c88e6",
+                    "hascustomalias": false,
                     "is_collector": false,
                     "isrequired": false,
                     "issearchable": true,
@@ -987,12 +1168,14 @@
                     "sortorder": 0
                 },
                 {
-                    "config": null,
+                    "alias": "administration_subdivision",
+                    "config": {},
                     "datatype": "semantic",
                     "description": "Represents a single node in a graph",
                     "exportable": false,
                     "fieldname": "",
                     "graph_id": "3caf329f-b8f7-11e6-84a5-026d961c88e6",
+                    "hascustomalias": false,
                     "is_collector": true,
                     "isrequired": false,
                     "issearchable": true,
@@ -1005,12 +1188,14 @@
                     "sortorder": 0
                 },
                 {
-                    "config": null,
+                    "alias": "place",
+                    "config": {},
                     "datatype": "semantic",
                     "description": "",
                     "exportable": false,
                     "fieldname": "",
                     "graph_id": "3caf329f-b8f7-11e6-84a5-026d961c88e6",
+                    "hascustomalias": false,
                     "is_collector": true,
                     "isrequired": false,
                     "issearchable": true,
@@ -1023,6 +1208,7 @@
                     "sortorder": 0
                 },
                 {
+                    "alias": "spatial_coordinates_geometry",
                     "config": {
                         "addToMap": false,
                         "advancedStyle": "",
@@ -1054,6 +1240,7 @@
                     "exportable": false,
                     "fieldname": "",
                     "graph_id": "3caf329f-b8f7-11e6-84a5-026d961c88e6",
+                    "hascustomalias": false,
                     "is_collector": true,
                     "isrequired": false,
                     "issearchable": true,
@@ -1066,12 +1253,14 @@
                     "sortorder": 0
                 },
                 {
-                    "config": null,
+                    "alias": "place_description_assignment",
+                    "config": {},
                     "datatype": "semantic",
                     "description": "Represents a single node in a graph",
                     "exportable": false,
                     "fieldname": "",
                     "graph_id": "3caf329f-b8f7-11e6-84a5-026d961c88e6",
+                    "hascustomalias": false,
                     "is_collector": true,
                     "isrequired": false,
                     "issearchable": true,
@@ -1084,6 +1273,7 @@
                     "sortorder": 0
                 },
                 {
+                    "alias": "administrative_subdivision_type",
                     "config": {
                         "rdmCollection": "d5230d60-0eb9-483d-90f4-9965eaca0292"
                     },
@@ -1092,6 +1282,7 @@
                     "exportable": false,
                     "fieldname": "",
                     "graph_id": "3caf329f-b8f7-11e6-84a5-026d961c88e6",
+                    "hascustomalias": false,
                     "is_collector": false,
                     "isrequired": false,
                     "issearchable": true,
@@ -1104,12 +1295,14 @@
                     "sortorder": 0
                 },
                 {
-                    "config": null,
+                    "alias": "place_description",
+                    "config": {},
                     "datatype": "string",
                     "description": "Represents a single node in a graph",
                     "exportable": false,
                     "fieldname": "",
                     "graph_id": "3caf329f-b8f7-11e6-84a5-026d961c88e6",
+                    "hascustomalias": false,
                     "is_collector": false,
                     "isrequired": false,
                     "issearchable": true,
@@ -1122,12 +1315,14 @@
                     "sortorder": 0
                 },
                 {
-                    "config": null,
+                    "alias": "administrative_subdivision_name",
+                    "config": {},
                     "datatype": "string",
                     "description": "Represents a single node in a graph",
                     "exportable": false,
                     "fieldname": "",
                     "graph_id": "3caf329f-b8f7-11e6-84a5-026d961c88e6",
+                    "hascustomalias": false,
                     "is_collector": false,
                     "isrequired": false,
                     "issearchable": true,
@@ -1140,6 +1335,7 @@
                     "sortorder": 0
                 },
                 {
+                    "alias": "geometry_qualifier",
                     "config": {
                         "rdmCollection": null
                     },
@@ -1148,6 +1344,7 @@
                     "exportable": false,
                     "fieldname": "",
                     "graph_id": "3caf329f-b8f7-11e6-84a5-026d961c88e6",
+                    "hascustomalias": false,
                     "is_collector": false,
                     "isrequired": false,
                     "issearchable": true,
@@ -1160,12 +1357,14 @@
                     "sortorder": 0
                 },
                 {
-                    "config": null,
+                    "alias": "copyright_description",
+                    "config": {},
                     "datatype": "string",
                     "description": "",
                     "exportable": false,
                     "fieldname": "",
                     "graph_id": "3caf329f-b8f7-11e6-84a5-026d961c88e6",
+                    "hascustomalias": false,
                     "is_collector": true,
                     "isrequired": false,
                     "issearchable": true,
@@ -1178,6 +1377,7 @@
                     "sortorder": 0
                 },
                 {
+                    "alias": "copyright_type",
                     "config": {
                         "rdmCollection": null
                     },
@@ -1186,6 +1386,7 @@
                     "exportable": false,
                     "fieldname": "",
                     "graph_id": "3caf329f-b8f7-11e6-84a5-026d961c88e6",
+                    "hascustomalias": false,
                     "is_collector": false,
                     "isrequired": false,
                     "issearchable": true,
@@ -1198,6 +1399,7 @@
                     "sortorder": 0
                 },
                 {
+                    "alias": "information_carrier",
                     "config": {
                         "activateMax": false,
                         "maxFileSize": null,
@@ -1208,6 +1410,7 @@
                     "exportable": false,
                     "fieldname": "",
                     "graph_id": "3caf329f-b8f7-11e6-84a5-026d961c88e6",
+                    "hascustomalias": false,
                     "is_collector": true,
                     "isrequired": false,
                     "issearchable": true,
@@ -1220,6 +1423,7 @@
                     "sortorder": 0
                 },
                 {
+                    "alias": "information_carrier_format_type",
                     "config": {
                         "rdmCollection": "3b5a3cd9-c0ff-4053-88a2-9ce94aeec2cb"
                     },
@@ -1228,6 +1432,7 @@
                     "exportable": false,
                     "fieldname": "",
                     "graph_id": "3caf329f-b8f7-11e6-84a5-026d961c88e6",
+                    "hascustomalias": false,
                     "is_collector": false,
                     "isrequired": false,
                     "issearchable": true,
@@ -1240,12 +1445,14 @@
                     "sortorder": 0
                 },
                 {
-                    "config": null,
+                    "alias": "title",
+                    "config": {},
                     "datatype": "string",
                     "description": "",
                     "exportable": false,
                     "fieldname": "",
                     "graph_id": "3caf329f-b8f7-11e6-84a5-026d961c88e6",
+                    "hascustomalias": false,
                     "is_collector": true,
                     "isrequired": false,
                     "issearchable": true,
@@ -1258,6 +1465,7 @@
                     "sortorder": 0
                 },
                 {
+                    "alias": "title_type",
                     "config": {
                         "rdmCollection": "a6998a7d-c618-4a49-8018-f8dcbc6b202d"
                     },
@@ -1266,6 +1474,7 @@
                     "exportable": false,
                     "fieldname": "",
                     "graph_id": "3caf329f-b8f7-11e6-84a5-026d961c88e6",
+                    "hascustomalias": false,
                     "is_collector": false,
                     "isrequired": false,
                     "issearchable": true,
@@ -1278,6 +1487,7 @@
                     "sortorder": 0
                 },
                 {
+                    "alias": "keyword",
                     "config": {
                         "rdmCollection": "4063c7c5-485b-432b-9dfb-4f81cb6b5cfd"
                     },
@@ -1286,6 +1496,7 @@
                     "exportable": false,
                     "fieldname": "",
                     "graph_id": "3caf329f-b8f7-11e6-84a5-026d961c88e6",
+                    "hascustomalias": false,
                     "is_collector": true,
                     "isrequired": false,
                     "issearchable": true,
@@ -1298,12 +1509,14 @@
                     "sortorder": 0
                 },
                 {
-                    "config": null,
+                    "alias": "external_xref",
+                    "config": {},
                     "datatype": "string",
                     "description": "",
                     "exportable": false,
                     "fieldname": "",
                     "graph_id": "3caf329f-b8f7-11e6-84a5-026d961c88e6",
+                    "hascustomalias": false,
                     "is_collector": true,
                     "isrequired": false,
                     "issearchable": true,
@@ -1316,6 +1529,7 @@
                     "sortorder": 0
                 },
                 {
+                    "alias": "external_identifier_type",
                     "config": {
                         "rdmCollection": "a4bfeafb-7a04-43fd-b812-331105ce78b3"
                     },
@@ -1324,6 +1538,7 @@
                     "exportable": false,
                     "fieldname": "",
                     "graph_id": "3caf329f-b8f7-11e6-84a5-026d961c88e6",
+                    "hascustomalias": false,
                     "is_collector": false,
                     "isrequired": false,
                     "issearchable": true,
@@ -1336,7 +1551,11 @@
                     "sortorder": 0
                 },
                 {
+                    "alias": "external_source",
                     "config": {
+                        "i18n_config": {
+                            "fn": "arches.app.datatypes.datatypes.DomainDataType"
+                        },
                         "options": []
                     },
                     "datatype": "domain-value",
@@ -1344,6 +1563,7 @@
                     "exportable": false,
                     "fieldname": "",
                     "graph_id": "3caf329f-b8f7-11e6-84a5-026d961c88e6",
+                    "hascustomalias": false,
                     "is_collector": false,
                     "isrequired": false,
                     "issearchable": true,
@@ -1356,12 +1576,14 @@
                     "sortorder": 0
                 },
                 {
-                    "config": null,
+                    "alias": "linguistic_object",
+                    "config": {},
                     "datatype": "semantic",
                     "description": "",
                     "exportable": false,
                     "fieldname": "",
                     "graph_id": "3caf329f-b8f7-11e6-84a5-026d961c88e6",
+                    "hascustomalias": false,
                     "is_collector": true,
                     "isrequired": false,
                     "issearchable": true,
@@ -1374,6 +1596,7 @@
                     "sortorder": 0
                 },
                 {
+                    "alias": "language_type",
                     "config": {
                         "rdmCollection": "b539ba8b-2b70-45fb-8373-25fbfb652910"
                     },
@@ -1382,6 +1605,7 @@
                     "exportable": false,
                     "fieldname": "",
                     "graph_id": "3caf329f-b8f7-11e6-84a5-026d961c88e6",
+                    "hascustomalias": false,
                     "is_collector": false,
                     "isrequired": false,
                     "issearchable": true,
@@ -1395,15 +1619,24 @@
                 }
             ],
             "ontology_id": "e6e8db47-2ccf-11e6-927e-b8f6b115d7dd",
+            "publication": {
+                "graph_id": "3caf329f-b8f7-11e6-84a5-026d961c88e6",
+                "notes": null,
+                "publicationid": "59a5c862-53f7-11ed-b0e5-5254004d77d3",
+                "published_time": "2022-10-24T18:55:34.441",
+                "user_id": 1
+            },
             "relatable_resource_model_ids": [],
             "resource_2_resource_constraints": [],
             "root": {
+                "alias": "information_resource",
                 "config": {},
                 "datatype": "semantic",
                 "description": "",
                 "exportable": false,
                 "fieldname": "",
                 "graph_id": "3caf329f-b8f7-11e6-84a5-026d961c88e6",
+                "hascustomalias": false,
                 "is_collector": false,
                 "isrequired": false,
                 "issearchable": true,
@@ -1415,15 +1648,17 @@
                 "sortorder": 0
             },
             "slug": null,
-            "subtitle": "Models information carriers such as images, reports, and publications.",
+            "subtitle": {
+                "en": "Models information carriers such as images, reports, and publications."
+            },
             "template_id": "50000000-0000-0000-0000-000000000003",
             "version": ""
         }
     ],
     "metadata": {
-        "db": "PostgreSQL 12.6 on x86_64-pc-linux-gnu, compiled by gcc (GCC) 4.8.5 20150623 (Red Hat 4.8.5-44), 64-bit",
-        "git hash": "439f585 2021-10-26 14:45:09 -0700",
+        "db": "PostgreSQL 12.12 on x86_64-pc-linux-gnu, compiled by gcc (GCC) 4.8.5 20150623 (Red Hat 4.8.5-44), 64-bit",
+        "git hash": "/bin/sh: git: command not found",
         "os": "Linux",
-        "os version": "3.10.0-1127.el7.x86_64"
+        "os version": "3.10.0-1160.76.1.el7.x86_64"
     }
 }

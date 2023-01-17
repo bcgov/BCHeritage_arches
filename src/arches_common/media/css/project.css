@@ -36,6 +36,44 @@ table.bc-summary-table td {
     vertical-align: top;
 }
 
+.bcrhp-grid-container {
+    display: grid;
+    /*width: 75%;*/
+    grid-template-columns: 40% 40% 20%;
+    vertical-align: top;
+}
+
+.grid-col-1 {
+    grid-column-start: 1;
+}
+
+.grid-col-2 {
+    grid-column-start: 2;
+}
+
+.grid-col-3 {
+    grid-column-start: 3;
+}
+
+.grid-row-1 {
+    grid-row-start: 1;
+    grid-auto-rows: minmax(min-content, max-content);
+}
+
+.grid-row-2 {
+    grid-row-start: 2;
+    grid-auto-rows: minmax(min-content, max-content);
+}
+
+.grid-row-3 {
+    grid-row-start: 3;
+    grid-auto-rows: minmax(min-content, max-content);
+}
+
+.bcrhp-full-width-grid-item {
+    grid-column: 1 / span 2;
+}
+
 .bc-top-offset {
     padding-top: 25px;
 }
@@ -43,6 +81,8 @@ table.bc-summary-table td {
 .bc-details-images {
     float: right;
     margin-right: 25px;
+    grid-column-start: 3;
+    grid-row: 1 / span 4;
 }
 
 .bc-top-offset {
@@ -54,38 +94,52 @@ table.bc-summary-table td {
     margin-right: 25px;
 }
 
+.dl-horizontal dt, .dl-horizontal dd {
+    vertical-align: top;
+    display: inline-block;
+    padding: 5px 5px 5px 20px;
+}
+
+.form-boolean-checkbox span {
+    width: auto !important;
+}
+
 @media (min-width: 1366px)
 {
-    .dl-horizontal dd {
-        margin-left: 170px !important;
+    .dl-horizontal {
     }
-    .dl-horizontal dt {
-        width: 150px !important;
+
+    .bcrhp-full-width-grid-item dd {
+        width: 80%
     }
-    .dl-horizontal dt {
-        width: 150px !important;
+
+    div.bcrhp-grid-item .dl-horizontal dt {
+        width: 170px !important;
     }
+
+    div.bcrhp-grid-item .dl-horizontal dd {
+        width: 70%;
+    }
+
     .bc-details-images {
         margin-right: 25px;
     }
-
 }
+
 @media (min-width: 768px)
 {
-    .dl-horizontal dd {
-        margin-left: 170px !important;
+    .dl-horizontal {
     }
-    .dl-horizontal dt {
-        width: 150px !important;
+
+    div.bcrhp-grid-item .dl-horizontal dd {
+        /*margin-left: 170px !important;*/
+        width: 70%;
     }
-    .dl-horizontal dt {
-        width: 150px !important;
+    div.bcrhp-grid-item .dl-horizontal dt {
+        width: 130px !important;
     }
     .bc-details-images {
         margin-right: 5px;
     }
 
 }
-
-
-

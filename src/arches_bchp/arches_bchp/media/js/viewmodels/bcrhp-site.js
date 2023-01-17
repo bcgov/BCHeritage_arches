@@ -5,7 +5,7 @@ define([
     'knockout-mapping',
     'arches',
     'viewmodels/map-report',
-    'bindings/chosen',
+    'bindings/chosen'
 ], function($, _, ko, koMapping, arches, MapReportViewModel) {
     return function(params) {
         var self = this;

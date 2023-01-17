@@ -26,11 +26,19 @@
                     "description": null,
                     "graph_id": "897e8250-9c1d-11ec-a82a-5254008afee6",
                     "helpenabled": false,
-                    "helptext": null,
-                    "helptitle": null,
-                    "instructions": null,
-                    "is_editable": false,
-                    "name": "Company",
+                    "helptext": {
+                        "en": null
+                    },
+                    "helptitle": {
+                        "en": null
+                    },
+                    "instructions": {
+                        "en": null
+                    },
+                    "is_editable": true,
+                    "name": {
+                        "en": "Company"
+                    },
                     "nodegroup_id": "025083b8-9c1e-11ec-a5e5-5254008afee6",
                     "sortorder": null,
                     "visible": true
@@ -58,11 +66,19 @@
                     "description": null,
                     "graph_id": "897e8250-9c1d-11ec-a82a-5254008afee6",
                     "helpenabled": false,
-                    "helptext": null,
-                    "helptitle": null,
-                    "instructions": null,
-                    "is_editable": false,
-                    "name": "Individual",
+                    "helptext": {
+                        "en": null
+                    },
+                    "helptitle": {
+                        "en": null
+                    },
+                    "instructions": {
+                        "en": null
+                    },
+                    "is_editable": true,
+                    "name": {
+                        "en": "Individual"
+                    },
                     "nodegroup_id": "ad08062e-9c1d-11ec-9de4-5254008afee6",
                     "sortorder": null,
                     "visible": true
@@ -72,15 +88,27 @@
                 {
                     "card_id": "ad082dc0-9c1d-11ec-9de4-5254008afee6",
                     "config": {
-                        "defaultValue": "",
+                        "defaultValue": {
+                            "en": {
+                                "direction": "ltr",
+                                "value": ""
+                            }
+                        },
+                        "i18n_properties": [
+                            "placeholder"
+                        ],
                         "label": "Collector First Name",
                         "maxLength": null,
-                        "placeholder": "Enter text",
+                        "placeholder": {
+                            "en": "Enter text"
+                        },
                         "uneditable": false,
                         "width": "100%"
                     },
                     "id": "eff98fc0-9f24-11ec-bd5f-5254008afee6",
-                    "label": "Collector First Name",
+                    "label": {
+                        "en": "Collector First Name"
+                    },
                     "node_id": "db9369ca-9c1d-11ec-a82a-5254008afee6",
                     "sortorder": 0,
                     "visible": true,
@@ -89,15 +117,27 @@
                 {
                     "card_id": "ad082dc0-9c1d-11ec-9de4-5254008afee6",
                     "config": {
-                        "defaultValue": "",
+                        "defaultValue": {
+                            "en": {
+                                "direction": "ltr",
+                                "value": ""
+                            }
+                        },
+                        "i18n_properties": [
+                            "placeholder"
+                        ],
                         "label": "Collector Last Name",
                         "maxLength": null,
-                        "placeholder": "Enter text",
+                        "placeholder": {
+                            "en": "Enter text"
+                        },
                         "uneditable": false,
                         "width": "100%"
                     },
                     "id": "effa1472-9f24-11ec-bd5f-5254008afee6",
-                    "label": "Collector Last Name",
+                    "label": {
+                        "en": "Collector Last Name"
+                    },
                     "node_id": "cf9b0a9c-9c1d-11ec-9f27-5254008afee6",
                     "sortorder": 2,
                     "visible": true,
@@ -106,15 +146,27 @@
                 {
                     "card_id": "ad082dc0-9c1d-11ec-9de4-5254008afee6",
                     "config": {
-                        "defaultValue": "",
+                        "defaultValue": {
+                            "en": {
+                                "direction": "ltr",
+                                "value": ""
+                            }
+                        },
+                        "i18n_properties": [
+                            "placeholder"
+                        ],
                         "label": "Collector Middle Name",
                         "maxLength": null,
-                        "placeholder": "Enter text",
+                        "placeholder": {
+                            "en": "Enter text"
+                        },
                         "uneditable": false,
                         "width": "100%"
                     },
                     "id": "effa74ee-9f24-11ec-bd5f-5254008afee6",
-                    "label": "Collector Middle Name",
+                    "label": {
+                        "en": "Collector Middle Name"
+                    },
                     "node_id": "f4473c4e-9c1d-11ec-810b-5254008afee6",
                     "sortorder": 1,
                     "visible": true,
@@ -125,7 +177,9 @@
             "config": {},
             "deploymentdate": null,
             "deploymentfile": null,
-            "description": "",
+            "description": {
+                "en": ""
+            },
             "edges": [
                 {
                     "description": null,
@@ -218,16 +272,17 @@
                     },
                     "function_id": "60000000-0000-0000-0000-000000001001",
                     "graph_id": "897e8250-9c1d-11ec-a82a-5254008afee6",
-                    "id": "879a1c22-a737-11ec-bc48-5254008afee6"
+                    "id": "0865dbd0-11aa-4b87-a057-12ef991e4185"
                 }
             ],
             "graphid": "897e8250-9c1d-11ec-a82a-5254008afee6",
             "iconclass": "fa fa-user",
-            "is_editable": false,
-            "isactive": true,
+            "is_editable": true,
             "isresource": true,
             "jsonldcontext": null,
-            "name": "BC Fossil Collector",
+            "name": {
+                "en": "BC Fossil Collector"
+            },
             "nodegroups": [
                 {
                     "cardinality": "1",
@@ -244,12 +299,14 @@
             ],
             "nodes": [
                 {
-                    "config": null,
+                    "alias": "company",
+                    "config": {},
                     "datatype": "semantic",
                     "description": null,
                     "exportable": false,
                     "fieldname": null,
                     "graph_id": "897e8250-9c1d-11ec-a82a-5254008afee6",
+                    "hascustomalias": false,
                     "is_collector": true,
                     "isrequired": false,
                     "issearchable": true,
@@ -262,12 +319,14 @@
                     "sortorder": 0
                 },
                 {
-                    "config": null,
+                    "alias": "company_name",
+                    "config": {},
                     "datatype": "string",
                     "description": null,
                     "exportable": true,
                     "fieldname": "cmpny_nm",
                     "graph_id": "897e8250-9c1d-11ec-a82a-5254008afee6",
+                    "hascustomalias": false,
                     "is_collector": false,
                     "isrequired": false,
                     "issearchable": true,
@@ -280,12 +339,14 @@
                     "sortorder": 0
                 },
                 {
-                    "config": null,
+                    "alias": "bc_fossil_collector",
+                    "config": {},
                     "datatype": "semantic",
                     "description": "",
                     "exportable": false,
                     "fieldname": null,
                     "graph_id": "897e8250-9c1d-11ec-a82a-5254008afee6",
+                    "hascustomalias": false,
                     "is_collector": false,
                     "isrequired": false,
                     "issearchable": true,
@@ -298,12 +359,14 @@
                     "sortorder": 0
                 },
                 {
-                    "config": null,
+                    "alias": "individual",
+                    "config": {},
                     "datatype": "semantic",
                     "description": null,
                     "exportable": false,
                     "fieldname": null,
                     "graph_id": "897e8250-9c1d-11ec-a82a-5254008afee6",
+                    "hascustomalias": false,
                     "is_collector": true,
                     "isrequired": false,
                     "issearchable": true,
@@ -316,12 +379,14 @@
                     "sortorder": 0
                 },
                 {
-                    "config": null,
+                    "alias": "collector_last_name",
+                    "config": {},
                     "datatype": "string",
                     "description": null,
                     "exportable": true,
                     "fieldname": "ind_lst_nm",
                     "graph_id": "897e8250-9c1d-11ec-a82a-5254008afee6",
+                    "hascustomalias": false,
                     "is_collector": false,
                     "isrequired": false,
                     "issearchable": true,
@@ -334,12 +399,14 @@
                     "sortorder": 0
                 },
                 {
-                    "config": null,
+                    "alias": "collector_first_name",
+                    "config": {},
                     "datatype": "string",
                     "description": null,
                     "exportable": true,
                     "fieldname": "ind_fst_nm",
                     "graph_id": "897e8250-9c1d-11ec-a82a-5254008afee6",
+                    "hascustomalias": false,
                     "is_collector": false,
                     "isrequired": false,
                     "issearchable": true,
@@ -352,12 +419,14 @@
                     "sortorder": 0
                 },
                 {
-                    "config": null,
+                    "alias": "collector_middle_name",
+                    "config": {},
                     "datatype": "string",
                     "description": null,
                     "exportable": true,
                     "fieldname": "ind_mid_nm",
                     "graph_id": "897e8250-9c1d-11ec-a82a-5254008afee6",
+                    "hascustomalias": false,
                     "is_collector": false,
                     "isrequired": false,
                     "issearchable": true,
@@ -371,15 +440,24 @@
                 }
             ],
             "ontology_id": "e6e8db47-2ccf-11e6-927e-b8f6b115d7dd",
+            "publication": {
+                "graph_id": "897e8250-9c1d-11ec-a82a-5254008afee6",
+                "notes": null,
+                "publicationid": "61487240-53f7-11ed-b5f0-5254004d77d3",
+                "published_time": "2022-10-24T18:55:47.251",
+                "user_id": 1
+            },
             "relatable_resource_model_ids": [],
             "resource_2_resource_constraints": [],
             "root": {
-                "config": null,
+                "alias": "bc_fossil_collector",
+                "config": {},
                 "datatype": "semantic",
                 "description": "",
                 "exportable": false,
                 "fieldname": null,
                 "graph_id": "897e8250-9c1d-11ec-a82a-5254008afee6",
+                "hascustomalias": false,
                 "is_collector": false,
                 "isrequired": false,
                 "issearchable": true,
@@ -391,15 +469,17 @@
                 "sortorder": 0
             },
             "slug": null,
-            "subtitle": "Actor part of a fossil collection event",
+            "subtitle": {
+                "en": "Actor part of a fossil collection event"
+            },
             "template_id": "50000000-0000-0000-0000-000000000001",
             "version": ""
         }
     ],
     "metadata": {
-        "db": "PostgreSQL 12.6 on x86_64-pc-linux-gnu, compiled by gcc (GCC) 4.8.5 20150623 (Red Hat 4.8.5-44), 64-bit",
-        "git hash": "156980e 2022-03-18 12:55:37 -0700",
+        "db": "PostgreSQL 12.12 on x86_64-pc-linux-gnu, compiled by gcc (GCC) 4.8.5 20150623 (Red Hat 4.8.5-44), 64-bit",
+        "git hash": "/bin/sh: git: command not found",
         "os": "Linux",
-        "os version": "3.10.0-1127.el7.x86_64"
+        "os version": "3.10.0-1160.76.1.el7.x86_64"
     }
 }

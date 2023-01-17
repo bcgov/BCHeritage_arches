@@ -1,4 +1,5 @@
-define(['knockout', 'underscore', 'viewmodels/widget'], function (ko, _, WidgetViewModel) {
+define(['knockout', 'underscore', 'viewmodels/widget', 'templates/views/components/widgets/civic-address-widget.htm'],
+    function (ko, _, WidgetViewModel, defaultCivicAddressWidgetTemplate) {
     /**
     * registers a text-widget component for use in forms
     * @function external:"ko.components".text-widget
@@ -18,33 +19,33 @@ define(['knockout', 'underscore', 'viewmodels/widget'], function (ko, _, WidgetV
 
             this.getWidgetWithLabel = function(card, widgetName) {
                 let namedWidget = _.find(card.widgets(), function(widget) {
-                    return widget.label() === widgetName;
+                    return widget.node.attributes.source['alias'] === widgetName;
                 });
                 return namedWidget;
             };
 
             this.streetNumber = ko.computed(function()
             {
-                let widget = self.getWidgetWithLabel(self.card(), "Street Number");
+                let widget = self.getWidgetWithLabel(self.card(), "street_number");
                 return widget;
             });
 
             this.streetName = ko.computed(function()
             {
-                return self.getWidgetWithLabel(self.card(), "Street Name");
+                return self.getWidgetWithLabel(self.card(), "street_name");
             });
 
             this.city = ko.computed(function()
             {
-                return self.getWidgetWithLabel(self.card(), "City");
+                return self.getWidgetWithLabel(self.card(), "city");
             });
 
             this.province = ko.computed(function()
             {
-                return self.getWidgetWithLabel(self.card(), "Province");
+                return self.getWidgetWithLabel(self.card(), "province");
             });
 
         },
-        template: { require: 'text!templates/views/components/widgets/civic-address-widget.htm' }
+        template: defaultCivicAddressWidgetTemplate
     });
 });
