@@ -40,7 +40,7 @@
                         "en": "Contact Email"
                     },
                     "nodegroup_id": "053021ce-9dc1-11ed-a372-5254004d77d3",
-                    "sortorder": null,
+                    "sortorder": 1,
                     "visible": true
                 },
                 {
@@ -166,6 +166,35 @@
             ],
             "cards_x_nodes_x_widgets": [
                 {
+                    "card_id": "14ad8511-3e4b-4e10-9bf2-6dd0c0f8cc9f",
+                    "config": {
+                        "defaultValue": {
+                            "en": {
+                                "direction": "ltr",
+                                "value": "Enter email address of primary contact"
+                            }
+                        },
+                        "i18n_properties": [
+                            "placeholder"
+                        ],
+                        "label": "Contact Email",
+                        "maxLength": null,
+                        "placeholder": {
+                            "en": "Enter text"
+                        },
+                        "uneditable": false,
+                        "width": "100%"
+                    },
+                    "id": "4de6a27a-a272-47d5-8b71-46c0ba3fc551",
+                    "label": {
+                        "en": "Contact Email"
+                    },
+                    "node_id": "053021ce-9dc1-11ed-a372-5254004d77d3",
+                    "sortorder": null,
+                    "visible": true,
+                    "widget_id": "10000000-0000-0000-0000-000000000001"
+                },
+                {
                     "card_id": "33531d28-e888-4581-9c46-b0662a86b467",
                     "config": {
                         "defaultValue": "5fe283e7-3ecf-46d2-adff-a82a30447d43",
@@ -185,6 +214,93 @@
                     "sortorder": 0,
                     "visible": true,
                     "widget_id": "10000000-0000-0000-0000-000000000015"
+                },
+                {
+                    "card_id": "617dc034-eb3a-469b-a094-fee6af8f2012",
+                    "config": {
+                        "defaultValue": {
+                            "en": {
+                                "direction": "ltr",
+                                "value": "Enter middle name"
+                            }
+                        },
+                        "i18n_properties": [
+                            "placeholder"
+                        ],
+                        "label": "First Name",
+                        "maxLength": null,
+                        "placeholder": {
+                            "en": "Enter text"
+                        },
+                        "uneditable": false,
+                        "width": "100%"
+                    },
+                    "id": "7e7dda5c-8f82-4b04-b231-c9c5b6f3d0af",
+                    "label": {
+                        "en": "First Name"
+                    },
+                    "node_id": "e04dbee8-9dc0-11ed-8d8e-5254004d77d3",
+                    "sortorder": null,
+                    "visible": true,
+                    "widget_id": "10000000-0000-0000-0000-000000000001"
+                },
+                {
+                    "card_id": "617dc034-eb3a-469b-a094-fee6af8f2012",
+                    "config": {
+                        "defaultValue": {
+                            "en": {
+                                "direction": "ltr",
+                                "value": "Enter middle name"
+                            }
+                        },
+                        "i18n_properties": [
+                            "placeholder"
+                        ],
+                        "label": "Middle Name",
+                        "maxLength": null,
+                        "placeholder": {
+                            "en": "Enter text"
+                        },
+                        "uneditable": false,
+                        "width": "100%"
+                    },
+                    "id": "9dc892df-afcb-4232-a057-de2f3caae143",
+                    "label": {
+                        "en": "Middle Name"
+                    },
+                    "node_id": "e7a8c638-9dc0-11ed-a03b-5254004d77d3",
+                    "sortorder": null,
+                    "visible": true,
+                    "widget_id": "10000000-0000-0000-0000-000000000001"
+                },
+                {
+                    "card_id": "617dc034-eb3a-469b-a094-fee6af8f2012",
+                    "config": {
+                        "defaultValue": {
+                            "en": {
+                                "direction": "ltr",
+                                "value": "Enter middle name"
+                            }
+                        },
+                        "i18n_properties": [
+                            "placeholder"
+                        ],
+                        "label": "Last Name",
+                        "maxLength": null,
+                        "placeholder": {
+                            "en": "Enter text"
+                        },
+                        "uneditable": false,
+                        "width": "100%"
+                    },
+                    "id": "bb58ef4b-e275-4bec-82ea-0157f6ce5c2c",
+                    "label": {
+                        "en": "Last Name"
+                    },
+                    "node_id": "f7cc0aca-9dc0-11ed-9f33-5254004d77d3",
+                    "sortorder": null,
+                    "visible": true,
+                    "widget_id": "10000000-0000-0000-0000-000000000001"
                 }
             ],
             "color": null,
@@ -261,7 +377,7 @@
             ],
             "functions_x_graphs": [],
             "graphid": "3cf1f266-e390-4aac-8626-986f000c5b41",
-            "iconclass": "",
+            "iconclass": "fa fa-male",
             "is_editable": true,
             "isresource": true,
             "jsonldcontext": null,
@@ -413,17 +529,17 @@
                         },
                         "options": [
                             {
-                                "id": "e699a62e-59d7-4931-84c9-3526a8260717",
-                                "selected": false,
-                                "text": {
-                                    "en": "Company"
-                                }
-                            },
-                            {
                                 "id": "5fe283e7-3ecf-46d2-adff-a82a30447d43",
                                 "selected": false,
                                 "text": {
                                     "en": "Individual"
+                                }
+                            },
+                            {
+                                "id": "e699a62e-59d7-4931-84c9-3526a8260717",
+                                "selected": false,
+                                "text": {
+                                    "en": "Company"
                                 }
                             }
                         ]
@@ -494,11 +610,13 @@
             "publication": {
                 "graph_id": "3cf1f266-e390-4aac-8626-986f000c5b41",
                 "notes": null,
-                "publicationid": "554d44a2-9de9-11ed-b163-5254004d77d3",
-                "published_time": "2023-01-26T20:21:40.242",
+                "publicationid": "5c0f48d8-9e6d-11ed-b0f2-5254004d77d3",
+                "published_time": "2023-01-27T12:06:45.148",
                 "user_id": 3
             },
-            "relatable_resource_model_ids": [],
+            "relatable_resource_model_ids": [
+                "2aa724d1-ffd3-4823-8ff1-15a385b9a407"
+            ],
             "resource_2_resource_constraints": [],
             "root": {
                 "alias": null,

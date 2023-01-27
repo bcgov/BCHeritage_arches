@@ -134,13 +134,13 @@
                     "graph_id": "2aa724d1-ffd3-4823-8ff1-15a385b9a407",
                     "helpenabled": false,
                     "helptext": {
-                        "en": null
+                        "en": ""
                     },
                     "helptitle": {
-                        "en": null
+                        "en": ""
                     },
                     "instructions": {
-                        "en": null
+                        "en": ""
                     },
                     "is_editable": true,
                     "name": {
@@ -161,13 +161,13 @@
                     "graph_id": "2aa724d1-ffd3-4823-8ff1-15a385b9a407",
                     "helpenabled": false,
                     "helptext": {
-                        "en": null
+                        "en": ""
                     },
                     "helptitle": {
-                        "en": null
+                        "en": ""
                     },
                     "instructions": {
-                        "en": null
+                        "en": ""
                     },
                     "is_editable": true,
                     "name": {
@@ -259,46 +259,6 @@
                 },
                 {
                     "active": true,
-                    "cardid": "a5e2eb7c-ec48-4bad-a285-78b862717788",
-                    "component_id": "f05e4d3a-53c1-11e8-b0ea-784f435179ea",
-                    "config": null,
-                    "constraints": [
-                        {
-                            "card_id": "a5e2eb7c-ec48-4bad-a285-78b862717788",
-                            "constraintid": "efafc181-2d4f-445f-8bd4-80cdb4e77775",
-                            "nodes": [],
-                            "uniquetoallinstances": false
-                        },
-                        {
-                            "card_id": "a5e2eb7c-ec48-4bad-a285-78b862717788",
-                            "constraintid": "0ac706aa-8631-4988-8315-19d1becf1f46",
-                            "nodes": [],
-                            "uniquetoallinstances": false
-                        }
-                    ],
-                    "cssclass": null,
-                    "description": null,
-                    "graph_id": "2aa724d1-ffd3-4823-8ff1-15a385b9a407",
-                    "helpenabled": false,
-                    "helptext": {
-                        "en": ""
-                    },
-                    "helptitle": {
-                        "en": ""
-                    },
-                    "instructions": {
-                        "en": ""
-                    },
-                    "is_editable": true,
-                    "name": {
-                        "en": "Site"
-                    },
-                    "nodegroup_id": "92e83082-9e58-11ed-9f51-5254004d77d3",
-                    "sortorder": null,
-                    "visible": true
-                },
-                {
-                    "active": true,
                     "cardid": "ae34f4e0-9de2-11ed-a1e4-5254004d77d3",
                     "component_id": "f05e4d3a-53c1-11e8-b0ea-784f435179ea",
                     "config": null,
@@ -375,13 +335,13 @@
                     "graph_id": "2aa724d1-ffd3-4823-8ff1-15a385b9a407",
                     "helpenabled": false,
                     "helptext": {
-                        "en": null
+                        "en": ""
                     },
                     "helptitle": {
-                        "en": null
+                        "en": ""
                     },
                     "instructions": {
-                        "en": null
+                        "en": ""
                     },
                     "is_editable": true,
                     "name": {
@@ -1114,9 +1074,7 @@
                             }
                         },
                         "label": "Project Authorizing Agency",
-                        "placeholder": {
-                            "en": "Enter text"
-                        }
+                        "placeholder": "Enter Agency Name (LOV)"
                     },
                     "id": "b686f3e7-f750-4bdc-a185-c120d7d7de6c",
                     "label": {
@@ -1159,7 +1117,7 @@
                         ],
                         "label": "Project Initiator",
                         "placeholder": {
-                            "en": ""
+                            "en": "Select project initiator"
                         }
                     },
                     "id": "cf957809-f3b1-47c0-b141-24e78ae87d03",
@@ -1170,6 +1128,53 @@
                     "sortorder": 0,
                     "visible": true,
                     "widget_id": "31f3728c-7613-11e7-a139-784f435179ea"
+                },
+                {
+                    "card_id": "219de984-0354-481f-8829-da2e7011c9b1",
+                    "config": {
+                        "basemap": "streets",
+                        "bearing": 0,
+                        "centerX": -125.2111215300115,
+                        "centerY": 54.5952920093056,
+                        "defaultValue": "",
+                        "defaultValueType": "",
+                        "featureColor": "#FF0000",
+                        "featureLineWidth": 1,
+                        "featurePointSize": 3,
+                        "geocodePlaceholder": "Search",
+                        "geocodeProvider": "10000000-0000-0000-0000-010000000000",
+                        "geocoderVisible": true,
+                        "geometryTypes": [
+                            {
+                                "id": "Point",
+                                "text": "Point"
+                            },
+                            {
+                                "id": "Line",
+                                "text": "Line"
+                            },
+                            {
+                                "id": "Polygon",
+                                "text": "Polygon"
+                            }
+                        ],
+                        "label": "Spatial Location",
+                        "maxZoom": 20,
+                        "minZoom": 0,
+                        "overlayConfigs": [],
+                        "overlayOpacity": 0,
+                        "pitch": 0,
+                        "rerender": true,
+                        "zoom": 0
+                    },
+                    "id": "d5609a11-87a7-445a-8fd9-c831db2a3dd0",
+                    "label": {
+                        "en": "Spatial Location"
+                    },
+                    "node_id": "204cfc50-9e59-11ed-9252-5254004d77d3",
+                    "sortorder": 0,
+                    "visible": true,
+                    "widget_id": "10000000-0000-0000-0000-000000000007"
                 },
                 {
                     "card_id": "95b5f427-0064-4b75-a17e-838a65b73cc4",
@@ -1221,7 +1226,40 @@
                 }
             ],
             "color": null,
-            "config": {},
+            "config": {
+                "basemap": "streets",
+                "bearing": 0,
+                "centerX": -122.3979693,
+                "centerY": 37.79,
+                "featureColor": "#FF0000",
+                "featureEditingDisabled": true,
+                "featureLineWidth": 1,
+                "featurePointSize": 3,
+                "geocodePlaceholder": "Search",
+                "geocodeProvider": "10000000-0000-0000-0000-010000000000",
+                "geocoderVisible": true,
+                "geometryTypes": [
+                    {
+                        "id": "Point",
+                        "text": "Point"
+                    },
+                    {
+                        "id": "Line",
+                        "text": "Line"
+                    },
+                    {
+                        "id": "Polygon",
+                        "text": "Polygon"
+                    }
+                ],
+                "mapControlsHidden": false,
+                "maxZoom": 20,
+                "minZoom": 0,
+                "overlayConfigs": [],
+                "overlayOpacity": 0,
+                "pitch": 0,
+                "zoom": 10
+            },
             "deploymentdate": null,
             "deploymentfile": null,
             "description": {
@@ -1293,15 +1331,6 @@
                 },
                 {
                     "description": null,
-                    "domainnode_id": "92e83082-9e58-11ed-9f51-5254004d77d3",
-                    "edgeid": "3af1e4f3-9dd6-483e-9896-7146cc239f68",
-                    "graph_id": "2aa724d1-ffd3-4823-8ff1-15a385b9a407",
-                    "name": null,
-                    "ontologyproperty": "http://www.cidoc-crm.org/cidoc-crm/P51_has_former_or_current_owner",
-                    "rangenode_id": "b26886e6-9e58-11ed-81b1-5254004d77d3"
-                },
-                {
-                    "description": null,
                     "domainnode_id": "91e50dd8-9dca-11ed-9ef3-5254004d77d3",
                     "edgeid": "4ce4ab73-daff-4dbd-8535-d8aa148c180b",
                     "graph_id": "2aa724d1-ffd3-4823-8ff1-15a385b9a407",
@@ -1335,15 +1364,6 @@
                     "name": null,
                     "ontologyproperty": "http://www.cidoc-crm.org/cidoc-crm/P1_is_identified_by",
                     "rangenode_id": "12392b0e-9dd5-11ed-870e-5254004d77d3"
-                },
-                {
-                    "description": null,
-                    "domainnode_id": "10295f6a-9dc0-11ed-82b6-5254004d77d3",
-                    "edgeid": "5d45a53a-6630-4ece-bc15-2f0eec57499a",
-                    "graph_id": "2aa724d1-ffd3-4823-8ff1-15a385b9a407",
-                    "name": null,
-                    "ontologyproperty": "http://www.cidoc-crm.org/cidoc-crm/P10i_contains",
-                    "rangenode_id": "92e83082-9e58-11ed-9f51-5254004d77d3"
                 },
                 {
                     "description": null,
@@ -1645,7 +1665,7 @@
             ],
             "functions_x_graphs": [],
             "graphid": "2aa724d1-ffd3-4823-8ff1-15a385b9a407",
-            "iconclass": "",
+            "iconclass": "fa fa-question",
             "is_editable": true,
             "isresource": true,
             "jsonldcontext": null,
@@ -1675,12 +1695,6 @@
                     "cardinality": "1",
                     "legacygroupid": null,
                     "nodegroupid": "91e50dd8-9dca-11ed-9ef3-5254004d77d3",
-                    "parentnodegroup_id": null
-                },
-                {
-                    "cardinality": "1",
-                    "legacygroupid": null,
-                    "nodegroupid": "92e83082-9e58-11ed-9f51-5254004d77d3",
                     "parentnodegroup_id": null
                 },
                 {
@@ -2149,28 +2163,6 @@
                     "sortorder": 0
                 },
                 {
-                    "alias": "site",
-                    "config": {
-                        "en": ""
-                    },
-                    "datatype": "semantic",
-                    "description": null,
-                    "exportable": false,
-                    "fieldname": null,
-                    "graph_id": "2aa724d1-ffd3-4823-8ff1-15a385b9a407",
-                    "hascustomalias": false,
-                    "is_collector": true,
-                    "isrequired": false,
-                    "issearchable": true,
-                    "istopnode": false,
-                    "name": "Site",
-                    "nodegroup_id": "92e83082-9e58-11ed-9f51-5254004d77d3",
-                    "nodeid": "92e83082-9e58-11ed-9f51-5254004d77d3",
-                    "ontologyclass": "http://www.cidoc-crm.org/cidoc-crm/E18_Physical_Thing",
-                    "parentproperty": "http://www.cidoc-crm.org/cidoc-crm/P10i_contains",
-                    "sortorder": 0
-                },
-                {
                     "alias": "preliminary_study_report",
                     "config": {
                         "en": ""
@@ -2559,28 +2551,6 @@
                     "sortorder": 0
                 },
                 {
-                    "alias": null,
-                    "config": {
-                        "en": ""
-                    },
-                    "datatype": "semantic",
-                    "description": null,
-                    "exportable": false,
-                    "fieldname": null,
-                    "graph_id": "2aa724d1-ffd3-4823-8ff1-15a385b9a407",
-                    "hascustomalias": false,
-                    "is_collector": false,
-                    "isrequired": false,
-                    "issearchable": true,
-                    "istopnode": false,
-                    "name": "New Node",
-                    "nodegroup_id": "92e83082-9e58-11ed-9f51-5254004d77d3",
-                    "nodeid": "b26886e6-9e58-11ed-81b1-5254004d77d3",
-                    "ontologyclass": "http://www.cidoc-crm.org/cidoc-crm/E39_Actor",
-                    "parentproperty": "http://www.cidoc-crm.org/cidoc-crm/P51_has_former_or_current_owner",
-                    "sortorder": 0
-                },
-                {
                     "alias": "intersects_ifa",
                     "config": {
                         "falseLabel": {
@@ -2827,8 +2797,17 @@
                 }
             ],
             "ontology_id": "e6e8db47-2ccf-11e6-927e-b8f6b115d7dd",
-            "publication": null,
-            "relatable_resource_model_ids": [],
+            "publication": {
+                "graph_id": "2aa724d1-ffd3-4823-8ff1-15a385b9a407",
+                "notes": null,
+                "publicationid": "d94af2ee-9e6c-11ed-bf99-5254004d77d3",
+                "published_time": "2023-01-27T12:03:05.757",
+                "user_id": 3
+            },
+            "relatable_resource_model_ids": [
+                "3cf1f266-e390-4aac-8626-986f000c5b41",
+                "605b0bbc-8661-4cf2-b340-df743a8c5f89"
+            ],
             "resource_2_resource_constraints": [],
             "root": {
                 "alias": null,
@@ -2855,7 +2834,7 @@
             "subtitle": {
                 "en": ""
             },
-            "template_id": "50000000-0000-0000-0000-000000000001",
+            "template_id": "50000000-0000-0000-0000-000000000002",
             "version": ""
         }
     ],
