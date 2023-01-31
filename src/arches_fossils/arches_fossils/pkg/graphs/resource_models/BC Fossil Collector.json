@@ -27,13 +27,13 @@
                     "graph_id": "897e8250-9c1d-11ec-a82a-5254008afee6",
                     "helpenabled": false,
                     "helptext": {
-                        "en": null
+                        "en": ""
                     },
                     "helptitle": {
-                        "en": null
+                        "en": ""
                     },
                     "instructions": {
-                        "en": null
+                        "en": ""
                     },
                     "is_editable": true,
                     "name": {
@@ -67,13 +67,13 @@
                     "graph_id": "897e8250-9c1d-11ec-a82a-5254008afee6",
                     "helpenabled": false,
                     "helptext": {
-                        "en": null
+                        "en": ""
                     },
                     "helptitle": {
-                        "en": null
+                        "en": ""
                     },
                     "instructions": {
-                        "en": null
+                        "en": ""
                     },
                     "is_editable": true,
                     "name": {
@@ -110,7 +110,7 @@
                         "en": "Collector First Name"
                     },
                     "node_id": "db9369ca-9c1d-11ec-a82a-5254008afee6",
-                    "sortorder": 0,
+                    "sortorder": 1,
                     "visible": true,
                     "widget_id": "10000000-0000-0000-0000-000000000001"
                 },
@@ -139,36 +139,7 @@
                         "en": "Collector Last Name"
                     },
                     "node_id": "cf9b0a9c-9c1d-11ec-9f27-5254008afee6",
-                    "sortorder": 2,
-                    "visible": true,
-                    "widget_id": "10000000-0000-0000-0000-000000000001"
-                },
-                {
-                    "card_id": "ad082dc0-9c1d-11ec-9de4-5254008afee6",
-                    "config": {
-                        "defaultValue": {
-                            "en": {
-                                "direction": "ltr",
-                                "value": ""
-                            }
-                        },
-                        "i18n_properties": [
-                            "placeholder"
-                        ],
-                        "label": "Collector Middle Name",
-                        "maxLength": null,
-                        "placeholder": {
-                            "en": "Enter text"
-                        },
-                        "uneditable": false,
-                        "width": "100%"
-                    },
-                    "id": "effa74ee-9f24-11ec-bd5f-5254008afee6",
-                    "label": {
-                        "en": "Collector Middle Name"
-                    },
-                    "node_id": "f4473c4e-9c1d-11ec-810b-5254008afee6",
-                    "sortorder": 1,
+                    "sortorder": 0,
                     "visible": true,
                     "widget_id": "10000000-0000-0000-0000-000000000001"
                 }
@@ -225,15 +196,6 @@
                     "name": null,
                     "ontologyproperty": "http://www.cidoc-crm.org/cidoc-crm/P1_is_identified_by",
                     "rangenode_id": "db9369ca-9c1d-11ec-a82a-5254008afee6"
-                },
-                {
-                    "description": null,
-                    "domainnode_id": "ad08062e-9c1d-11ec-9de4-5254008afee6",
-                    "edgeid": "f4473f64-9c1d-11ec-810b-5254008afee6",
-                    "graph_id": "897e8250-9c1d-11ec-a82a-5254008afee6",
-                    "name": null,
-                    "ontologyproperty": "http://www.cidoc-crm.org/cidoc-crm/P1_is_identified_by",
-                    "rangenode_id": "f4473c4e-9c1d-11ec-810b-5254008afee6"
                 }
             ],
             "functions_x_graphs": [
@@ -272,7 +234,7 @@
                     },
                     "function_id": "60000000-0000-0000-0000-000000001001",
                     "graph_id": "897e8250-9c1d-11ec-a82a-5254008afee6",
-                    "id": "0865dbd0-11aa-4b87-a057-12ef991e4185"
+                    "id": "247a9c19-d333-4f58-98c1-e3a54b7ad470"
                 }
             ],
             "graphid": "897e8250-9c1d-11ec-a82a-5254008afee6",
@@ -416,35 +378,15 @@
                     "nodeid": "db9369ca-9c1d-11ec-a82a-5254008afee6",
                     "ontologyclass": "http://www.cidoc-crm.org/cidoc-crm/E82_Actor_Appellation",
                     "parentproperty": "http://www.cidoc-crm.org/cidoc-crm/P1_is_identified_by",
-                    "sortorder": 0
-                },
-                {
-                    "alias": "collector_middle_name",
-                    "config": {},
-                    "datatype": "string",
-                    "description": null,
-                    "exportable": true,
-                    "fieldname": "ind_mid_nm",
-                    "graph_id": "897e8250-9c1d-11ec-a82a-5254008afee6",
-                    "hascustomalias": false,
-                    "is_collector": false,
-                    "isrequired": false,
-                    "issearchable": true,
-                    "istopnode": false,
-                    "name": "Collector Middle Name",
-                    "nodegroup_id": "ad08062e-9c1d-11ec-9de4-5254008afee6",
-                    "nodeid": "f4473c4e-9c1d-11ec-810b-5254008afee6",
-                    "ontologyclass": "http://www.cidoc-crm.org/cidoc-crm/E82_Actor_Appellation",
-                    "parentproperty": "http://www.cidoc-crm.org/cidoc-crm/P1_is_identified_by",
-                    "sortorder": 0
+                    "sortorder": 1
                 }
             ],
             "ontology_id": "e6e8db47-2ccf-11e6-927e-b8f6b115d7dd",
             "publication": {
                 "graph_id": "897e8250-9c1d-11ec-a82a-5254008afee6",
                 "notes": null,
-                "publicationid": "61487240-53f7-11ed-b5f0-5254004d77d3",
-                "published_time": "2022-10-24T18:55:47.251",
+                "publicationid": "c8beb20e-a190-11ed-8ee0-5254004d77d3",
+                "published_time": "2023-01-31T11:57:53.365",
                 "user_id": 1
             },
             "relatable_resource_model_ids": [],
