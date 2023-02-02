@@ -28,6 +28,14 @@ define([
                         "map_popup": [{key: "REGIONAL_DISTRICT_ID", title: "District ID: "},
                         ]
                     },
+                "WHSE_LEGAL_ADMIN_BOUNDARIES.ABMS_MUNICIPALITIES_SP":
+                    {
+                        displayname: [{"key": "ADMIN_AREA_NAME", title: ""}],
+                        "map_popup": [{key: "ADMIN_AREA_GROUP_NAME", title: "Admin Group: "},
+                            {key: "ADMIN_AREA_BOUNDARY_TYPE", title: "Type: "},
+                            {key: "AFFECTED_ADMIN_AREA_ABRVN", title: "Affected Area: "},
+                        ]
+                    },
                 "WHSE_TANTALIS.TA_PARK_ECORES_PA_SVW":
                     {
                         displayname: [{"key": "PROTECTED_LANDS_NAME", title: ""}],
@@ -49,6 +57,7 @@ define([
             filterLayers: [
                 "WHSE_MINERAL_TENURE.GEOL_BEDROCK_UNIT_POLY_SVW",
                 "WHSE_ADMIN_BOUNDARIES.EBC_REGIONAL_DISTRICTS_SP",
+                "WHSE_LEGAL_ADMIN_BOUNDARIES.ABMS_MUNICIPALITIES_SP",
                 "WHSE_TANTALIS.TA_PARK_ECORES_PA_SVW",
                 "WHSE_ADMIN_BOUNDARIES.CLAB_NATIONAL_PARKS",
                 "c66518e2-10c6-11ec-adef-5254008afee6", /* Important Areas Resource layer */
