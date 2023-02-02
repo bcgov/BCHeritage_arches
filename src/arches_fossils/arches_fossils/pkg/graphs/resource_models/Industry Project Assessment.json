@@ -167,7 +167,7 @@
                         "en": ""
                     },
                     "instructions": {
-                        "en": ""
+                        "en": "Choose a term that best describes the sector of the project or select \u201cother\u201d if the term you are looking for is not listed"
                     },
                     "is_editable": true,
                     "name": {
@@ -354,6 +354,21 @@
             ],
             "cards_x_nodes_x_widgets": [
                 {
+                    "card_id": "95b5f427-0064-4b75-a17e-838a65b73cc4",
+                    "config": {
+                        "defaultValue": null,
+                        "label": "Has Proximity to Fossils of Significance"
+                    },
+                    "id": "10e11a4f-70ec-41db-821d-a856dae36681",
+                    "label": {
+                        "en": "Has Proximity to Fossils of Significance"
+                    },
+                    "node_id": "6252617e-a310-11ed-8611-5254004d77d3",
+                    "sortorder": 0,
+                    "visible": true,
+                    "widget_id": "10000000-0000-0000-0000-000000000006"
+                },
+                {
                     "card_id": "b2106ff9-7124-494b-bfb9-e86c2a138387",
                     "config": {
                         "defaultValue": {
@@ -536,21 +551,6 @@
                     "widget_id": "10000000-0000-0000-0000-000000000001"
                 },
                 {
-                    "card_id": "95b5f427-0064-4b75-a17e-838a65b73cc4",
-                    "config": {
-                        "defaultValue": null,
-                        "label": " Intersects with Important Fossil Area"
-                    },
-                    "id": "508f4512-1227-48b6-9d56-18c17de236be",
-                    "label": {
-                        "en": " Intersects with Important Fossil Area"
-                    },
-                    "node_id": "c24aba68-9dca-11ed-96a4-5254004d77d3",
-                    "sortorder": 1,
-                    "visible": true,
-                    "widget_id": "10000000-0000-0000-0000-000000000006"
-                },
-                {
                     "card_id": "b2106ff9-7124-494b-bfb9-e86c2a138387",
                     "config": {
                         "defaultValue": {
@@ -609,34 +609,33 @@
                     "widget_id": "10000000-0000-0000-0000-000000000001"
                 },
                 {
-                    "card_id": "95b5f427-0064-4b75-a17e-838a65b73cc4",
+                    "card_id": "7c75076f-5f9e-47af-b814-f96ec1639c0b",
                     "config": {
-                        "defaultValue": null,
-                        "label": " Has Proximity to Fossils of Significance"
+                        "defaultValue": {
+                            "en": {
+                                "direction": "ltr",
+                                "value": ""
+                            }
+                        },
+                        "i18n_properties": [
+                            "placeholder"
+                        ],
+                        "label": "Proposed Activity",
+                        "maxLength": null,
+                        "placeholder": {
+                            "en": "Describe in brief detail the type of project (e.g., open pit mine or road upgrade or school)."
+                        },
+                        "uneditable": false,
+                        "width": "100%"
                     },
-                    "id": "5bd53196-a2c3-4cf8-9658-6236f45a465c",
+                    "id": "6e88c3f0-a0f6-4405-9c1b-b059750dd09b",
                     "label": {
-                        "en": " Has Proximity to Fossils of Significance"
+                        "en": "Proposed Activity"
                     },
-                    "node_id": "9ffd07f4-9dca-11ed-8d8e-5254004d77d3",
-                    "sortorder": 0,
+                    "node_id": "31f0c98a-9e5b-11ed-bf99-5254004d77d3",
+                    "sortorder": null,
                     "visible": true,
-                    "widget_id": "10000000-0000-0000-0000-000000000006"
-                },
-                {
-                    "card_id": "95b5f427-0064-4b75-a17e-838a65b73cc4",
-                    "config": {
-                        "defaultValue": null,
-                        "label": "Criteria N"
-                    },
-                    "id": "68788cc8-3d00-4668-a56b-9dd660dffa01",
-                    "label": {
-                        "en": "Criteria N"
-                    },
-                    "node_id": "dee7c774-9dca-11ed-a372-5254004d77d3",
-                    "sortorder": 2,
-                    "visible": true,
-                    "widget_id": "10000000-0000-0000-0000-000000000006"
+                    "widget_id": "10000000-0000-0000-0000-000000000001"
                 },
                 {
                     "card_id": "13b3e5e3-5a25-4414-8360-d9b9b2ccea6b",
@@ -656,6 +655,53 @@
                     "sortorder": 0,
                     "visible": true,
                     "widget_id": "10000000-0000-0000-0000-000000000004"
+                },
+                {
+                    "card_id": "95b5f427-0064-4b75-a17e-838a65b73cc4",
+                    "config": {
+                        "defaultValue": "",
+                        "i18n_properties": [
+                            "placeholder"
+                        ],
+                        "label": "Initial Review Level of Risk",
+                        "options": [
+                            {
+                                "children": [],
+                                "collector": "",
+                                "conceptid": "0da27ece-bc63-4a40-bd52-bd6b1cfdb8ac",
+                                "id": "b43fe9e6-7741-4fcd-a1ba-767aeefb364c",
+                                "sortorder": "01",
+                                "text": "Low"
+                            },
+                            {
+                                "children": [],
+                                "collector": "",
+                                "conceptid": "79bb5289-5364-4f46-95c3-d729392a953f",
+                                "id": "823cfc3f-bdcc-4dc8-ac07-a303be33b223",
+                                "sortorder": "05",
+                                "text": "Medium"
+                            },
+                            {
+                                "children": [],
+                                "collector": "",
+                                "conceptid": "0b9dbd01-32f2-4e26-9c17-f6555f1f0924",
+                                "id": "d6578b0a-a292-4847-a3f5-20187cc5692c",
+                                "sortorder": "10",
+                                "text": "High"
+                            }
+                        ],
+                        "placeholder": {
+                            "en": "Select an option"
+                        }
+                    },
+                    "id": "734ac853-4b92-4f44-bfca-ba707f42f5b0",
+                    "label": {
+                        "en": "Initial Review Level of Risk"
+                    },
+                    "node_id": "da887b6a-a310-11ed-a1af-5254004d77d3",
+                    "sortorder": 7,
+                    "visible": true,
+                    "widget_id": "10000000-0000-0000-0000-000000000009"
                 },
                 {
                     "card_id": "b2106ff9-7124-494b-bfb9-e86c2a138387",
@@ -695,19 +741,55 @@
                                 "value": ""
                             }
                         },
+                        "i18n_properties": [
+                            "placeholder"
+                        ],
                         "label": "Initial Review Outcome",
+                        "maxLength": null,
                         "placeholder": {
                             "en": "Enter text"
-                        }
+                        },
+                        "uneditable": false,
+                        "width": "100%"
                     },
                     "id": "95fdb7a6-75ee-4721-ab3b-e266fe0bc42e",
                     "label": {
                         "en": "Initial Review Outcome"
                     },
                     "node_id": "eb34801c-9dca-11ed-9e26-5254004d77d3",
-                    "sortorder": 5,
+                    "sortorder": 8,
                     "visible": true,
                     "widget_id": "10000000-0000-0000-0000-000000000005"
+                },
+                {
+                    "card_id": "95b5f427-0064-4b75-a17e-838a65b73cc4",
+                    "config": {
+                        "defaultValue": null,
+                        "label": "Intersects with Important Fossil Area"
+                    },
+                    "id": "9987ec31-52cb-4ce5-8dd4-2d25f3054667",
+                    "label": {
+                        "en": "Intersects with Important Fossil Area"
+                    },
+                    "node_id": "46ecfbbc-a30e-11ed-8fa3-5254004d77d3",
+                    "sortorder": 2,
+                    "visible": true,
+                    "widget_id": "10000000-0000-0000-0000-000000000006"
+                },
+                {
+                    "card_id": "95b5f427-0064-4b75-a17e-838a65b73cc4",
+                    "config": {
+                        "defaultValue": null,
+                        "label": "Criteria N"
+                    },
+                    "id": "9aa16e03-bfb7-44f1-bd9e-0cdaaa52ecca",
+                    "label": {
+                        "en": "Criteria N"
+                    },
+                    "node_id": "4cb0fa2c-a312-11ed-8611-5254004d77d3",
+                    "sortorder": 4,
+                    "visible": true,
+                    "widget_id": "10000000-0000-0000-0000-000000000006"
                 },
                 {
                     "card_id": "95b5f427-0064-4b75-a17e-838a65b73cc4",
@@ -718,17 +800,23 @@
                                 "value": ""
                             }
                         },
+                        "i18n_properties": [
+                            "placeholder"
+                        ],
                         "label": "Initial Review Internal Notes",
+                        "maxLength": null,
                         "placeholder": {
                             "en": "Enter text"
-                        }
+                        },
+                        "uneditable": false,
+                        "width": "100%"
                     },
                     "id": "9d4e9bb6-027a-424c-b6f1-3d66968bc245",
                     "label": {
                         "en": "Initial Review Internal Notes"
                     },
                     "node_id": "7e0e1326-9dcb-11ed-a03b-5254004d77d3",
-                    "sortorder": 3,
+                    "sortorder": 5,
                     "visible": true,
                     "widget_id": "10000000-0000-0000-0000-000000000005"
                 },
@@ -1073,8 +1161,16 @@
                                 "value": ""
                             }
                         },
+                        "i18n_properties": [
+                            "placeholder"
+                        ],
                         "label": "Project Authorizing Agency",
-                        "placeholder": "Enter Agency Name (LOV)"
+                        "maxLength": null,
+                        "placeholder": {
+                            "en": "Enter Agency Name (LOV)"
+                        },
+                        "uneditable": false,
+                        "width": "100%"
                     },
                     "id": "b686f3e7-f750-4bdc-a185-c120d7d7de6c",
                     "label": {
@@ -1094,10 +1190,16 @@
                                 "value": ""
                             }
                         },
+                        "i18n_properties": [
+                            "placeholder"
+                        ],
                         "label": "Communication Note",
+                        "maxLength": null,
                         "placeholder": {
                             "en": "Enter text"
-                        }
+                        },
+                        "uneditable": false,
+                        "width": "100%"
                     },
                     "id": "ba4f1e47-b5aa-4e45-acad-6e7d05d924fd",
                     "label": {
@@ -1175,54 +1277,6 @@
                     "sortorder": 0,
                     "visible": true,
                     "widget_id": "10000000-0000-0000-0000-000000000007"
-                },
-                {
-                    "card_id": "95b5f427-0064-4b75-a17e-838a65b73cc4",
-                    "config": {
-                        "defaultValue": "",
-                        "i18n_properties": [
-                            "placeholder"
-                        ],
-                        "label": "Initial Review Level of Risk",
-                        "options": [
-                            {
-                                "children": [],
-                                "collector": "",
-                                "conceptid": "0da27ece-bc63-4a40-bd52-bd6b1cfdb8ac",
-                                "id": "b43fe9e6-7741-4fcd-a1ba-767aeefb364c",
-                                "sortorder": "01",
-                                "text": "Low"
-                            },
-                            {
-                                "children": [],
-                                "collector": "",
-                                "conceptid": "79bb5289-5364-4f46-95c3-d729392a953f",
-                                "id": "823cfc3f-bdcc-4dc8-ac07-a303be33b223",
-                                "sortorder": "05",
-                                "text": "Medium"
-                            },
-                            {
-                                "children": [],
-                                "collector": "",
-                                "conceptid": "0b9dbd01-32f2-4e26-9c17-f6555f1f0924",
-                                "id": "d6578b0a-a292-4847-a3f5-20187cc5692c",
-                                "sortorder": "10",
-                                "text": "High"
-                            }
-                        ],
-                        "placeholder": {
-                            "en": "Select an option"
-                        },
-                        "url": "/int/arches-fossils/concepts/dropdown?conceptid=cc566eca-690e-41ea-acdb-8b16baa2864c"
-                    },
-                    "id": "e63c2fae-4b95-4678-9028-19af4f6b25e4",
-                    "label": {
-                        "en": "Initial Review Level of Risk"
-                    },
-                    "node_id": "cc1da4ac-9dce-11ed-add1-5254004d77d3",
-                    "sortorder": 4,
-                    "visible": true,
-                    "widget_id": "10000000-0000-0000-0000-000000000009"
                 }
             ],
             "color": null,
@@ -1272,7 +1326,7 @@
                     "edgeid": "0a714c4f-e251-4db8-a896-bdd14e12a2b5",
                     "graph_id": "2aa724d1-ffd3-4823-8ff1-15a385b9a407",
                     "name": null,
-                    "ontologyproperty": "http://www.cidoc-crm.org/cidoc-crm/P10_falls_within",
+                    "ontologyproperty": "http://www.cidoc-crm.org/cidoc-crm/P9_consists_of",
                     "rangenode_id": "5dfe07ea-9dc0-11ed-82b6-5254004d77d3"
                 },
                 {
@@ -1304,11 +1358,20 @@
                 },
                 {
                     "description": null,
+                    "domainnode_id": "e174be1e-a30d-11ed-a1af-5254004d77d3",
+                    "edgeid": "238f8fec-663c-4fe5-b5f1-a1da989eb827",
+                    "graph_id": "2aa724d1-ffd3-4823-8ff1-15a385b9a407",
+                    "name": null,
+                    "ontologyproperty": "http://www.ics.forth.gr/isl/CRMdig/L54_is_same-as",
+                    "rangenode_id": "46ecfbbc-a30e-11ed-8fa3-5254004d77d3"
+                },
+                {
+                    "description": null,
                     "domainnode_id": "10295f6a-9dc0-11ed-82b6-5254004d77d3",
                     "edgeid": "299706be-b4de-4136-96e2-a56906be1de9",
                     "graph_id": "2aa724d1-ffd3-4823-8ff1-15a385b9a407",
                     "name": null,
-                    "ontologyproperty": "http://www.cidoc-crm.org/cidoc-crm/P10_falls_within",
+                    "ontologyproperty": "http://www.cidoc-crm.org/cidoc-crm/P9_consists_of",
                     "rangenode_id": "9cf8ce58-9dcf-11ed-82b6-5254004d77d3"
                 },
                 {
@@ -1322,6 +1385,15 @@
                 },
                 {
                     "description": null,
+                    "domainnode_id": "91e50dd8-9dca-11ed-9ef3-5254004d77d3",
+                    "edgeid": "34bc4bf3-e26c-40b8-8c27-a3c1e288d3f9",
+                    "graph_id": "2aa724d1-ffd3-4823-8ff1-15a385b9a407",
+                    "name": null,
+                    "ontologyproperty": "http://www.cidoc-crm.org/cidoc-crm/P140i_was_attributed_by",
+                    "rangenode_id": "aabea3b2-a30d-11ed-bf9d-5254004d77d3"
+                },
+                {
+                    "description": null,
                     "domainnode_id": "d791486a-9dc5-11ed-add1-5254004d77d3",
                     "edgeid": "38fb66f8-28ab-4659-9faf-e06c37d3e801",
                     "graph_id": "2aa724d1-ffd3-4823-8ff1-15a385b9a407",
@@ -1331,12 +1403,30 @@
                 },
                 {
                     "description": null,
+                    "domainnode_id": "e174be1e-a30d-11ed-a1af-5254004d77d3",
+                    "edgeid": "4b4282ba-4ffd-451f-84c2-cb6239b9285a",
+                    "graph_id": "2aa724d1-ffd3-4823-8ff1-15a385b9a407",
+                    "name": null,
+                    "ontologyproperty": "http://www.ics.forth.gr/isl/CRMdig/L54_is_same-as",
+                    "rangenode_id": "4cb0fa2c-a312-11ed-8611-5254004d77d3"
+                },
+                {
+                    "description": null,
                     "domainnode_id": "91e50dd8-9dca-11ed-9ef3-5254004d77d3",
                     "edgeid": "4ce4ab73-daff-4dbd-8535-d8aa148c180b",
                     "graph_id": "2aa724d1-ffd3-4823-8ff1-15a385b9a407",
                     "name": null,
-                    "ontologyproperty": "http://www.cidoc-crm.org/cidoc-crm/P10_falls_within",
+                    "ontologyproperty": "http://www.cidoc-crm.org/cidoc-crm/P129i_is_subject_of",
                     "rangenode_id": "eb34801c-9dca-11ed-9e26-5254004d77d3"
+                },
+                {
+                    "description": null,
+                    "domainnode_id": "aabea3b2-a30d-11ed-bf9d-5254004d77d3",
+                    "edgeid": "4f0a3b72-7869-42df-b20e-f717734b5a8f",
+                    "graph_id": "2aa724d1-ffd3-4823-8ff1-15a385b9a407",
+                    "name": null,
+                    "ontologyproperty": "http://www.cidoc-crm.org/cidoc-crm/P15_was_influenced_by",
+                    "rangenode_id": "e174be1e-a30d-11ed-a1af-5254004d77d3"
                 },
                 {
                     "description": null,
@@ -1346,15 +1436,6 @@
                     "name": null,
                     "ontologyproperty": "http://www.cidoc-crm.org/cidoc-crm/P67i_is_referred_to_by",
                     "rangenode_id": "ddf9f676-9dd3-11ed-a81c-5254004d77d3"
-                },
-                {
-                    "description": null,
-                    "domainnode_id": "91e50dd8-9dca-11ed-9ef3-5254004d77d3",
-                    "edgeid": "54192456-f2cf-4058-847e-955bd4f01891",
-                    "graph_id": "2aa724d1-ffd3-4823-8ff1-15a385b9a407",
-                    "name": null,
-                    "ontologyproperty": "http://www.cidoc-crm.org/cidoc-crm/P10_falls_within",
-                    "rangenode_id": "9ffd07f4-9dca-11ed-8d8e-5254004d77d3"
                 },
                 {
                     "description": null,
@@ -1421,20 +1502,11 @@
                 },
                 {
                     "description": null,
-                    "domainnode_id": "91e50dd8-9dca-11ed-9ef3-5254004d77d3",
-                    "edgeid": "8c6ef785-9445-4264-ae53-b03981f0ae04",
-                    "graph_id": "2aa724d1-ffd3-4823-8ff1-15a385b9a407",
-                    "name": null,
-                    "ontologyproperty": "http://www.cidoc-crm.org/cidoc-crm/P10_falls_within",
-                    "rangenode_id": "c24aba68-9dca-11ed-96a4-5254004d77d3"
-                },
-                {
-                    "description": null,
                     "domainnode_id": "10295f6a-9dc0-11ed-82b6-5254004d77d3",
                     "edgeid": "8eb628e2-8f0b-4c49-9447-e92c374e9832",
                     "graph_id": "2aa724d1-ffd3-4823-8ff1-15a385b9a407",
                     "name": null,
-                    "ontologyproperty": "http://www.ics.forth.gr/isl/CRMdig/L54i_is_same-as",
+                    "ontologyproperty": "http://www.cidoc-crm.org/cidoc-crm/P9_consists_of",
                     "rangenode_id": "ae34f2ce-9de2-11ed-a1e4-5254004d77d3"
                 },
                 {
@@ -1472,15 +1544,6 @@
                     "name": null,
                     "ontologyproperty": "http://www.cidoc-crm.org/cidoc-crm/P129i_is_subject_of",
                     "rangenode_id": "31f0c98a-9e5b-11ed-bf99-5254004d77d3"
-                },
-                {
-                    "description": null,
-                    "domainnode_id": "91e50dd8-9dca-11ed-9ef3-5254004d77d3",
-                    "edgeid": "9c0a2aea-5bfa-4f35-901f-aeb89d7b71cf",
-                    "graph_id": "2aa724d1-ffd3-4823-8ff1-15a385b9a407",
-                    "name": null,
-                    "ontologyproperty": "http://www.cidoc-crm.org/cidoc-crm/P10_falls_within",
-                    "rangenode_id": "cc1da4ac-9dce-11ed-add1-5254004d77d3"
                 },
                 {
                     "description": null,
@@ -1610,11 +1673,20 @@
                 },
                 {
                     "description": null,
+                    "domainnode_id": "e174be1e-a30d-11ed-a1af-5254004d77d3",
+                    "edgeid": "d5a3033b-9bef-4d5f-b520-d0aa4f542aff",
+                    "graph_id": "2aa724d1-ffd3-4823-8ff1-15a385b9a407",
+                    "name": null,
+                    "ontologyproperty": "http://www.ics.forth.gr/isl/CRMdig/L54_is_same-as",
+                    "rangenode_id": "6252617e-a310-11ed-8611-5254004d77d3"
+                },
+                {
+                    "description": null,
                     "domainnode_id": "10295f6a-9dc0-11ed-82b6-5254004d77d3",
                     "edgeid": "dec977b9-d8fa-4027-9f26-c5112080aced",
                     "graph_id": "2aa724d1-ffd3-4823-8ff1-15a385b9a407",
                     "name": null,
-                    "ontologyproperty": "http://www.cidoc-crm.org/cidoc-crm/P10_falls_within",
+                    "ontologyproperty": "http://www.cidoc-crm.org/cidoc-crm/P9_consists_of",
                     "rangenode_id": "91e50dd8-9dca-11ed-9ef3-5254004d77d3"
                 },
                 {
@@ -1632,7 +1704,7 @@
                     "edgeid": "e0adf21f-b9d8-4080-a497-0112b36189f5",
                     "graph_id": "2aa724d1-ffd3-4823-8ff1-15a385b9a407",
                     "name": null,
-                    "ontologyproperty": "http://www.cidoc-crm.org/cidoc-crm/P10_falls_within",
+                    "ontologyproperty": "http://www.cidoc-crm.org/cidoc-crm/P15_was_influenced_by",
                     "rangenode_id": "7e0e1326-9dcb-11ed-a03b-5254004d77d3"
                 },
                 {
@@ -1646,12 +1718,12 @@
                 },
                 {
                     "description": null,
-                    "domainnode_id": "91e50dd8-9dca-11ed-9ef3-5254004d77d3",
-                    "edgeid": "f92376da-2b71-488b-a571-d0fafc032139",
+                    "domainnode_id": "aabea3b2-a30d-11ed-bf9d-5254004d77d3",
+                    "edgeid": "e6cf67a6-a6bb-46de-8fb9-e37502008206",
                     "graph_id": "2aa724d1-ffd3-4823-8ff1-15a385b9a407",
                     "name": null,
-                    "ontologyproperty": "http://www.cidoc-crm.org/cidoc-crm/P10_falls_within",
-                    "rangenode_id": "dee7c774-9dca-11ed-a372-5254004d77d3"
+                    "ontologyproperty": "http://www.cidoc-crm.org/cidoc-crm/P140i_was_attributed_by",
+                    "rangenode_id": "da887b6a-a310-11ed-a1af-5254004d77d3"
                 },
                 {
                     "description": null,
@@ -1802,7 +1874,7 @@
                     "sortorder": 0
                 },
                 {
-                    "alias": null,
+                    "alias": "industry_project_assessment",
                     "config": {
                         "en": ""
                     },
@@ -1999,6 +2071,68 @@
                     "sortorder": 0
                 },
                 {
+                    "alias": "intersects_ifa",
+                    "config": {
+                        "falseLabel": {
+                            "en": "No"
+                        },
+                        "i18n_properties": [
+                            "trueLabel",
+                            "falseLabel"
+                        ],
+                        "trueLabel": {
+                            "en": "Yes"
+                        }
+                    },
+                    "datatype": "boolean",
+                    "description": null,
+                    "exportable": false,
+                    "fieldname": null,
+                    "graph_id": "2aa724d1-ffd3-4823-8ff1-15a385b9a407",
+                    "hascustomalias": false,
+                    "is_collector": false,
+                    "isrequired": false,
+                    "issearchable": true,
+                    "istopnode": false,
+                    "name": "Intersects IFA",
+                    "nodegroup_id": "91e50dd8-9dca-11ed-9ef3-5254004d77d3",
+                    "nodeid": "46ecfbbc-a30e-11ed-8fa3-5254004d77d3",
+                    "ontologyclass": "http://www.cidoc-crm.org/cidoc-crm/E92_Spacetime_Volume",
+                    "parentproperty": "http://www.ics.forth.gr/isl/CRMdig/L54_is_same-as",
+                    "sortorder": 0
+                },
+                {
+                    "alias": "criteria_n",
+                    "config": {
+                        "falseLabel": {
+                            "en": "No"
+                        },
+                        "i18n_properties": [
+                            "trueLabel",
+                            "falseLabel"
+                        ],
+                        "trueLabel": {
+                            "en": "Yes"
+                        }
+                    },
+                    "datatype": "boolean",
+                    "description": null,
+                    "exportable": false,
+                    "fieldname": null,
+                    "graph_id": "2aa724d1-ffd3-4823-8ff1-15a385b9a407",
+                    "hascustomalias": false,
+                    "is_collector": false,
+                    "isrequired": false,
+                    "issearchable": true,
+                    "istopnode": false,
+                    "name": "Criteria N",
+                    "nodegroup_id": "91e50dd8-9dca-11ed-9ef3-5254004d77d3",
+                    "nodeid": "4cb0fa2c-a312-11ed-8611-5254004d77d3",
+                    "ontologyclass": "http://www.cidoc-crm.org/cidoc-crm/E92_Spacetime_Volume",
+                    "parentproperty": "http://www.ics.forth.gr/isl/CRMdig/L54_is_same-as",
+                    "sortorder": 0
+                },
+                {
                     "alias": "chance_find_protocol",
                     "config": {
                         "en": ""
@@ -2038,8 +2172,39 @@
                     "name": "Project Details",
                     "nodegroup_id": "5dfe07ea-9dc0-11ed-82b6-5254004d77d3",
                     "nodeid": "5dfe07ea-9dc0-11ed-82b6-5254004d77d3",
-                    "ontologyclass": "http://www.cidoc-crm.org/cidoc-crm/E10_Transfer_of_Custody",
-                    "parentproperty": "http://www.cidoc-crm.org/cidoc-crm/P10_falls_within",
+                    "ontologyclass": "http://www.cidoc-crm.org/cidoc-crm/E13_Attribute_Assignment",
+                    "parentproperty": "http://www.cidoc-crm.org/cidoc-crm/P9_consists_of",
+                    "sortorder": 0
+                },
+                {
+                    "alias": "proximity_to_fos",
+                    "config": {
+                        "falseLabel": {
+                            "en": "No"
+                        },
+                        "i18n_properties": [
+                            "trueLabel",
+                            "falseLabel"
+                        ],
+                        "trueLabel": {
+                            "en": "Yes"
+                        }
+                    },
+                    "datatype": "boolean",
+                    "description": null,
+                    "exportable": false,
+                    "fieldname": null,
+                    "graph_id": "2aa724d1-ffd3-4823-8ff1-15a385b9a407",
+                    "hascustomalias": false,
+                    "is_collector": false,
+                    "isrequired": false,
+                    "issearchable": true,
+                    "istopnode": false,
+                    "name": "Proximity to FoS",
+                    "nodegroup_id": "91e50dd8-9dca-11ed-9ef3-5254004d77d3",
+                    "nodeid": "6252617e-a310-11ed-8611-5254004d77d3",
+                    "ontologyclass": "http://www.cidoc-crm.org/cidoc-crm/E92_Spacetime_Volume",
+                    "parentproperty": "http://www.ics.forth.gr/isl/CRMdig/L54_is_same-as",
                     "sortorder": 0
                 },
                 {
@@ -2136,8 +2301,8 @@
                     "name": "Initial Review Internal Notes",
                     "nodegroup_id": "91e50dd8-9dca-11ed-9ef3-5254004d77d3",
                     "nodeid": "7e0e1326-9dcb-11ed-a03b-5254004d77d3",
-                    "ontologyclass": "http://www.cidoc-crm.org/cidoc-crm/E10_Transfer_of_Custody",
-                    "parentproperty": "http://www.cidoc-crm.org/cidoc-crm/P10_falls_within",
+                    "ontologyclass": "http://www.ics.forth.gr/isl/CRMdig/D29_Annotation_Object",
+                    "parentproperty": "http://www.cidoc-crm.org/cidoc-crm/P15_was_influenced_by",
                     "sortorder": 0
                 },
                 {
@@ -2158,8 +2323,8 @@
                     "name": "Initial Project Review",
                     "nodegroup_id": "91e50dd8-9dca-11ed-9ef3-5254004d77d3",
                     "nodeid": "91e50dd8-9dca-11ed-9ef3-5254004d77d3",
-                    "ontologyclass": "http://www.cidoc-crm.org/cidoc-crm/E10_Transfer_of_Custody",
-                    "parentproperty": "http://www.cidoc-crm.org/cidoc-crm/P10_falls_within",
+                    "ontologyclass": "http://www.cidoc-crm.org/cidoc-crm/E7_Activity",
+                    "parentproperty": "http://www.cidoc-crm.org/cidoc-crm/P9_consists_of",
                     "sortorder": 0
                 },
                 {
@@ -2180,39 +2345,8 @@
                     "name": "Preliminary Study Report",
                     "nodegroup_id": "9cf8ce58-9dcf-11ed-82b6-5254004d77d3",
                     "nodeid": "9cf8ce58-9dcf-11ed-82b6-5254004d77d3",
-                    "ontologyclass": "http://www.cidoc-crm.org/cidoc-crm/E10_Transfer_of_Custody",
-                    "parentproperty": "http://www.cidoc-crm.org/cidoc-crm/P10_falls_within",
-                    "sortorder": 0
-                },
-                {
-                    "alias": "proximity_to_fos",
-                    "config": {
-                        "falseLabel": {
-                            "en": "No"
-                        },
-                        "i18n_properties": [
-                            "trueLabel",
-                            "falseLabel"
-                        ],
-                        "trueLabel": {
-                            "en": "Yes"
-                        }
-                    },
-                    "datatype": "boolean",
-                    "description": "The proposed site location is near the location where one more more Fossils of Significance have been discovered. ",
-                    "exportable": false,
-                    "fieldname": null,
-                    "graph_id": "2aa724d1-ffd3-4823-8ff1-15a385b9a407",
-                    "hascustomalias": false,
-                    "is_collector": false,
-                    "isrequired": false,
-                    "issearchable": true,
-                    "istopnode": false,
-                    "name": "Proximity to FoS",
-                    "nodegroup_id": "91e50dd8-9dca-11ed-9ef3-5254004d77d3",
-                    "nodeid": "9ffd07f4-9dca-11ed-8d8e-5254004d77d3",
-                    "ontologyclass": "http://www.cidoc-crm.org/cidoc-crm/E10_Transfer_of_Custody",
-                    "parentproperty": "http://www.cidoc-crm.org/cidoc-crm/P10_falls_within",
+                    "ontologyclass": "http://www.cidoc-crm.org/cidoc-crm/E7_Activity",
+                    "parentproperty": "http://www.cidoc-crm.org/cidoc-crm/P9_consists_of",
                     "sortorder": 0
                 },
                 {
@@ -2240,6 +2374,28 @@
                     "sortorder": 0
                 },
                 {
+                    "alias": "risk_assessment",
+                    "config": {
+                        "en": ""
+                    },
+                    "datatype": "semantic",
+                    "description": null,
+                    "exportable": false,
+                    "fieldname": null,
+                    "graph_id": "2aa724d1-ffd3-4823-8ff1-15a385b9a407",
+                    "hascustomalias": false,
+                    "is_collector": false,
+                    "isrequired": false,
+                    "issearchable": true,
+                    "istopnode": false,
+                    "name": "Risk Assessment",
+                    "nodegroup_id": "91e50dd8-9dca-11ed-9ef3-5254004d77d3",
+                    "nodeid": "aabea3b2-a30d-11ed-bf9d-5254004d77d3",
+                    "ontologyclass": "http://www.ics.forth.gr/isl/CRMsci/S5_Inference_Making",
+                    "parentproperty": "http://www.cidoc-crm.org/cidoc-crm/P140i_was_attributed_by",
+                    "sortorder": 0
+                },
+                {
                     "alias": "fossil_impact_assessment",
                     "config": {
                         "en": ""
@@ -2257,8 +2413,8 @@
                     "name": "Fossil Impact Assessment",
                     "nodegroup_id": "ae34f2ce-9de2-11ed-a1e4-5254004d77d3",
                     "nodeid": "ae34f2ce-9de2-11ed-a1e4-5254004d77d3",
-                    "ontologyclass": "http://www.cidoc-crm.org/cidoc-crm/E10_Transfer_of_Custody",
-                    "parentproperty": "http://www.ics.forth.gr/isl/CRMdig/L54i_is_same-as",
+                    "ontologyclass": "http://www.cidoc-crm.org/cidoc-crm/E7_Activity",
+                    "parentproperty": "http://www.cidoc-crm.org/cidoc-crm/P9_consists_of",
                     "sortorder": 0
                 },
                 {
@@ -2551,59 +2707,6 @@
                     "sortorder": 0
                 },
                 {
-                    "alias": "intersects_ifa",
-                    "config": {
-                        "falseLabel": {
-                            "en": "No"
-                        },
-                        "i18n_properties": [
-                            "trueLabel",
-                            "falseLabel"
-                        ],
-                        "trueLabel": {
-                            "en": "Yes"
-                        }
-                    },
-                    "datatype": "boolean",
-                    "description": null,
-                    "exportable": false,
-                    "fieldname": null,
-                    "graph_id": "2aa724d1-ffd3-4823-8ff1-15a385b9a407",
-                    "hascustomalias": false,
-                    "is_collector": false,
-                    "isrequired": false,
-                    "issearchable": true,
-                    "istopnode": false,
-                    "name": "Intersects IFA",
-                    "nodegroup_id": "91e50dd8-9dca-11ed-9ef3-5254004d77d3",
-                    "nodeid": "c24aba68-9dca-11ed-96a4-5254004d77d3",
-                    "ontologyclass": "http://www.cidoc-crm.org/cidoc-crm/E10_Transfer_of_Custody",
-                    "parentproperty": "http://www.cidoc-crm.org/cidoc-crm/P10_falls_within",
-                    "sortorder": 0
-                },
-                {
-                    "alias": "initial_review_level_of_risk",
-                    "config": {
-                        "rdmCollection": "cc566eca-690e-41ea-acdb-8b16baa2864c"
-                    },
-                    "datatype": "concept",
-                    "description": null,
-                    "exportable": false,
-                    "fieldname": null,
-                    "graph_id": "2aa724d1-ffd3-4823-8ff1-15a385b9a407",
-                    "hascustomalias": false,
-                    "is_collector": false,
-                    "isrequired": false,
-                    "issearchable": true,
-                    "istopnode": false,
-                    "name": "Initial Review Level of Risk",
-                    "nodegroup_id": "91e50dd8-9dca-11ed-9ef3-5254004d77d3",
-                    "nodeid": "cc1da4ac-9dce-11ed-add1-5254004d77d3",
-                    "ontologyclass": "http://www.cidoc-crm.org/cidoc-crm/E10_Transfer_of_Custody",
-                    "parentproperty": "http://www.cidoc-crm.org/cidoc-crm/P10_falls_within",
-                    "sortorder": 0
-                },
-                {
                     "alias": "project_site",
                     "config": {
                         "en": ""
@@ -2648,6 +2751,28 @@
                     "sortorder": 0
                 },
                 {
+                    "alias": "initial_review_level_of_risk",
+                    "config": {
+                        "rdmCollection": "cc566eca-690e-41ea-acdb-8b16baa2864c"
+                    },
+                    "datatype": "concept",
+                    "description": null,
+                    "exportable": false,
+                    "fieldname": null,
+                    "graph_id": "2aa724d1-ffd3-4823-8ff1-15a385b9a407",
+                    "hascustomalias": false,
+                    "is_collector": false,
+                    "isrequired": false,
+                    "issearchable": true,
+                    "istopnode": false,
+                    "name": "Initial Review Level of Risk",
+                    "nodegroup_id": "91e50dd8-9dca-11ed-9ef3-5254004d77d3",
+                    "nodeid": "da887b6a-a310-11ed-a1af-5254004d77d3",
+                    "ontologyclass": "http://www.cidoc-crm.org/cidoc-crm/E13_Attribute_Assignment",
+                    "parentproperty": "http://www.cidoc-crm.org/cidoc-crm/P140i_was_attributed_by",
+                    "sortorder": 0
+                },
+                {
                     "alias": "psr_title",
                     "config": {
                         "en": ""
@@ -2670,20 +2795,11 @@
                     "sortorder": 0
                 },
                 {
-                    "alias": "criteria_n",
+                    "alias": "assessment_criteria",
                     "config": {
-                        "falseLabel": {
-                            "en": "No"
-                        },
-                        "i18n_properties": [
-                            "trueLabel",
-                            "falseLabel"
-                        ],
-                        "trueLabel": {
-                            "en": "Yes"
-                        }
+                        "en": ""
                     },
-                    "datatype": "boolean",
+                    "datatype": "semantic",
                     "description": null,
                     "exportable": false,
                     "fieldname": null,
@@ -2693,11 +2809,11 @@
                     "isrequired": false,
                     "issearchable": true,
                     "istopnode": false,
-                    "name": "Criteria N",
+                    "name": "Assessment Criteria",
                     "nodegroup_id": "91e50dd8-9dca-11ed-9ef3-5254004d77d3",
-                    "nodeid": "dee7c774-9dca-11ed-a372-5254004d77d3",
-                    "ontologyclass": "http://www.cidoc-crm.org/cidoc-crm/E10_Transfer_of_Custody",
-                    "parentproperty": "http://www.cidoc-crm.org/cidoc-crm/P10_falls_within",
+                    "nodeid": "e174be1e-a30d-11ed-a1af-5254004d77d3",
+                    "ontologyclass": "http://www.cidoc-crm.org/cidoc-crm/E28_Conceptual_Object",
+                    "parentproperty": "http://www.cidoc-crm.org/cidoc-crm/P15_was_influenced_by",
                     "sortorder": 0
                 },
                 {
@@ -2740,8 +2856,8 @@
                     "name": "Initial Review Outcome",
                     "nodegroup_id": "91e50dd8-9dca-11ed-9ef3-5254004d77d3",
                     "nodeid": "eb34801c-9dca-11ed-9e26-5254004d77d3",
-                    "ontologyclass": "http://www.cidoc-crm.org/cidoc-crm/E10_Transfer_of_Custody",
-                    "parentproperty": "http://www.cidoc-crm.org/cidoc-crm/P10_falls_within",
+                    "ontologyclass": "http://www.ics.forth.gr/isl/CRMinf/I3_Inference_Logic",
+                    "parentproperty": "http://www.cidoc-crm.org/cidoc-crm/P129i_is_subject_of",
                     "sortorder": 0
                 },
                 {
@@ -2800,17 +2916,14 @@
             "publication": {
                 "graph_id": "2aa724d1-ffd3-4823-8ff1-15a385b9a407",
                 "notes": null,
-                "publicationid": "d94af2ee-9e6c-11ed-bf99-5254004d77d3",
-                "published_time": "2023-01-27T12:03:05.757",
+                "publicationid": "fd20cca2-a312-11ed-b13a-5254004d77d3",
+                "published_time": "2023-02-02T10:02:26.987",
                 "user_id": 1
             },
-            "relatable_resource_model_ids": [
-                "3cf1f266-e390-4aac-8626-986f000c5b41",
-                "605b0bbc-8661-4cf2-b340-df743a8c5f89"
-            ],
+            "relatable_resource_model_ids": [],
             "resource_2_resource_constraints": [],
             "root": {
-                "alias": null,
+                "alias": "industry_project_assessment",
                 "config": {
                     "en": ""
                 },
