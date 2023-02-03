@@ -431,7 +431,7 @@
             "isresource": true,
             "jsonldcontext": null,
             "name": {
-                "en": "Paleological Consultant"
+                "en": "Paleontology Consultant"
             },
             "nodegroups": [
                 {
@@ -485,7 +485,7 @@
                     "sortorder": 0
                 },
                 {
-                    "alias": null,
+                    "alias": "paleological_consultant",
                     "config": {
                         "en": ""
                     },
@@ -499,7 +499,7 @@
                     "isrequired": false,
                     "issearchable": true,
                     "istopnode": true,
-                    "name": "Paleological Consultant",
+                    "name": "Paleontology Consultant",
                     "nodegroup_id": null,
                     "nodeid": "98275cda-9dea-11ed-b3e8-5254004d77d3",
                     "ontologyclass": "http://www.cidoc-crm.org/cidoc-crm/E39_Actor",
@@ -699,17 +699,17 @@
                         },
                         "options": [
                             {
-                                "id": "e699a62e-59d7-4931-84c9-3526a8260717",
-                                "selected": false,
-                                "text": {
-                                    "en": "Company"
-                                }
-                            },
-                            {
                                 "id": "5fe283e7-3ecf-46d2-adff-a82a30447d43",
                                 "selected": false,
                                 "text": {
                                     "en": "Individual"
+                                }
+                            },
+                            {
+                                "id": "e699a62e-59d7-4931-84c9-3526a8260717",
+                                "selected": false,
+                                "text": {
+                                    "en": "Company"
                                 }
                             }
                         ]
@@ -751,15 +751,15 @@
                     "nodeid": "c4eca478-9dea-11ed-9a7b-5254004d77d3",
                     "ontologyclass": "http://www.cidoc-crm.org/cidoc-crm/E51_Contact_Point",
                     "parentproperty": "http://www.ics.forth.gr/isl/CRMdig/L54i_is_same-as",
-                    "sortorder": 2
+                    "sortorder": 0
                 }
             ],
             "ontology_id": "e6e8db47-2ccf-11e6-927e-b8f6b115d7dd",
             "publication": {
                 "graph_id": "605b0bbc-8661-4cf2-b340-df743a8c5f89",
                 "notes": null,
-                "publicationid": "9d9b35f0-9e6d-11ed-9f51-5254004d77d3",
-                "published_time": "2023-01-27T12:08:35.117",
+                "publicationid": "e5e330ca-a349-11ed-b9c9-5254004d77d3",
+                "published_time": "2023-02-02T16:35:30.316",
                 "user_id": 1
             },
             "relatable_resource_model_ids": [
@@ -769,7 +769,7 @@
             ],
             "resource_2_resource_constraints": [],
             "root": {
-                "alias": null,
+                "alias": "paleological_consultant",
                 "config": {
                     "en": ""
                 },
@@ -783,7 +783,7 @@
                 "isrequired": false,
                 "issearchable": true,
                 "istopnode": true,
-                "name": "Paleological Consultant",
+                "name": "Paleontology Consultant",
                 "nodegroup_id": null,
                 "nodeid": "98275cda-9dea-11ed-b3e8-5254004d77d3",
                 "ontologyclass": "http://www.cidoc-crm.org/cidoc-crm/E39_Actor",
