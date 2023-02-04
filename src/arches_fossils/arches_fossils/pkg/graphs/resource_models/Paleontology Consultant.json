@@ -22,7 +22,7 @@
                     "instructions": {
                         "en": ""
                     },
-                    "is_editable": true,
+                    "is_editable": false,
                     "name": {
                         "en": "Person"
                     },
@@ -49,7 +49,7 @@
                     "instructions": {
                         "en": ""
                     },
-                    "is_editable": true,
+                    "is_editable": false,
                     "name": {
                         "en": "Company Name"
                     },
@@ -83,7 +83,7 @@
                     "instructions": {
                         "en": ""
                     },
-                    "is_editable": true,
+                    "is_editable": false,
                     "name": {
                         "en": "Consultant"
                     },
@@ -145,7 +145,7 @@
                         "en": "Inactive"
                     },
                     "node_id": "99643f1e-9e4e-11ed-b6d5-5254004d77d3",
-                    "sortorder": 2,
+                    "sortorder": 3,
                     "visible": true,
                     "widget_id": "0346bc9c-d235-4313-adc8-d0e210b2ef25"
                 },
@@ -314,6 +314,35 @@
                     "sortorder": 3,
                     "visible": true,
                     "widget_id": "10000000-0000-0000-0000-000000000001"
+                },
+                {
+                    "card_id": "c4ec946a-9dea-11ed-9a7b-5254004d77d3",
+                    "config": {
+                        "defaultValue": {
+                            "en": {
+                                "direction": "ltr",
+                                "value": ""
+                            }
+                        },
+                        "i18n_properties": [
+                            "placeholder"
+                        ],
+                        "label": "Phone Number",
+                        "maxLength": null,
+                        "placeholder": {
+                            "en": "999-999-9999"
+                        },
+                        "uneditable": false,
+                        "width": "100%"
+                    },
+                    "id": "e53926ef-ec8c-4fe1-9884-8d7a29a4c9c3",
+                    "label": {
+                        "en": "Phone Number"
+                    },
+                    "node_id": "1270a190-a499-11ed-ae76-5254004d77d3",
+                    "sortorder": 2,
+                    "visible": true,
+                    "widget_id": "10000000-0000-0000-0000-000000000001"
                 }
             ],
             "color": null,
@@ -324,6 +353,24 @@
                 "en": ""
             },
             "edges": [
+                {
+                    "description": null,
+                    "domainnode_id": "c4ec91a4-9dea-11ed-9a7b-5254004d77d3",
+                    "edgeid": "04c5db22-b2f2-4e62-aaf8-bf408a386750",
+                    "graph_id": "605b0bbc-8661-4cf2-b340-df743a8c5f89",
+                    "name": null,
+                    "ontologyproperty": "http://www.cidoc-crm.org/cidoc-crm/P76_has_contact_point",
+                    "rangenode_id": "c6b4216e-a498-11ed-a45b-5254004d77d3"
+                },
+                {
+                    "description": null,
+                    "domainnode_id": "c4ec91a4-9dea-11ed-9a7b-5254004d77d3",
+                    "edgeid": "243459d6-d4ac-4197-b274-1f778fe0c12d",
+                    "graph_id": "605b0bbc-8661-4cf2-b340-df743a8c5f89",
+                    "name": null,
+                    "ontologyproperty": "http://www.cidoc-crm.org/cidoc-crm/P76_has_contact_point",
+                    "rangenode_id": "1270a190-a499-11ed-ae76-5254004d77d3"
+                },
                 {
                     "description": null,
                     "domainnode_id": "87249e6a-9deb-11ed-81b6-5254004d77d3",
@@ -424,10 +471,54 @@
                     "rangenode_id": "87249e6a-9deb-11ed-81b6-5254004d77d3"
                 }
             ],
-            "functions_x_graphs": [],
+            "functions_x_graphs": [
+                {
+                    "config": {
+                        "class_name": "BCFossilsDescriptors",
+                        "descriptor_types": {
+                            "description": {
+                                "delimiter": "<br>",
+                                "first_only": false,
+                                "node_ids": [
+                                    "87249e6a-9deb-11ed-81b6-5254004d77d3",
+                                    "c4eca2de-9dea-11ed-9a7b-5254004d77d3"
+                                ],
+                                "show_name": true,
+                                "type": "description"
+                            },
+                            "map_popup": {
+                                "delimiter": "<br>",
+                                "first_only": false,
+                                "node_ids": [
+                                    "87249e6a-9deb-11ed-81b6-5254004d77d3",
+                                    "c4eca2de-9dea-11ed-9a7b-5254004d77d3"
+                                ],
+                                "show_name": true,
+                                "type": "map_popup"
+                            },
+                            "name": {
+                                "delimiter": " ",
+                                "first_only": false,
+                                "node_ids": [
+                                    "c4ec9672-9dea-11ed-9a7b-5254004d77d3",
+                                    "c4eca13a-9dea-11ed-9a7b-5254004d77d3",
+                                    "c4ec9b2c-9dea-11ed-9a7b-5254004d77d3"
+                                ],
+                                "show_name": false,
+                                "type": "name"
+                            }
+                        },
+                        "module": "arches_fossils.functions.bc_fossils_descriptors",
+                        "triggering_nodegroups": []
+                    },
+                    "function_id": "60000000-0000-0000-0000-000000001001",
+                    "graph_id": "605b0bbc-8661-4cf2-b340-df743a8c5f89",
+                    "id": "b5060fbc-1b70-486e-a706-c31146e04b3d"
+                }
+            ],
             "graphid": "605b0bbc-8661-4cf2-b340-df743a8c5f89",
             "iconclass": "fa fa-male",
-            "is_editable": true,
+            "is_editable": false,
             "isresource": true,
             "jsonldcontext": null,
             "name": {
@@ -454,6 +545,28 @@
                 }
             ],
             "nodes": [
+                {
+                    "alias": "contact_phone_number",
+                    "config": {
+                        "en": ""
+                    },
+                    "datatype": "string",
+                    "description": null,
+                    "exportable": false,
+                    "fieldname": null,
+                    "graph_id": "605b0bbc-8661-4cf2-b340-df743a8c5f89",
+                    "hascustomalias": false,
+                    "is_collector": false,
+                    "isrequired": false,
+                    "issearchable": true,
+                    "istopnode": false,
+                    "name": "Contact Phone Number",
+                    "nodegroup_id": "c4ec91a4-9dea-11ed-9a7b-5254004d77d3",
+                    "nodeid": "1270a190-a499-11ed-ae76-5254004d77d3",
+                    "ontologyclass": "http://www.cidoc-crm.org/cidoc-crm/E51_Contact_Point",
+                    "parentproperty": "http://www.cidoc-crm.org/cidoc-crm/P76_has_contact_point",
+                    "sortorder": 0
+                },
                 {
                     "alias": "company",
                     "config": {
@@ -699,17 +812,17 @@
                         },
                         "options": [
                             {
-                                "id": "5fe283e7-3ecf-46d2-adff-a82a30447d43",
-                                "selected": false,
-                                "text": {
-                                    "en": "Individual"
-                                }
-                            },
-                            {
                                 "id": "e699a62e-59d7-4931-84c9-3526a8260717",
                                 "selected": false,
                                 "text": {
                                     "en": "Company"
+                                }
+                            },
+                            {
+                                "id": "5fe283e7-3ecf-46d2-adff-a82a30447d43",
+                                "selected": false,
+                                "text": {
+                                    "en": "Individual"
                                 }
                             }
                         ]
@@ -752,14 +865,36 @@
                     "ontologyclass": "http://www.cidoc-crm.org/cidoc-crm/E51_Contact_Point",
                     "parentproperty": "http://www.ics.forth.gr/isl/CRMdig/L54i_is_same-as",
                     "sortorder": 0
+                },
+                {
+                    "alias": null,
+                    "config": {
+                        "en": ""
+                    },
+                    "datatype": "semantic",
+                    "description": null,
+                    "exportable": false,
+                    "fieldname": null,
+                    "graph_id": "605b0bbc-8661-4cf2-b340-df743a8c5f89",
+                    "hascustomalias": false,
+                    "is_collector": false,
+                    "isrequired": false,
+                    "issearchable": true,
+                    "istopnode": false,
+                    "name": "New Node",
+                    "nodegroup_id": "c4ec91a4-9dea-11ed-9a7b-5254004d77d3",
+                    "nodeid": "c6b4216e-a498-11ed-a45b-5254004d77d3",
+                    "ontologyclass": "http://www.cidoc-crm.org/cidoc-crm/E51_Contact_Point",
+                    "parentproperty": "http://www.cidoc-crm.org/cidoc-crm/P76_has_contact_point",
+                    "sortorder": 0
                 }
             ],
             "ontology_id": "e6e8db47-2ccf-11e6-927e-b8f6b115d7dd",
             "publication": {
                 "graph_id": "605b0bbc-8661-4cf2-b340-df743a8c5f89",
                 "notes": null,
-                "publicationid": "e5e330ca-a349-11ed-b9c9-5254004d77d3",
-                "published_time": "2023-02-02T16:35:30.316",
+                "publicationid": "54cfc764-a499-11ed-a575-5254004d77d3",
+                "published_time": "2023-02-04T08:36:37.820",
                 "user_id": 1
             },
             "relatable_resource_model_ids": [
