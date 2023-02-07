@@ -166,7 +166,7 @@
                     "instructions": {
                         "en": ""
                     },
-                    "is_editable": false,
+                    "is_editable": true,
                     "name": {
                         "en": "Local Government Name"
                     },
@@ -545,12 +545,12 @@
                     },
                     "function_id": "60000000-0000-0000-0000-000000000001",
                     "graph_id": "aacf8bb6-3f6e-46d9-a551-b0749d7efffc",
-                    "id": "1eb9e55b-e9bb-4d09-b196-7ef45e7b957b"
+                    "id": "348408b8-d4e1-4522-a955-8820cfaebc98"
                 }
             ],
             "graphid": "aacf8bb6-3f6e-46d9-a551-b0749d7efffc",
             "iconclass": "fa fa-group",
-            "is_editable": false,
+            "is_editable": true,
             "isresource": true,
             "jsonldcontext": null,
             "name": {
@@ -884,8 +884,23 @@
                     "alias": "local_government_resource",
                     "config": {
                         "graphs": [],
-                        "searchDsl": "",
-                        "searchString": ""
+                        "searchDsl": {
+                            "bool": {
+                                "filter": [
+                                    {
+                                        "terms": {
+                                            "graph_id": [
+                                                "412444dd-b13f-4289-9f04-5c7f1878ad4e"
+                                            ]
+                                        }
+                                    }
+                                ],
+                                "must": [],
+                                "must_not": [],
+                                "should": []
+                            }
+                        },
+                        "searchString": "http://arches7.local/int/arches-bchp/search?paging-filter=1&tiles=true&format=tilecsv&reportlink=false&precision=6&total=0&resource-type-filter=%5B%7B%22graphid%22%3A%22412444dd-b13f-4289-9f04-5c7f1878ad4e%22%2C%22name%22%3A%22BC+Local+Government+Resource%22%2C%22inverted%22%3Afalse%7D%5D&sort-results=asc"
                     },
                     "datatype": "resource-instance",
                     "description": null,
@@ -909,8 +924,8 @@
             "publication": {
                 "graph_id": "aacf8bb6-3f6e-46d9-a551-b0749d7efffc",
                 "notes": null,
-                "publicationid": "47b6bf98-a669-11ed-9204-5254004d77d3",
-                "published_time": "2023-02-06T15:57:42.329",
+                "publicationid": "2442e3b8-a725-11ed-b062-5254004d77d3",
+                "published_time": "2023-02-07T14:22:28.234",
                 "user_id": 1
             },
             "relatable_resource_model_ids": [],
