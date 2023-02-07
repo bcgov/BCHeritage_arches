@@ -29,7 +29,7 @@
                     "instructions": {
                         "en": "Enter a description and description type for the resource."
                     },
-                    "is_editable": true,
+                    "is_editable": false,
                     "name": {
                         "en": "Remarks"
                     },
@@ -56,7 +56,7 @@
                     "instructions": {
                         "en": ""
                     },
-                    "is_editable": true,
+                    "is_editable": false,
                     "name": {
                         "en": "Decision History"
                     },
@@ -143,7 +143,7 @@
                     "instructions": {
                         "en": ""
                     },
-                    "is_editable": true,
+                    "is_editable": false,
                     "name": {
                         "en": "BC Property Legal Description"
                     },
@@ -181,7 +181,7 @@
                     "instructions": {
                         "en": "Enter the address of the location."
                     },
-                    "is_editable": true,
+                    "is_editable": false,
                     "name": {
                         "en": "BC Property Address"
                     },
@@ -210,7 +210,7 @@
                     "instructions": {
                         "en": "Define the spatial location."
                     },
-                    "is_editable": true,
+                    "is_editable": false,
                     "name": {
                         "en": "Spatial Location"
                     },
@@ -237,7 +237,7 @@
                     "instructions": {
                         "en": ""
                     },
-                    "is_editable": true,
+                    "is_editable": false,
                     "name": {
                         "en": "BC Heritage Resource Place"
                     },
@@ -277,7 +277,7 @@
                     "instructions": {
                         "en": ""
                     },
-                    "is_editable": true,
+                    "is_editable": false,
                     "name": {
                         "en": "Borden Number"
                     },
@@ -304,7 +304,7 @@
                     "instructions": {
                         "en": "Define the resource's designation or protection status."
                     },
-                    "is_editable": true,
+                    "is_editable": false,
                     "name": {
                         "en": "Designation or Protection"
                     },
@@ -333,7 +333,7 @@
                     "instructions": {
                         "en": ""
                     },
-                    "is_editable": true,
+                    "is_editable": false,
                     "name": {
                         "en": "BC Right"
                     },
@@ -360,7 +360,7 @@
                     "instructions": {
                         "en": ""
                     },
-                    "is_editable": true,
+                    "is_editable": false,
                     "name": {
                         "en": "Heritage Class"
                     },
@@ -394,7 +394,7 @@
                     "instructions": {
                         "en": ""
                     },
-                    "is_editable": true,
+                    "is_editable": false,
                     "name": {
                         "en": "BC Statement of Significance"
                     },
@@ -421,7 +421,7 @@
                     "instructions": {
                         "en": ""
                     },
-                    "is_editable": true,
+                    "is_editable": false,
                     "name": {
                         "en": "BC Heritage Function"
                     },
@@ -490,7 +490,7 @@
                     "instructions": {
                         "en": ""
                     },
-                    "is_editable": true,
+                    "is_editable": false,
                     "name": {
                         "en": "Site Images"
                     },
@@ -530,7 +530,7 @@
                     "instructions": {
                         "en": ""
                     },
-                    "is_editable": true,
+                    "is_editable": false,
                     "name": {
                         "en": "Site Names"
                     },
@@ -1528,7 +1528,7 @@
                         "en": "Legal Instrument"
                     },
                     "node_id": "6cc3079e-0d06-11ed-8804-5254008afee6",
-                    "sortorder": 3,
+                    "sortorder": 4,
                     "visible": true,
                     "widget_id": "10000000-0000-0000-0000-000000000002"
                 },
@@ -1557,7 +1557,7 @@
                         "en": "Act Section"
                     },
                     "node_id": "6cc308f2-0d06-11ed-8804-5254008afee6",
-                    "sortorder": 4,
+                    "sortorder": 5,
                     "visible": true,
                     "widget_id": "10000000-0000-0000-0000-000000000001"
                 },
@@ -1581,7 +1581,7 @@
                         "en": "Protection Type"
                     },
                     "node_id": "6cc30a1e-0d06-11ed-8804-5254008afee6",
-                    "sortorder": 5,
+                    "sortorder": 6,
                     "visible": true,
                     "widget_id": "10000000-0000-0000-0000-000000000001"
                 },
@@ -1610,7 +1610,7 @@
                         "en": "Reference Number"
                     },
                     "node_id": "6cc30b36-0d06-11ed-8804-5254008afee6",
-                    "sortorder": 6,
+                    "sortorder": 7,
                     "visible": true,
                     "widget_id": "10000000-0000-0000-0000-000000000001"
                 },
@@ -1639,7 +1639,7 @@
                         "en": "Description"
                     },
                     "node_id": "6cc30c44-0d06-11ed-8804-5254008afee6",
-                    "sortorder": 7,
+                    "sortorder": 8,
                     "visible": true,
                     "widget_id": "10000000-0000-0000-0000-000000000001"
                 },
@@ -2023,6 +2023,27 @@
                     "sortorder": 0,
                     "visible": true,
                     "widget_id": "10000000-0000-0000-0000-000000000002"
+                },
+                {
+                    "card_id": "6cc302c6-0d06-11ed-8804-5254008afee6",
+                    "config": {
+                        "defaultResourceInstance": [],
+                        "i18n_properties": [
+                            "placeholder"
+                        ],
+                        "label": "Responsible Government",
+                        "placeholder": {
+                            "en": ""
+                        }
+                    },
+                    "id": "95dab9ea-60bc-4758-816b-79344b51ca5a",
+                    "label": {
+                        "en": "Responsible Government"
+                    },
+                    "node_id": "a4a3dd9e-a66e-11ed-b29b-5254004d77d3",
+                    "sortorder": 3,
+                    "visible": true,
+                    "widget_id": "31f3728c-7613-11e7-a139-784f435179ea"
                 },
                 {
                     "card_id": "1b622c8c-0d0f-11ed-98c2-5254008afee6",
@@ -2720,6 +2741,15 @@
                 },
                 {
                     "description": null,
+                    "domainnode_id": "6cc3107c-0d06-11ed-8804-5254008afee6",
+                    "edgeid": "65fb2894-b9b8-4d30-a7f4-f709d4d5fc61",
+                    "graph_id": "cef9c510-e3e6-4057-ac08-89ad926180b4",
+                    "name": null,
+                    "ontologyproperty": "http://www.ics.forth.gr/isl/CRMdig/L54_is_same-as",
+                    "rangenode_id": "a4a3dd9e-a66e-11ed-b29b-5254004d77d3"
+                },
+                {
+                    "description": null,
                     "domainnode_id": "19d560d2-0d05-11ed-a4d8-5254008afee6",
                     "edgeid": "67fbee25-7b57-4bfd-8e76-d24e8e2411be",
                     "graph_id": "cef9c510-e3e6-4057-ac08-89ad926180b4",
@@ -3125,12 +3155,12 @@
                     },
                     "function_id": "60000000-0000-0000-0000-000000001002",
                     "graph_id": "cef9c510-e3e6-4057-ac08-89ad926180b4",
-                    "id": "d9dce65e-c0f2-403d-bbf0-6f4320640aac"
+                    "id": "ee8e6e08-1189-4778-b617-e0e10e0fb15b"
                 }
             ],
             "graphid": "cef9c510-e3e6-4057-ac08-89ad926180b4",
             "iconclass": "fa fa-bank",
-            "is_editable": true,
+            "is_editable": false,
             "isresource": true,
             "jsonldcontext": null,
             "name": {
@@ -4850,6 +4880,35 @@
                     "sortorder": 0
                 },
                 {
+                    "alias": "responsible_government",
+                    "config": {
+                        "graphs": [
+                            {
+                                "graphid": "aacf8bb6-3f6e-46d9-a551-b0749d7efffc",
+                                "name": "BC Local Government"
+                            }
+                        ],
+                        "searchDsl": "",
+                        "searchString": ""
+                    },
+                    "datatype": "resource-instance",
+                    "description": "Legal body that is responsible for the site.",
+                    "exportable": false,
+                    "fieldname": null,
+                    "graph_id": "cef9c510-e3e6-4057-ac08-89ad926180b4",
+                    "hascustomalias": false,
+                    "is_collector": false,
+                    "isrequired": false,
+                    "issearchable": true,
+                    "istopnode": false,
+                    "name": "Responsible Government",
+                    "nodegroup_id": "6cc30064-0d06-11ed-8804-5254008afee6",
+                    "nodeid": "a4a3dd9e-a66e-11ed-b29b-5254004d77d3",
+                    "ontologyclass": "http://www.cidoc-crm.org/cidoc-crm/E40_Legal_Body",
+                    "parentproperty": "http://www.ics.forth.gr/isl/CRMdig/L54_is_same-as",
+                    "sortorder": 0
+                },
+                {
                     "alias": "township",
                     "config": {
                         "en": ""
@@ -4985,7 +5044,8 @@
                     "alias": "borden_number",
                     "config": {
                         "format": "AaAa-000",
-                        "pgDataType": "jsonb"
+                        "pgDataType": "jsonb",
+                        "pgDatatype": "jsonb"
                     },
                     "datatype": "borden-number-datatype",
                     "description": null,
@@ -5053,8 +5113,8 @@
             "publication": {
                 "graph_id": "cef9c510-e3e6-4057-ac08-89ad926180b4",
                 "notes": null,
-                "publicationid": "485c06ce-6b8b-11ed-ac9e-5254004d77d3",
-                "published_time": "2022-11-23T18:02:27.697",
+                "publicationid": "0588db0a-a66f-11ed-badf-5254004d77d3",
+                "published_time": "2023-02-06T16:38:48.278",
                 "user_id": 1
             },
             "relatable_resource_model_ids": [],
