@@ -13,7 +13,7 @@ details = {
     "modulename": "borden_number_datatype.py",
     "classname": "BordenNumberDataType",
     "defaultwidget": borden_number_widget,
-    "defaultconfig": {"format": "AaAa-000", "pgDataType": "jsonb"},
+    "defaultconfig": {"format": "AaAa-000", "pgDatatype": "jsonb"},
     "configcomponent": "views/components/datatypes/string",
     "configname": "string-datatype-config",
     "isgeometric": False,
