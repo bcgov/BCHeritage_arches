@@ -693,7 +693,7 @@
                         "en": "Lead Paleontology Consultant"
                     },
                     "node_id": "01c483da-a3d0-11ed-8919-5254004d77d3",
-                    "sortorder": 0,
+                    "sortorder": 1,
                     "visible": true,
                     "widget_id": "31f3728c-7613-11e7-a139-784f435179ea"
                 },
@@ -716,6 +716,28 @@
                     "sortorder": 0,
                     "visible": true,
                     "widget_id": "10000000-0000-0000-0000-000000000001"
+                },
+                {
+                    "card_id": "219de984-0354-481f-8829-da2e7011c9b1",
+                    "config": {
+                        "defaultValue": "",
+                        "i18n_properties": [
+                            "placeholder"
+                        ],
+                        "label": "Geometry Qualifier",
+                        "options": [],
+                        "placeholder": {
+                            "en": "Select meaning of feature if only one drawn"
+                        }
+                    },
+                    "id": "1bea2f59-3b5c-4161-994b-b865eb1d50bd",
+                    "label": {
+                        "en": "Geometry Qualifier"
+                    },
+                    "node_id": "b1f3dc32-a881-11ed-ba42-5254004d77d3",
+                    "sortorder": 2,
+                    "visible": true,
+                    "widget_id": "10000000-0000-0000-0000-000000000002"
                 },
                 {
                     "card_id": "224f7282-cbf6-49de-ab0d-67ba7fe19e93",
@@ -742,7 +764,7 @@
                         "en": "PSR Recommendation"
                     },
                     "node_id": "9a01982c-a3d0-11ed-8ef6-5254004d77d3",
-                    "sortorder": 5,
+                    "sortorder": 6,
                     "visible": true,
                     "widget_id": "10000000-0000-0000-0000-000000000005"
                 },
@@ -870,7 +892,7 @@
                         "en": "PSR Consultant Report Number"
                     },
                     "node_id": "5b6b2740-a3d0-11ed-99ab-5254004d77d3",
-                    "sortorder": 3,
+                    "sortorder": 4,
                     "visible": true,
                     "widget_id": "10000000-0000-0000-0000-000000000001"
                 },
@@ -899,7 +921,7 @@
                         "en": "FIA Plan Recommendations"
                     },
                     "node_id": "3767acaa-a3cc-11ed-ac97-5254004d77d3",
-                    "sortorder": 5,
+                    "sortorder": 6,
                     "visible": true,
                     "widget_id": "10000000-0000-0000-0000-000000000005"
                 },
@@ -920,7 +942,7 @@
                         "en": "CF Collection Events"
                     },
                     "node_id": "101e8fae-a342-11ed-9c79-5254004d77d3",
-                    "sortorder": 5,
+                    "sortorder": 6,
                     "visible": true,
                     "widget_id": "ff3c400a-76ec-11e7-a793-784f435179ea"
                 },
@@ -945,6 +967,35 @@
                     "sortorder": 0,
                     "visible": true,
                     "widget_id": "10000000-0000-0000-0000-000000000002"
+                },
+                {
+                    "card_id": "219de984-0354-481f-8829-da2e7011c9b1",
+                    "config": {
+                        "defaultValue": {
+                            "en": {
+                                "direction": "ltr",
+                                "value": ""
+                            }
+                        },
+                        "i18n_properties": [
+                            "placeholder"
+                        ],
+                        "label": "Multiple Geometry Qualifiers",
+                        "maxLength": null,
+                        "placeholder": {
+                            "en": "If more than one feature is drawn, enter meaning of each geometry here."
+                        },
+                        "uneditable": false,
+                        "width": "100%"
+                    },
+                    "id": "4821bc70-ee71-4d89-af29-60466025e75c",
+                    "label": {
+                        "en": "Multiple Geometry Qualifiers"
+                    },
+                    "node_id": "c09e49bc-a880-11ed-a26e-5254004d77d3",
+                    "sortorder": 3,
+                    "visible": true,
+                    "widget_id": "10000000-0000-0000-0000-000000000005"
                 },
                 {
                     "card_id": "9de5c571-f507-4df0-af17-a90204edd2db",
@@ -978,7 +1029,7 @@
                         "label": "Land Act File Number",
                         "maxLength": "7",
                         "placeholder": {
-                            "en": "Enter text"
+                            "en": "Enter Land Act File Number"
                         },
                         "uneditable": false,
                         "width": "100%"
@@ -1017,9 +1068,30 @@
                         "en": "CFP Internal Notes"
                     },
                     "node_id": "1d6155ac-a347-11ed-80a4-5254004d77d3",
-                    "sortorder": 4,
+                    "sortorder": 5,
                     "visible": true,
                     "widget_id": "10000000-0000-0000-0000-000000000005"
+                },
+                {
+                    "card_id": "224f7282-cbf6-49de-ab0d-67ba7fe19e93",
+                    "config": {
+                        "defaultResourceInstance": [],
+                        "i18n_properties": [
+                            "placeholder"
+                        ],
+                        "label": "Paleontology Company",
+                        "placeholder": {
+                            "en": ""
+                        }
+                    },
+                    "id": "683cf882-4b44-4428-8b71-3e8eafc8e97f",
+                    "label": {
+                        "en": "Paleontology Company"
+                    },
+                    "node_id": "3c248dc8-a884-11ed-9606-5254004d77d3",
+                    "sortorder": 0,
+                    "visible": true,
+                    "widget_id": "31f3728c-7613-11e7-a139-784f435179ea"
                 },
                 {
                     "card_id": "224f7282-cbf6-49de-ab0d-67ba7fe19e93",
@@ -1046,9 +1118,77 @@
                         "en": "PSR Number"
                     },
                     "node_id": "2745085a-a3d0-11ed-8ef6-5254004d77d3",
-                    "sortorder": 2,
+                    "sortorder": 3,
                     "visible": true,
                     "widget_id": "10000000-0000-0000-0000-000000000001"
+                },
+                {
+                    "card_id": "219de984-0354-481f-8829-da2e7011c9b1",
+                    "config": {
+                        "basemap": "streets",
+                        "bearing": 0,
+                        "centerX": -125.2111215300115,
+                        "centerY": 54.5952920093056,
+                        "defaultValue": "",
+                        "defaultValueType": "",
+                        "featureColor": "#FF0000",
+                        "featureLineWidth": 1,
+                        "featurePointSize": 3,
+                        "geocodePlaceholder": "Search",
+                        "geocodeProvider": "10000000-0000-0000-0000-010000000000",
+                        "geocoderVisible": true,
+                        "geometryTypes": [
+                            {
+                                "id": "Point",
+                                "text": "Point"
+                            },
+                            {
+                                "id": "Line",
+                                "text": "Line"
+                            },
+                            {
+                                "id": "Polygon",
+                                "text": "Polygon"
+                            }
+                        ],
+                        "label": "Spatial Location",
+                        "maxZoom": 20,
+                        "minZoom": 0,
+                        "overlayConfigs": [],
+                        "overlayOpacity": 0,
+                        "pitch": 0,
+                        "rerender": true,
+                        "zoom": 0
+                    },
+                    "id": "6e5fb6d3-7216-45f6-ac4e-c138fa74d441",
+                    "label": {
+                        "en": "Spatial Location"
+                    },
+                    "node_id": "2bb08950-a880-11ed-95a4-5254004d77d3",
+                    "sortorder": 1,
+                    "visible": true,
+                    "widget_id": "10000000-0000-0000-0000-000000000007"
+                },
+                {
+                    "card_id": "dbb0d366-a360-11ed-ae42-5254004d77d3",
+                    "config": {
+                        "defaultResourceInstance": [],
+                        "i18n_properties": [
+                            "placeholder"
+                        ],
+                        "label": "Paleontology Company",
+                        "placeholder": {
+                            "en": ""
+                        }
+                    },
+                    "id": "6e7f4db6-35e1-47e1-80c2-f3c1cfe8eda1",
+                    "label": {
+                        "en": "Paleontology Company"
+                    },
+                    "node_id": "aca03412-a884-11ed-9ea8-5254004d77d3",
+                    "sortorder": 0,
+                    "visible": true,
+                    "widget_id": "31f3728c-7613-11e7-a139-784f435179ea"
                 },
                 {
                     "card_id": "13b3e5e3-5a25-4414-8360-d9b9b2ccea6b",
@@ -1085,7 +1225,7 @@
                         "en": "CFP Approval Date"
                     },
                     "node_id": "87e1128c-a351-11ed-b966-5254004d77d3",
-                    "sortorder": 1,
+                    "sortorder": 2,
                     "visible": true,
                     "widget_id": "10000000-0000-0000-0000-000000000004"
                 },
@@ -1138,6 +1278,21 @@
                     "widget_id": "10000000-0000-0000-0000-000000000009"
                 },
                 {
+                    "card_id": "10fca571-f2ec-4c06-bfd5-92606524ca40",
+                    "config": {
+                        "defaultValue": null,
+                        "label": "Approval Status"
+                    },
+                    "id": "79ae2bac-0ec2-437b-90a7-0f38d1db62e5",
+                    "label": {
+                        "en": "Approval Status"
+                    },
+                    "node_id": "07f5d26c-a886-11ed-a26e-5254004d77d3",
+                    "sortorder": 1,
+                    "visible": true,
+                    "widget_id": "10000000-0000-0000-0000-000000000006"
+                },
+                {
                     "card_id": "dbb0d366-a360-11ed-ae42-5254004d77d3",
                     "config": {
                         "defaultValue": {
@@ -1162,7 +1317,7 @@
                         "en": "FIA Report Recommendations"
                     },
                     "node_id": "4cbd87a4-a3cd-11ed-a29e-5254004d77d3",
-                    "sortorder": 5,
+                    "sortorder": 6,
                     "visible": true,
                     "widget_id": "10000000-0000-0000-0000-000000000005"
                 },
@@ -1250,7 +1405,7 @@
                         "en": "CFP Number"
                     },
                     "node_id": "6022016c-a346-11ed-b9c9-5254004d77d3",
-                    "sortorder": 2,
+                    "sortorder": 3,
                     "visible": true,
                     "widget_id": "10000000-0000-0000-0000-000000000001"
                 },
@@ -1388,7 +1543,7 @@
                         "en": "PSR Title"
                     },
                     "node_id": "e1e38138-a3cf-11ed-8a3d-5254004d77d3",
-                    "sortorder": 1,
+                    "sortorder": 2,
                     "visible": true,
                     "widget_id": "10000000-0000-0000-0000-000000000001"
                 },
@@ -1452,7 +1607,7 @@
                         "label": "Project Authorizing Agency",
                         "options": [],
                         "placeholder": {
-                            "en": "Select an option"
+                            "en": "Select Authorizing Agency"
                         }
                     },
                     "id": "cad73069-4ba0-4363-aad1-e3b4d7531780",
@@ -1486,53 +1641,6 @@
                     "widget_id": "31f3728c-7613-11e7-a139-784f435179ea"
                 },
                 {
-                    "card_id": "219de984-0354-481f-8829-da2e7011c9b1",
-                    "config": {
-                        "basemap": "streets",
-                        "bearing": 0,
-                        "centerX": -116.23706854628847,
-                        "centerY": 54.973052096207084,
-                        "defaultValue": "",
-                        "defaultValueType": "",
-                        "featureColor": "#FF0000",
-                        "featureLineWidth": 1,
-                        "featurePointSize": 3,
-                        "geocodePlaceholder": "Search",
-                        "geocodeProvider": "10000000-0000-0000-0000-010000000000",
-                        "geocoderVisible": true,
-                        "geometryTypes": [
-                            {
-                                "id": "Point",
-                                "text": "Point"
-                            },
-                            {
-                                "id": "Line",
-                                "text": "Line"
-                            },
-                            {
-                                "id": "Polygon",
-                                "text": "Polygon"
-                            }
-                        ],
-                        "label": "Spatial Location",
-                        "maxZoom": 20,
-                        "minZoom": 0,
-                        "overlayConfigs": [],
-                        "overlayOpacity": 0,
-                        "pitch": 0,
-                        "rerender": true,
-                        "zoom": 3.901411109502843
-                    },
-                    "id": "d5609a11-87a7-445a-8fd9-c831db2a3dd0",
-                    "label": {
-                        "en": "Spatial Location"
-                    },
-                    "node_id": "204cfc50-9e59-11ed-9252-5254004d77d3",
-                    "sortorder": 1,
-                    "visible": true,
-                    "widget_id": "10000000-0000-0000-0000-000000000007"
-                },
-                {
                     "card_id": "10fca571-f2ec-4c06-bfd5-92606524ca40",
                     "config": {
                         "acceptedFiles": "",
@@ -1562,7 +1670,7 @@
                         "en": "PSR File"
                     },
                     "node_id": "78147c0c-a3d0-11ed-afdd-5254004d77d3",
-                    "sortorder": 4,
+                    "sortorder": 5,
                     "visible": true,
                     "widget_id": "10000000-0000-0000-0000-000000000019"
                 },
@@ -1591,7 +1699,7 @@
                         "en": "FIA Report Title"
                     },
                     "node_id": "dbb0dfbe-a360-11ed-ae42-5254004d77d3",
-                    "sortorder": 1,
+                    "sortorder": 2,
                     "visible": true,
                     "widget_id": "10000000-0000-0000-0000-000000000001"
                 },
@@ -1608,7 +1716,7 @@
                         "en": "FIA Report"
                     },
                     "node_id": "dbb0e176-a360-11ed-ae42-5254004d77d3",
-                    "sortorder": 4,
+                    "sortorder": 5,
                     "visible": true,
                     "widget_id": "10000000-0000-0000-0000-000000000019"
                 },
@@ -1637,7 +1745,7 @@
                         "en": "FIA Report Number"
                     },
                     "node_id": "dbb0e450-a360-11ed-ae42-5254004d77d3",
-                    "sortorder": 2,
+                    "sortorder": 3,
                     "visible": true,
                     "widget_id": "10000000-0000-0000-0000-000000000001"
                 },
@@ -1658,7 +1766,7 @@
                         "en": "Lead Paleontology Consultant"
                     },
                     "node_id": "dbb0e608-a360-11ed-ae42-5254004d77d3",
-                    "sortorder": 0,
+                    "sortorder": 1,
                     "visible": true,
                     "widget_id": "31f3728c-7613-11e7-a139-784f435179ea"
                 },
@@ -1687,14 +1795,14 @@
                         "en": "Consultant Report Number"
                     },
                     "node_id": "dbb0e78e-a360-11ed-ae42-5254004d77d3",
-                    "sortorder": 3,
+                    "sortorder": 4,
                     "visible": true,
                     "widget_id": "10000000-0000-0000-0000-000000000001"
                 },
                 {
                     "card_id": "dbb0dc26-a360-11ed-ae42-5254004d77d3",
                     "config": {
-                        "defaultValue": false,
+                        "defaultValue": null,
                         "label": "Approval Status"
                     },
                     "id": "dbb0f60c-a360-11ed-ae42-5254004d77d3",
@@ -1837,7 +1945,7 @@
                         "en": "CFP Response"
                     },
                     "node_id": "388344de-a352-11ed-a8d8-5254004d77d3",
-                    "sortorder": 3,
+                    "sortorder": 4,
                     "visible": true,
                     "widget_id": "10000000-0000-0000-0000-000000000005"
                 },
@@ -1864,9 +1972,30 @@
                     "widget_id": "10000000-0000-0000-0000-000000000002"
                 },
                 {
+                    "card_id": "ff4fa404-a361-11ed-b0ab-5254004d77d3",
+                    "config": {
+                        "defaultResourceInstance": [],
+                        "i18n_properties": [
+                            "placeholder"
+                        ],
+                        "label": "Paleontology Company",
+                        "placeholder": {
+                            "en": ""
+                        }
+                    },
+                    "id": "ebd0e296-e59e-4f25-82e6-04e90ff1eac8",
+                    "label": {
+                        "en": "Paleontology Company"
+                    },
+                    "node_id": "e8c139e6-a884-11ed-ad8e-5254004d77d3",
+                    "sortorder": 0,
+                    "visible": true,
+                    "widget_id": "31f3728c-7613-11e7-a139-784f435179ea"
+                },
+                {
                     "card_id": "8a17d272-b08e-4fbc-acae-00054245095d",
                     "config": {
-                        "defaultValue": false,
+                        "defaultValue": null,
                         "label": "Approval Status"
                     },
                     "id": "eeb83d81-7a36-48fa-937b-7d2972825d16",
@@ -1903,7 +2032,7 @@
                         "en": "FIA Plan Report Title"
                     },
                     "node_id": "ff4fbaca-a361-11ed-b0ab-5254004d77d3",
-                    "sortorder": 2,
+                    "sortorder": 3,
                     "visible": true,
                     "widget_id": "10000000-0000-0000-0000-000000000001"
                 },
@@ -1920,7 +2049,7 @@
                         "en": "FIA Plan Report"
                     },
                     "node_id": "ff4fb944-a361-11ed-b0ab-5254004d77d3",
-                    "sortorder": 4,
+                    "sortorder": 5,
                     "visible": true,
                     "widget_id": "10000000-0000-0000-0000-000000000019"
                 },
@@ -1949,7 +2078,7 @@
                         "en": "FIA Plan Report Number"
                     },
                     "node_id": "ff4fb7c8-a361-11ed-b0ab-5254004d77d3",
-                    "sortorder": 1,
+                    "sortorder": 2,
                     "visible": true,
                     "widget_id": "10000000-0000-0000-0000-000000000001"
                 },
@@ -1970,7 +2099,7 @@
                         "en": "Lead Paleontology Consultant"
                     },
                     "node_id": "ff4fae72-a361-11ed-b0ab-5254004d77d3",
-                    "sortorder": 0,
+                    "sortorder": 1,
                     "visible": true,
                     "widget_id": "31f3728c-7613-11e7-a139-784f435179ea"
                 },
@@ -1999,14 +2128,14 @@
                         "en": "Consultant Report Number"
                     },
                     "node_id": "ff4fb642-a361-11ed-b0ab-5254004d77d3",
-                    "sortorder": 3,
+                    "sortorder": 4,
                     "visible": true,
                     "widget_id": "10000000-0000-0000-0000-000000000001"
                 },
                 {
                     "card_id": "ff4fa88c-a361-11ed-b0ab-5254004d77d3",
                     "config": {
-                        "defaultValue": false,
+                        "defaultValue": null,
                         "label": "Approval Status"
                     },
                     "id": "ff4fc326-a361-11ed-b0ab-5254004d77d3",
@@ -2156,6 +2285,15 @@
                 },
                 {
                     "description": null,
+                    "domainnode_id": "a0993e7a-a3cf-11ed-8a45-5254004d77d3",
+                    "edgeid": "1205c647-f93c-4728-bade-7686d6d8028c",
+                    "graph_id": "2aa724d1-ffd3-4823-8ff1-15a385b9a407",
+                    "name": null,
+                    "ontologyproperty": "http://www.ics.forth.gr/isl/CRMdig/L33_has_maker",
+                    "rangenode_id": "3c248dc8-a884-11ed-9606-5254004d77d3"
+                },
+                {
+                    "description": null,
                     "domainnode_id": "4df11356-9dcf-11ed-add1-5254004d77d3",
                     "edgeid": "133d87db-ac92-4d78-b6ad-2d4945a1bd79",
                     "graph_id": "2aa724d1-ffd3-4823-8ff1-15a385b9a407",
@@ -2273,6 +2411,15 @@
                 },
                 {
                     "description": null,
+                    "domainnode_id": "4df11356-9dcf-11ed-add1-5254004d77d3",
+                    "edgeid": "410eeef5-3955-468f-a586-a171ae89b93e",
+                    "graph_id": "2aa724d1-ffd3-4823-8ff1-15a385b9a407",
+                    "name": null,
+                    "ontologyproperty": "http://www.cidoc-crm.org/cidoc-crm/P115i_is_finished_by",
+                    "rangenode_id": "07f5d26c-a886-11ed-a26e-5254004d77d3"
+                },
+                {
+                    "description": null,
                     "domainnode_id": "e174be1e-a30d-11ed-a1af-5254004d77d3",
                     "edgeid": "4b4282ba-4ffd-451f-84c2-cb6239b9285a",
                     "graph_id": "2aa724d1-ffd3-4823-8ff1-15a385b9a407",
@@ -2327,6 +2474,15 @@
                 },
                 {
                     "description": null,
+                    "domainnode_id": "ff4fa0f8-a361-11ed-b0ab-5254004d77d3",
+                    "edgeid": "603d07bd-4548-439d-af40-11c70828847e",
+                    "graph_id": "2aa724d1-ffd3-4823-8ff1-15a385b9a407",
+                    "name": null,
+                    "ontologyproperty": "http://www.ics.forth.gr/isl/CRMdig/L33_has_maker",
+                    "rangenode_id": "e8c139e6-a884-11ed-ad8e-5254004d77d3"
+                },
+                {
+                    "description": null,
                     "domainnode_id": "416e539a-a357-11ed-932e-5254004d77d3",
                     "edgeid": "66309183-37b5-433e-aa61-5fdc34e381dc",
                     "graph_id": "2aa724d1-ffd3-4823-8ff1-15a385b9a407",
@@ -2336,12 +2492,12 @@
                 },
                 {
                     "description": null,
-                    "domainnode_id": "d4d462c2-9e58-11ed-b6d5-5254004d77d3",
-                    "edgeid": "764e5d2b-dbe4-4a76-9f00-8ba9118cbc53",
+                    "domainnode_id": "dbb0d0fa-a360-11ed-ae42-5254004d77d3",
+                    "edgeid": "740bbed5-bff3-4750-a8ae-796781000bf6",
                     "graph_id": "2aa724d1-ffd3-4823-8ff1-15a385b9a407",
                     "name": null,
-                    "ontologyproperty": "http://www.cidoc-crm.org/cidoc-crm/P168_place_is_defined_by",
-                    "rangenode_id": "204cfc50-9e59-11ed-9252-5254004d77d3"
+                    "ontologyproperty": "http://www.ics.forth.gr/isl/CRMdig/L33_has_maker",
+                    "rangenode_id": "aca03412-a884-11ed-9ea8-5254004d77d3"
                 },
                 {
                     "description": null,
@@ -2396,6 +2552,15 @@
                     "name": null,
                     "ontologyproperty": "http://www.cidoc-crm.org/cidoc-crm/P117_occurs_during",
                     "rangenode_id": "b9781ff0-a3d0-11ed-99ab-5254004d77d3"
+                },
+                {
+                    "description": null,
+                    "domainnode_id": "2bb08950-a880-11ed-95a4-5254004d77d3",
+                    "edgeid": "8bdf858e-58f8-4bbe-ac4f-5d893efc705e",
+                    "graph_id": "2aa724d1-ffd3-4823-8ff1-15a385b9a407",
+                    "name": null,
+                    "ontologyproperty": "http://www.cidoc-crm.org/cidoc-crm/P140i_was_attributed_by",
+                    "rangenode_id": "c09e49bc-a880-11ed-a26e-5254004d77d3"
                 },
                 {
                     "description": null,
@@ -2471,6 +2636,15 @@
                 },
                 {
                     "description": null,
+                    "domainnode_id": "2bb08950-a880-11ed-95a4-5254004d77d3",
+                    "edgeid": "a992bca9-f5b6-473b-a929-efdbf72b5141",
+                    "graph_id": "2aa724d1-ffd3-4823-8ff1-15a385b9a407",
+                    "name": null,
+                    "ontologyproperty": "http://www.cidoc-crm.org/cidoc-crm/P140i_was_attributed_by",
+                    "rangenode_id": "b1f3dc32-a881-11ed-ba42-5254004d77d3"
+                },
+                {
+                    "description": null,
                     "domainnode_id": "416e539a-a357-11ed-932e-5254004d77d3",
                     "edgeid": "adc07b0d-4533-4c11-8421-6bc49c41313a",
                     "graph_id": "2aa724d1-ffd3-4823-8ff1-15a385b9a407",
@@ -2495,6 +2669,15 @@
                     "name": null,
                     "ontologyproperty": "http://www.ics.forth.gr/isl/CRMdig/L33_has_maker",
                     "rangenode_id": "01c483da-a3d0-11ed-8919-5254004d77d3"
+                },
+                {
+                    "description": null,
+                    "domainnode_id": "d4d462c2-9e58-11ed-b6d5-5254004d77d3",
+                    "edgeid": "b71bdea6-6fa9-4a7a-99e7-59befa9a240b",
+                    "graph_id": "2aa724d1-ffd3-4823-8ff1-15a385b9a407",
+                    "name": null,
+                    "ontologyproperty": "http://www.cidoc-crm.org/cidoc-crm/P87_is_identified_by",
+                    "rangenode_id": "2bb08950-a880-11ed-95a4-5254004d77d3"
                 },
                 {
                     "description": null,
@@ -2929,8 +3112,72 @@
                                 "name": "Paleontology Consultant"
                             }
                         ],
-                        "searchDsl": "",
-                        "searchString": ""
+                        "searchDsl": {
+                            "bool": {
+                                "filter": [
+                                    {
+                                        "terms": {
+                                            "graph_id": [
+                                                "605b0bbc-8661-4cf2-b340-df743a8c5f89"
+                                            ]
+                                        }
+                                    }
+                                ],
+                                "must": [
+                                    {
+                                        "bool": {
+                                            "filter": [],
+                                            "minimum_should_match": 1,
+                                            "must": [],
+                                            "must_not": [],
+                                            "should": [
+                                                {
+                                                    "bool": {
+                                                        "filter": [],
+                                                        "must": [
+                                                            {
+                                                                "nested": {
+                                                                    "path": "tiles",
+                                                                    "query": {
+                                                                        "bool": {
+                                                                            "filter": [],
+                                                                            "must": [
+                                                                                {
+                                                                                    "match_phrase": {
+                                                                                        "tiles.data.c4eca2de-9dea-11ed-9a7b-5254004d77d3": {
+                                                                                            "query": "5fe283e7-3ecf-46d2-adff-a82a30447d43"
+                                                                                        }
+                                                                                    }
+                                                                                }
+                                                                            ],
+                                                                            "must_not": [],
+                                                                            "should": []
+                                                                        }
+                                                                    }
+                                                                }
+                                                            },
+                                                            {
+                                                                "bool": {
+                                                                    "filter": [],
+                                                                    "must": [],
+                                                                    "must_not": [],
+                                                                    "should": []
+                                                                }
+                                                            }
+                                                        ],
+                                                        "must_not": [],
+                                                        "should": []
+                                                    }
+                                                }
+                                            ]
+                                        }
+                                    }
+                                ],
+                                "must_not": [],
+                                "should": []
+                            }
+                        },
+                        "searchString": "http://arches7.local/int/arches-fossils/search?paging-filter=1&tiles=true&format=tilecsv&reportlink=false&precision=6&total=0&resource-type-filter=%5B%7B%22graphid%22%3A%22605b0bbc-8661-4cf2-b340-df743a8c5f89%22%2C%22name%22%3A%22Paleontology+Consultant%22%2C%22inverted%22%3Afalse%7D%5D&sort-results=asc&advanced-search=%5B%7B%22op%22%3A%22and%22%2C%221270a190-a499-11ed-ae76-5254004d77d3%22%3A%7B%22op%22%3A%22~%22%2C%22lang%22%3A%22en%22%2C%22val%22%3A%22%22%7D%2C%2299643f1e-9e4e-11ed-b6d5-5254004d77d3%22%3A%7B%22val%22%3A%22%22%7D%2C%22c4eca2de-9dea-11ed-9a7b-5254004d77d3%22%3A%7B%22op%22%3A%22%22%2C%22val%22%3A%225fe283e7-3ecf-46d2-adff-a82a30447d43%22%7D%2C%22c4eca478-9dea-11ed-9a7b-5254004d77d3%22%3A%7B%22op%22%3A%22~%22%2C%22lang%22%3A%22en%22%2C%22val%22%3A%22%22%7D%7D%5D"
                     },
                     "datatype": "resource-instance",
                     "description": null,
@@ -2969,6 +3216,37 @@
                     "nodeid": "072aab9a-a341-11ed-8c6b-5254004d77d3",
                     "ontologyclass": "http://www.cidoc-crm.org/cidoc-crm/E7_Activity",
                     "parentproperty": "http://www.cidoc-crm.org/cidoc-crm/P9_consists_of",
+                    "sortorder": 0
+                },
+                {
+                    "alias": "approval_status",
+                    "config": {
+                        "falseLabel": {
+                            "en": "Requires Changes"
+                        },
+                        "i18n_properties": [
+                            "trueLabel",
+                            "falseLabel"
+                        ],
+                        "trueLabel": {
+                            "en": "Acccepted"
+                        }
+                    },
+                    "datatype": "boolean",
+                    "description": null,
+                    "exportable": false,
+                    "fieldname": null,
+                    "graph_id": "2aa724d1-ffd3-4823-8ff1-15a385b9a407",
+                    "hascustomalias": false,
+                    "is_collector": false,
+                    "isrequired": false,
+                    "issearchable": true,
+                    "istopnode": false,
+                    "name": "Approval Status",
+                    "nodegroup_id": "4df11356-9dcf-11ed-add1-5254004d77d3",
+                    "nodeid": "07f5d26c-a886-11ed-a26e-5254004d77d3",
+                    "ontologyclass": "http://www.cidoc-crm.org/cidoc-crm/E3_Condition_State",
+                    "parentproperty": "http://www.cidoc-crm.org/cidoc-crm/P115i_is_finished_by",
                     "sortorder": 0
                 },
                 {
@@ -3069,49 +3347,6 @@
                     "sortorder": 0
                 },
                 {
-                    "alias": "spatial_location",
-                    "config": {
-                        "addToMap": false,
-                        "advancedStyle": "",
-                        "advancedStyling": false,
-                        "clusterDistance": 20,
-                        "clusterMaxZoom": 5,
-                        "clusterMinPoints": 3,
-                        "fillColor": "rgba(130, 130, 130, 0.5)",
-                        "haloRadius": 4,
-                        "haloWeight": 4,
-                        "layerActivated": true,
-                        "layerIcon": "",
-                        "layerLegend": "",
-                        "layerName": "",
-                        "lineColor": "rgba(130, 130, 130, 0.7)",
-                        "lineHaloColor": "rgba(200, 200, 200, 0.5)",
-                        "outlineColor": "rgba(200, 200, 200, 0.7)",
-                        "outlineWeight": 2,
-                        "pointColor": "rgba(130, 130, 130, 0.7)",
-                        "pointHaloColor": "rgba(200, 200, 200, 0.5)",
-                        "radius": 2,
-                        "simplification": 0.3,
-                        "weight": 2
-                    },
-                    "datatype": "geojson-feature-collection",
-                    "description": null,
-                    "exportable": false,
-                    "fieldname": null,
-                    "graph_id": "2aa724d1-ffd3-4823-8ff1-15a385b9a407",
-                    "hascustomalias": false,
-                    "is_collector": false,
-                    "isrequired": false,
-                    "issearchable": true,
-                    "istopnode": false,
-                    "name": "Spatial Location",
-                    "nodegroup_id": "d4d462c2-9e58-11ed-b6d5-5254004d77d3",
-                    "nodeid": "204cfc50-9e59-11ed-9252-5254004d77d3",
-                    "ontologyclass": "http://www.cidoc-crm.org/cidoc-crm/E94_Space_Primitive",
-                    "parentproperty": "http://www.cidoc-crm.org/cidoc-crm/P168_place_is_defined_by",
-                    "sortorder": 0
-                },
-                {
                     "alias": "land_act_file_number",
                     "config": {
                         "en": ""
@@ -3156,6 +3391,49 @@
                     "sortorder": 0
                 },
                 {
+                    "alias": "spatial_location",
+                    "config": {
+                        "addToMap": false,
+                        "advancedStyle": "",
+                        "advancedStyling": false,
+                        "clusterDistance": 20,
+                        "clusterMaxZoom": 5,
+                        "clusterMinPoints": 3,
+                        "fillColor": "rgba(130, 130, 130, 0.5)",
+                        "haloRadius": 4,
+                        "haloWeight": 4,
+                        "layerActivated": true,
+                        "layerIcon": "",
+                        "layerLegend": "",
+                        "layerName": "",
+                        "lineColor": "rgba(130, 130, 130, 0.7)",
+                        "lineHaloColor": "rgba(200, 200, 200, 0.5)",
+                        "outlineColor": "rgba(200, 200, 200, 0.7)",
+                        "outlineWeight": 2,
+                        "pointColor": "rgba(130, 130, 130, 0.7)",
+                        "pointHaloColor": "rgba(200, 200, 200, 0.5)",
+                        "radius": 2,
+                        "simplification": 0.3,
+                        "weight": 2
+                    },
+                    "datatype": "geojson-feature-collection",
+                    "description": null,
+                    "exportable": false,
+                    "fieldname": null,
+                    "graph_id": "2aa724d1-ffd3-4823-8ff1-15a385b9a407",
+                    "hascustomalias": false,
+                    "is_collector": false,
+                    "isrequired": false,
+                    "issearchable": true,
+                    "istopnode": false,
+                    "name": "Spatial Location",
+                    "nodegroup_id": "d4d462c2-9e58-11ed-b6d5-5254004d77d3",
+                    "nodeid": "2bb08950-a880-11ed-95a4-5254004d77d3",
+                    "ontologyclass": "http://www.cidoc-crm.org/cidoc-crm/E47_Spatial_Coordinates",
+                    "parentproperty": "http://www.cidoc-crm.org/cidoc-crm/P87_is_identified_by",
+                    "sortorder": 0
+                },
+                {
                     "alias": "fiap_report_recommendation",
                     "config": {
                         "en": ""
@@ -3197,6 +3475,100 @@
                     "nodeid": "388344de-a352-11ed-a8d8-5254004d77d3",
                     "ontologyclass": "http://www.cidoc-crm.org/cidoc-crm/E73_Information_Object",
                     "parentproperty": "http://www.cidoc-crm.org/cidoc-crm/P129i_is_subject_of",
+                    "sortorder": 0
+                },
+                {
+                    "alias": "psr_paleo_company",
+                    "config": {
+                        "graphs": [
+                            {
+                                "graphid": "605b0bbc-8661-4cf2-b340-df743a8c5f89",
+                                "name": "Paleontology Consultant"
+                            }
+                        ],
+                        "rdmCollection": null,
+                        "searchDsl": {
+                            "bool": {
+                                "filter": [
+                                    {
+                                        "terms": {
+                                            "graph_id": [
+                                                "605b0bbc-8661-4cf2-b340-df743a8c5f89"
+                                            ]
+                                        }
+                                    }
+                                ],
+                                "must": [
+                                    {
+                                        "bool": {
+                                            "filter": [],
+                                            "minimum_should_match": 1,
+                                            "must": [],
+                                            "must_not": [],
+                                            "should": [
+                                                {
+                                                    "bool": {
+                                                        "filter": [],
+                                                        "must": [
+                                                            {
+                                                                "nested": {
+                                                                    "path": "tiles",
+                                                                    "query": {
+                                                                        "bool": {
+                                                                            "filter": [],
+                                                                            "must": [
+                                                                                {
+                                                                                    "match_phrase": {
+                                                                                        "tiles.data.c4eca2de-9dea-11ed-9a7b-5254004d77d3": {
+                                                                                            "query": "e699a62e-59d7-4931-84c9-3526a8260717"
+                                                                                        }
+                                                                                    }
+                                                                                }
+                                                                            ],
+                                                                            "must_not": [],
+                                                                            "should": []
+                                                                        }
+                                                                    }
+                                                                }
+                                                            },
+                                                            {
+                                                                "bool": {
+                                                                    "filter": [],
+                                                                    "must": [],
+                                                                    "must_not": [],
+                                                                    "should": []
+                                                                }
+                                                            }
+                                                        ],
+                                                        "must_not": [],
+                                                        "should": []
+                                                    }
+                                                }
+                                            ]
+                                        }
+                                    }
+                                ],
+                                "must_not": [],
+                                "should": []
+                            }
+                        },
+                        "searchString": "http://arches7.local/int/arches-fossils/search?paging-filter=1&tiles=true&format=tilecsv&reportlink=false&precision=6&total=8&resource-type-filter=%5B%7B%22graphid%22%3A%22605b0bbc-8661-4cf2-b340-df743a8c5f89%22%2C%22name%22%3A%22Paleontology+Consultant%22%2C%22inverted%22%3Afalse%7D%5D&sort-results=asc&advanced-search=%5B%7B%22op%22%3A%22and%22%2C%221270a190-a499-11ed-ae76-5254004d77d3%22%3A%7B%22op%22%3A%22~%22%2C%22lang%22%3A%22en%22%2C%22val%22%3A%22%22%7D%2C%2299643f1e-9e4e-11ed-b6d5-5254004d77d3%22%3A%7B%22val%22%3A%22%22%7D%2C%22c4eca2de-9dea-11ed-9a7b-5254004d77d3%22%3A%7B%22op%22%3A%22%22%2C%22val%22%3A%22e699a62e-59d7-4931-84c9-3526a8260717%22%7D%2C%22c4eca478-9dea-11ed-9a7b-5254004d77d3%22%3A%7B%22op%22%3A%22~%22%2C%22lang%22%3A%22en%22%2C%22val%22%3A%22%22%7D%7D%5D"
+                    },
+                    "datatype": "resource-instance",
+                    "description": null,
+                    "exportable": false,
+                    "fieldname": null,
+                    "graph_id": "2aa724d1-ffd3-4823-8ff1-15a385b9a407",
+                    "hascustomalias": false,
+                    "is_collector": false,
+                    "isrequired": false,
+                    "issearchable": true,
+                    "istopnode": false,
+                    "name": "PSR Paleo Company",
+                    "nodegroup_id": "a0993e7a-a3cf-11ed-8a45-5254004d77d3",
+                    "nodeid": "3c248dc8-a884-11ed-9606-5254004d77d3",
+                    "ontologyclass": "http://www.cidoc-crm.org/cidoc-crm/E39_Actor",
+                    "parentproperty": "http://www.ics.forth.gr/isl/CRMdig/L33_has_maker",
                     "sortorder": 0
                 },
                 {
@@ -3821,17 +4193,110 @@
                     "sortorder": 0
                 },
                 {
+                    "alias": "fia_paleo_company",
+                    "config": {
+                        "graphs": [
+                            {
+                                "graphid": "605b0bbc-8661-4cf2-b340-df743a8c5f89",
+                                "name": "Paleontology Consultant"
+                            }
+                        ],
+                        "searchDsl": {
+                            "bool": {
+                                "filter": [
+                                    {
+                                        "terms": {
+                                            "graph_id": [
+                                                "605b0bbc-8661-4cf2-b340-df743a8c5f89"
+                                            ]
+                                        }
+                                    }
+                                ],
+                                "must": [
+                                    {
+                                        "bool": {
+                                            "filter": [],
+                                            "minimum_should_match": 1,
+                                            "must": [],
+                                            "must_not": [],
+                                            "should": [
+                                                {
+                                                    "bool": {
+                                                        "filter": [],
+                                                        "must": [
+                                                            {
+                                                                "nested": {
+                                                                    "path": "tiles",
+                                                                    "query": {
+                                                                        "bool": {
+                                                                            "filter": [],
+                                                                            "must": [
+                                                                                {
+                                                                                    "match_phrase": {
+                                                                                        "tiles.data.c4eca2de-9dea-11ed-9a7b-5254004d77d3": {
+                                                                                            "query": "e699a62e-59d7-4931-84c9-3526a8260717"
+                                                                                        }
+                                                                                    }
+                                                                                }
+                                                                            ],
+                                                                            "must_not": [],
+                                                                            "should": []
+                                                                        }
+                                                                    }
+                                                                }
+                                                            },
+                                                            {
+                                                                "bool": {
+                                                                    "filter": [],
+                                                                    "must": [],
+                                                                    "must_not": [],
+                                                                    "should": []
+                                                                }
+                                                            }
+                                                        ],
+                                                        "must_not": [],
+                                                        "should": []
+                                                    }
+                                                }
+                                            ]
+                                        }
+                                    }
+                                ],
+                                "must_not": [],
+                                "should": []
+                            }
+                        },
+                        "searchString": "http://arches7.local/int/arches-fossils/search?paging-filter=1&tiles=true&format=tilecsv&reportlink=false&precision=6&total=8&resource-type-filter=%5B%7B%22graphid%22%3A%22605b0bbc-8661-4cf2-b340-df743a8c5f89%22%2C%22name%22%3A%22Paleontology+Consultant%22%2C%22inverted%22%3Afalse%7D%5D&sort-results=asc&advanced-search=%5B%7B%22op%22%3A%22and%22%2C%221270a190-a499-11ed-ae76-5254004d77d3%22%3A%7B%22op%22%3A%22~%22%2C%22lang%22%3A%22en%22%2C%22val%22%3A%22%22%7D%2C%2299643f1e-9e4e-11ed-b6d5-5254004d77d3%22%3A%7B%22val%22%3A%22%22%7D%2C%22c4eca2de-9dea-11ed-9a7b-5254004d77d3%22%3A%7B%22op%22%3A%22%22%2C%22val%22%3A%22e699a62e-59d7-4931-84c9-3526a8260717%22%7D%2C%22c4eca478-9dea-11ed-9a7b-5254004d77d3%22%3A%7B%22op%22%3A%22~%22%2C%22lang%22%3A%22en%22%2C%22val%22%3A%22%22%7D%7D%5D"
+                    },
+                    "datatype": "resource-instance",
+                    "description": null,
+                    "exportable": false,
+                    "fieldname": null,
+                    "graph_id": "2aa724d1-ffd3-4823-8ff1-15a385b9a407",
+                    "hascustomalias": false,
+                    "is_collector": false,
+                    "isrequired": false,
+                    "issearchable": true,
+                    "istopnode": false,
+                    "name": "FIA Paleo Company",
+                    "nodegroup_id": "dbb0d0fa-a360-11ed-ae42-5254004d77d3",
+                    "nodeid": "aca03412-a884-11ed-9ea8-5254004d77d3",
+                    "ontologyclass": "http://www.cidoc-crm.org/cidoc-crm/E39_Actor",
+                    "parentproperty": "http://www.ics.forth.gr/isl/CRMdig/L33_has_maker",
+                    "sortorder": 0
+                },
+                {
                     "alias": "psr_fmo_approval_status",
                     "config": {
                         "falseLabel": {
-                            "en": "Unapproved"
+                            "en": "Requires Changes"
                         },
                         "i18n_properties": [
                             "trueLabel",
                             "falseLabel"
                         ],
                         "trueLabel": {
-                            "en": "Approved"
+                            "en": "Accepted"
                         }
                     },
                     "datatype": "boolean",
@@ -3871,6 +4336,28 @@
                     "nodeid": "b1efd6e6-a354-11ed-8c6b-5254004d77d3",
                     "ontologyclass": "http://www.cidoc-crm.org/cidoc-crm/E39_Actor",
                     "parentproperty": "http://www.cidoc-crm.org/cidoc-crm/P11_had_participant",
+                    "sortorder": 0
+                },
+                {
+                    "alias": "geometry_qualifier",
+                    "config": {
+                        "rdmCollection": "85fd6ca4-9539-4784-8889-09c794878bfb"
+                    },
+                    "datatype": "concept",
+                    "description": "If only one geometry is drawn, qualify the meaning of the geometry.",
+                    "exportable": false,
+                    "fieldname": null,
+                    "graph_id": "2aa724d1-ffd3-4823-8ff1-15a385b9a407",
+                    "hascustomalias": false,
+                    "is_collector": false,
+                    "isrequired": false,
+                    "issearchable": true,
+                    "istopnode": false,
+                    "name": "Geometry Qualifier",
+                    "nodegroup_id": "d4d462c2-9e58-11ed-b6d5-5254004d77d3",
+                    "nodeid": "b1f3dc32-a881-11ed-ba42-5254004d77d3",
+                    "ontologyclass": "http://www.cidoc-crm.org/cidoc-crm/E13_Attribute_Assignment",
+                    "parentproperty": "http://www.cidoc-crm.org/cidoc-crm/P140i_was_attributed_by",
                     "sortorder": 0
                 },
                 {
@@ -3915,6 +4402,28 @@
                     "nodeid": "b9781ff0-a3d0-11ed-99ab-5254004d77d3",
                     "ontologyclass": "http://www.cidoc-crm.org/cidoc-crm/E7_Activity",
                     "parentproperty": "http://www.cidoc-crm.org/cidoc-crm/P117_occurs_during",
+                    "sortorder": 0
+                },
+                {
+                    "alias": "multiple_geometry_qualifier",
+                    "config": {
+                        "en": ""
+                    },
+                    "datatype": "string",
+                    "description": "If more than one geometry is created, this can be used to qualify each of the geometries. This is an interim solution until geometry qualifiers can be assigned to each spatial feature drawn.",
+                    "exportable": false,
+                    "fieldname": null,
+                    "graph_id": "2aa724d1-ffd3-4823-8ff1-15a385b9a407",
+                    "hascustomalias": false,
+                    "is_collector": false,
+                    "isrequired": false,
+                    "issearchable": true,
+                    "istopnode": false,
+                    "name": "Multiple Geometry Qualifier",
+                    "nodegroup_id": "d4d462c2-9e58-11ed-b6d5-5254004d77d3",
+                    "nodeid": "c09e49bc-a880-11ed-a26e-5254004d77d3",
+                    "ontologyclass": "http://www.cidoc-crm.org/cidoc-crm/E13_Attribute_Assignment",
+                    "parentproperty": "http://www.cidoc-crm.org/cidoc-crm/P140i_was_attributed_by",
                     "sortorder": 0
                 },
                 {
@@ -4118,7 +4627,7 @@
                     "sortorder": 0
                 },
                 {
-                    "alias": "fia_paleo_consultant_n1",
+                    "alias": "fia_paleo_consultant",
                     "config": {
                         "graphs": [
                             {
@@ -4126,8 +4635,72 @@
                                 "name": "Paleontology Consultant"
                             }
                         ],
-                        "searchDsl": "",
-                        "searchString": ""
+                        "searchDsl": {
+                            "bool": {
+                                "filter": [
+                                    {
+                                        "terms": {
+                                            "graph_id": [
+                                                "605b0bbc-8661-4cf2-b340-df743a8c5f89"
+                                            ]
+                                        }
+                                    }
+                                ],
+                                "must": [
+                                    {
+                                        "bool": {
+                                            "filter": [],
+                                            "minimum_should_match": 1,
+                                            "must": [],
+                                            "must_not": [],
+                                            "should": [
+                                                {
+                                                    "bool": {
+                                                        "filter": [],
+                                                        "must": [
+                                                            {
+                                                                "nested": {
+                                                                    "path": "tiles",
+                                                                    "query": {
+                                                                        "bool": {
+                                                                            "filter": [],
+                                                                            "must": [
+                                                                                {
+                                                                                    "match_phrase": {
+                                                                                        "tiles.data.c4eca2de-9dea-11ed-9a7b-5254004d77d3": {
+                                                                                            "query": "5fe283e7-3ecf-46d2-adff-a82a30447d43"
+                                                                                        }
+                                                                                    }
+                                                                                }
+                                                                            ],
+                                                                            "must_not": [],
+                                                                            "should": []
+                                                                        }
+                                                                    }
+                                                                }
+                                                            },
+                                                            {
+                                                                "bool": {
+                                                                    "filter": [],
+                                                                    "must": [],
+                                                                    "must_not": [],
+                                                                    "should": []
+                                                                }
+                                                            }
+                                                        ],
+                                                        "must_not": [],
+                                                        "should": []
+                                                    }
+                                                }
+                                            ]
+                                        }
+                                    }
+                                ],
+                                "must_not": [],
+                                "should": []
+                            }
+                        },
+                        "searchString": "http://arches7.local/int/arches-fossils/search?paging-filter=1&tiles=true&format=tilecsv&reportlink=false&precision=6&total=6&resource-type-filter=%5B%7B%22graphid%22%3A%22605b0bbc-8661-4cf2-b340-df743a8c5f89%22%2C%22name%22%3A%22Paleontology+Consultant%22%2C%22inverted%22%3Afalse%7D%5D&sort-results=asc&advanced-search=%5B%7B%22op%22%3A%22and%22%2C%221270a190-a499-11ed-ae76-5254004d77d3%22%3A%7B%22op%22%3A%22~%22%2C%22lang%22%3A%22en%22%2C%22val%22%3A%22%22%7D%2C%2299643f1e-9e4e-11ed-b6d5-5254004d77d3%22%3A%7B%22val%22%3A%22%22%7D%2C%22c4eca2de-9dea-11ed-9a7b-5254004d77d3%22%3A%7B%22op%22%3A%22%22%2C%22val%22%3A%225fe283e7-3ecf-46d2-adff-a82a30447d43%22%7D%2C%22c4eca478-9dea-11ed-9a7b-5254004d77d3%22%3A%7B%22op%22%3A%22~%22%2C%22lang%22%3A%22en%22%2C%22val%22%3A%22%22%7D%7D%5D"
                     },
                     "datatype": "resource-instance",
                     "description": null,
@@ -4238,14 +4811,14 @@
                     "alias": "fia_fmo_approval_status",
                     "config": {
                         "falseLabel": {
-                            "en": "Unapproved"
+                            "en": "Requires Changes"
                         },
                         "i18n_properties": [
                             "trueLabel",
                             "falseLabel"
                         ],
                         "trueLabel": {
-                            "en": "Approved"
+                            "en": "Accepted"
                         }
                     },
                     "datatype": "boolean",
@@ -4351,6 +4924,99 @@
                     "nodeid": "e2b5df44-9dc5-11ed-9ef3-5254004d77d3",
                     "ontologyclass": "http://www.cidoc-crm.org/cidoc-crm/E63_Beginning_of_Existence",
                     "parentproperty": "http://www.cidoc-crm.org/cidoc-crm/P116_starts",
+                    "sortorder": 0
+                },
+                {
+                    "alias": "fiap_paleo_company",
+                    "config": {
+                        "graphs": [
+                            {
+                                "graphid": "605b0bbc-8661-4cf2-b340-df743a8c5f89",
+                                "name": "Paleontology Consultant"
+                            }
+                        ],
+                        "searchDsl": {
+                            "bool": {
+                                "filter": [
+                                    {
+                                        "terms": {
+                                            "graph_id": [
+                                                "605b0bbc-8661-4cf2-b340-df743a8c5f89"
+                                            ]
+                                        }
+                                    }
+                                ],
+                                "must": [
+                                    {
+                                        "bool": {
+                                            "filter": [],
+                                            "minimum_should_match": 1,
+                                            "must": [],
+                                            "must_not": [],
+                                            "should": [
+                                                {
+                                                    "bool": {
+                                                        "filter": [],
+                                                        "must": [
+                                                            {
+                                                                "nested": {
+                                                                    "path": "tiles",
+                                                                    "query": {
+                                                                        "bool": {
+                                                                            "filter": [],
+                                                                            "must": [
+                                                                                {
+                                                                                    "match_phrase": {
+                                                                                        "tiles.data.c4eca2de-9dea-11ed-9a7b-5254004d77d3": {
+                                                                                            "query": "e699a62e-59d7-4931-84c9-3526a8260717"
+                                                                                        }
+                                                                                    }
+                                                                                }
+                                                                            ],
+                                                                            "must_not": [],
+                                                                            "should": []
+                                                                        }
+                                                                    }
+                                                                }
+                                                            },
+                                                            {
+                                                                "bool": {
+                                                                    "filter": [],
+                                                                    "must": [],
+                                                                    "must_not": [],
+                                                                    "should": []
+                                                                }
+                                                            }
+                                                        ],
+                                                        "must_not": [],
+                                                        "should": []
+                                                    }
+                                                }
+                                            ]
+                                        }
+                                    }
+                                ],
+                                "must_not": [],
+                                "should": []
+                            }
+                        },
+                        "searchString": "http://arches7.local/int/arches-fossils/search?paging-filter=1&tiles=true&format=tilecsv&reportlink=false&precision=6&total=8&resource-type-filter=%5B%7B%22graphid%22%3A%22605b0bbc-8661-4cf2-b340-df743a8c5f89%22%2C%22name%22%3A%22Paleontology+Consultant%22%2C%22inverted%22%3Afalse%7D%5D&sort-results=asc&advanced-search=%5B%7B%22op%22%3A%22and%22%2C%221270a190-a499-11ed-ae76-5254004d77d3%22%3A%7B%22op%22%3A%22~%22%2C%22lang%22%3A%22en%22%2C%22val%22%3A%22%22%7D%2C%2299643f1e-9e4e-11ed-b6d5-5254004d77d3%22%3A%7B%22val%22%3A%22%22%7D%2C%22c4eca2de-9dea-11ed-9a7b-5254004d77d3%22%3A%7B%22op%22%3A%22%22%2C%22val%22%3A%22e699a62e-59d7-4931-84c9-3526a8260717%22%7D%2C%22c4eca478-9dea-11ed-9a7b-5254004d77d3%22%3A%7B%22op%22%3A%22~%22%2C%22lang%22%3A%22en%22%2C%22val%22%3A%22%22%7D%7D%5D"
+                    },
+                    "datatype": "resource-instance",
+                    "description": null,
+                    "exportable": false,
+                    "fieldname": null,
+                    "graph_id": "2aa724d1-ffd3-4823-8ff1-15a385b9a407",
+                    "hascustomalias": false,
+                    "is_collector": false,
+                    "isrequired": false,
+                    "issearchable": true,
+                    "istopnode": false,
+                    "name": "FIAP Paleo Company",
+                    "nodegroup_id": "ff4fa0f8-a361-11ed-b0ab-5254004d77d3",
+                    "nodeid": "e8c139e6-a884-11ed-ad8e-5254004d77d3",
+                    "ontologyclass": "http://www.cidoc-crm.org/cidoc-crm/E39_Actor",
+                    "parentproperty": "http://www.ics.forth.gr/isl/CRMdig/L33_has_maker",
                     "sortorder": 0
                 },
                 {
@@ -4545,8 +5211,72 @@
                                 "name": "Paleontology Consultant"
                             }
                         ],
-                        "searchDsl": "",
-                        "searchString": ""
+                        "searchDsl": {
+                            "bool": {
+                                "filter": [
+                                    {
+                                        "terms": {
+                                            "graph_id": [
+                                                "605b0bbc-8661-4cf2-b340-df743a8c5f89"
+                                            ]
+                                        }
+                                    }
+                                ],
+                                "must": [
+                                    {
+                                        "bool": {
+                                            "filter": [],
+                                            "minimum_should_match": 1,
+                                            "must": [],
+                                            "must_not": [],
+                                            "should": [
+                                                {
+                                                    "bool": {
+                                                        "filter": [],
+                                                        "must": [
+                                                            {
+                                                                "nested": {
+                                                                    "path": "tiles",
+                                                                    "query": {
+                                                                        "bool": {
+                                                                            "filter": [],
+                                                                            "must": [
+                                                                                {
+                                                                                    "match_phrase": {
+                                                                                        "tiles.data.c4eca2de-9dea-11ed-9a7b-5254004d77d3": {
+                                                                                            "query": "5fe283e7-3ecf-46d2-adff-a82a30447d43"
+                                                                                        }
+                                                                                    }
+                                                                                }
+                                                                            ],
+                                                                            "must_not": [],
+                                                                            "should": []
+                                                                        }
+                                                                    }
+                                                                }
+                                                            },
+                                                            {
+                                                                "bool": {
+                                                                    "filter": [],
+                                                                    "must": [],
+                                                                    "must_not": [],
+                                                                    "should": []
+                                                                }
+                                                            }
+                                                        ],
+                                                        "must_not": [],
+                                                        "should": []
+                                                    }
+                                                }
+                                            ]
+                                        }
+                                    }
+                                ],
+                                "must_not": [],
+                                "should": []
+                            }
+                        },
+                        "searchString": "http://arches7.local/int/arches-fossils/search?paging-filter=1&tiles=true&format=tilecsv&reportlink=false&precision=6&total=6&resource-type-filter=%5B%7B%22graphid%22%3A%22605b0bbc-8661-4cf2-b340-df743a8c5f89%22%2C%22name%22%3A%22Paleontology+Consultant%22%2C%22inverted%22%3Afalse%7D%5D&sort-results=asc&advanced-search=%5B%7B%22op%22%3A%22and%22%2C%221270a190-a499-11ed-ae76-5254004d77d3%22%3A%7B%22op%22%3A%22~%22%2C%22lang%22%3A%22en%22%2C%22val%22%3A%22%22%7D%2C%2299643f1e-9e4e-11ed-b6d5-5254004d77d3%22%3A%7B%22val%22%3A%22%22%7D%2C%22c4eca2de-9dea-11ed-9a7b-5254004d77d3%22%3A%7B%22op%22%3A%22%22%2C%22val%22%3A%225fe283e7-3ecf-46d2-adff-a82a30447d43%22%7D%2C%22c4eca478-9dea-11ed-9a7b-5254004d77d3%22%3A%7B%22op%22%3A%22~%22%2C%22lang%22%3A%22en%22%2C%22val%22%3A%22%22%7D%7D%5D"
                     },
                     "datatype": "resource-instance",
                     "description": null,
@@ -4569,14 +5299,14 @@
                     "alias": "fiap_fmo_approval_status",
                     "config": {
                         "falseLabel": {
-                            "en": "Unapproved"
+                            "en": "Requires Changes"
                         },
                         "i18n_properties": [
                             "trueLabel",
                             "falseLabel"
                         ],
                         "trueLabel": {
-                            "en": "Approved"
+                            "en": "Accepted"
                         }
                     },
                     "datatype": "boolean",
@@ -4735,8 +5465,8 @@
             "publication": {
                 "graph_id": "2aa724d1-ffd3-4823-8ff1-15a385b9a407",
                 "notes": null,
-                "publicationid": "788be3c4-a3d4-11ed-8020-5254004d77d3",
-                "published_time": "2023-02-03T09:07:26.918",
+                "publicationid": "36874a24-a887-11ed-bef8-5254004d77d3",
+                "published_time": "2023-02-09T08:37:00.724",
                 "user_id": 1
             },
             "relatable_resource_model_ids": [

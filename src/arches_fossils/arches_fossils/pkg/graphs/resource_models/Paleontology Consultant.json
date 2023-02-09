@@ -22,7 +22,7 @@
                     "instructions": {
                         "en": ""
                     },
-                    "is_editable": false,
+                    "is_editable": true,
                     "name": {
                         "en": "Person"
                     },
@@ -49,7 +49,7 @@
                     "instructions": {
                         "en": ""
                     },
-                    "is_editable": false,
+                    "is_editable": true,
                     "name": {
                         "en": "Company Name"
                     },
@@ -83,7 +83,7 @@
                     "instructions": {
                         "en": ""
                     },
-                    "is_editable": false,
+                    "is_editable": true,
                     "name": {
                         "en": "Consultant"
                     },
@@ -110,7 +110,7 @@
                         "en": "Associated Company"
                     },
                     "node_id": "87249e6a-9deb-11ed-81b6-5254004d77d3",
-                    "sortorder": 6,
+                    "sortorder": 4,
                     "visible": true,
                     "widget_id": "31f3728c-7613-11e7-a139-784f435179ea"
                 },
@@ -130,7 +130,7 @@
                         "en": "Start Date"
                     },
                     "node_id": "b9de704c-9deb-11ed-9f52-5254004d77d3",
-                    "sortorder": 1,
+                    "sortorder": 0,
                     "visible": true,
                     "widget_id": "10000000-0000-0000-0000-000000000004"
                 },
@@ -240,35 +240,6 @@
                         "i18n_properties": [
                             "placeholder"
                         ],
-                        "label": "Middle Name",
-                        "maxLength": null,
-                        "placeholder": {
-                            "en": "Enter text"
-                        },
-                        "uneditable": false,
-                        "width": "100%"
-                    },
-                    "id": "c4eca8ba-9dea-11ed-9a7b-5254004d77d3",
-                    "label": {
-                        "en": "Middle Name"
-                    },
-                    "node_id": "c4ec9866-9dea-11ed-9a7b-5254004d77d3",
-                    "sortorder": 4,
-                    "visible": true,
-                    "widget_id": "10000000-0000-0000-0000-000000000001"
-                },
-                {
-                    "card_id": "c4ec946a-9dea-11ed-9a7b-5254004d77d3",
-                    "config": {
-                        "defaultValue": {
-                            "en": {
-                                "direction": "ltr",
-                                "value": ""
-                            }
-                        },
-                        "i18n_properties": [
-                            "placeholder"
-                        ],
                         "label": "Last Name",
                         "maxLength": null,
                         "placeholder": {
@@ -282,7 +253,7 @@
                         "en": "Last Name"
                     },
                     "node_id": "c4ec9b2c-9dea-11ed-9a7b-5254004d77d3",
-                    "sortorder": 5,
+                    "sortorder": 1,
                     "visible": true,
                     "widget_id": "10000000-0000-0000-0000-000000000001"
                 },
@@ -311,7 +282,7 @@
                         "en": "First Name"
                     },
                     "node_id": "c4eca13a-9dea-11ed-9a7b-5254004d77d3",
-                    "sortorder": 3,
+                    "sortorder": 2,
                     "visible": true,
                     "widget_id": "10000000-0000-0000-0000-000000000001"
                 },
@@ -397,15 +368,6 @@
                     "name": null,
                     "ontologyproperty": "http://www.cidoc-crm.org/cidoc-crm/P1_is_identified_by",
                     "rangenode_id": "c4eca13a-9dea-11ed-9a7b-5254004d77d3"
-                },
-                {
-                    "description": null,
-                    "domainnode_id": "c4ec9f82-9dea-11ed-9a7b-5254004d77d3",
-                    "edgeid": "c4ecde02-9dea-11ed-9a7b-5254004d77d3",
-                    "graph_id": "605b0bbc-8661-4cf2-b340-df743a8c5f89",
-                    "name": null,
-                    "ontologyproperty": "http://www.cidoc-crm.org/cidoc-crm/P1_is_identified_by",
-                    "rangenode_id": "c4ec9866-9dea-11ed-9a7b-5254004d77d3"
                 },
                 {
                     "description": null,
@@ -497,12 +459,12 @@
                                 "type": "map_popup"
                             },
                             "name": {
-                                "delimiter": " ",
+                                "delimiter": " , ",
                                 "first_only": false,
                                 "node_ids": [
-                                    "c4ec9672-9dea-11ed-9a7b-5254004d77d3",
+                                    "c4ec9b2c-9dea-11ed-9a7b-5254004d77d3",
                                     "c4eca13a-9dea-11ed-9a7b-5254004d77d3",
-                                    "c4ec9b2c-9dea-11ed-9a7b-5254004d77d3"
+                                    "c4ec9672-9dea-11ed-9a7b-5254004d77d3"
                                 ],
                                 "show_name": false,
                                 "type": "name"
@@ -518,7 +480,7 @@
             ],
             "graphid": "605b0bbc-8661-4cf2-b340-df743a8c5f89",
             "iconclass": "fa fa-male",
-            "is_editable": false,
+            "is_editable": true,
             "isresource": true,
             "jsonldcontext": null,
             "name": {
@@ -717,28 +679,6 @@
                     "sortorder": 0
                 },
                 {
-                    "alias": "middle_name",
-                    "config": {
-                        "en": ""
-                    },
-                    "datatype": "string",
-                    "description": null,
-                    "exportable": false,
-                    "fieldname": null,
-                    "graph_id": "605b0bbc-8661-4cf2-b340-df743a8c5f89",
-                    "hascustomalias": false,
-                    "is_collector": false,
-                    "isrequired": false,
-                    "issearchable": true,
-                    "istopnode": false,
-                    "name": "Middle Name",
-                    "nodegroup_id": "c4ec9f82-9dea-11ed-9a7b-5254004d77d3",
-                    "nodeid": "c4ec9866-9dea-11ed-9a7b-5254004d77d3",
-                    "ontologyclass": "http://www.cidoc-crm.org/cidoc-crm/E41_Appellation",
-                    "parentproperty": "http://www.cidoc-crm.org/cidoc-crm/P1_is_identified_by",
-                    "sortorder": 0
-                },
-                {
                     "alias": "last_name",
                     "config": {
                         "en": ""
@@ -812,17 +752,17 @@
                         },
                         "options": [
                             {
-                                "id": "e699a62e-59d7-4931-84c9-3526a8260717",
-                                "selected": false,
-                                "text": {
-                                    "en": "Company"
-                                }
-                            },
-                            {
                                 "id": "5fe283e7-3ecf-46d2-adff-a82a30447d43",
                                 "selected": false,
                                 "text": {
                                     "en": "Individual"
+                                }
+                            },
+                            {
+                                "id": "e699a62e-59d7-4931-84c9-3526a8260717",
+                                "selected": false,
+                                "text": {
+                                    "en": "Company"
                                 }
                             }
                         ]
@@ -893,8 +833,8 @@
             "publication": {
                 "graph_id": "605b0bbc-8661-4cf2-b340-df743a8c5f89",
                 "notes": null,
-                "publicationid": "54cfc764-a499-11ed-a575-5254004d77d3",
-                "published_time": "2023-02-04T08:36:37.820",
+                "publicationid": "7c21bf70-a89a-11ed-9606-5254004d77d3",
+                "published_time": "2023-02-09T10:54:57.937",
                 "user_id": 1
             },
             "relatable_resource_model_ids": [
