@@ -3,7 +3,9 @@ from django.conf import settings
 from django.conf.urls.static import static
 from django.conf.urls.i18n import i18n_patterns
 from django.urls.resolvers import RegexPattern
+from arches_fossils.views.api import MVT
 
+uuid_regex = settings.UUID_REGEX
 
 class BCRegexPattern(RegexPattern):
     def __init__(self, regexpattern):
@@ -17,6 +19,11 @@ if settings.BCGOV_PROXY is True:
         #print(pattern.pattern)
 
 urlpatterns = [
+                  url(
+                      r"^%smvt/(?P<nodeid>%s)/(?P<zoom>[0-9]+|\{z\})/(?P<x>[0-9]+|\{x\})/(?P<y>[0-9]+|\{y\}).pbf$" % (settings.BCGOV_PROXY_PREFIX, uuid_regex),
+                      MVT.as_view(),
+                      name="mvt",
+                      ),
                   bc_url_resolver,
               ] + static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
 
