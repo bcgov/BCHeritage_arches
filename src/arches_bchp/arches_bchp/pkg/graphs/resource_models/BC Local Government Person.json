@@ -45,46 +45,6 @@
                 },
                 {
                     "active": true,
-                    "cardid": "03a7f978-b42a-483e-9e30-a48e24024946",
-                    "component_id": "f05e4d3a-53c1-11e8-b0ea-784f435179ea",
-                    "config": null,
-                    "constraints": [
-                        {
-                            "card_id": "03a7f978-b42a-483e-9e30-a48e24024946",
-                            "constraintid": "3a665c9b-035a-4a4d-8901-27748a739936",
-                            "nodes": [],
-                            "uniquetoallinstances": false
-                        },
-                        {
-                            "card_id": "03a7f978-b42a-483e-9e30-a48e24024946",
-                            "constraintid": "9341407b-70be-47be-b9bb-f8590d39496c",
-                            "nodes": [],
-                            "uniquetoallinstances": false
-                        }
-                    ],
-                    "cssclass": null,
-                    "description": null,
-                    "graph_id": "412444dd-b13f-4289-9f04-5c7f1878ad4e",
-                    "helpenabled": false,
-                    "helptext": {
-                        "en": ""
-                    },
-                    "helptitle": {
-                        "en": ""
-                    },
-                    "instructions": {
-                        "en": ""
-                    },
-                    "is_editable": true,
-                    "name": {
-                        "en": "Resource Position"
-                    },
-                    "nodegroup_id": "0999b0c4-a31e-11ed-8e85-5254004d77d3",
-                    "sortorder": 2,
-                    "visible": true
-                },
-                {
-                    "active": true,
                     "cardid": "04707817-e6c5-4cb4-a59c-074640c46e36",
                     "component_id": "f05e4d3a-53c1-11e8-b0ea-784f435179ea",
                     "config": null,
@@ -129,6 +89,46 @@
                 },
                 {
                     "active": true,
+                    "cardid": "0629d64b-a60a-445e-a49d-83d08e4e6cd4",
+                    "component_id": "f05e4d3a-53c1-11e8-b0ea-784f435179ea",
+                    "config": null,
+                    "constraints": [
+                        {
+                            "card_id": "0629d64b-a60a-445e-a49d-83d08e4e6cd4",
+                            "constraintid": "46a345e3-9965-4412-8a94-6e0cdb9520a2",
+                            "nodes": [],
+                            "uniquetoallinstances": false
+                        },
+                        {
+                            "card_id": "0629d64b-a60a-445e-a49d-83d08e4e6cd4",
+                            "constraintid": "5487fced-eb6e-4a5a-a85d-c4ee0ddc4f97",
+                            "nodes": [],
+                            "uniquetoallinstances": false
+                        }
+                    ],
+                    "cssclass": null,
+                    "description": null,
+                    "graph_id": "412444dd-b13f-4289-9f04-5c7f1878ad4e",
+                    "helpenabled": false,
+                    "helptext": {
+                        "en": ""
+                    },
+                    "helptitle": {
+                        "en": ""
+                    },
+                    "instructions": {
+                        "en": ""
+                    },
+                    "is_editable": true,
+                    "name": {
+                        "en": "Government Association"
+                    },
+                    "nodegroup_id": "3892c576-a983-11ed-b7d3-5254004d77d3",
+                    "sortorder": 3,
+                    "visible": true
+                },
+                {
+                    "active": true,
                     "cardid": "c53876b3-714c-4196-9889-2994192338fe",
                     "component_id": "f05e4d3a-53c1-11e8-b0ea-784f435179ea",
                     "config": null,
@@ -164,7 +164,7 @@
                         "en": "Contact Information"
                     },
                     "nodegroup_id": "50258a36-a31e-11ed-8297-5254004d77d3",
-                    "sortorder": 3,
+                    "sortorder": 2,
                     "visible": true
                 }
             ],
@@ -315,7 +315,28 @@
                     "widget_id": "10000000-0000-0000-0000-000000000001"
                 },
                 {
-                    "card_id": "03a7f978-b42a-483e-9e30-a48e24024946",
+                    "card_id": "0629d64b-a60a-445e-a49d-83d08e4e6cd4",
+                    "config": {
+                        "defaultResourceInstance": [],
+                        "i18n_properties": [
+                            "placeholder"
+                        ],
+                        "label": "Government Association",
+                        "placeholder": {
+                            "en": ""
+                        }
+                    },
+                    "id": "95797455-15ac-4a7a-91b3-e99c76058dbe",
+                    "label": {
+                        "en": "Government Association"
+                    },
+                    "node_id": "3892c576-a983-11ed-b7d3-5254004d77d3",
+                    "sortorder": 0,
+                    "visible": true,
+                    "widget_id": "31f3728c-7613-11e7-a139-784f435179ea"
+                },
+                {
+                    "card_id": "0629d64b-a60a-445e-a49d-83d08e4e6cd4",
                     "config": {
                         "defaultValue": {
                             "en": {
@@ -329,17 +350,17 @@
                         "label": "Resource Position",
                         "maxLength": null,
                         "placeholder": {
-                            "en": "Positon held within government"
+                            "en": "Enter text"
                         },
                         "uneditable": false,
                         "width": "100%"
                     },
-                    "id": "c219bed4-3e86-400f-a5ef-76fb9087d8e4",
+                    "id": "d428d3be-5ccf-42a6-ae54-77f1d90e2784",
                     "label": {
                         "en": "Resource Position"
                     },
-                    "node_id": "0999b0c4-a31e-11ed-8e85-5254004d77d3",
-                    "sortorder": 0,
+                    "node_id": "9e00e99c-a983-11ed-8958-5254004d77d3",
+                    "sortorder": null,
                     "visible": true,
                     "widget_id": "10000000-0000-0000-0000-000000000001"
                 }
@@ -354,12 +375,21 @@
             "edges": [
                 {
                     "description": null,
-                    "domainnode_id": "a4d4a1a8-a31d-11ed-8297-5254004d77d3",
-                    "edgeid": "0b838266-c20d-48ed-b5a1-113c3db17977",
+                    "domainnode_id": "3892c576-a983-11ed-b7d3-5254004d77d3",
+                    "edgeid": "047ca82f-f2b1-4c66-87c2-3a56767d072a",
                     "graph_id": "412444dd-b13f-4289-9f04-5c7f1878ad4e",
                     "name": null,
                     "ontologyproperty": "http://www.cidoc-crm.org/cidoc-crm/P2_has_type",
-                    "rangenode_id": "0999b0c4-a31e-11ed-8e85-5254004d77d3"
+                    "rangenode_id": "9e00e99c-a983-11ed-8958-5254004d77d3"
+                },
+                {
+                    "description": null,
+                    "domainnode_id": "a4d4a1a8-a31d-11ed-8297-5254004d77d3",
+                    "edgeid": "094dea10-6e00-4079-97a1-c19514710cc2",
+                    "graph_id": "412444dd-b13f-4289-9f04-5c7f1878ad4e",
+                    "name": null,
+                    "ontologyproperty": "http://www.cidoc-crm.org/cidoc-crm/P107i_is_current_or_former_member_of",
+                    "rangenode_id": "3892c576-a983-11ed-b7d3-5254004d77d3"
                 },
                 {
                     "description": null,
@@ -425,26 +455,49 @@
                     "rangenode_id": "fa9615a4-a31d-11ed-bb53-5254004d77d3"
                 }
             ],
-            "functions_x_graphs": [],
+            "functions_x_graphs": [
+                {
+                    "config": {
+                        "descriptor_types": {
+                            "description": {
+                                "nodegroup_id": "3892c576-a983-11ed-b7d3-5254004d77d3",
+                                "string_template": "<Government Association>, <Resource Position>"
+                            },
+                            "map_popup": {
+                                "nodegroup_id": "3892c576-a983-11ed-b7d3-5254004d77d3",
+                                "string_template": "<Government Association>, <Resource Position>"
+                            },
+                            "name": {
+                                "nodegroup_id": "ce3e1286-a31d-11ed-bbb0-5254004d77d3",
+                                "string_template": "<Last Name>, <First Name>"
+                            }
+                        },
+                        "triggering_nodegroups": []
+                    },
+                    "function_id": "60000000-0000-0000-0000-000000000001",
+                    "graph_id": "412444dd-b13f-4289-9f04-5c7f1878ad4e",
+                    "id": "da7bc571-2a04-4fb3-9a34-b7e49501bb4d"
+                }
+            ],
             "graphid": "412444dd-b13f-4289-9f04-5c7f1878ad4e",
             "iconclass": "fa fa-male",
             "is_editable": true,
             "isresource": true,
             "jsonldcontext": null,
             "name": {
-                "en": "BC Local Government Resource"
+                "en": "BC Local Government Person"
             },
             "nodegroups": [
                 {
                     "cardinality": "1",
                     "legacygroupid": null,
-                    "nodegroupid": "0999b0c4-a31e-11ed-8e85-5254004d77d3",
+                    "nodegroupid": "2fde21de-a31e-11ed-9722-5254004d77d3",
                     "parentnodegroup_id": null
                 },
                 {
                     "cardinality": "1",
                     "legacygroupid": null,
-                    "nodegroupid": "2fde21de-a31e-11ed-9722-5254004d77d3",
+                    "nodegroupid": "3892c576-a983-11ed-b7d3-5254004d77d3",
                     "parentnodegroup_id": null
                 },
                 {
@@ -461,28 +514,6 @@
                 }
             ],
             "nodes": [
-                {
-                    "alias": "resource_position",
-                    "config": {
-                        "en": ""
-                    },
-                    "datatype": "string",
-                    "description": null,
-                    "exportable": false,
-                    "fieldname": null,
-                    "graph_id": "412444dd-b13f-4289-9f04-5c7f1878ad4e",
-                    "hascustomalias": false,
-                    "is_collector": true,
-                    "isrequired": false,
-                    "issearchable": true,
-                    "istopnode": false,
-                    "name": "Resource Position",
-                    "nodegroup_id": "0999b0c4-a31e-11ed-8e85-5254004d77d3",
-                    "nodeid": "0999b0c4-a31e-11ed-8e85-5254004d77d3",
-                    "ontologyclass": "http://www.cidoc-crm.org/cidoc-crm/E55_Type",
-                    "parentproperty": "http://www.cidoc-crm.org/cidoc-crm/P2_has_type",
-                    "sortorder": 0
-                },
                 {
                     "alias": "username",
                     "config": {
@@ -503,6 +534,35 @@
                     "nodeid": "2fde21de-a31e-11ed-9722-5254004d77d3",
                     "ontologyclass": "http://www.cidoc-crm.org/cidoc-crm/E42_Identifier",
                     "parentproperty": "http://www.cidoc-crm.org/cidoc-crm/P1_is_identified_by",
+                    "sortorder": 0
+                },
+                {
+                    "alias": "government_association",
+                    "config": {
+                        "graphs": [
+                            {
+                                "graphid": "aacf8bb6-3f6e-46d9-a551-b0749d7efffc",
+                                "name": "BC Local Government"
+                            }
+                        ],
+                        "searchDsl": "",
+                        "searchString": ""
+                    },
+                    "datatype": "resource-instance",
+                    "description": null,
+                    "exportable": false,
+                    "fieldname": null,
+                    "graph_id": "412444dd-b13f-4289-9f04-5c7f1878ad4e",
+                    "hascustomalias": false,
+                    "is_collector": true,
+                    "isrequired": false,
+                    "issearchable": true,
+                    "istopnode": false,
+                    "name": "Government Association",
+                    "nodegroup_id": "3892c576-a983-11ed-b7d3-5254004d77d3",
+                    "nodeid": "3892c576-a983-11ed-b7d3-5254004d77d3",
+                    "ontologyclass": "http://www.cidoc-crm.org/cidoc-crm/E74_Group",
+                    "parentproperty": "http://www.cidoc-crm.org/cidoc-crm/P107i_is_current_or_former_member_of",
                     "sortorder": 0
                 },
                 {
@@ -550,6 +610,28 @@
                     "sortorder": 0
                 },
                 {
+                    "alias": "resource_position",
+                    "config": {
+                        "en": ""
+                    },
+                    "datatype": "string",
+                    "description": "Role within the Local Government",
+                    "exportable": false,
+                    "fieldname": null,
+                    "graph_id": "412444dd-b13f-4289-9f04-5c7f1878ad4e",
+                    "hascustomalias": false,
+                    "is_collector": false,
+                    "isrequired": false,
+                    "issearchable": true,
+                    "istopnode": false,
+                    "name": "Resource Position",
+                    "nodegroup_id": "3892c576-a983-11ed-b7d3-5254004d77d3",
+                    "nodeid": "9e00e99c-a983-11ed-8958-5254004d77d3",
+                    "ontologyclass": "http://www.cidoc-crm.org/cidoc-crm/E55_Type",
+                    "parentproperty": "http://www.cidoc-crm.org/cidoc-crm/P2_has_type",
+                    "sortorder": 0
+                },
+                {
                     "alias": "phone_number",
                     "config": {
                         "en": ""
@@ -586,7 +668,7 @@
                     "isrequired": false,
                     "issearchable": true,
                     "istopnode": true,
-                    "name": "BC Local Government Resource",
+                    "name": "BC Local Government Person",
                     "nodegroup_id": null,
                     "nodeid": "a4d4a1a8-a31d-11ed-8297-5254004d77d3",
                     "ontologyclass": "http://www.cidoc-crm.org/cidoc-crm/E39_Actor",
@@ -664,13 +746,12 @@
             "publication": {
                 "graph_id": "412444dd-b13f-4289-9f04-5c7f1878ad4e",
                 "notes": null,
-                "publicationid": "f3ab42a6-a330-11ed-9296-5254004d77d3",
-                "published_time": "2023-02-02T13:36:56.019",
+                "publicationid": "790a3728-a984-11ed-b7d3-5254004d77d3",
+                "published_time": "2023-02-10T14:49:54.984",
                 "user_id": 1
             },
             "relatable_resource_model_ids": [
-                "aacf8bb6-3f6e-46d9-a551-b0749d7efffc",
-                "4e69d0a9-7af2-473f-929f-71d462ea32d1"
+                "aacf8bb6-3f6e-46d9-a551-b0749d7efffc"
             ],
             "resource_2_resource_constraints": [],
             "root": {
@@ -688,7 +769,7 @@
                 "isrequired": false,
                 "issearchable": true,
                 "istopnode": true,
-                "name": "BC Local Government Resource",
+                "name": "BC Local Government Person",
                 "nodegroup_id": null,
                 "nodeid": "a4d4a1a8-a31d-11ed-8297-5254004d77d3",
                 "ontologyclass": "http://www.cidoc-crm.org/cidoc-crm/E39_Actor",
