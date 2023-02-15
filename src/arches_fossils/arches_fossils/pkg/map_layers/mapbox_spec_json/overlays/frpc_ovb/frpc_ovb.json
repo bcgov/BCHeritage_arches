@@ -1,0 +1,63 @@
+{
+  "name": "FRPC Overburden",
+  "sources": {
+    "frpc_ovb-source": {
+      "type": "vector",
+      "tiles": [
+        "http://arches7.local:7800/fossils_data.fiss_frpc_ovb/{z}/{x}/{y}.pbf"
+      ],
+      "tileSize": 512
+    }
+  },
+  "layers": [
+    {
+      "id": "frpc_ovb",
+      "type": "line",
+      "source": "frpc_ovb-source",
+      "source-layer": "fossils_data.fiss_frpc_ovb",
+      "minzoom": 0,
+      "maxzoom": 20,
+      "paint": {
+        "line-width": 2,
+        "line-color": [
+          "case",
+          ["match", ["get","frpc"], ["High"], true, false], "rgba(141,0,0,1)",
+          ["match", ["get","frpc"], ["Medium"], true, false], "rgba(200,100,0,1)",
+          ["match", ["get","frpc"], ["Low"], true, false], "rgba(0,141,0,1)",
+          ["match", ["get","frpc"], ["Very Low"], true, false], "rgba(0,41,0,1)",
+          "rgba(0,0,0,1)" ]
+      }
+    },
+    {
+      "id": "frpc_ovb-fill",
+      "type": "fill",
+      "source": "frpc_ovb-source",
+      "source-layer": "fossils_data.fiss_frpc_ovb",
+      "minzoom": 0,
+      "maxzoom": 20,
+      "paint": {
+        "fill-color": [
+          "case",
+          ["match", ["get","frpc"], ["High"], true, false], "rgba(141,0,0,.2)",
+          ["match", ["get","frpc"], ["Medium"], true, false], "rgba(200,100,0,.2)",
+          ["match", ["get","frpc"], ["Low"], true, false], "rgba(0,141,0,.2)",
+          ["match", ["get","frpc"], ["Very Low"], true, false], "rgba(0,41,0,.2)",
+          "rgba(0,0,0,.1)" ]
+      }
+    },
+    {
+      "id": "frpc_ovb-symbol",
+      "type": "symbol",
+      "source": "frpc_ovb-source",
+      "source-layer": "fossils_data.fiss_frpc_ovb",
+      "layout": {
+        "text-field": "{strat_unit}",
+        "text-font": ["Open Sans Italic","Arial Unicode MS Regular"],
+        "text-size": 14
+      },
+      "paint": {
+        "text-color": "#666666"
+      }
+    }
+  ]
+}

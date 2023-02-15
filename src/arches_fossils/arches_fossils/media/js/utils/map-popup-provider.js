@@ -50,6 +50,22 @@ define([
                         "map_popup": [{key: "FRENCH_NAME", title: "French Name: "},
                             {key: "LOCAL_NAME", title: "Local Name: "},
                         ]
+                    },
+                "fossils_data.fiss_frpc_br":
+                    {
+                        displayname: [{"key": "strat_unit", title: ""}],
+                        "map_popup": [
+                            {key: "unit_name", title: "Name: "},
+                            {key: "frpc", title: "Ranking: "},
+                        ]
+                    },
+                "fossils_data.fiss_frpc_ovb":
+                    {
+                        displayname: [{"key": "strat_unit", title: ""}],
+                        "map_popup": [
+                            {key: "unit_name", title: "Name: "},
+                            {key: "frpc", title: "Ranking: "},
+                        ]
                     }
 
 
@@ -60,6 +76,8 @@ define([
                 "WHSE_LEGAL_ADMIN_BOUNDARIES.ABMS_MUNICIPALITIES_SP",
                 "WHSE_TANTALIS.TA_PARK_ECORES_PA_SVW",
                 "WHSE_ADMIN_BOUNDARIES.CLAB_NATIONAL_PARKS",
+                "fossils_data.fiss_frpc_br",
+                "fossils_data.fiss_frpc_ovb",
                 "c66518e2-10c6-11ec-adef-5254008afee6", /* Important Areas Resource layer */
                 "2336968c-1035-11ec-a3aa-5254008afee6", /* Fossil Site layer */
             ],
