@@ -4,7 +4,7 @@
     "frpc-source": {
       "type": "vector",
       "tiles": [
-        "/int/arches_fossils/wms/public.fiss_frpc_br/{z}/{x}/{y}.pbf"
+        "/int/arches-fossils/wms/map_data.fiss_frpc_br/{z}/{x}/{y}.pbf"
       ],
       "tileSize": 512
     }
@@ -14,7 +14,7 @@
       "id": "frpc",
       "type": "line",
       "source": "frpc-source",
-      "source-layer": "fossils_data.fiss_frpc_br",
+      "source-layer": "map_data.fiss_frpc_br",
       "minzoom": 0,
       "maxzoom": 20,
       "paint": {
@@ -32,7 +32,7 @@
       "id": "frpc-fill",
       "type": "fill",
       "source": "frpc-source",
-      "source-layer": "fossils_data.fiss_frpc_br",
+      "source-layer": "map_data.fiss_frpc_br",
       "minzoom": 0,
       "maxzoom": 20,
       "paint": {
@@ -49,7 +49,7 @@
       "id": "frpc-symbol",
       "type": "symbol",
       "source": "frpc-source",
-      "source-layer": "fossils_data.fiss_frpc_br",
+      "source-layer": "map_data.fiss_frpc_br",
       "layout": {
         "text-field": "{strat_unit}",
         "text-font": ["Open Sans Italic","Arial Unicode MS Regular"],
