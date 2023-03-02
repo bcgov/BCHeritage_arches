@@ -95,15 +95,15 @@
                     "graph_id": "7f2c2082-6c51-11ed-9b7d-5254004d77d3",
                     "helpenabled": true,
                     "helptext": {
-                        "en": ""
+                        "en": "<p><strong>Geological Group or Lithodemic/Lithotectonic Grouping</strong> &ndash; Select unit from which fossil was sampled:</p>\n\n<ul>\n\t<li>Stratigraphic Group (or Supergroup) or</li>\n\t<li>Lithodemic grouping such as a Complex or</li>\n\t<li>Lithotectonic grouping such as an Assemblage</li>\n</ul>\n\n<p><strong>Geological Group Uncertain</strong> - Check the box if you are unsure of the Group or Grouping term.</p>\n\n<p><strong>Geological Formation</strong> &ndash; Select the stratigraphic Formation (or equivalent term) from which the fossil was sampled.</p>\n\n<p><strong>Geological Formation Uncertain</strong> &ndash; Check the box if you are unsure of the Formation.</p>\n\n<p><strong>Geological Member</strong> &ndash; Select the stratigraphic Member&nbsp;from which the fossil was sampled.</p>\n\n<p><strong>Geological Member Uncertain</strong> - Check the box if you are unsure of the Member.</p>\n\n<p><strong>Informal Map Unit or Name </strong>&ndash; If formal stratigraphic rank names (group, formation, member) do not apply to the rocks sampled, select an informal stratigraphic name or map unit name from which the fossil was sampled.</p>\n\n<p><strong>Other Informal/Other Unit Name</strong> &ndash; Enter the informal rock unit name or map unit name (or code) if the unit is not found within the existing picklists.</p>\n"
                     },
                     "helptitle": {
-                        "en": ""
+                        "en": "Stratigraphy Help"
                     },
                     "instructions": {
                         "en": ""
                     },
-                    "is_editable": true,
+                    "is_editable": false,
                     "name": {
                         "en": "Stratigraphy"
                     },
@@ -129,15 +129,15 @@
                     "graph_id": "7f2c2082-6c51-11ed-9b7d-5254004d77d3",
                     "helpenabled": true,
                     "helptext": {
-                        "en": "<p>Help text here.</p>\n\n<p><strong>Title 1</strong></p>\n"
+                        "en": "<p><strong>Sample left in situ</strong> &ndash; Check the box if the sample was left in the outcrop.</p>\n\n<p><strong>R</strong><strong>epository or Institution Number</strong> &ndash; Enter an assigned repository or storage number for a fossil sample.</p>\n\n<p><strong>Repository Name</strong> &ndash; Choose the name of the museum or institution where the fossil sample is stored.</p>\n\n<p><strong>Repository Location Uncertain</strong> &ndash; Check the box if your are unsure of the storage location.</p>\n\n<p><strong>Field Number</strong> &ndash; Record a sample number assigned to a fossil sample in the field.</p>\n\n<p><strong>Storage Notes</strong> &ndash; Add other information related to storage of the fossil sample or details about sample left in situ. &nbsp;</p>\n\n<p>&nbsp;</p>\n"
                     },
                     "helptitle": {
-                        "en": ""
+                        "en": "Repository Information Help"
                     },
                     "instructions": {
                         "en": ""
                     },
-                    "is_editable": true,
+                    "is_editable": false,
                     "name": {
                         "en": "Repository Information"
                     },
@@ -171,7 +171,7 @@
                     "instructions": {
                         "en": ""
                     },
-                    "is_editable": true,
+                    "is_editable": false,
                     "name": {
                         "en": "Fossil Occurrence Site ID"
                     },
@@ -195,17 +195,17 @@
                     "cssclass": null,
                     "description": null,
                     "graph_id": "7f2c2082-6c51-11ed-9b7d-5254004d77d3",
-                    "helpenabled": false,
+                    "helpenabled": true,
                     "helptext": {
-                        "en": ""
+                        "en": "<p><strong>Age undetermined</strong> &ndash; Check the box if the age of the fossil could not be determined.</p>\n\n<p><strong>Minimum time - </strong>Select the youngest age for the fossil.</p>\n\n<p><strong>Minimum time uncertain</strong> - Check the box if you are unsure of the age assignment.</p>\n\n<p><strong>Maximum time - </strong>Select the oldest age for the fossil.</p>\n\n<p><strong>Maximum time uncertain</strong> - Check the box if you are unsure of the age assignment.</p>\n"
                     },
                     "helptitle": {
-                        "en": ""
+                        "en": "Geological Age Help"
                     },
                     "instructions": {
                         "en": ""
                     },
-                    "is_editable": true,
+                    "is_editable": false,
                     "name": {
                         "en": "Geological Age"
                     },
@@ -239,7 +239,7 @@
                     "instructions": {
                         "en": ""
                     },
-                    "is_editable": true,
+                    "is_editable": false,
                     "name": {
                         "en": "Fossil ID"
                     },
@@ -265,15 +265,15 @@
                     "graph_id": "7f2c2082-6c51-11ed-9b7d-5254004d77d3",
                     "helpenabled": true,
                     "helptext": {
-                        "en": "<p><strong>Fossil Common Names</strong> - To add</p>\n\n<p><strong>Common Name Uncertain</strong> - To add</p>\n\n<p><strong>Scientific Name</strong> - Assign formal higher taxonomic name, especially if specimen is not identifiable to Genus and species name (e.g., Actinopterygii).</p>\n\n<p><strong>Open Nomenclature Term</strong> - To add</p>\n\n<p><strong>Other Scientific Name </strong>- To add</p>\n\n<p><strong>Fossil Identification Uncertain</strong> - To add</p>\n\n<p><strong>Fossil Size Category</strong> - To add</p>\n\n<p><strong>Additional Taxonomic Information</strong> - Note any alternate scientific names (e.g., if taxon name changed over time such as Alnus crispoides = Alnus hollandiana) or informal taxonomic designation of a name (e.g., actinopterygian). Do not repeat common names here.</p>\n\n<p><strong>Fossil Part</strong> - Select the type of fossil part&nbsp; (tooth, bone, fish scale, shell, leaf, needle).</p>\n\n<p><strong>Other Fossil Part or Fossil Part Details</strong> - To add</p>\n\n<p><strong>Trace Fossil</strong> - Select the type of trace fossil (burrow, track, gastrolith, coprolite, etc).</p>\n\n<p><strong>Other Trace Fossil or Trace Fossil Details</strong> - To add</p>\n\n<p><strong>Fossil Condition</strong> - Select if specimen is complete, fragment or unidentifiable.</p>\n\n<p><strong>Fossil Preservation</strong> - Select the preservation (original material, mineralization, mold, cast, imprint, compression, carbonized impression, recrystallization).</p>\n\n<p><strong>Fossil Notes</strong> - To add (maximum 80 characters)</p>\n"
+                        "en": "<p><strong>Common Name Uncertain</strong> - Check the box if you are unsure of the common name.</p>\n\n<p><strong>Fossil Identification Uncertain</strong> - Check the box if you are unsure about either or both the Genus and/or species name.</p>\n\n<p><strong>Fossil Size Category</strong> - Choose if the specimen is a macrofossil or microfossil. If the sample contains both, indicate this in the Fossil Notes.</p>\n\n<p><strong>Additional Taxonomic Information</strong> - Note other taxonomic information such as:</p>\n\n<ul>\n\t<li>Assign a formal higher taxonomic name if specimen is not identifiable to Genus and species (e.g., Actinopterygii) or</li>\n\t<li>Assign informal taxonomic designation (e.g., chimaeroid) or</li>\n\t<li>Note alternate scientific names (e.g., if taxon name changed over time such as Alnus crispoides = Alnus hollandiana).</li>\n\t<li>Do not repeat common names here.</li>\n</ul>\n\n<p><strong>Other Fossil Part or Fossil Part Details</strong> - If the term you are looking for is not listed under Fossil Part, provide the fossil part name or list the specific type of body part (e.g., type of bone).</p>\n\n<p>&nbsp;</p>\n\n<p><strong>Other Trace Fossil or Trace Fossil Details</strong> - If the term you are looking for is not listed under Trace Fossil, list the specific type of trace fossil.</p>\n\n<p><strong>Fossil Condition</strong> &ndash; Select if specimen is complete or a fragment.</p>\n\n<p><strong>Fossil Preservation</strong> &ndash; Select type of preservation.</p>\n\n<p><strong>Fossil Notes</strong> &ndash; Enter relevant information to help classify the fossil.</p>\n"
                     },
                     "helptitle": {
-                        "en": ""
+                        "en": "BC Fossil Identification Help Guide"
                     },
                     "instructions": {
                         "en": ""
                     },
-                    "is_editable": true,
+                    "is_editable": false,
                     "name": {
                         "en": "BC Fossil Identification"
                     },
@@ -311,7 +311,7 @@
                         "en": ""
                     },
                     "instructions": {
-                        "en": "Note how many specimens or if an assemblage is present."
+                        "en": "Note if the sample is barren or note number of specimens present."
                     },
                     "is_editable": true,
                     "name": {
@@ -568,7 +568,7 @@
                         "label": "Unlisted Scientific Name",
                         "maxLength": "80",
                         "placeholder": {
-                            "en": "Enter a taxonomic name if not listed in the list under Scientific Names"
+                            "en": "Enter a name if not in the list under Scientific Names"
                         },
                         "uneditable": false,
                         "width": "100%"
@@ -815,25 +815,17 @@
                             {
                                 "children": [],
                                 "collector": "",
-                                "conceptid": "05e38520-678b-46c5-bbe2-9164d52ec4fe",
-                                "id": "00b29319-f28d-4b50-88e1-ab190fdfbde6",
-                                "sortorder": "00",
-                                "text": "None/Barren"
-                            },
-                            {
-                                "children": [],
-                                "collector": "",
-                                "conceptid": "fdbfc78a-620e-48d7-99b7-ba25cd9ae10b",
-                                "id": "c26c8d58-9dcb-47a0-a869-ecb93c3dce00",
-                                "sortorder": "01",
-                                "text": "Single Fossil (1)"
+                                "conceptid": "f295722a-5605-4a7d-b6d3-fb16f9ccd0b0",
+                                "id": "6956cf66-4a04-429e-933b-181a7bdaa3da",
+                                "sortorder": "",
+                                "text": "Abundant (> 10)"
                             },
                             {
                                 "children": [],
                                 "collector": "",
                                 "conceptid": "5dfc8eff-ff8c-4f76-a645-0d89f697c6d3",
                                 "id": "68785da4-a1bc-47b2-89dc-a3c617a07406",
-                                "sortorder": "02",
+                                "sortorder": "",
                                 "text": "Few (< 5)"
                             },
                             {
@@ -841,16 +833,24 @@
                                 "collector": "",
                                 "conceptid": "b951d714-d3e8-486a-beba-0550ebb58b9d",
                                 "id": "0ade6a3a-170a-4889-af0d-c55b783747c0",
-                                "sortorder": "05",
+                                "sortorder": "",
                                 "text": "Many (5-10)"
                             },
                             {
                                 "children": [],
                                 "collector": "",
-                                "conceptid": "f295722a-5605-4a7d-b6d3-fb16f9ccd0b0",
-                                "id": "6956cf66-4a04-429e-933b-181a7bdaa3da",
-                                "sortorder": "11",
-                                "text": "Abundant (> 10)"
+                                "conceptid": "05e38520-678b-46c5-bbe2-9164d52ec4fe",
+                                "id": "00b29319-f28d-4b50-88e1-ab190fdfbde6",
+                                "sortorder": "",
+                                "text": "None/Barren"
+                            },
+                            {
+                                "children": [],
+                                "collector": "",
+                                "conceptid": "fdbfc78a-620e-48d7-99b7-ba25cd9ae10b",
+                                "id": "c26c8d58-9dcb-47a0-a869-ecb93c3dce00",
+                                "sortorder": "",
+                                "text": "Single Fossil (1)"
                             }
                         ],
                         "placeholder": {
@@ -1069,7 +1069,7 @@
                             }
                         ],
                         "placeholder": {
-                            "en": "Select an option"
+                            "en": "Select if specimen is complete or a fragment"
                         }
                     },
                     "id": "80f6a5ca-6f3c-11ed-92e2-5254004d77d3",
@@ -1090,7 +1090,7 @@
                         ],
                         "label": "Fossil Common Name",
                         "placeholder": {
-                            "en": "Select a common name"
+                            "en": "Select a name based on everyday language"
                         }
                     },
                     "id": "80f6a6c4-6f3c-11ed-92e2-5254004d77d3",
@@ -1127,7 +1127,7 @@
                         "label": "Fossil Part",
                         "options": [],
                         "placeholder": {
-                            "en": "Select a Fossil Part"
+                            "en": "Select type of fossil part or select \"other\" if term not listed"
                         }
                     },
                     "id": "80f6a8a4-6f3c-11ed-92e2-5254004d77d3",
@@ -1284,7 +1284,7 @@
                         ],
                         "label": "Scientific Name",
                         "placeholder": {
-                            "en": "Select genus/species"
+                            "en": "Select a binomial Genus and species name"
                         }
                     },
                     "id": "80f6ab7e-6f3c-11ed-92e2-5254004d77d3",
@@ -1305,7 +1305,7 @@
                         ],
                         "label": "Related Species Name",
                         "placeholder": {
-                            "en": "Select related Species"
+                            "en": "Select name to follow open nomenclature term above"
                         }
                     },
                     "id": "80f6ac6e-6f3c-11ed-92e2-5254004d77d3",
@@ -1353,7 +1353,7 @@
                         "label": "Additional Taxonomic Information",
                         "maxLength": null,
                         "placeholder": {
-                            "en": "List other taxonomic information that will help with the identification"
+                            "en": "Note other taxonomic information helpful for identification"
                         },
                         "uneditable": false,
                         "width": "100%"
@@ -1377,7 +1377,7 @@
                         "label": "Open Nomenclature Term",
                         "options": [],
                         "placeholder": {
-                            "en": "Select open nomenclature term"
+                            "en": "Add a qualifying term to indicate uncertainty in taxonomic name"
                         }
                     },
                     "id": "80f6b556-6f3c-11ed-92e2-5254004d77d3",
@@ -1399,7 +1399,7 @@
                         "label": "Fossil Preservation",
                         "options": [],
                         "placeholder": {
-                            "en": "Select an option"
+                            "en": "Select type of preservation"
                         }
                     },
                     "id": "80f6b650-6f3c-11ed-92e2-5254004d77d3",
@@ -1478,7 +1478,7 @@
                         "label": "Other Fossil Part or Fossil Part Details",
                         "maxLength": "40",
                         "placeholder": {
-                            "en": "Enter the fossil part name if not in the list or enter details qualifying the part"
+                            "en": "If term not in the list, enter fossil part name here"
                         },
                         "uneditable": false,
                         "width": "100%"
@@ -1507,7 +1507,7 @@
                         "label": "Storage Notes",
                         "maxLength": null,
                         "placeholder": {
-                            "en": "Enter text"
+                            "en": "Add other information related to storage of the fossil sample "
                         },
                         "uneditable": false,
                         "width": "100%"
@@ -1568,7 +1568,7 @@
                         "label": "Trace Fossil",
                         "options": [],
                         "placeholder": {
-                            "en": "Select an option"
+                            "en": "Select type of trace fossil or select \"other\" if term not listed"
                         }
                     },
                     "id": "d0576f7e-9d53-4b27-ab25-ce2f3c5350e0",
@@ -1617,7 +1617,7 @@
                         "label": "Field Number",
                         "maxLength": null,
                         "placeholder": {
-                            "en": "Enter text"
+                            "en": "Enter a sample number assigned in the field"
                         },
                         "uneditable": false,
                         "width": "100%"
@@ -1646,7 +1646,7 @@
                         "label": "Other Trace Fossil or Trace Fossil Details",
                         "maxLength": "40",
                         "placeholder": {
-                            "en": "Enter the trace fossil name if not in the list or enter details qualifying the trace fossil"
+                            "en": "If term not in the list, enter type of trace fossil here"
                         },
                         "uneditable": false,
                         "width": "100%"
@@ -2150,18 +2150,6 @@
             "functions_x_graphs": [
                 {
                     "config": {
-                        "node_id": "7f2c823e-6c51-11ed-9b7d-5254004d77d3",
-                        "triggering_nodegroups": [
-                            "7f2c2dde-6c51-11ed-9b7d-5254004d77d3"
-                        ],
-                        "unique_value": true
-                    },
-                    "function_id": "60000000-0000-0000-0000-000000002001",
-                    "graph_id": "7f2c2082-6c51-11ed-9b7d-5254004d77d3",
-                    "id": "49788e52-8c4a-4f3d-ba25-07f62a1c2e40"
-                },
-                {
-                    "config": {
                         "class_name": "PrimaryDescriptorsFunction",
                         "descriptor_types": {
                             "description": {
@@ -2182,12 +2170,24 @@
                     },
                     "function_id": "60000000-0000-0000-0000-000000000001",
                     "graph_id": "7f2c2082-6c51-11ed-9b7d-5254004d77d3",
-                    "id": "f4cb686a-3ded-4be1-890c-eb1ce0a247cb"
+                    "id": "4ef34369-b023-4b7f-b563-79c2046bf591"
+                },
+                {
+                    "config": {
+                        "node_id": "7f2c823e-6c51-11ed-9b7d-5254004d77d3",
+                        "triggering_nodegroups": [
+                            "7f2c2dde-6c51-11ed-9b7d-5254004d77d3"
+                        ],
+                        "unique_value": true
+                    },
+                    "function_id": "60000000-0000-0000-0000-000000002001",
+                    "graph_id": "7f2c2082-6c51-11ed-9b7d-5254004d77d3",
+                    "id": "f2b7951d-dddf-4353-b604-c04cfe0c0c90"
                 }
             ],
             "graphid": "7f2c2082-6c51-11ed-9b7d-5254004d77d3",
             "iconclass": "fa fa-puzzle-piece",
-            "is_editable": true,
+            "is_editable": false,
             "isresource": true,
             "jsonldcontext": null,
             "name": {
@@ -3062,7 +3062,7 @@
                                 "should": []
                             }
                         },
-                        "searchString": "http://arches7.local/int/arches-fossils/search?paging-filter=1&tiles=true&format=tilecsv&reportlink=false&precision=6&total=10426&advanced-search=%5B%7B%22op%22%3A%22and%22%2C%22fdbc5a08-1be8-11ec-abe5-5254008afee6%22%3A%7B%22op%22%3A%22~%22%2C%22lang%22%3A%22en%22%2C%22val%22%3A%22%22%7D%2C%22a9428406-b0a9-11ec-a223-5254008afee6%22%3A%7B%22op%22%3A%22%22%2C%22val%22%3A%22904962d2-b1ea-4a10-95b5-3d2ad6d1eb48%22%7D%2C%22c9e8976a-b0a7-11ec-8342-5254008afee6%22%3A%7B%22op%22%3A%22%22%2C%22val%22%3A%22%22%7D%2C%22c5a49ffe-b0a8-11ec-8c81-5254008afee6%22%3A%7B%22val%22%3A%22%22%7D%2C%222a309dcc-1beb-11ec-a4b1-5254008afee6%22%3A%7B%22op%22%3A%22%22%2C%22val%22%3A%22%22%7D%7D%5D&sort-results=asc"
+                        "searchString": "https://dlvrapps.nrs.gov.bc.ca/int/arches-fossils/search?paging-filter=1&tiles=true&format=tilecsv&reportlink=false&precision=6&total=10426&advanced-search=%5B%7B%22op%22%3A%22and%22%2C%22fdbc5a08-1be8-11ec-abe5-5254008afee6%22%3A%7B%22op%22%3A%22~%22%2C%22lang%22%3A%22en%22%2C%22val%22%3A%22%22%7D%2C%22a9428406-b0a9-11ec-a223-5254008afee6%22%3A%7B%22op%22%3A%22%22%2C%22val%22%3A%22904962d2-b1ea-4a10-95b5-3d2ad6d1eb48%22%7D%2C%22c9e8976a-b0a7-11ec-8342-5254008afee6%22%3A%7B%22op%22%3A%22%22%2C%22val%22%3A%22%22%7D%2C%22c5a49ffe-b0a8-11ec-8c81-5254008afee6%22%3A%7B%22val%22%3A%22%22%7D%2C%222a309dcc-1beb-11ec-a4b1-5254008afee6%22%3A%7B%22op%22%3A%22%22%2C%22val%22%3A%22%22%7D%7D%5D&sort-results=asc"
                     },
                     "datatype": "resource-instance",
                     "description": null,
@@ -3172,7 +3172,7 @@
                                 "should": []
                             }
                         },
-                        "searchString": "http://arches7.local/int/arches-fossils/search?advanced-search=%5B%7B%22op%22%3A%22and%22%2C%222a309dcc-1beb-11ec-a4b1-5254008afee6%22%3A%7B%22op%22%3A%22%22%2C%22val%22%3A%22e7c45e1c-d13f-4e3a-89db-e5d9df34538c%22%7D%2C%22fdbc5a08-1be8-11ec-abe5-5254008afee6%22%3A%7B%22op%22%3A%22~%22%2C%22lang%22%3A%22en%22%2C%22val%22%3A%22%22%7D%2C%22c9e8976a-b0a7-11ec-8342-5254008afee6%22%3A%7B%22op%22%3A%22%22%2C%22val%22%3A%22%22%7D%2C%22a9428406-b0a9-11ec-a223-5254008afee6%22%3A%7B%22op%22%3A%22%22%2C%22val%22%3A%22%22%7D%2C%22c5a49ffe-b0a8-11ec-8c81-5254008afee6%22%3A%7B%22val%22%3A%22%22%7D%7D%5D&paging-filter=1&tiles=true&format=tilecsv&reportlink=false&precision=6&total=5819&sort-results=asc"
+                        "searchString": "https://dlvrapps.nrs.gov.bc.ca/int/arches-fossils/search?advanced-search=%5B%7B%22op%22%3A%22and%22%2C%222a309dcc-1beb-11ec-a4b1-5254008afee6%22%3A%7B%22op%22%3A%22%22%2C%22val%22%3A%22e7c45e1c-d13f-4e3a-89db-e5d9df34538c%22%7D%2C%22fdbc5a08-1be8-11ec-abe5-5254008afee6%22%3A%7B%22op%22%3A%22~%22%2C%22lang%22%3A%22en%22%2C%22val%22%3A%22%22%7D%2C%22c9e8976a-b0a7-11ec-8342-5254008afee6%22%3A%7B%22op%22%3A%22%22%2C%22val%22%3A%22%22%7D%2C%22a9428406-b0a9-11ec-a223-5254008afee6%22%3A%7B%22op%22%3A%22%22%2C%22val%22%3A%22%22%7D%2C%22c5a49ffe-b0a8-11ec-8c81-5254008afee6%22%3A%7B%22val%22%3A%22%22%7D%7D%5D&paging-filter=1&tiles=true&format=tilecsv&reportlink=false&precision=6&total=5819&sort-results=asc"
                     },
                     "datatype": "resource-instance",
                     "description": null,
@@ -3518,7 +3518,7 @@
                                 "should": []
                             }
                         },
-                        "searchString": "http://arches7.local/int/arches-fossils/search?paging-filter=1&tiles=true&format=tilecsv&reportlink=false&precision=6&total=466&advanced-search=%5B%7B%22op%22%3A%22and%22%2C%222a309dcc-1beb-11ec-a4b1-5254008afee6%22%3A%7B%22op%22%3A%22%22%2C%22val%22%3A%22%22%7D%2C%22a9428406-b0a9-11ec-a223-5254008afee6%22%3A%7B%22op%22%3A%22%22%2C%22val%22%3A%22df8200fa-f5c9-4eab-944f-4af31e309443%22%7D%2C%22c5a49ffe-b0a8-11ec-8c81-5254008afee6%22%3A%7B%22val%22%3A%22%22%7D%2C%22c9e8976a-b0a7-11ec-8342-5254008afee6%22%3A%7B%22op%22%3A%22%22%2C%22val%22%3A%22%22%7D%2C%22fdbc5a08-1be8-11ec-abe5-5254008afee6%22%3A%7B%22op%22%3A%22~%22%2C%22lang%22%3A%22en%22%2C%22val%22%3A%22%22%7D%7D%5D&sort-results=asc"
+                        "searchString": "https://dlvrapps.nrs.gov.bc.ca/int/arches-fossils/search?paging-filter=1&tiles=true&format=tilecsv&reportlink=false&precision=6&total=466&advanced-search=%5B%7B%22op%22%3A%22and%22%2C%222a309dcc-1beb-11ec-a4b1-5254008afee6%22%3A%7B%22op%22%3A%22%22%2C%22val%22%3A%22%22%7D%2C%22a9428406-b0a9-11ec-a223-5254008afee6%22%3A%7B%22op%22%3A%22%22%2C%22val%22%3A%22df8200fa-f5c9-4eab-944f-4af31e309443%22%7D%2C%22c5a49ffe-b0a8-11ec-8c81-5254008afee6%22%3A%7B%22val%22%3A%22%22%7D%2C%22c9e8976a-b0a7-11ec-8342-5254008afee6%22%3A%7B%22op%22%3A%22%22%2C%22val%22%3A%22%22%7D%2C%22fdbc5a08-1be8-11ec-abe5-5254008afee6%22%3A%7B%22op%22%3A%22~%22%2C%22lang%22%3A%22en%22%2C%22val%22%3A%22%22%7D%7D%5D&sort-results=asc"
                     },
                     "datatype": "resource-instance",
                     "description": "",
@@ -3812,8 +3812,8 @@
             "publication": {
                 "graph_id": "7f2c2082-6c51-11ed-9b7d-5254004d77d3",
                 "notes": null,
-                "publicationid": "3d5b7ce0-7bea-11ed-8398-5254004d77d3",
-                "published_time": "2022-12-14T14:02:30.032",
+                "publicationid": "b1a8e156-b2fd-11ed-a5ed-0050568377a0",
+                "published_time": "2023-02-22T16:10:19.545",
                 "user_id": 1
             },
             "relatable_resource_model_ids": [],
@@ -3846,9 +3846,9 @@
         }
     ],
     "metadata": {
-        "db": "PostgreSQL 12.12 on x86_64-pc-linux-gnu, compiled by gcc (GCC) 4.8.5 20150623 (Red Hat 4.8.5-44), 64-bit",
-        "git hash": "/bin/sh: git: command not found",
+        "db": "PostgreSQL 12.11 on x86_64-pc-linux-gnu, compiled by gcc (GCC) 4.8.5 20150623 (Red Hat 4.8.5-44), 64-bit",
+        "git hash": "30b5937 2023-02-03 12:30:44 -0800",
         "os": "Linux",
-        "os version": "3.10.0-1160.76.1.el7.x86_64"
+        "os version": "3.10.0-1160.81.1.el7.x86_64"
     }
 }
