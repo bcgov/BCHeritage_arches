@@ -46,6 +46,7 @@ class BCRHPSiteDescriptors(AbstractPrimaryDescriptorsFunction):
     # For Name part of descriptor
     en_graph = {"en": "BC Heritage Resource"}
 
+    _empty_name_value = '(No official name)'
     _site_name_type_node = models.Node.objects.filter(
         alias='name_type',
         graph__name__contains=en_graph
@@ -121,4 +122,4 @@ class BCRHPSiteDescriptors(AbstractPrimaryDescriptorsFunction):
                 if name:
                     display_value = display_value + name
 
-        return display_value
+        return display_value if display_value else self._empty_name_value
