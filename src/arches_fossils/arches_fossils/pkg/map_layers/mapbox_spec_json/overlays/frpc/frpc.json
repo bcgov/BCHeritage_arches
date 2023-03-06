@@ -4,10 +4,21 @@
     "frpc-source": {
       "type": "vector",
       "tiles": [
-        "/int/arches-fossils/wms/map_data.fiss_frpc_br/{z}/{x}/{y}.pbf"
+        "/int/arches-fossils/tileserver/map_data.fiss_frpc_br/{z}/{x}/{y}.pbf"
       ],
       "tileSize": 512
     }
+  },
+  "layer-metadata": {
+    "addtomap": false,
+    "centerx": null,
+    "centery": null,
+    "icon": "fa fa-globe",
+    "isoverlay": true,
+    "legend": null,
+    "searchonly": false,
+    "sortorder": 0,
+    "zoom": null
   },
   "layers": [
     {
@@ -17,6 +28,9 @@
       "source-layer": "map_data.fiss_frpc_br",
       "minzoom": 0,
       "maxzoom": 20,
+      "metadata": {
+        "fossils:restricted_users": ["bferguso","edom"]
+      },
       "paint": {
         "line-width": 2,
         "line-color": [
