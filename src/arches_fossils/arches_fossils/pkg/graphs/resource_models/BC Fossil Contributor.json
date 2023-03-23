@@ -22,7 +22,7 @@
                     "instructions": {
                         "en": ""
                     },
-                    "is_editable": true,
+                    "is_editable": false,
                     "name": {
                         "en": "Person"
                     },
@@ -49,7 +49,7 @@
                     "instructions": {
                         "en": ""
                     },
-                    "is_editable": true,
+                    "is_editable": false,
                     "name": {
                         "en": "Company Name"
                     },
@@ -76,9 +76,9 @@
                     "instructions": {
                         "en": ""
                     },
-                    "is_editable": true,
+                    "is_editable": false,
                     "name": {
-                        "en": "Consultant"
+                        "en": "Contributor"
                     },
                     "nodegroup_id": "c4ec91a4-9dea-11ed-9a7b-5254004d77d3",
                     "sortorder": null,
@@ -180,7 +180,8 @@
                         ],
                         "placeholder": {
                             "en": "Select an option"
-                        }
+                        },
+                        "url": "/int/arches-fossils/concepts/dropdown?conceptid=0454aeb7-da1e-4d10-b45b-9ec16a52767b"
                     },
                     "id": "56a839af-4f62-4511-8091-98d655e78ee7",
                     "label": {
@@ -537,7 +538,7 @@
             ],
             "graphid": "605b0bbc-8661-4cf2-b340-df743a8c5f89",
             "iconclass": "fa fa-male",
-            "is_editable": true,
+            "is_editable": false,
             "isresource": true,
             "jsonldcontext": null,
             "name": {
@@ -831,17 +832,17 @@
                         },
                         "options": [
                             {
-                                "id": "e699a62e-59d7-4931-84c9-3526a8260717",
-                                "selected": false,
-                                "text": {
-                                    "en": "Company"
-                                }
-                            },
-                            {
                                 "id": "5fe283e7-3ecf-46d2-adff-a82a30447d43",
                                 "selected": false,
                                 "text": {
                                     "en": "Individual"
+                                }
+                            },
+                            {
+                                "id": "e699a62e-59d7-4931-84c9-3526a8260717",
+                                "selected": false,
+                                "text": {
+                                    "en": "Company"
                                 }
                             }
                         ]
@@ -912,8 +913,8 @@
             "publication": {
                 "graph_id": "605b0bbc-8661-4cf2-b340-df743a8c5f89",
                 "notes": null,
-                "publicationid": "ad22dd40-c990-11ed-875c-5254004d77d3",
-                "published_time": "2023-03-23T10:37:53.557",
+                "publicationid": "782ecafc-c9a1-11ed-b6b8-5254004d77d3",
+                "published_time": "2023-03-23T12:38:06.160",
                 "user_id": 1
             },
             "relatable_resource_model_ids": [],
