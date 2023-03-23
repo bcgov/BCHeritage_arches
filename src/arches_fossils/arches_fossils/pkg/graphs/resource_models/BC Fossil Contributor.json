@@ -532,7 +532,7 @@
                     },
                     "function_id": "60000000-0000-0000-0000-000000001001",
                     "graph_id": "605b0bbc-8661-4cf2-b340-df743a8c5f89",
-                    "id": "13e048bd-d321-4d48-8581-d23acf1ceb4e"
+                    "id": "ede503e9-7f9f-44a6-aa7d-149bf13e3a0f"
                 }
             ],
             "graphid": "605b0bbc-8661-4cf2-b340-df743a8c5f89",
@@ -541,7 +541,7 @@
             "isresource": true,
             "jsonldcontext": null,
             "name": {
-                "en": "BC Fossils Contributor"
+                "en": "BC Fossil Contributor"
             },
             "nodegroups": [
                 {
@@ -609,7 +609,7 @@
                     "isrequired": false,
                     "issearchable": true,
                     "istopnode": true,
-                    "name": "BC Fossils Contributor",
+                    "name": "BC Fossil Contributor",
                     "nodegroup_id": null,
                     "nodeid": "98275cda-9dea-11ed-b3e8-5254004d77d3",
                     "ontologyclass": "http://www.cidoc-crm.org/cidoc-crm/E39_Actor",
@@ -645,7 +645,7 @@
                     "nodeid": "99643f1e-9e4e-11ed-b6d5-5254004d77d3",
                     "ontologyclass": "http://www.cidoc-crm.org/cidoc-crm/E3_Condition_State",
                     "parentproperty": "http://www.ics.forth.gr/isl/CRMdig/L54_is_same-as",
-                    "sortorder": 1
+                    "sortorder": 0
                 },
                 {
                     "alias": "contact_email",
@@ -799,7 +799,7 @@
                     "nodeid": "c4ec9f82-9dea-11ed-9a7b-5254004d77d3",
                     "ontologyclass": "http://www.cidoc-crm.org/cidoc-crm/E21_Person",
                     "parentproperty": "http://www.ics.forth.gr/isl/CRMdig/L54i_is_same-as",
-                    "sortorder": 3
+                    "sortorder": 0
                 },
                 {
                     "alias": "first_name",
@@ -831,17 +831,17 @@
                         },
                         "options": [
                             {
-                                "id": "5fe283e7-3ecf-46d2-adff-a82a30447d43",
-                                "selected": false,
-                                "text": {
-                                    "en": "Individual"
-                                }
-                            },
-                            {
                                 "id": "e699a62e-59d7-4931-84c9-3526a8260717",
                                 "selected": false,
                                 "text": {
                                     "en": "Company"
+                                }
+                            },
+                            {
+                                "id": "5fe283e7-3ecf-46d2-adff-a82a30447d43",
+                                "selected": false,
+                                "text": {
+                                    "en": "Individual"
                                 }
                             }
                         ]
@@ -912,8 +912,8 @@
             "publication": {
                 "graph_id": "605b0bbc-8661-4cf2-b340-df743a8c5f89",
                 "notes": null,
-                "publicationid": "bddcbeae-c502-11ed-9be7-5254004d77d3",
-                "published_time": "2023-03-17T15:31:48.432",
+                "publicationid": "ad22dd40-c990-11ed-875c-5254004d77d3",
+                "published_time": "2023-03-23T10:37:53.557",
                 "user_id": 1
             },
             "relatable_resource_model_ids": [],
@@ -933,7 +933,7 @@
                 "isrequired": false,
                 "issearchable": true,
                 "istopnode": true,
-                "name": "BC Fossils Contributor",
+                "name": "BC Fossil Contributor",
                 "nodegroup_id": null,
                 "nodeid": "98275cda-9dea-11ed-b3e8-5254004d77d3",
                 "ontologyclass": "http://www.cidoc-crm.org/cidoc-crm/E39_Actor",
