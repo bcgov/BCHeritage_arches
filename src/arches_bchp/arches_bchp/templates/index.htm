@@ -65,11 +65,13 @@ along with this program. If not, see <http://www.gnu.org/licenses/>.
                     </button>
 
                     <div class="relative nav-brand-container">
-                        <div class="navbar-brand-v5-icon-container">
+                        <a href="https://www2.gov.bc.ca/gov/content/home" target="BCGov Home">
+                            <div class="navbar-brand-v5-icon-container">
                             <img class="navbar-brand-v5-icon" src="{% webpack_static 'img/logo/BCID_H_gry_rev_clipped.png' %}" alt="Arches Logo">
                         </div>
+                        </a>
                         <div class="application-name">
-                            <h1>{% blocktrans %}BC Registry of Historic Places {% endblocktrans %}</h1>
+                            <h1>{% blocktrans %}BC Register of Historic Places {% endblocktrans %}</h1>
                         </div>
                     </div>
                 </div>
@@ -169,9 +171,13 @@ along with this program. If not, see <http://www.gnu.org/licenses/>.
                                 <!-- LAYERS -->
                                 <!-- NEW LAYER -->
                                 <div class="tp-caption sft start text-bold v5-splash-caption" delay="4500" data-hoffset="0" data-y="400" data-speed="800" data-start="100" data-easing="Back.easeInOut" data-endspeed="300" data-x="0">
-                                    <h2>{% blocktrans %}BC Registry of Historic Places{% endblocktrans %}</h2>
-                                    <p>{% trans "Official Registry of historic places for" %}</p>
+                                    <h2>{% blocktrans %}BC Register of Historic Places{% endblocktrans %}</h2>
+                                    <p>{% trans "Official Register of historic places for" %}</p>
                                     <p>{% trans "British Columbia" %}</p>
+                                    <div style="text-align: right">
+                                    <p style="font-size: small; padding-top: 20px">The BC Register of Historic Places records historic places that have been officially recognized </p>
+                                    <p style="font-size: small">by the provincial, federal or local / regional governments for their heritage value.</p>
+                                    </div>
                                 </div>
 
                                 <!-- Gradient -->
@@ -179,7 +185,7 @@ along with this program. If not, see <http://www.gnu.org/licenses/>.
 
                                 <!-- Attribution -->
                                 <div class="image-attribution">
-                                    <span>{% trans "Bowen Island Cabin" %}</span>
+                                    <span>{% trans "Grist Mill at Keremeos" %}</span>
                                 </div>
                             </li>
                         </ul>
