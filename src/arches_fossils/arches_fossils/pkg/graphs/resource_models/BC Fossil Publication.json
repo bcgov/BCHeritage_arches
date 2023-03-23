@@ -738,7 +738,7 @@
                     "edgeid": "077ad12b-b414-4965-ac9b-eb65da6f58d0",
                     "graph_id": "3caf329f-b8f7-11e6-84a5-026d961c88e6",
                     "name": null,
-                    "ontologyproperty": "http://www.cidoc-crm.org/cidoc-crm/P10_falls_within",
+                    "ontologyproperty": "http://www.ics.forth.gr/isl/CRMdig/L54i_is_same-as",
                     "rangenode_id": "5be42654-be01-11ed-bff8-5254004d77d3"
                 },
                 {
@@ -819,7 +819,7 @@
                     "edgeid": "5504bba2-d144-4b6f-a7a2-eda189d9a7a4",
                     "graph_id": "3caf329f-b8f7-11e6-84a5-026d961c88e6",
                     "name": null,
-                    "ontologyproperty": "http://www.cidoc-crm.org/cidoc-crm/P10_falls_within",
+                    "ontologyproperty": "http://www.ics.forth.gr/isl/CRMdig/L54i_is_same-as",
                     "rangenode_id": "68b9813a-be01-11ed-8b5e-5254004d77d3"
                 },
                 {
@@ -837,7 +837,7 @@
                     "edgeid": "752a4df1-b1ca-4281-b19b-21ee135e0b56",
                     "graph_id": "3caf329f-b8f7-11e6-84a5-026d961c88e6",
                     "name": null,
-                    "ontologyproperty": "http://www.cidoc-crm.org/cidoc-crm/P15i_influenced",
+                    "ontologyproperty": "http://www.cidoc-crm.org/cidoc-crm/P67_refers_to",
                     "rangenode_id": "037c8f98-be00-11ed-8b5e-5254004d77d3"
                 },
                 {
@@ -846,7 +846,7 @@
                     "edgeid": "8515ca2d-e5ac-451e-9faf-402613f9aa66",
                     "graph_id": "3caf329f-b8f7-11e6-84a5-026d961c88e6",
                     "name": null,
-                    "ontologyproperty": "http://www.cidoc-crm.org/cidoc-crm/P10_falls_within",
+                    "ontologyproperty": "http://www.ics.forth.gr/isl/CRMdig/L54i_is_same-as",
                     "rangenode_id": "947658fc-be01-11ed-bdf6-5254004d77d3"
                 },
                 {
@@ -990,7 +990,7 @@
                     "edgeid": "cbf85ea3-eff9-4c98-a2ff-7fde3239e377",
                     "graph_id": "3caf329f-b8f7-11e6-84a5-026d961c88e6",
                     "name": null,
-                    "ontologyproperty": "http://www.cidoc-crm.org/cidoc-crm/P10i_contains",
+                    "ontologyproperty": "http://www.ics.forth.gr/isl/CRMdig/L54i_is_same-as",
                     "rangenode_id": "20c23f8a-be00-11ed-bdf6-5254004d77d3"
                 },
                 {
@@ -999,7 +999,7 @@
                     "edgeid": "e8497aaf-60ef-4423-bfde-d6ce6bca3f37",
                     "graph_id": "3caf329f-b8f7-11e6-84a5-026d961c88e6",
                     "name": null,
-                    "ontologyproperty": "http://www.cidoc-crm.org/cidoc-crm/P10i_contains",
+                    "ontologyproperty": "http://www.ics.forth.gr/isl/CRMdig/L54i_is_same-as",
                     "rangenode_id": "10517634-be00-11ed-b38b-5254004d77d3"
                 }
             ],
@@ -1142,8 +1142,8 @@
                     "name": "Reference Link",
                     "nodegroup_id": "037c8f98-be00-11ed-8b5e-5254004d77d3",
                     "nodeid": "037c8f98-be00-11ed-8b5e-5254004d77d3",
-                    "ontologyclass": "http://www.cidoc-crm.org/cidoc-crm/E10_Transfer_of_Custody",
-                    "parentproperty": "http://www.cidoc-crm.org/cidoc-crm/P15i_influenced",
+                    "ontologyclass": "http://www.cidoc-crm.org/cidoc-crm/E19_Physical_Object",
+                    "parentproperty": "http://www.cidoc-crm.org/cidoc-crm/P67_refers_to",
                     "sortorder": 0
                 },
                 {
@@ -1152,7 +1152,10 @@
                         "graphs": [
                             {
                                 "graphid": "df3ee1ae-9c1c-11ec-964d-5254008afee6",
-                                "name": "BC Fossil Collection Event"
+                                "inverseRelationshipConcept": "ac41d9be-79db-4256-b368-2f4559cfbe55",
+                                "name": "BC Fossil Collection Event",
+                                "relationshipConcept": "ac41d9be-79db-4256-b368-2f4559cfbe55",
+                                "useOntologyRelationship": false
                             }
                         ],
                         "searchDsl": "",
@@ -1171,8 +1174,8 @@
                     "name": "Collection Events",
                     "nodegroup_id": "037c8f98-be00-11ed-8b5e-5254004d77d3",
                     "nodeid": "10517634-be00-11ed-b38b-5254004d77d3",
-                    "ontologyclass": "http://www.cidoc-crm.org/cidoc-crm/E10_Transfer_of_Custody",
-                    "parentproperty": "http://www.cidoc-crm.org/cidoc-crm/P10i_contains",
+                    "ontologyclass": "http://www.ics.forth.gr/isl/CRMsci/S2_Sample_Taking",
+                    "parentproperty": "http://www.ics.forth.gr/isl/CRMdig/L54i_is_same-as",
                     "sortorder": 0
                 },
                 {
@@ -1225,8 +1228,8 @@
                     "name": "Fossil Sites",
                     "nodegroup_id": "037c8f98-be00-11ed-8b5e-5254004d77d3",
                     "nodeid": "20c23f8a-be00-11ed-bdf6-5254004d77d3",
-                    "ontologyclass": "http://www.cidoc-crm.org/cidoc-crm/E11_Modification",
-                    "parentproperty": "http://www.cidoc-crm.org/cidoc-crm/P10i_contains",
+                    "ontologyclass": "http://www.cidoc-crm.org/cidoc-crm/E92_Spacetime_Volume",
+                    "parentproperty": "http://www.ics.forth.gr/isl/CRMdig/L54i_is_same-as",
                     "sortorder": 0
                 },
                 {
@@ -1387,8 +1390,8 @@
                     "name": "Fossil Samples",
                     "nodegroup_id": "037c8f98-be00-11ed-8b5e-5254004d77d3",
                     "nodeid": "5be42654-be01-11ed-bff8-5254004d77d3",
-                    "ontologyclass": "http://www.cidoc-crm.org/cidoc-crm/E10_Transfer_of_Custody",
-                    "parentproperty": "http://www.cidoc-crm.org/cidoc-crm/P10_falls_within",
+                    "ontologyclass": "http://www.cidoc-crm.org/cidoc-crm/E19_Physical_Object",
+                    "parentproperty": "http://www.ics.forth.gr/isl/CRMdig/L54i_is_same-as",
                     "sortorder": 0
                 },
                 {
@@ -1472,8 +1475,8 @@
                     "name": "Repositories",
                     "nodegroup_id": "037c8f98-be00-11ed-8b5e-5254004d77d3",
                     "nodeid": "68b9813a-be01-11ed-8b5e-5254004d77d3",
-                    "ontologyclass": "http://www.cidoc-crm.org/cidoc-crm/E10_Transfer_of_Custody",
-                    "parentproperty": "http://www.cidoc-crm.org/cidoc-crm/P10_falls_within",
+                    "ontologyclass": "http://www.cidoc-crm.org/cidoc-crm/E92_Spacetime_Volume",
+                    "parentproperty": "http://www.ics.forth.gr/isl/CRMdig/L54i_is_same-as",
                     "sortorder": 0
                 },
                 {
@@ -1526,8 +1529,8 @@
                     "name": "Fossil Types",
                     "nodegroup_id": "037c8f98-be00-11ed-8b5e-5254004d77d3",
                     "nodeid": "947658fc-be01-11ed-bdf6-5254004d77d3",
-                    "ontologyclass": "http://www.cidoc-crm.org/cidoc-crm/E10_Transfer_of_Custody",
-                    "parentproperty": "http://www.cidoc-crm.org/cidoc-crm/P10_falls_within",
+                    "ontologyclass": "http://www.cidoc-crm.org/cidoc-crm/E55_Type",
+                    "parentproperty": "http://www.ics.forth.gr/isl/CRMdig/L54i_is_same-as",
                     "sortorder": 0
                 },
                 {
@@ -1877,8 +1880,8 @@
             "publication": {
                 "graph_id": "3caf329f-b8f7-11e6-84a5-026d961c88e6",
                 "notes": null,
-                "publicationid": "6671f42e-c979-11ed-b131-5254004d77d3",
-                "published_time": "2023-03-23T07:51:16.532",
+                "publicationid": "d85b9fbc-c97a-11ed-8930-5254004d77d3",
+                "published_time": "2023-03-23T08:01:37.143",
                 "user_id": 1
             },
             "relatable_resource_model_ids": [],
