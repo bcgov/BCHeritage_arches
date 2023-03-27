@@ -22,24 +22,24 @@ details = {
 
 
 class BordenNumberDataType(StringDataType):
-    borden_number_format = re.compile('[A-Z][a-z][A-Z][a-z]-\d{1,3}')
+    borden_number_format = re.compile('^[A-Z][a-z][A-Z][a-z]-\d{1,4}$')
 
     def validate(self, value, row_number=None, source=None, node=None, nodeid=None, strict=False, **kwargs):
         errors = super(BordenNumberDataType, self).validate(value, row_number, source, node, nodeid, strict, **kwargs)
         try:
             if value is not None:
-                for key in value.keys():
-                    if not self.borden_number_format.match(value[key]):
-                        errors.append(
-                            {
-                                "type": "ERROR",
-                                "message": "Invalid borden number format: {0}. Valid format is: {1}. {2}".format(
-                                    value,
-                                    self.datatype_model.defaultconfig['format'],
-                                    "This data was not imported."
-                                ),
-                            }
-                        )
+                result = self.borden_number_format.match(value['en']['value'])
+                if not result:
+                    errors.append(
+                        {
+                            "type": "ERROR",
+                            "message": "Invalid borden number format: {0}. Valid format is: {1}. {2}".format(
+                                value['en']['value'],
+                                self.datatype_model.defaultconfig['format'],
+                                "This data was not imported."
+                            ),
+                        }
+                    )
 
         except Exception as e:
             print(e)
@@ -60,8 +60,13 @@ class BordenNumberDataType(StringDataType):
         Enforces AbCd-999 format
         """
         super(BordenNumberDataType, self).clean(tile, nodeid)
-        if tile.data[nodeid] is not None and len(tile.data[nodeid]) >= 6:
-            tile.data[nodeid] = re.sub(r"(.{2})(.{2})", r"\1 \2", tile.data[nodeid], 1).title().replace(" ","")
+        if tile.data[nodeid] is None or tile.data[nodeid]['en'] is None:
+            print("Bypassing clean...")
+            return
+
+        borden_number = tile.data[nodeid]['en']['value']
+        if borden_number is not None and len(borden_number) >= 6:
+            tile.data[nodeid]['en']['value'] = re.sub(r"(.{2})(.{2})", r"\1 \2", borden_number, 1).title().replace(" ","")
 
     # def transform_export_values(self, value, *args, **kwargs):
     #     super(BordenNumberDataType, self).transform_export_values(value, args, kwargs)
