@@ -60,6 +60,6 @@ class MVT(MVTBase):
                         [nodeid, zoom, x, y, nodeid, resource_ids],
                     )
                     tile = bytes(cursor.fetchone()[0])
-                    print(str(tile))
+                    # print(str(tile))
                     cache.set(cache_key, tile, settings.TILE_CACHE_TIMEOUT)
         return HttpResponse(tile, content_type="application/x-protobuf")
