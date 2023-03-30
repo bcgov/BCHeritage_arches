@@ -3550,6 +3550,15 @@
                 },
                 {
                     "description": null,
+                    "domainnode_id": "08e4e0fe-cd71-11ed-bcae-5254004d77d3",
+                    "edgeid": "8663011f-a118-4b09-b29e-2cb5dd77e8a7",
+                    "graph_id": "cef9c510-e3e6-4057-ac08-89ad926180b4",
+                    "name": null,
+                    "ontologyproperty": "http://www.ics.forth.gr/isl/CRMdig/L47_has_comment",
+                    "rangenode_id": "24d63430-cf23-11ed-b507-5254004d77d3"
+                },
+                {
+                    "description": null,
                     "domainnode_id": "89588b58-0d07-11ed-a4d8-5254008afee6",
                     "edgeid": "89589062-0d07-11ed-a4d8-5254008afee6",
                     "graph_id": "cef9c510-e3e6-4057-ac08-89ad926180b4",
@@ -4900,6 +4909,28 @@
                     "sortorder": 0
                 },
                 {
+                    "alias": "theme_comments",
+                    "config": {
+                        "en": ""
+                    },
+                    "datatype": "string",
+                    "description": null,
+                    "exportable": false,
+                    "fieldname": null,
+                    "graph_id": "cef9c510-e3e6-4057-ac08-89ad926180b4",
+                    "hascustomalias": false,
+                    "is_collector": false,
+                    "isrequired": false,
+                    "issearchable": true,
+                    "istopnode": false,
+                    "name": "Theme Comments",
+                    "nodegroup_id": "08e4e0fe-cd71-11ed-bcae-5254004d77d3",
+                    "nodeid": "24d63430-cf23-11ed-b507-5254004d77d3",
+                    "ontologyclass": "http://www.cidoc-crm.org/cidoc-crm/E62_String",
+                    "parentproperty": "http://www.ics.forth.gr/isl/CRMdig/L47_has_comment",
+                    "sortorder": 0
+                },
+                {
                     "alias": "copyright",
                     "config": {},
                     "datatype": "string",
@@ -6159,8 +6190,8 @@
             "publication": {
                 "graph_id": "cef9c510-e3e6-4057-ac08-89ad926180b4",
                 "notes": null,
-                "publicationid": "b2f08416-ce3b-11ed-915d-5254004d77d3",
-                "published_time": "2023-03-29T09:12:11.885",
+                "publicationid": "5c8d6f9c-cf23-11ed-b099-5254004d77d3",
+                "published_time": "2023-03-30T12:50:30.193",
                 "user_id": 1
             },
             "relatable_resource_model_ids": [],
