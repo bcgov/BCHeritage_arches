@@ -5,60 +5,6 @@
             "cards": [
                 {
                     "active": true,
-                    "cardid": "0302f3f5-90c0-4f37-919b-bd1b6c55a182",
-                    "component_id": "f05e4d3a-53c1-11e8-b0ea-784f435179ea",
-                    "config": null,
-                    "constraints": [],
-                    "cssclass": null,
-                    "description": "",
-                    "graph_id": "605b0bbc-8661-4cf2-b340-df743a8c5f89",
-                    "helpenabled": false,
-                    "helptext": {
-                        "en": ""
-                    },
-                    "helptitle": {
-                        "en": ""
-                    },
-                    "instructions": {
-                        "en": ""
-                    },
-                    "is_editable": false,
-                    "name": {
-                        "en": "Person"
-                    },
-                    "nodegroup_id": "c4ec9f82-9dea-11ed-9a7b-5254004d77d3",
-                    "sortorder": null,
-                    "visible": true
-                },
-                {
-                    "active": true,
-                    "cardid": "714950aa-e775-4924-bb0c-292c66e53b7f",
-                    "component_id": "f05e4d3a-53c1-11e8-b0ea-784f435179ea",
-                    "config": null,
-                    "constraints": [],
-                    "cssclass": null,
-                    "description": "",
-                    "graph_id": "605b0bbc-8661-4cf2-b340-df743a8c5f89",
-                    "helpenabled": false,
-                    "helptext": {
-                        "en": ""
-                    },
-                    "helptitle": {
-                        "en": ""
-                    },
-                    "instructions": {
-                        "en": ""
-                    },
-                    "is_editable": false,
-                    "name": {
-                        "en": "Company Name"
-                    },
-                    "nodegroup_id": "c4ec9672-9dea-11ed-9a7b-5254004d77d3",
-                    "sortorder": null,
-                    "visible": true
-                },
-                {
-                    "active": true,
                     "cardid": "c4ec946a-9dea-11ed-9a7b-5254004d77d3",
                     "component_id": "f05e4d3a-53c1-11e8-b0ea-784f435179ea",
                     "config": null,
@@ -76,7 +22,7 @@
                     "instructions": {
                         "en": ""
                     },
-                    "is_editable": false,
+                    "is_editable": true,
                     "name": {
                         "en": "Contributor"
                     },
@@ -103,7 +49,7 @@
                         "en": "Associated Company"
                     },
                     "node_id": "87249e6a-9deb-11ed-81b6-5254004d77d3",
-                    "sortorder": 3,
+                    "sortorder": 5,
                     "visible": true,
                     "widget_id": "31f3728c-7613-11e7-a139-784f435179ea"
                 },
@@ -208,7 +154,7 @@
                         "en": "Start Date"
                     },
                     "node_id": "b9de704c-9deb-11ed-9f52-5254004d77d3",
-                    "sortorder": 2,
+                    "sortorder": 8,
                     "visible": true,
                     "widget_id": "10000000-0000-0000-0000-000000000004"
                 },
@@ -281,7 +227,7 @@
                         "en": "Company Name"
                     },
                     "node_id": "c4ec9672-9dea-11ed-9a7b-5254004d77d3",
-                    "sortorder": 2,
+                    "sortorder": 9,
                     "visible": true,
                     "widget_id": "10000000-0000-0000-0000-000000000001"
                 },
@@ -293,6 +239,7 @@
                             "placeholder"
                         ],
                         "label": "Company or Individual",
+                        "options": [],
                         "placeholder": {
                             "en": "Select an option"
                         }
@@ -304,7 +251,7 @@
                     "node_id": "c4eca2de-9dea-11ed-9a7b-5254004d77d3",
                     "sortorder": 0,
                     "visible": true,
-                    "widget_id": "10000000-0000-0000-0000-000000000015"
+                    "widget_id": "10000000-0000-0000-0000-000000000002"
                 },
                 {
                     "card_id": "c4ec946a-9dea-11ed-9a7b-5254004d77d3",
@@ -331,7 +278,7 @@
                         "en": "Last Name"
                     },
                     "node_id": "c4ec9b2c-9dea-11ed-9a7b-5254004d77d3",
-                    "sortorder": 0,
+                    "sortorder": 6,
                     "visible": true,
                     "widget_id": "10000000-0000-0000-0000-000000000001"
                 },
@@ -360,7 +307,7 @@
                         "en": "First Name"
                     },
                     "node_id": "c4eca13a-9dea-11ed-9a7b-5254004d77d3",
-                    "sortorder": 1,
+                    "sortorder": 7,
                     "visible": true,
                     "widget_id": "10000000-0000-0000-0000-000000000001"
                 }
@@ -538,7 +485,7 @@
             ],
             "graphid": "605b0bbc-8661-4cf2-b340-df743a8c5f89",
             "iconclass": "fa fa-male",
-            "is_editable": false,
+            "is_editable": true,
             "isresource": true,
             "jsonldcontext": null,
             "name": {
@@ -550,18 +497,6 @@
                     "legacygroupid": null,
                     "nodegroupid": "c4ec91a4-9dea-11ed-9a7b-5254004d77d3",
                     "parentnodegroup_id": null
-                },
-                {
-                    "cardinality": "1",
-                    "legacygroupid": null,
-                    "nodegroupid": "c4ec9672-9dea-11ed-9a7b-5254004d77d3",
-                    "parentnodegroup_id": "c4ec91a4-9dea-11ed-9a7b-5254004d77d3"
-                },
-                {
-                    "cardinality": "1",
-                    "legacygroupid": null,
-                    "nodegroupid": "c4ec9f82-9dea-11ed-9a7b-5254004d77d3",
-                    "parentnodegroup_id": "c4ec91a4-9dea-11ed-9a7b-5254004d77d3"
                 }
             ],
             "nodes": [
@@ -589,7 +524,7 @@
                     "issearchable": true,
                     "istopnode": false,
                     "name": "Company",
-                    "nodegroup_id": "c4ec9f82-9dea-11ed-9a7b-5254004d77d3",
+                    "nodegroup_id": "c4ec91a4-9dea-11ed-9a7b-5254004d77d3",
                     "nodeid": "87249e6a-9deb-11ed-81b6-5254004d77d3",
                     "ontologyclass": "http://www.cidoc-crm.org/cidoc-crm/E74_Group",
                     "parentproperty": "http://www.cidoc-crm.org/cidoc-crm/BM.PX_is_related_to",
@@ -708,7 +643,7 @@
                     "issearchable": true,
                     "istopnode": false,
                     "name": "Start Date",
-                    "nodegroup_id": "c4ec9f82-9dea-11ed-9a7b-5254004d77d3",
+                    "nodegroup_id": "c4ec91a4-9dea-11ed-9a7b-5254004d77d3",
                     "nodeid": "b9de704c-9deb-11ed-9f52-5254004d77d3",
                     "ontologyclass": "http://www.cidoc-crm.org/cidoc-crm/E4_Period",
                     "parentproperty": "http://www.ics.forth.gr/isl/CRMdig/L54_is_same-as",
@@ -747,12 +682,12 @@
                     "fieldname": null,
                     "graph_id": "605b0bbc-8661-4cf2-b340-df743a8c5f89",
                     "hascustomalias": false,
-                    "is_collector": true,
+                    "is_collector": false,
                     "isrequired": false,
                     "issearchable": true,
                     "istopnode": false,
                     "name": "Company Name",
-                    "nodegroup_id": "c4ec9672-9dea-11ed-9a7b-5254004d77d3",
+                    "nodegroup_id": "c4ec91a4-9dea-11ed-9a7b-5254004d77d3",
                     "nodeid": "c4ec9672-9dea-11ed-9a7b-5254004d77d3",
                     "ontologyclass": "http://www.cidoc-crm.org/cidoc-crm/E82_Actor_Appellation",
                     "parentproperty": "http://www.cidoc-crm.org/cidoc-crm/P1_is_identified_by",
@@ -774,14 +709,14 @@
                     "issearchable": true,
                     "istopnode": false,
                     "name": "Last Name",
-                    "nodegroup_id": "c4ec9f82-9dea-11ed-9a7b-5254004d77d3",
+                    "nodegroup_id": "c4ec91a4-9dea-11ed-9a7b-5254004d77d3",
                     "nodeid": "c4ec9b2c-9dea-11ed-9a7b-5254004d77d3",
                     "ontologyclass": "http://www.cidoc-crm.org/cidoc-crm/E82_Actor_Appellation",
                     "parentproperty": "http://www.cidoc-crm.org/cidoc-crm/P1_is_identified_by",
                     "sortorder": 0
                 },
                 {
-                    "alias": "person",
+                    "alias": "individual",
                     "config": {
                         "en": ""
                     },
@@ -791,12 +726,12 @@
                     "fieldname": null,
                     "graph_id": "605b0bbc-8661-4cf2-b340-df743a8c5f89",
                     "hascustomalias": false,
-                    "is_collector": true,
+                    "is_collector": false,
                     "isrequired": false,
                     "issearchable": true,
                     "istopnode": false,
-                    "name": "Person",
-                    "nodegroup_id": "c4ec9f82-9dea-11ed-9a7b-5254004d77d3",
+                    "name": "Individual",
+                    "nodegroup_id": "c4ec91a4-9dea-11ed-9a7b-5254004d77d3",
                     "nodeid": "c4ec9f82-9dea-11ed-9a7b-5254004d77d3",
                     "ontologyclass": "http://www.cidoc-crm.org/cidoc-crm/E21_Person",
                     "parentproperty": "http://www.ics.forth.gr/isl/CRMdig/L54i_is_same-as",
@@ -818,7 +753,7 @@
                     "issearchable": true,
                     "istopnode": false,
                     "name": "First Name",
-                    "nodegroup_id": "c4ec9f82-9dea-11ed-9a7b-5254004d77d3",
+                    "nodegroup_id": "c4ec91a4-9dea-11ed-9a7b-5254004d77d3",
                     "nodeid": "c4eca13a-9dea-11ed-9a7b-5254004d77d3",
                     "ontologyclass": "http://www.cidoc-crm.org/cidoc-crm/E82_Actor_Appellation",
                     "parentproperty": "http://www.cidoc-crm.org/cidoc-crm/P1_is_identified_by",
@@ -827,27 +762,16 @@
                 {
                     "alias": "contributor_type",
                     "config": {
+                        "graphs": [],
                         "i18n_config": {
                             "fn": "arches.app.datatypes.datatypes.DomainDataType"
                         },
-                        "options": [
-                            {
-                                "id": "5fe283e7-3ecf-46d2-adff-a82a30447d43",
-                                "selected": false,
-                                "text": {
-                                    "en": "Individual"
-                                }
-                            },
-                            {
-                                "id": "e699a62e-59d7-4931-84c9-3526a8260717",
-                                "selected": false,
-                                "text": {
-                                    "en": "Company"
-                                }
-                            }
-                        ]
+                        "options": [],
+                        "rdmCollection": "5e86f7bf-4a7f-4c4d-b5c4-bc130b76601a",
+                        "searchDsl": "",
+                        "searchString": ""
                     },
-                    "datatype": "domain-value",
+                    "datatype": "concept",
                     "description": "Either Person or Company",
                     "exportable": false,
                     "fieldname": null,
@@ -913,8 +837,8 @@
             "publication": {
                 "graph_id": "605b0bbc-8661-4cf2-b340-df743a8c5f89",
                 "notes": null,
-                "publicationid": "782ecafc-c9a1-11ed-b6b8-5254004d77d3",
-                "published_time": "2023-03-23T12:38:06.160",
+                "publicationid": "f6b62b70-cf16-11ed-9391-5254004d77d3",
+                "published_time": "2023-03-30T11:21:45.371",
                 "user_id": 1
             },
             "relatable_resource_model_ids": [],
