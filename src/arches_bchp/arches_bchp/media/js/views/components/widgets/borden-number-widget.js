@@ -43,6 +43,9 @@ define([
             let currentValue = koMapping.toJS(self.value);
 
             if(self.form){
+                self.form.on('after-update', (req, tile) => {
+                    self.currentText(self.value[self.currentLanguage().code].value());
+                });
                 self.form.on('tile-reset', (x) => {
                     currentValue = koMapping.toJS(self.value);
                     self.currentText(currentValue[self.currentLanguage().code]?.value);
