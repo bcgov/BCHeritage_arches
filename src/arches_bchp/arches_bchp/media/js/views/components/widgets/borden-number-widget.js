@@ -40,11 +40,13 @@ define([
             initialDefault[arches.activeLanguage] = {value: '', direction: 'ltr'};
             initialCurrent[arches.activeLanguage] = {value: '', direction: 'ltr'};
             let currentDefaultValue = ko.unwrap(self.defaultValue) || initialDefault;
-            let currentValue = koMapping.toJS(self.value);
+            let currentValue = koMapping.toJS(self.value)|| initialCurrent;
 
             if(self.form){
                 self.form.on('after-update', (req, tile) => {
-                    self.currentText(self.value[self.currentLanguage().code].value());
+                    if (!!req.responseJSON.data[self.node.id]){
+                        self.currentText(req.responseJSON.data[self.node.id][self.currentLanguage().code].value)
+                    }
                 });
                 self.form.on('tile-reset', (x) => {
                     currentValue = koMapping.toJS(self.value);
