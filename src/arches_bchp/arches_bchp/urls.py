@@ -9,7 +9,7 @@ print("settings.MEDIA_URL: %s"%settings.MEDIA_URL)
 print("settings.MEDIA_ROOT: %s"%settings.MEDIA_ROOT)
 class BCRegexPattern(RegexPattern):
     def __init__(self, regexpattern):
-        print("%s -> %s" % (regexpattern.regex.pattern, regexpattern.regex.pattern.replace(r"^", r"^"+settings.BCGOV_PROXY_PREFIX, 1)))
+        # print("%s -> %s" % (regexpattern.regex.pattern, regexpattern.regex.pattern.replace(r"^", r"^"+settings.BCGOV_PROXY_PREFIX, 1)))
         # print(type(regexpattern))
         # print(type(regexpattern.regex))
         # print(type(regexpattern.regex.pattern))

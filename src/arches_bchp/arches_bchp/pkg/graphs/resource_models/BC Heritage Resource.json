@@ -56,7 +56,7 @@
                     "instructions": {
                         "en": ""
                     },
-                    "is_editable": true,
+                    "is_editable": false,
                     "name": {
                         "en": "Heritage Theme"
                     },
@@ -428,7 +428,7 @@
                     "instructions": {
                         "en": ""
                     },
-                    "is_editable": false,
+                    "is_editable": true,
                     "name": {
                         "en": "BC Heritage Function"
                     },
@@ -455,7 +455,7 @@
                     "instructions": {
                         "en": ""
                     },
-                    "is_editable": true,
+                    "is_editable": false,
                     "name": {
                         "en": "Architects / Builders"
                     },
@@ -511,7 +511,7 @@
                     },
                     "is_editable": true,
                     "name": {
-                        "en": "Site Documents"
+                        "en": "Site Document"
                     },
                     "nodegroup_id": "dc12f414-0d07-11ed-8804-5254008afee6",
                     "sortorder": 11,
@@ -565,7 +565,7 @@
                     "instructions": {
                         "en": ""
                     },
-                    "is_editable": true,
+                    "is_editable": false,
                     "name": {
                         "en": "Significant Events"
                     },
@@ -1676,13 +1676,13 @@
                     "card_id": "dc12f72a-0d07-11ed-8804-5254008afee6",
                     "config": {
                         "acceptedFiles": ".pdf",
-                        "label": "Documents",
+                        "label": "Document",
                         "maxFilesize": "200",
                         "rerender": true
                     },
                     "id": "61f8c522-b44d-4a23-98ef-453460f37cb1",
                     "label": {
-                        "en": "Documents"
+                        "en": "Document"
                     },
                     "node_id": "dc12f414-0d07-11ed-8804-5254008afee6",
                     "sortorder": 2,
@@ -2807,16 +2807,20 @@
                 {
                     "card_id": "895889dc-0d07-11ed-a4d8-5254008afee6",
                     "config": {
-                        "label": "Functional Period"
+                        "label": "Functional Period",
+                        "url": "/int/arches-bchp/concepts/dropdown?conceptid=3c034aa2-fd34-4198-aaea-967f12a42772",
+                        "placeholder": {
+                            "en": "Select an option"
+                        }
                     },
                     "id": "fa3e7214-9899-4716-893d-8598157e4674",
                     "label": {
                         "en": "Functional Period"
                     },
                     "node_id": "89588ca2-0d07-11ed-a4d8-5254008afee6",
-                    "sortorder": null,
+                    "sortorder": 1,
                     "visible": true,
-                    "widget_id": "10000000-0000-0000-0000-000000000002"
+                    "widget_id": "10000000-0000-0000-0000-000000000013"
                 },
                 {
                     "card_id": "e6286387-d046-4d80-aa72-0f6cf7ad5413",
@@ -5717,10 +5721,9 @@
                 {
                     "alias": "functional_state",
                     "config": {
-                        "options": [],
                         "rdmCollection": "3c034aa2-fd34-4198-aaea-967f12a42772"
                     },
-                    "datatype": "concept",
+                    "datatype": "concept-list",
                     "description": null,
                     "exportable": false,
                     "fieldname": null,
@@ -6006,7 +6009,7 @@
                     "sortorder": 0
                 },
                 {
-                    "alias": "information_carrier",
+                    "alias": "site_document",
                     "config": {
                         "activateMax": false,
                         "maxFileSize": null,
@@ -6022,15 +6025,15 @@
                     "isrequired": false,
                     "issearchable": true,
                     "istopnode": false,
-                    "name": "Information Carrier",
+                    "name": "Site Document",
                     "nodegroup_id": "dc12f414-0d07-11ed-8804-5254008afee6",
                     "nodeid": "dc12f414-0d07-11ed-8804-5254008afee6",
                     "ontologyclass": "http://www.cidoc-crm.org/cidoc-crm/E84_Information_Carrier",
                     "parentproperty": "http://www.cidoc-crm.org/cidoc-crm/P130_shows_features_of",
-                    "sortorder": 9
+                    "sortorder": 0
                 },
                 {
-                    "alias": "information_carrier_format_type",
+                    "alias": "document_format_type",
                     "config": {
                         "rdmCollection": "d2ade63c-1dc8-42eb-821c-24525abd5ff5"
                     },
@@ -6044,7 +6047,7 @@
                     "isrequired": false,
                     "issearchable": true,
                     "istopnode": false,
-                    "name": "Information Carrier Format Type",
+                    "name": "Document Format Type",
                     "nodegroup_id": "dc12f414-0d07-11ed-8804-5254008afee6",
                     "nodeid": "dc12f89c-0d07-11ed-8804-5254008afee6",
                     "ontologyclass": "http://www.cidoc-crm.org/cidoc-crm/E55_Type",
@@ -6190,8 +6193,8 @@
             "publication": {
                 "graph_id": "cef9c510-e3e6-4057-ac08-89ad926180b4",
                 "notes": null,
-                "publicationid": "5c8d6f9c-cf23-11ed-b099-5254004d77d3",
-                "published_time": "2023-03-30T12:50:30.193",
+                "publicationid": "7cfc3c82-d17f-11ed-b4ad-5254004d77d3",
+                "published_time": "2023-04-02T12:55:00.631",
                 "user_id": 1
             },
             "relatable_resource_model_ids": [],
