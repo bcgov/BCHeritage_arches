@@ -8,14 +8,7 @@
                     "cardid": "247a4e3c-3122-4351-9b1e-83f1d5e104bb",
                     "component_id": "f05e4d3a-53c1-11e8-b0ea-784f435179ea",
                     "config": null,
-                    "constraints": [
-                        {
-                            "card_id": "247a4e3c-3122-4351-9b1e-83f1d5e104bb",
-                            "constraintid": "3e3254ed-fdec-42ad-a3a1-d6ecd90c3908",
-                            "nodes": [],
-                            "uniquetoallinstances": false
-                        }
-                    ],
+                    "constraints": [],
                     "cssclass": null,
                     "description": {
                         "en": "Notes sent to the Local Government regarding the site submission"
@@ -44,20 +37,7 @@
                     "cardid": "29b8f4ca-7306-406b-9e30-f617e86d3eb5",
                     "component_id": "f05e4d3a-53c1-11e8-b0ea-784f435179ea",
                     "config": null,
-                    "constraints": [
-                        {
-                            "card_id": "29b8f4ca-7306-406b-9e30-f617e86d3eb5",
-                            "constraintid": "245dbfbc-032d-439c-93a2-902bd127aab6",
-                            "nodes": [],
-                            "uniquetoallinstances": false
-                        },
-                        {
-                            "card_id": "29b8f4ca-7306-406b-9e30-f617e86d3eb5",
-                            "constraintid": "045ed56b-df21-4d5b-8dd1-55d7e3d38148",
-                            "nodes": [],
-                            "uniquetoallinstances": false
-                        }
-                    ],
+                    "constraints": [],
                     "cssclass": null,
                     "description": null,
                     "graph_id": "4e69d0a9-7af2-473f-929f-71d462ea32d1",
@@ -84,14 +64,7 @@
                     "cardid": "496b9d34-958a-41fd-8302-d6d877bbb477",
                     "component_id": "f05e4d3a-53c1-11e8-b0ea-784f435179ea",
                     "config": null,
-                    "constraints": [
-                        {
-                            "card_id": "496b9d34-958a-41fd-8302-d6d877bbb477",
-                            "constraintid": "e9cca02a-ed07-437e-8047-6c99a2a47e90",
-                            "nodes": [],
-                            "uniquetoallinstances": false
-                        }
-                    ],
+                    "constraints": [],
                     "cssclass": null,
                     "description": null,
                     "graph_id": "4e69d0a9-7af2-473f-929f-71d462ea32d1",
@@ -118,20 +91,7 @@
                     "cardid": "7e0b688b-f0d8-44b0-a795-0861370b0f6a",
                     "component_id": "f05e4d3a-53c1-11e8-b0ea-784f435179ea",
                     "config": null,
-                    "constraints": [
-                        {
-                            "card_id": "7e0b688b-f0d8-44b0-a795-0861370b0f6a",
-                            "constraintid": "a9f629ab-9745-435c-a727-41946039a1cd",
-                            "nodes": [],
-                            "uniquetoallinstances": false
-                        },
-                        {
-                            "card_id": "7e0b688b-f0d8-44b0-a795-0861370b0f6a",
-                            "constraintid": "ecacc4e7-50eb-4220-9fb7-e20641d8675f",
-                            "nodes": [],
-                            "uniquetoallinstances": false
-                        }
-                    ],
+                    "constraints": [],
                     "cssclass": null,
                     "description": {
                         "en": "BCRHP Internal notes about the submission"
@@ -160,20 +120,7 @@
                     "cardid": "e56e7935-132a-452a-a098-3e8e9f8ea760",
                     "component_id": "f05e4d3a-53c1-11e8-b0ea-784f435179ea",
                     "config": null,
-                    "constraints": [
-                        {
-                            "card_id": "e56e7935-132a-452a-a098-3e8e9f8ea760",
-                            "constraintid": "e4ab05f0-226f-4d50-aac4-6b75b6574db1",
-                            "nodes": [],
-                            "uniquetoallinstances": false
-                        },
-                        {
-                            "card_id": "e56e7935-132a-452a-a098-3e8e9f8ea760",
-                            "constraintid": "811537cf-4a9b-4485-a728-51342727167b",
-                            "nodes": [],
-                            "uniquetoallinstances": false
-                        }
-                    ],
+                    "constraints": [],
                     "cssclass": null,
                     "description": {
                         "en": "List of sites submitted to BCRHP"
@@ -336,6 +283,21 @@
                     "widget_id": "10000000-0000-0000-0000-000000000005"
                 },
                 {
+                    "card_id": "496b9d34-958a-41fd-8302-d6d877bbb477",
+                    "config": {
+                        "defaultValue": false,
+                        "label": "Site Completed"
+                    },
+                    "id": "554fce5a-e4dc-44ea-abda-8123de00f97d",
+                    "label": {
+                        "en": "Site Completed"
+                    },
+                    "node_id": "c8bb825c-d88e-11ed-97d4-5254004d77d3",
+                    "sortorder": 5,
+                    "visible": true,
+                    "widget_id": "10000000-0000-0000-0000-000000000006"
+                },
+                {
                     "card_id": "29b8f4ca-7306-406b-9e30-f617e86d3eb5",
                     "config": {
                         "dateFormat": "YYYY-MM-DD",
@@ -380,7 +342,7 @@
                         "en": "Site Submission Internal Notes"
                     },
                     "node_id": "55129e2c-a32c-11ed-a0e3-5254004d77d3",
-                    "sortorder": 5,
+                    "sortorder": 6,
                     "visible": true,
                     "widget_id": "10000000-0000-0000-0000-000000000005"
                 },
@@ -742,6 +704,15 @@
                 },
                 {
                     "description": null,
+                    "domainnode_id": "4506b49e-a324-11ed-bbb0-5254004d77d3",
+                    "edgeid": "9b4e12c1-43a7-490e-91de-9c539ff84910",
+                    "graph_id": "4e69d0a9-7af2-473f-929f-71d462ea32d1",
+                    "name": null,
+                    "ontologyproperty": "http://www.cidoc-crm.org/cidoc-crm/P44_has_condition",
+                    "rangenode_id": "c8bb825c-d88e-11ed-97d4-5254004d77d3"
+                },
+                {
+                    "description": null,
                     "domainnode_id": "e750627a-a326-11ed-a0e3-5254004d77d3",
                     "edgeid": "9c083a70-c39e-4fd0-801b-a460cc61c55b",
                     "graph_id": "4e69d0a9-7af2-473f-929f-71d462ea32d1",
@@ -834,7 +805,7 @@
                     },
                     "function_id": "60000000-0000-0000-0000-000000000001",
                     "graph_id": "4e69d0a9-7af2-473f-929f-71d462ea32d1",
-                    "id": "e9452710-aead-408c-9b4c-105484cff7cb"
+                    "id": "fdda3162-57b1-417c-9601-3d88c2a70797"
                 }
             ],
             "graphid": "4e69d0a9-7af2-473f-929f-71d462ea32d1",
@@ -1282,6 +1253,37 @@
                     "sortorder": 0
                 },
                 {
+                    "alias": "site_changes_completed",
+                    "config": {
+                        "falseLabel": {
+                            "en": "No"
+                        },
+                        "i18n_properties": [
+                            "trueLabel",
+                            "falseLabel"
+                        ],
+                        "trueLabel": {
+                            "en": "Yes"
+                        }
+                    },
+                    "datatype": "boolean",
+                    "description": null,
+                    "exportable": false,
+                    "fieldname": null,
+                    "graph_id": "4e69d0a9-7af2-473f-929f-71d462ea32d1",
+                    "hascustomalias": false,
+                    "is_collector": false,
+                    "isrequired": false,
+                    "issearchable": true,
+                    "istopnode": false,
+                    "name": "Site Changes Completed",
+                    "nodegroup_id": "4506b49e-a324-11ed-bbb0-5254004d77d3",
+                    "nodeid": "c8bb825c-d88e-11ed-97d4-5254004d77d3",
+                    "ontologyclass": "http://www.cidoc-crm.org/cidoc-crm/E3_Condition_State",
+                    "parentproperty": "http://www.cidoc-crm.org/cidoc-crm/P44_has_condition",
+                    "sortorder": 0
+                },
+                {
                     "alias": "submitting_authority",
                     "config": {
                         "graphs": [
@@ -1388,8 +1390,8 @@
             "publication": {
                 "graph_id": "4e69d0a9-7af2-473f-929f-71d462ea32d1",
                 "notes": null,
-                "publicationid": "72588f40-a986-11ed-94a7-5254004d77d3",
-                "published_time": "2023-02-10T15:04:02.747",
+                "publicationid": "7f6d46f2-d88f-11ed-b7a6-5254004d77d3",
+                "published_time": "2023-04-11T12:37:14.814",
                 "user_id": 1
             },
             "relatable_resource_model_ids": [],
