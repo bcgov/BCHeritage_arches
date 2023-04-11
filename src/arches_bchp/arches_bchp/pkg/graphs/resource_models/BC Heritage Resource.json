@@ -51,7 +51,7 @@
                     },
                     "is_editable": false,
                     "name": {
-                        "en": "Heritage Theme"
+                        "en": "BC Heritage Theme"
                     },
                     "nodegroup_id": "08e4e0fe-cd71-11ed-bcae-5254004d77d3",
                     "sortorder": 6,
@@ -313,7 +313,7 @@
                     },
                     "is_editable": false,
                     "name": {
-                        "en": "Designation or Protection"
+                        "en": "Official Recognition Details"
                     },
                     "nodegroup_id": "6cc30064-0d06-11ed-8804-5254008afee6",
                     "sortorder": 0,
@@ -342,7 +342,7 @@
                     },
                     "is_editable": false,
                     "name": {
-                        "en": "BC Right"
+                        "en": "Official Recognition Information"
                     },
                     "nodegroup_id": "6cc30474-0d06-11ed-8804-5254008afee6",
                     "sortorder": 3,
@@ -369,7 +369,7 @@
                     },
                     "is_editable": false,
                     "name": {
-                        "en": "Heritage Class"
+                        "en": "BC Heritage Class"
                     },
                     "nodegroup_id": "7599be12-0d06-11ed-a4d8-5254008afee6",
                     "sortorder": 4,
@@ -396,7 +396,7 @@
                     },
                     "is_editable": false,
                     "name": {
-                        "en": "BC Statement of Significance"
+                        "en": "Statement of Significance"
                     },
                     "nodegroup_id": "7a171192-0d06-11ed-b43a-5254008afee6",
                     "sortorder": 9,
@@ -1595,6 +1595,28 @@
                     "widget_id": "10000000-0000-0000-0000-000000000002"
                 },
                 {
+                    "card_id": "6cc30640-0d06-11ed-8804-5254008afee6",
+                    "config": {
+                        "defaultValue": "",
+                        "i18n_properties": [
+                            "placeholder"
+                        ],
+                        "label": "Registry Types",
+                        "options": [],
+                        "placeholder": {
+                            "en": "Select an option"
+                        }
+                    },
+                    "id": "5bbae878-76b4-449e-8f00-a6afb8ca61b1",
+                    "label": {
+                        "en": "Registry Types"
+                    },
+                    "node_id": "8e61e1bc-2495-11ed-8f55-5254008afee6",
+                    "sortorder": null,
+                    "visible": true,
+                    "widget_id": "10000000-0000-0000-0000-000000000012"
+                },
+                {
                     "card_id": "dc12f72a-0d07-11ed-8804-5254008afee6",
                     "config": {
                         "defaultValue": {
@@ -2617,6 +2639,35 @@
                     "sortorder": 4,
                     "visible": true,
                     "widget_id": "10000000-0000-0000-0000-000000000002"
+                },
+                {
+                    "card_id": "09b7fe98-29d0-4e52-b17a-4c8f6286aabc",
+                    "config": {
+                        "defaultValue": {
+                            "en": {
+                                "direction": "ltr",
+                                "value": ""
+                            }
+                        },
+                        "i18n_properties": [
+                            "placeholder"
+                        ],
+                        "label": "Theme Comments",
+                        "maxLength": null,
+                        "placeholder": {
+                            "en": "Enter text"
+                        },
+                        "uneditable": false,
+                        "width": "100%"
+                    },
+                    "id": "d5dd2d87-c2cb-4dc9-9fcf-a78f3e090462",
+                    "label": {
+                        "en": "Theme Comments"
+                    },
+                    "node_id": "24d63430-cf23-11ed-b507-5254004d77d3",
+                    "sortorder": null,
+                    "visible": true,
+                    "widget_id": "10000000-0000-0000-0000-000000000001"
                 },
                 {
                     "card_id": "1b622c8c-0d0f-11ed-98c2-5254008afee6",
@@ -6187,8 +6238,8 @@
             "publication": {
                 "graph_id": "cef9c510-e3e6-4057-ac08-89ad926180b4",
                 "notes": null,
-                "publicationid": "dad06536-d88c-11ed-9993-5254004d77d3",
-                "published_time": "2023-04-11T12:18:19.646",
+                "publicationid": "07a38798-d890-11ed-9103-5254004d77d3",
+                "published_time": "2023-04-11T12:41:03.340",
                 "user_id": 1
             },
             "relatable_resource_model_ids": [],
