@@ -14,7 +14,11 @@
       "id": "digital-roads-atlas",
       "type": "line",
       "source": "digital-roads-atlas-source",
-      "source-layer": "WHSE_BASEMAPPING.DRA_DGTL_ROAD_ATLAS_MPAR_SP"
+      "source-layer": "WHSE_BASEMAPPING.DRA_DGTL_ROAD_ATLAS_MPAR_SP",
+      "paint": {
+        "line-color": "rgb(255,40,40)",
+        "line-width": 2.67
+      }
     },
     {
       "id": "digital-roads-atlas-symbol",
@@ -22,10 +26,11 @@
       "source": "digital-roads-atlas-source",
       "source-layer": "WHSE_BASEMAPPING.DRA_DGTL_ROAD_ATLAS_MPAR_SP",
       "layout": {
-        "text-field": "{ROAD_NAME_FULL}"
+        "text-field": "{ROAD_NAME_FULL}",
+        "text-size": 11
       },
       "paint": {
-        "text-color": "#333333"
+        "text-color": "rgb(52,52,52)"
       }
     }
   ]

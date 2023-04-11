@@ -29,7 +29,7 @@
       "minzoom": 0,
       "maxzoom": 20,
       "paint": {
-        "line-width": 2,
+        "line-width": 0.6,
         "line-color": [
           "case",
           ["match", ["get","frpc"], ["High"], true, false], "rgba(141,0,0,1)",
@@ -61,13 +61,14 @@
       "type": "symbol",
       "source": "frpc_ovb-source",
       "source-layer": "map_data.fiss_frpc_ovb",
+      "minzoom": 8,
       "layout": {
         "text-field": "{strat_unit}",
         "text-font": ["Open Sans Italic","Arial Unicode MS Regular"],
-        "text-size": 14
+        "text-size": 12
       },
       "paint": {
-        "text-color": "#666666"
+        "text-color": "rgb(78, 78, 78)"
       }
     }
   ]

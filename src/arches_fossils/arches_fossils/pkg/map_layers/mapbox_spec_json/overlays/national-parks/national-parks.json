@@ -18,17 +18,16 @@
       "minzoom": 0,
       "maxzoom": 20,
       "paint": {
-        "line-color": "#228822",
-        "line-width": 2,
-        "line-dasharray": [5,3,2,3]
+        "line-color": "rgb(114, 137, 68)",
+        "line-width": 1
       }
     },
     {
       "id": "national-parks-fill",
       "type": "fill",
       "paint": {
-        "fill-color": "#004400",
-        "fill-opacity": 0.1
+        "fill-color": "rgb(216, 227, 182)",
+        "fill-opacity": 0.6
       },
       "source": "national-parks-source",
       "minzoom": 0,
@@ -40,11 +39,13 @@
       "type": "symbol",
       "source": "national-parks-source",
       "source-layer": "WHSE_ADMIN_BOUNDARIES.CLAB_NATIONAL_PARKS",
+      "minzoom": 7,
       "layout": {
-        "text-field": "{ENGLISH_NAME}"
+        "text-field": "{ENGLISH_NAME}",
+        "text-size": 14
       },
       "paint": {
-        "text-color": "#0505aa"
+        "text-color": "rgb(52, 52, 52)"
       }
     }
   ]

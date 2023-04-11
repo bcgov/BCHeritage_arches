@@ -16,7 +16,11 @@
       "source": "trim-waterlines-source",
       "source-layer": "WHSE_BASEMAPPING.TRIM_WATER_LINES",
       "minzoom": 0,
-      "maxzoom": 20
+      "maxzoom": 20,
+      "paint": {
+        "line-color": "rgb(98, 206, 217)",
+        "line-width": 1
+      }
     }
   ]
 }

@@ -51,6 +51,11 @@ define([
                             {key: "LOCAL_NAME", title: "Local Name: "},
                         ]
                     },
+                "WHSE_BASEMAPPING.TRIM_CONTOUR_LINES":
+                    {
+                        displayname: [{"key": "ELEVATION", title: "Elevation (m):"}],
+                        "map_popup": []
+                    },
                 "map_data.fiss_frpc_br":
                     {
                         displayname: [{"key": "strat_unit", title: ""}],
