@@ -44,6 +44,8 @@ along with this program. If not, see <http://www.gnu.org/licenses/>.
     <link href="{% webpack_static 'css/unify.css' %}" rel="stylesheet">
     <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/font-awesome/4.2.0/css/font-awesome.min.css">
     <link href="{% webpack_static 'css/index.css' %}" rel="stylesheet">
+    <link href="{% webpack_static 'css/project.css' %}" rel="stylesheet">
+    <link href="{% webpack_static 'css/bc_index.css' %}" rel="stylesheet">
     {% if app_settings.ACCESSIBILITY_MODE %}
     <link href="{% webpack_static 'css/accessibility.css' %}" rel="stylesheet">
     {% endif %}
@@ -54,6 +56,7 @@ along with this program. If not, see <http://www.gnu.org/licenses/>.
 <!--=== Header ===-->
 <header>
     <nav class="v5-splash-navbar navbar" role="navigation">
+        <div class="feedback-bar">{% blocktrans %}Welcome to the new BC Fossil Management System{% endblocktrans %}</div>
         <div class="container-fluid">
             <div class="navbar-header">
                 <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#myNavbar" aria-expanded="false" aria-controls="myNavbar">
@@ -65,10 +68,12 @@ along with this program. If not, see <http://www.gnu.org/licenses/>.
 
                 <div class="relative nav-brand-container">
                     <div class="navbar-brand-v5-icon-container">
-                        <img class="navbar-brand-v5-icon" src="{% webpack_static 'img/logo/BCID_H_gry_rev_clipped.png' %}" alt="Arches Logo">
+                        <a href="https://www2.gov.bc.ca/gov/content/home" target="BCGov Home">
+                        <img class="navbar-brand-v5-icon" src="{% webpack_static 'img/logo/BCID_H_rgb_rev.png' %}" alt="BC Government Logo">
+                        </a>
+                        <h1>{% blocktrans %}BC Fossil Management System{% endblocktrans %}</h1>
                     </div>
                     <div class="application-name">
-                        <h1>{% blocktrans %}BC Fossil Management System{% endblocktrans %}</h1>
                     </div>
                 </div>
             </div>
@@ -92,9 +97,9 @@ along with this program. If not, see <http://www.gnu.org/licenses/>.
                             {% trans "Welcome, " %} {{ user.first_name|default:user.username }}
                         </a>
                     </li>
-                    <li>
+                    <!--li>
                         <a class="application-login" href="{% url 'auth' %}?next={% url 'home' %}{% if user.username != 'anonymous' %}&logout=true{% endif %}">{% trans 'Log off' %}</a>
-                    </li>
+                    </li-->
                     {% endif %}
                     {% if show_language_swtich %}
                     <li>
@@ -119,9 +124,9 @@ along with this program. If not, see <http://www.gnu.org/licenses/>.
         <!-- Intro Section -->
         <section id="info-block-0" class="app-info-block intro-section relative">
             <!-- Vertical Nav -->
-            <div class="vertical-nav-container-background"></div>
+<!--            <div class="vertical-nav-container-background"></div>-->
 
-            <div id="cd-vertical-nav" class="vertical-nav-container">
+            <div id="cd-vertical-nav" class="vertical-nav-container" style="display: none;">
                 <ul class="vertical-nav-list">
                     <li class="active">
                         <a class="vertical-nav-list-link" href="#info-block-0" data-number="1" aria-label="Go to the top of the page">
@@ -129,18 +134,18 @@ along with this program. If not, see <http://www.gnu.org/licenses/>.
                         </a>
                     </li>
                     <li>
-                        <a class="vertical-nav-list-link" href="#info-block-1" data-number="2" aria-label="Go to the fast section">
-                            <span class="vertical-nav-list-ref">{% trans "Fast" %}</span>
+                        <a class="vertical-nav-list-link" href="#info-block-1" data-number="2" aria-label="Go to the management section">
+                            <span class="vertical-nav-list-ref">{% trans "Fossil management in BC" %}</span>
                         </a>
                     </li>
                     <li>
-                        <a class="vertical-nav-list-link" href="#info-block-2" data-number="3" aria-label="Go to the workflows section">
-                            <span class="vertical-nav-list-ref">{% trans "Workflows" %}</span>
+                        <a class="vertical-nav-list-link" href="#info-block-2" data-number="3" aria-label="Go to the jurisdiction section">
+                            <span class="vertical-nav-list-ref">{% trans "Jurisdiction for fossil management" %}</span>
                         </a>
                     </li>
                     <li>
-                        <a class="vertical-nav-list-link" href="#info-block-3" data-number="4" aria-label="Go to the search tools section">
-                            <span class="vertical-nav-list-ref">{% trans "Search Tools" %}</span>
+                        <a class="vertical-nav-list-link" href="#info-block-3" data-number="4" aria-label="Go to the Important Fossil Areas section">
+                            <span class="vertical-nav-list-ref">{% trans "Important Fossil Areas" %}</span>
                         </a>
                     </li>
                     <li>
@@ -162,10 +167,9 @@ along with this program. If not, see <http://www.gnu.org/licenses/>.
                             <img src="{% webpack_static 'img/front/mcabee.jpg' %}" alt="slidebg1" data-bgfit="cover" data-bgposition="center center" data-bgrepeat="no-repeat">
                             <!-- LAYERS -->
                             <!-- NEW LAYER -->
-                            <div class="tp-caption sft start text-bold v5-splash-caption" delay="4500" data-hoffset="0" data-y="400" data-speed="800" data-start="100" data-easing="Back.easeInOut" data-endspeed="300" data-x="0">
+                            <div class="tp-caption sft start text-bold bc-splash-caption" delay="4500" data-hoffset="0" data-y="400" data-speed="800" data-start="100" data-easing="Back.easeInOut" data-endspeed="300" data-x="0">
                                 <h2>{% blocktrans %}BC Fossil Management System{% endblocktrans %}</h2>
-                                <p>{% trans "Providing information, guidance and policies to support" %}</p>
-                                <p>{% trans "protection and management of fossils and fossil sites in B.C." %}</p>
+                                <h4 class="area-description">{% trans "Providing information, guidance and policies to support protection and management of fossils and fossil sites in B.C." %}</h4>
                             </div>
 
                             <!-- Gradient -->
@@ -188,131 +192,111 @@ along with this program. If not, see <http://www.gnu.org/licenses/>.
         <!-- End Intro Section -->
 
         <!-- Info Block 1 -->
-        <section id="info-block-1" class="app-info-block relative">
+        <section id="info-block-1" class="app-info-block app-info-content relative">
             <div>
 
                 <!-- Heading Info -->
-                <div class="sub-section">
-                    <div class="col-lg-7">
-                        <div class="app-info-block-intro text-center">
-                            <h2 class="app-info-block-header">{% trans "Fast" %}</h2>
-                            <h3 class="app-info-block-title">{% trans "Deploy Applications Rapidly" %}</h3>
+                <div class="info-section">
+                        <div class="app-info-block-intro">
+                            <h3 class="app-info-block-title">{% trans "Fossil management in British Columbia" %}</h3>
                             <p class="app-info-block-text">
-                                {% trans "Design custom information management applications in hours.  Build your databases with Arches Designer, then configure your interface all without having to write any code." %}
+                                {% trans "Fossils are part of B.C.'s natural heritage and include preserved remains of organisms in rock and biological activity such as footprints called trace fossils. The Fossil Management Office provides information, guidance and policies to support protection and management of fossils and fossil sites in B.C. " %}
                             </p>
                         </div>
-                    </div>
                 </div>
 
                 <!-- Content -->
-                <div class="splash-img">
-                    <img src="{% webpack_static 'img/landing/imac_designer.png' %}"  alt="Arches Designer">
-                </div>
+                <figure class="splash-img">
+                    <img src="{% webpack_static 'img/front/2023-04-01_screenshot_search.png' %}"  alt="Arches Designer">
+                    <figcaption>{% trans "Figure 1: Interactive BC map of fossil sites." %}</figcaption>
+                </figure>
 
-                <!-- Sub-section -->
-                <div class="row app-info-sub-block">
-
-                    <!-- Arches Data Type Block -->
-                    <div class="col-lg-6">
-                        <div class="sub-block-container">
-                            <h3 class="app-info-block-title">{% trans "Interface Manager" %}</h3>
-                            <p class="sub-block-description">
-                                {% trans "Arches automatically creates data entry forms based on your data models.  Use Arches' Card Manager to configure the look and feel of your data entry UI." %}
-                            </p>
-                            <img class="sub-block-image" src="{% webpack_static 'img/landing/card_manager.png' %}" alt="Card Manager">
-                        </div>
+                <div class="info-body">
+                    <div class="app-info-block-intro">
+                        <h3 class="app-info-block-title">{% trans "Fossils in B.C." %}</h3>
+                        <p class="app-info-block-text">
+                            {% trans "Fossils are the historical record of the evolution and development of life on Earth. They are important globally for their scientific, heritage, educational and economic value." %}
+                        </p>
+                        <p class="app-info-block-text">
+                            {% trans "British Columbia has a rich and diverse variety of fossils and fossil deposits resulting from the complex geological processes that formed the province." %}
+                        </p>
+                        <p class="app-info-block-text">
+                            {% trans "For the legal definition of a fossil go to: " %}<a href="https://www.bclaws.gov.bc.ca/civix/document/id/lc/statreg/214_2011">{% trans "Fossil Definition Regulation" %}</a>
+                        </p>
+                        <p class="app-info-block-text">
+                            {% trans "Fossil sites are concentrated on Vancouver Island, Haida Gwaii, in the Princeton-Merritt-Kamloops area, in southeastern and northeastern British Columbia and the Central Interior Plateau." %}
+                        </p>
                     </div>
-
-                    <!-- Arches Data Type Block -->
-                    <div class="col-lg-6">
-                        <div class="sub-block-container">
-                            <h3 class="app-info-block-title">{% trans "Data Security" %}</h3>
-                            <p class="sub-block-description">
-                                {% trans "Use Arches' Permissions Manager to set up data access rules for all your user groups and individual accounts.  You can define read/write/delete and no-access permissions." %}
-                            </p>
-                            <img class="sub-block-image" src="{% webpack_static 'img/landing/permissions_manager.png' %}" alt="Permissions Manager">
-                        </div>
-                    </div>
-
                 </div>
-                <!-- End Sub-section -->
 
             </div>
         </section>
         <!-- End Info Block 1 -->
 
         <!-- Info Block 2 -->
-        <section id="info-block-2" class="app-info-block relative">
+        <section id="info-block-2" class="app-info-block app-info-content relative">
             <div>
 
                 <!-- Heading Info -->
-                <div class="sub-section">
-                    <div class="col-lg-7">
-                        <div class="app-info-block-intro text-center">
-                            <h2 class="app-info-block-header">{% trans "Workflows" %}</h2>
-                            <h3 class="app-info-block-title">{% trans "Orchestrate your data entry" %}</h3>
-                            <p class="app-info-block-text">
-                                {% trans "Design step-wise data management interfaces that simplify complex editing tasks.  Ensure that everyone enters data completely and consistently" %}
-                            </p>
-                        </div>
+                <div class="info-body">
+                    <div class="app-info-block-intro">
+                        <h3 class="app-info-block-title">{% trans "Jurisdiction for fossil management" %}</h3>
+                        <p class="app-info-block-text">
+                            {% trans "Prior to 2005, fossils were included in the definition of “mineral” for the purposes of the Mineral Tenure Act, and subject to the provincial regime governing subsurface rights. In 2005, the Mineral Definition Modification Regulation (BC Reg. 5/2005) was created to exclude fossils from the definition of “mineral” under the Act, and to state that fossils do not include limestone, dolomite, coal, petroleum or natural gas. The regulation does not affect existing mineral claims, but prevents rights to fossils from being acquired by new mineral claims." %}
+                        </p>
+                        <p class="app-info-block-text">
+                            {% trans "The regulation makes fossils a resource that is administered under the Land Act (except those fossils subject to titles issued before January 12, 2005) and to ensure that limestone, dolomite, coal, petroleum and natural gas remain subject to the Mineral Tenure Act, Coal Act or Petroleum and Natural Gas Act, as applicable." %}
+                        </p>
+                        <p class="app-info-block-text">
+                            {% trans "Land administered by the Park Act, the Ecological Reserve Act, the Protected Areas of British Columbia Act, the Wildlife Act and the Environmental and Land Use Act has different legislative requirements with associated policies and procedures." %}
+                        </p>
                     </div>
                 </div>
 
-                <!-- Content -->
-                <div class="splash-img">
-                    <img class="sub-block-image" src="{% webpack_static 'img/landing/consultation_workflow.jpg' %}" alt="Arches Workflows">
+                <div class="info-section">
+                    <div class="app-info-block-intro">
+                        <p class="app-info-block-text">
+                            {% trans "If you have questions about an existing or potential fossils site, contact the BC Fossil Management Office at 250-356-1432 Fossil.Management@gov.bc.ca for more information." %}
+                        </p>
+                    </div>
                 </div>
+
+                <figure class="splash-img">
+                    <img src="{% webpack_static 'img/front/2023-04-02_screenshot_filter.png' %}"  alt="Arches Designer">
+                    <figcaption>{% trans "Figure 2: Filter your searches by resource type using the dropdown menu." %}</figcaption>
+                </figure>
 
             </div>
         </section>
         <!-- End Info Block 2 -->
 
         <!-- Info Block 3 -->
-        <section id="info-block-3" class="app-info-block relative">
+        <section id="info-block-3" class="app-info-block app-info-content relative">
             <div>
 
                 <!-- Heading Info -->
                 <div class="sub-section">
-                    <div class="col-lg-7">
-                        <div class="app-info-block-intro text-center">
-                            <h2 class="app-info-block-header">{% trans "Arches Search Tools" %}</h2>
-                            <h3 class="app-info-block-title">{% trans "Find what you're looking for" %}</h3>
-                            <p class="app-info-block-text">
-                                {% trans "Arches comes with powerful built-in search tools.  Quickly filter large databases with term, geospatial, and time-based search components" %}
-                            </p>
-                        </div>
+                    <div class="app-info-block-intro text-center">
+                        <h3 class="app-info-block-title">{% trans "Important Fossil Areas" %}</h3>
+                        <p class="app-info-block-text">
+                            {% trans "The Important Fossil Areas map allows the public to see generalized locations with important fossil resources in B.C. and indicate where " %}
+                            <a target="fia" href="https://www2.gov.bc.ca/assets/gov/farming-natural-resources-and-industry/natural-resource-use/land-water-use/crown-land/fossil-management/fiaguidelines-abridgedforindustry_final.pdf">{% trans "Fossil Impact Assessments (PDF, 399 KB)" %}</a>
+                            {% trans " should be done. Fossil impact assessments are done before activities on land causing major disturbance of the bedrock are authorized to proceed." %}
+                        </p>
                     </div>
                 </div>
 
-                <div class="splash-img">
-                    <img class="sub-block-image" src="{% webpack_static 'img/landing/arches_search.png' %}" alt="Arches Search">
-                </div>
-
-                <!-- Sub-section -->
-                <div class="wide-box">
-                    <div class="box-highlight">
-                        <h3 class="app-info-block-header">{% trans "Search Options" %}</h3>
-                        <p>
-                            {% trans "Arches gives you many ways to find precisely the information you need, even if your Arches application contains 10's of millions of records.  In addition to term, thesaurus, geospatial, and temporal filters, Arches provides you with advanced filtering options that support boolean logic, inverses, and many other filtering options." %}
-                        </p>
-                        <br>
-                        <p>
-                            {% trans "Arches' search capabilities also provide for sophisticated data visualizations, including interactive displays of the connections between your data objects using a Force Directed Graph." %}
-                        </p>
-                        <br>
-                        <p>
-                            {% trans "If you're a software developer, you can build on Arches modular search services and create your own filters, reports, and visualizations to best show off your particular dataset." %}
-                        </p>
-
-                    </div>
-                </div>
+                <figure class="splash-img">
+                    <img src="{% webpack_static 'img/front/appian_way.jpg' %}"  alt="Photo of Appian Way">
+                    <figcaption>{% trans "Figure 3: Need a new photo/caption" %}</figcaption>
+                </figure>
 
             </div>
         </section>
         <!-- End Info Block 3 -->
 
         <!-- Info Block 4 -->
-        <section id="info-block-4" class="app-info-block relative">
+        <section id="info-block-4" class="app-info-block app-info-content relative">
             <div>
                 <!-- Heading Info -->
                 <div class="sub-section">
@@ -346,98 +330,25 @@ along with this program. If not, see <http://www.gnu.org/licenses/>.
 
 
 <!-- Footer -->
-<footer>
-
-    <!-- footer content container -->
-    <div class="row footer-links">
-
-        <!-- branding column -->
-        <div class="col-lg-4">
-            <h2 class="app-footer-heading">{% trans "Sample Institution Name" %}</h2>
-
-            <div class="organization-address">
-                {% trans "Sample Address" %}<br>
-                {% trans "Getty Conservation Institute" %}<br>
-                {% trans "1200 Getty Center Drive" %}<br>
-                {% trans "Los Angeles, CA  90049" %}<br>
-            </div>
-        </div>
-
-        <!-- Info Column -->
-        <div class="col-lg-8">
-            <h2 class="app-footer-heading">{% trans "Guides and Documentation" %}</h2>
-
-            <!-- Links -->
-            <div class="splash-links">
-                <div class="row">
-                    <div class="col-lg-4">
-                        <ul class="splash-link-container">
-                            <li>
-                                <a class="splash-link-address" href="http://https://www.archesproject.org/what-is-arches/" target="_blank">{% trans "What is Arches" %}</a>
-                            </li>
-                            <li>
-                                <a class="splash-link-address" href="https://www.archesproject.org/collector/" target="_blank">{% trans "Arches Collector" %}</a>
-                            </li>
-                            <li>
-                                <a class="splash-link-address" href="https://www.archesproject.org/implementation-considerations/" target="_blank">{% trans "Implementation Considerations" %}</a>
-                            </li>
-                            <li>
-                                <a class="splash-link-address" href="https://www.archesproject.org/development/" target="_blank">{% trans "Information For Developers" %}</a>
-                            </li>
-
-
-                        </ul>
-                    </div>
-
-                    <div class="col-lg-4">
-                        <ul class="splash-link-container">
-                            <li>
-                                <a class="splash-link-address" href="https://www.archesproject.org/faq/" target="_blank">{% trans "FAQ" %}</a>
-                            </li>
-                            <li>
-                                <a class="splash-link-address" href="https://www.archesproject.org/standards/" target="_blank">{% trans "Standards and Interoperability" %}</a>
-                            </li>
-                            <li>
-                                <a class="splash-link-address" href="https://arches.readthedocs.io/en/stable/requirements-and-dependencies/" target="_blank">{% trans "Installation Guide" %}</a>
-                            </li>
-                        </ul>
-                    </div>
-
-                    <div class="col-lg-4">
-                        <ul class="splash-link-container">
-                            <li>
-                                <a class="splash-link-address" href="https://www.archesproject.org/project-background/" target="_blank">{% trans "Arches Project Background" %}</a>
-                            </li>
-                            <li>
-                                <a class="splash-link-address" href="https://www.archesproject.org/videos/" target="_blank">{% trans "Arches Webinars/Presentations" %}</a>
-                            </li>
-                            <li>
-                                <a class="splash-link-address" href="https://www.archesproject.org/resource-models/" target="_blank">{% trans "Resource Models" %}</a>
-                            </li>
-                        </ul>
-                    </div>
-
-                </div>
-            </div>
-
+<footer class="footer">
+    <div class="arches_footer">
+        <a class="arches_link" target="archesproject" href="archesproject.org" >
+            <img class="arches_logo"
+                 src="{% webpack_static 'img/logo/arches/Arches_badge_white_powered_by_2.png' %}" alt="Powered by Arches logo">
+        </a>
+    </div>
+    <div style="display: flex; flex-direction: column;">
+        <div class="container">
+            <ul>
+                <li><a href=".">Home</a></li>
+                <li><a href=".">Disclaimer</a></li>
+                <li><a href=".">Privacy</a></li>
+                <li><a href=".">Accessibility</a></li>
+                <li><a href=".">Copyright</a></li>
+                <li><a href=".">Contact Us</a></li>
+            </ul>
         </div>
     </div>
-
-    <!-- Copyright Panel -->
-    <div class="row copyright-container">
-        <!-- Arches link -->
-        <div class="app-footer-links">
-            <div class="col-sm-8">
-                <a class="link-spacing" href="#">{% trans "Terms & Conditions" %}</a>
-                <a class="link-spacing" href="#">{% trans "Privacy Policy" %}</a>
-            </div>
-            <div class="col-sm-4">
-                <a class="app-footer-arches-link" href="http://www.archesproject.org" target="_blank">{% trans "Powered by Arches" %}</a>
-            </div>
-        </div>
-    </div>
-    <!-- End Copyright Container -->
-
 </footer>
 <!-- End Footer -->
 
@@ -516,13 +427,25 @@ along with this program. If not, see <http://www.gnu.org/licenses/>.
                     smoothScroll($(this.hash));
                 });
 
+                $("a.down-button").on('click', function (event) {
+                    event.preventDefault();
+                    smoothScroll($("#info-block-1"));
+                });
+
 
                 function updateNavigation() {
                     contentSections.each(function () {
                         $this = $(this);
                         var activeSection = $('#cd-vertical-nav a[href="#' + $this.attr('id') + '"]').data('number') - 1;
                         if (($this.offset().top - $(window).height() / 2 < $(window).scrollTop()) && ($this.offset().top + $this.height() - $(window).height() / 2 > $(window).scrollTop())) {
-                            navigationItems.eq(activeSection).addClass('is-selected');
+                            if (activeSection === 0)
+                            {
+                                $("#cd-vertical-nav").css("display","none");
+                            }
+                            else {
+                                navigationItems.eq(activeSection).addClass('is-selected');
+                                $("#cd-vertical-nav").css("display","");
+                            }
                         } else {
                             navigationItems.eq(activeSection).removeClass('is-selected');
                         }

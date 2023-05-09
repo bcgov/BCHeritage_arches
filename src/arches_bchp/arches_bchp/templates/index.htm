@@ -47,7 +47,6 @@ along with this program. If not, see <http://www.gnu.org/licenses/>.
     <link href="{% webpack_static 'css/project.css' %}" rel="stylesheet">
     <link href="{% webpack_static 'css/bc_index.css' %}" rel="stylesheet">
     <link href="{% webpack_static 'css/main.css' %}" rel="stylesheet">
-    <link href="{% webpack_static 'css/splash.css' %}" rel="stylesheet">
     {% if app_settings.ACCESSIBILITY_MODE %}
     <link href="{% webpack_static 'css/accessibility.css' %}" rel="stylesheet">
     {% endif %}
@@ -58,8 +57,7 @@ along with this program. If not, see <http://www.gnu.org/licenses/>.
     <!--=== Header ===-->
     <header>
         <nav class="v5-splash-navbar navbar" role="navigation">
-
-            <div class="feedback-bar">{% blocktrans %}Welcome to the new BC Register of Historic Places website{% endblocktrans %}</div>
+            <div class="feedback-bar">{% blocktrans %}Welcome to the new BC Register of Historic Places System{% endblocktrans %}</div>
             <div class="container-fluid">
                 <div class="navbar-header" >
 
@@ -74,13 +72,13 @@ along with this program. If not, see <http://www.gnu.org/licenses/>.
 
 
                     <div class="relative nav-brand-container">
-                        <a href="https://www2.gov.bc.ca/gov/content/home" target="BCGov Home">
-                            <div class="navbar-brand-v5-icon-container">
+                        <div class="navbar-brand-v5-icon-container">
+                            <a href="https://www2.gov.bc.ca/gov/content/home" target="BCGov Home">
                                 <img class="navbar-brand-v5-icon"
                                      src="{% webpack_static 'img/logo/BCID_H_rgb_rev.png' %}" alt="BC Government Logo">
-                                <h1>{% blocktrans %}BC Register of Historic Places {% endblocktrans %}</h1>
-                            </div>
-                        </a>
+                            </a>
+                            <h1>{% blocktrans %}BC Register of Historic Places {% endblocktrans %}</h1>
+                        </div>
                         <div class="application-name">
                         </div>
                     </div>
@@ -335,6 +333,7 @@ along with this program. If not, see <http://www.gnu.org/licenses/>.
     </main>
 
 
+    <!-- Footer -->
     <footer class="footer">
         <div class="arches_footer">
             <a class="arches_link" target="archesproject" href="archesproject.org" >
@@ -355,106 +354,6 @@ along with this program. If not, see <http://www.gnu.org/licenses/>.
             </div>
         </div>
     </footer>
-    <!-- Footer -->
-<!--    <footer>-->
-
-<!--        &lt;!&ndash; footer content container &ndash;&gt;-->
-
-<!--        <body style="display: flex; flex-direction: column; height: 100vh;">-->
-<!--        <div style="flex: 1 0 auto; padding: 20px;">-->
-<!--            <h1>Sample Footer</h1>-->
-<!--        </div>-->
-
-<!--        <div class="row footer-links">-->
-
-<!--            &lt;!&ndash; branding column &ndash;&gt;-->
-<!--            <div class="col-lg-4">-->
-<!--                <h2 class="app-footer-heading">{% trans "Sample Institution Name" %}</h2>-->
-
-<!--                <div class="organization-address">-->
-<!--                  {% trans "Sample Address" %}<br>-->
-<!--                  {% trans "Getty Conservation Institute" %}<br>-->
-<!--                  {% trans "1200 Getty Center Drive" %}<br>-->
-<!--                  {% trans "Los Angeles, CA  90049" %}<br>-->
-<!--                </div>-->
-<!--            </div>-->
-
-<!--            &lt;!&ndash; Info Column &ndash;&gt;-->
-<!--            <div class="col-lg-8">-->
-<!--                <h2 class="app-footer-heading">{% trans "Guides and Documentation" %}</h2>-->
-
-<!--                &lt;!&ndash; Links &ndash;&gt;-->
-<!--                <div class="splash-links">-->
-<!--                    <div class="row">-->
-<!--                        <div class="col-lg-4">-->
-<!--                            <ul class="splash-link-container">-->
-<!--                                <li>-->
-<!--                                    <a class="splash-link-address" href="http://https://www.archesproject.org/what-is-arches/" target="_blank">{% trans "What is Arches" %}</a>-->
-<!--                                </li>-->
-<!--                                <li>-->
-<!--                                    <a class="splash-link-address" href="https://www.archesproject.org/collector/" target="_blank">{% trans "Arches Collector" %}</a>-->
-<!--                                </li>-->
-<!--                                <li>-->
-<!--                                    <a class="splash-link-address" href="https://www.archesproject.org/implementation-considerations/" target="_blank">{% trans "Implementation Considerations" %}</a>-->
-<!--                                </li>-->
-<!--                                <li>-->
-<!--                                    <a class="splash-link-address" href="https://www.archesproject.org/development/" target="_blank">{% trans "Information For Developers" %}</a>-->
-<!--                                </li>-->
-
-
-<!--                            </ul>-->
-<!--                        </div>-->
-
-<!--                        <div class="col-lg-4">-->
-<!--                            <ul class="splash-link-container">-->
-<!--                                <li>-->
-<!--                                    <a class="splash-link-address" href="https://www.archesproject.org/faq/" target="_blank">{% trans "FAQ" %}</a>-->
-<!--                                </li>-->
-<!--                                <li>-->
-<!--                                    <a class="splash-link-address" href="https://www.archesproject.org/standards/" target="_blank">{% trans "Standards and Interoperability" %}</a>-->
-<!--                                </li>-->
-<!--                                <li>-->
-<!--                                    <a class="splash-link-address" href="https://arches.readthedocs.io/en/stable/requirements-and-dependencies/" target="_blank">{% trans "Installation Guide" %}</a>-->
-<!--                                </li>-->
-<!--                            </ul>-->
-<!--                        </div>-->
-
-<!--                        <div class="col-lg-4">-->
-<!--                            <ul class="splash-link-container">-->
-<!--                                <li>-->
-<!--                                    <a class="splash-link-address" href="https://www.archesproject.org/project-background/" target="_blank">{% trans "Arches Project Background" %}</a>-->
-<!--                                </li>-->
-<!--                                <li>-->
-<!--                                    <a class="splash-link-address" href="https://www.archesproject.org/videos/" target="_blank">{% trans "Arches Webinars/Presentations" %}</a>-->
-<!--                                </li>-->
-<!--                                <li>-->
-<!--                                    <a class="splash-link-address" href="https://www.archesproject.org/resource-models/" target="_blank">{% trans "Resource Models" %}</a>-->
-<!--                                </li>-->
-<!--                            </ul>-->
-<!--                        </div>-->
-
-<!--                    </div>-->
-<!--                </div>-->
-
-<!--            </div>-->
-<!--        </div>-->
-
-<!--        &lt;!&ndash; Copyright Panel &ndash;&gt;-->
-<!--        <div class="row copyright-container">-->
-<!--            &lt;!&ndash; Arches link &ndash;&gt;-->
-<!--            <div class="app-footer-links">-->
-<!--                <div class="col-sm-8">-->
-<!--                    <a class="link-spacing" href="#">{% trans "Terms & Conditions" %}</a>-->
-<!--                    <a class="link-spacing" href="#">{% trans "Privacy Policy" %}</a>-->
-<!--                </div>-->
-<!--                <div class="col-sm-4">-->
-<!--                    <a class="app-footer-arches-link" href="http://www.archesproject.org" target="_blank">{% trans "Powered by Arches" %}</a>-->
-<!--                </div>-->
-<!--            </div>-->
-<!--        </div>-->
-<!--        &lt;!&ndash; End Copyright Container &ndash;&gt;-->
-
-<!--    </footer>-->
     <!-- End Footer -->
 
 <script src="{% webpack_static 'node_modules/requirejs/require.js' %}"></script>
@@ -542,9 +441,7 @@ along with this program. If not, see <http://www.gnu.org/licenses/>.
                     contentSections.each(function () {
                         $this = $(this);
                         var activeSection = $('#cd-vertical-nav a[href="#' + $this.attr('id') + '"]').data('number') - 1;
-                        console.log(`Checking ${$(this)} with section ${activeSection}`)
                         if (($this.offset().top - $(window).height() / 2 < $(window).scrollTop()) && ($this.offset().top + $this.height() - $(window).height() / 2 > $(window).scrollTop())) {
-                            console.log(`Adding class for section ${activeSection}`);
                             if (activeSection === 0)
                             {
                                 $("#cd-vertical-nav").css("display","none");
@@ -554,7 +451,6 @@ along with this program. If not, see <http://www.gnu.org/licenses/>.
                                 $("#cd-vertical-nav").css("display","");
                             }
                         } else {
-                            console.log(`Removing class for section ${activeSection}`);
                             navigationItems.eq(activeSection).removeClass('is-selected');
                         }
                     });

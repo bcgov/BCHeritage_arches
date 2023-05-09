@@ -22,11 +22,11 @@ module.exports = () => {
                     client: {
                         overlay: {
                             errors: true,
-                            warnings: false,
+                            warnings: true,
                         },
                     },
                     hot: true,
-                    host: '0.0.0.0',
+                    host: 'arches7.local',
                     devMiddleware: {
                         index: true,
                         publicPath: commonWebpackConfig.output.publicPath,
