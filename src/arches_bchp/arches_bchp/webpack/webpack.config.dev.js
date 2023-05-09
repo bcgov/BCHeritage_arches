@@ -14,6 +14,9 @@ module.exports = () => {
             resolve(merge(commonWebpackConfig, {
                 mode: 'development',
                 // devtool: 'inline-source-map',
+                resolve: {
+                    symlinks: true
+                },
                 output: {
                     chunkFilename: Path.join('js', '[name].chunk.js'),
                 },
