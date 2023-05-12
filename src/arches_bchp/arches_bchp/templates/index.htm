@@ -229,7 +229,7 @@ along with this program. If not, see <http://www.gnu.org/licenses/>.
                                 <!--                                <h2 class="app-info-block-header">{% trans "What are Historic Places?" %}</h2>-->
                                 <h3 class="app-info-block-title">{% trans "What is the BC Register of Historic Places?" %}</h3>
                                 <p class="app-info-block-text">
-                                    {% trans "The BC Register of Historic Places (BCRHP) is part of the provincial heritage register of historic and archaeological sites that exists as a statutory requirement of the Heritage Conservation Act. The BC Register of Historic Places is a subset of the records on the provincial heritage register database, and is the province’s official list of post-1846 historic places that have been formally recognized by the Province or by a local government." %}
+                                    {% trans "The BC Register of Historic Places (BCRHP) is part of the provincial heritage register of historic and archaeological sites that exists as a statutory requirement of the " %} <a target="hca" href="https://www.bclaws.gov.bc.ca/civix/document/id/complete/statreg/96187_01">{% trans "Heritage Conservation Act"%}</a> {% trans ". The BC Register of Historic Places is a subset of the records on the provincial heritage register database, and is the province’s official list of post-1846 historic places that have been formally recognized by the Province or by a local government." %}
                                 </p>
                                 <p class="app-info-block-text">
                                     {% trans "The BC Register of Historic Places supports land use decisions, heritage conservation projects, and public awareness initiatives.  The database contains over 4,600 entries representing the diversity of historic places across the province.  Archaeological sites are not included in the BC Register - contact the Archaeology Branch for information about archaeology in BC." %}
@@ -258,7 +258,7 @@ along with this program. If not, see <http://www.gnu.org/licenses/>.
                             <div class="app-info-block-intro">
                                 <h3 class="app-info-block-title">{% trans "Local Government Historic Places on the BC Register" %}</h3>
                                 <p class="app-info-block-text">
-                                    Under the Local Government Act and the <a target="vancharter" href="https://www.bclaws.gov.bc.ca/civix/document/id/complete/statreg/vanch_29">Vancouver Charter</a>, local governments can formally recognize places with local or regional significance, primarily through municipal designation and community heritage register listings. Local governments are required to notify the province of all newly-recognized municipal historic places so that they can be added to the BC Register.
+                                    Under the <a target="lgact" href="https://www.bclaws.gov.bc.ca/civix/document/id/consol21/consol21/96323_31">Local Government Act</a> and the <a target="vancharter" href="https://www.bclaws.gov.bc.ca/civix/document/id/complete/statreg/vanch_29">Vancouver Charter</a>, local governments can formally recognize places with local or regional significance, primarily through municipal designation and community heritage register listings. Local governments are required to notify the province of all newly-recognized municipal historic places so that they can be added to the BC Register.
                                 </p>
                             </div>
                     </div>
@@ -290,7 +290,7 @@ along with this program. If not, see <http://www.gnu.org/licenses/>.
                             <div class="app-info-block-intro text-center">
                                 <h3 class="app-info-block-title">{% trans "Provincial Historic Places on the BC Register" %}</h3>
                                 <p class="app-info-block-text">
-                                    {% trans "Under the Heritage Conservation Act, the province can protect historic places with provincial-level heritage significance in several ways, primarily through designation as Provincial heritage property (Crown land) or Provincial heritage sites (non-Crown land)." %}
+                                    {% trans "Under the " %} <a target="hca" href="https://www.bclaws.gov.bc.ca/civix/document/id/complete/statreg/96187_01">{% trans "Heritage Conservation Act"%}</a> {% trans ", the province can protect historic places with provincial-level heritage significance in several ways, primarily through designation as Provincial heritage property (Crown land) or Provincial heritage sites (non-Crown land)." %}
                                 </p>
                                 <p class="app-info-block-text">
                                     {% trans "In British Columbia, there are over 50 provincial heritage designations for historic places under the Heritage Conservation Act." %}
@@ -336,7 +336,7 @@ along with this program. If not, see <http://www.gnu.org/licenses/>.
     <!-- Footer -->
     <footer class="footer">
         <div class="arches_footer">
-            <a class="arches_link" target="archesproject" href="archesproject.org" >
+            <a class="arches_link" target="archesproject" href="https://archesproject.org" >
                 <img class="arches_logo"
                      src="{% webpack_static 'img/logo/arches/Arches_badge_white_powered_by_2.png' %}" alt="Powered by Arches logo">
             </a>
