@@ -63,7 +63,7 @@
 <!--/ko-->
 
 <div class="rp-report-section relative rp-report-section-root">
-    <div class="rp-report-section-title">
+    <div class="rp-report-section-title bc-columns-report">
         <!-- ko foreach: { data: report.cards, as: 'card' } -->
         <!-- ko if: $parent.hideEmptyNodes() === false || card.tiles().length > 0 -->
                 <!-- ko if: $index() !== 0 --><hr class="rp-tile-separator"><!-- /ko -->
@@ -190,7 +190,7 @@
                         <!-- /ko -->
                         <!-- /ko -->
                     </div>
-                    <div class="bchrp-grid-item grod-col-2 grid-col-2 grid-row-1">
+                    <div class="bchrp-grid-item grid-col-2 grid-col-2 grid-row-1">
                             <!-- ko let: { card: getCardWithName('Borden Number') } -->
                             <!-- ko let: { widget: getWidgetWithLabel(card, 'Borden Number') } -->
                             <!-- ko foreach: { data: card.tiles, as: 'tile' } -->
