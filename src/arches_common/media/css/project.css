@@ -193,7 +193,12 @@ hr {
 }
 
 @media (min-width: 1366px) {
-    .rp-report-section-title {
+    .editor-report .bc-columns-report
+    {
+        column-count: unset !important;
+    }
+
+    .bc-columns-report {
         padding: 0 60px;
         column-count: 2;
         column-rule: solid 1px lightgrey;
