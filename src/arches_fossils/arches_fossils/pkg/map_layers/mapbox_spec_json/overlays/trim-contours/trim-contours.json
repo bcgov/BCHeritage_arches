@@ -15,8 +15,15 @@
       "type": "line",
       "source": "trim-contours-source",
       "source-layer": "WHSE_BASEMAPPING.TRIM_CONTOUR_LINES",
-      "minzoom": 0,
-      "maxzoom": 20
+      "minzoom":  3,
+      "maxzoom": 20,
+      "paint": {
+        "line-color": [
+          "case",
+          ["==", ["%",["to-number",["get","ELEVATION"]], 100], 0], "rgb(130,130,130)",
+          ["==", ["%",["to-number",["get","ELEVATION"]], 20], 0], "rgb(178,178,178)",
+          "rgba(130,0,0,.1)" ]
+      }
     }
   ]
 }

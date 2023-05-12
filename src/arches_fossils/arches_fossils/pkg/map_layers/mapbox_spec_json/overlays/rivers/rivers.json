@@ -16,18 +16,35 @@
       "source": "rivers-source",
       "source-layer": "WHSE_BASEMAPPING.FWA_RIVERS_POLY",
       "minzoom": 0,
-      "maxzoom": 20
+      "maxzoom": 20,
+      "paint": {
+        "line-width": 1,
+        "line-color": "rgb(98, 206, 217)"
+      }
+    },
+    {
+      "id": "rivers-fill",
+      "type": "fill",
+      "paint": {
+        "fill-color": "rgba(204, 255, 255, .3)"
+      },
+      "source": "rivers-source",
+      "minzoom": 0,
+      "maxzoom": 20,
+      "source-layer": "WHSE_BASEMAPPING.FWA_RIVERS_POLY"
     },
     {
       "id": "rivers-symbol",
       "type": "symbol",
       "source": "rivers-source",
       "source-layer": "WHSE_BASEMAPPING.FWA_RIVERS_POLY",
+      "minzoom": 4,
       "layout": {
-        "text-field": "{GNIS_NAME_1}"
+        "text-field": "{GNIS_NAME_1}",
+        "text-size": 12
       },
       "paint": {
-        "text-color": "#0505aa"
+        "text-color": "rgb(91, 140, 140)"
       }
     }
   ]

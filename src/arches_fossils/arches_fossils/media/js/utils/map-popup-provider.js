@@ -11,7 +11,7 @@ define([
                             {"key": "STRATIGRAPHIC_AGE_NAME", "title": "Strat Name:"},
                             {"key": "ROCK_TYPE_DESCRIPTION", "title": "Rock Type:"}
                         ]},
-                "WHSE_CADASTRE.PMBC_PARCEL_FABRIC_POLY_SVW":
+                "WHSE_CADASTRE.PMBC_PARCEL_FABRIC_POLY_FA_SVW":
                     {displayname: [{"key": "PID", title:""}],
                         "map_popup": [{key: "OWNER_TYPE", title: "Owner Type: "},
                             {key: "PLAN_NUMBER", title: "Plan #: "},
@@ -50,6 +50,11 @@ define([
                         "map_popup": [{key: "FRENCH_NAME", title: "French Name: "},
                             {key: "LOCAL_NAME", title: "Local Name: "},
                         ]
+                    },
+                "WHSE_BASEMAPPING.TRIM_CONTOUR_LINES":
+                    {
+                        displayname: [{"key": "ELEVATION", title: "Elevation (m):"}],
+                        "map_popup": []
                     },
                 "map_data.fiss_frpc_br":
                     {

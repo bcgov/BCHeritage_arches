@@ -18,14 +18,8 @@
       "minzoom": 0,
       "maxzoom": 20,
       "paint": {
-        "line-color": [
-          "case",
-          ["match", ["get","PROTECTED_LANDS_CODE"], ["PA"], true, false], "#999900",
-          ["match", ["get","PROTECTED_LANDS_CODE"], ["PP"], true, false], "#990000",
-          ["match", ["get","PROTECTED_LANDS_CODE"], ["OI"], true, false], "#000099",
-          "#228822" ],
-        "line-width": 2,
-        "line-dasharray": [5,3,2,3]
+        "line-color": "rgb(117, 128, 102)",
+        "line-width": 0.6
       }
     },
     {
@@ -54,7 +48,7 @@
         "text-field": "{PROTECTED_LANDS_NAME}"
       },
       "paint": {
-        "text-color": "#0505aa"
+        "text-color": "rgb(52, 52, 52)"
       }
     }
   ]

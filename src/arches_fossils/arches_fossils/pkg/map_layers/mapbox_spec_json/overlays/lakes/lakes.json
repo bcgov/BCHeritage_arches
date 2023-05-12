@@ -11,12 +11,27 @@
   },
   "layers": [
     {
+      "id": "lakes-fill",
+      "type": "fill",
+      "paint": {
+        "fill-color": "rgba(204, 255, 255, .3)"
+      },
+      "source": "lakes-source",
+      "minzoom": 0,
+      "maxzoom": 20,
+      "source-layer": "WHSE_BASEMAPPING.FWA_LAKES_POLY"
+    },
+    {
       "id": "lakes",
       "type": "line",
       "source": "lakes-source",
       "source-layer": "WHSE_BASEMAPPING.FWA_LAKES_POLY",
       "minzoom": 0,
-      "maxzoom": 20
+      "maxzoom": 20,
+      "paint": {
+        "line-color": "rgb(98, 206, 217)",
+        "line-width": 1
+      }
     },
     {
       "id": "lakes-symbol",
@@ -27,7 +42,7 @@
         "text-field": "{GNIS_NAME_1}"
       },
       "paint": {
-        "text-color": "#0505aa"
+        "text-color": "rgb(52,52,52)"
       }
     }
   ]

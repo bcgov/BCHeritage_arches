@@ -16,7 +16,11 @@
       "source": "stream-networks-source",
       "source-layer": "WHSE_BASEMAPPING.FWA_STREAM_NETWORKS_SP",
       "minzoom": 0,
-      "maxzoom": 20
+      "maxzoom": 20,
+      "paint": {
+        "line-color": "rgb(90, 209, 230)",
+        "line-width": 1.6
+      }
     },
     {
       "id": "stream-networks-symbol",
@@ -24,10 +28,11 @@
       "source": "stream-networks-source",
       "source-layer": "WHSE_BASEMAPPING.FWA_STREAM_NETWORKS_SP",
       "layout": {
-        "text-field": "{GNIS_NAME}"
+        "text-field": "{GNIS_NAME}",
+        "text-size": 11
       },
       "paint": {
-        "text-color": "#0505aa"
+        "text-color": "rgb(91, 140, 140)"
       }
     }
 

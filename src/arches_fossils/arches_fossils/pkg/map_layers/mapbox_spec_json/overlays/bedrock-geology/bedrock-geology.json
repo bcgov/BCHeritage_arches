@@ -6,7 +6,8 @@
       "tiles": [
         "https://openmaps.gov.bc.ca/geo/pub/WHSE_MINERAL_TENURE.GEOL_BEDROCK_UNIT_POLY_SVW/ows?service=WMS&request=GetMap&layers=WHSE_MINERAL_TENURE.GEOL_BEDROCK_UNIT_POLY_SVW&styles=&format=pbf&transparent=true&version=1.3.0&height=512&width=512&srs=EPSG:3857&bbox={bbox-epsg-3857}"
       ],
-      "tileSize": 512
+      "tileSize": 512,
+      "minzoom": 8
     }
   },
   "layers": [
@@ -18,16 +19,22 @@
       "minzoom": 0,
       "maxzoom": 20,
       "paint": {
-        "line-color": "#bbbbbb",
-        "line-width": 2
+        "line-color": "rgb(110, 110, 110)",
+        "line-width": 0.3
       }
     },
     {
       "id": "bedrock-geology-fill",
       "type": "fill",
       "paint": {
-        "fill-color": "#004400",
-        "fill-opacity": 0.1
+        "fill-color": [
+          "case",
+          ["match", ["get","ROCK_CLASS"], ["intrusive rocks"], true, false], "rgba(110, 66, 0, 0.3)",
+          ["match", ["get","ROCK_CLASS"], ["metamorphic rocks"], true, false], "rgba(172, 105, 0, 0.3)",
+          ["match", ["get","ROCK_CLASS"], ["sedimentary rocks"], true, false], "rgba(255, 235, 175, 0.4)",
+          ["match", ["get","ROCK_CLASS"], ["ultramafic rocks"], true, false], "rgba(0, 38, 115,  0.3)",
+          ["match", ["get","ROCK_CLASS"], ["volcanic rocks"], true, false], "rgba(52, 52, 52,  0.3)",
+          "rgba(0 ,0 ,0 , .1)" ]
       },
       "source": "bedrock-geology-source",
       "minzoom": 0,
@@ -45,7 +52,7 @@
         "text-size": 12
       },
       "paint": {
-        "text-color": "#666666"
+        "text-color": "rgb(52, 52, 52)"
       }
     }
   ]

@@ -18,9 +18,10 @@
       "minzoom": 0,
       "maxzoom": 20,
       "paint": {
-        "line-color": "#7777aa",
-        "line-width": 3,
-        "line-offset": 2
+        "line-color": "#000000",
+        "line-width": 1.6,
+        "line-offset": 2,
+        "line-dasharray": [6,6,6,6]
       }
     },
     {
@@ -32,10 +33,11 @@
       "maxzoom": 20,
       "layout": {
         "text-field": "{REGIONAL_DISTRICT_NAME}",
-        "text-size": 20
+        "text-size": 14,
+        "text-font": ["Open Sans Bold","Arial Unicode MS Bold"]
       },
       "paint": {
-        "text-color": "#7777aa"
+        "text-color": "#000000"
       }
     }
   ]
