@@ -217,26 +217,32 @@
                         </div>
 
                     <div class="grid-row-1 grid-col-3 bc-details-images">
-                    <!-- ko let: { mycard: getCardWithName('Site Images') } -->
-                    <!-- ko let: { mywidget: getWidgetWithLabel(mycard, 'Site Image') } -->
-                    <dl class="dl-vertical">
-                        <dt></dt>
-                        <dd>
-                            <!-- ko foreach: { data: mycard.tiles, as: 'mytile' } -->
-                            <span data-bind="component: {
+                    <!-- ko let: { photocard: getCardWithName('Site Images') } -->
+                    <!-- ko let: { photoWidget: getWidgetWithLabel(photocard, 'Site Image') } -->
+                        <!-- ko let: { titleWidget: getWidgetWithLabel(photocard, 'Image Title') } -->
+                        <!-- ko let: { descriptionWidget: getWidgetWithLabel(photocard, 'Image Description') } -->
+                        <dl class="dl-vertical">
+                            <dt></dt>
+                            <dd>
+                                <!-- ko foreach: { data: photocard.tiles, as: 'phototile' } -->
+                                <span data-bind="component: {
                                             name: 'photo-widget',
                                             params: {
-                                                tile: mytile,
-                                                node: mywidget.node,
-                                                config: mywidget.config,
-                                                value: mytile.data[mywidget.attributes.node_id()],
+                                                tile: phototile,
+                                                node: photoWidget.node,
+                                                config: photoWidget.config,
+                                                value: phototile.data[photoWidget.attributes.node_id()],
+                                                imageTitle: phototile.data[titleWidget.attributes.node_id()],
+                                                imageDescription: phototile.data[descriptionWidget.attributes.node_id()],
                                                 state: 'display_value',
                                             }
-                                        }, click: function(){console.log(mycard);}"></span>
-                            <!-- /ko -->
+                                        }, click: function(event){console.log(photocard);}"></span>
+                                <!-- /ko -->
 
-                        </dd>
-                    </dl>
+                            </dd>
+                        </dl>
+                        <!-- /ko -->
+                        <!-- /ko -->
                     <!-- /ko -->
                     <!-- /ko -->
                 </div>

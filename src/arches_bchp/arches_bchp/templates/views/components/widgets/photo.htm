@@ -4,12 +4,20 @@
 {% block display_value %}
 <!-- ko if: reportImages().length > 0 -->
 <dd>
+    <div id="photo-overlay" class="bc-full-screen-image" data-bind="visible: overlayVisible, click: showOverlay(false)">
+        <figure class="bc-full-screen-image">
+            <img class="bc-full-screen-image" data-bind="attr: {src: fullSizeUrl, alt: fullSizeAlt}">
+            <figcaption data-bind="text: fullSizeTitle"></figcaption>
+        </figure>
+    </div>
+
     <div id="report-image-grid" class="report-image-grid">
         <!-- ko foreach: reportImages() -->
         <div class="rp-image-grid-item">
-            <a id="" class="" target="_blank" data-bind="attr: {href: url}">
-                <img class="img-responsive" data-bind="attr: {src: url, alt: name}">
-            </a>
+            <figure>
+                <img class="img-responsive bc-details-image" data-bind="attr: {src: $parent.getFileUrl(url), alt: name}, click: function() {$parent.showPhoto(url, $parent.getImageTitle());}">
+                <figcaption data-bind="text: $parent.getImageTitle()"></figcaption>
+            </figure>
         </div>
         <!-- /ko -->
     </div>
