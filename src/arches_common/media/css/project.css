@@ -114,7 +114,7 @@ table.bc-summary-table td {
     float: right;
     margin-right: 25px;
     grid-column-start: 3;
-    grid-row: 1 / span 4;
+    grid-row: 1 / span 8;
 }
 
 .bc-top-offset {
@@ -130,6 +130,8 @@ table.bc-summary-table td {
     vertical-align: top;
     display: inline-block;
     padding: 2px 5px 2px 20px;
+    align-items: start;
+    justify-content: left;
 }
 
 .rp-card-section .rp-report-tile .dl-horizontal dd {
@@ -190,6 +192,82 @@ hr {
 
 .rp-card-section {
     padding-bottom: 0;
+}
+
+#photo-overlay {
+    position: fixed; /* Sit on top of the page content */
+    width: 100%; /* Full width (cover the whole page) */
+    height: 100%; /* Full height (cover the whole page) */
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0,0,0,0.5); /* Black background with opacity */
+    z-index: 2000; /* Specify a stack order in case you're using a different order for other elements */
+    cursor: pointer; /* Add a pointer on hover */
+}
+
+figure.bc-full-screen-image
+{
+    position: fixed;
+    display: block;
+    transform: translateX(-50%) translateY(-50%);
+    left: 50%;
+    top: 50%;
+    max-height: 80%;
+    max-width: 80%;
+}
+
+figure.bc-full-screen-image > figcaption
+{
+    color: #000;
+    background: #bbb;
+}
+
+img.bc-details-image
+{
+    cursor: pointer;
+}
+
+.hover-feature-metadata {
+    display: none;
+}
+/* Map Popup classes */
+
+.bc-popup-entry
+{
+    margin-bottom: 1px;
+    overflow: auto;
+}
+
+.bc-popup-label, .bc-popup-value
+{
+    display: inline-block;
+    vertical-align: top;
+}
+
+.bc-popup-label
+{
+    min-width: 105px;
+}
+
+.bc-popup-value
+{
+    font-weight: 800;
+    margin-left: 10px;
+}
+
+@media only screen and (min-width: 600px) {
+}
+
+@media only screen and (min-width: 768px) {
+}
+
+@media only screen and (min-width: 992px) {
+}
+
+/* Extra large devices (large laptops and desktops, 1200px and up) */
+@media only screen and (min-width: 1200px) {
 }
 
 @media (min-width: 1366px) {
