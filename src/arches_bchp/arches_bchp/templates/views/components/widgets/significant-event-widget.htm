@@ -1,0 +1,49 @@
+{% extends "views/components/widgets/base.htm" %}
+{% load i18n %}
+
+{% block display_value %}
+<div data-bind="visible: showEvent">
+    <!-- ko let: {event: significantEvent()} -->
+    <span data-bind="component: {
+                                            name: event.widgetLookup[event.widget_id()].name,
+                                            params: {
+                                                tile: tile(),
+                                                node: event.node,
+                                                config: event.config,
+                                                label: event.label(),
+                                                value: tile().data[event.attributes.node_id()],
+                                                state: 'display_value',
+                                            }
+                                        }, click: function(){console.log(card);}">
+    </span>:
+    <!-- /ko -->
+    <!-- ko let: {qualifier: startYearQualifier()} -->
+    <span data-bind="component: {
+                                            name: qualifier.widgetLookup[qualifier.widget_id()].name,
+                                            params: {
+                                                tile: tile(),
+                                                node: qualifier.node,
+                                                config: qualifier.config,
+                                                label: qualifier.label(),
+                                                value: tile().data[qualifier.attributes.node_id()],
+                                                state: 'display_value',
+                                            }
+                                        }, click: function(){console.log(card);}">
+    </span>
+    <!-- /ko -->
+    <!-- ko let: {year: startYear()} -->
+    <span data-bind="component: {
+                                            name: year.widgetLookup[year.widget_id()].name,
+                                            params: {
+                                                tile: tile(),
+                                                node: year.node,
+                                                config: year.config,
+                                                label: year.label(),
+                                                value: tile().data[year.attributes.node_id()],
+                                                state: 'display_value',
+                                            }
+                                        }, click: function(){console.log(card);}">
+    </span>
+    <!-- /ko -->
+</div>
+{% endblock display_value %}

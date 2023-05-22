@@ -71,7 +71,7 @@ table.bc-summary-table td {
 .bcrhp-grid-container {
     display: grid;
     /*width: 75%;*/
-    grid-template-columns: 40% 40% 20%;
+    grid-template-columns: 33% 33% 33%;
     vertical-align: top;
 }
 
@@ -100,6 +100,11 @@ table.bc-summary-table td {
 .grid-row-3 {
     grid-row-start: 3;
     grid-auto-rows: minmax(min-content, max-content);
+}
+
+.rp-image-grid-item
+{
+    max-width: unset;
 }
 
 .bcrhp-full-width-grid-item {
@@ -160,7 +165,7 @@ hr {
     }
 
     div.bcrhp-grid-item .dl-horizontal dt {
-        width: 170px !important;
+        /*width: 170px !important;*/
     }
 
     div.bcrhp-grid-item .dl-horizontal dd {
@@ -182,7 +187,7 @@ hr {
         width: 70%;
     }
     div.bcrhp-grid-item .dl-horizontal dt {
-        width: 130px !important;
+        /*width: 130px !important;*/
     }
     .bc-details-images {
         margin-right: 5px;
