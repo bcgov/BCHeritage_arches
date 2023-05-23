@@ -345,14 +345,23 @@
                     <div class="bcrhp-grid-item bcrhp-full-width-grid-item bc-top-offset">
                         <!-- ko let: { card: getCardWithName('Statement of Significance') } -->
                         <!-- ko let: { widget: getWidgetWithLabel(card, 'Significance Description') } -->
+                        <!-- ko let: { sigTypeWidget: getWidgetWithLabel(card, 'Significance Type') } -->
                         <!-- ko foreach: { data: card.tiles, as: 'tile' } -->
                         <dl class="dl-vertical dl-vertical-bc" data-bind="css: {'provisional': ko.unwrap(tile.provisionaledits) !== null && tile.userisreviewer === false}">
                             <!-- ko if: tileIndex() === 0 -->
                             <dt data-bind="text: widget.label()"></dt>
                             <!-- /ko -->
-                            <!-- ko if: tileIndex() !== 0 -->
-                            <dt data-bind="text: tileIndex"></dt>
-                            <!-- /ko -->
+                            <dd style="text-decoration: underline;" data-bind="component: {
+                                            name: sigTypeWidget.widgetLookup[sigTypeWidget.widget_id()].name,
+                                            params: {
+                                                tile: tile,
+                                                node: sigTypeWidget.node,
+                                                config: sigTypeWidget.config,
+                                                displayfullvalue: true,
+                                                value: tile.data[sigTypeWidget.attributes.node_id()],
+                                                state: 'display_value',
+                                            }
+                                        }, click: function(){console.log(card);}"></dd>
                             <dd data-bind="component: {
                                             name: widget.widgetLookup[widget.widget_id()].name,
                                             params: {
@@ -365,6 +374,7 @@
                                             }
                                         }, click: function(){console.log(card);}"></dd>
                         </dl>
+                        <!-- /ko -->
                         <!-- /ko -->
                         <!-- /ko -->
                         <!-- /ko -->
