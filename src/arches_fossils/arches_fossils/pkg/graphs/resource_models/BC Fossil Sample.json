@@ -1404,7 +1404,7 @@
                         "label": "Other Fossil Part or Fossil Part Details",
                         "maxLength": "40",
                         "placeholder": {
-                            "en": "If term not in the list, enter fossil part name here"
+                            "en": "If term not in the list above, enter fossil part name or detail here"
                         },
                         "uneditable": false,
                         "width": "100%"
@@ -1572,7 +1572,7 @@
                         "label": "Other Trace Fossil or Trace Fossil Details",
                         "maxLength": "40",
                         "placeholder": {
-                            "en": "If term not in the list, enter type of trace fossil here"
+                            "en": "If term not in the list above, enter type of trace fossil here"
                         },
                         "uneditable": false,
                         "width": "100%"
@@ -2076,6 +2076,18 @@
             "functions_x_graphs": [
                 {
                     "config": {
+                        "node_id": "7f2c823e-6c51-11ed-9b7d-5254004d77d3",
+                        "triggering_nodegroups": [
+                            "7f2c2dde-6c51-11ed-9b7d-5254004d77d3"
+                        ],
+                        "unique_value": true
+                    },
+                    "function_id": "60000000-0000-0000-0000-000000002001",
+                    "graph_id": "7f2c2082-6c51-11ed-9b7d-5254004d77d3",
+                    "id": "982e14db-59d4-45a5-96e6-9134e4786e35"
+                },
+                {
+                    "config": {
                         "class_name": "PrimaryDescriptorsFunction",
                         "descriptor_types": {
                             "description": {
@@ -2096,19 +2108,7 @@
                     },
                     "function_id": "60000000-0000-0000-0000-000000000001",
                     "graph_id": "7f2c2082-6c51-11ed-9b7d-5254004d77d3",
-                    "id": "05e52fa2-59f9-4899-ae5c-75ecc9035fdb"
-                },
-                {
-                    "config": {
-                        "node_id": "7f2c823e-6c51-11ed-9b7d-5254004d77d3",
-                        "triggering_nodegroups": [
-                            "7f2c2dde-6c51-11ed-9b7d-5254004d77d3"
-                        ],
-                        "unique_value": true
-                    },
-                    "function_id": "60000000-0000-0000-0000-000000002001",
-                    "graph_id": "7f2c2082-6c51-11ed-9b7d-5254004d77d3",
-                    "id": "b80970a4-a898-4d6a-9c5e-54d4d5c26bb1"
+                    "id": "a38e3967-c29f-4256-a1d0-484df3ca39d2"
                 }
             ],
             "graphid": "7f2c2082-6c51-11ed-9b7d-5254004d77d3",
@@ -3796,8 +3796,8 @@
             "publication": {
                 "graph_id": "7f2c2082-6c51-11ed-9b7d-5254004d77d3",
                 "notes": null,
-                "publicationid": "15d39ee2-fbcd-11ed-8200-5254004d77d3",
-                "published_time": "2023-05-26T08:56:17.141",
+                "publicationid": "a6a3bd8e-ff11-11ed-b746-5254004d77d3",
+                "published_time": "2023-05-30T12:44:39.362",
                 "user_id": 1
             },
             "relatable_resource_model_ids": [],
@@ -3827,6 +3827,27 @@
                 "en": ""
             },
             "template_id": "50000000-0000-0000-0000-000000000001",
+            "topnode": {
+                "alias": "bc_fossil_sample",
+                "config": {},
+                "datatype": "semantic",
+                "description": "",
+                "exportable": false,
+                "fieldname": null,
+                "graph_id": "7f2c2082-6c51-11ed-9b7d-5254004d77d3",
+                "hascustomalias": false,
+                "is_collector": false,
+                "isrequired": false,
+                "issearchable": true,
+                "istopnode": true,
+                "name": "BC Fossil Sample",
+                "nodegroup_id": null,
+                "nodeid": "7f2c7f50-6c51-11ed-9b7d-5254004d77d3",
+                "ontologyclass": "http://www.cidoc-crm.org/cidoc-crm/E1_CRM_Entity",
+                "parentproperty": "",
+                "sortorder": 0,
+                "sourcebranchpublication_id": null
+            },
             "version": ""
         }
     ],

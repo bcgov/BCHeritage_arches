@@ -1006,23 +1006,19 @@
             "functions_x_graphs": [
                 {
                     "config": {
-                        "class_name": "BCFossilsDescriptors",
+                        "class_name": "BCFossilsPublicationDescriptors",
                         "descriptor_types": {
                             "description": {
                                 "delimiter": "<br>",
                                 "first_only": false,
-                                "node_ids": [
-                                    "20fe4b2e-bc34-11ed-8a9b-5254004d77d3"
-                                ],
+                                "node_ids": [],
                                 "show_name": true,
                                 "type": "description"
                             },
                             "map_popup": {
                                 "delimiter": "<br>",
                                 "first_only": false,
-                                "node_ids": [
-                                    "20fe4b2e-bc34-11ed-8a9b-5254004d77d3"
-                                ],
+                                "node_ids": [],
                                 "show_name": true,
                                 "type": "map_popup"
                             },
@@ -1035,12 +1031,12 @@
                                 "type": "name"
                             }
                         },
-                        "module": "arches_fossils.functions.bc_fossils_descriptors",
+                        "module": "arches_fossils.functions.bc_fossil_publication_descriptors",
                         "triggering_nodegroups": []
                     },
-                    "function_id": "60000000-0000-0000-0000-000000001001",
+                    "function_id": "60000000-0000-0000-0000-000000001003",
                     "graph_id": "3caf329f-b8f7-11e6-84a5-026d961c88e6",
-                    "id": "5d370a47-9a66-4bef-b8b4-dc41964036e4"
+                    "id": "81fb52fe-cfa4-4ce5-bc1b-942caa206a6b"
                 }
             ],
             "graphid": "3caf329f-b8f7-11e6-84a5-026d961c88e6",
@@ -1122,7 +1118,7 @@
                     "nodeid": "0273d4d4-c752-11ed-af1c-5254004d77d3",
                     "ontologyclass": "http://www.cidoc-crm.org/cidoc-crm/E73_Information_Object",
                     "parentproperty": "http://www.ics.forth.gr/isl/CRMdig/L54_is_same-as",
-                    "sortorder": 5,
+                    "sortorder": 0,
                     "sourcebranchpublication_id": null
                 },
                 {
@@ -1145,7 +1141,7 @@
                     "nodeid": "037c8f98-be00-11ed-8b5e-5254004d77d3",
                     "ontologyclass": "http://www.cidoc-crm.org/cidoc-crm/E19_Physical_Object",
                     "parentproperty": "http://www.cidoc-crm.org/cidoc-crm/P67_refers_to",
-                    "sortorder": 7,
+                    "sortorder": 0,
                     "sourcebranchpublication_id": null
                 },
                 {
@@ -1572,7 +1568,7 @@
                     "nodeid": "9f210d2d-e74a-11e6-84a6-026d961c88e6",
                     "ontologyclass": "http://www.cidoc-crm.org/cidoc-crm/E84_Information_Carrier",
                     "parentproperty": "http://www.cidoc-crm.org/cidoc-crm/P128i_is_carried_by",
-                    "sortorder": 3,
+                    "sortorder": 0,
                     "sourcebranchpublication_id": null
                 },
                 {
@@ -1721,7 +1717,7 @@
                     "nodeid": "b5f5b1ed-e74a-11e6-84a6-026d961c88e6",
                     "ontologyclass": "http://www.cidoc-crm.org/cidoc-crm/E55_Type",
                     "parentproperty": "http://www.cidoc-crm.org/cidoc-crm/P2_has_type",
-                    "sortorder": 2,
+                    "sortorder": 0,
                     "sourcebranchpublication_id": null
                 },
                 {
@@ -1819,7 +1815,7 @@
                     "nodeid": "c03e8f18-bc30-11ed-bf42-5254004d77d3",
                     "ontologyclass": "http://www.cidoc-crm.org/cidoc-crm/E39_Actor",
                     "parentproperty": "http://www.ics.forth.gr/isl/CRMdig/L33_has_maker",
-                    "sortorder": 1,
+                    "sortorder": 0,
                     "sourcebranchpublication_id": null
                 },
                 {
@@ -1840,7 +1836,7 @@
                     "nodeid": "c0df1e05-e74a-11e6-84a6-026d961c88e6",
                     "ontologyclass": "http://www.cidoc-crm.org/cidoc-crm/E42_Identifier",
                     "parentproperty": "http://www.cidoc-crm.org/cidoc-crm/P1_is_identified_by",
-                    "sortorder": 6,
+                    "sortorder": 0,
                     "sourcebranchpublication_id": null
                 },
                 {
@@ -2132,6 +2128,27 @@
                 "en": "Models information carriers such as images, reports, and publications."
             },
             "template_id": "50000000-0000-0000-0000-000000000003",
+            "topnode": {
+                "alias": "bc_information_resource_model",
+                "config": {},
+                "datatype": "semantic",
+                "description": "",
+                "exportable": false,
+                "fieldname": "",
+                "graph_id": "3caf329f-b8f7-11e6-84a5-026d961c88e6",
+                "hascustomalias": false,
+                "is_collector": false,
+                "isrequired": false,
+                "issearchable": true,
+                "istopnode": true,
+                "name": "BC Fossil Publication",
+                "nodegroup_id": null,
+                "nodeid": "3caf329e-b8f7-11e6-84a5-026d961c88e6",
+                "ontologyclass": "http://www.cidoc-crm.org/cidoc-crm/E73_Information_Object",
+                "parentproperty": "",
+                "sortorder": 0,
+                "sourcebranchpublication_id": null
+            },
             "version": ""
         }
     ],
