@@ -27,7 +27,7 @@
                         "en": "Collection Event Significance"
                     },
                     "nodegroup_id": "23714006-70d9-11ed-9e2c-5254004d77d3",
-                    "sortorder": 4,
+                    "sortorder": 7,
                     "visible": true
                 },
                 {
@@ -49,12 +49,12 @@
                     "instructions": {
                         "en": ""
                     },
-                    "is_editable": false,
+                    "is_editable": true,
                     "name": {
                         "en": "Samples Collected"
                     },
                     "nodegroup_id": "5e4b75ba-a079-11ec-bc6e-5254008afee6",
-                    "sortorder": 5,
+                    "sortorder": 4,
                     "visible": true
                 },
                 {
@@ -76,12 +76,12 @@
                     "instructions": {
                         "en": ""
                     },
-                    "is_editable": false,
+                    "is_editable": true,
                     "name": {
                         "en": "NTS Mapsheet Number"
                     },
                     "nodegroup_id": "692d8456-9c1d-11ec-a5e5-5254008afee6",
-                    "sortorder": 5,
+                    "sortorder": 2,
                     "visible": true
                 },
                 {
@@ -105,12 +105,12 @@
                     "instructions": {
                         "en": "Define the spatial location."
                     },
-                    "is_editable": false,
+                    "is_editable": true,
                     "name": {
                         "en": "Spatial Location"
                     },
                     "nodegroup_id": "692d8938-9c1d-11ec-a5e5-5254008afee6",
-                    "sortorder": 2,
+                    "sortorder": 0,
                     "visible": true
                 },
                 {
@@ -134,7 +134,7 @@
                     "instructions": {
                         "en": "Describe the location of the resource. Refer to Help for instructions."
                     },
-                    "is_editable": false,
+                    "is_editable": true,
                     "name": {
                         "en": "Location Description"
                     },
@@ -161,7 +161,7 @@
                     "instructions": {
                         "en": ""
                     },
-                    "is_editable": false,
+                    "is_editable": true,
                     "name": {
                         "en": "Collection Event Location"
                     },
@@ -188,12 +188,12 @@
                     "instructions": {
                         "en": "If needed, add additional information about the fossil collection event."
                     },
-                    "is_editable": false,
+                    "is_editable": true,
                     "name": {
                         "en": "Collection Notes"
                     },
                     "nodegroup_id": "9207c3fe-ab96-11ec-87fd-5254008afee6",
-                    "sortorder": 7,
+                    "sortorder": 6,
                     "visible": true
                 },
                 {
@@ -244,12 +244,12 @@
                     "instructions": {
                         "en": ""
                     },
-                    "is_editable": false,
+                    "is_editable": true,
                     "name": {
                         "en": "Historical Data"
                     },
                     "nodegroup_id": "731312e0-70db-11ed-a567-5254004d77d3",
-                    "sortorder": 6,
+                    "sortorder": 5,
                     "visible": true
                 },
                 {
@@ -273,7 +273,7 @@
                     "instructions": {
                         "en": ""
                     },
-                    "is_editable": false,
+                    "is_editable": true,
                     "name": {
                         "en": "Collection Year"
                     },
@@ -298,7 +298,7 @@
                         "en": ""
                     },
                     "instructions": {
-                        "en": "Note if sample is barren or note number of specimens present."
+                        "en": "Note fossil abundance from collection event"
                     },
                     "is_editable": true,
                     "name": {
@@ -328,7 +328,7 @@
                         "en": "Locational Precision"
                     },
                     "node_id": "9e93ab8c-9c1f-11ec-964d-5254008afee6",
-                    "sortorder": null,
+                    "sortorder": 1,
                     "visible": true,
                     "widget_id": "10000000-0000-0000-0000-000000000002"
                 },
@@ -594,7 +594,7 @@
                         "placeholder": {
                             "en": "Enter text"
                         },
-                        "uneditable": false,
+                        "uneditable": true,
                         "width": "100%"
                     },
                     "id": "65204c11-06b6-4c23-b7de-7a532ccd670f",
@@ -623,7 +623,7 @@
                         "placeholder": {
                             "en": "Enter text"
                         },
-                        "uneditable": false,
+                        "uneditable": true,
                         "width": "100%"
                     },
                     "id": "692daa9e-9c1d-11ec-a5e5-5254008afee6",
@@ -638,7 +638,7 @@
                 {
                     "card_id": "692d8c12-9c1d-11ec-a5e5-5254008afee6",
                     "config": {
-                        "basemap": "streets",
+                        "basemap": "British Columbia Roads",
                         "bearing": 0,
                         "centerX": -124.6504847974249,
                         "centerY": 54.97533508290445,
@@ -700,7 +700,7 @@
                         "en": "Geometry Qualifier"
                     },
                     "node_id": "692da0d0-9c1d-11ec-a5e5-5254008afee6",
-                    "sortorder": 1,
+                    "sortorder": 2,
                     "visible": true,
                     "widget_id": "10000000-0000-0000-0000-000000000002"
                 },
@@ -729,7 +729,7 @@
                         "en": "Place Description"
                     },
                     "node_id": "692da3b4-9c1d-11ec-a5e5-5254008afee6",
-                    "sortorder": 1,
+                    "sortorder": 0,
                     "visible": true,
                     "widget_id": "10000000-0000-0000-0000-000000000005"
                 },
@@ -758,7 +758,7 @@
                         "en": "Detailed Location"
                     },
                     "node_id": "692da79c-9c1d-11ec-a5e5-5254008afee6",
-                    "sortorder": 2,
+                    "sortorder": 1,
                     "visible": true,
                     "widget_id": "10000000-0000-0000-0000-000000000005"
                 },
@@ -787,7 +787,7 @@
                         "en": "Nearest Municipality"
                     },
                     "node_id": "692da652-9c1d-11ec-a5e5-5254008afee6",
-                    "sortorder": 0,
+                    "sortorder": 2,
                     "visible": true,
                     "widget_id": "10000000-0000-0000-0000-000000000001"
                 },
@@ -871,6 +871,35 @@
                     "widget_id": "10000000-0000-0000-0000-000000000005"
                 },
                 {
+                    "card_id": "692d8708-9c1d-11ec-a5e5-5254008afee6",
+                    "config": {
+                        "defaultValue": {
+                            "en": {
+                                "direction": "ltr",
+                                "value": ""
+                            }
+                        },
+                        "i18n_properties": [
+                            "placeholder"
+                        ],
+                        "label": "NTS Mapsheet Name",
+                        "maxLength": null,
+                        "placeholder": {
+                            "en": "Enter text"
+                        },
+                        "uneditable": true,
+                        "width": "100%"
+                    },
+                    "id": "d8552166-3ee2-4896-90fb-2cbefc088130",
+                    "label": {
+                        "en": "NTS Mapsheet Name"
+                    },
+                    "node_id": "692da8e6-9c1d-11ec-a5e5-5254008afee6",
+                    "sortorder": null,
+                    "visible": true,
+                    "widget_id": "10000000-0000-0000-0000-000000000001"
+                },
+                {
                     "card_id": "5e4ba65c-a079-11ec-bc6e-5254008afee6",
                     "config": {
                         "defaultResourceInstance": [],
@@ -903,33 +932,9 @@
                             {
                                 "children": [],
                                 "collector": "",
-                                "conceptid": "f295722a-5605-4a7d-b6d3-fb16f9ccd0b0",
-                                "id": "6956cf66-4a04-429e-933b-181a7bdaa3da",
-                                "sortorder": "",
-                                "text": "Abundant (> 10)"
-                            },
-                            {
-                                "children": [],
-                                "collector": "",
-                                "conceptid": "5dfc8eff-ff8c-4f76-a645-0d89f697c6d3",
-                                "id": "68785da4-a1bc-47b2-89dc-a3c617a07406",
-                                "sortorder": "",
-                                "text": "Few (< 5)"
-                            },
-                            {
-                                "children": [],
-                                "collector": "",
-                                "conceptid": "b951d714-d3e8-486a-beba-0550ebb58b9d",
-                                "id": "0ade6a3a-170a-4889-af0d-c55b783747c0",
-                                "sortorder": "",
-                                "text": "Many (5-10)"
-                            },
-                            {
-                                "children": [],
-                                "collector": "",
                                 "conceptid": "05e38520-678b-46c5-bbe2-9164d52ec4fe",
                                 "id": "00b29319-f28d-4b50-88e1-ab190fdfbde6",
-                                "sortorder": "",
+                                "sortorder": "00",
                                 "text": "None/Barren"
                             },
                             {
@@ -937,20 +942,45 @@
                                 "collector": "",
                                 "conceptid": "fdbfc78a-620e-48d7-99b7-ba25cd9ae10b",
                                 "id": "c26c8d58-9dcb-47a0-a869-ecb93c3dce00",
-                                "sortorder": "",
+                                "sortorder": "01",
                                 "text": "Single Fossil (1)"
+                            },
+                            {
+                                "children": [],
+                                "collector": "",
+                                "conceptid": "5dfc8eff-ff8c-4f76-a645-0d89f697c6d3",
+                                "id": "68785da4-a1bc-47b2-89dc-a3c617a07406",
+                                "sortorder": "02",
+                                "text": "Few (< 5)"
+                            },
+                            {
+                                "children": [],
+                                "collector": "",
+                                "conceptid": "b951d714-d3e8-486a-beba-0550ebb58b9d",
+                                "id": "0ade6a3a-170a-4889-af0d-c55b783747c0",
+                                "sortorder": "05",
+                                "text": "Many (5-10)"
+                            },
+                            {
+                                "children": [],
+                                "collector": "",
+                                "conceptid": "f295722a-5605-4a7d-b6d3-fb16f9ccd0b0",
+                                "id": "6956cf66-4a04-429e-933b-181a7bdaa3da",
+                                "sortorder": "11",
+                                "text": "Abundant (> 10)"
                             }
                         ],
                         "placeholder": {
                             "en": "Note if sample is barren or note number of specimens present"
-                        }
+                        },
+                        "url": "/int/arches-fossils/concepts/dropdown?conceptid=a727f7c8-b11a-4dc2-962c-b23baf9eb046"
                     },
                     "id": "fa99c24a-e153-447f-be52-598efce9ba5c",
                     "label": {
                         "en": "Fossil Abundance"
                     },
                     "node_id": "74fb7b5c-7279-11ed-adf3-5254004d77d3",
-                    "sortorder": null,
+                    "sortorder": 0,
                     "visible": true,
                     "widget_id": "10000000-0000-0000-0000-000000000009"
                 }
@@ -1225,7 +1255,7 @@
                     },
                     "function_id": "60000000-0000-0000-0000-000000001001",
                     "graph_id": "df3ee1ae-9c1c-11ec-964d-5254008afee6",
-                    "id": "4be08400-54a1-4b90-a411-9a9272d32b64"
+                    "id": "b8456a26-092a-4132-a727-69323ca2e71d"
                 }
             ],
             "graphid": "df3ee1ae-9c1c-11ec-964d-5254008afee6",
@@ -1325,7 +1355,8 @@
                     "nodeid": "0bbd0096-a07b-11ec-855d-5254008afee6",
                     "ontologyclass": "http://www.cidoc-crm.org/cidoc-crm/E7_Activity",
                     "parentproperty": "http://www.cidoc-crm.org/cidoc-crm/P116_starts",
-                    "sortorder": 0
+                    "sortorder": 0,
+                    "sourcebranchpublication_id": null
                 },
                 {
                     "alias": "significance_ranking_code",
@@ -1347,7 +1378,8 @@
                     "nodeid": "168664e0-70dc-11ed-b134-5254004d77d3",
                     "ontologyclass": "http://www.cidoc-crm.org/cidoc-crm/E13_Attribute_Assignment",
                     "parentproperty": "http://www.cidoc-crm.org/cidoc-crm/P141i_was_assigned_by",
-                    "sortorder": 0
+                    "sortorder": 0,
+                    "sourcebranchpublication_id": null
                 },
                 {
                     "alias": "collection_event_significant",
@@ -1378,7 +1410,8 @@
                     "nodeid": "23714006-70d9-11ed-9e2c-5254004d77d3",
                     "ontologyclass": "http://www.ics.forth.gr/isl/CRMsci/S6_Data_Evaluation",
                     "parentproperty": "http://www.cidoc-crm.org/cidoc-crm/P15i_influenced",
-                    "sortorder": 0
+                    "sortorder": 0,
+                    "sourcebranchpublication_id": null
                 },
                 {
                     "alias": "significance_ranking_details",
@@ -1400,7 +1433,8 @@
                     "nodeid": "23714510-70d9-11ed-9e2c-5254004d77d3",
                     "ontologyclass": "http://www.ics.forth.gr/isl/CRMsci/S6_Data_Evaluation",
                     "parentproperty": "http://www.cidoc-crm.org/cidoc-crm/P15i_influenced",
-                    "sortorder": 0
+                    "sortorder": 0,
+                    "sourcebranchpublication_id": null
                 },
                 {
                     "alias": "geographical_name",
@@ -1420,7 +1454,8 @@
                     "nodeid": "263d0df0-f2ef-11ec-8e30-5254008afee6",
                     "ontologyclass": "http://www.ics.forth.gr/isl/CRMarchaeo/A8_Stratigraphic_Unit",
                     "parentproperty": "http://www.cidoc-crm.org/cidoc-crm/P59i_is_located_on_or_within",
-                    "sortorder": 0
+                    "sortorder": 0,
+                    "sourcebranchpublication_id": null
                 },
                 {
                     "alias": "collection_end_year",
@@ -1442,7 +1477,8 @@
                     "nodeid": "328a4e2c-a07b-11ec-959f-5254008afee6",
                     "ontologyclass": "http://www.cidoc-crm.org/cidoc-crm/E7_Activity",
                     "parentproperty": "http://www.cidoc-crm.org/cidoc-crm/P115_finishes",
-                    "sortorder": 0
+                    "sortorder": 1,
+                    "sourcebranchpublication_id": null
                 },
                 {
                     "alias": "samples_collected",
@@ -1471,7 +1507,8 @@
                     "nodeid": "5e4b75ba-a079-11ec-bc6e-5254008afee6",
                     "ontologyclass": "http://www.cidoc-crm.org/cidoc-crm/E80_Part_Removal",
                     "parentproperty": "http://www.cidoc-crm.org/cidoc-crm/P9i_forms_part_of",
-                    "sortorder": 0
+                    "sortorder": 0,
+                    "sourcebranchpublication_id": null
                 },
                 {
                     "alias": "nts_mapsheet_number",
@@ -1491,7 +1528,8 @@
                     "nodeid": "692d8456-9c1d-11ec-a5e5-5254008afee6",
                     "ontologyclass": "http://www.ics.forth.gr/isl/CRMarchaeo/A8_Stratigraphic_Unit",
                     "parentproperty": "http://www.cidoc-crm.org/cidoc-crm/P89_falls_within",
-                    "sortorder": 0
+                    "sortorder": 0,
+                    "sourcebranchpublication_id": null
                 },
                 {
                     "alias": "spatial_coordinates_geometry",
@@ -1526,7 +1564,7 @@
                     "graph_id": "df3ee1ae-9c1c-11ec-964d-5254008afee6",
                     "hascustomalias": false,
                     "is_collector": true,
-                    "isrequired": false,
+                    "isrequired": true,
                     "issearchable": true,
                     "istopnode": false,
                     "name": "Spatial Coordinates Geometry",
@@ -1534,7 +1572,8 @@
                     "nodeid": "692d8938-9c1d-11ec-a5e5-5254008afee6",
                     "ontologyclass": "http://www.cidoc-crm.org/cidoc-crm/E47_Spatial_Coordinates",
                     "parentproperty": "http://www.cidoc-crm.org/cidoc-crm/P87_is_identified_by",
-                    "sortorder": 0
+                    "sortorder": 0,
+                    "sourcebranchpublication_id": null
                 },
                 {
                     "alias": "place_description_assignment",
@@ -1554,7 +1593,8 @@
                     "nodeid": "692d8e06-9c1d-11ec-a5e5-5254008afee6",
                     "ontologyclass": "http://www.cidoc-crm.org/cidoc-crm/E13_Attribute_Assignment",
                     "parentproperty": "http://www.cidoc-crm.org/cidoc-crm/P140i_was_attributed_by",
-                    "sortorder": 0
+                    "sortorder": 0,
+                    "sourcebranchpublication_id": null
                 },
                 {
                     "alias": "collection_event_location",
@@ -1576,7 +1616,8 @@
                     "nodeid": "692d9c2a-9c1d-11ec-a5e5-5254008afee6",
                     "ontologyclass": "http://www.cidoc-crm.org/cidoc-crm/E53_Place",
                     "parentproperty": "http://www.cidoc-crm.org/cidoc-crm/P7_took_place_at",
-                    "sortorder": 0
+                    "sortorder": 0,
+                    "sourcebranchpublication_id": null
                 },
                 {
                     "alias": "geometry_qualifier",
@@ -1598,11 +1639,14 @@
                     "nodeid": "692da0d0-9c1d-11ec-a5e5-5254008afee6",
                     "ontologyclass": "http://www.cidoc-crm.org/cidoc-crm/E55_Type",
                     "parentproperty": "http://www.cidoc-crm.org/cidoc-crm/P2_has_type",
-                    "sortorder": 0
+                    "sortorder": 0,
+                    "sourcebranchpublication_id": null
                 },
                 {
                     "alias": "location_description",
-                    "config": {},
+                    "config": {
+                        "en": ""
+                    },
                     "datatype": "string",
                     "description": "Represents a single node in a graph",
                     "exportable": false,
@@ -1610,7 +1654,7 @@
                     "graph_id": "df3ee1ae-9c1c-11ec-964d-5254008afee6",
                     "hascustomalias": false,
                     "is_collector": false,
-                    "isrequired": false,
+                    "isrequired": true,
                     "issearchable": true,
                     "istopnode": false,
                     "name": "Location Description",
@@ -1618,7 +1662,8 @@
                     "nodeid": "692da3b4-9c1d-11ec-a5e5-5254008afee6",
                     "ontologyclass": "http://www.cidoc-crm.org/cidoc-crm/E62_String",
                     "parentproperty": "http://www.cidoc-crm.org/cidoc-crm/P3_has_note",
-                    "sortorder": 0
+                    "sortorder": 0,
+                    "sourcebranchpublication_id": null
                 },
                 {
                     "alias": "nearest_municipality",
@@ -1638,11 +1683,14 @@
                     "nodeid": "692da652-9c1d-11ec-a5e5-5254008afee6",
                     "ontologyclass": "http://www.ics.forth.gr/isl/CRMsci/S4_Observation",
                     "parentproperty": "http://www.cidoc-crm.org/cidoc-crm/P140i_was_attributed_by",
-                    "sortorder": 0
+                    "sortorder": 0,
+                    "sourcebranchpublication_id": null
                 },
                 {
                     "alias": "detailed_location",
-                    "config": {},
+                    "config": {
+                        "en": ""
+                    },
                     "datatype": "string",
                     "description": null,
                     "exportable": false,
@@ -1650,7 +1698,7 @@
                     "graph_id": "df3ee1ae-9c1c-11ec-964d-5254008afee6",
                     "hascustomalias": false,
                     "is_collector": false,
-                    "isrequired": false,
+                    "isrequired": true,
                     "issearchable": true,
                     "istopnode": false,
                     "name": "Detailed Location",
@@ -1658,7 +1706,8 @@
                     "nodeid": "692da79c-9c1d-11ec-a5e5-5254008afee6",
                     "ontologyclass": "http://www.cidoc-crm.org/cidoc-crm/E62_String",
                     "parentproperty": "http://www.cidoc-crm.org/cidoc-crm/P3_has_note",
-                    "sortorder": 0
+                    "sortorder": 0,
+                    "sourcebranchpublication_id": null
                 },
                 {
                     "alias": "nts_mapsheet_name",
@@ -1678,7 +1727,8 @@
                     "nodeid": "692da8e6-9c1d-11ec-a5e5-5254008afee6",
                     "ontologyclass": "http://www.cidoc-crm.org/cidoc-crm/E62_String",
                     "parentproperty": "http://www.ics.forth.gr/isl/CRMdig/L4_has_preferred_label",
-                    "sortorder": 0
+                    "sortorder": 0,
+                    "sourcebranchpublication_id": null
                 },
                 {
                     "alias": "historical_data",
@@ -1700,7 +1750,8 @@
                     "nodeid": "731312e0-70db-11ed-a567-5254004d77d3",
                     "ontologyclass": "http://www.cidoc-crm.org/cidoc-crm/E13_Attribute_Assignment",
                     "parentproperty": "http://www.cidoc-crm.org/cidoc-crm/P117i_includes",
-                    "sortorder": 0
+                    "sortorder": 0,
+                    "sourcebranchpublication_id": null
                 },
                 {
                     "alias": "fossil_abundance",
@@ -1714,7 +1765,7 @@
                     "graph_id": "df3ee1ae-9c1c-11ec-964d-5254008afee6",
                     "hascustomalias": false,
                     "is_collector": true,
-                    "isrequired": false,
+                    "isrequired": true,
                     "issearchable": true,
                     "istopnode": false,
                     "name": "Fossil Abundance",
@@ -1722,7 +1773,8 @@
                     "nodeid": "74fb7b5c-7279-11ed-adf3-5254004d77d3",
                     "ontologyclass": "http://www.ics.forth.gr/isl/CRMsci/S15_Observable_Entity",
                     "parentproperty": "http://www.ics.forth.gr/isl/CRMdig/L54_is_same-as",
-                    "sortorder": 0
+                    "sortorder": 0,
+                    "sourcebranchpublication_id": null
                 },
                 {
                     "alias": "collection_notes",
@@ -1742,7 +1794,8 @@
                     "nodeid": "9207c3fe-ab96-11ec-87fd-5254008afee6",
                     "ontologyclass": "http://www.cidoc-crm.org/cidoc-crm/E33_Linguistic_Object",
                     "parentproperty": "http://www.cidoc-crm.org/cidoc-crm/P129i_is_subject_of",
-                    "sortorder": 0
+                    "sortorder": 0,
+                    "sourcebranchpublication_id": null
                 },
                 {
                     "alias": "field_notes",
@@ -1764,7 +1817,8 @@
                     "nodeid": "9207c87c-ab96-11ec-87fd-5254008afee6",
                     "ontologyclass": "http://www.w3.org/2000/01/rdf-schema#Literal",
                     "parentproperty": "http://www.cidoc-crm.org/cidoc-crm/P3_has_note",
-                    "sortorder": 0
+                    "sortorder": 0,
+                    "sourcebranchpublication_id": null
                 },
                 {
                     "alias": "precision",
@@ -1786,7 +1840,8 @@
                     "nodeid": "9e93ab8c-9c1f-11ec-964d-5254008afee6",
                     "ontologyclass": "http://www.ics.forth.gr/isl/CRMdig/D29_Annotation_Object",
                     "parentproperty": "http://www.ics.forth.gr/isl/CRMdig/L43i_is_annotated_by",
-                    "sortorder": 0
+                    "sortorder": 0,
+                    "sourcebranchpublication_id": null
                 },
                 {
                     "alias": "collectors",
@@ -1818,7 +1873,8 @@
                     "nodeid": "b7940db0-9c20-11ec-9b9a-5254008afee6",
                     "ontologyclass": "http://www.cidoc-crm.org/cidoc-crm/E39_Actor",
                     "parentproperty": "http://www.cidoc-crm.org/cidoc-crm/P11_had_participant",
-                    "sortorder": 0
+                    "sortorder": 0,
+                    "sourcebranchpublication_id": null
                 },
                 {
                     "alias": "bc_fossil_collection_event",
@@ -1838,7 +1894,8 @@
                     "nodeid": "df3edef2-9c1c-11ec-964d-5254008afee6",
                     "ontologyclass": "http://www.ics.forth.gr/isl/CRMarchaeo/A9_Archaeological_Excavation",
                     "parentproperty": "",
-                    "sortorder": 0
+                    "sortorder": 0,
+                    "sourcebranchpublication_id": null
                 },
                 {
                     "alias": "internal_notes",
@@ -1860,7 +1917,8 @@
                     "nodeid": "e764fd10-9c3d-11ed-93ea-5254004d77d3",
                     "ontologyclass": "http://www.w3.org/2000/01/rdf-schema#Literal",
                     "parentproperty": "http://www.cidoc-crm.org/cidoc-crm/P3_has_note",
-                    "sortorder": 0
+                    "sortorder": 0,
+                    "sourcebranchpublication_id": null
                 },
                 {
                     "alias": "collection_years",
@@ -1880,15 +1938,16 @@
                     "nodeid": "ebc4f8e8-a07a-11ec-8bc4-5254008afee6",
                     "ontologyclass": "http://www.cidoc-crm.org/cidoc-crm/E4_Period",
                     "parentproperty": "http://www.cidoc-crm.org/cidoc-crm/P117_occurs_during",
-                    "sortorder": 0
+                    "sortorder": 0,
+                    "sourcebranchpublication_id": null
                 }
             ],
             "ontology_id": "e6e8db47-2ccf-11e6-927e-b8f6b115d7dd",
             "publication": {
                 "graph_id": "df3ee1ae-9c1c-11ec-964d-5254008afee6",
                 "notes": null,
-                "publicationid": "7a91c24c-c51c-11ed-b088-5254004d77d3",
-                "published_time": "2023-03-17T18:36:02.448",
+                "publicationid": "2cad11b0-fb33-11ed-8e5a-5254004d77d3",
+                "published_time": "2023-05-25T14:34:32.979",
                 "user_id": 1
             },
             "relatable_resource_model_ids": [],
@@ -1910,7 +1969,8 @@
                 "nodegroup_id": null,
                 "nodeid": "df3edef2-9c1c-11ec-964d-5254008afee6",
                 "ontologyclass": "http://www.ics.forth.gr/isl/CRMarchaeo/A9_Archaeological_Excavation",
-                "sortorder": 0
+                "sortorder": 0,
+                "sourcebranchpublication_id": null
             },
             "slug": null,
             "subtitle": {

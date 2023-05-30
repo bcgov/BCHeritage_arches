@@ -326,7 +326,7 @@
                         "i18n_properties": [
                             "placeholder"
                         ],
-                        "label": "Title",
+                        "label": "Title of the Work",
                         "maxLength": null,
                         "placeholder": {
                             "en": "Enter text"
@@ -336,7 +336,7 @@
                     },
                     "id": "13c47b16-a90a-47db-a715-4d55c0f4d180",
                     "label": {
-                        "en": "Title"
+                        "en": "Title of the Work"
                     },
                     "node_id": "1930617c-c407-11ed-8154-5254004d77d3",
                     "sortorder": 0,
@@ -360,7 +360,7 @@
                         "en": "Fossil Site"
                     },
                     "node_id": "20c23f8a-be00-11ed-bdf6-5254004d77d3",
-                    "sortorder": 0,
+                    "sortorder": 1,
                     "visible": true,
                     "widget_id": "ff3c400a-76ec-11e7-a793-784f435179ea"
                 },
@@ -595,7 +595,7 @@
                         "en": "Repository"
                     },
                     "node_id": "68b9813a-be01-11ed-8b5e-5254004d77d3",
-                    "sortorder": 4,
+                    "sortorder": 0,
                     "visible": true,
                     "widget_id": "ff3c400a-76ec-11e7-a793-784f435179ea"
                 },
@@ -616,7 +616,7 @@
                         "en": "Collection Events"
                     },
                     "node_id": "10517634-be00-11ed-b38b-5254004d77d3",
-                    "sortorder": 1,
+                    "sortorder": 2,
                     "visible": true,
                     "widget_id": "ff3c400a-76ec-11e7-a793-784f435179ea"
                 },
@@ -694,7 +694,7 @@
                         "en": "Fossil Sample"
                     },
                     "node_id": "5be42654-be01-11ed-bff8-5254004d77d3",
-                    "sortorder": 2,
+                    "sortorder": 3,
                     "visible": true,
                     "widget_id": "ff3c400a-76ec-11e7-a793-784f435179ea"
                 },
@@ -715,7 +715,7 @@
                         "en": "Fossil Type"
                     },
                     "node_id": "947658fc-be01-11ed-bdf6-5254004d77d3",
-                    "sortorder": 3,
+                    "sortorder": 4,
                     "visible": true,
                     "widget_id": "ff3c400a-76ec-11e7-a793-784f435179ea"
                 }
@@ -1040,7 +1040,7 @@
                     },
                     "function_id": "60000000-0000-0000-0000-000000001001",
                     "graph_id": "3caf329f-b8f7-11e6-84a5-026d961c88e6",
-                    "id": "3a314f31-680d-4ee8-a412-15dbdb93691a"
+                    "id": "5d370a47-9a66-4bef-b8b4-dc41964036e4"
                 }
             ],
             "graphid": "3caf329f-b8f7-11e6-84a5-026d961c88e6",
@@ -1122,7 +1122,8 @@
                     "nodeid": "0273d4d4-c752-11ed-af1c-5254004d77d3",
                     "ontologyclass": "http://www.cidoc-crm.org/cidoc-crm/E73_Information_Object",
                     "parentproperty": "http://www.ics.forth.gr/isl/CRMdig/L54_is_same-as",
-                    "sortorder": 0
+                    "sortorder": 5,
+                    "sourcebranchpublication_id": null
                 },
                 {
                     "alias": "reference_link",
@@ -1144,7 +1145,8 @@
                     "nodeid": "037c8f98-be00-11ed-8b5e-5254004d77d3",
                     "ontologyclass": "http://www.cidoc-crm.org/cidoc-crm/E19_Physical_Object",
                     "parentproperty": "http://www.cidoc-crm.org/cidoc-crm/P67_refers_to",
-                    "sortorder": 0
+                    "sortorder": 7,
+                    "sourcebranchpublication_id": null
                 },
                 {
                     "alias": "collection_events",
@@ -1176,7 +1178,8 @@
                     "nodeid": "10517634-be00-11ed-b38b-5254004d77d3",
                     "ontologyclass": "http://www.ics.forth.gr/isl/CRMsci/S2_Sample_Taking",
                     "parentproperty": "http://www.ics.forth.gr/isl/CRMdig/L54i_is_same-as",
-                    "sortorder": 0
+                    "sortorder": 0,
+                    "sourcebranchpublication_id": null
                 },
                 {
                     "alias": "title",
@@ -1190,7 +1193,7 @@
                     "graph_id": "3caf329f-b8f7-11e6-84a5-026d961c88e6",
                     "hascustomalias": false,
                     "is_collector": false,
-                    "isrequired": false,
+                    "isrequired": true,
                     "issearchable": true,
                     "istopnode": false,
                     "name": "Title",
@@ -1198,7 +1201,8 @@
                     "nodeid": "1930617c-c407-11ed-8154-5254004d77d3",
                     "ontologyclass": "http://www.cidoc-crm.org/cidoc-crm/E41_Appellation",
                     "parentproperty": "http://www.cidoc-crm.org/cidoc-crm/P1_is_identified_by",
-                    "sortorder": 0
+                    "sortorder": 0,
+                    "sourcebranchpublication_id": null
                 },
                 {
                     "alias": "fossil_sites",
@@ -1230,7 +1234,8 @@
                     "nodeid": "20c23f8a-be00-11ed-bdf6-5254004d77d3",
                     "ontologyclass": "http://www.cidoc-crm.org/cidoc-crm/E92_Spacetime_Volume",
                     "parentproperty": "http://www.ics.forth.gr/isl/CRMdig/L54i_is_same-as",
-                    "sortorder": 0
+                    "sortorder": 0,
+                    "sourcebranchpublication_id": null
                 },
                 {
                     "alias": "publication_type",
@@ -1244,7 +1249,7 @@
                     "graph_id": "3caf329f-b8f7-11e6-84a5-026d961c88e6",
                     "hascustomalias": false,
                     "is_collector": false,
-                    "isrequired": false,
+                    "isrequired": true,
                     "issearchable": true,
                     "istopnode": false,
                     "name": "Publication Type",
@@ -1252,7 +1257,8 @@
                     "nodeid": "20fe4b2e-bc34-11ed-8a9b-5254004d77d3",
                     "ontologyclass": "http://www.cidoc-crm.org/cidoc-crm/E17_Type_Assignment",
                     "parentproperty": "http://www.cidoc-crm.org/cidoc-crm/P9_consists_of",
-                    "sortorder": 0
+                    "sortorder": 0,
+                    "sourcebranchpublication_id": null
                 },
                 {
                     "alias": "page_range_end",
@@ -1274,7 +1280,8 @@
                     "nodeid": "2d410f4c-bc3f-11ed-a483-5254004d77d3",
                     "ontologyclass": "http://www.cidoc-crm.org/cidoc-crm/E13_Attribute_Assignment",
                     "parentproperty": "http://www.cidoc-crm.org/cidoc-crm/P9_consists_of",
-                    "sortorder": 0
+                    "sortorder": 0,
+                    "sourcebranchpublication_id": null
                 },
                 {
                     "alias": "original_source",
@@ -1296,7 +1303,8 @@
                     "nodeid": "31532066-c752-11ed-b89e-5254004d77d3",
                     "ontologyclass": "http://www.cidoc-crm.org/cidoc-crm/E73_Information_Object",
                     "parentproperty": "http://www.cidoc-crm.org/cidoc-crm/P106_is_composed_of",
-                    "sortorder": 0
+                    "sortorder": 0,
+                    "sourcebranchpublication_id": null
                 },
                 {
                     "alias": "bc_information_resource_model",
@@ -1316,7 +1324,8 @@
                     "nodeid": "3caf329e-b8f7-11e6-84a5-026d961c88e6",
                     "ontologyclass": "http://www.cidoc-crm.org/cidoc-crm/E73_Information_Object",
                     "parentproperty": "",
-                    "sortorder": 0
+                    "sortorder": 0,
+                    "sourcebranchpublication_id": null
                 },
                 {
                     "alias": "year_of_publication",
@@ -1330,7 +1339,7 @@
                     "graph_id": "3caf329f-b8f7-11e6-84a5-026d961c88e6",
                     "hascustomalias": false,
                     "is_collector": false,
-                    "isrequired": false,
+                    "isrequired": true,
                     "issearchable": true,
                     "istopnode": false,
                     "name": "Year of Publication",
@@ -1338,7 +1347,8 @@
                     "nodeid": "45216022-c409-11ed-81a5-5254004d77d3",
                     "ontologyclass": "http://www.cidoc-crm.org/cidoc-crm/E61_Time_Primitive",
                     "parentproperty": "http://www.ics.forth.gr/isl/CRMdig/L31_has_starting_date-time",
-                    "sortorder": 0
+                    "sortorder": 0,
+                    "sourcebranchpublication_id": null
                 },
                 {
                     "alias": "other_journal_or_publication_name",
@@ -1360,7 +1370,8 @@
                     "nodeid": "553a3d1a-bc36-11ed-a2df-5254004d77d3",
                     "ontologyclass": "http://www.cidoc-crm.org/cidoc-crm/E19_Physical_Object",
                     "parentproperty": "http://www.ics.forth.gr/isl/CRMdig/L54_is_same-as",
-                    "sortorder": 0
+                    "sortorder": 0,
+                    "sourcebranchpublication_id": null
                 },
                 {
                     "alias": "fossil_samples",
@@ -1392,7 +1403,8 @@
                     "nodeid": "5be42654-be01-11ed-bff8-5254004d77d3",
                     "ontologyclass": "http://www.cidoc-crm.org/cidoc-crm/E19_Physical_Object",
                     "parentproperty": "http://www.ics.forth.gr/isl/CRMdig/L54i_is_same-as",
-                    "sortorder": 0
+                    "sortorder": 0,
+                    "sourcebranchpublication_id": null
                 },
                 {
                     "alias": "publication_identifier",
@@ -1414,7 +1426,8 @@
                     "nodeid": "63960b1a-bc3f-11ed-bd90-5254004d77d3",
                     "ontologyclass": "http://www.cidoc-crm.org/cidoc-crm/E42_Identifier",
                     "parentproperty": "http://www.cidoc-crm.org/cidoc-crm/P1_is_identified_by",
-                    "sortorder": 0
+                    "sortorder": 0,
+                    "sourcebranchpublication_id": null
                 },
                 {
                     "alias": "other_authors_unlisted",
@@ -1445,7 +1458,8 @@
                     "nodeid": "63f108ea-bdfb-11ed-a2b1-5254004d77d3",
                     "ontologyclass": "http://www.cidoc-crm.org/cidoc-crm/E13_Attribute_Assignment",
                     "parentproperty": "http://www.cidoc-crm.org/cidoc-crm/P140i_was_attributed_by",
-                    "sortorder": 0
+                    "sortorder": 0,
+                    "sourcebranchpublication_id": null
                 },
                 {
                     "alias": "repositories",
@@ -1477,7 +1491,8 @@
                     "nodeid": "68b9813a-be01-11ed-8b5e-5254004d77d3",
                     "ontologyclass": "http://www.cidoc-crm.org/cidoc-crm/E92_Spacetime_Volume",
                     "parentproperty": "http://www.ics.forth.gr/isl/CRMdig/L54i_is_same-as",
-                    "sortorder": 0
+                    "sortorder": 0,
+                    "sourcebranchpublication_id": null
                 },
                 {
                     "alias": "publication_identifiery_type",
@@ -1499,7 +1514,8 @@
                     "nodeid": "76eeb332-c410-11ed-81a5-5254004d77d3",
                     "ontologyclass": "http://www.cidoc-crm.org/cidoc-crm/E55_Type",
                     "parentproperty": "http://www.cidoc-crm.org/cidoc-crm/P2_has_type",
-                    "sortorder": 0
+                    "sortorder": 0,
+                    "sourcebranchpublication_id": null
                 },
                 {
                     "alias": "fossil_types",
@@ -1531,7 +1547,8 @@
                     "nodeid": "947658fc-be01-11ed-bdf6-5254004d77d3",
                     "ontologyclass": "http://www.cidoc-crm.org/cidoc-crm/E55_Type",
                     "parentproperty": "http://www.ics.forth.gr/isl/CRMdig/L54i_is_same-as",
-                    "sortorder": 0
+                    "sortorder": 0,
+                    "sourcebranchpublication_id": null
                 },
                 {
                     "alias": "information_carrier",
@@ -1555,12 +1572,13 @@
                     "nodeid": "9f210d2d-e74a-11e6-84a6-026d961c88e6",
                     "ontologyclass": "http://www.cidoc-crm.org/cidoc-crm/E84_Information_Carrier",
                     "parentproperty": "http://www.cidoc-crm.org/cidoc-crm/P128i_is_carried_by",
-                    "sortorder": 0
+                    "sortorder": 3,
+                    "sourcebranchpublication_id": null
                 },
                 {
                     "alias": "copyright_type",
                     "config": {
-                        "rdmCollection": null
+                        "rdmCollection": "433c1e67-d320-42fc-9d0f-5c50b9dc6288"
                     },
                     "datatype": "concept-list",
                     "description": "",
@@ -1569,7 +1587,7 @@
                     "graph_id": "3caf329f-b8f7-11e6-84a5-026d961c88e6",
                     "hascustomalias": false,
                     "is_collector": true,
-                    "isrequired": false,
+                    "isrequired": true,
                     "issearchable": true,
                     "istopnode": false,
                     "name": "Copyright Type",
@@ -1577,7 +1595,8 @@
                     "nodeid": "a5f5c7b4-c40c-11ed-82cd-5254004d77d3",
                     "ontologyclass": "http://www.cidoc-crm.org/cidoc-crm/E55_Type",
                     "parentproperty": "http://www.cidoc-crm.org/cidoc-crm/P67_refers_to",
-                    "sortorder": 0
+                    "sortorder": 0,
+                    "sourcebranchpublication_id": null
                 },
                 {
                     "alias": "distribution_permitted",
@@ -1608,7 +1627,8 @@
                     "nodeid": "a5f5cc8c-c40c-11ed-82cd-5254004d77d3",
                     "ontologyclass": "http://www.cidoc-crm.org/cidoc-crm/E11_Modification",
                     "parentproperty": "http://www.cidoc-crm.org/cidoc-crm/P125i_was_type_of_object_used_in",
-                    "sortorder": 0
+                    "sortorder": 0,
+                    "sourcebranchpublication_id": null
                 },
                 {
                     "alias": "distribution_agreement",
@@ -1630,7 +1650,8 @@
                     "nodeid": "a5f5ce62-c40c-11ed-82cd-5254004d77d3",
                     "ontologyclass": "http://www.cidoc-crm.org/cidoc-crm/E10_Transfer_of_Custody",
                     "parentproperty": "http://www.cidoc-crm.org/cidoc-crm/P10_falls_within",
-                    "sortorder": 0
+                    "sortorder": 0,
+                    "sourcebranchpublication_id": null
                 },
                 {
                     "alias": "signed_agreement",
@@ -1654,7 +1675,8 @@
                     "nodeid": "a5f5d268-c40c-11ed-82cd-5254004d77d3",
                     "ontologyclass": "http://www.cidoc-crm.org/cidoc-crm/E10_Transfer_of_Custody",
                     "parentproperty": "http://www.cidoc-crm.org/cidoc-crm/P10_falls_within",
-                    "sortorder": 0
+                    "sortorder": 0,
+                    "sourcebranchpublication_id": null
                 },
                 {
                     "alias": "agreement_text",
@@ -1676,7 +1698,8 @@
                     "nodeid": "a5f5d6fa-c40c-11ed-82cd-5254004d77d3",
                     "ontologyclass": "http://www.cidoc-crm.org/cidoc-crm/E10_Transfer_of_Custody",
                     "parentproperty": "http://www.cidoc-crm.org/cidoc-crm/P10_falls_within",
-                    "sortorder": 0
+                    "sortorder": 0,
+                    "sourcebranchpublication_id": null
                 },
                 {
                     "alias": "keyword",
@@ -1698,7 +1721,8 @@
                     "nodeid": "b5f5b1ed-e74a-11e6-84a6-026d961c88e6",
                     "ontologyclass": "http://www.cidoc-crm.org/cidoc-crm/E55_Type",
                     "parentproperty": "http://www.cidoc-crm.org/cidoc-crm/P2_has_type",
-                    "sortorder": 0
+                    "sortorder": 2,
+                    "sourcebranchpublication_id": null
                 },
                 {
                     "alias": "authors",
@@ -1708,6 +1732,7 @@
                                 "graphid": "605b0bbc-8661-4cf2-b340-df743a8c5f89",
                                 "inverseRelationshipConcept": "ac41d9be-79db-4256-b368-2f4559cfbe55",
                                 "name": "BC Fossil Contributor",
+                                "relationshipCollection": "00000000-0000-0000-0000-000000000005",
                                 "relationshipConcept": "ac41d9be-79db-4256-b368-2f4559cfbe55",
                                 "useOntologyRelationship": false
                             }
@@ -1786,7 +1811,7 @@
                     "graph_id": "3caf329f-b8f7-11e6-84a5-026d961c88e6",
                     "hascustomalias": false,
                     "is_collector": true,
-                    "isrequired": false,
+                    "isrequired": true,
                     "issearchable": true,
                     "istopnode": false,
                     "name": "Authors",
@@ -1794,7 +1819,8 @@
                     "nodeid": "c03e8f18-bc30-11ed-bf42-5254004d77d3",
                     "ontologyclass": "http://www.cidoc-crm.org/cidoc-crm/E39_Actor",
                     "parentproperty": "http://www.ics.forth.gr/isl/CRMdig/L33_has_maker",
-                    "sortorder": 0
+                    "sortorder": 1,
+                    "sourcebranchpublication_id": null
                 },
                 {
                     "alias": "external_xref",
@@ -1814,7 +1840,8 @@
                     "nodeid": "c0df1e05-e74a-11e6-84a6-026d961c88e6",
                     "ontologyclass": "http://www.cidoc-crm.org/cidoc-crm/E42_Identifier",
                     "parentproperty": "http://www.cidoc-crm.org/cidoc-crm/P1_is_identified_by",
-                    "sortorder": 0
+                    "sortorder": 6,
+                    "sourcebranchpublication_id": null
                 },
                 {
                     "alias": "external_identifier_type",
@@ -1836,7 +1863,8 @@
                     "nodeid": "c0df1e08-e74a-11e6-84a6-026d961c88e6",
                     "ontologyclass": "http://www.cidoc-crm.org/cidoc-crm/E55_Type",
                     "parentproperty": "http://www.cidoc-crm.org/cidoc-crm/P2_has_type",
-                    "sortorder": 0
+                    "sortorder": 0,
+                    "sourcebranchpublication_id": null
                 },
                 {
                     "alias": "external_source",
@@ -1861,7 +1889,8 @@
                     "nodeid": "c0df1e09-e74a-11e6-84a6-026d961c88e6",
                     "ontologyclass": "http://www.cidoc-crm.org/cidoc-crm/E55_Type",
                     "parentproperty": "http://www.cidoc-crm.org/cidoc-crm/P2_has_type",
-                    "sortorder": 0
+                    "sortorder": 0,
+                    "sourcebranchpublication_id": null
                 },
                 {
                     "alias": "journal_or_publication_name",
@@ -1871,12 +1900,137 @@
                                 "graphid": "3caf329f-b8f7-11e6-84a5-026d961c88e6",
                                 "inverseRelationshipConcept": "ac41d9be-79db-4256-b368-2f4559cfbe55",
                                 "name": "BC Fossil Publication",
+                                "relationshipCollection": "00000000-0000-0000-0000-000000000005",
                                 "relationshipConcept": "ac41d9be-79db-4256-b368-2f4559cfbe55",
                                 "useOntologyRelationship": false
                             }
                         ],
-                        "searchDsl": "",
-                        "searchString": ""
+                        "searchDsl": {
+                            "bool": {
+                                "filter": [
+                                    {
+                                        "terms": {
+                                            "graph_id": [
+                                                "82efcd14-82db-11ec-b8e6-5254008afee6",
+                                                "5b52dcac-9c1b-11ec-964d-5254008afee6",
+                                                "67574dc6-9c20-11ec-964d-5254008afee6",
+                                                "3e6a2880-14d4-11ec-9df0-5254008afee6",
+                                                "dd19a93a-0202-11ed-a511-0050568377a0",
+                                                "7f2c2082-6c51-11ed-9b7d-5254004d77d3",
+                                                "3caf329f-b8f7-11e6-84a5-026d961c88e6",
+                                                "8a209060-9c20-11ec-955e-5254008afee6",
+                                                "ff623370-fa12-11e6-b98b-6c4008b05c4c",
+                                                "3eec83c6-9dd5-11ed-a81c-5254004d77d3",
+                                                "fac1b1b4-1034-11ec-8a7a-5254008afee6",
+                                                "df3ee1ae-9c1c-11ec-964d-5254008afee6",
+                                                "d735935c-3ddb-11ed-814d-5254008afee6",
+                                                "3ffba33a-9c20-11ec-92da-5254008afee6",
+                                                "c3923080-d21e-42d7-b8f1-637b9d0ab63c",
+                                                "109a0272-d968-11ed-b8ae-5254004d77d3",
+                                                "2aa724d1-ffd3-4823-8ff1-15a385b9a407",
+                                                "605b0bbc-8661-4cf2-b340-df743a8c5f89",
+                                                "4d6c9226-10c6-11ec-9a94-5254008afee6",
+                                                "3bad9ec8-a35e-11ed-884a-5254004d77d3",
+                                                "a9617d92-28f2-427f-901f-42f1cb4214b0",
+                                                "3746ffc8-a878-11ec-ab9a-5254008afee6",
+                                                "86700278-117b-11ec-90d4-5254008afee6"
+                                            ]
+                                        }
+                                    }
+                                ],
+                                "must": [
+                                    {
+                                        "bool": {
+                                            "filter": [],
+                                            "minimum_should_match": 1,
+                                            "must": [],
+                                            "must_not": [],
+                                            "should": [
+                                                {
+                                                    "bool": {
+                                                        "filter": [],
+                                                        "must": [
+                                                            {
+                                                                "nested": {
+                                                                    "path": "tiles",
+                                                                    "query": {
+                                                                        "bool": {
+                                                                            "filter": [],
+                                                                            "must": [
+                                                                                {
+                                                                                    "match_phrase": {
+                                                                                        "tiles.data.20fe4b2e-bc34-11ed-8a9b-5254004d77d3": {
+                                                                                            "query": "1bae9ef6-3913-4405-b4d5-7bf7d94405ce"
+                                                                                        }
+                                                                                    }
+                                                                                }
+                                                                            ],
+                                                                            "must_not": [],
+                                                                            "should": []
+                                                                        }
+                                                                    }
+                                                                }
+                                                            },
+                                                            {
+                                                                "bool": {
+                                                                    "filter": [],
+                                                                    "must": [],
+                                                                    "must_not": [],
+                                                                    "should": []
+                                                                }
+                                                            }
+                                                        ],
+                                                        "must_not": [],
+                                                        "should": []
+                                                    }
+                                                },
+                                                {
+                                                    "bool": {
+                                                        "filter": [],
+                                                        "must": [
+                                                            {
+                                                                "nested": {
+                                                                    "path": "tiles",
+                                                                    "query": {
+                                                                        "bool": {
+                                                                            "filter": [],
+                                                                            "must": [
+                                                                                {
+                                                                                    "match_phrase": {
+                                                                                        "tiles.data.20fe4b2e-bc34-11ed-8a9b-5254004d77d3": {
+                                                                                            "query": "5b466670-b855-4c6a-9a29-4399a8d205ec"
+                                                                                        }
+                                                                                    }
+                                                                                }
+                                                                            ],
+                                                                            "must_not": [],
+                                                                            "should": []
+                                                                        }
+                                                                    }
+                                                                }
+                                                            },
+                                                            {
+                                                                "bool": {
+                                                                    "filter": [],
+                                                                    "must": [],
+                                                                    "must_not": [],
+                                                                    "should": []
+                                                                }
+                                                            }
+                                                        ],
+                                                        "must_not": [],
+                                                        "should": []
+                                                    }
+                                                }
+                                            ]
+                                        }
+                                    }
+                                ],
+                                "must_not": [],
+                                "should": []
+                            }
+                        },
+                        "searchString": "http://arches7.local/int/arches-fossils/search?paging-filter=1&tiles=true&format=tilecsv&reportlink=false&precision=6&total=0&advanced-search=%5B%7B%22op%22%3A%22and%22%2C%221930617c-c407-11ed-8154-5254004d77d3%22%3A%7B%22op%22%3A%22~%22%2C%22lang%22%3A%22en%22%2C%22val%22%3A%22%22%7D%2C%2245216022-c409-11ed-81a5-5254004d77d3%22%3A%7B%22op%22%3A%22eq%22%2C%22val%22%3A%22%22%7D%2C%2220fe4b2e-bc34-11ed-8a9b-5254004d77d3%22%3A%7B%22op%22%3A%22eq%22%2C%22val%22%3A%221bae9ef6-3913-4405-b4d5-7bf7d94405ce%22%7D%2C%22c89a294c-bc35-11ed-9b80-5254004d77d3%22%3A%7B%22op%22%3A%22%22%2C%22val%22%3A%22%22%7D%2C%22553a3d1a-bc36-11ed-a2df-5254004d77d3%22%3A%7B%22op%22%3A%22~%22%2C%22lang%22%3A%22en%22%2C%22val%22%3A%22%22%7D%2C%22d4f3cb86-bc3e-11ed-9b80-5254004d77d3%22%3A%7B%22op%22%3A%22eq%22%2C%22val%22%3A%22%22%7D%2C%222d410f4c-bc3f-11ed-a483-5254004d77d3%22%3A%7B%22op%22%3A%22eq%22%2C%22val%22%3A%22%22%7D%2C%2263960b1a-bc3f-11ed-bd90-5254004d77d3%22%3A%7B%22op%22%3A%22~%22%2C%22lang%22%3A%22en%22%2C%22val%22%3A%22%22%7D%7D%2C%7B%22op%22%3A%22or%22%2C%221930617c-c407-11ed-8154-5254004d77d3%22%3A%7B%22op%22%3A%22~%22%2C%22lang%22%3A%22en%22%2C%22val%22%3A%22%22%7D%2C%2245216022-c409-11ed-81a5-5254004d77d3%22%3A%7B%22op%22%3A%22eq%22%2C%22val%22%3A%22%22%7D%2C%2220fe4b2e-bc34-11ed-8a9b-5254004d77d3%22%3A%7B%22op%22%3A%22eq%22%2C%22val%22%3A%225b466670-b855-4c6a-9a29-4399a8d205ec%22%7D%2C%22c89a294c-bc35-11ed-9b80-5254004d77d3%22%3A%7B%22op%22%3A%22%22%2C%22val%22%3A%22%22%7D%2C%22553a3d1a-bc36-11ed-a2df-5254004d77d3%22%3A%7B%22op%22%3A%22~%22%2C%22lang%22%3A%22en%22%2C%22val%22%3A%22%22%7D%2C%22d4f3cb86-bc3e-11ed-9b80-5254004d77d3%22%3A%7B%22op%22%3A%22eq%22%2C%22val%22%3A%22%22%7D%2C%222d410f4c-bc3f-11ed-a483-5254004d77d3%22%3A%7B%22op%22%3A%22eq%22%2C%22val%22%3A%22%22%7D%2C%2263960b1a-bc3f-11ed-bd90-5254004d77d3%22%3A%7B%22op%22%3A%22~%22%2C%22lang%22%3A%22en%22%2C%22val%22%3A%22%22%7D%7D%5D"
                     },
                     "datatype": "resource-instance",
                     "description": null,
@@ -1893,7 +2047,8 @@
                     "nodeid": "c89a294c-bc35-11ed-9b80-5254004d77d3",
                     "ontologyclass": "http://www.cidoc-crm.org/cidoc-crm/E18_Physical_Thing",
                     "parentproperty": "http://www.cidoc-crm.org/cidoc-crm/P10i_contains",
-                    "sortorder": 0
+                    "sortorder": 0,
+                    "sourcebranchpublication_id": null
                 },
                 {
                     "alias": "page_range_start",
@@ -1915,7 +2070,8 @@
                     "nodeid": "d4f3cb86-bc3e-11ed-9b80-5254004d77d3",
                     "ontologyclass": "http://www.cidoc-crm.org/cidoc-crm/E13_Attribute_Assignment",
                     "parentproperty": "http://www.cidoc-crm.org/cidoc-crm/P9_consists_of",
-                    "sortorder": 0
+                    "sortorder": 0,
+                    "sourcebranchpublication_id": null
                 },
                 {
                     "alias": "publication_details",
@@ -1937,15 +2093,16 @@
                     "nodeid": "e9366370-bc33-11ed-bf42-5254004d77d3",
                     "ontologyclass": "http://www.cidoc-crm.org/cidoc-crm/E13_Attribute_Assignment",
                     "parentproperty": "http://www.cidoc-crm.org/cidoc-crm/P140i_was_attributed_by",
-                    "sortorder": 0
+                    "sortorder": 0,
+                    "sourcebranchpublication_id": null
                 }
             ],
             "ontology_id": "e6e8db47-2ccf-11e6-927e-b8f6b115d7dd",
             "publication": {
                 "graph_id": "3caf329f-b8f7-11e6-84a5-026d961c88e6",
                 "notes": null,
-                "publicationid": "5c5347a4-ce65-11ed-949a-5254004d77d3",
-                "published_time": "2023-03-29T14:10:25.433",
+                "publicationid": "67d7cbe2-fbc7-11ed-8cdb-5254004d77d3",
+                "published_time": "2023-05-26T08:15:37.761",
                 "user_id": 1
             },
             "relatable_resource_model_ids": [],
@@ -1967,7 +2124,8 @@
                 "nodegroup_id": null,
                 "nodeid": "3caf329e-b8f7-11e6-84a5-026d961c88e6",
                 "ontologyclass": "http://www.cidoc-crm.org/cidoc-crm/E73_Information_Object",
-                "sortorder": 0
+                "sortorder": 0,
+                "sourcebranchpublication_id": null
             },
             "slug": null,
             "subtitle": {
