@@ -78,7 +78,7 @@
                     "instructions": {
                         "en": ""
                     },
-                    "is_editable": true,
+                    "is_editable": false,
                     "name": {
                         "en": "Fossil Impact Assessment Process"
                     },
@@ -429,7 +429,7 @@
                     "instructions": {
                         "en": ""
                     },
-                    "is_editable": true,
+                    "is_editable": false,
                     "name": {
                         "en": "Preliminary Study Process"
                     },
@@ -4002,7 +4002,7 @@
             "functions_x_graphs": [],
             "graphid": "2aa724d1-ffd3-4823-8ff1-15a385b9a407",
             "iconclass": "fa fa-question",
-            "is_editable": true,
+            "is_editable": false,
             "isresource": true,
             "jsonldcontext": null,
             "name": {
@@ -4604,7 +4604,7 @@
                     "graph_id": "2aa724d1-ffd3-4823-8ff1-15a385b9a407",
                     "hascustomalias": false,
                     "is_collector": false,
-                    "isrequired": true,
+                    "isrequired": false,
                     "issearchable": true,
                     "istopnode": false,
                     "name": "Quaternary deposits",
@@ -4650,7 +4650,7 @@
                     "graph_id": "2aa724d1-ffd3-4823-8ff1-15a385b9a407",
                     "hascustomalias": false,
                     "is_collector": false,
-                    "isrequired": true,
+                    "isrequired": false,
                     "issearchable": true,
                     "istopnode": false,
                     "name": "Metamorphic rock",
@@ -4947,7 +4947,7 @@
                     "graph_id": "2aa724d1-ffd3-4823-8ff1-15a385b9a407",
                     "hascustomalias": false,
                     "is_collector": false,
-                    "isrequired": true,
+                    "isrequired": false,
                     "issearchable": true,
                     "istopnode": false,
                     "name": "Intersects IFA",
@@ -5748,7 +5748,7 @@
                     "graph_id": "2aa724d1-ffd3-4823-8ff1-15a385b9a407",
                     "hascustomalias": false,
                     "is_collector": false,
-                    "isrequired": true,
+                    "isrequired": false,
                     "issearchable": true,
                     "istopnode": false,
                     "name": "Ground Disturbance",
@@ -6284,7 +6284,7 @@
                     "graph_id": "2aa724d1-ffd3-4823-8ff1-15a385b9a407",
                     "hascustomalias": false,
                     "is_collector": false,
-                    "isrequired": true,
+                    "isrequired": false,
                     "issearchable": true,
                     "istopnode": false,
                     "name": "FRPR",
@@ -6732,7 +6732,7 @@
                     "graph_id": "2aa724d1-ffd3-4823-8ff1-15a385b9a407",
                     "hascustomalias": false,
                     "is_collector": false,
-                    "isrequired": true,
+                    "isrequired": false,
                     "issearchable": true,
                     "istopnode": false,
                     "name": "Sedimentary rock",
@@ -6824,7 +6824,7 @@
                     "graph_id": "2aa724d1-ffd3-4823-8ff1-15a385b9a407",
                     "hascustomalias": false,
                     "is_collector": false,
-                    "isrequired": true,
+                    "isrequired": false,
                     "issearchable": true,
                     "istopnode": false,
                     "name": "Initial Review Level of Risk",
@@ -7652,7 +7652,7 @@
                     "graph_id": "2aa724d1-ffd3-4823-8ff1-15a385b9a407",
                     "hascustomalias": false,
                     "is_collector": false,
-                    "isrequired": true,
+                    "isrequired": false,
                     "issearchable": true,
                     "istopnode": false,
                     "name": "Igneous rock",
@@ -8067,8 +8067,8 @@
             "publication": {
                 "graph_id": "2aa724d1-ffd3-4823-8ff1-15a385b9a407",
                 "notes": null,
-                "publicationid": "058aa266-ff0a-11ed-869d-5254004d77d3",
-                "published_time": "2023-05-30T11:50:02.608",
+                "publicationid": "45e57788-008a-11ee-8c75-0050568377a0",
+                "published_time": "2023-06-01T09:40:37.321",
                 "user_id": 1
             },
             "relatable_resource_model_ids": [],
@@ -8127,9 +8127,9 @@
         }
     ],
     "metadata": {
-        "db": "PostgreSQL 12.12 on x86_64-pc-linux-gnu, compiled by gcc (GCC) 4.8.5 20150623 (Red Hat 4.8.5-44), 64-bit",
-        "git hash": "/bin/sh: git: command not found",
+        "db": "PostgreSQL 12.11 on x86_64-pc-linux-gnu, compiled by gcc (GCC) 4.8.5 20150623 (Red Hat 4.8.5-44), 64-bit",
+        "git hash": "4a51a70 2023-05-23 17:03:50 -0700",
         "os": "Linux",
-        "os version": "3.10.0-1160.76.1.el7.x86_64"
+        "os version": "3.10.0-1160.88.1.el7.x86_64"
     }
 }
