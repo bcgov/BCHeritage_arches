@@ -22,7 +22,7 @@
                     "instructions": {
                         "en": ""
                     },
-                    "is_editable": false,
+                    "is_editable": true,
                     "name": {
                         "en": "Contributor"
                     },
@@ -258,7 +258,7 @@
                         ],
                         "label": "Associated Organization",
                         "placeholder": {
-                            "en": ""
+                            "en": "Select Organization Name if applicable"
                         }
                     },
                     "id": "e70e710a-60e0-44c5-92b1-3e8b7f8d8a2b",
@@ -421,12 +421,12 @@
                     },
                     "function_id": "60000000-0000-0000-0000-000000001001",
                     "graph_id": "605b0bbc-8661-4cf2-b340-df743a8c5f89",
-                    "id": "8ba03545-fd99-4646-a675-e1703fed645f"
+                    "id": "2ebc1ff8-0b7a-4526-9718-92a6c0954c02"
                 }
             ],
             "graphid": "605b0bbc-8661-4cf2-b340-df743a8c5f89",
             "iconclass": "fa fa-male",
-            "is_editable": false,
+            "is_editable": true,
             "isresource": true,
             "jsonldcontext": null,
             "name": {
@@ -835,8 +835,8 @@
             "publication": {
                 "graph_id": "605b0bbc-8661-4cf2-b340-df743a8c5f89",
                 "notes": null,
-                "publicationid": "71af5b18-fb71-11ed-ac9e-5254004d77d3",
-                "published_time": "2023-05-25T22:00:17.554",
+                "publicationid": "4a4c4878-009a-11ee-a294-5254004d77d3",
+                "published_time": "2023-06-01T11:35:16.654",
                 "user_id": 1
             },
             "relatable_resource_model_ids": [],
@@ -868,6 +868,29 @@
                 "en": ""
             },
             "template_id": "50000000-0000-0000-0000-000000000001",
+            "topnode": {
+                "alias": "paleological_consultant",
+                "config": {
+                    "en": ""
+                },
+                "datatype": "semantic",
+                "description": "",
+                "exportable": false,
+                "fieldname": null,
+                "graph_id": "605b0bbc-8661-4cf2-b340-df743a8c5f89",
+                "hascustomalias": false,
+                "is_collector": false,
+                "isrequired": false,
+                "issearchable": true,
+                "istopnode": true,
+                "name": "BC Fossil Contributor",
+                "nodegroup_id": null,
+                "nodeid": "98275cda-9dea-11ed-b3e8-5254004d77d3",
+                "ontologyclass": "http://www.cidoc-crm.org/cidoc-crm/E39_Actor",
+                "parentproperty": "",
+                "sortorder": 0,
+                "sourcebranchpublication_id": null
+            },
             "version": ""
         }
     ],

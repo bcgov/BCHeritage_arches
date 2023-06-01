@@ -408,28 +408,6 @@
                 {
                     "card_id": "109a2554-d968-11ed-b8ae-5254004d77d3",
                     "config": {
-                        "defaultValue": "",
-                        "i18n_properties": [
-                            "placeholder"
-                        ],
-                        "label": "Assessment Phase",
-                        "options": [],
-                        "placeholder": {
-                            "en": "Select an option"
-                        }
-                    },
-                    "id": "109f8cd8-d968-11ed-b8ae-5254004d77d3",
-                    "label": {
-                        "en": "Assessment Phase"
-                    },
-                    "node_id": "109c8db2-d968-11ed-b8ae-5254004d77d3",
-                    "sortorder": 0,
-                    "visible": true,
-                    "widget_id": "10000000-0000-0000-0000-000000000002"
-                },
-                {
-                    "card_id": "109a2554-d968-11ed-b8ae-5254004d77d3",
-                    "config": {
                         "defaultValue": {
                             "en": {
                                 "direction": "ltr",
@@ -463,14 +441,14 @@
                         "i18n_properties": [
                             "placeholder"
                         ],
-                        "label": "Industry Contact",
+                        "label": "External Contact",
                         "placeholder": {
-                            "en": ""
+                            "en": "Enter other party involved in the communication"
                         }
                     },
                     "id": "109f8f76-d968-11ed-b8ae-5254004d77d3",
                     "label": {
-                        "en": "Industry Contact"
+                        "en": "External Contact"
                     },
                     "node_id": "109c4fa0-d968-11ed-b8ae-5254004d77d3",
                     "sortorder": 2,
@@ -1411,15 +1389,6 @@
                 },
                 {
                     "description": null,
-                    "domainnode_id": "109a21da-d968-11ed-b8ae-5254004d77d3",
-                    "edgeid": "10b4701c-d968-11ed-b8ae-5254004d77d3",
-                    "graph_id": "109a0272-d968-11ed-b8ae-5254004d77d3",
-                    "name": null,
-                    "ontologyproperty": "http://www.cidoc-crm.org/cidoc-crm/P140i_was_attributed_by",
-                    "rangenode_id": "109c8db2-d968-11ed-b8ae-5254004d77d3"
-                },
-                {
-                    "description": null,
                     "domainnode_id": "109c7692-d968-11ed-b8ae-5254004d77d3",
                     "edgeid": "10b4722e-d968-11ed-b8ae-5254004d77d3",
                     "graph_id": "109a0272-d968-11ed-b8ae-5254004d77d3",
@@ -2231,29 +2200,6 @@
                     "sourcebranchpublication_id": null
                 },
                 {
-                    "alias": "ipa_phase",
-                    "config": {
-                        "rdmCollection": "c612762a-ad71-40b2-b259-c2330ee9174a"
-                    },
-                    "datatype": "concept",
-                    "description": null,
-                    "exportable": false,
-                    "fieldname": null,
-                    "graph_id": "109a0272-d968-11ed-b8ae-5254004d77d3",
-                    "hascustomalias": false,
-                    "is_collector": false,
-                    "isrequired": false,
-                    "issearchable": true,
-                    "istopnode": false,
-                    "name": "IPA Phase",
-                    "nodegroup_id": "109a21da-d968-11ed-b8ae-5254004d77d3",
-                    "nodeid": "109c8db2-d968-11ed-b8ae-5254004d77d3",
-                    "ontologyclass": "http://www.cidoc-crm.org/cidoc-crm/E13_Attribute_Assignment",
-                    "parentproperty": "http://www.cidoc-crm.org/cidoc-crm/P140i_was_attributed_by",
-                    "sortorder": 0,
-                    "sourcebranchpublication_id": null
-                },
-                {
                     "alias": "location_description",
                     "config": {
                         "en": ""
@@ -2749,8 +2695,8 @@
             "publication": {
                 "graph_id": "109a0272-d968-11ed-b8ae-5254004d77d3",
                 "notes": null,
-                "publicationid": "ebea4a2a-fb2e-11ed-a196-5254004d77d3",
-                "published_time": "2023-05-25T14:04:06.342",
+                "publicationid": "87717f0c-009f-11ee-955a-5254004d77d3",
+                "published_time": "2023-06-01T12:12:46.722",
                 "user_id": 1
             },
             "relatable_resource_model_ids": [],
@@ -2782,6 +2728,29 @@
                 "en": ""
             },
             "template_id": "50000000-0000-0000-0000-000000000002",
+            "topnode": {
+                "alias": "industry_project_assessment",
+                "config": {
+                    "en": ""
+                },
+                "datatype": "semantic",
+                "description": "",
+                "exportable": false,
+                "fieldname": null,
+                "graph_id": "109a0272-d968-11ed-b8ae-5254004d77d3",
+                "hascustomalias": false,
+                "is_collector": false,
+                "isrequired": false,
+                "issearchable": true,
+                "istopnode": true,
+                "name": "Research Permit Request",
+                "nodegroup_id": null,
+                "nodeid": "109c7692-d968-11ed-b8ae-5254004d77d3",
+                "ontologyclass": "http://www.cidoc-crm.org/cidoc-crm/E7_Activity",
+                "parentproperty": "",
+                "sortorder": 0,
+                "sourcebranchpublication_id": null
+            },
             "version": ""
         }
     ],
