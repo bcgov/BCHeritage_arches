@@ -239,7 +239,7 @@
                         "i18n_properties": [
                             "placeholder"
                         ],
-                        "label": "Digital Object Identifier",
+                        "label": "Publication Identifier",
                         "maxLength": null,
                         "placeholder": {
                             "en": "Enter text"
@@ -249,10 +249,10 @@
                     },
                     "id": "0473f339-a921-4d28-8dfa-01b84acca89f",
                     "label": {
-                        "en": "Digital Object Identifier"
+                        "en": "Publication Identifier"
                     },
                     "node_id": "63960b1a-bc3f-11ed-bd90-5254004d77d3",
-                    "sortorder": 7,
+                    "sortorder": 8,
                     "visible": true,
                     "widget_id": "10000000-0000-0000-0000-000000000001"
                 },
@@ -577,6 +577,28 @@
                     "sortorder": 0,
                     "visible": true,
                     "widget_id": "10000000-0000-0000-0000-000000000012"
+                },
+                {
+                    "card_id": "66575824-fa2d-4657-8c09-62e13a1ed6e5",
+                    "config": {
+                        "defaultValue": "",
+                        "i18n_properties": [
+                            "placeholder"
+                        ],
+                        "label": "Publication Identifier Type",
+                        "options": [],
+                        "placeholder": {
+                            "en": "Select an option"
+                        }
+                    },
+                    "id": "d5f059f4-6008-48c3-ad2c-116a7849bedb",
+                    "label": {
+                        "en": "Publication Identifier Type"
+                    },
+                    "node_id": "76eeb332-c410-11ed-81a5-5254004d77d3",
+                    "sortorder": 7,
+                    "visible": true,
+                    "widget_id": "10000000-0000-0000-0000-000000000002"
                 },
                 {
                     "card_id": "14566eac-86b2-4263-8a0b-613537f02478",
@@ -1491,11 +1513,11 @@
                     "sourcebranchpublication_id": null
                 },
                 {
-                    "alias": "publication_identifiery_type",
+                    "alias": "publication_identifier_type",
                     "config": {
-                        "rdmCollection": null
+                        "rdmCollection": "dc497006-72ad-44a1-beb5-fa9b7e1ac93a"
                     },
-                    "datatype": "semantic",
+                    "datatype": "concept",
                     "description": null,
                     "exportable": false,
                     "fieldname": null,
@@ -1505,7 +1527,7 @@
                     "isrequired": false,
                     "issearchable": true,
                     "istopnode": false,
-                    "name": "Publication Identifiery Type",
+                    "name": "Publication Identifier Type",
                     "nodegroup_id": "e9366370-bc33-11ed-bf42-5254004d77d3",
                     "nodeid": "76eeb332-c410-11ed-81a5-5254004d77d3",
                     "ontologyclass": "http://www.cidoc-crm.org/cidoc-crm/E55_Type",
@@ -2097,8 +2119,8 @@
             "publication": {
                 "graph_id": "3caf329f-b8f7-11e6-84a5-026d961c88e6",
                 "notes": null,
-                "publicationid": "5b967226-0143-11ee-968c-5254004d77d3",
-                "published_time": "2023-06-02T07:45:30.608",
+                "publicationid": "4f4f95de-0147-11ee-bd9f-5254004d77d3",
+                "published_time": "2023-06-02T08:13:47.998",
                 "user_id": 1
             },
             "relatable_resource_model_ids": [],
