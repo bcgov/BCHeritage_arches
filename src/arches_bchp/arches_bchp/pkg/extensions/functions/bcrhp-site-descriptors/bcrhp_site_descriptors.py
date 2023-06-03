@@ -87,15 +87,15 @@ class BCRHPSiteDescriptors(AbstractPrimaryDescriptorsFunction):
 
             _description_order = self._popup_order if config["type"] == 'map_popup' else self._card_order
 
-            all_names = _description_order+[item for sublist in (self._address_order) for item in sublist]
+            # all_names = _description_order+[item for sublist in (self._address_order) for item in sublist]
             name_nodes = models.Node.objects.filter(graph=resource.graph_id).filter(
-                name__in=all_names
+                name__in=_description_order
             )
 
             sorted_name_nodes = sorted(name_nodes, key=lambda row: _description_order.index(row.name) if row.name in _description_order else 999, reverse=False)
 
             for name_node in sorted_name_nodes:
-                value = self._get_value_from_node(name_node, resource)
+                value = BCRHPSiteDescriptors._get_value_from_node(name_node, resource)
                 if value:
                     if config["first_only"]:
                         return BCRHPSiteDescriptors._format_value(name_node.name, value, config)
@@ -103,7 +103,7 @@ class BCRHPSiteDescriptors(AbstractPrimaryDescriptorsFunction):
 
             for label in _description_order:
                 if label == 'Address':
-                    return_value += BCRHPSiteDescriptors._format_value(label, BCRHPSiteDescriptors._get_address(display_values), config)
+                    return_value += BCRHPSiteDescriptors._format_value(label, BCRHPSiteDescriptors._get_address(resource), config)
                 elif label == 'Construction Date':
                     return_value += BCRHPSiteDescriptors._format_value(label, BCRHPSiteDescriptors._get_construction_date(resource), config)
                 elif label in display_values:
@@ -114,18 +114,38 @@ class BCRHPSiteDescriptors(AbstractPrimaryDescriptorsFunction):
         except ValueError as e:
             print(e, "invalid nodegroupid participating in descriptor function.")
 
-    def _get_value_from_node(self, name_node, resourceinstanceid):
+    @staticmethod
+    def _get_value_from_node(name_node, resourceinstanceid=None, data_tile=None):
+        """
+        get the display value from the resource tile(s) for the node with the given name
 
-        tile = models.TileModel.objects.filter(
-            nodegroup_id=name_node.nodegroup_id
-        ).filter(resourceinstance_id=resourceinstanceid).first()
-        if not tile:
-            return None
+        Keyword Arguments
+
+        name_node -- node name to extract the value of
+        resourceinstanceid -- id of resource instance used to fetch the tile(s) if data_tile not specified
+        data_tile -- if specified, the tile to extract the value from
+        """
+        display_values = []
         datatype = BCRHPSiteDescriptors._datatype_factory.get_instance(name_node.datatype)
-        return datatype.get_display_value(tile, name_node)
+
+        tiles = [data_tile] if data_tile else models.TileModel.objects.filter(
+            nodegroup_id=name_node.nodegroup_id
+        ).filter(resourceinstance_id=resourceinstanceid)
+
+        for tile in tiles:
+            if tile:
+                display_values.append(datatype.get_display_value(tile, name_node))
+
+        return  None if len(display_values) == 0 else (display_values[0] if len(display_values) == 1 else display_values)
 
     @staticmethod
     def _format_value(name, value, config):
+        if type(value) is list:
+            value = set(value)
+            if "" in value:
+                value.remove("")
+            value = ", ".join(sorted(value))
+
         if value is None:
             return ""
         elif config["show_name"]:
@@ -133,17 +153,29 @@ class BCRHPSiteDescriptors(AbstractPrimaryDescriptorsFunction):
         return value
 
     @staticmethod
-    def _get_address(display_values):
+    def _get_address(resource):
+        _address_nodes = []
+
+        for address_line in BCRHPSiteDescriptors._address_order:
+            name_nodes = models.Node.objects.filter(graph=resource.graph_id).filter(
+                name__in=address_line
+            )
+            sorted_name_nodes = sorted(name_nodes, key=lambda row: address_line.index(row.name) if row.name in address_line else 999, reverse=False)
+            _address_nodes.append(sorted_name_nodes)
+
         address = ""
-        for label_line in BCRHPSiteDescriptors._address_order:
+        for address_line_nodes in _address_nodes:
             if address:
                 address += "<br>"
             line = ""
-            for label in label_line:
-                if label in display_values:
-                    if (line):
-                        line += " "
-                    line += display_values[label] if display_values[label] else ""
+            for address_node in address_line_nodes:
+                tile = models.TileModel.objects.filter(
+                    nodegroup_id=address_node.nodegroup_id
+                ).filter(resourceinstance_id=resource.resourceinstanceid).first()
+                if (line):
+                    line += " "
+                display_value  = BCRHPSiteDescriptors._get_value_from_node(name_node=address_node, data_tile=tile)
+                line += (display_value[0] if type(display_value) is list else display_value)
             if line:
                 address += line
         return address if address else None
