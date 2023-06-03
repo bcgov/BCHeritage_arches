@@ -1,7 +1,6 @@
 from arches.app.functions.primary_descriptors import AbstractPrimaryDescriptorsFunction
 from arches.app.models import models
 from arches.app.datatypes.datatypes import DataTypeFactory
-from django.utils.translation import ugettext as _
 from arches_bchp.util.bcrhp_aliases import BCRHPSiteAliases as aliases
 
 details = {
@@ -54,22 +53,25 @@ class BCRHPSiteDescriptors(AbstractPrimaryDescriptorsFunction):
     _initialized = False
 
     # @todo Change these to aliases
-    _popup_order = ['Borden Number', 'Address', 'Recognition Type']
-    _popup_order2 = [aliases.BORDEN_NUMBER, 'address', aliases.RECOGNITION_TYPE]
-    _card_order = ['Borden Number', 'City', 'Recognition Type', 'Construction Date']
-    _card_order2 = [aliases.BORDEN_NUMBER, aliases.CITY, aliases.RECOGNITION_TYPE, 'construction_date']
-    _address_order = [['Street Number', 'Street Name'],['City','Postal Code']]
-    _address_order2 = [['street_number', 'street_name'],['city','postal_code']]
+    _name_nodes = [aliases.NAME_TYPE, aliases.NAME]
+    _sig_event_nodes = [aliases.START_YEAR, aliases.START_YEAR_QUALIFIER, aliases.SIGNIFICANT_EVENTS]
+    _popup_nodes = [aliases.BORDEN_NUMBER, 'address', aliases.RECOGNITION_TYPE]
+    _card_nodes = [aliases.BORDEN_NUMBER, aliases.CITY, aliases.RECOGNITION_TYPE, 'construction_date']
+    _address_nodes = [['street_number', 'street_name'],[aliases.CITY,'postal_code']]
 
 
     # Initializes the static nodes and datatypes data
     def initialize(self):
-        for alias in [aliases.NAME_TYPE, aliases.NAME, aliases.START_YEAR, aliases.START_YEAR_QUALIFIER, aliases.SIGNIFICANT_EVENTS]:
-            BCRHPSiteDescriptors._nodes[alias] = models.Node.objects.filter(
+        for alias in BCRHPSiteDescriptors._name_nodes + BCRHPSiteDescriptors._sig_event_nodes + \
+                     BCRHPSiteDescriptors._popup_nodes + BCRHPSiteDescriptors._card_nodes + sum(
+            BCRHPSiteDescriptors._address_nodes, []):
+            node = models.Node.objects.filter(
                 alias=alias,
                 graph__name__contains=BCRHPSiteDescriptors.en_graph
             ).first()
-            BCRHPSiteDescriptors._datatypes[alias] = BCRHPSiteDescriptors._datatype_factory.get_instance(BCRHPSiteDescriptors._nodes[alias].datatype)
+            if node:
+                BCRHPSiteDescriptors._nodes[alias] = node
+                BCRHPSiteDescriptors._datatypes[alias] = BCRHPSiteDescriptors._datatype_factory.get_instance(node.datatype)
 
         BCRHPSiteDescriptors._initialized = True
 
@@ -78,36 +80,30 @@ class BCRHPSiteDescriptors(AbstractPrimaryDescriptorsFunction):
             self.initialize()
 
         return_value = ""
-
         display_values = {}
 
         try:
             if config["type"] == "name":
                 return self._get_site_name(resource)
 
-            _description_order = self._popup_order if config["type"] == 'map_popup' else self._card_order
+            _description_order = self._popup_nodes if config["type"] == 'map_popup' else self._card_nodes
 
-            # all_names = _description_order+[item for sublist in (self._address_order) for item in sublist]
-            name_nodes = models.Node.objects.filter(graph=resource.graph_id).filter(
-                name__in=_description_order
-            )
+            nodes = BCRHPSiteDescriptors._nodes
 
-            sorted_name_nodes = sorted(name_nodes, key=lambda row: _description_order.index(row.name) if row.name in _description_order else 999, reverse=False)
-
-            for name_node in sorted_name_nodes:
-                value = BCRHPSiteDescriptors._get_value_from_node(name_node, resource)
+            for node_alias in _description_order:
+                value = BCRHPSiteDescriptors._get_value_from_node(node_alias, resource)
                 if value:
                     if config["first_only"]:
-                        return BCRHPSiteDescriptors._format_value(name_node.name, value, config)
-                    display_values[name_node.name] = value
+                        return BCRHPSiteDescriptors._format_value(nodes[node_alias].name, value, config)
+                    display_values[node_alias] = value
 
-            for label in _description_order:
-                if label == 'Address':
-                    return_value += BCRHPSiteDescriptors._format_value(label, BCRHPSiteDescriptors._get_address(resource), config)
-                elif label == 'Construction Date':
-                    return_value += BCRHPSiteDescriptors._format_value(label, BCRHPSiteDescriptors._get_construction_date(resource), config)
-                elif label in display_values:
-                    return_value += BCRHPSiteDescriptors._format_value(label, display_values[label], config)
+            for alias in _description_order:
+                if alias == 'address':
+                    return_value += BCRHPSiteDescriptors._format_value("Address", BCRHPSiteDescriptors._get_address(resource), config)
+                elif alias == 'construction_date':
+                    return_value += BCRHPSiteDescriptors._format_value("Construction Date", BCRHPSiteDescriptors._get_construction_date(resource), config)
+                elif alias in display_values:
+                    return_value += BCRHPSiteDescriptors._format_value(nodes[alias].name, display_values[alias], config)
 
             return return_value
 
@@ -115,26 +111,29 @@ class BCRHPSiteDescriptors(AbstractPrimaryDescriptorsFunction):
             print(e, "invalid nodegroupid participating in descriptor function.")
 
     @staticmethod
-    def _get_value_from_node(name_node, resourceinstanceid=None, data_tile=None):
+    def _get_value_from_node(node_alias, resourceinstanceid=None, data_tile=None):
         """
         get the display value from the resource tile(s) for the node with the given name
 
         Keyword Arguments
 
-        name_node -- node name to extract the value of
+        node_alias -- node alias of the data to extract
         resourceinstanceid -- id of resource instance used to fetch the tile(s) if data_tile not specified
         data_tile -- if specified, the tile to extract the value from
         """
+        if node_alias not in BCRHPSiteDescriptors._nodes:
+            return None
+
         display_values = []
-        datatype = BCRHPSiteDescriptors._datatype_factory.get_instance(name_node.datatype)
+        datatype = BCRHPSiteDescriptors._datatypes[node_alias]
 
         tiles = [data_tile] if data_tile else models.TileModel.objects.filter(
-            nodegroup_id=name_node.nodegroup_id
+            nodegroup_id=BCRHPSiteDescriptors._nodes[node_alias].nodegroup_id
         ).filter(resourceinstance_id=resourceinstanceid)
 
         for tile in tiles:
             if tile:
-                display_values.append(datatype.get_display_value(tile, name_node))
+                display_values.append(datatype.get_display_value(tile,BCRHPSiteDescriptors._nodes[node_alias]))
 
         return  None if len(display_values) == 0 else (display_values[0] if len(display_values) == 1 else display_values)
 
@@ -154,28 +153,22 @@ class BCRHPSiteDescriptors(AbstractPrimaryDescriptorsFunction):
 
     @staticmethod
     def _get_address(resource):
-        _address_nodes = []
-
-        for address_line in BCRHPSiteDescriptors._address_order:
-            name_nodes = models.Node.objects.filter(graph=resource.graph_id).filter(
-                name__in=address_line
-            )
-            sorted_name_nodes = sorted(name_nodes, key=lambda row: address_line.index(row.name) if row.name in address_line else 999, reverse=False)
-            _address_nodes.append(sorted_name_nodes)
-
         address = ""
-        for address_line_nodes in _address_nodes:
+        nodes = BCRHPSiteDescriptors._nodes
+
+        for address_line_nodes in BCRHPSiteDescriptors._address_nodes:
             if address:
                 address += "<br>"
             line = ""
-            for address_node in address_line_nodes:
+            for address_node_alias in address_line_nodes:
                 tile = models.TileModel.objects.filter(
-                    nodegroup_id=address_node.nodegroup_id
+                    nodegroup_id=nodes[address_node_alias].nodegroup_id
                 ).filter(resourceinstance_id=resource.resourceinstanceid).first()
                 if (line):
                     line += " "
-                display_value  = BCRHPSiteDescriptors._get_value_from_node(name_node=address_node, data_tile=tile)
-                line += (display_value[0] if type(display_value) is list else display_value)
+                display_value  = BCRHPSiteDescriptors._get_value_from_node(node_alias=address_node_alias, data_tile=tile)
+                display_value = (display_value[0] if type(display_value) is list else display_value)
+                line += display_value if display_value is not None else ""
             if line:
                 address += line
         return address if address else None
