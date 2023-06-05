@@ -4,12 +4,13 @@
     "frpc-source": {
       "type": "vector",
       "tiles": [
-        "/int/arches-fossils/tileserver/map_data.fiss_frpc_br/{z}/{x}/{y}.pbf"
+        "/int/arches-fossils/bctileserver/map_data.fiss_frpc_br/{z}/{x}/{y}.pbf?source=local"
       ],
       "tileSize": 512
     }
   },
   "arches-metadata": {
+    "ispublic": false,
     "addtomap": false,
     "centerx": null,
     "centery": null,
