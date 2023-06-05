@@ -43,6 +43,9 @@ body, h1, h2, h3, h4, h5
 
 .search-listing-body {
     overflow-y: scroll;
+    height: unset !important;
+    min-height: 4.6em !important;
+    max-height: 8em !important;
 }
 
 .bc-report-title {
