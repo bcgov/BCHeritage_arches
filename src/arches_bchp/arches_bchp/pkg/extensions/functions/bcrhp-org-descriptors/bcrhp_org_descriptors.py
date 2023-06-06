@@ -1,6 +1,6 @@
 from arches.app.models import models
 from arches_bchp.util.bcrhp_aliases import BCRHPSiteAliases as site_aliases, BCRHPOrgAliases as aliases
-from arches_bchp.functions.bc_resource_descriptors import BCResourceDescriptors
+from arches_bchp.functions.base.bc_resource_descriptors import BCResourceDescriptors
 
 details = {
     "functionid": "60000000-0000-0000-0000-000000001003",

@@ -103,12 +103,6 @@
                                 "91cc2384-a31c-11ed-b90e-5254004d77d3"
                             ],
                             "uniquetoallinstances": true
-                        },
-                        {
-                            "card_id": "7d35e296-ba54-4879-88aa-c2951dce0d1c",
-                            "constraintid": "1999f962-94da-4e25-9962-f1abffb15321",
-                            "nodes": [],
-                            "uniquetoallinstances": false
                         }
                     ],
                     "cssclass": null,
@@ -431,25 +425,35 @@
             "functions_x_graphs": [
                 {
                     "config": {
+                        "class_name": "BCRHPOrgDescriptors",
                         "descriptor_types": {
                             "description": {
-                                "nodegroup_id": "1d43d930-a31c-11ed-bbb0-5254004d77d3",
-                                "string_template": "<Street Number> <Street Name>, <City>, <Province> <Postal Code>"
+                                "delimiter": "<br>",
+                                "first_only": false,
+                                "node_ids": [],
+                                "show_name": true,
+                                "type": "description"
                             },
                             "map_popup": {
-                                "nodegroup_id": "1d43d930-a31c-11ed-bbb0-5254004d77d3",
-                                "string_template": "<Street Number> <Street Name>, <City>, <Province> <Postal Code>"
+                                "delimiter": "<br>",
+                                "first_only": false,
+                                "node_ids": [],
+                                "show_name": true,
+                                "type": "map_popup"
                             },
                             "name": {
-                                "nodegroup_id": "91cc2384-a31c-11ed-b90e-5254004d77d3",
-                                "string_template": "<Local Government Name>"
+                                "first_only": true,
+                                "node_ids": [],
+                                "show_name": false,
+                                "type": "name"
                             }
                         },
+                        "module": "arches_bcrhp.functions.bcrhp_org_descriptors",
                         "triggering_nodegroups": []
                     },
-                    "function_id": "60000000-0000-0000-0000-000000000001",
+                    "function_id": "60000000-0000-0000-0000-000000001003",
                     "graph_id": "aacf8bb6-3f6e-46d9-a551-b0749d7efffc",
-                    "id": "c12c07d4-3f3d-4466-88d2-68cfb1eff5b3"
+                    "id": "4506e6f8-3546-4131-a70b-e93b6d2578dc"
                 }
             ],
             "graphid": "aacf8bb6-3f6e-46d9-a551-b0749d7efffc",
@@ -530,7 +534,8 @@
                     "nodeid": "1d43b3ba-a31c-11ed-bbb0-5254004d77d3",
                     "ontologyclass": "http://www.cidoc-crm.org/cidoc-crm/E47_Spatial_Coordinates",
                     "parentproperty": "http://www.cidoc-crm.org/cidoc-crm/P87_is_identified_by",
-                    "sortorder": 0
+                    "sortorder": 0,
+                    "sourcebranchpublication_id": null
                 },
                 {
                     "alias": "local_government_location",
@@ -552,7 +557,8 @@
                     "nodeid": "1d43cfe4-a31c-11ed-bbb0-5254004d77d3",
                     "ontologyclass": "http://www.cidoc-crm.org/cidoc-crm/E53_Place",
                     "parentproperty": "http://www.cidoc-crm.org/cidoc-crm/P74_has_current_or_former_residence",
-                    "sortorder": 0
+                    "sortorder": 0,
+                    "sourcebranchpublication_id": null
                 },
                 {
                     "alias": "office_address",
@@ -574,7 +580,8 @@
                     "nodeid": "1d43d930-a31c-11ed-bbb0-5254004d77d3",
                     "ontologyclass": "http://www.cidoc-crm.org/cidoc-crm/E45_Address",
                     "parentproperty": "http://www.ics.forth.gr/isl/CRMdig/L54i_is_same-as",
-                    "sortorder": 0
+                    "sortorder": 0,
+                    "sourcebranchpublication_id": null
                 },
                 {
                     "alias": "postal_code",
@@ -594,7 +601,8 @@
                     "nodeid": "1d43e4ac-a31c-11ed-bbb0-5254004d77d3",
                     "ontologyclass": "http://www.cidoc-crm.org/cidoc-crm/E13_Attribute_Assignment",
                     "parentproperty": "http://www.cidoc-crm.org/cidoc-crm/P140i_was_attributed_by",
-                    "sortorder": 0
+                    "sortorder": 0,
+                    "sourcebranchpublication_id": null
                 },
                 {
                     "alias": "street_number",
@@ -614,7 +622,8 @@
                     "nodeid": "1d43e63c-a31c-11ed-bbb0-5254004d77d3",
                     "ontologyclass": "http://www.cidoc-crm.org/cidoc-crm/E13_Attribute_Assignment",
                     "parentproperty": "http://www.cidoc-crm.org/cidoc-crm/P140i_was_attributed_by",
-                    "sortorder": 0
+                    "sortorder": 0,
+                    "sourcebranchpublication_id": null
                 },
                 {
                     "alias": "street_name",
@@ -634,7 +643,8 @@
                     "nodeid": "1d43e7d6-a31c-11ed-bbb0-5254004d77d3",
                     "ontologyclass": "http://www.cidoc-crm.org/cidoc-crm/E13_Attribute_Assignment",
                     "parentproperty": "http://www.cidoc-crm.org/cidoc-crm/P140i_was_attributed_by",
-                    "sortorder": 0
+                    "sortorder": 0,
+                    "sourcebranchpublication_id": null
                 },
                 {
                     "alias": "city",
@@ -654,7 +664,8 @@
                     "nodeid": "1d43eff6-a31c-11ed-bbb0-5254004d77d3",
                     "ontologyclass": "http://www.cidoc-crm.org/cidoc-crm/E13_Attribute_Assignment",
                     "parentproperty": "http://www.cidoc-crm.org/cidoc-crm/P140i_was_attributed_by",
-                    "sortorder": 0
+                    "sortorder": 0,
+                    "sourcebranchpublication_id": null
                 },
                 {
                     "alias": "province",
@@ -676,7 +687,8 @@
                     "nodeid": "1d43f186-a31c-11ed-bbb0-5254004d77d3",
                     "ontologyclass": "http://www.cidoc-crm.org/cidoc-crm/E13_Attribute_Assignment",
                     "parentproperty": "http://www.cidoc-crm.org/cidoc-crm/P140i_was_attributed_by",
-                    "sortorder": 0
+                    "sortorder": 0,
+                    "sourcebranchpublication_id": null
                 },
                 {
                     "alias": "local_government_name",
@@ -698,7 +710,8 @@
                     "nodeid": "91cc2384-a31c-11ed-b90e-5254004d77d3",
                     "ontologyclass": "http://www.cidoc-crm.org/cidoc-crm/E82_Actor_Appellation",
                     "parentproperty": "http://www.cidoc-crm.org/cidoc-crm/P131_is_identified_by",
-                    "sortorder": 0
+                    "sortorder": 0,
+                    "sourcebranchpublication_id": null
                 },
                 {
                     "alias": null,
@@ -720,7 +733,8 @@
                     "nodeid": "97a57356-a31b-11ed-bfc5-5254004d77d3",
                     "ontologyclass": "http://www.cidoc-crm.org/cidoc-crm/E40_Legal_Body",
                     "parentproperty": "",
-                    "sortorder": 0
+                    "sortorder": 0,
+                    "sourcebranchpublication_id": null
                 },
                 {
                     "alias": "government_type",
@@ -742,7 +756,8 @@
                     "nodeid": "f3c9024a-c9ab-11ed-9888-5254004d77d3",
                     "ontologyclass": "http://www.cidoc-crm.org/cidoc-crm/E55_Type",
                     "parentproperty": "http://www.cidoc-crm.org/cidoc-crm/P2_has_type",
-                    "sortorder": 0
+                    "sortorder": 0,
+                    "sourcebranchpublication_id": null
                 }
             ],
             "ontology_id": "e6e8db47-2ccf-11e6-927e-b8f6b115d7dd",
@@ -774,13 +789,37 @@
                 "nodegroup_id": null,
                 "nodeid": "97a57356-a31b-11ed-bfc5-5254004d77d3",
                 "ontologyclass": "http://www.cidoc-crm.org/cidoc-crm/E40_Legal_Body",
-                "sortorder": 0
+                "sortorder": 0,
+                "sourcebranchpublication_id": null
             },
             "slug": null,
             "subtitle": {
                 "en": ""
             },
             "template_id": "50000000-0000-0000-0000-000000000001",
+            "topnode": {
+                "alias": null,
+                "config": {
+                    "en": ""
+                },
+                "datatype": "semantic",
+                "description": "",
+                "exportable": false,
+                "fieldname": null,
+                "graph_id": "aacf8bb6-3f6e-46d9-a551-b0749d7efffc",
+                "hascustomalias": false,
+                "is_collector": false,
+                "isrequired": false,
+                "issearchable": true,
+                "istopnode": true,
+                "name": "BC Local Government",
+                "nodegroup_id": null,
+                "nodeid": "97a57356-a31b-11ed-bfc5-5254004d77d3",
+                "ontologyclass": "http://www.cidoc-crm.org/cidoc-crm/E40_Legal_Body",
+                "parentproperty": "",
+                "sortorder": 0,
+                "sourcebranchpublication_id": null
+            },
             "version": ""
         }
     ],
