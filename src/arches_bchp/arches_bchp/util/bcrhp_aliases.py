@@ -17,5 +17,9 @@ class BCRHPSiteAliases:
 
     RECOGNITION_TYPE = 'recognition_type'
 
-class BCRHPLocalGovernmentAliases:
-    TEST = 'test'
+    # Link to BC Local Government RM
+    RESPONSIBLE_GOVERNMENT = 'responsible_government'
+
+class BCRHPOrgAliases:
+    NAME = 'local_government_name'
+    GOVERNMENT_TYPE = 'government_type'
