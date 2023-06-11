@@ -49,7 +49,7 @@
                     "instructions": {
                         "en": ""
                     },
-                    "is_editable": true,
+                    "is_editable": false,
                     "name": {
                         "en": "BC Heritage Theme"
                     },
@@ -76,7 +76,7 @@
                     "instructions": {
                         "en": ""
                     },
-                    "is_editable": true,
+                    "is_editable": false,
                     "name": {
                         "en": "Decision History"
                     },
@@ -163,7 +163,7 @@
                     "instructions": {
                         "en": ""
                     },
-                    "is_editable": true,
+                    "is_editable": false,
                     "name": {
                         "en": "BC Property Legal Description"
                     },
@@ -201,7 +201,7 @@
                     "instructions": {
                         "en": "Enter the address of the location."
                     },
-                    "is_editable": true,
+                    "is_editable": false,
                     "name": {
                         "en": "BC Property Address"
                     },
@@ -230,7 +230,7 @@
                     "instructions": {
                         "en": "Define the spatial location."
                     },
-                    "is_editable": true,
+                    "is_editable": false,
                     "name": {
                         "en": "Spatial Location"
                     },
@@ -257,7 +257,7 @@
                     "instructions": {
                         "en": ""
                     },
-                    "is_editable": true,
+                    "is_editable": false,
                     "name": {
                         "en": "BC Heritage Resource Place"
                     },
@@ -284,7 +284,7 @@
                     "instructions": {
                         "en": ""
                     },
-                    "is_editable": true,
+                    "is_editable": false,
                     "name": {
                         "en": "Borden Number"
                     },
@@ -311,7 +311,7 @@
                     "instructions": {
                         "en": "Define the resource's designation or protection status."
                     },
-                    "is_editable": true,
+                    "is_editable": false,
                     "name": {
                         "en": "Official Recognition Details"
                     },
@@ -340,7 +340,7 @@
                     "instructions": {
                         "en": ""
                     },
-                    "is_editable": true,
+                    "is_editable": false,
                     "name": {
                         "en": "Official Recognition Information"
                     },
@@ -367,7 +367,7 @@
                     "instructions": {
                         "en": ""
                     },
-                    "is_editable": true,
+                    "is_editable": false,
                     "name": {
                         "en": "BC Heritage Class"
                     },
@@ -394,7 +394,7 @@
                     "instructions": {
                         "en": ""
                     },
-                    "is_editable": true,
+                    "is_editable": false,
                     "name": {
                         "en": "Statement of Significance"
                     },
@@ -421,7 +421,7 @@
                     "instructions": {
                         "en": ""
                     },
-                    "is_editable": true,
+                    "is_editable": false,
                     "name": {
                         "en": "BC Heritage Function"
                     },
@@ -448,7 +448,7 @@
                     "instructions": {
                         "en": ""
                     },
-                    "is_editable": true,
+                    "is_editable": false,
                     "name": {
                         "en": "Architects / Builders"
                     },
@@ -475,7 +475,7 @@
                     "instructions": {
                         "en": "Enter any external URLs associated with this Historic Place"
                     },
-                    "is_editable": true,
+                    "is_editable": false,
                     "name": {
                         "en": "External URLs"
                     },
@@ -502,7 +502,7 @@
                     "instructions": {
                         "en": "Attach digital documents with information regarding the Site."
                     },
-                    "is_editable": true,
+                    "is_editable": false,
                     "name": {
                         "en": "Site Document"
                     },
@@ -531,7 +531,7 @@
                     "instructions": {
                         "en": ""
                     },
-                    "is_editable": true,
+                    "is_editable": false,
                     "name": {
                         "en": "Site Images"
                     },
@@ -558,7 +558,7 @@
                     "instructions": {
                         "en": ""
                     },
-                    "is_editable": true,
+                    "is_editable": false,
                     "name": {
                         "en": "Significant Events"
                     },
@@ -585,7 +585,7 @@
                     "instructions": {
                         "en": ""
                     },
-                    "is_editable": true,
+                    "is_editable": false,
                     "name": {
                         "en": "Site Names"
                     },
@@ -3928,12 +3928,12 @@
                     },
                     "function_id": "60000000-0000-0000-0000-000000001002",
                     "graph_id": "cef9c510-e3e6-4057-ac08-89ad926180b4",
-                    "id": "a7a19ade-06f0-42b4-aaad-15445afe4d94"
+                    "id": "d8ed9594-5242-4e73-bbbe-892aeef66a4c"
                 }
             ],
             "graphid": "cef9c510-e3e6-4057-ac08-89ad926180b4",
             "iconclass": "fa fa-bank",
-            "is_editable": true,
+            "is_editable": false,
             "isresource": true,
             "jsonldcontext": null,
             "name": {
@@ -4657,8 +4657,8 @@
                     "alias": "spatial_coordinates_geometry",
                     "config": {
                         "addToMap": true,
-                        "advancedStyle": "",
-                        "advancedStyling": false,
+                        "advancedStyle": "[\n\t{\n\t\t\"id\": \"resources-fill-1b6235b0-0d0f-11ed-98c2-5254008afee6\",\n\t\t\"type\": \"fill\",\n\t\t\"source\": \"resources-1b6235b0-0d0f-11ed-98c2-5254008afee6\",\n\t\t\"source-layer\": \"1b6235b0-0d0f-11ed-98c2-5254008afee6\",\n\t\t\"layout\": {\n\t\t\t\"visibility\": \"visible\"\n\t\t},\n\t\t\"filter\": [\n\t\t\t\"all\",\n\t\t\t[\n\t\t\t\t\"==\",\n\t\t\t\t\"$type\",\n\t\t\t\t\"Polygon\"\n\t\t\t],\n\t\t\t[\n\t\t\t\t\"==\",\n\t\t\t\t\"total\",\n\t\t\t\t1\n\t\t\t]\n\t\t],\n\t\t\"paint\": {\n\t\t\t\"fill-color\": [\"case\", \n                           [\"in\", \"Federal\", [\"get\",\"authority\"]], \"rgba(0,122,0,0.73)\",\n\t\t\t\t\t\t   [\"in\", \"Provincial\", [\"get\",\"authority\"]], \"rgba(0,0,122,0.73)\",\n\t\t\t\t\t\t\t\"rgba(255,122,0,0.73)\"]\n\t\t}\n\t},\n\t{\n\t\t\"id\": \"resources-fill-1b6235b0-0d0f-11ed-98c2-5254008afee6-click\",\n\t\t\"type\": \"fill\",\n\t\t\"source\": \"resources-1b6235b0-0d0f-11ed-98c2-5254008afee6\",\n\t\t\"source-layer\": \"1b6235b0-0d0f-11ed-98c2-5254008afee6\",\n\t\t\"layout\": {\n\t\t\t\"visibility\": \"visible\"\n\t\t},\n\t\t\"filter\": [\n\t\t\t\"all\",\n\t\t\t[\n\t\t\t\t\"==\",\n\t\t\t\t\"$type\",\n\t\t\t\t\"Polygon\"\n\t\t\t],\n\t\t\t[\n\t\t\t\t\"==\",\n\t\t\t\t\"total\",\n\t\t\t\t1\n\t\t\t],\n\t\t\t[\n\t\t\t\t\"==\",\n\t\t\t\t\"resourceinstanceid\",\n\t\t\t\t\"\"\n\t\t\t]\n\t\t],\n\t\t\"paint\": {\n\t\t\t\"fill-color\":  \"rgba(255,122,0,0.73)\"\n\t\t}\n\t},\n\t{\n\t\t\"id\": \"resources-fill-1b6235b0-0d0f-11ed-98c2-5254008afee6-hover\",\n\t\t\"type\": \"fill\",\n\t\t\"source\": \"resources-1b6235b0-0d0f-11ed-98c2-5254008afee6\",\n\t\t\"source-layer\": \"1b6235b0-0d0f-11ed-98c2-5254008afee6\",\n\t\t\"layout\": {\n\t\t\t\"visibility\": \"visible\"\n\t\t},\n\t\t\"filter\": [\n\t\t\t\"all\",\n\t\t\t[\n\t\t\t\t\"==\",\n\t\t\t\t\"$type\",\n\t\t\t\t\"Polygon\"\n\t\t\t],\n\t\t\t[\n\t\t\t\t\"==\",\n\t\t\t\t\"total\",\n\t\t\t\t1\n\t\t\t],\n\t\t\t[\n\t\t\t\t\"==\",\n\t\t\t\t\"resourceinstanceid\",\n\t\t\t\t\"\"\n\t\t\t]\n\t\t],\n\t\t\"paint\": {\n\t\t\t\"fill-color\": \"rgba(255,122,0,0.73)\"\n\t\t}\n\t},\n\t{\n\t\t\"id\": \"resources-poly-outline-1b6235b0-0d0f-11ed-98c2-5254008afee6\",\n\t\t\"type\": \"line\",\n\t\t\"source\": \"resources-1b6235b0-0d0f-11ed-98c2-5254008afee6\",\n\t\t\"source-layer\": \"1b6235b0-0d0f-11ed-98c2-5254008afee6\",\n\t\t\"layout\": {\n\t\t\t\"visibility\": \"visible\"\n\t\t},\n\t\t\"filter\": [\n\t\t\t\"all\",\n\t\t\t[\n\t\t\t\t\"==\",\n\t\t\t\t\"$type\",\n\t\t\t\t\"Polygon\"\n\t\t\t],\n\t\t\t[\n\t\t\t\t\"==\",\n\t\t\t\t\"total\",\n\t\t\t\t1\n\t\t\t]\n\t\t],\n\t\t\"paint\": {\n\t\t\t\"line-width\": 2,\n\t\t\t\"line-color\": \"rgba(255,122,0,0.3)\"\n\t\t}\n\t},\n\t{\n\t\t\"id\": \"resources-poly-outline-1b6235b0-0d0f-11ed-98c2-5254008afee6-hover\",\n\t\t\"type\": \"line\",\n\t\t\"source\": \"resources-1b6235b0-0d0f-11ed-98c2-5254008afee6\",\n\t\t\"source-layer\": \"1b6235b0-0d0f-11ed-98c2-5254008afee6\",\n\t\t\"layout\": {\n\t\t\t\"visibility\": \"visible\"\n\t\t},\n\t\t\"filter\": [\n\t\t\t\"all\",\n\t\t\t[\n\t\t\t\t\"==\",\n\t\t\t\t\"$type\",\n\t\t\t\t\"Polygon\"\n\t\t\t],\n\t\t\t[\n\t\t\t\t\"==\",\n\t\t\t\t\"total\",\n\t\t\t\t1\n\t\t\t],\n\t\t\t[\n\t\t\t\t\"==\",\n\t\t\t\t\"resourceinstanceid\",\n\t\t\t\t\"\"\n\t\t\t]\n\t\t],\n\t\t\"paint\": {\n\t\t\t\"line-width\": 4,\n\t\t\t\"line-color\": \"rgba(255,122,0,0.3)\"\n\t\t}\n\t},\n\t{\n\t\t\"id\": \"resources-poly-outline-1b6235b0-0d0f-11ed-98c2-5254008afee6-click\",\n\t\t\"type\": \"line\",\n\t\t\"source\": \"resources-1b6235b0-0d0f-11ed-98c2-5254008afee6\",\n\t\t\"source-layer\": \"1b6235b0-0d0f-11ed-98c2-5254008afee6\",\n\t\t\"layout\": {\n\t\t\t\"visibility\": \"visible\"\n\t\t},\n\t\t\"filter\": [\n\t\t\t\"all\",\n\t\t\t[\n\t\t\t\t\"==\",\n\t\t\t\t\"$type\",\n\t\t\t\t\"Polygon\"\n\t\t\t],\n\t\t\t[\n\t\t\t\t\"==\",\n\t\t\t\t\"total\",\n\t\t\t\t1\n\t\t\t],\n\t\t\t[\n\t\t\t\t\"==\",\n\t\t\t\t\"resourceinstanceid\",\n\t\t\t\t\"\"\n\t\t\t]\n\t\t],\n\t\t\"paint\": {\n\t\t\t\"line-width\": 4,\n\t\t\t\"line-color\": \"rgba(255,122,0,0.3)\"\n\t\t}\n\t},\n\t{\n\t\t\"id\": \"resources-line-halo-1b6235b0-0d0f-11ed-98c2-5254008afee6\",\n\t\t\"type\": \"line\",\n\t\t\"source\": \"resources-1b6235b0-0d0f-11ed-98c2-5254008afee6\",\n\t\t\"source-layer\": \"1b6235b0-0d0f-11ed-98c2-5254008afee6\",\n\t\t\"layout\": {\n\t\t\t\"visibility\": \"visible\"\n\t\t},\n\t\t\"filter\": [\n\t\t\t\"all\",\n\t\t\t[\n\t\t\t\t\"==\",\n\t\t\t\t\"$type\",\n\t\t\t\t\"LineString\"\n\t\t\t],\n\t\t\t[\n\t\t\t\t\"==\",\n\t\t\t\t\"total\",\n\t\t\t\t1\n\t\t\t]\n\t\t],\n\t\t\"paint\": {\n\t\t\t\"line-width\": 4,\n\t\t\t\"line-color\": \"rgba(255,122,0,0.3)\"\n\t\t}\n\t},\n\t{\n\t\t\"id\": \"resources-line-1b6235b0-0d0f-11ed-98c2-5254008afee6\",\n\t\t\"type\": \"line\",\n\t\t\"source\": \"resources-1b6235b0-0d0f-11ed-98c2-5254008afee6\",\n\t\t\"source-layer\": \"1b6235b0-0d0f-11ed-98c2-5254008afee6\",\n\t\t\"layout\": {\n\t\t\t\"visibility\": \"visible\"\n\t\t},\n\t\t\"filter\": [\n\t\t\t\"all\",\n\t\t\t[\n\t\t\t\t\"==\",\n\t\t\t\t\"$type\",\n\t\t\t\t\"LineString\"\n\t\t\t],\n\t\t\t[\n\t\t\t\t\"==\",\n\t\t\t\t\"total\",\n\t\t\t\t1\n\t\t\t]\n\t\t],\n\t\t\"paint\": {\n\t\t\t\"line-width\": 2,\n\t\t\t\"line-color\": \"rgba(255,122,0,0.73)\"\n\t\t}\n\t},\n\t{\n\t\t\"id\": \"resources-line-halo-1b6235b0-0d0f-11ed-98c2-5254008afee6-hover\",\n\t\t\"type\": \"line\",\n\t\t\"source\": \"resources-1b6235b0-0d0f-11ed-98c2-5254008afee6\",\n\t\t\"source-layer\": \"1b6235b0-0d0f-11ed-98c2-5254008afee6\",\n\t\t\"layout\": {\n\t\t\t\"visibility\": \"visible\"\n\t\t},\n\t\t\"filter\": [\n\t\t\t\"all\",\n\t\t\t[\n\t\t\t\t\"==\",\n\t\t\t\t\"$type\",\n\t\t\t\t\"LineString\"\n\t\t\t],\n\t\t\t[\n\t\t\t\t\"==\",\n\t\t\t\t\"total\",\n\t\t\t\t1\n\t\t\t],\n\t\t\t[\n\t\t\t\t\"==\",\n\t\t\t\t\"resourceinstanceid\",\n\t\t\t\t\"\"\n\t\t\t]\n\t\t],\n\t\t\"paint\": {\n\t\t\t\"line-width\": 8,\n\t\t\t\"line-color\": \"rgba(255,122,0,0.3)\"\n\t\t}\n\t},\n\t{\n\t\t\"id\": \"resources-line-1b6235b0-0d0f-11ed-98c2-5254008afee6-hover\",\n\t\t\"type\": \"line\",\n\t\t\"source\": \"resources-1b6235b0-0d0f-11ed-98c2-5254008afee6\",\n\t\t\"source-layer\": \"1b6235b0-0d0f-11ed-98c2-5254008afee6\",\n\t\t\"layout\": {\n\t\t\t\"visibility\": \"visible\"\n\t\t},\n\t\t\"filter\": [\n\t\t\t\"all\",\n\t\t\t[\n\t\t\t\t\"==\",\n\t\t\t\t\"$type\",\n\t\t\t\t\"LineString\"\n\t\t\t],\n\t\t\t[\n\t\t\t\t\"==\",\n\t\t\t\t\"total\",\n\t\t\t\t1\n\t\t\t],\n\t\t\t[\n\t\t\t\t\"==\",\n\t\t\t\t\"resourceinstanceid\",\n\t\t\t\t\"\"\n\t\t\t]\n\t\t],\n\t\t\"paint\": {\n\t\t\t\"line-width\": 4,\n\t\t\t\"line-color\": \"rgba(255,122,0,0.73)\"\n\t\t}\n\t},\n\t{\n\t\t\"id\": \"resources-line-halo-1b6235b0-0d0f-11ed-98c2-5254008afee6-click\",\n\t\t\"type\": \"line\",\n\t\t\"source\": \"resources-1b6235b0-0d0f-11ed-98c2-5254008afee6\",\n\t\t\"source-layer\": \"1b6235b0-0d0f-11ed-98c2-5254008afee6\",\n\t\t\"layout\": {\n\t\t\t\"visibility\": \"visible\"\n\t\t},\n\t\t\"filter\": [\n\t\t\t\"all\",\n\t\t\t[\n\t\t\t\t\"==\",\n\t\t\t\t\"$type\",\n\t\t\t\t\"LineString\"\n\t\t\t],\n\t\t\t[\n\t\t\t\t\"==\",\n\t\t\t\t\"total\",\n\t\t\t\t1\n\t\t\t],\n\t\t\t[\n\t\t\t\t\"==\",\n\t\t\t\t\"resourceinstanceid\",\n\t\t\t\t\"\"\n\t\t\t]\n\t\t],\n\t\t\"paint\": {\n\t\t\t\"line-width\": 8,\n\t\t\t\"line-color\": \"rgba(255,122,0,0.3)\"\n\t\t}\n\t},\n\t{\n\t\t\"id\": \"resources-line-1b6235b0-0d0f-11ed-98c2-5254008afee6-click\",\n\t\t\"type\": \"line\",\n\t\t\"source\": \"resources-1b6235b0-0d0f-11ed-98c2-5254008afee6\",\n\t\t\"source-layer\": \"1b6235b0-0d0f-11ed-98c2-5254008afee6\",\n\t\t\"layout\": {\n\t\t\t\"visibility\": \"visible\"\n\t\t},\n\t\t\"filter\": [\n\t\t\t\"all\",\n\t\t\t[\n\t\t\t\t\"==\",\n\t\t\t\t\"$type\",\n\t\t\t\t\"LineString\"\n\t\t\t],\n\t\t\t[\n\t\t\t\t\"==\",\n\t\t\t\t\"total\",\n\t\t\t\t1\n\t\t\t],\n\t\t\t[\n\t\t\t\t\"==\",\n\t\t\t\t\"resourceinstanceid\",\n\t\t\t\t\"\"\n\t\t\t]\n\t\t],\n\t\t\"paint\": {\n\t\t\t\"line-width\": 4,\n\t\t\t\"line-color\": \"rgba(255,122,0,0.73)\"\n\t\t}\n\t},\n\t{\n\t\t\"id\": \"resources-point-halo-1b6235b0-0d0f-11ed-98c2-5254008afee6-hover\",\n\t\t\"type\": \"circle\",\n\t\t\"source\": \"resources-1b6235b0-0d0f-11ed-98c2-5254008afee6\",\n\t\t\"source-layer\": \"1b6235b0-0d0f-11ed-98c2-5254008afee6\",\n\t\t\"layout\": {\n\t\t\t\"visibility\": \"visible\"\n\t\t},\n\t\t\"filter\": [\n\t\t\t\"all\",\n\t\t\t[\n\t\t\t\t\"==\",\n\t\t\t\t\"$type\",\n\t\t\t\t\"Point\"\n\t\t\t],\n\t\t\t[\n\t\t\t\t\"==\",\n\t\t\t\t\"total\",\n\t\t\t\t1\n\t\t\t],\n\t\t\t[\n\t\t\t\t\"==\",\n\t\t\t\t\"resourceinstanceid\",\n\t\t\t\t\"\"\n\t\t\t]\n\t\t],\n\t\t\"paint\": {\n\t\t\t\"circle-radius\": 8,\n\t\t\t\"circle-color\": \"rgba(255,122,0,0.3)\"\n\t\t}\n\t},\n\t{\n\t\t\"id\": \"resources-point-1b6235b0-0d0f-11ed-98c2-5254008afee6-hover\",\n\t\t\"type\": \"circle\",\n\t\t\"source\": \"resources-1b6235b0-0d0f-11ed-98c2-5254008afee6\",\n\t\t\"source-layer\": \"1b6235b0-0d0f-11ed-98c2-5254008afee6\",\n\t\t\"layout\": {\n\t\t\t\"visibility\": \"visible\"\n\t\t},\n\t\t\"filter\": [\n\t\t\t\"all\",\n\t\t\t[\n\t\t\t\t\"==\",\n\t\t\t\t\"$type\",\n\t\t\t\t\"Point\"\n\t\t\t],\n\t\t\t[\n\t\t\t\t\"==\",\n\t\t\t\t\"total\",\n\t\t\t\t1\n\t\t\t],\n\t\t\t[\n\t\t\t\t\"==\",\n\t\t\t\t\"resourceinstanceid\",\n\t\t\t\t\"\"\n\t\t\t]\n\t\t],\n\t\t\"paint\": {\n\t\t\t\"circle-radius\": 4,\n\t\t\t\"circle-color\": \"rgba(255,122,0,0.73)\"\n\t\t}\n\t},\n\t{\n\t\t\"id\": \"resources-point-halo-1b6235b0-0d0f-11ed-98c2-5254008afee6\",\n\t\t\"type\": \"circle\",\n\t\t\"source\": \"resources-1b6235b0-0d0f-11ed-98c2-5254008afee6\",\n\t\t\"source-layer\": \"1b6235b0-0d0f-11ed-98c2-5254008afee6\",\n\t\t\"layout\": {\n\t\t\t\"visibility\": \"visible\"\n\t\t},\n\t\t\"filter\": [\n\t\t\t\"all\",\n\t\t\t[\n\t\t\t\t\"==\",\n\t\t\t\t\"$type\",\n\t\t\t\t\"Point\"\n\t\t\t],\n\t\t\t[\n\t\t\t\t\"==\",\n\t\t\t\t\"total\",\n\t\t\t\t1\n\t\t\t]\n\t\t],\n\t\t\"paint\": {\n\t\t\t\"circle-radius\": 4,\n\t\t\t\"circle-color\": \"rgba(255,122,0,0.3)\"\n\t\t}\n\t},\n\t{\n\t\t\"id\": \"resources-point-1b6235b0-0d0f-11ed-98c2-5254008afee6\",\n\t\t\"type\": \"circle\",\n\t\t\"source\": \"resources-1b6235b0-0d0f-11ed-98c2-5254008afee6\",\n\t\t\"source-layer\": \"1b6235b0-0d0f-11ed-98c2-5254008afee6\",\n\t\t\"layout\": {\n\t\t\t\"visibility\": \"visible\"\n\t\t},\n\t\t\"filter\": [\n\t\t\t\"all\",\n\t\t\t[\n\t\t\t\t\"==\",\n\t\t\t\t\"$type\",\n\t\t\t\t\"Point\"\n\t\t\t],\n\t\t\t[\n\t\t\t\t\"==\",\n\t\t\t\t\"total\",\n\t\t\t\t1\n\t\t\t]\n\t\t],\n\t\t\"paint\": {\n\t\t\t\"circle-radius\": 2,\n\t\t\t\"circle-color\": \"rgba(255,122,0,0.73)\"\n\t\t}\n\t},\n\t{\n\t\t\"id\": \"resources-point-halo-1b6235b0-0d0f-11ed-98c2-5254008afee6-click\",\n\t\t\"type\": \"circle\",\n\t\t\"source\": \"resources-1b6235b0-0d0f-11ed-98c2-5254008afee6\",\n\t\t\"source-layer\": \"1b6235b0-0d0f-11ed-98c2-5254008afee6\",\n\t\t\"layout\": {\n\t\t\t\"visibility\": \"visible\"\n\t\t},\n\t\t\"filter\": [\n\t\t\t\"all\",\n\t\t\t[\n\t\t\t\t\"==\",\n\t\t\t\t\"$type\",\n\t\t\t\t\"Point\"\n\t\t\t],\n\t\t\t[\n\t\t\t\t\"==\",\n\t\t\t\t\"total\",\n\t\t\t\t1\n\t\t\t],\n\t\t\t[\n\t\t\t\t\"==\",\n\t\t\t\t\"resourceinstanceid\",\n\t\t\t\t\"\"\n\t\t\t]\n\t\t],\n\t\t\"paint\": {\n\t\t\t\"circle-radius\": 8,\n\t\t\t\"circle-color\": \"rgba(255,122,0,0.3)\"\n\t\t}\n\t},\n\t{\n\t\t\"id\": \"resources-point-1b6235b0-0d0f-11ed-98c2-5254008afee6-click\",\n\t\t\"type\": \"circle\",\n\t\t\"source\": \"resources-1b6235b0-0d0f-11ed-98c2-5254008afee6\",\n\t\t\"source-layer\": \"1b6235b0-0d0f-11ed-98c2-5254008afee6\",\n\t\t\"layout\": {\n\t\t\t\"visibility\": \"visible\"\n\t\t},\n\t\t\"filter\": [\n\t\t\t\"all\",\n\t\t\t[\n\t\t\t\t\"==\",\n\t\t\t\t\"$type\",\n\t\t\t\t\"Point\"\n\t\t\t],\n\t\t\t[\n\t\t\t\t\"==\",\n\t\t\t\t\"total\",\n\t\t\t\t1\n\t\t\t],\n\t\t\t[\n\t\t\t\t\"==\",\n\t\t\t\t\"resourceinstanceid\",\n\t\t\t\t\"\"\n\t\t\t]\n\t\t],\n\t\t\"paint\": {\n\t\t\t\"circle-radius\": 4,\n\t\t\t\"circle-color\": \"rgba(255,122,0,0.73)\"\n\t\t}\n\t},\n\t{\n\t\t\"id\": \"resources-cluster-point-halo-1b6235b0-0d0f-11ed-98c2-5254008afee6\",\n\t\t\"type\": \"circle\",\n\t\t\"source\": \"resources-1b6235b0-0d0f-11ed-98c2-5254008afee6\",\n\t\t\"source-layer\": \"1b6235b0-0d0f-11ed-98c2-5254008afee6\",\n\t\t\"layout\": {\n\t\t\t\"visibility\": \"visible\"\n\t\t},\n\t\t\"filter\": [\n\t\t\t\"all\",\n\t\t\t[\n\t\t\t\t\"==\",\n\t\t\t\t\"$type\",\n\t\t\t\t\"Point\"\n\t\t\t],\n\t\t\t[\n\t\t\t\t\">\",\n\t\t\t\t\"total\",\n\t\t\t\t1\n\t\t\t]\n\t\t],\n\t\t\"paint\": {\n\t\t\t\"circle-radius\": {\n\t\t\t\t\"property\": \"total\",\n\t\t\t\t\"stops\": [\n\t\t\t\t\t[\n\t\t\t\t\t\t0,\n\t\t\t\t\t\t22\n\t\t\t\t\t],\n\t\t\t\t\t[\n\t\t\t\t\t\t50,\n\t\t\t\t\t\t24\n\t\t\t\t\t],\n\t\t\t\t\t[\n\t\t\t\t\t\t100,\n\t\t\t\t\t\t26\n\t\t\t\t\t],\n\t\t\t\t\t[\n\t\t\t\t\t\t200,\n\t\t\t\t\t\t28\n\t\t\t\t\t],\n\t\t\t\t\t[\n\t\t\t\t\t\t400,\n\t\t\t\t\t\t30\n\t\t\t\t\t],\n\t\t\t\t\t[\n\t\t\t\t\t\t800,\n\t\t\t\t\t\t32\n\t\t\t\t\t],\n\t\t\t\t\t[\n\t\t\t\t\t\t1200,\n\t\t\t\t\t\t34\n\t\t\t\t\t],\n\t\t\t\t\t[\n\t\t\t\t\t\t1600,\n\t\t\t\t\t\t36\n\t\t\t\t\t],\n\t\t\t\t\t[\n\t\t\t\t\t\t2000,\n\t\t\t\t\t\t38\n\t\t\t\t\t],\n\t\t\t\t\t[\n\t\t\t\t\t\t2500,\n\t\t\t\t\t\t40\n\t\t\t\t\t],\n\t\t\t\t\t[\n\t\t\t\t\t\t3000,\n\t\t\t\t\t\t42\n\t\t\t\t\t],\n\t\t\t\t\t[\n\t\t\t\t\t\t4000,\n\t\t\t\t\t\t44\n\t\t\t\t\t],\n\t\t\t\t\t[\n\t\t\t\t\t\t5000,\n\t\t\t\t\t\t46\n\t\t\t\t\t]\n\t\t\t\t]\n\t\t\t},\n\t\t\t\"circle-color\": \"rgba(255,122,0,0.3)\"\n\t\t}\n\t},\n\t{\n\t\t\"id\": \"resources-cluster-point-1b6235b0-0d0f-11ed-98c2-5254008afee6\",\n\t\t\"type\": \"circle\",\n\t\t\"source\": \"resources-1b6235b0-0d0f-11ed-98c2-5254008afee6\",\n\t\t\"source-layer\": \"1b6235b0-0d0f-11ed-98c2-5254008afee6\",\n\t\t\"layout\": {\n\t\t\t\"visibility\": \"visible\"\n\t\t},\n\t\t\"filter\": [\n\t\t\t\"all\",\n\t\t\t[\n\t\t\t\t\"==\",\n\t\t\t\t\"$type\",\n\t\t\t\t\"Point\"\n\t\t\t],\n\t\t\t[\n\t\t\t\t\">\",\n\t\t\t\t\"total\",\n\t\t\t\t1\n\t\t\t]\n\t\t],\n\t\t\"paint\": {\n\t\t\t\"circle-radius\": {\n\t\t\t\t\"property\": \"total\",\n\t\t\t\t\"type\": \"exponential\",\n\t\t\t\t\"stops\": [\n\t\t\t\t\t[\n\t\t\t\t\t\t0,\n\t\t\t\t\t\t12\n\t\t\t\t\t],\n\t\t\t\t\t[\n\t\t\t\t\t\t50,\n\t\t\t\t\t\t14\n\t\t\t\t\t],\n\t\t\t\t\t[\n\t\t\t\t\t\t100,\n\t\t\t\t\t\t16\n\t\t\t\t\t],\n\t\t\t\t\t[\n\t\t\t\t\t\t200,\n\t\t\t\t\t\t18\n\t\t\t\t\t],\n\t\t\t\t\t[\n\t\t\t\t\t\t400,\n\t\t\t\t\t\t20\n\t\t\t\t\t],\n\t\t\t\t\t[\n\t\t\t\t\t\t800,\n\t\t\t\t\t\t22\n\t\t\t\t\t],\n\t\t\t\t\t[\n\t\t\t\t\t\t1200,\n\t\t\t\t\t\t24\n\t\t\t\t\t],\n\t\t\t\t\t[\n\t\t\t\t\t\t1600,\n\t\t\t\t\t\t26\n\t\t\t\t\t],\n\t\t\t\t\t[\n\t\t\t\t\t\t2000,\n\t\t\t\t\t\t28\n\t\t\t\t\t],\n\t\t\t\t\t[\n\t\t\t\t\t\t2500,\n\t\t\t\t\t\t30\n\t\t\t\t\t],\n\t\t\t\t\t[\n\t\t\t\t\t\t3000,\n\t\t\t\t\t\t32\n\t\t\t\t\t],\n\t\t\t\t\t[\n\t\t\t\t\t\t4000,\n\t\t\t\t\t\t34\n\t\t\t\t\t],\n\t\t\t\t\t[\n\t\t\t\t\t\t5000,\n\t\t\t\t\t\t36\n\t\t\t\t\t]\n\t\t\t\t]\n\t\t\t},\n\t\t\t\"circle-color\": \"rgba(255,122,0,0.73)\"\n\t\t}\n\t},\n\t{\n\t\t\"id\": \"resources-cluster-count-1b6235b0-0d0f-11ed-98c2-5254008afee6\",\n\t\t\"type\": \"symbol\",\n\t\t\"source\": \"resources-1b6235b0-0d0f-11ed-98c2-5254008afee6\",\n\t\t\"source-layer\": \"1b6235b0-0d0f-11ed-98c2-5254008afee6\",\n\t\t\"layout\": {\n\t\t\t\"text-field\": \"{total}\",\n\t\t\t\"text-size\": 10\n\t\t},\n\t\t\"paint\": {\n\t\t\t\"text-color\": \"#fff\"\n\t\t},\n\t\t\"filter\": [\n\t\t\t\"all\",\n\t\t\t[\n\t\t\t\t\">\",\n\t\t\t\t\"total\",\n\t\t\t\t1\n\t\t\t]\n\t\t]\n\t},\n  \t{\n\t\t\"id\": \"resource_title\",\n\t\t\"type\": \"symbol\",\n\t\t\"source\": \"resources-1b6235b0-0d0f-11ed-98c2-5254008afee6\",\n\t\t\"source-layer\": \"1b6235b0-0d0f-11ed-98c2-5254008afee6\",\n\t\t\"layout\": {\n\t\t\t\"text-field\": \"{borden_number}\",\n\t\t\t\"text-size\": 10\n\t\t},\n\t\t\"paint\": {\n\t\t\t\"text-color\": \"#000\"\n\t\t}\n\t}\n]",
+                        "advancedStyling": true,
                         "autoManageCache": false,
                         "cacheTiles": false,
                         "clusterDistance": 20,
@@ -4668,7 +4668,7 @@
                         "haloRadius": 4,
                         "haloWeight": 4,
                         "layerActivated": true,
-                        "layerIcon": "",
+                        "layerIcon": "fa fa-bank",
                         "layerLegend": "",
                         "layerName": "",
                         "lineColor": "rgba(255,122,0,0.73)",
