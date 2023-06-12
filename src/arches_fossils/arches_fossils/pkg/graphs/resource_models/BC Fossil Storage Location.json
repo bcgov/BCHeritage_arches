@@ -8,39 +8,26 @@
                     "cardid": "5281a482-14d5-11ec-b4e8-5254008afee6",
                     "component_id": "f05e4d3a-53c1-11e8-b0ea-784f435179ea",
                     "config": null,
-                    "constraints": [
-                        {
-                            "card_id": "5281a482-14d5-11ec-b4e8-5254008afee6",
-                            "constraintid": "36a7b643-d7fe-41b4-9fcb-a5fadbc036da",
-                            "nodes": [],
-                            "uniquetoallinstances": false
-                        },
-                        {
-                            "card_id": "5281a482-14d5-11ec-b4e8-5254008afee6",
-                            "constraintid": "d3d659fa-68bc-4944-95bd-2d27b4f7366b",
-                            "nodes": [],
-                            "uniquetoallinstances": false
-                        }
-                    ],
+                    "constraints": [],
                     "cssclass": null,
                     "description": null,
                     "graph_id": "3e6a2880-14d4-11ec-9df0-5254008afee6",
                     "helpenabled": false,
                     "helptext": {
-                        "en": null
+                        "en": ""
                     },
                     "helptitle": {
-                        "en": null
+                        "en": ""
                     },
                     "instructions": {
-                        "en": null
+                        "en": ""
                     },
                     "is_editable": true,
                     "name": {
                         "en": "Location Primary Email"
                     },
                     "nodegroup_id": "52816a08-14d5-11ec-b4e8-5254008afee6",
-                    "sortorder": 3,
+                    "sortorder": 2,
                     "visible": true
                 },
                 {
@@ -56,10 +43,10 @@
                     "graph_id": "3e6a2880-14d4-11ec-9df0-5254008afee6",
                     "helpenabled": false,
                     "helptext": {
-                        "en": null
+                        "en": ""
                     },
                     "helptitle": {
-                        "en": null
+                        "en": ""
                     },
                     "instructions": {
                         "en": "Define the spatial location."
@@ -85,10 +72,10 @@
                     "graph_id": "3e6a2880-14d4-11ec-9df0-5254008afee6",
                     "helpenabled": false,
                     "helptext": {
-                        "en": null
+                        "en": ""
                     },
                     "helptitle": {
-                        "en": null
+                        "en": ""
                     },
                     "instructions": {
                         "en": "Enter the address of the location."
@@ -114,17 +101,17 @@
                     "graph_id": "3e6a2880-14d4-11ec-9df0-5254008afee6",
                     "helpenabled": false,
                     "helptext": {
-                        "en": null
+                        "en": ""
                     },
                     "helptitle": {
-                        "en": null
+                        "en": ""
                     },
                     "instructions": {
                         "en": "Describe the location of the resource."
                     },
                     "is_editable": true,
                     "name": {
-                        "en": "Description Location"
+                        "en": "Location Description"
                     },
                     "nodegroup_id": "ba925daa-14d5-11ec-a57a-5254008afee6",
                     "sortorder": 3,
@@ -135,14 +122,7 @@
                     "cardid": "ba92777c-14d5-11ec-a57a-5254008afee6",
                     "component_id": "f05e4d3a-53c1-11e8-b0ea-784f435179ea",
                     "config": null,
-                    "constraints": [
-                        {
-                            "card_id": "ba92777c-14d5-11ec-a57a-5254008afee6",
-                            "constraintid": "5893bf75-c754-406e-808f-853de97d5a34",
-                            "nodes": [],
-                            "uniquetoallinstances": false
-                        }
-                    ],
+                    "constraints": [],
                     "cssclass": "",
                     "description": {
                         "en": "For Actor resources: Describes the former and current residences of an Actor resource. Relates to Actor E39 with P74 \nFor Activity and Historic Event: Describes the location of where an activity or historic event took place. Relates to Activity E7 with P7. Relates to Historical Event E5 with P7\n"
@@ -150,20 +130,20 @@
                     "graph_id": "3e6a2880-14d4-11ec-9df0-5254008afee6",
                     "helpenabled": false,
                     "helptext": {
-                        "en": null
+                        "en": ""
                     },
                     "helptitle": {
-                        "en": null
+                        "en": ""
                     },
                     "instructions": {
-                        "en": null
+                        "en": ""
                     },
                     "is_editable": true,
                     "name": {
                         "en": "Storage Location Place"
                     },
                     "nodegroup_id": "ba927470-14d5-11ec-a57a-5254008afee6",
-                    "sortorder": 2,
+                    "sortorder": 1,
                     "visible": true
                 },
                 {
@@ -171,23 +151,16 @@
                     "cardid": "d435d8c6-ab99-11ec-affe-5254008afee6",
                     "component_id": "f05e4d3a-53c1-11e8-b0ea-784f435179ea",
                     "config": null,
-                    "constraints": [
-                        {
-                            "card_id": "d435d8c6-ab99-11ec-affe-5254008afee6",
-                            "constraintid": "3b123ee0-521d-463c-9127-644e9eb4bd39",
-                            "nodes": [],
-                            "uniquetoallinstances": false
-                        }
-                    ],
+                    "constraints": [],
                     "cssclass": null,
                     "description": "",
                     "graph_id": "3e6a2880-14d4-11ec-9df0-5254008afee6",
                     "helpenabled": false,
                     "helptext": {
-                        "en": null
+                        "en": ""
                     },
                     "helptitle": {
-                        "en": null
+                        "en": ""
                     },
                     "instructions": {
                         "en": "Used to record text descriptions associated with a resource. Where appropriate different types of description may be recorded."
@@ -197,7 +170,7 @@
                         "en": "Storage Location Notes"
                     },
                     "nodegroup_id": "d435ce8a-ab99-11ec-affe-5254008afee6",
-                    "sortorder": null,
+                    "sortorder": 3,
                     "visible": true
                 },
                 {
@@ -205,26 +178,19 @@
                     "cardid": "d47c8536-d075-11ec-acf2-5254008afee6",
                     "component_id": "f05e4d3a-53c1-11e8-b0ea-784f435179ea",
                     "config": null,
-                    "constraints": [
-                        {
-                            "card_id": "d47c8536-d075-11ec-acf2-5254008afee6",
-                            "constraintid": "846e4ab2-7440-498a-8e19-6aa028bfa1b7",
-                            "nodes": [],
-                            "uniquetoallinstances": false
-                        }
-                    ],
+                    "constraints": [],
                     "cssclass": null,
                     "description": null,
                     "graph_id": "3e6a2880-14d4-11ec-9df0-5254008afee6",
                     "helpenabled": false,
                     "helptext": {
-                        "en": null
+                        "en": ""
                     },
                     "helptitle": {
-                        "en": null
+                        "en": ""
                     },
                     "instructions": {
-                        "en": null
+                        "en": ""
                     },
                     "is_editable": true,
                     "name": {
@@ -239,43 +205,161 @@
                     "cardid": "ea5abc22-14d4-11ec-aa11-5254008afee6",
                     "component_id": "f05e4d3a-53c1-11e8-b0ea-784f435179ea",
                     "config": null,
-                    "constraints": [
-                        {
-                            "card_id": "ea5abc22-14d4-11ec-aa11-5254008afee6",
-                            "constraintid": "2b3a5d97-af70-43f5-a750-30425d757db9",
-                            "nodes": [],
-                            "uniquetoallinstances": false
-                        },
-                        {
-                            "card_id": "ea5abc22-14d4-11ec-aa11-5254008afee6",
-                            "constraintid": "4be66ee1-cb1d-4361-934a-36c5773b6818",
-                            "nodes": [],
-                            "uniquetoallinstances": false
-                        }
-                    ],
+                    "constraints": [],
                     "cssclass": null,
                     "description": null,
                     "graph_id": "3e6a2880-14d4-11ec-9df0-5254008afee6",
                     "helpenabled": false,
                     "helptext": {
-                        "en": null
+                        "en": ""
                     },
                     "helptitle": {
-                        "en": null
+                        "en": ""
                     },
                     "instructions": {
-                        "en": null
+                        "en": ""
                     },
                     "is_editable": true,
                     "name": {
                         "en": "Storage Location Identifier"
                     },
                     "nodegroup_id": "ea5a7956-14d4-11ec-aa11-5254008afee6",
-                    "sortorder": 1,
+                    "sortorder": 0,
                     "visible": true
                 }
             ],
             "cards_x_nodes_x_widgets": [
+                {
+                    "card_id": "ea5abc22-14d4-11ec-aa11-5254008afee6",
+                    "config": {
+                        "defaultValue": {
+                            "en": {
+                                "direction": "ltr",
+                                "value": ""
+                            }
+                        },
+                        "i18n_properties": [
+                            "placeholder"
+                        ],
+                        "label": "Storage Location Name",
+                        "maxLength": "80",
+                        "placeholder": {
+                            "en": "Enter the name of the Storage Location (eg Royal BC Museum)"
+                        },
+                        "uneditable": false,
+                        "width": "100%"
+                    },
+                    "id": "110c65fd-7db1-4455-9123-663b46e4dfbc",
+                    "label": {
+                        "en": "Storage Location Name"
+                    },
+                    "node_id": "d10365ec-14e0-11ec-b5bf-5254008afee6",
+                    "sortorder": 0,
+                    "visible": true,
+                    "widget_id": "10000000-0000-0000-0000-000000000001"
+                },
+                {
+                    "card_id": "ba925bd4-14d5-11ec-a57a-5254008afee6",
+                    "config": {
+                        "defaultValue": "",
+                        "i18n_properties": [
+                            "placeholder"
+                        ],
+                        "label": "Address Type",
+                        "options": [],
+                        "placeholder": {
+                            "en": "Select an option"
+                        }
+                    },
+                    "id": "15d0667a-abba-4e8c-9f13-e96e98581a82",
+                    "label": {
+                        "en": "Address Type"
+                    },
+                    "node_id": "ba927bc8-14d5-11ec-a57a-5254008afee6",
+                    "sortorder": 1,
+                    "visible": true,
+                    "widget_id": "10000000-0000-0000-0000-000000000002"
+                },
+                {
+                    "card_id": "ba92568e-14d5-11ec-a57a-5254008afee6",
+                    "config": {
+                        "defaultValue": "",
+                        "i18n_properties": [
+                            "placeholder"
+                        ],
+                        "label": "Geometry Qualifier",
+                        "options": [],
+                        "placeholder": {
+                            "en": "Select an option"
+                        }
+                    },
+                    "id": "5d920c49-c14b-47d8-a53a-0c067b9d79d8",
+                    "label": {
+                        "en": "Geometry Qualifier"
+                    },
+                    "node_id": "ba927a74-14d5-11ec-a57a-5254008afee6",
+                    "sortorder": null,
+                    "visible": true,
+                    "widget_id": "10000000-0000-0000-0000-000000000002"
+                },
+                {
+                    "card_id": "ba925bd4-14d5-11ec-a57a-5254008afee6",
+                    "config": {
+                        "defaultValue": {
+                            "en": {
+                                "direction": "ltr",
+                                "value": ""
+                            }
+                        },
+                        "i18n_properties": [
+                            "placeholder"
+                        ],
+                        "label": "Storage Location Address",
+                        "maxLength": null,
+                        "placeholder": {
+                            "en": "Enter text"
+                        },
+                        "uneditable": false,
+                        "width": "100%"
+                    },
+                    "id": "745be9f9-dd26-4f0f-9c21-0e7624b7f424",
+                    "label": {
+                        "en": "Storage Location Address"
+                    },
+                    "node_id": "ba9258dc-14d5-11ec-a57a-5254008afee6",
+                    "sortorder": 0,
+                    "visible": true,
+                    "widget_id": "10000000-0000-0000-0000-000000000001"
+                },
+                {
+                    "card_id": "ea5abc22-14d4-11ec-aa11-5254008afee6",
+                    "config": {
+                        "defaultValue": {
+                            "en": {
+                                "direction": "ltr",
+                                "value": ""
+                            }
+                        },
+                        "i18n_properties": [
+                            "placeholder"
+                        ],
+                        "label": "Storage Location Code",
+                        "maxLength": "3",
+                        "placeholder": {
+                            "en": "Enter the unique code for the Storage Location (eg RBM)"
+                        },
+                        "uneditable": false,
+                        "width": "100%"
+                    },
+                    "id": "82c42c5d-4793-4bff-91ac-32beb59fa41d",
+                    "label": {
+                        "en": "Storage Location Code"
+                    },
+                    "node_id": "aefe7dc4-14e0-11ec-a0c4-5254008afee6",
+                    "sortorder": 1,
+                    "visible": true,
+                    "widget_id": "10000000-0000-0000-0000-000000000001"
+                },
                 {
                     "card_id": "5281a482-14d5-11ec-b4e8-5254008afee6",
                     "config": {
@@ -302,6 +386,35 @@
                     },
                     "node_id": "52816a08-14d5-11ec-b4e8-5254008afee6",
                     "sortorder": 0,
+                    "visible": true,
+                    "widget_id": "10000000-0000-0000-0000-000000000001"
+                },
+                {
+                    "card_id": "ba9260d4-14d5-11ec-a57a-5254008afee6",
+                    "config": {
+                        "defaultValue": {
+                            "en": {
+                                "direction": "ltr",
+                                "value": ""
+                            }
+                        },
+                        "i18n_properties": [
+                            "placeholder"
+                        ],
+                        "label": "Place Description",
+                        "maxLength": null,
+                        "placeholder": {
+                            "en": "Enter text"
+                        },
+                        "uneditable": false,
+                        "width": "100%"
+                    },
+                    "id": "a62d15b5-882f-40b8-8ef8-412766442d0d",
+                    "label": {
+                        "en": "Place Description"
+                    },
+                    "node_id": "ba927d08-14d5-11ec-a57a-5254008afee6",
+                    "sortorder": null,
                     "visible": true,
                     "widget_id": "10000000-0000-0000-0000-000000000001"
                 },
@@ -344,6 +457,7 @@
                         "placeholder": {
                             "en": "Enter text"
                         },
+                        "uneditable": false,
                         "width": "100%"
                     },
                     "id": "d435dce0-ab99-11ec-affe-5254008afee6",
@@ -380,7 +494,7 @@
                         "en": "Alternate Code"
                     },
                     "node_id": "b28a0c8c-d075-11ec-9d0d-5254008afee6",
-                    "sortorder": 0,
+                    "sortorder": 1,
                     "visible": true,
                     "widget_id": "10000000-0000-0000-0000-000000000001"
                 },
@@ -409,9 +523,56 @@
                         "en": "Alternate Name"
                     },
                     "node_id": "a1c04d76-d075-11ec-bb64-5254008afee6",
-                    "sortorder": 1,
+                    "sortorder": 0,
                     "visible": true,
                     "widget_id": "10000000-0000-0000-0000-000000000001"
+                },
+                {
+                    "card_id": "ba92568e-14d5-11ec-a57a-5254008afee6",
+                    "config": {
+                        "basemap": "British Columbia Roads",
+                        "bearing": 0,
+                        "centerX": -125.2111215300115,
+                        "centerY": 54.5952920093056,
+                        "defaultValue": "",
+                        "defaultValueType": "",
+                        "featureColor": "#FF0000",
+                        "featureLineWidth": 1,
+                        "featurePointSize": 3,
+                        "geocodePlaceholder": "Search",
+                        "geocodeProvider": "10000000-0000-0000-0000-010000000000",
+                        "geocoderVisible": true,
+                        "geometryTypes": [
+                            {
+                                "id": "Point",
+                                "text": "Point"
+                            },
+                            {
+                                "id": "Line",
+                                "text": "Line"
+                            },
+                            {
+                                "id": "Polygon",
+                                "text": "Polygon"
+                            }
+                        ],
+                        "label": "Spatial Location",
+                        "maxZoom": 20,
+                        "minZoom": 0,
+                        "overlayConfigs": [],
+                        "overlayOpacity": 0,
+                        "pitch": 0,
+                        "rerender": true,
+                        "zoom": 0
+                    },
+                    "id": "df0289bc-e66c-4fbb-a0b7-c5123e420fb5",
+                    "label": {
+                        "en": "Spatial Location"
+                    },
+                    "node_id": "ba9252e2-14d5-11ec-a57a-5254008afee6",
+                    "sortorder": null,
+                    "visible": true,
+                    "widget_id": "10000000-0000-0000-0000-000000000007"
                 }
             ],
             "color": null,
@@ -615,7 +776,7 @@
                     },
                     "function_id": "60000000-0000-0000-0000-000000001001",
                     "graph_id": "3e6a2880-14d4-11ec-9df0-5254008afee6",
-                    "id": "dea0b3d6-2b7d-4ab1-b553-ca20c19b9d40"
+                    "id": "1100cd51-c47d-4e1e-9eec-8444d9138940"
                 }
             ],
             "graphid": "3e6a2880-14d4-11ec-9df0-5254008afee6",
@@ -695,7 +856,8 @@
                     "nodeid": "3e6a18ae-14d4-11ec-9df0-5254008afee6",
                     "ontologyclass": "http://www.ics.forth.gr/isl/CRMdig/D29_Annotation_Object",
                     "parentproperty": "",
-                    "sortorder": 0
+                    "sortorder": 0,
+                    "sourcebranchpublication_id": null
                 },
                 {
                     "alias": "location_primary_email",
@@ -715,7 +877,8 @@
                     "nodeid": "52816a08-14d5-11ec-b4e8-5254008afee6",
                     "ontologyclass": "http://www.ics.forth.gr/isl/CRMdig/D12_Data_Transfer_Event",
                     "parentproperty": "http://www.cidoc-crm.org/cidoc-crm/P16i_was_used_for",
-                    "sortorder": 0
+                    "sortorder": 0,
+                    "sourcebranchpublication_id": null
                 },
                 {
                     "alias": "alternate_identifiers",
@@ -735,7 +898,8 @@
                     "nodeid": "86bfd67c-d075-11ec-aae2-5254008afee6",
                     "ontologyclass": "http://www.cidoc-crm.org/cidoc-crm/E41_Appellation",
                     "parentproperty": "http://www.ics.forth.gr/isl/CRMdig/L54_is_same-as",
-                    "sortorder": 0
+                    "sortorder": 0,
+                    "sourcebranchpublication_id": null
                 },
                 {
                     "alias": "alternate_name",
@@ -755,11 +919,14 @@
                     "nodeid": "a1c04d76-d075-11ec-bb64-5254008afee6",
                     "ontologyclass": "http://www.cidoc-crm.org/cidoc-crm/E35_Title",
                     "parentproperty": "http://www.ics.forth.gr/isl/CRMdig/L54_is_same-as",
-                    "sortorder": 0
+                    "sortorder": 0,
+                    "sourcebranchpublication_id": null
                 },
                 {
                     "alias": "storage_location_code",
-                    "config": {},
+                    "config": {
+                        "en": ""
+                    },
                     "datatype": "string",
                     "description": null,
                     "exportable": false,
@@ -767,7 +934,7 @@
                     "graph_id": "3e6a2880-14d4-11ec-9df0-5254008afee6",
                     "hascustomalias": false,
                     "is_collector": false,
-                    "isrequired": false,
+                    "isrequired": true,
                     "issearchable": true,
                     "istopnode": false,
                     "name": "Storage Location Code",
@@ -775,7 +942,8 @@
                     "nodeid": "aefe7dc4-14e0-11ec-a0c4-5254008afee6",
                     "ontologyclass": "http://www.cidoc-crm.org/cidoc-crm/E42_Identifier",
                     "parentproperty": "http://www.cidoc-crm.org/cidoc-crm/P1i_identifies",
-                    "sortorder": 0
+                    "sortorder": 0,
+                    "sourcebranchpublication_id": null
                 },
                 {
                     "alias": "alternate_code",
@@ -795,7 +963,8 @@
                     "nodeid": "b28a0c8c-d075-11ec-9d0d-5254008afee6",
                     "ontologyclass": "http://www.cidoc-crm.org/cidoc-crm/E42_Identifier",
                     "parentproperty": "http://www.ics.forth.gr/isl/CRMdig/L54_is_same-as",
-                    "sortorder": 0
+                    "sortorder": 0,
+                    "sourcebranchpublication_id": null
                 },
                 {
                     "alias": "spatial_coordinates_geometry",
@@ -838,11 +1007,14 @@
                     "nodeid": "ba9252e2-14d5-11ec-a57a-5254008afee6",
                     "ontologyclass": "http://www.cidoc-crm.org/cidoc-crm/E47_Spatial_Coordinates",
                     "parentproperty": "http://www.cidoc-crm.org/cidoc-crm/P87_is_identified_by",
-                    "sortorder": 0
+                    "sortorder": 0,
+                    "sourcebranchpublication_id": null
                 },
                 {
                     "alias": "place_address",
-                    "config": {},
+                    "config": {
+                        "en": ""
+                    },
                     "datatype": "string",
                     "description": "Represents a single node in a graph",
                     "exportable": false,
@@ -850,7 +1022,7 @@
                     "graph_id": "3e6a2880-14d4-11ec-9df0-5254008afee6",
                     "hascustomalias": false,
                     "is_collector": true,
-                    "isrequired": false,
+                    "isrequired": true,
                     "issearchable": true,
                     "istopnode": false,
                     "name": "Place Address",
@@ -858,7 +1030,8 @@
                     "nodeid": "ba9258dc-14d5-11ec-a57a-5254008afee6",
                     "ontologyclass": "http://www.cidoc-crm.org/cidoc-crm/E45_Address",
                     "parentproperty": "http://www.cidoc-crm.org/cidoc-crm/P87_is_identified_by",
-                    "sortorder": 0
+                    "sortorder": 0,
+                    "sourcebranchpublication_id": null
                 },
                 {
                     "alias": "place_description_assignment",
@@ -878,7 +1051,8 @@
                     "nodeid": "ba925daa-14d5-11ec-a57a-5254008afee6",
                     "ontologyclass": "http://www.cidoc-crm.org/cidoc-crm/E13_Attribute_Assignment",
                     "parentproperty": "http://www.cidoc-crm.org/cidoc-crm/P140i_was_attributed_by",
-                    "sortorder": 0
+                    "sortorder": 0,
+                    "sourcebranchpublication_id": null
                 },
                 {
                     "alias": "place",
@@ -898,7 +1072,8 @@
                     "nodeid": "ba927470-14d5-11ec-a57a-5254008afee6",
                     "ontologyclass": "http://www.cidoc-crm.org/cidoc-crm/E53_Place",
                     "parentproperty": "http://www.ics.forth.gr/isl/CRMdig/L54i_is_same-as",
-                    "sortorder": 0
+                    "sortorder": 0,
+                    "sourcebranchpublication_id": null
                 },
                 {
                     "alias": "geometry_qualifier",
@@ -920,7 +1095,8 @@
                     "nodeid": "ba927a74-14d5-11ec-a57a-5254008afee6",
                     "ontologyclass": "http://www.cidoc-crm.org/cidoc-crm/E55_Type",
                     "parentproperty": "http://www.cidoc-crm.org/cidoc-crm/P2_has_type",
-                    "sortorder": 0
+                    "sortorder": 0,
+                    "sourcebranchpublication_id": null
                 },
                 {
                     "alias": "address_type",
@@ -942,7 +1118,8 @@
                     "nodeid": "ba927bc8-14d5-11ec-a57a-5254008afee6",
                     "ontologyclass": "http://www.cidoc-crm.org/cidoc-crm/E55_Type",
                     "parentproperty": "http://www.cidoc-crm.org/cidoc-crm/P2_has_type",
-                    "sortorder": 0
+                    "sortorder": 0,
+                    "sourcebranchpublication_id": null
                 },
                 {
                     "alias": "place_description",
@@ -962,11 +1139,14 @@
                     "nodeid": "ba927d08-14d5-11ec-a57a-5254008afee6",
                     "ontologyclass": "http://www.cidoc-crm.org/cidoc-crm/E62_String",
                     "parentproperty": "http://www.cidoc-crm.org/cidoc-crm/P3_has_note",
-                    "sortorder": 0
+                    "sortorder": 0,
+                    "sourcebranchpublication_id": null
                 },
                 {
                     "alias": "storage_location_name",
-                    "config": {},
+                    "config": {
+                        "en": ""
+                    },
                     "datatype": "string",
                     "description": null,
                     "exportable": false,
@@ -974,7 +1154,7 @@
                     "graph_id": "3e6a2880-14d4-11ec-9df0-5254008afee6",
                     "hascustomalias": false,
                     "is_collector": false,
-                    "isrequired": false,
+                    "isrequired": true,
                     "issearchable": true,
                     "istopnode": false,
                     "name": "Storage Location Name",
@@ -982,7 +1162,8 @@
                     "nodeid": "d10365ec-14e0-11ec-b5bf-5254008afee6",
                     "ontologyclass": "http://www.cidoc-crm.org/cidoc-crm/E35_Title",
                     "parentproperty": "http://www.cidoc-crm.org/cidoc-crm/P1i_identifies",
-                    "sortorder": 0
+                    "sortorder": 0,
+                    "sourcebranchpublication_id": null
                 },
                 {
                     "alias": "storage_location_notes",
@@ -1002,7 +1183,8 @@
                     "nodeid": "d435ce8a-ab99-11ec-affe-5254008afee6",
                     "ontologyclass": "http://www.cidoc-crm.org/cidoc-crm/E33_Linguistic_Object",
                     "parentproperty": "http://www.cidoc-crm.org/cidoc-crm/P67i_is_referred_to_by",
-                    "sortorder": 0
+                    "sortorder": 0,
+                    "sourcebranchpublication_id": null
                 },
                 {
                     "alias": "note",
@@ -1022,7 +1204,8 @@
                     "nodeid": "d435da38-ab99-11ec-affe-5254008afee6",
                     "ontologyclass": "http://www.w3.org/2000/01/rdf-schema#Literal",
                     "parentproperty": "http://www.cidoc-crm.org/cidoc-crm/P3_has_note",
-                    "sortorder": 0
+                    "sortorder": 0,
+                    "sourcebranchpublication_id": null
                 },
                 {
                     "alias": "note_type",
@@ -1044,7 +1227,8 @@
                     "nodeid": "d435db78-ab99-11ec-affe-5254008afee6",
                     "ontologyclass": "http://www.cidoc-crm.org/cidoc-crm/E55_Type",
                     "parentproperty": "http://www.cidoc-crm.org/cidoc-crm/P2_has_type",
-                    "sortorder": 0
+                    "sortorder": 0,
+                    "sourcebranchpublication_id": null
                 },
                 {
                     "alias": "storage_location_identifier",
@@ -1064,15 +1248,16 @@
                     "nodeid": "ea5a7956-14d4-11ec-aa11-5254008afee6",
                     "ontologyclass": "http://www.cidoc-crm.org/cidoc-crm/E35_Title",
                     "parentproperty": "http://www.cidoc-crm.org/cidoc-crm/P1_is_identified_by",
-                    "sortorder": 0
+                    "sortorder": 0,
+                    "sourcebranchpublication_id": null
                 }
             ],
             "ontology_id": "e6e8db47-2ccf-11e6-927e-b8f6b115d7dd",
             "publication": {
                 "graph_id": "3e6a2880-14d4-11ec-9df0-5254008afee6",
                 "notes": null,
-                "publicationid": "6167a3b8-53f7-11ed-b5f0-5254004d77d3",
-                "published_time": "2022-10-24T18:55:47.456",
+                "publicationid": "e33e890c-094f-11ee-a0df-5254004d77d3",
+                "published_time": "2023-06-12T13:35:21.465",
                 "user_id": 1
             },
             "relatable_resource_model_ids": [],
@@ -1094,7 +1279,8 @@
                 "nodegroup_id": null,
                 "nodeid": "3e6a18ae-14d4-11ec-9df0-5254008afee6",
                 "ontologyclass": "http://www.ics.forth.gr/isl/CRMdig/D29_Annotation_Object",
-                "sortorder": 0
+                "sortorder": 0,
+                "sourcebranchpublication_id": null
             },
             "slug": null,
             "subtitle": {
