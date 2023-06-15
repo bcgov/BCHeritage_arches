@@ -76,7 +76,7 @@
                     "instructions": {
                         "en": ""
                     },
-                    "is_editable": true,
+                    "is_editable": false,
                     "name": {
                         "en": "Collection Event Location"
                     },
@@ -103,7 +103,7 @@
                     "instructions": {
                         "en": "If needed, add additional information about the fossil collection event."
                     },
-                    "is_editable": true,
+                    "is_editable": false,
                     "name": {
                         "en": "Collection Notes"
                     },
@@ -159,7 +159,7 @@
                     "instructions": {
                         "en": ""
                     },
-                    "is_editable": true,
+                    "is_editable": false,
                     "name": {
                         "en": "Historical Data"
                     },
@@ -188,7 +188,7 @@
                     "instructions": {
                         "en": ""
                     },
-                    "is_editable": true,
+                    "is_editable": false,
                     "name": {
                         "en": "Collection Year"
                     },
@@ -915,7 +915,7 @@
                     "widget_id": "10000000-0000-0000-0000-000000000009"
                 }
             ],
-            "color": null,
+            "color": "rgba(244,109,67,1)",
             "config": {
                 "basemap": "streets"
             },
@@ -1203,12 +1203,12 @@
                     },
                     "function_id": "60000000-0000-0000-0000-000000001001",
                     "graph_id": "df3ee1ae-9c1c-11ec-964d-5254008afee6",
-                    "id": "ff0295de-8cbc-40f2-a9af-6082979f4915"
+                    "id": "f0af255c-9362-48e6-a9ee-8ec464343412"
                 }
             ],
             "graphid": "df3ee1ae-9c1c-11ec-964d-5254008afee6",
             "iconclass": "fa fa-suitcase",
-            "is_editable": true,
+            "is_editable": false,
             "isresource": true,
             "jsonldcontext": null,
             "name": {
@@ -1331,7 +1331,7 @@
                     "nodeid": "210931f8-00bb-11ee-a50c-5254004d77d3",
                     "ontologyclass": "http://www.ics.forth.gr/isl/CRMarchaeo/A8_Stratigraphic_Unit",
                     "parentproperty": "http://www.cidoc-crm.org/cidoc-crm/P59i_is_located_on_or_within",
-                    "sortorder": 2,
+                    "sortorder": 0,
                     "sourcebranchpublication_id": null
                 },
                 {
@@ -1931,7 +1931,7 @@
                     "nodeid": "fd7060c4-00b8-11ee-8e96-5254004d77d3",
                     "ontologyclass": "http://www.w3.org/2000/01/rdf-schema#Literal",
                     "parentproperty": "http://www.cidoc-crm.org/cidoc-crm/P3_has_note",
-                    "sortorder": 1,
+                    "sortorder": 0,
                     "sourcebranchpublication_id": null
                 }
             ],
@@ -1939,9 +1939,8 @@
             "publication": {
                 "graph_id": "df3ee1ae-9c1c-11ec-964d-5254008afee6",
                 "notes": null,
-                "publicationid": "a9432156-0141-11ee-9a2c-5254004d77d3",
-                "published_time": "2023-06-02T07:33:21.931",
-                "user_id": 1
+                "publicationid": "0b94877c-0ba7-11ee-861b-5254004d77d3",
+                "published_time": "2023-06-15T13:04:17.679"
             },
             "relatable_resource_model_ids": [],
             "resource_2_resource_constraints": [],
@@ -1970,27 +1969,6 @@
                 "en": ""
             },
             "template_id": "50000000-0000-0000-0000-000000000002",
-            "topnode": {
-                "alias": "bc_fossil_collection_event",
-                "config": {},
-                "datatype": "semantic",
-                "description": "",
-                "exportable": false,
-                "fieldname": null,
-                "graph_id": "df3ee1ae-9c1c-11ec-964d-5254008afee6",
-                "hascustomalias": false,
-                "is_collector": false,
-                "isrequired": false,
-                "issearchable": true,
-                "istopnode": true,
-                "name": "BC Fossil Collection Event",
-                "nodegroup_id": null,
-                "nodeid": "df3edef2-9c1c-11ec-964d-5254008afee6",
-                "ontologyclass": "http://www.ics.forth.gr/isl/CRMarchaeo/A9_Archaeological_Excavation",
-                "parentproperty": "",
-                "sortorder": 0,
-                "sourcebranchpublication_id": null
-            },
             "version": ""
         }
     ],

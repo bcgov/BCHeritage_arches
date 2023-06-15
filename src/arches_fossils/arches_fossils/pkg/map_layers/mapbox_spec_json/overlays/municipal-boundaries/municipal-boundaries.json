@@ -16,9 +16,18 @@
       "source": "municipal-boundaries-source",
       "source-layer": "WHSE_LEGAL_ADMIN_BOUNDARIES.ABMS_MUNICIPALITIES_SP",
       "paint": {
-        "line-color": "#000000",
+        "line-color": "rgba(194, 165, 207, 1)",
         "line-width": 1.33,
         "line-dasharray": [8,8]
+      }
+    },
+    {
+      "id": "municipal-boundaries-fill",
+      "type": "fill",
+      "source": "municipal-boundaries-source",
+      "source-layer": "WHSE_LEGAL_ADMIN_BOUNDARIES.ABMS_MUNICIPALITIES_SP",
+      "paint": {
+        "fill-color": "rgba(194, 165, 207, .3)"
       }
     },
     {

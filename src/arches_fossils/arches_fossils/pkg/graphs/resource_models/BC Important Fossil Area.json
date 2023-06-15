@@ -8,14 +8,7 @@
                     "cardid": "49b83ea4-10c7-11ec-81af-5254008afee6",
                     "component_id": "f05e4d3a-53c1-11e8-b0ea-784f435179ea",
                     "config": null,
-                    "constraints": [
-                        {
-                            "card_id": "49b83ea4-10c7-11ec-81af-5254008afee6",
-                            "constraintid": "7c51a7cc-e0d6-410d-a84f-4e61363e2a06",
-                            "nodes": [],
-                            "uniquetoallinstances": false
-                        }
-                    ],
+                    "constraints": [],
                     "cssclass": "",
                     "description": {
                         "en": "The name of a resource.\n\nApplies to Heritage Resource, Heritage Resource Group, Activity, and Historical Event.  Actors receive their \"names\" from the Appellation branch."
@@ -23,10 +16,10 @@
                     "graph_id": "4d6c9226-10c6-11ec-9a94-5254008afee6",
                     "helpenabled": false,
                     "helptext": {
-                        "en": null
+                        "en": ""
                     },
                     "helptitle": {
-                        "en": null
+                        "en": ""
                     },
                     "instructions": {
                         "en": "Enter the resource name and its respective type."
@@ -44,32 +37,19 @@
                     "cardid": "69233ab4-10c7-11ec-8a7a-5254008afee6",
                     "component_id": "f05e4d3a-53c1-11e8-b0ea-784f435179ea",
                     "config": null,
-                    "constraints": [
-                        {
-                            "card_id": "69233ab4-10c7-11ec-8a7a-5254008afee6",
-                            "constraintid": "5b45468c-42ef-451f-965d-5df1fc802229",
-                            "nodes": [],
-                            "uniquetoallinstances": false
-                        },
-                        {
-                            "card_id": "69233ab4-10c7-11ec-8a7a-5254008afee6",
-                            "constraintid": "1e937d5e-ee69-486f-a568-ac40bd2014e5",
-                            "nodes": [],
-                            "uniquetoallinstances": false
-                        }
-                    ],
+                    "constraints": [],
                     "cssclass": null,
                     "description": null,
                     "graph_id": "4d6c9226-10c6-11ec-9a94-5254008afee6",
                     "helpenabled": false,
                     "helptext": {
-                        "en": null
+                        "en": ""
                     },
                     "helptitle": {
-                        "en": null
+                        "en": ""
                     },
                     "instructions": {
-                        "en": null
+                        "en": ""
                     },
                     "is_editable": false,
                     "name": {
@@ -92,10 +72,10 @@
                     "graph_id": "4d6c9226-10c6-11ec-9a94-5254008afee6",
                     "helpenabled": false,
                     "helptext": {
-                        "en": null
+                        "en": ""
                     },
                     "helptitle": {
-                        "en": null
+                        "en": ""
                     },
                     "instructions": {
                         "en": "Enter a description and description type for the resource."
@@ -113,14 +93,7 @@
                     "cardid": "c6651676-10c6-11ec-adef-5254008afee6",
                     "component_id": "f05e4d3a-53c1-11e8-b0ea-784f435179ea",
                     "config": null,
-                    "constraints": [
-                        {
-                            "card_id": "c6651676-10c6-11ec-adef-5254008afee6",
-                            "constraintid": "fb7126cf-2707-4ab4-b7e5-178b963e90f8",
-                            "nodes": [],
-                            "uniquetoallinstances": false
-                        }
-                    ],
+                    "constraints": [],
                     "cssclass": "",
                     "description": {
                         "en": "Describes the physical location of a heritage resource or heritage resource group.  Includes extra nodes for cadastral information.\n\nRelates to Heritage Resource E18 with P53\nRelates to Heritage Resource Group E27 with P89\n"
@@ -128,13 +101,13 @@
                     "graph_id": "4d6c9226-10c6-11ec-9a94-5254008afee6",
                     "helpenabled": false,
                     "helptext": {
-                        "en": null
+                        "en": ""
                     },
                     "helptitle": {
-                        "en": null
+                        "en": ""
                     },
                     "instructions": {
-                        "en": null
+                        "en": ""
                     },
                     "is_editable": false,
                     "name": {
@@ -157,10 +130,10 @@
                     "graph_id": "4d6c9226-10c6-11ec-9a94-5254008afee6",
                     "helpenabled": false,
                     "helptext": {
-                        "en": null
+                        "en": ""
                     },
                     "helptitle": {
-                        "en": null
+                        "en": ""
                     },
                     "instructions": {
                         "en": "Define the spatial location."
@@ -227,7 +200,7 @@
                     "widget_id": "10000000-0000-0000-0000-000000000001"
                 }
             ],
-            "color": null,
+            "color": "rgba(215,48,39,1)",
             "config": {},
             "deploymentdate": null,
             "deploymentfile": null,
@@ -355,7 +328,7 @@
                     },
                     "function_id": "60000000-0000-0000-0000-000000001001",
                     "graph_id": "4d6c9226-10c6-11ec-9a94-5254008afee6",
-                    "id": "58863350-9835-4f55-96c0-77ce895d0cba"
+                    "id": "76733892-1f53-4b9d-a6fa-b466c0736ec8"
                 }
             ],
             "graphid": "4d6c9226-10c6-11ec-9a94-5254008afee6",
@@ -417,7 +390,8 @@
                     "nodeid": "49b837b0-10c7-11ec-81af-5254008afee6",
                     "ontologyclass": "http://www.cidoc-crm.org/cidoc-crm/E41_Appellation",
                     "parentproperty": "http://www.cidoc-crm.org/cidoc-crm/BM.PX_is_related_to",
-                    "sortorder": 0
+                    "sortorder": 0,
+                    "sourcebranchpublication_id": null
                 },
                 {
                     "alias": "name_type",
@@ -439,7 +413,8 @@
                     "nodeid": "49b8408e-10c7-11ec-81af-5254008afee6",
                     "ontologyclass": "http://www.cidoc-crm.org/cidoc-crm/E55_Type",
                     "parentproperty": "http://www.cidoc-crm.org/cidoc-crm/P2_has_type",
-                    "sortorder": 0
+                    "sortorder": 0,
+                    "sourcebranchpublication_id": null
                 },
                 {
                     "alias": "bc_important_fossil_area",
@@ -459,7 +434,8 @@
                     "nodeid": "4d6c8e98-10c6-11ec-9a94-5254008afee6",
                     "ontologyclass": "http://www.cidoc-crm.org/cidoc-crm/E18_Physical_Thing",
                     "parentproperty": "",
-                    "sortorder": 0
+                    "sortorder": 0,
+                    "sourcebranchpublication_id": null
                 },
                 {
                     "alias": "potential_ranking",
@@ -479,7 +455,8 @@
                     "nodeid": "69230292-10c7-11ec-8a7a-5254008afee6",
                     "ontologyclass": "http://www.cidoc-crm.org/cidoc-crm/E13_Attribute_Assignment",
                     "parentproperty": "http://www.cidoc-crm.org/cidoc-crm/P140i_was_attributed_by",
-                    "sortorder": 0
+                    "sortorder": 0,
+                    "sourcebranchpublication_id": null
                 },
                 {
                     "alias": "description_assignment",
@@ -499,7 +476,8 @@
                     "nodeid": "7febebec-10c7-11ec-bbeb-5254008afee6",
                     "ontologyclass": "http://www.cidoc-crm.org/cidoc-crm/E13_Attribute_Assignment",
                     "parentproperty": "http://www.cidoc-crm.org/cidoc-crm/P8i_witnessed",
-                    "sortorder": 0
+                    "sortorder": 0,
+                    "sourcebranchpublication_id": null
                 },
                 {
                     "alias": "description",
@@ -519,7 +497,8 @@
                     "nodeid": "7febfbb4-10c7-11ec-bbeb-5254008afee6",
                     "ontologyclass": "http://www.cidoc-crm.org/cidoc-crm/E62_String",
                     "parentproperty": "http://www.cidoc-crm.org/cidoc-crm/P3_has_note",
-                    "sortorder": 0
+                    "sortorder": 0,
+                    "sourcebranchpublication_id": null
                 },
                 {
                     "alias": "description_type",
@@ -541,7 +520,8 @@
                     "nodeid": "7febfe20-10c7-11ec-bbeb-5254008afee6",
                     "ontologyclass": "http://www.cidoc-crm.org/cidoc-crm/E55_Type",
                     "parentproperty": "http://www.cidoc-crm.org/cidoc-crm/P2_has_type",
-                    "sortorder": 0
+                    "sortorder": 0,
+                    "sourcebranchpublication_id": null
                 },
                 {
                     "alias": "area_boundary",
@@ -561,7 +541,8 @@
                     "nodeid": "c6651266-10c6-11ec-adef-5254008afee6",
                     "ontologyclass": "http://www.cidoc-crm.org/cidoc-crm/E53_Place",
                     "parentproperty": "http://www.cidoc-crm.org/cidoc-crm/P156_occupies",
-                    "sortorder": 0
+                    "sortorder": 0,
+                    "sourcebranchpublication_id": null
                 },
                 {
                     "alias": "spatial_coordinates_geometry",
@@ -604,7 +585,8 @@
                     "nodeid": "c66518e2-10c6-11ec-adef-5254008afee6",
                     "ontologyclass": "http://www.cidoc-crm.org/cidoc-crm/E47_Spatial_Coordinates",
                     "parentproperty": "http://www.cidoc-crm.org/cidoc-crm/P87_is_identified_by",
-                    "sortorder": 0
+                    "sortorder": 0,
+                    "sourcebranchpublication_id": null
                 },
                 {
                     "alias": "geometry_qualifier",
@@ -626,16 +608,16 @@
                     "nodeid": "c6654042-10c6-11ec-adef-5254008afee6",
                     "ontologyclass": "http://www.cidoc-crm.org/cidoc-crm/E55_Type",
                     "parentproperty": "http://www.cidoc-crm.org/cidoc-crm/P2_has_type",
-                    "sortorder": 0
+                    "sortorder": 0,
+                    "sourcebranchpublication_id": null
                 }
             ],
             "ontology_id": "e6e8db47-2ccf-11e6-927e-b8f6b115d7dd",
             "publication": {
                 "graph_id": "4d6c9226-10c6-11ec-9a94-5254008afee6",
                 "notes": null,
-                "publicationid": "61ac48f6-53f7-11ed-b5f0-5254004d77d3",
-                "published_time": "2022-10-24T18:55:47.906",
-                "user_id": 1
+                "publicationid": "2371529e-0ba7-11ee-bf32-5254004d77d3",
+                "published_time": "2023-06-15T13:04:57.713"
             },
             "relatable_resource_model_ids": [],
             "resource_2_resource_constraints": [],
@@ -656,7 +638,8 @@
                 "nodegroup_id": null,
                 "nodeid": "4d6c8e98-10c6-11ec-9a94-5254008afee6",
                 "ontologyclass": "http://www.cidoc-crm.org/cidoc-crm/E18_Physical_Thing",
-                "sortorder": 0
+                "sortorder": 0,
+                "sourcebranchpublication_id": null
             },
             "slug": null,
             "subtitle": {
