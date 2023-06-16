@@ -464,6 +464,53 @@
                     "widget_id": "10000000-0000-0000-0000-000000000001"
                 },
                 {
+                    "card_id": "ba92568e-14d5-11ec-a57a-5254008afee6",
+                    "config": {
+                        "basemap": "British Columbia Roads",
+                        "bearing": 0,
+                        "centerX": -116.30754020378788,
+                        "centerY": 54.69700737045025,
+                        "defaultValue": "",
+                        "defaultValueType": "",
+                        "featureColor": "#FF0000",
+                        "featureLineWidth": 1,
+                        "featurePointSize": 3,
+                        "geocodePlaceholder": "Search",
+                        "geocodeProvider": "10000000-0000-0000-0000-010000000000",
+                        "geocoderVisible": true,
+                        "geometryTypes": [
+                            {
+                                "id": "Point",
+                                "text": "Point"
+                            },
+                            {
+                                "id": "Line",
+                                "text": "Line"
+                            },
+                            {
+                                "id": "Polygon",
+                                "text": "Polygon"
+                            }
+                        ],
+                        "label": "Spatial Coordinates Geometry",
+                        "maxZoom": 20,
+                        "minZoom": 0,
+                        "overlayConfigs": [],
+                        "overlayOpacity": 0,
+                        "pitch": 0,
+                        "rerender": true,
+                        "zoom": 3.750851286875927
+                    },
+                    "id": "719b1db8-88a6-4b2c-b655-f351e76a3d97",
+                    "label": {
+                        "en": "Spatial Coordinates Geometry"
+                    },
+                    "node_id": "ba9252e2-14d5-11ec-a57a-5254008afee6",
+                    "sortorder": 0,
+                    "visible": true,
+                    "widget_id": "10000000-0000-0000-0000-000000000007"
+                },
+                {
                     "card_id": "ba9260d4-14d5-11ec-a57a-5254008afee6",
                     "config": {
                         "defaultValue": {
@@ -738,15 +785,6 @@
                 },
                 {
                     "description": null,
-                    "domainnode_id": "ba9252e2-14d5-11ec-a57a-5254008afee6",
-                    "edgeid": "ba929b6c-14d5-11ec-a57a-5254008afee6",
-                    "graph_id": "3e6a2880-14d4-11ec-9df0-5254008afee6",
-                    "name": null,
-                    "ontologyproperty": "http://www.cidoc-crm.org/cidoc-crm/P2_has_type",
-                    "rangenode_id": "ba927a74-14d5-11ec-a57a-5254008afee6"
-                },
-                {
-                    "description": null,
                     "domainnode_id": "ba927470-14d5-11ec-a57a-5254008afee6",
                     "edgeid": "ba929d38-14d5-11ec-a57a-5254008afee6",
                     "graph_id": "3e6a2880-14d4-11ec-9df0-5254008afee6",
@@ -846,7 +884,7 @@
                     },
                     "function_id": "60000000-0000-0000-0000-000000001001",
                     "graph_id": "3e6a2880-14d4-11ec-9df0-5254008afee6",
-                    "id": "418222c0-cc92-4358-93eb-f8d6a7dd1e3a"
+                    "id": "260143c9-7769-4d91-87db-897185b7c9af"
                 }
             ],
             "graphid": "3e6a2880-14d4-11ec-9df0-5254008afee6",
@@ -1282,29 +1320,6 @@
                     "sourcebranchpublication_id": null
                 },
                 {
-                    "alias": "geometry_qualifier",
-                    "config": {
-                        "rdmCollection": null
-                    },
-                    "datatype": "concept",
-                    "description": "Represents a single node in a graph",
-                    "exportable": false,
-                    "fieldname": "",
-                    "graph_id": "3e6a2880-14d4-11ec-9df0-5254008afee6",
-                    "hascustomalias": false,
-                    "is_collector": false,
-                    "isrequired": false,
-                    "issearchable": true,
-                    "istopnode": false,
-                    "name": "Geometry Qualifier",
-                    "nodegroup_id": "ba9252e2-14d5-11ec-a57a-5254008afee6",
-                    "nodeid": "ba927a74-14d5-11ec-a57a-5254008afee6",
-                    "ontologyclass": "http://www.cidoc-crm.org/cidoc-crm/E55_Type",
-                    "parentproperty": "http://www.cidoc-crm.org/cidoc-crm/P2_has_type",
-                    "sortorder": 0,
-                    "sourcebranchpublication_id": null
-                },
-                {
                     "alias": "place_description",
                     "config": {},
                     "datatype": "string",
@@ -1414,8 +1429,8 @@
             "publication": {
                 "graph_id": "3e6a2880-14d4-11ec-9df0-5254008afee6",
                 "notes": null,
-                "publicationid": "854c7f9c-0b03-11ee-ae56-5254004d77d3",
-                "published_time": "2023-06-14T17:33:44.425"
+                "publicationid": "2766d880-0bdc-11ee-a4f8-5254004d77d3",
+                "published_time": "2023-06-15T19:24:27.682"
             },
             "relatable_resource_model_ids": [],
             "resource_2_resource_constraints": [],
