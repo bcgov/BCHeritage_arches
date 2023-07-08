@@ -78,7 +78,7 @@
                     "instructions": {
                         "en": ""
                     },
-                    "is_editable": false,
+                    "is_editable": true,
                     "name": {
                         "en": "Fossil Impact Assessment Process"
                     },
@@ -429,7 +429,7 @@
                     "instructions": {
                         "en": ""
                     },
-                    "is_editable": false,
+                    "is_editable": true,
                     "name": {
                         "en": "Preliminary Study Process"
                     },
@@ -4001,8 +4001,8 @@
             ],
             "functions_x_graphs": [],
             "graphid": "2aa724d1-ffd3-4823-8ff1-15a385b9a407",
-            "iconclass": "fa fa-question",
-            "is_editable": false,
+            "iconclass": "fa fa-diamond",
+            "is_editable": true,
             "isresource": true,
             "jsonldcontext": null,
             "name": {
@@ -8067,9 +8067,8 @@
             "publication": {
                 "graph_id": "2aa724d1-ffd3-4823-8ff1-15a385b9a407",
                 "notes": null,
-                "publicationid": "45e57788-008a-11ee-8c75-0050568377a0",
-                "published_time": "2023-06-01T09:40:37.321",
-                "user_id": 1
+                "publicationid": "f0700a3e-1d6c-11ee-8769-0242ac120008",
+                "published_time": "2023-07-08T08:53:42.261"
             },
             "relatable_resource_model_ids": [],
             "resource_2_resource_constraints": [],
@@ -8100,36 +8099,13 @@
                 "en": ""
             },
             "template_id": "50000000-0000-0000-0000-000000000002",
-            "topnode": {
-                "alias": "industry_project_assessment",
-                "config": {
-                    "en": ""
-                },
-                "datatype": "semantic",
-                "description": "",
-                "exportable": false,
-                "fieldname": null,
-                "graph_id": "2aa724d1-ffd3-4823-8ff1-15a385b9a407",
-                "hascustomalias": false,
-                "is_collector": false,
-                "isrequired": false,
-                "issearchable": true,
-                "istopnode": true,
-                "name": "Industry Project Assessment",
-                "nodegroup_id": null,
-                "nodeid": "10295f6a-9dc0-11ed-82b6-5254004d77d3",
-                "ontologyclass": "http://www.cidoc-crm.org/cidoc-crm/E7_Activity",
-                "parentproperty": "",
-                "sortorder": 0,
-                "sourcebranchpublication_id": null
-            },
             "version": ""
         }
     ],
     "metadata": {
-        "db": "PostgreSQL 12.11 on x86_64-pc-linux-gnu, compiled by gcc (GCC) 4.8.5 20150623 (Red Hat 4.8.5-44), 64-bit",
-        "git hash": "4a51a70 2023-05-23 17:03:50 -0700",
+        "db": "PostgreSQL 14.5 (Debian 14.5-1.pgdg110+1) on x86_64-pc-linux-gnu, compiled by gcc (Debian 10.2.1-6) 10.2.1 20210110, 64-bit",
+        "git hash": "9f0ec2ef5 2023-06-14 16:41:07 -0700",
         "os": "Linux",
-        "os version": "3.10.0-1160.88.1.el7.x86_64"
+        "os version": "5.15.49-linuxkit"
     }
 }

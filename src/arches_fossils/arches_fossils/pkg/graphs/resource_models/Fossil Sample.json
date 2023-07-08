@@ -76,7 +76,7 @@
                     "instructions": {
                         "en": ""
                     },
-                    "is_editable": false,
+                    "is_editable": true,
                     "name": {
                         "en": "Stratigraphy"
                     },
@@ -103,7 +103,7 @@
                     "instructions": {
                         "en": ""
                     },
-                    "is_editable": false,
+                    "is_editable": true,
                     "name": {
                         "en": "Repository Information"
                     },
@@ -130,7 +130,7 @@
                     "instructions": {
                         "en": ""
                     },
-                    "is_editable": false,
+                    "is_editable": true,
                     "name": {
                         "en": "Fossil Occurrence Site ID"
                     },
@@ -157,7 +157,7 @@
                     "instructions": {
                         "en": ""
                     },
-                    "is_editable": false,
+                    "is_editable": true,
                     "name": {
                         "en": "Geological Age"
                     },
@@ -184,7 +184,7 @@
                     "instructions": {
                         "en": ""
                     },
-                    "is_editable": false,
+                    "is_editable": true,
                     "name": {
                         "en": "Fossil ID"
                     },
@@ -211,7 +211,7 @@
                     "instructions": {
                         "en": ""
                     },
-                    "is_editable": false,
+                    "is_editable": true,
                     "name": {
                         "en": "BC Fossil Identification"
                     },
@@ -2076,18 +2076,6 @@
             "functions_x_graphs": [
                 {
                     "config": {
-                        "node_id": "7f2c823e-6c51-11ed-9b7d-5254004d77d3",
-                        "triggering_nodegroups": [
-                            "7f2c2dde-6c51-11ed-9b7d-5254004d77d3"
-                        ],
-                        "unique_value": true
-                    },
-                    "function_id": "60000000-0000-0000-0000-000000002001",
-                    "graph_id": "7f2c2082-6c51-11ed-9b7d-5254004d77d3",
-                    "id": "1c94e9e9-1625-4e48-a552-d04dc339d316"
-                },
-                {
-                    "config": {
                         "class_name": "PrimaryDescriptorsFunction",
                         "descriptor_types": {
                             "description": {
@@ -2108,16 +2096,28 @@
                     },
                     "function_id": "60000000-0000-0000-0000-000000000001",
                     "graph_id": "7f2c2082-6c51-11ed-9b7d-5254004d77d3",
-                    "id": "76d46cd1-cf39-4b11-9d42-53c7a7160c67"
+                    "id": "50329d20-c232-41e4-adf7-4e7c1861d062"
+                },
+                {
+                    "config": {
+                        "node_id": "7f2c823e-6c51-11ed-9b7d-5254004d77d3",
+                        "triggering_nodegroups": [
+                            "7f2c2dde-6c51-11ed-9b7d-5254004d77d3"
+                        ],
+                        "unique_value": true
+                    },
+                    "function_id": "60000000-0000-0000-0000-000000002001",
+                    "graph_id": "7f2c2082-6c51-11ed-9b7d-5254004d77d3",
+                    "id": "e3a73189-8bb6-4c38-82a3-0d2345b19fa3"
                 }
             ],
             "graphid": "7f2c2082-6c51-11ed-9b7d-5254004d77d3",
-            "iconclass": "fa fa-puzzle-piece",
-            "is_editable": false,
+            "iconclass": "fa fa-tags",
+            "is_editable": true,
             "isresource": true,
             "jsonldcontext": null,
             "name": {
-                "en": "BC Fossil Sample"
+                "en": "Fossil Sample"
             },
             "nodegroups": [
                 {
@@ -2760,7 +2760,7 @@
                         "graphs": [
                             {
                                 "graphid": "3e6a2880-14d4-11ec-9df0-5254008afee6",
-                                "name": "BC Fossil Storage Location"
+                                "name": "Fossil Storage Location"
                             }
                         ],
                         "searchDsl": "",
@@ -2873,7 +2873,7 @@
                     "isrequired": false,
                     "issearchable": true,
                     "istopnode": true,
-                    "name": "BC Fossil Sample",
+                    "name": "Fossil Sample",
                     "nodegroup_id": null,
                     "nodeid": "7f2c7f50-6c51-11ed-9b7d-5254004d77d3",
                     "ontologyclass": "http://www.cidoc-crm.org/cidoc-crm/E1_CRM_Entity",
@@ -2933,7 +2933,7 @@
                         "graphs": [
                             {
                                 "graphid": "86700278-117b-11ec-90d4-5254008afee6",
-                                "name": "BC Fossil Type"
+                                "name": "Fossil Type"
                             }
                         ],
                         "searchDsl": {
@@ -3044,7 +3044,7 @@
                         "graphs": [
                             {
                                 "graphid": "86700278-117b-11ec-90d4-5254008afee6",
-                                "name": "BC Fossil Type"
+                                "name": "Fossil Type"
                             }
                         ],
                         "searchDsl": {
@@ -3402,7 +3402,7 @@
                             {
                                 "graphid": "86700278-117b-11ec-90d4-5254008afee6",
                                 "inverseRelationshipConcept": "ac41d9be-79db-4256-b368-2f4559cfbe55",
-                                "name": "BC Fossil Type",
+                                "name": "Fossil Type",
                                 "relationshipCollection": "00000000-0000-0000-0000-000000000005",
                                 "relationshipConcept": "ac41d9be-79db-4256-b368-2f4559cfbe55",
                                 "useOntologyRelationship": false
@@ -3796,8 +3796,8 @@
             "publication": {
                 "graph_id": "7f2c2082-6c51-11ed-9b7d-5254004d77d3",
                 "notes": null,
-                "publicationid": "96317e3a-113d-11ee-ac94-0050568377a0",
-                "published_time": "2023-06-22T15:44:30.556"
+                "publicationid": "4aaacf6c-1d6c-11ee-8769-0242ac120008",
+                "published_time": "2023-07-08T08:49:04.144"
             },
             "relatable_resource_model_ids": [],
             "resource_2_resource_constraints": [],
@@ -3814,7 +3814,7 @@
                 "isrequired": false,
                 "issearchable": true,
                 "istopnode": true,
-                "name": "BC Fossil Sample",
+                "name": "Fossil Sample",
                 "nodegroup_id": null,
                 "nodeid": "7f2c7f50-6c51-11ed-9b7d-5254004d77d3",
                 "ontologyclass": "http://www.cidoc-crm.org/cidoc-crm/E1_CRM_Entity",
@@ -3830,9 +3830,9 @@
         }
     ],
     "metadata": {
-        "db": "PostgreSQL 12.11 on x86_64-pc-linux-gnu, compiled by gcc (GCC) 4.8.5 20150623 (Red Hat 4.8.5-44), 64-bit",
-        "git hash": "9f0ec2e 2023-06-14 16:41:07 -0700",
+        "db": "PostgreSQL 14.5 (Debian 14.5-1.pgdg110+1) on x86_64-pc-linux-gnu, compiled by gcc (Debian 10.2.1-6) 10.2.1 20210110, 64-bit",
+        "git hash": "9f0ec2ef5 2023-06-14 16:41:07 -0700",
         "os": "Linux",
-        "os version": "3.10.0-1160.88.1.el7.x86_64"
+        "os version": "5.15.49-linuxkit"
     }
 }

@@ -629,16 +629,16 @@
                     },
                     "function_id": "60000000-0000-0000-0000-000000000001",
                     "graph_id": "fac1b1b4-1034-11ec-8a7a-5254008afee6",
-                    "id": "c361c61b-acbf-4fc1-b58c-c672bc5c303a"
+                    "id": "c9de2a4f-7b1f-4ed9-8341-e51ab2d65ba5"
                 }
             ],
             "graphid": "fac1b1b4-1034-11ec-8a7a-5254008afee6",
-            "iconclass": "fa fa-crosshairs",
+            "iconclass": "fa fa-compass",
             "is_editable": true,
             "isresource": true,
             "jsonldcontext": null,
             "name": {
-                "en": "BC Fossil Site"
+                "en": "Fossil Site"
             },
             "nodegroups": [
                 {
@@ -697,7 +697,7 @@
                     "nodeid": "1224f846-ab96-11ec-8eb6-5254008afee6",
                     "ontologyclass": "http://www.cidoc-crm.org/cidoc-crm/E33_Linguistic_Object",
                     "parentproperty": "http://www.cidoc-crm.org/cidoc-crm/P129i_is_subject_of",
-                    "sortorder": 3,
+                    "sortorder": 0,
                     "sourcebranchpublication_id": null
                 },
                 {
@@ -739,7 +739,7 @@
                     "nodeid": "23368b42-1035-11ec-a3aa-5254008afee6",
                     "ontologyclass": "http://www.cidoc-crm.org/cidoc-crm/E53_Place",
                     "parentproperty": "http://www.cidoc-crm.org/cidoc-crm/P156_occupies",
-                    "sortorder": 2,
+                    "sortorder": 0,
                     "sourcebranchpublication_id": null
                 },
                 {
@@ -852,7 +852,7 @@
                     "nodeid": "d08d1b72-70d7-11ed-9c1b-5254004d77d3",
                     "ontologyclass": "http://www.cidoc-crm.org/cidoc-crm/E13_Attribute_Assignment",
                     "parentproperty": "http://www.cidoc-crm.org/cidoc-crm/P132_overlaps_with",
-                    "sortorder": 4,
+                    "sortorder": 0,
                     "sourcebranchpublication_id": null
                 },
                 {
@@ -884,7 +884,7 @@
                         "graphs": [
                             {
                                 "graphid": "fac1b1b4-1034-11ec-8a7a-5254008afee6",
-                                "name": "BC Fossil Site"
+                                "name": "Fossil Site"
                             }
                         ],
                         "searchDsl": "",
@@ -905,7 +905,7 @@
                     "nodeid": "f71decaa-10aa-11ec-b169-5254008afee6",
                     "ontologyclass": "http://www.ics.forth.gr/isl/CRMdig/D35_Area",
                     "parentproperty": "http://www.cidoc-crm.org/cidoc-crm/P10i_contains",
-                    "sortorder": 1,
+                    "sortorder": 0,
                     "sourcebranchpublication_id": null
                 },
                 {
@@ -921,7 +921,7 @@
                     "isrequired": false,
                     "issearchable": true,
                     "istopnode": true,
-                    "name": "BC Fossil Site",
+                    "name": "Fossil Site",
                     "nodegroup_id": null,
                     "nodeid": "fac1a660-1034-11ec-8a7a-5254008afee6",
                     "ontologyclass": "http://www.cidoc-crm.org/cidoc-crm/E18_Physical_Thing",
@@ -934,9 +934,8 @@
             "publication": {
                 "graph_id": "fac1b1b4-1034-11ec-8a7a-5254008afee6",
                 "notes": null,
-                "publicationid": "52d49806-fe88-11ed-bb58-5254004d77d3",
-                "published_time": "2023-05-29T20:21:37.702",
-                "user_id": 1
+                "publicationid": "6528448c-1d6c-11ee-8769-0242ac120008",
+                "published_time": "2023-07-08T08:49:48.587"
             },
             "relatable_resource_model_ids": [],
             "resource_2_resource_constraints": [],
@@ -953,7 +952,7 @@
                 "isrequired": false,
                 "issearchable": true,
                 "istopnode": true,
-                "name": "BC Fossil Site",
+                "name": "Fossil Site",
                 "nodegroup_id": null,
                 "nodeid": "fac1a660-1034-11ec-8a7a-5254008afee6",
                 "ontologyclass": "http://www.cidoc-crm.org/cidoc-crm/E18_Physical_Thing",
@@ -969,9 +968,9 @@
         }
     ],
     "metadata": {
-        "db": "PostgreSQL 12.12 on x86_64-pc-linux-gnu, compiled by gcc (GCC) 4.8.5 20150623 (Red Hat 4.8.5-44), 64-bit",
-        "git hash": "/bin/sh: git: command not found",
+        "db": "PostgreSQL 14.5 (Debian 14.5-1.pgdg110+1) on x86_64-pc-linux-gnu, compiled by gcc (Debian 10.2.1-6) 10.2.1 20210110, 64-bit",
+        "git hash": "9f0ec2ef5 2023-06-14 16:41:07 -0700",
         "os": "Linux",
-        "os version": "3.10.0-1160.76.1.el7.x86_64"
+        "os version": "5.15.49-linuxkit"
     }
 }
