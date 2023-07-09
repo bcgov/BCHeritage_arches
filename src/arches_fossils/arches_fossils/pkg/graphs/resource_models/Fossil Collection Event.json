@@ -1203,7 +1203,7 @@
                     },
                     "function_id": "60000000-0000-0000-0000-000000001001",
                     "graph_id": "df3ee1ae-9c1c-11ec-964d-5254008afee6",
-                    "id": "ff0295de-8cbc-40f2-a9af-6082979f4915"
+                    "id": "871af5bc-a7a5-4c5c-b57a-cabf0b480606"
                 }
             ],
             "graphid": "df3ee1ae-9c1c-11ec-964d-5254008afee6",
@@ -1331,7 +1331,7 @@
                     "nodeid": "210931f8-00bb-11ee-a50c-5254004d77d3",
                     "ontologyclass": "http://www.ics.forth.gr/isl/CRMarchaeo/A8_Stratigraphic_Unit",
                     "parentproperty": "http://www.cidoc-crm.org/cidoc-crm/P59i_is_located_on_or_within",
-                    "sortorder": 2,
+                    "sortorder": 0,
                     "sourcebranchpublication_id": null
                 },
                 {
@@ -1870,7 +1870,7 @@
                     "sourcebranchpublication_id": null
                 },
                 {
-                    "alias": "bc_fossil_collection_event",
+                    "alias": "fossil_collection_event",
                     "config": {},
                     "datatype": "semantic",
                     "description": "",
@@ -1931,7 +1931,7 @@
                     "nodeid": "fd7060c4-00b8-11ee-8e96-5254004d77d3",
                     "ontologyclass": "http://www.w3.org/2000/01/rdf-schema#Literal",
                     "parentproperty": "http://www.cidoc-crm.org/cidoc-crm/P3_has_note",
-                    "sortorder": 1,
+                    "sortorder": 0,
                     "sourcebranchpublication_id": null
                 }
             ],
@@ -1940,13 +1940,12 @@
                 "graph_id": "df3ee1ae-9c1c-11ec-964d-5254008afee6",
                 "notes": null,
                 "publicationid": "a9432156-0141-11ee-9a2c-5254004d77d3",
-                "published_time": "2023-06-02T07:33:21.931",
-                "user_id": 1
+                "published_time": "2023-06-02T07:33:21.931"
             },
             "relatable_resource_model_ids": [],
             "resource_2_resource_constraints": [],
             "root": {
-                "alias": "bc_fossil_collection_event",
+                "alias": "fossil_collection_event",
                 "config": {},
                 "datatype": "semantic",
                 "description": "",
@@ -1970,34 +1969,13 @@
                 "en": ""
             },
             "template_id": "50000000-0000-0000-0000-000000000002",
-            "topnode": {
-                "alias": "bc_fossil_collection_event",
-                "config": {},
-                "datatype": "semantic",
-                "description": "",
-                "exportable": false,
-                "fieldname": null,
-                "graph_id": "df3ee1ae-9c1c-11ec-964d-5254008afee6",
-                "hascustomalias": false,
-                "is_collector": false,
-                "isrequired": false,
-                "issearchable": true,
-                "istopnode": true,
-                "name": "Fossil Collection Event",
-                "nodegroup_id": null,
-                "nodeid": "df3edef2-9c1c-11ec-964d-5254008afee6",
-                "ontologyclass": "http://www.ics.forth.gr/isl/CRMarchaeo/A9_Archaeological_Excavation",
-                "parentproperty": "",
-                "sortorder": 0,
-                "sourcebranchpublication_id": null
-            },
             "version": ""
         }
     ],
     "metadata": {
-        "db": "PostgreSQL 12.12 on x86_64-pc-linux-gnu, compiled by gcc (GCC) 4.8.5 20150623 (Red Hat 4.8.5-44), 64-bit",
-        "git hash": "/bin/sh: git: command not found",
+        "db": "PostgreSQL 14.5 (Debian 14.5-1.pgdg110+1) on x86_64-pc-linux-gnu, compiled by gcc (Debian 10.2.1-6) 10.2.1 20210110, 64-bit",
+        "git hash": "9f0ec2ef5 2023-06-14 16:41:07 -0700",
         "os": "Linux",
-        "os version": "3.10.0-1160.76.1.el7.x86_64"
+        "os version": "5.15.49-linuxkit"
     }
 }

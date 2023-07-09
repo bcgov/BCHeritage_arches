@@ -5,7 +5,7 @@ from django.utils.translation import ugettext as _
 
 details = {
     "functionid": "60000000-0000-0000-0000-000000001003",
-    "name": "BC Fossils Publication Descriptors",
+    "name": "Publication Descriptors",
     "type": "primarydescriptors",
     "modulename": "bc_fossil_publication_descriptors.py",
     "description": "Function that provides the primary descriptors for BC Fossils resources",
@@ -42,7 +42,7 @@ details = {
 
 
 class BCFossilPublicationDescriptors(AbstractPrimaryDescriptorsFunction):
-    _graph_name = {"en": "BC Fossil Publication"}
+    _graph_name = {"en": "Publication"}
     _datatype_factory = None
 
     _title_node = None

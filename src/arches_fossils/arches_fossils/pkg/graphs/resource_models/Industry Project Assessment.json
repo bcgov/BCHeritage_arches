@@ -402,7 +402,7 @@
                     "instructions": {
                         "en": ""
                     },
-                    "is_editable": true,
+                    "is_editable": false,
                     "name": {
                         "en": "Project Details"
                     },
@@ -682,35 +682,6 @@
                 }
             ],
             "cards_x_nodes_x_widgets": [
-                {
-                    "card_id": "01071c17-58bb-4718-a62e-1eb9a2418dcd",
-                    "config": {
-                        "defaultValue": {
-                            "en": {
-                                "direction": "ltr",
-                                "value": ""
-                            }
-                        },
-                        "i18n_properties": [
-                            "placeholder"
-                        ],
-                        "label": "FMO Contact",
-                        "maxLength": null,
-                        "placeholder": {
-                            "en": "Enter text"
-                        },
-                        "uneditable": false,
-                        "width": "100%"
-                    },
-                    "id": "00406447-94cd-4edb-b1a0-5eeae7c69b0f",
-                    "label": {
-                        "en": "FMO Contact"
-                    },
-                    "node_id": "b1efd6e6-a354-11ed-8c6b-5254004d77d3",
-                    "sortorder": 1,
-                    "visible": true,
-                    "widget_id": "10000000-0000-0000-0000-000000000001"
-                },
                 {
                     "card_id": "0241361a-c373-11ed-af52-5254004d77d3",
                     "config": {
@@ -1896,6 +1867,27 @@
                     "widget_id": "10000000-0000-0000-0000-000000000002"
                 },
                 {
+                    "card_id": "01071c17-58bb-4718-a62e-1eb9a2418dcd",
+                    "config": {
+                        "defaultResourceInstance": [],
+                        "i18n_properties": [
+                            "placeholder"
+                        ],
+                        "label": "FMO Contact",
+                        "placeholder": {
+                            "en": ""
+                        }
+                    },
+                    "id": "92a6ee32-1500-4460-bbc7-23d84535e21a",
+                    "label": {
+                        "en": "FMO Contact"
+                    },
+                    "node_id": "ed38d064-1dec-11ee-8769-0242ac120008",
+                    "sortorder": 2,
+                    "visible": true,
+                    "widget_id": "ff3c400a-76ec-11e7-a793-784f435179ea"
+                },
+                {
                     "card_id": "10fca571-f2ec-4c06-bfd5-92606524ca40",
                     "config": {
                         "defaultValue": {
@@ -2254,7 +2246,7 @@
                         "en": "Industry Contact"
                     },
                     "node_id": "472b2810-a354-11ed-932e-5254004d77d3",
-                    "sortorder": 2,
+                    "sortorder": 1,
                     "visible": true,
                     "widget_id": "ff3c400a-76ec-11e7-a793-784f435179ea"
                 },
@@ -2618,7 +2610,32 @@
                             "placeholder"
                         ],
                         "label": "Determined Level of Risk",
-                        "options": [],
+                        "options": [
+                            {
+                                "children": [],
+                                "collector": "",
+                                "conceptid": "0da27ece-bc63-4a40-bd52-bd6b1cfdb8ac",
+                                "id": "b43fe9e6-7741-4fcd-a1ba-767aeefb364c",
+                                "sortorder": "10",
+                                "text": "Low"
+                            },
+                            {
+                                "children": [],
+                                "collector": "",
+                                "conceptid": "79bb5289-5364-4f46-95c3-d729392a953f",
+                                "id": "823cfc3f-bdcc-4dc8-ac07-a303be33b223",
+                                "sortorder": "20",
+                                "text": "Medium"
+                            },
+                            {
+                                "children": [],
+                                "collector": "",
+                                "conceptid": "0b9dbd01-32f2-4e26-9c17-f6555f1f0924",
+                                "id": "d6578b0a-a292-4847-a3f5-20187cc5692c",
+                                "sortorder": "30",
+                                "text": "High"
+                            }
+                        ],
                         "placeholder": {
                             "en": "Select an option"
                         }
@@ -2630,7 +2647,7 @@
                     "node_id": "8a3d0e70-a3d1-11ed-8922-5254004d77d3",
                     "sortorder": 0,
                     "visible": true,
-                    "widget_id": "10000000-0000-0000-0000-000000000002"
+                    "widget_id": "10000000-0000-0000-0000-000000000009"
                 },
                 {
                     "card_id": "e9394b8a-c372-11ed-b586-5254004d77d3",
@@ -3577,6 +3594,15 @@
                 },
                 {
                     "description": null,
+                    "domainnode_id": "d791486a-9dc5-11ed-add1-5254004d77d3",
+                    "edgeid": "99a9c688-43b9-4945-94aa-cf5bb47e0ea0",
+                    "graph_id": "2aa724d1-ffd3-4823-8ff1-15a385b9a407",
+                    "name": null,
+                    "ontologyproperty": "http://www.cidoc-crm.org/cidoc-crm/P11_had_participant",
+                    "rangenode_id": "ed38d064-1dec-11ee-8769-0242ac120008"
+                },
+                {
+                    "description": null,
                     "domainnode_id": "ed50ecba-a341-11ed-8f2f-5254004d77d3",
                     "edgeid": "9e263d45-4765-4686-91ca-2e1854de070d",
                     "graph_id": "2aa724d1-ffd3-4823-8ff1-15a385b9a407",
@@ -3592,15 +3618,6 @@
                     "name": null,
                     "ontologyproperty": "http://www.cidoc-crm.org/cidoc-crm/P1_is_identified_by",
                     "rangenode_id": "5b6b2740-a3d0-11ed-99ab-5254004d77d3"
-                },
-                {
-                    "description": null,
-                    "domainnode_id": "d791486a-9dc5-11ed-add1-5254004d77d3",
-                    "edgeid": "a7551d2b-2524-45c4-bc78-d82076db3b40",
-                    "graph_id": "2aa724d1-ffd3-4823-8ff1-15a385b9a407",
-                    "name": null,
-                    "ontologyproperty": "http://www.cidoc-crm.org/cidoc-crm/P11_had_participant",
-                    "rangenode_id": "b1efd6e6-a354-11ed-8c6b-5254004d77d3"
                 },
                 {
                     "description": null,
@@ -4002,7 +4019,7 @@
             "functions_x_graphs": [],
             "graphid": "2aa724d1-ffd3-4823-8ff1-15a385b9a407",
             "iconclass": "fa fa-diamond",
-            "is_editable": true,
+            "is_editable": false,
             "isresource": true,
             "jsonldcontext": null,
             "name": {
@@ -4988,7 +5005,7 @@
                     "nodeid": "472b2810-a354-11ed-932e-5254004d77d3",
                     "ontologyclass": "http://www.cidoc-crm.org/cidoc-crm/E39_Actor",
                     "parentproperty": "http://www.cidoc-crm.org/cidoc-crm/P11_had_participant",
-                    "sortorder": 0,
+                    "sortorder": 1,
                     "sourcebranchpublication_id": null
                 },
                 {
@@ -6619,39 +6636,6 @@
                     "sourcebranchpublication_id": null
                 },
                 {
-                    "alias": "fmo_actor",
-                    "config": {
-                        "graphs": [
-                            {
-                                "graphid": "605b0bbc-8661-4cf2-b340-df743a8c5f89",
-                                "inverseRelationshipConcept": "ac41d9be-79db-4256-b368-2f4559cfbe55",
-                                "name": "BC Fossils Contributor",
-                                "relationshipConcept": "ac41d9be-79db-4256-b368-2f4559cfbe55",
-                                "useOntologyRelationship": false
-                            }
-                        ],
-                        "searchDsl": "",
-                        "searchString": ""
-                    },
-                    "datatype": "resource-instance",
-                    "description": null,
-                    "exportable": false,
-                    "fieldname": null,
-                    "graph_id": "2aa724d1-ffd3-4823-8ff1-15a385b9a407",
-                    "hascustomalias": false,
-                    "is_collector": false,
-                    "isrequired": false,
-                    "issearchable": true,
-                    "istopnode": false,
-                    "name": "FMO Actor",
-                    "nodegroup_id": "d791486a-9dc5-11ed-add1-5254004d77d3",
-                    "nodeid": "b1efd6e6-a354-11ed-8c6b-5254004d77d3",
-                    "ontologyclass": "http://www.cidoc-crm.org/cidoc-crm/E39_Actor",
-                    "parentproperty": "http://www.cidoc-crm.org/cidoc-crm/P11_had_participant",
-                    "sortorder": 0,
-                    "sourcebranchpublication_id": null
-                },
-                {
                     "alias": "geometry_qualifier",
                     "config": {
                         "rdmCollection": "85fd6ca4-9539-4784-8889-09c794878bfb"
@@ -7316,7 +7300,7 @@
                     "nodeid": "e2b5df44-9dc5-11ed-9ef3-5254004d77d3",
                     "ontologyclass": "http://www.cidoc-crm.org/cidoc-crm/E63_Beginning_of_Existence",
                     "parentproperty": "http://www.cidoc-crm.org/cidoc-crm/P116_starts",
-                    "sortorder": 0,
+                    "sortorder": 4,
                     "sourcebranchpublication_id": null
                 },
                 {
@@ -7572,6 +7556,31 @@
                     "sourcebranchpublication_id": null
                 },
                 {
+                    "alias": "fmo_actor",
+                    "config": {
+                        "graphs": [],
+                        "searchDsl": "",
+                        "searchString": ""
+                    },
+                    "datatype": "resource-instance-list",
+                    "description": null,
+                    "exportable": true,
+                    "fieldname": "fmocontact",
+                    "graph_id": "2aa724d1-ffd3-4823-8ff1-15a385b9a407",
+                    "hascustomalias": false,
+                    "is_collector": false,
+                    "isrequired": false,
+                    "issearchable": true,
+                    "istopnode": false,
+                    "name": "FMO Actor",
+                    "nodegroup_id": "d791486a-9dc5-11ed-add1-5254004d77d3",
+                    "nodeid": "ed38d064-1dec-11ee-8769-0242ac120008",
+                    "ontologyclass": "http://www.cidoc-crm.org/cidoc-crm/E39_Actor",
+                    "parentproperty": "http://www.cidoc-crm.org/cidoc-crm/P11_had_participant",
+                    "sortorder": 0,
+                    "sourcebranchpublication_id": null
+                },
+                {
                     "alias": "chance_find",
                     "config": {
                         "en": ""
@@ -7637,7 +7646,7 @@
                     "nodeid": "f2199142-9dc5-11ed-a03b-5254004d77d3",
                     "ontologyclass": "http://www.cidoc-crm.org/cidoc-crm/E73_Information_Object",
                     "parentproperty": "http://www.ics.forth.gr/isl/CRMdig/L54_is_same-as",
-                    "sortorder": 0,
+                    "sortorder": 3,
                     "sourcebranchpublication_id": null
                 },
                 {
@@ -8067,8 +8076,8 @@
             "publication": {
                 "graph_id": "2aa724d1-ffd3-4823-8ff1-15a385b9a407",
                 "notes": null,
-                "publicationid": "f0700a3e-1d6c-11ee-8769-0242ac120008",
-                "published_time": "2023-07-08T08:53:42.261"
+                "publicationid": "4bd390f0-1ded-11ee-8769-0242ac120008",
+                "published_time": "2023-07-09T00:12:31.167"
             },
             "relatable_resource_model_ids": [],
             "resource_2_resource_constraints": [],
