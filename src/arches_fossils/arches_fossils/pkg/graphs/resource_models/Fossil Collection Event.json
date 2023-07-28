@@ -49,7 +49,7 @@
                     "instructions": {
                         "en": ""
                     },
-                    "is_editable": true,
+                    "is_editable": false,
                     "name": {
                         "en": "Samples Collected"
                     },
@@ -76,7 +76,7 @@
                     "instructions": {
                         "en": ""
                     },
-                    "is_editable": true,
+                    "is_editable": false,
                     "name": {
                         "en": "Collection Event Location"
                     },
@@ -103,7 +103,7 @@
                     "instructions": {
                         "en": "If needed, add additional information about the fossil collection event."
                     },
-                    "is_editable": true,
+                    "is_editable": false,
                     "name": {
                         "en": "Collection Notes"
                     },
@@ -130,7 +130,7 @@
                     "instructions": {
                         "en": ""
                     },
-                    "is_editable": true,
+                    "is_editable": false,
                     "name": {
                         "en": "Collectors"
                     },
@@ -159,7 +159,7 @@
                     "instructions": {
                         "en": ""
                     },
-                    "is_editable": true,
+                    "is_editable": false,
                     "name": {
                         "en": "Historical Data"
                     },
@@ -188,7 +188,7 @@
                     "instructions": {
                         "en": ""
                     },
-                    "is_editable": true,
+                    "is_editable": false,
                     "name": {
                         "en": "Collection Year"
                     },
@@ -915,7 +915,7 @@
                     "widget_id": "10000000-0000-0000-0000-000000000009"
                 }
             ],
-            "color": null,
+            "color": "rgba(244,109,67,1)",
             "config": {
                 "basemap": "streets"
             },
@@ -1203,12 +1203,12 @@
                     },
                     "function_id": "60000000-0000-0000-0000-000000001001",
                     "graph_id": "df3ee1ae-9c1c-11ec-964d-5254008afee6",
-                    "id": "871af5bc-a7a5-4c5c-b57a-cabf0b480606"
+                    "id": "e6d2a06e-f29e-447c-92fe-c821a0cc69ad"
                 }
             ],
             "graphid": "df3ee1ae-9c1c-11ec-964d-5254008afee6",
             "iconclass": "fa fa-suitcase",
-            "is_editable": true,
+            "is_editable": false,
             "isresource": true,
             "jsonldcontext": null,
             "name": {
@@ -1418,7 +1418,7 @@
                         "graphs": [
                             {
                                 "graphid": "7f2c2082-6c51-11ed-9b7d-5254004d77d3",
-                                "name": "Fossil Sample"
+                                "name": "BC Fossil Sample"
                             }
                         ],
                         "searchDsl": "",
@@ -1497,19 +1497,19 @@
                         "clusterDistance": "20",
                         "clusterMaxZoom": "7",
                         "clusterMinPoints": 3,
-                        "fillColor": "rgba(130, 130, 130, 0.5)",
+                        "fillColor": "rgba(244,109,67, 0.5)",
                         "haloRadius": 6,
                         "haloWeight": 4,
                         "layerActivated": true,
                         "layerIcon": "fa fa-spoon",
                         "layerLegend": "",
                         "layerName": "",
-                        "lineColor": "rgba(130, 130, 130, 0.7)",
-                        "lineHaloColor": "rgba(200, 200, 200, 0.5)",
-                        "outlineColor": "rgba(200, 200, 200, 0.7)",
+                        "lineColor": "rgba(244,109,67, 0.7)",
+                        "lineHaloColor": "rgba(244,109,67, 0.5)",
+                        "outlineColor": "rgba(244,109,67, 0.7)",
                         "outlineWeight": 2,
-                        "pointColor": "rgba(210,120,48,0.7)",
-                        "pointHaloColor": "rgba(210,120,48,0.4)",
+                        "pointColor": "rgba(244,109,67,0.7)",
+                        "pointHaloColor": "rgba(244,109,67,0.4)",
                         "radius": 3,
                         "simplification": 0.3,
                         "weight": 2
@@ -1843,7 +1843,7 @@
                             {
                                 "graphid": "605b0bbc-8661-4cf2-b340-df743a8c5f89",
                                 "inverseRelationshipConcept": "ac41d9be-79db-4256-b368-2f4559cfbe55",
-                                "name": "Contributor",
+                                "name": "BC Fossils Contributor",
                                 "relationshipConcept": "ac41d9be-79db-4256-b368-2f4559cfbe55",
                                 "useOntologyRelationship": false
                             }
@@ -1870,7 +1870,7 @@
                     "sourcebranchpublication_id": null
                 },
                 {
-                    "alias": "fossil_collection_event",
+                    "alias": "bc_fossil_collection_event",
                     "config": {},
                     "datatype": "semantic",
                     "description": "",
@@ -1939,13 +1939,13 @@
             "publication": {
                 "graph_id": "df3ee1ae-9c1c-11ec-964d-5254008afee6",
                 "notes": null,
-                "publicationid": "a9432156-0141-11ee-9a2c-5254004d77d3",
-                "published_time": "2023-06-02T07:33:21.931"
+                "publicationid": "9e7a8420-2d6b-11ee-9975-0050568377a0",
+                "published_time": "2023-07-28T12:24:33.864"
             },
             "relatable_resource_model_ids": [],
             "resource_2_resource_constraints": [],
             "root": {
-                "alias": "fossil_collection_event",
+                "alias": "bc_fossil_collection_event",
                 "config": {},
                 "datatype": "semantic",
                 "description": "",
@@ -1973,9 +1973,9 @@
         }
     ],
     "metadata": {
-        "db": "PostgreSQL 14.5 (Debian 14.5-1.pgdg110+1) on x86_64-pc-linux-gnu, compiled by gcc (Debian 10.2.1-6) 10.2.1 20210110, 64-bit",
-        "git hash": "9f0ec2ef5 2023-06-14 16:41:07 -0700",
+        "db": "PostgreSQL 12.11 on x86_64-pc-linux-gnu, compiled by gcc (GCC) 4.8.5 20150623 (Red Hat 4.8.5-44), 64-bit",
+        "git hash": "9f0ec2e 2023-06-14 16:41:07 -0700",
         "os": "Linux",
-        "os version": "5.15.49-linuxkit"
+        "os version": "3.10.0-1160.92.1.el7.x86_64"
     }
 }

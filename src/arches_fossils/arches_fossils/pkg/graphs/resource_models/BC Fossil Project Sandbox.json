@@ -236,7 +236,7 @@
                     "widget_id": "10000000-0000-0000-0000-000000000005"
                 }
             ],
-            "color": null,
+            "color": "rgba(191,129,45,1)",
             "config": {},
             "deploymentdate": null,
             "deploymentfile": null,
@@ -365,7 +365,7 @@
                     },
                     "function_id": "60000000-0000-0000-0000-000000001001",
                     "graph_id": "c3923080-d21e-42d7-b8f1-637b9d0ab63c",
-                    "id": "ad39fade-bcbe-4de5-9487-31e72fe447a2"
+                    "id": "14b0a306-56b0-467e-9abe-5ae825398034"
                 }
             ],
             "graphid": "c3923080-d21e-42d7-b8f1-637b9d0ab63c",
@@ -411,7 +411,8 @@
                     "nodeid": "1e9bdf1c-dedb-11ed-a7b4-5254004d77d3",
                     "ontologyclass": "http://www.cidoc-crm.org/cidoc-crm/E4_Period",
                     "parentproperty": "http://www.cidoc-crm.org/cidoc-crm/P116_starts",
-                    "sortorder": 0
+                    "sortorder": 0,
+                    "sourcebranchpublication_id": null
                 },
                 {
                     "alias": "project_description",
@@ -433,7 +434,8 @@
                     "nodeid": "34b4267e-dedb-11ed-90e2-5254004d77d3",
                     "ontologyclass": "http://www.ics.forth.gr/isl/CRMdig/D29_Annotation_Object",
                     "parentproperty": "http://www.cidoc-crm.org/cidoc-crm/P129i_is_subject_of",
-                    "sortorder": 0
+                    "sortorder": 0,
+                    "sourcebranchpublication_id": null
                 },
                 {
                     "alias": null,
@@ -455,7 +457,8 @@
                     "nodeid": "81234858-ded8-11ed-bcc4-5254004d77d3",
                     "ontologyclass": "http://www.cidoc-crm.org/cidoc-crm/E89_Propositional_Object",
                     "parentproperty": "",
-                    "sortorder": 0
+                    "sortorder": 0,
+                    "sourcebranchpublication_id": null
                 },
                 {
                     "alias": "spatial_coordinates_geometry",
@@ -466,19 +469,19 @@
                         "clusterDistance": 20,
                         "clusterMaxZoom": 5,
                         "clusterMinPoints": 3,
-                        "fillColor": "rgba(130, 130, 130, 0.5)",
+                        "fillColor": "rgba(191,129,45, 0.5)",
                         "haloRadius": 4,
                         "haloWeight": 4,
                         "layerActivated": true,
                         "layerIcon": "",
                         "layerLegend": "",
                         "layerName": "",
-                        "lineColor": "rgba(130, 130, 130, 0.7)",
-                        "lineHaloColor": "rgba(200, 200, 200, 0.5)",
-                        "outlineColor": "rgba(200, 200, 200, 0.7)",
+                        "lineColor": "rgba(191,129,45, 0.7)",
+                        "lineHaloColor": "rgba(191,129,45, 0.5)",
+                        "outlineColor": "rgba(191,129,45, 0.7)",
                         "outlineWeight": 2,
-                        "pointColor": "rgba(130, 130, 130, 0.7)",
-                        "pointHaloColor": "rgba(200, 200, 200, 0.5)",
+                        "pointColor": "rgba(191,129,45, 0.7)",
+                        "pointHaloColor": "rgba(191,129,45, 0.5)",
                         "radius": 2,
                         "simplification": 0.3,
                         "weight": 2
@@ -498,7 +501,8 @@
                     "nodeid": "9f2c9e28-dedb-11ed-ac5a-5254004d77d3",
                     "ontologyclass": "http://www.cidoc-crm.org/cidoc-crm/E47_Spatial_Coordinates",
                     "parentproperty": "http://www.cidoc-crm.org/cidoc-crm/P87_is_identified_by",
-                    "sortorder": 0
+                    "sortorder": 0,
+                    "sourcebranchpublication_id": null
                 },
                 {
                     "alias": "project_location",
@@ -520,7 +524,8 @@
                     "nodeid": "9f2cafe4-dedb-11ed-ac5a-5254004d77d3",
                     "ontologyclass": "http://www.ics.forth.gr/isl/CRMgeo/SP15_Geometry",
                     "parentproperty": "http://www.cidoc-crm.org/cidoc-crm/P148_has_component",
-                    "sortorder": 0
+                    "sortorder": 0,
+                    "sourcebranchpublication_id": null
                 },
                 {
                     "alias": "sandbox_project",
@@ -542,7 +547,8 @@
                     "nodeid": "b4f7ceb8-deda-11ed-bf85-5254004d77d3",
                     "ontologyclass": "http://www.cidoc-crm.org/cidoc-crm/E89_Propositional_Object",
                     "parentproperty": "http://www.ics.forth.gr/isl/CRMdig/L54_is_same-as",
-                    "sortorder": 0
+                    "sortorder": 0,
+                    "sourcebranchpublication_id": null
                 },
                 {
                     "alias": "project_name",
@@ -564,7 +570,8 @@
                     "nodeid": "db79aef8-deda-11ed-9531-5254004d77d3",
                     "ontologyclass": "http://www.cidoc-crm.org/cidoc-crm/E75_Conceptual_Object_Appellation",
                     "parentproperty": "http://www.cidoc-crm.org/cidoc-crm/P149_is_identified_by",
-                    "sortorder": 0
+                    "sortorder": 0,
+                    "sourcebranchpublication_id": null
                 },
                 {
                     "alias": "project_period",
@@ -586,7 +593,8 @@
                     "nodeid": "ee1ebada-deda-11ed-ac5a-5254004d77d3",
                     "ontologyclass": "http://www.cidoc-crm.org/cidoc-crm/E4_Period",
                     "parentproperty": "http://www.cidoc-crm.org/cidoc-crm/P67_refers_to",
-                    "sortorder": 0
+                    "sortorder": 0,
+                    "sourcebranchpublication_id": null
                 },
                 {
                     "alias": "geometry_description",
@@ -608,7 +616,8 @@
                     "nodeid": "f6236db0-dedb-11ed-ac2f-5254004d77d3",
                     "ontologyclass": "http://www.ics.forth.gr/isl/CRMdig/D29_Annotation_Object",
                     "parentproperty": "http://www.cidoc-crm.org/cidoc-crm/P129i_is_subject_of",
-                    "sortorder": 0
+                    "sortorder": 0,
+                    "sourcebranchpublication_id": null
                 },
                 {
                     "alias": "end_date",
@@ -630,16 +639,16 @@
                     "nodeid": "fde69dde-deda-11ed-8ccd-5254004d77d3",
                     "ontologyclass": "http://www.cidoc-crm.org/cidoc-crm/E4_Period",
                     "parentproperty": "http://www.cidoc-crm.org/cidoc-crm/P115i_is_finished_by",
-                    "sortorder": 0
+                    "sortorder": 0,
+                    "sourcebranchpublication_id": null
                 }
             ],
             "ontology_id": "e6e8db47-2ccf-11e6-927e-b8f6b115d7dd",
             "publication": {
                 "graph_id": "c3923080-d21e-42d7-b8f1-637b9d0ab63c",
                 "notes": null,
-                "publicationid": "25587e80-dedd-11ed-9344-5254004d77d3",
-                "published_time": "2023-04-19T13:08:11.404",
-                "user_id": 1
+                "publicationid": "1221f184-0bab-11ee-93c5-5254004d77d3",
+                "published_time": "2023-06-15T13:33:06.659"
             },
             "relatable_resource_model_ids": [],
             "resource_2_resource_constraints": [],
@@ -662,7 +671,8 @@
                 "nodegroup_id": null,
                 "nodeid": "81234858-ded8-11ed-bcc4-5254004d77d3",
                 "ontologyclass": "http://www.cidoc-crm.org/cidoc-crm/E89_Propositional_Object",
-                "sortorder": 0
+                "sortorder": 0,
+                "sourcebranchpublication_id": null
             },
             "slug": null,
             "subtitle": {
@@ -673,9 +683,9 @@
         }
     ],
     "metadata": {
-        "db": "PostgreSQL 12.12 on x86_64-pc-linux-gnu, compiled by gcc (GCC) 4.8.5 20150623 (Red Hat 4.8.5-44), 64-bit",
-        "git hash": "/bin/sh: git: command not found",
+        "db": "PostgreSQL 12.11 on x86_64-pc-linux-gnu, compiled by gcc (GCC) 4.8.5 20150623 (Red Hat 4.8.5-44), 64-bit",
+        "git hash": "9f0ec2e 2023-06-14 16:41:07 -0700",
         "os": "Linux",
-        "os version": "3.10.0-1160.76.1.el7.x86_64"
+        "os version": "3.10.0-1160.92.1.el7.x86_64"
     }
 }

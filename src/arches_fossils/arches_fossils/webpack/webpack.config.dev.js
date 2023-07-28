@@ -26,7 +26,7 @@ module.exports = () => {
                         },
                     },
                     hot: true,
-                    host: 'arches7.local',
+                    host: 'rhel9.local',
                     devMiddleware: {
                         index: true,
                         publicPath: commonWebpackConfig.output.publicPath,
