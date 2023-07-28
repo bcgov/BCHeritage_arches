@@ -18,10 +18,19 @@
       "minzoom": 0,
       "maxzoom": 20,
       "paint": {
-        "line-color": "#000000",
-        "line-width": 1.6,
-        "line-offset": 2,
-        "line-dasharray": [6,6,6,6]
+        "line-color": "rgba(153,112,171,1)",
+        "line-width": 1.6
+      }
+    },
+    {
+      "id": "regional-district-boundaries-fill",
+      "type": "fill",
+      "source": "regional-district-boundaries-source-Regional District Boundaries",
+      "source-layer": "WHSE_ADMIN_BOUNDARIES.EBC_REGIONAL_DISTRICTS_SP",
+      "minzoom": 0,
+      "maxzoom": 20,
+      "paint": {
+        "fill-color": "rgba(153,112,171,.3)"
       }
     },
     {
@@ -29,7 +38,7 @@
       "type": "symbol",
       "source": "regional-district-boundaries-source",
       "source-layer": "WHSE_ADMIN_BOUNDARIES.EBC_REGIONAL_DISTRICTS_SP",
-      "minzoom": 4,
+      "minzoom": 10,
       "maxzoom": 20,
       "layout": {
         "text-field": "{REGIONAL_DISTRICT_NAME}",
@@ -37,7 +46,7 @@
         "text-font": ["Open Sans Bold","Arial Unicode MS Bold"]
       },
       "paint": {
-        "text-color": "#000000"
+        "text-color": "rgb(0, 0, 0)"
       }
     }
   ]

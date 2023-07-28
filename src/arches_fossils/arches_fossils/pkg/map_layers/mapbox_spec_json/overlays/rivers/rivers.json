@@ -19,14 +19,14 @@
       "maxzoom": 20,
       "paint": {
         "line-width": 1,
-        "line-color": "rgb(98, 206, 217)"
+        "line-color": "rgb(171,217,233)"
       }
     },
     {
       "id": "rivers-fill",
       "type": "fill",
       "paint": {
-        "fill-color": "rgba(204, 255, 255, .3)"
+        "fill-color": "rgba(171,217,233, .3)"
       },
       "source": "rivers-source",
       "minzoom": 0,
@@ -38,7 +38,7 @@
       "type": "symbol",
       "source": "rivers-source",
       "source-layer": "WHSE_BASEMAPPING.FWA_RIVERS_POLY",
-      "minzoom": 4,
+      "minzoom": 10,
       "layout": {
         "text-field": "{GNIS_NAME_1}",
         "text-size": 12
