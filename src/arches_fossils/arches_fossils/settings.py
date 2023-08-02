@@ -158,13 +158,13 @@ LOGGING = {
     },
     'handlers': {
         'file': {
-            'level': 'WARNING',  # DEBUG, INFO, WARNING, ERROR
+            'level': 'DEBUG',  # DEBUG, INFO, WARNING, ERROR
             'class': 'logging.FileHandler',
             'filename': os.path.join(APP_ROOT, 'arches.log'),
             'formatter': 'console'
         },
         'console': {
-            'level': 'WARNING',
+            'level': 'DEBUG',
             'class': 'logging.StreamHandler',
             'formatter': 'console'
         }
@@ -172,7 +172,7 @@ LOGGING = {
     'loggers': {
         'arches': {
             'handlers': ['file', 'console'],
-            'level': 'WARNING',
+            'level': 'DEBUG',
             'propagate': True
         }
     }
@@ -210,7 +210,7 @@ EXPORT_DATA_FIELDS_IN_CARD_ORDER = False
 #Identify the usernames and duration (seconds) for which you want to cache the time wheel
 CACHE_BY_USER = {'anonymous': 3600 * 24}
 TILE_CACHE_TIMEOUT = 600 #seconds
-CLUSTER_DISTANCE_MAX = 5000 #meters
+CLUSTER_DISTANCE_MAX = 20000 #meters
 GRAPH_MODEL_CACHE_TIMEOUT = None
 
 OAUTH_CLIENT_ID = ''  #'9JCibwrWQ4hwuGn5fu2u1oRZSs9V6gK8Vu8hpRC4'

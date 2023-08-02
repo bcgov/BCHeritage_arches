@@ -134,22 +134,27 @@ along with this program. If not, see <http://www.gnu.org/licenses/>.
                         </a>
                     </li>
                     <li>
-                        <a class="vertical-nav-list-link" href="#info-block-1" data-number="2" aria-label="Go to the management section">
-                            <span class="vertical-nav-list-ref">{% trans "Fossil management in BC" %}</span>
+                        <a class="vertical-nav-list-link" href="#info-block-1" data-number="2" aria-label="Go to the fossil management system section">
+                            <span class="vertical-nav-list-ref">{% trans "BC Fossil Management System" %}</span>
                         </a>
                     </li>
                     <li>
-                        <a class="vertical-nav-list-link" href="#info-block-2" data-number="3" aria-label="Go to the jurisdiction section">
-                            <span class="vertical-nav-list-ref">{% trans "Jurisdiction for fossil management" %}</span>
+                        <a class="vertical-nav-list-link" href="#info-block-2" data-number="3" aria-label="Go to the data management section">
+                            <span class="vertical-nav-list-ref">{% trans "Data Management and Use" %}</span>
                         </a>
                     </li>
                     <li>
-                        <a class="vertical-nav-list-link" href="#info-block-3" data-number="4" aria-label="Go to the Important Fossil Areas section">
-                            <span class="vertical-nav-list-ref">{% trans "Important Fossil Areas" %}</span>
+                        <a class="vertical-nav-list-link" href="#info-block-3" data-number="4" aria-label="Go to the search section">
+                            <span class="vertical-nav-list-ref">{% trans "BC Fossil Data Search and Visualization " %}</span>
                         </a>
                     </li>
                     <li>
-                        <a class="vertical-nav-list-link" href="#info-block-4" data-number="5" aria-label="Go to the mobile section">
+                        <a class="vertical-nav-list-link" href="#info-block-4" data-number="5" aria-label="Go to the workflow section">
+                            <span class="vertical-nav-list-ref">{% trans "Workflow" %}</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a class="vertical-nav-list-link" href="#info-block-5" data-number="6" aria-label="Go to the mobile section">
                             <span class="vertical-nav-list-ref">{% trans "Mobile" %}</span>
                         </a>
                     </li>
@@ -193,109 +198,117 @@ along with this program. If not, see <http://www.gnu.org/licenses/>.
         <!-- Info Block 1 -->
         <section id="info-block-1" class="app-info-block app-info-content relative">
             <div>
-
                 <!-- Heading Info -->
                 <div class="info-section">
                         <div class="app-info-block-intro">
-                            <h3 class="app-info-block-title">{% trans "Fossil management in British Columbia" %}</h3>
+                            <h3 class="app-info-block-title">{% trans "BC Fossil Management System" %}</h3>
                             <p class="app-info-block-text">
-                                {% trans "Fossils are part of B.C.'s natural heritage and include preserved remains of organisms in rock and biological activity such as footprints called trace fossils. The Fossil Management Office provides information, guidance and policies to support protection and management of fossils and fossil sites in B.C. " %}
+                                {% trans "The BC Fossil Management System is a database of fossil collection locations and fossil sites. The System is intended as a two-way street for users to access information about known fossil occurrences and to build the inventory of fossil sites by contributing new information about fossil discoveries." %}
+                            </p>
+                            <p class="app-info-block-text">
+                                {% trans "The Fossil Management Office, Heritage Branch is the custodian of this data that serve as a foundation for fossil site protection, impact prevention, and access management of the resource. Information management supports all values of fossils – scientific, heritage, and educational." %}
                             </p>
                         </div>
                 </div>
-
-                <!-- Content -->
-                <figure class="splash-img">
-                    <img src="{% webpack_static 'img/front/2023-04-01_screenshot_search.png' %}"  alt="Arches Designer">
-                    <figcaption>{% trans "Figure 1: Interactive BC map of fossil sites." %}</figcaption>
-                </figure>
-
-                <div class="info-body">
-                    <div class="app-info-block-intro">
-                        <h3 class="app-info-block-title">{% trans "Fossils in B.C." %}</h3>
-                        <p class="app-info-block-text">
-                            {% trans "Fossils are the historical record of the evolution and development of life on Earth. They are important globally for their scientific, heritage, educational and economic value." %}
-                        </p>
-                        <p class="app-info-block-text">
-                            {% trans "British Columbia has a rich and diverse variety of fossils and fossil deposits resulting from the complex geological processes that formed the province." %}
-                        </p>
-                        <p class="app-info-block-text">
-                            {% trans "For the legal definition of a fossil go to: " %}<a href="https://www.bclaws.gov.bc.ca/civix/document/id/lc/statreg/214_2011">{% trans "Fossil Definition Regulation" %}</a>
-                        </p>
-                        <p class="app-info-block-text">
-                            {% trans "Fossil sites are concentrated on Vancouver Island, Haida Gwaii, in the Princeton-Merritt-Kamloops area, in southeastern and northeastern British Columbia and the Central Interior Plateau." %}
-                        </p>
-                    </div>
-                </div>
-
-            </div>
-        </section>
-        <!-- End Info Block 1 -->
-
-        <!-- Info Block 2 -->
-        <section id="info-block-2" class="app-info-block app-info-content relative">
-            <div>
-
-                <!-- Heading Info -->
-                <div class="info-body">
-                    <div class="app-info-block-intro">
-                        <h3 class="app-info-block-title">{% trans "Jurisdiction for fossil management" %}</h3>
-                        <p class="app-info-block-text">
-                            {% trans "Prior to 2005, fossils were included in the definition of “mineral” for the purposes of the Mineral Tenure Act, and subject to the provincial regime governing subsurface rights. In 2005, the Mineral Definition Modification Regulation (BC Reg. 5/2005) was created to exclude fossils from the definition of “mineral” under the Act, and to state that fossils do not include limestone, dolomite, coal, petroleum or natural gas. The regulation does not affect existing mineral claims, but prevents rights to fossils from being acquired by new mineral claims." %}
-                        </p>
-                        <p class="app-info-block-text">
-                            {% trans "The regulation makes fossils a resource that is administered under the Land Act (except those fossils subject to titles issued before January 12, 2005) and to ensure that limestone, dolomite, coal, petroleum and natural gas remain subject to the Mineral Tenure Act, Coal Act or Petroleum and Natural Gas Act, as applicable." %}
-                        </p>
-                        <p class="app-info-block-text">
-                            {% trans "Land administered by the Park Act, the Ecological Reserve Act, the Protected Areas of British Columbia Act, the Wildlife Act and the Environmental and Land Use Act has different legislative requirements with associated policies and procedures." %}
-                        </p>
-                    </div>
-                </div>
-
-                <div class="info-section">
-                    <div class="app-info-block-intro">
-                        <p class="app-info-block-text">
-                            {% trans "If you have questions about an existing or potential fossils site, contact the BC Fossil Management Office at 250-356-1432 Fossil.Management@gov.bc.ca for more information." %}
-                        </p>
-                    </div>
-                </div>
-
-                <figure class="splash-img">
-                    <img src="{% webpack_static 'img/front/2023-04-02_screenshot_filter.png' %}"  alt="Arches Designer">
-                    <figcaption>{% trans "Figure 2: Filter your searches by resource type using the dropdown menu." %}</figcaption>
-                </figure>
-
             </div>
         </section>
         <!-- End Info Block 2 -->
 
-        <!-- Info Block 3 -->
-        <section id="info-block-3" class="app-info-block app-info-content relative">
+        <!-- Info Block 2 -->
+        <section id="info-block-2" class="app-info-block app-info-content relative">
             <div>
-
-                <!-- Heading Info -->
-                <div class="sub-section">
-                    <div class="app-info-block-intro text-center">
-                        <h3 class="app-info-block-title">{% trans "Important Fossil Areas" %}</h3>
+                <div class="info-section">
+                    <div class="app-info-block-intro">
+                        <h3 class="app-info-block-title">{% trans "Data Management and Use" %}</h3>
                         <p class="app-info-block-text">
-                            {% trans "The Important Fossil Areas map allows the public to see generalized locations with important fossil resources in B.C. and indicate where " %}
-                            <a target="fia" href="https://www2.gov.bc.ca/assets/gov/farming-natural-resources-and-industry/natural-resource-use/land-water-use/crown-land/fossil-management/fiaguidelines-abridgedforindustry_final.pdf">{% trans "Fossil Impact Assessments (PDF, 399 KB)" %}</a>
-                            {% trans " should be done. Fossil impact assessments are done before activities on land causing major disturbance of the bedrock are authorized to proceed." %}
+                            {% trans "The system is maintained by the Fossil Management Office. The inventory of fossil sites contains spatial and attribute data to provide different users appropriate levels of access to information." %}
+                        </p>
+                        <p class="app-info-block-text">
+                            {% trans "Base maps and map overlays for data that are not maintained within the Fossil Management System are integrated from the BC Geographic Warehouse." %}
+                        </p>
+                        <p class="app-info-block-text">
+                            {% trans "Different kinds of information are represented by <b>Resource Types</b> such as Fossil Sample, Collection Event, and Publication. These Resource Types can be related to each other, for example a Collection Event can have one or more Fossil Samples. All Resource Types, along with their related Resources, are searchable within the system." %}
                         </p>
                     </div>
                 </div>
 
+                <!-- Content -->
                 <figure class="splash-img">
-                    <img src="{% webpack_static 'img/front/appian_way.jpg' %}"  alt="Photo of Appian Way">
-                    <figcaption>{% trans "Figure 3: Need a new photo/caption" %}</figcaption>
+                    <img src="{% webpack_static 'img/front/2023-08-01_relation_graph.png' %}"  alt="Arches Designer">
+                    <figcaption>{% trans "Figure 1. Collection Event (orange) linked to the Fossil Samples (grey) and associated publication (green)." %}</figcaption>
                 </figure>
+            </div>
+        </section>
+        <!-- End Info Block 2 -->
 
+
+        <!-- Info Block 3 -->
+        <section id="info-block-3" class="app-info-block app-info-content relative">
+            <div>
+                <div class="info-body">
+                    <div class="app-info-block-intro">
+                        <h3 class="app-info-block-title">{% trans "BC Fossil Data Search and Visualization" %}</h3>
+                        <p class="app-info-block-text">
+                            {% trans "You can search for and retrieve information about where fossils have been collected, visualize the data using a variety of overlays, and then use the data to suit your research or site assessment needs." %}
+                        </p>
+                        <p class="app-info-block-text">
+                            {% trans "The system opens with a BC map showing key roads, water features and outlines of Important Fossil Areas. A general location search function in the upper right can help focus the search area by geographical term or by using a Zoom tool in the upper left of the map. The toolbar to the right of the map allows you to conduct a <b>Map Search</b> using filters, choose a <b>Base map</b>, select <b>Overlays</b> for visualization (e.g., adding fossil collection events, bedrock geology, parks, or rivers), and generate a <b>Legend</b>." %}
+                        </p>
+                        <figure class="splash-img">
+                            <img src="{% webpack_static 'img/front/2023-04-01_screenshot_search.png' %}"  alt="Arches Designer">
+                            <figcaption style="color: red">{% trans "Figure 2. Need text." %}</figcaption>
+                        </figure>
+                    </div>
+                </div>
+
+                <div class="info-body">
+                    <div>
+                        <h4 class="app-info-block-title">{% trans "Data Discovery and Search" %}</h4>
+                        <p class="app-info-block-text">
+                            {% trans "The data can be explored in a general way by using the Map view. With the Fossil Collection Event overlay on, you can view information by clicking on a fossil location (orange dots) and see a Map Pop-up with brief information. Selecting the word Report at the bottom of the pop-up card will provide details about the event." %}
+                        </p>
+                        <p class="app-info-block-text" style="color: red">
+                            {% trans "Insert image once we have Report formatted" %}
+                        </p>
+                        <p class="app-info-block-text">
+                            {% trans "The data can be searched in more detail by using the Search function in two ways:" %}
+                        </p>
+                        <ol>
+                            <li class="app-info-block-text">
+                                {% trans "The search screen allows you to do a general Search using the text field in the upper left to look for comparative data. If you come to the system looking specifically for a fossil name or a location, you could enter this here and generate Results, listed as a series of Search Result Cards." %}
+                            </li>
+                            <li class="app-info-block-text">
+                                {% trans "Alternatively, you can start in the central screen, where you will see the Advanced Search function tab on the top of the screen. This allows you to apply filters to find fossil occurrences such as by location, time, geology, collector, or taxonomy. Each of these attributes is related to information stored under the blue tab called Resource Types." %}
+                            </li>
+                        </ol>
+                        <figure class="splash-img">
+                            <img src="{% webpack_static 'img/front/2023-04-01_screenshot_search.png' %}"  alt="Arches Designer">
+                            <figcaption style="color: red">{% trans "Figure 3. Need screen shot. Need caption text." %}</figcaption>
+                        </figure>
+                    </div>
+                </div>
             </div>
         </section>
         <!-- End Info Block 3 -->
 
         <!-- Info Block 4 -->
         <section id="info-block-4" class="app-info-block app-info-content relative">
+            <div>
+                <div class="info-section">
+                    <div class="app-info-block-intro">
+                        <h3 class="app-info-block-title">{% trans "Workflow" %}</h3>
+                        <p class="app-info-block-text">
+                            {% trans "The system has a workflow for new data entry, with a built-in list of the steps to walk users through the process of adding a new fossil collection event or to report a new fossil site. Help Guides are available to define fields for data entry. All items entered here will become searchable in the system. Workflows guide users to input new data that expands the provincial inventory of fossil occurrences." %}
+                        </p>
+                    </div>
+                </div>
+
+            </div>
+        </section>
+        <!-- End Info Block 4 -->
+
+        <!-- Info Block 5 -->
+        <section id="info-block-5" class="app-info-block app-info-content relative">
             <div>
                 <!-- Heading Info -->
                 <div class="sub-section">
@@ -322,7 +335,7 @@ along with this program. If not, see <http://www.gnu.org/licenses/>.
                 </div>
             </div>
         </section>
-        <!-- End Info Block 4 -->
+        <!-- End Info Block 5 -->
     </article>
 </main>
 
@@ -436,12 +449,13 @@ along with this program. If not, see <http://www.gnu.org/licenses/>.
                     contentSections.each(function () {
                         $this = $(this);
                         var activeSection = $('#cd-vertical-nav a[href="#' + $this.attr('id') + '"]').data('number') - 1;
-                        if (($this.offset().top - $(window).height() / 2 < $(window).scrollTop()) && ($this.offset().top + $this.height() - $(window).height() / 2 > $(window).scrollTop())) {
+                        if (($this.offset().top - $(window).height() / 3 < $(window).scrollTop()) && ($this.offset().top + $this.height() - $(window).height() / 3 > $(window).scrollTop())) {
                             if (activeSection === 0)
                             {
                                 $("#cd-vertical-nav").css("display","none");
                             }
                             else {
+                                console.log(`Active section: ${activeSection}`)
                                 navigationItems.eq(activeSection).addClass('is-selected');
                                 $("#cd-vertical-nav").css("display","");
                             }

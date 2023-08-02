@@ -24,10 +24,10 @@
                     },
                     "is_editable": true,
                     "name": {
-                        "en": "New Node"
+                        "en": "Fossil Attributes"
                     },
                     "nodegroup_id": "2283545e-7d5e-11ed-9ee0-5254004d77d3",
-                    "sortorder": null,
+                    "sortorder": 1,
                     "visible": true
                 },
                 {
@@ -39,7 +39,7 @@
                     "cssclass": null,
                     "description": null,
                     "graph_id": "86700278-117b-11ec-90d4-5254008afee6",
-                    "helpenabled": false,
+                    "helpenabled": true,
                     "helptext": {
                         "en": ""
                     },
@@ -47,11 +47,11 @@
                         "en": ""
                     },
                     "instructions": {
-                        "en": ""
+                        "en": "List all other names, common or alternate scientific, that relate to or are equivalent to this fossil type."
                     },
                     "is_editable": true,
                     "name": {
-                        "en": "Alternate Names"
+                        "en": "Related Fossil Names"
                     },
                     "nodegroup_id": "f04d36ac-7d6d-11ed-96b7-5254004d77d3",
                     "sortorder": null,
@@ -76,7 +76,7 @@
                     "instructions": {
                         "en": ""
                     },
-                    "is_editable": true,
+                    "is_editable": false,
                     "name": {
                         "en": "Fossil Name"
                     },
@@ -133,14 +133,14 @@
                         "i18n_properties": [
                             "placeholder"
                         ],
-                        "label": "Alternate Names",
+                        "label": "Related Names",
                         "placeholder": {
                             "en": ""
                         }
                     },
                     "id": "66e90b8d-3fbd-4ea5-8a1e-74535351f52e",
                     "label": {
-                        "en": "Alternate Names"
+                        "en": "Related Names"
                     },
                     "node_id": "f04d36ac-7d6d-11ed-96b7-5254004d77d3",
                     "sortorder": 0,
@@ -165,7 +165,7 @@
                         "en": "Taxonomic Rank"
                     },
                     "node_id": "2a309dcc-1beb-11ec-a4b1-5254008afee6",
-                    "sortorder": 2,
+                    "sortorder": 1,
                     "visible": true,
                     "widget_id": "10000000-0000-0000-0000-000000000002"
                 },
@@ -181,7 +181,7 @@
                         "i18n_properties": [
                             "placeholder"
                         ],
-                        "label": "Name",
+                        "label": "Species, Genus or Common Name",
                         "maxLength": null,
                         "placeholder": {
                             "en": "Enter text"
@@ -191,10 +191,10 @@
                     },
                     "id": "681cfc02-1beb-11ec-83a5-5254008afee6",
                     "label": {
-                        "en": "Name"
+                        "en": "Species, Genus or Common Name"
                     },
                     "node_id": "fdbc5a08-1be8-11ec-abe5-5254008afee6",
-                    "sortorder": 0,
+                    "sortorder": 4,
                     "visible": true,
                     "widget_id": "10000000-0000-0000-0000-000000000001"
                 },
@@ -234,7 +234,7 @@
                         "en": "Name Type"
                     },
                     "node_id": "a9428406-b0a9-11ec-a223-5254008afee6",
-                    "sortorder": 1,
+                    "sortorder": 0,
                     "visible": true,
                     "widget_id": "10000000-0000-0000-0000-000000000009"
                 },
@@ -249,7 +249,7 @@
                         "en": "Primary Scientific Name"
                     },
                     "node_id": "c5a49ffe-b0a8-11ec-8c81-5254008afee6",
-                    "sortorder": 3,
+                    "sortorder": 2,
                     "visible": true,
                     "widget_id": "10000000-0000-0000-0000-000000000006"
                 },
@@ -260,17 +260,17 @@
                         "i18n_properties": [
                             "placeholder"
                         ],
-                        "label": "Parent Name",
+                        "label": "Parent Genus if this is a Species",
                         "placeholder": {
                             "en": ""
                         }
                     },
                     "id": "68886100-b0aa-11ec-83e6-5254008afee6",
                     "label": {
-                        "en": "Parent Name"
+                        "en": "Parent Genus if this is a Species"
                     },
                     "node_id": "c9e8976a-b0a7-11ec-8342-5254008afee6",
-                    "sortorder": 4,
+                    "sortorder": 3,
                     "visible": true,
                     "widget_id": "31f3728c-7613-11e7-a139-784f435179ea"
                 },
@@ -413,12 +413,12 @@
                     },
                     "function_id": "60000000-0000-0000-0000-000000001002",
                     "graph_id": "86700278-117b-11ec-90d4-5254008afee6",
-                    "id": "c12b1d5f-4a4e-4c6b-a85d-4e59f6d8231d"
+                    "id": "380ae207-3687-4598-a78e-38b8a5de1078"
                 }
             ],
             "graphid": "86700278-117b-11ec-90d4-5254008afee6",
             "iconclass": "fa fa-leaf",
-            "is_editable": true,
+            "is_editable": false,
             "isresource": true,
             "jsonldcontext": null,
             "name": {
@@ -503,7 +503,7 @@
                     "graph_id": "86700278-117b-11ec-90d4-5254008afee6",
                     "hascustomalias": false,
                     "is_collector": false,
-                    "isrequired": false,
+                    "isrequired": true,
                     "issearchable": true,
                     "istopnode": false,
                     "name": "Size Category",
@@ -515,7 +515,7 @@
                     "sourcebranchpublication_id": null
                 },
                 {
-                    "alias": "fossil_type",
+                    "alias": "bc_fossil_type",
                     "config": {},
                     "datatype": "semantic",
                     "description": "",
@@ -547,7 +547,7 @@
                     "graph_id": "86700278-117b-11ec-90d4-5254008afee6",
                     "hascustomalias": false,
                     "is_collector": false,
-                    "isrequired": false,
+                    "isrequired": true,
                     "issearchable": true,
                     "istopnode": false,
                     "name": "Name Type",
@@ -593,9 +593,104 @@
                 {
                     "alias": "parent_name",
                     "config": {
-                        "graphs": [],
-                        "searchDsl": "",
-                        "searchString": ""
+                        "graphs": [
+                            {
+                                "graphid": "86700278-117b-11ec-90d4-5254008afee6",
+                                "inverseRelationshipConcept": "ac41d9be-79db-4256-b368-2f4559cfbe55",
+                                "name": "BC Fossil Type",
+                                "relationshipCollection": "00000000-0000-0000-0000-000000000005",
+                                "relationshipConcept": "ac41d9be-79db-4256-b368-2f4559cfbe55",
+                                "useOntologyRelationship": false
+                            }
+                        ],
+                        "searchDsl": {
+                            "bool": {
+                                "filter": [
+                                    {
+                                        "terms": {
+                                            "graph_id": [
+                                                "3caf329f-b8f7-11e6-84a5-026d961c88e6",
+                                                "dd19a93a-0202-11ed-a511-0050568377a0",
+                                                "109a0272-d968-11ed-b8ae-5254004d77d3",
+                                                "4d6c9226-10c6-11ec-9a94-5254008afee6",
+                                                "3e6a2880-14d4-11ec-9df0-5254008afee6",
+                                                "86700278-117b-11ec-90d4-5254008afee6",
+                                                "3ffba33a-9c20-11ec-92da-5254008afee6",
+                                                "df3ee1ae-9c1c-11ec-964d-5254008afee6",
+                                                "2aa724d1-ffd3-4823-8ff1-15a385b9a407",
+                                                "7f2c2082-6c51-11ed-9b7d-5254004d77d3",
+                                                "0ad40a02-0b01-11ee-b317-5254004d77d3",
+                                                "d735935c-3ddb-11ed-814d-5254008afee6",
+                                                "ff623370-fa12-11e6-b98b-6c4008b05c4c",
+                                                "67574dc6-9c20-11ec-964d-5254008afee6",
+                                                "c3923080-d21e-42d7-b8f1-637b9d0ab63c",
+                                                "fac1b1b4-1034-11ec-8a7a-5254008afee6",
+                                                "82efcd14-82db-11ec-b8e6-5254008afee6",
+                                                "5b52dcac-9c1b-11ec-964d-5254008afee6",
+                                                "605b0bbc-8661-4cf2-b340-df743a8c5f89",
+                                                "3746ffc8-a878-11ec-ab9a-5254008afee6",
+                                                "3bad9ec8-a35e-11ed-884a-5254004d77d3",
+                                                "8a209060-9c20-11ec-955e-5254008afee6",
+                                                "3eec83c6-9dd5-11ed-a81c-5254004d77d3"
+                                            ]
+                                        }
+                                    }
+                                ],
+                                "must": [
+                                    {
+                                        "bool": {
+                                            "filter": [],
+                                            "minimum_should_match": 1,
+                                            "must": [],
+                                            "must_not": [],
+                                            "should": [
+                                                {
+                                                    "bool": {
+                                                        "filter": [],
+                                                        "must": [
+                                                            {
+                                                                "nested": {
+                                                                    "path": "tiles",
+                                                                    "query": {
+                                                                        "bool": {
+                                                                            "filter": [],
+                                                                            "must": [
+                                                                                {
+                                                                                    "match_phrase": {
+                                                                                        "tiles.data.2a309dcc-1beb-11ec-a4b1-5254008afee6": {
+                                                                                            "query": "6c2bc40f-ebf9-4916-8012-1174fb268d74"
+                                                                                        }
+                                                                                    }
+                                                                                }
+                                                                            ],
+                                                                            "must_not": [],
+                                                                            "should": []
+                                                                        }
+                                                                    }
+                                                                }
+                                                            },
+                                                            {
+                                                                "bool": {
+                                                                    "filter": [],
+                                                                    "must": [],
+                                                                    "must_not": [],
+                                                                    "should": []
+                                                                }
+                                                            }
+                                                        ],
+                                                        "must_not": [],
+                                                        "should": []
+                                                    }
+                                                }
+                                            ]
+                                        }
+                                    }
+                                ],
+                                "must_not": [],
+                                "should": []
+                            }
+                        },
+                        "searchString": "http://arches7.local/int/arches-fossils/search?paging-filter=1&tiles=true&advanced-search=%5B%7B%22op%22%3A%22and%22%2C%22fdbc5a08-1be8-11ec-abe5-5254008afee6%22%3A%7B%22op%22%3A%22~%22%2C%22lang%22%3A%22en%22%2C%22val%22%3A%22%22%7D%2C%22a9428406-b0a9-11ec-a223-5254008afee6%22%3A%7B%22op%22%3A%22eq%22%2C%22val%22%3A%22%22%7D%2C%222a309dcc-1beb-11ec-a4b1-5254008afee6%22%3A%7B%22op%22%3A%22eq%22%2C%22val%22%3A%226c2bc40f-ebf9-4916-8012-1174fb268d74%22%7D%2C%22c5a49ffe-b0a8-11ec-8c81-5254008afee6%22%3A%7B%22val%22%3A%22%22%7D%2C%22c9e8976a-b0a7-11ec-8342-5254008afee6%22%3A%7B%22op%22%3A%22%22%2C%22val%22%3A%22%22%7D%7D%5D&sort-results=asc"
                     },
                     "datatype": "resource-instance",
                     "description": "Scientific names which narrow down this scientific name, or alter/common names associated with this name",
@@ -653,7 +748,7 @@
                         "graphs": [
                             {
                                 "graphid": "86700278-117b-11ec-90d4-5254008afee6",
-                                "name": "Fossil Type"
+                                "name": "BC Fossil Type"
                             }
                         ],
                         "rdmCollection": null,
@@ -680,7 +775,9 @@
                 },
                 {
                     "alias": "name",
-                    "config": {},
+                    "config": {
+                        "en": ""
+                    },
                     "datatype": "string",
                     "description": null,
                     "exportable": false,
@@ -688,7 +785,7 @@
                     "graph_id": "86700278-117b-11ec-90d4-5254008afee6",
                     "hascustomalias": false,
                     "is_collector": true,
-                    "isrequired": false,
+                    "isrequired": true,
                     "issearchable": true,
                     "istopnode": false,
                     "name": "Name",
@@ -704,13 +801,13 @@
             "publication": {
                 "graph_id": "86700278-117b-11ec-90d4-5254008afee6",
                 "notes": null,
-                "publicationid": "7fcf7274-1d6c-11ee-8769-0242ac120008",
-                "published_time": "2023-07-08T08:50:33.304"
+                "publicationid": "0eedd344-2d6f-11ee-94aa-0050568377a0",
+                "published_time": "2023-07-28T12:49:11.015"
             },
             "relatable_resource_model_ids": [],
             "resource_2_resource_constraints": [],
             "root": {
-                "alias": "fossil_type",
+                "alias": "bc_fossil_type",
                 "config": {},
                 "datatype": "semantic",
                 "description": "",
@@ -738,9 +835,9 @@
         }
     ],
     "metadata": {
-        "db": "PostgreSQL 14.5 (Debian 14.5-1.pgdg110+1) on x86_64-pc-linux-gnu, compiled by gcc (Debian 10.2.1-6) 10.2.1 20210110, 64-bit",
-        "git hash": "9f0ec2ef5 2023-06-14 16:41:07 -0700",
+        "db": "PostgreSQL 12.11 on x86_64-pc-linux-gnu, compiled by gcc (GCC) 4.8.5 20150623 (Red Hat 4.8.5-44), 64-bit",
+        "git hash": "9f0ec2e 2023-06-14 16:41:07 -0700",
         "os": "Linux",
-        "os version": "5.15.49-linuxkit"
+        "os version": "3.10.0-1160.92.1.el7.x86_64"
     }
 }

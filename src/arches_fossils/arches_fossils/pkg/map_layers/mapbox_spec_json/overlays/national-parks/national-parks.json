@@ -18,7 +18,7 @@
       "minzoom": 0,
       "maxzoom": 20,
       "paint": {
-        "line-color": "rgb(114, 137, 68)",
+        "line-color": "rgba(27,120,55, 1)",
         "line-width": 1
       }
     },
@@ -26,8 +26,7 @@
       "id": "national-parks-fill",
       "type": "fill",
       "paint": {
-        "fill-color": "rgb(216, 227, 182)",
-        "fill-opacity": 0.6
+        "fill-color": "rgba(27,120,55, 0.4)"
       },
       "source": "national-parks-source",
       "minzoom": 0,
@@ -45,7 +44,7 @@
         "text-size": 14
       },
       "paint": {
-        "text-color": "rgb(52, 52, 52)"
+        "text-color": "rgb(0, 0, 0)"
       }
     }
   ]

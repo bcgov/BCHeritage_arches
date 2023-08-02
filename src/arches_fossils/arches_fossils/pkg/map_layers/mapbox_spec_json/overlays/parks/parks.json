@@ -28,11 +28,11 @@
       "paint": {
         "fill-color": [
           "case",
-          ["match", ["get","PROTECTED_LANDS_CODE"], ["PA"], true, false], "#999900",
-          ["match", ["get","PROTECTED_LANDS_CODE"], ["PP"], true, false], "#990000",
-          ["match", ["get","PROTECTED_LANDS_CODE"], ["OI"], true, false], "#000044",
-          "#004400" ],
-        "fill-opacity": 0.1
+          ["match", ["get","PROTECTED_LANDS_CODE"], ["PA"], true, false], "rgb(166,219,160)",
+          ["match", ["get","PROTECTED_LANDS_CODE"], ["PP"], true, false], "rgb(90,174,97)",
+          ["match", ["get","PROTECTED_LANDS_CODE"], ["OI"], true, false], "rgb(27,120,55)",
+          "rgb(217,240,211)" ],
+        "fill-opacity": 0.3
       },
       "source": "parks-source",
       "minzoom": 0,
@@ -48,7 +48,12 @@
         "text-field": "{PROTECTED_LANDS_NAME}"
       },
       "paint": {
-        "text-color": "rgb(52, 52, 52)"
+        "text-color": [
+          "case",
+          ["match", ["get","PROTECTED_LANDS_CODE"], ["OI"], true, false], "rgb(255,255,255)",
+          "rgb(52,52,52)"
+        ]
+
       }
     }
   ]
