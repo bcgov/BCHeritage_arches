@@ -4,7 +4,7 @@ from django.conf.urls.static import static
 from django.conf.urls.i18n import i18n_patterns
 from django.urls.resolvers import RegexPattern
 from arches_fossils.views.api import MVT
-from arches_fossils.views.map import BCTileserverProxyView
+from arches_fossils.views.map import BCTileserverProxyView, BCTileserverLocalProxyView
 
 uuid_regex = settings.UUID_REGEX
 
@@ -21,6 +21,7 @@ if settings.BCGOV_PROXY is True:
 
 urlpatterns = [
                   url(r"^%sbctileserver/(?P<path>.*)$" % settings.BCGOV_PROXY_PREFIX, BCTileserverProxyView.as_view()),
+                  url(r"^%sbclocaltileserver/(?P<path>.*)$" % settings.BCGOV_PROXY_PREFIX, BCTileserverLocalProxyView.as_view()),
                   url(
                       r"^%smvt/(?P<nodeid>%s)/(?P<zoom>[0-9]+|\{z\})/(?P<x>[0-9]+|\{x\})/(?P<y>[0-9]+|\{y\}).pbf$" % (settings.BCGOV_PROXY_PREFIX, uuid_regex),
                       MVT.as_view(),
