@@ -44,7 +44,7 @@ details = {
 class BCRHPSiteDescriptors(AbstractPrimaryDescriptorsFunction):
     _datatype_factory = DataTypeFactory()
     # For Name part of descriptor
-    en_graph = {"en": "BC Heritage Resource"}
+    en_graph = {"en": "Heritage Site"}
 
     _empty_name_value = '(No official name)'
     _nodes = {}
