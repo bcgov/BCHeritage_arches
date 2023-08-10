@@ -50,6 +50,7 @@ define([
             this.constraints = ko.observableArray();
             this.appliedFunctions = attributes.appliedFunctions;
             this.primaryDescriptorFunction = attributes.primaryDescriptorFunction;
+            this.controlData = attributes.data.controlData;
 
             this.set('cards', this.cards);
             this.set('nodes', this.nodes);

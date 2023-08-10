@@ -4,22 +4,25 @@ define([
     'underscore',
     'viewmodels/widget',
     'arches',
-    'templates/views/components/widgets/text.htm',
+    'templates/views/components/widgets/chained-text.htm',
     'bindings/chosen'
 ], function(ko, koMapping, _, WidgetViewModel, arches, textWidgetTemplate) {
     /**
-    * registers a text-widget component for use in forms
-    * @function external:"ko.components".text-widget
-    * @param {object} params
-    * @param {string} params.value - the value being managed
-    * @param {function} params.config - observable containing config object
-    * @param {string} params.config().label - label to use alongside the text input
-    * @param {string} params.config().placeholder - default text to show in the text input
-    * @param {string} params.config().uneditable - disables widget
-    */
+     * registers a text-widget component for use in forms
+     * @function external:"ko.components".text-widget
+     * @param {object} params
+     * @param {string} params.value - the value being managed
+     * @param {function} params.config - observable containing config object
+     * @param {string} params.config().label - label to use alongside the text input
+     * @param {string} params.config().placeholder - default text to show in the text input
+     * @param {string} params.config().controlWidgetAlias - node alias that controls the visibility of this widget
+     * @param {string} params.config().controlWidgetValue - value of the node that makes this widget visible
+     * @param {string} params.config().uneditable - disables widget
+     */
 
     const viewModel = function(params) {
-        params.configKeys = ['placeholder', 'width', 'maxLength', 'defaultValue', 'uneditable'];
+        params.configKeys = ['placeholder', 'width', 'maxLength', 'defaultValue', 'uneditable',
+            'controlWidgetAlias', 'controlWidgetValue'];
 
         WidgetViewModel.apply(this, [params]);
         const self = this;
@@ -41,6 +44,59 @@ define([
         initialCurrent[arches.activeLanguage] = {value: '', direction: 'ltr'};
         let currentDefaultValue = ko.unwrap(self.defaultValue) || initialDefault;
         let currentValue = koMapping.toJS(self.value) || initialCurrent;
+
+        // The control value in the card that we trigger on
+        self.parentValue = ko.observable();
+        self.controlValueMatches = ko.observable(true);
+
+        self.shouldShowWidget = function(value)
+        {
+            return ko.unwrap(self.controlWidgetValue) === value;
+        };
+
+
+        if (!!self.bc_card) {
+            let aliasToFind = ko.unwrap(self.controlWidgetAlias);
+            if (!!aliasToFind) {
+                let parentNode = _.find(self.bc_card.nodes(), function(node) {
+                    return node.alias() === aliasToFind
+                });
+                if (!!parentNode && !!self.tile) {
+                    self.parentValue(ko.unwrap(self.tile.data[parentNode.nodeid]));
+                    // self.controlValueMatches(ko.unwrap(self.controlWidgetValue) === ko.unwrap(self.tile.data[parentNode.nodeid]));
+                    self.controlValueMatches(self.shouldShowWidget(ko.unwrap(self.tile.data[parentNode.nodeid])));
+                } else {
+                    console.log(`Unable to find node with alias ${aliasToFind}`);
+                }
+            }
+            if (!!self.bc_card.controlData) {
+                console.log("Chained-text: Got control data!");
+                params.bc_card.controlData()[self.controlWidgetAlias()] = self.parentValue;
+                params.bc_card.controlData()[self.controlWidgetAlias()].subscribe(function(value) {
+                    // console.log(`Triggered control value! ${value}`);
+                    // console.log(self.parentValue());
+                    self.controlValueMatches(self.shouldShowWidget(value));
+                    if (!ko.unwrap(self.showWidget)) {
+                        self.clearValues();
+                    }
+                });
+            }
+        }
+
+        self.clearValues = function()
+        {
+            self.currentText("");
+            if (!ko.isObservable(self.value)) {
+                // This only has the value of the current language
+                _.each(value, function(val, key, values){
+                    values[key].value("");
+                });
+            }
+        };
+
+        self.showWidget = ko.pureComputed(function() {
+            return ko.unwrap(self.controlValueMatches);
+        });
 
         if(self.form){
             self.form.on('tile-reset', (x) => {
@@ -139,13 +195,13 @@ define([
             const currentLanguage = self.currentLanguage();
             if(!currentLanguage) { return; }
             currentValue[currentLanguage.code].value = newValue?.[currentLanguage.code] ? newValue[currentLanguage.code]?.value : newValue;
-            
+
             if (ko.isObservable(self.value)) {
                 self.value(currentValue);
             } else {
                 self.value[currentLanguage.code].value(newValue);
             }
-            
+
         });
 
         self.currentDirection.subscribe(newValue => {
@@ -174,7 +230,7 @@ define([
 
     };
 
-    return ko.components.register('text-widget', {
+    return ko.components.register('chained-text-widget', {
         viewModel: viewModel,
         template: textWidgetTemplate,
     });
