@@ -24,7 +24,7 @@
                     },
                     "is_editable": true,
                     "name": {
-                        "en": "Geological Assessment"
+                        "en": "Stratigraphy"
                     },
                     "nodegroup_id": "dd19acbe-0202-11ed-a511-0050568377a0",
                     "sortorder": 7,
@@ -333,7 +333,7 @@
                     },
                     "is_editable": true,
                     "name": {
-                        "en": "Temporal Assessment"
+                        "en": "Geological Age"
                     },
                     "nodegroup_id": "dd1a0024-0202-11ed-a511-0050568377a0",
                     "sortorder": 5,
@@ -397,6 +397,209 @@
                 }
             ],
             "cards_x_nodes_x_widgets": [
+                {
+                    "card_id": "dd19b29a-0202-11ed-a511-0050568377a0",
+                    "config": {
+                        "defaultValue": {
+                            "en": {
+                                "direction": "ltr",
+                                "value": ""
+                            }
+                        },
+                        "i18n_properties": [
+                            "placeholder"
+                        ],
+                        "label": "Geological Significance Ranking Code",
+                        "maxLength": null,
+                        "placeholder": {
+                            "en": "Enter text"
+                        },
+                        "uneditable": false,
+                        "width": "100%"
+                    },
+                    "id": "1bd0f711-145f-4df6-85ce-619d6d96f068",
+                    "label": {
+                        "en": "Geological Significance Ranking Code"
+                    },
+                    "node_id": "dd1a25c2-0202-11ed-a511-0050568377a0",
+                    "sortorder": null,
+                    "visible": true,
+                    "widget_id": "10000000-0000-0000-0000-000000000001"
+                },
+                {
+                    "card_id": "dd19b29a-0202-11ed-a511-0050568377a0",
+                    "config": {
+                        "defaultValue": {
+                            "en": {
+                                "direction": "ltr",
+                                "value": ""
+                            }
+                        },
+                        "i18n_properties": [
+                            "placeholder"
+                        ],
+                        "label": "Geological Formation",
+                        "maxLength": null,
+                        "placeholder": {
+                            "en": "Enter text"
+                        },
+                        "uneditable": false,
+                        "width": "100%"
+                    },
+                    "id": "4edab047-8afa-4f12-a940-9c10d18479b1",
+                    "label": {
+                        "en": "Geological Formation"
+                    },
+                    "node_id": "dd1a14e2-0202-11ed-a511-0050568377a0",
+                    "sortorder": null,
+                    "visible": true,
+                    "widget_id": "10000000-0000-0000-0000-000000000001"
+                },
+                {
+                    "card_id": "dd1a039e-0202-11ed-a511-0050568377a0",
+                    "config": {
+                        "defaultValue": {
+                            "en": {
+                                "direction": "ltr",
+                                "value": ""
+                            }
+                        },
+                        "i18n_properties": [
+                            "placeholder"
+                        ],
+                        "label": "Geological Start Date",
+                        "maxLength": null,
+                        "placeholder": {
+                            "en": "Enter text"
+                        },
+                        "uneditable": false,
+                        "width": "100%"
+                    },
+                    "id": "586eda78-3017-4b03-9a1e-fee19a8bb6d3",
+                    "label": {
+                        "en": "Geological Start Date"
+                    },
+                    "node_id": "dd1a3080-0202-11ed-a511-0050568377a0",
+                    "sortorder": null,
+                    "visible": true,
+                    "widget_id": "10000000-0000-0000-0000-000000000001"
+                },
+                {
+                    "card_id": "dd19b29a-0202-11ed-a511-0050568377a0",
+                    "config": {
+                        "defaultValue": {
+                            "en": {
+                                "direction": "ltr",
+                                "value": ""
+                            }
+                        },
+                        "i18n_properties": [
+                            "placeholder"
+                        ],
+                        "label": "Geological Member",
+                        "maxLength": null,
+                        "placeholder": {
+                            "en": "Enter text"
+                        },
+                        "uneditable": false,
+                        "width": "100%"
+                    },
+                    "id": "87e3f532-0e2d-4f1a-b13e-1a5e17523993",
+                    "label": {
+                        "en": "Geological Member"
+                    },
+                    "node_id": "dd1a2194-0202-11ed-a511-0050568377a0",
+                    "sortorder": null,
+                    "visible": true,
+                    "widget_id": "10000000-0000-0000-0000-000000000001"
+                },
+                {
+                    "card_id": "dd19b29a-0202-11ed-a511-0050568377a0",
+                    "config": {
+                        "defaultValue": {
+                            "en": {
+                                "direction": "ltr",
+                                "value": ""
+                            }
+                        },
+                        "i18n_properties": [
+                            "placeholder"
+                        ],
+                        "label": "Ranking Detail",
+                        "maxLength": null,
+                        "placeholder": {
+                            "en": "Enter text"
+                        },
+                        "uneditable": false,
+                        "width": "100%"
+                    },
+                    "id": "8c464755-de7b-42fb-afb4-4495df583084",
+                    "label": {
+                        "en": "Ranking Detail"
+                    },
+                    "node_id": "dd1a2874-0202-11ed-a511-0050568377a0",
+                    "sortorder": null,
+                    "visible": true,
+                    "widget_id": "10000000-0000-0000-0000-000000000001"
+                },
+                {
+                    "card_id": "dd1a039e-0202-11ed-a511-0050568377a0",
+                    "config": {
+                        "defaultValue": {
+                            "en": {
+                                "direction": "ltr",
+                                "value": ""
+                            }
+                        },
+                        "i18n_properties": [
+                            "placeholder"
+                        ],
+                        "label": "Max Geological Start Date",
+                        "maxLength": null,
+                        "placeholder": {
+                            "en": "Enter text"
+                        },
+                        "uneditable": false,
+                        "width": "100%"
+                    },
+                    "id": "a9e127ae-33ae-4bc2-b45a-2898d9b21939",
+                    "label": {
+                        "en": "Max Geological Start Date"
+                    },
+                    "node_id": "dd1a29d2-0202-11ed-a511-0050568377a0",
+                    "sortorder": null,
+                    "visible": true,
+                    "widget_id": "10000000-0000-0000-0000-000000000001"
+                },
+                {
+                    "card_id": "dd19b29a-0202-11ed-a511-0050568377a0",
+                    "config": {
+                        "defaultValue": {
+                            "en": {
+                                "direction": "ltr",
+                                "value": ""
+                            }
+                        },
+                        "i18n_properties": [
+                            "placeholder"
+                        ],
+                        "label": "Geological Group",
+                        "maxLength": null,
+                        "placeholder": {
+                            "en": "Enter text"
+                        },
+                        "uneditable": false,
+                        "width": "100%"
+                    },
+                    "id": "b8fa48ed-5921-4178-9508-1e3d5bc234d6",
+                    "label": {
+                        "en": "Geological Group"
+                    },
+                    "node_id": "dd1a2464-0202-11ed-a511-0050568377a0",
+                    "sortorder": null,
+                    "visible": true,
+                    "widget_id": "10000000-0000-0000-0000-000000000001"
+                },
                 {
                     "card_id": "dd19bc22-0202-11ed-a511-0050568377a0",
                     "config": {
@@ -1087,7 +1290,7 @@
                     },
                     "function_id": "60000000-0000-0000-0000-000000000001",
                     "graph_id": "dd19a93a-0202-11ed-a511-0050568377a0",
-                    "id": "1c831f5d-435e-4de1-88ef-369e58c26386"
+                    "id": "c52b6782-8bba-494d-a4af-df4735c3abad"
                 }
             ],
             "graphid": "dd19a93a-0202-11ed-a511-0050568377a0",
@@ -1186,8 +1389,10 @@
             ],
             "nodes": [
                 {
-                    "alias": "geological_assessment",
-                    "config": {},
+                    "alias": "stratigraphy",
+                    "config": {
+                        "en": ""
+                    },
                     "datatype": "semantic",
                     "description": null,
                     "exportable": false,
@@ -1198,7 +1403,7 @@
                     "isrequired": false,
                     "issearchable": true,
                     "istopnode": false,
-                    "name": "Geological Assessment",
+                    "name": "Stratigraphy",
                     "nodegroup_id": "dd19acbe-0202-11ed-a511-0050568377a0",
                     "nodeid": "dd19acbe-0202-11ed-a511-0050568377a0",
                     "ontologyclass": "http://www.cidoc-crm.org/cidoc-crm/E57_Material",
@@ -1455,8 +1660,10 @@
                     "sourcebranchpublication_id": null
                 },
                 {
-                    "alias": "temporal_assessment",
-                    "config": {},
+                    "alias": "geological_age",
+                    "config": {
+                        "en": ""
+                    },
                     "datatype": "semantic",
                     "description": null,
                     "exportable": false,
@@ -1467,7 +1674,7 @@
                     "isrequired": false,
                     "issearchable": true,
                     "istopnode": false,
-                    "name": "Temporal Assessment",
+                    "name": "Geological Age",
                     "nodegroup_id": "dd1a0024-0202-11ed-a511-0050568377a0",
                     "nodeid": "dd1a0024-0202-11ed-a511-0050568377a0",
                     "ontologyclass": "http://www.cidoc-crm.org/cidoc-crm/E63_Beginning_of_Existence",
@@ -1766,8 +1973,10 @@
                     "sourcebranchpublication_id": null
                 },
                 {
-                    "alias": "start_date_unit",
-                    "config": {},
+                    "alias": "minimum_time_unit",
+                    "config": {
+                        "en": ""
+                    },
                     "datatype": "semantic",
                     "description": null,
                     "exportable": false,
@@ -1778,7 +1987,7 @@
                     "isrequired": false,
                     "issearchable": true,
                     "istopnode": false,
-                    "name": "Start Date Unit",
+                    "name": "Minimum Time Unit",
                     "nodegroup_id": "dd1a0024-0202-11ed-a511-0050568377a0",
                     "nodeid": "dd1a2716-0202-11ed-a511-0050568377a0",
                     "ontologyclass": "http://www.cidoc-crm.org/cidoc-crm/E58_Measurement_Unit",
@@ -1808,8 +2017,10 @@
                     "sourcebranchpublication_id": null
                 },
                 {
-                    "alias": "max_geological_start_date",
-                    "config": {},
+                    "alias": "maximum_time",
+                    "config": {
+                        "en": ""
+                    },
                     "datatype": "string",
                     "description": null,
                     "exportable": false,
@@ -1820,7 +2031,7 @@
                     "isrequired": false,
                     "issearchable": true,
                     "istopnode": false,
-                    "name": "Max Geological Start Date",
+                    "name": "Maximum Time",
                     "nodegroup_id": "dd1a0024-0202-11ed-a511-0050568377a0",
                     "nodeid": "dd1a29d2-0202-11ed-a511-0050568377a0",
                     "ontologyclass": "http://www.cidoc-crm.org/cidoc-crm/E18_Physical_Thing",
@@ -1850,8 +2061,10 @@
                     "sourcebranchpublication_id": null
                 },
                 {
-                    "alias": "max_start_date_unit",
-                    "config": {},
+                    "alias": "maximum_time_unit",
+                    "config": {
+                        "en": ""
+                    },
                     "datatype": "semantic",
                     "description": null,
                     "exportable": false,
@@ -1862,7 +2075,7 @@
                     "isrequired": false,
                     "issearchable": true,
                     "istopnode": false,
-                    "name": "Max Start Date Unit",
+                    "name": "Maximum Time Unit",
                     "nodegroup_id": "dd1a0024-0202-11ed-a511-0050568377a0",
                     "nodeid": "dd1a2c84-0202-11ed-a511-0050568377a0",
                     "ontologyclass": "http://www.cidoc-crm.org/cidoc-crm/E58_Measurement_Unit",
@@ -1892,8 +2105,10 @@
                     "sourcebranchpublication_id": null
                 },
                 {
-                    "alias": "geological_start_date",
-                    "config": {},
+                    "alias": "minimum_time",
+                    "config": {
+                        "en": ""
+                    },
                     "datatype": "string",
                     "description": null,
                     "exportable": false,
@@ -1904,7 +2119,7 @@
                     "isrequired": false,
                     "issearchable": true,
                     "istopnode": false,
-                    "name": "Geological Start Date",
+                    "name": "Minimum Time",
                     "nodegroup_id": "dd1a0024-0202-11ed-a511-0050568377a0",
                     "nodeid": "dd1a3080-0202-11ed-a511-0050568377a0",
                     "ontologyclass": "http://www.cidoc-crm.org/cidoc-crm/E18_Physical_Thing",
@@ -1938,8 +2153,8 @@
             "publication": {
                 "graph_id": "dd19a93a-0202-11ed-a511-0050568377a0",
                 "notes": null,
-                "publicationid": "f7bbe450-36c3-11ee-9a3f-0050568377a0",
-                "published_time": "2023-08-09T09:49:39.787"
+                "publicationid": "39b2f1a2-41ee-11ee-8d03-080027b7463b",
+                "published_time": "2023-08-23T14:49:52.111"
             },
             "relatable_resource_model_ids": [],
             "resource_2_resource_constraints": [],
@@ -1972,9 +2187,9 @@
         }
     ],
     "metadata": {
-        "db": "PostgreSQL 12.11 on x86_64-pc-linux-gnu, compiled by gcc (GCC) 4.8.5 20150623 (Red Hat 4.8.5-44), 64-bit",
-        "git hash": "8661345 2023-07-27 09:40:45 -0700",
+        "db": "PostgreSQL 15.3 on x86_64-pc-linux-gnu, compiled by gcc (GCC) 11.3.1 20221121 (Red Hat 11.3.1-4), 64-bit",
+        "git hash": "866134572 2023-07-27 09:40:45 -0700",
         "os": "Linux",
-        "os version": "3.10.0-1160.92.1.el7.x86_64"
+        "os version": "5.14.0-333.el9.x86_64"
     }
 }

@@ -33,7 +33,7 @@ class MVT(MVTBase):
                 print("Using parent")
                 return super(MVT, self).get(request, nodeid, zoom, x, y)
             else:
-                print("Using app-specific select2")
+                print("Using app-specific select")
                 with connection.cursor() as cursor:
                     cursor.execute(
                         """SELECT ST_AsMVT(tile, %s, 4096, 'geom', 'id') FROM 

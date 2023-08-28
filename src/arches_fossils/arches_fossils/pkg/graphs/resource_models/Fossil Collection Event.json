@@ -76,7 +76,7 @@
                     "instructions": {
                         "en": ""
                     },
-                    "is_editable": false,
+                    "is_editable": true,
                     "name": {
                         "en": "Collection Event Location"
                     },
@@ -269,7 +269,7 @@
                         "label": "Detailed Location",
                         "maxLength": null,
                         "placeholder": {
-                            "en": "Enter text"
+                            "en": "<p>Enter text</p>\n"
                         },
                         "uneditable": false,
                         "width": "100%"
@@ -281,7 +281,7 @@
                     "node_id": "692da79c-9c1d-11ec-a5e5-5254008afee6",
                     "sortorder": 4,
                     "visible": true,
-                    "widget_id": "10000000-0000-0000-0000-000000000001"
+                    "widget_id": "10000000-0000-0000-0000-000000000005"
                 },
                 {
                     "card_id": "2371431c-70d9-11ed-9e2c-5254004d77d3",
@@ -461,17 +461,17 @@
                             {
                                 "children": [],
                                 "collector": "",
-                                "conceptid": "802ff20e-5263-4706-904c-fb4b250371c1",
-                                "id": "4e67f552-3f20-491d-84d3-1010fa44aacd",
-                                "sortorder": "1",
-                                "text": "Very Low"
+                                "conceptid": "7132cad2-1533-43b4-9f3a-711bad5e8dc3",
+                                "id": "54eb890a-a6ab-45f3-a59e-3413381280a1",
+                                "sortorder": "",
+                                "text": "High"
                             },
                             {
                                 "children": [],
                                 "collector": "",
                                 "conceptid": "3dffec79-e92c-4b18-9cb5-d67ce5244a53",
                                 "id": "f13344cc-319f-4f1b-9823-e3f9670b32de",
-                                "sortorder": "10",
+                                "sortorder": "",
                                 "text": "Low"
                             },
                             {
@@ -479,16 +479,16 @@
                                 "collector": "",
                                 "conceptid": "8166391c-fa68-4311-b2a2-390a938cdf21",
                                 "id": "842040a4-4b79-4195-b4ba-9fe9928cc30c",
-                                "sortorder": "20",
+                                "sortorder": "",
                                 "text": "Medium"
                             },
                             {
                                 "children": [],
                                 "collector": "",
-                                "conceptid": "7132cad2-1533-43b4-9f3a-711bad5e8dc3",
-                                "id": "54eb890a-a6ab-45f3-a59e-3413381280a1",
-                                "sortorder": "30",
-                                "text": "High"
+                                "conceptid": "802ff20e-5263-4706-904c-fb4b250371c1",
+                                "id": "4e67f552-3f20-491d-84d3-1010fa44aacd",
+                                "sortorder": "",
+                                "text": "Very Low"
                             }
                         ],
                         "placeholder": {
@@ -579,7 +579,7 @@
                         "overlayOpacity": 0,
                         "pitch": 0,
                         "rerender": true,
-                        "zoom": 0
+                        "zoom": 0.5610978337913543
                     },
                     "id": "58fb5650-c9ef-4431-a65a-32b93b83505e",
                     "label": {
@@ -602,7 +602,7 @@
                         "i18n_properties": [
                             "placeholder"
                         ],
-                        "label": "Geographical Name",
+                        "label": "1:250k Mapsheet Name",
                         "maxLength": null,
                         "placeholder": {
                             "en": "Enter text"
@@ -612,7 +612,7 @@
                     },
                     "id": "65a05abb-c12a-4ad5-9f47-5cbec88cf7e0",
                     "label": {
-                        "en": "Geographical Name"
+                        "en": "1:250k Mapsheet Name"
                     },
                     "node_id": "609e26e8-00bb-11ee-aea6-5254004d77d3",
                     "sortorder": 8,
@@ -682,7 +682,7 @@
                         "i18n_properties": [
                             "placeholder"
                         ],
-                        "label": "NTS Mapsheet Number",
+                        "label": "1:50k Mapsheet Number",
                         "maxLength": null,
                         "placeholder": {
                             "en": "Enter text"
@@ -692,7 +692,7 @@
                     },
                     "id": "7e662ab1-cce6-4e4b-a846-3c44f35c3634",
                     "label": {
-                        "en": "NTS Mapsheet Number"
+                        "en": "1:50k Mapsheet Number"
                     },
                     "node_id": "62d8d22c-00bc-11ee-83ab-5254004d77d3",
                     "sortorder": 6,
@@ -740,8 +740,8 @@
                         "i18n_properties": [
                             "placeholder"
                         ],
-                        "label": "Place Description",
-                        "maxLength": null,
+                        "label": "General Location",
+                        "maxLength": "40",
                         "placeholder": {
                             "en": "Enter text"
                         },
@@ -750,7 +750,7 @@
                     },
                     "id": "c1527a85-d0e1-473c-84cf-b754c41c027e",
                     "label": {
-                        "en": "Place Description"
+                        "en": "General Location"
                     },
                     "node_id": "692da3b4-9c1d-11ec-a5e5-5254008afee6",
                     "sortorder": 3,
@@ -812,7 +812,7 @@
                         "i18n_properties": [
                             "placeholder"
                         ],
-                        "label": "NTS Mapsheet Name",
+                        "label": "1:50k Mapsheet Name",
                         "maxLength": null,
                         "placeholder": {
                             "en": "Enter text"
@@ -822,7 +822,7 @@
                     },
                     "id": "ce3978d6-8414-48f6-87e3-8d37fb0c1d58",
                     "label": {
-                        "en": "NTS Mapsheet Name"
+                        "en": "1:50k Mapsheet Name"
                     },
                     "node_id": "899fd194-00bc-11ee-8092-5254004d77d3",
                     "sortorder": 7,
@@ -1203,7 +1203,7 @@
                     },
                     "function_id": "60000000-0000-0000-0000-000000001001",
                     "graph_id": "df3ee1ae-9c1c-11ec-964d-5254008afee6",
-                    "id": "8b7e8977-2dd0-4f38-974e-07a71024e3ee"
+                    "id": "bd79c208-0c07-47d3-93d8-4d967ca80390"
                 }
             ],
             "graphid": "df3ee1ae-9c1c-11ec-964d-5254008afee6",
@@ -1448,7 +1448,7 @@
                         "en": ""
                     },
                     "datatype": "string",
-                    "description": null,
+                    "description": "1:250k Mapsheet name",
                     "exportable": false,
                     "fieldname": null,
                     "graph_id": "df3ee1ae-9c1c-11ec-964d-5254008afee6",
@@ -1471,7 +1471,7 @@
                         "en": ""
                     },
                     "datatype": "string",
-                    "description": null,
+                    "description": "1:50k Mapsheet number",
                     "exportable": false,
                     "fieldname": null,
                     "graph_id": "df3ee1ae-9c1c-11ec-964d-5254008afee6",
@@ -1602,7 +1602,7 @@
                     "sourcebranchpublication_id": null
                 },
                 {
-                    "alias": "location_description",
+                    "alias": "general_location",
                     "config": {
                         "en": ""
                     },
@@ -1616,7 +1616,7 @@
                     "isrequired": true,
                     "issearchable": true,
                     "istopnode": false,
-                    "name": "Location Description",
+                    "name": "General Location",
                     "nodegroup_id": "692d9c2a-9c1d-11ec-a5e5-5254008afee6",
                     "nodeid": "692da3b4-9c1d-11ec-a5e5-5254008afee6",
                     "ontologyclass": "http://www.cidoc-crm.org/cidoc-crm/E62_String",
@@ -1642,7 +1642,7 @@
                     "nodeid": "692da652-9c1d-11ec-a5e5-5254008afee6",
                     "ontologyclass": "http://www.ics.forth.gr/isl/CRMsci/S4_Observation",
                     "parentproperty": "http://www.cidoc-crm.org/cidoc-crm/P140i_was_attributed_by",
-                    "sortorder": 0,
+                    "sortorder": 3,
                     "sourcebranchpublication_id": null
                 },
                 {
@@ -1665,7 +1665,7 @@
                     "nodeid": "692da79c-9c1d-11ec-a5e5-5254008afee6",
                     "ontologyclass": "http://www.cidoc-crm.org/cidoc-crm/E62_String",
                     "parentproperty": "http://www.cidoc-crm.org/cidoc-crm/P3_has_note",
-                    "sortorder": 0,
+                    "sortorder": 2,
                     "sourcebranchpublication_id": null
                 },
                 {
@@ -1752,7 +1752,7 @@
                         "en": ""
                     },
                     "datatype": "string",
-                    "description": null,
+                    "description": "1:50k Mapsheet name",
                     "exportable": false,
                     "fieldname": null,
                     "graph_id": "df3ee1ae-9c1c-11ec-964d-5254008afee6",
@@ -1939,8 +1939,8 @@
             "publication": {
                 "graph_id": "df3ee1ae-9c1c-11ec-964d-5254008afee6",
                 "notes": null,
-                "publicationid": "83b99052-36c3-11ee-86ad-0050568377a0",
-                "published_time": "2023-08-09T09:46:25.156"
+                "publicationid": "ee3be7f6-41f2-11ee-b65a-080027b7463b",
+                "published_time": "2023-08-23T15:23:32.985"
             },
             "relatable_resource_model_ids": [],
             "resource_2_resource_constraints": [],
@@ -1973,9 +1973,9 @@
         }
     ],
     "metadata": {
-        "db": "PostgreSQL 12.11 on x86_64-pc-linux-gnu, compiled by gcc (GCC) 4.8.5 20150623 (Red Hat 4.8.5-44), 64-bit",
-        "git hash": "8661345 2023-07-27 09:40:45 -0700",
+        "db": "PostgreSQL 15.3 on x86_64-pc-linux-gnu, compiled by gcc (GCC) 11.3.1 20221121 (Red Hat 11.3.1-4), 64-bit",
+        "git hash": "866134572 2023-07-27 09:40:45 -0700",
         "os": "Linux",
-        "os version": "3.10.0-1160.92.1.el7.x86_64"
+        "os version": "5.14.0-333.el9.x86_64"
     }
 }

@@ -170,7 +170,16 @@
                     "cardid": "109ad7ba-d968-11ed-b8ae-5254004d77d3",
                     "component_id": "f05e4d3a-53c1-11e8-b0ea-784f435179ea",
                     "config": null,
-                    "constraints": [],
+                    "constraints": [
+                        {
+                            "card_id": "109ad7ba-d968-11ed-b8ae-5254004d77d3",
+                            "constraintid": "26ceddf1-ad04-4aa1-86d9-7b7ef48f93e3",
+                            "nodes": [
+                                "56067456-3c48-11ee-b359-080027b7463b"
+                            ],
+                            "uniquetoallinstances": true
+                        }
+                    ],
                     "cssclass": null,
                     "description": null,
                     "graph_id": "109a0272-d968-11ed-b8ae-5254004d77d3",
@@ -813,7 +822,7 @@
                         "en": "Project Initiator"
                     },
                     "node_id": "109f1640-d968-11ed-b8ae-5254004d77d3",
-                    "sortorder": 0,
+                    "sortorder": 1,
                     "visible": true,
                     "widget_id": "31f3728c-7613-11e7-a139-784f435179ea"
                 },
@@ -893,6 +902,35 @@
                 {
                     "card_id": "109ad7ba-d968-11ed-b8ae-5254004d77d3",
                     "config": {
+                        "defaultValue": {
+                            "en": {
+                                "direction": "ltr",
+                                "value": ""
+                            }
+                        },
+                        "i18n_properties": [
+                            "placeholder"
+                        ],
+                        "label": "Project Name",
+                        "maxLength": "40",
+                        "placeholder": {
+                            "en": "Enter brief name - maximum 40 chars"
+                        },
+                        "uneditable": false,
+                        "width": "100%"
+                    },
+                    "id": "16efb650-a5e6-482f-a40c-5ce1a07825ad",
+                    "label": {
+                        "en": "Project Name"
+                    },
+                    "node_id": "56067456-3c48-11ee-b359-080027b7463b",
+                    "sortorder": 0,
+                    "visible": true,
+                    "widget_id": "10000000-0000-0000-0000-000000000001"
+                },
+                {
+                    "card_id": "109ad7ba-d968-11ed-b8ae-5254004d77d3",
+                    "config": {
                         "dateFormat": "YYYY-MM-DD",
                         "defaultValue": "",
                         "label": "Project End Date",
@@ -906,7 +944,7 @@
                         "en": "Project End Date"
                     },
                     "node_id": "082525a8-d96e-11ed-947e-5254004d77d3",
-                    "sortorder": 2,
+                    "sortorder": 3,
                     "visible": true,
                     "widget_id": "10000000-0000-0000-0000-000000000004"
                 },
@@ -926,7 +964,7 @@
                         "en": "Proposed Project Start Date"
                     },
                     "node_id": "bafd3444-d96a-11ed-b2f0-5254004d77d3",
-                    "sortorder": 1,
+                    "sortorder": 2,
                     "visible": true,
                     "widget_id": "10000000-0000-0000-0000-000000000004"
                 },
@@ -1404,6 +1442,15 @@
                     "name": null,
                     "ontologyproperty": "http://www.cidoc-crm.org/cidoc-crm/P115i_is_finished_by",
                     "rangenode_id": "109c2ed0-d968-11ed-b8ae-5254004d77d3"
+                },
+                {
+                    "description": null,
+                    "domainnode_id": "109acc48-d968-11ed-b8ae-5254004d77d3",
+                    "edgeid": "4a5e88bc-05b5-4954-8451-9f5912791fe7",
+                    "graph_id": "109a0272-d968-11ed-b8ae-5254004d77d3",
+                    "name": null,
+                    "ontologyproperty": "http://www.cidoc-crm.org/cidoc-crm/P1_is_identified_by",
+                    "rangenode_id": "56067456-3c48-11ee-b359-080027b7463b"
                 },
                 {
                     "description": null,
@@ -2562,6 +2609,29 @@
                     "sourcebranchpublication_id": null
                 },
                 {
+                    "alias": "project_name",
+                    "config": {
+                        "en": ""
+                    },
+                    "datatype": "string",
+                    "description": null,
+                    "exportable": false,
+                    "fieldname": null,
+                    "graph_id": "109a0272-d968-11ed-b8ae-5254004d77d3",
+                    "hascustomalias": false,
+                    "is_collector": false,
+                    "isrequired": true,
+                    "issearchable": true,
+                    "istopnode": false,
+                    "name": "Project Name",
+                    "nodegroup_id": "109acc48-d968-11ed-b8ae-5254004d77d3",
+                    "nodeid": "56067456-3c48-11ee-b359-080027b7463b",
+                    "ontologyclass": "http://www.cidoc-crm.org/cidoc-crm/E42_Identifier",
+                    "parentproperty": "http://www.cidoc-crm.org/cidoc-crm/P1_is_identified_by",
+                    "sortorder": 0,
+                    "sourcebranchpublication_id": null
+                },
+                {
                     "alias": "first_nation_actor_n1",
                     "config": {
                         "graphs": [
@@ -2672,8 +2742,8 @@
             "publication": {
                 "graph_id": "109a0272-d968-11ed-b8ae-5254004d77d3",
                 "notes": null,
-                "publicationid": "26d4c39c-36c4-11ee-9a3f-0050568377a0",
-                "published_time": "2023-08-09T09:50:58.803"
+                "publicationid": "8afdced4-3c48-11ee-aeb5-080027b7463b",
+                "published_time": "2023-08-16T10:21:16.226"
             },
             "relatable_resource_model_ids": [],
             "resource_2_resource_constraints": [],
@@ -2708,9 +2778,9 @@
         }
     ],
     "metadata": {
-        "db": "PostgreSQL 12.11 on x86_64-pc-linux-gnu, compiled by gcc (GCC) 4.8.5 20150623 (Red Hat 4.8.5-44), 64-bit",
-        "git hash": "8661345 2023-07-27 09:40:45 -0700",
+        "db": "PostgreSQL 15.3 on x86_64-pc-linux-gnu, compiled by gcc (GCC) 11.3.1 20221121 (Red Hat 11.3.1-4), 64-bit",
+        "git hash": "866134572 2023-07-27 09:40:45 -0700",
         "os": "Linux",
-        "os version": "3.10.0-1160.92.1.el7.x86_64"
+        "os version": "5.14.0-333.el9.x86_64"
     }
 }
