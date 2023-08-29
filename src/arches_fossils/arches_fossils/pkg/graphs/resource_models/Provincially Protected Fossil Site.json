@@ -5,19 +5,46 @@
             "cards": [
                 {
                     "active": true,
-                    "cardid": "dd19b29a-0202-11ed-a511-0050568377a0",
+                    "cardid": "1cd5b980-46b1-11ee-b9bb-080027b7463b",
                     "component_id": "f05e4d3a-53c1-11e8-b0ea-784f435179ea",
                     "config": null,
                     "constraints": [],
                     "cssclass": null,
-                    "description": null,
+                    "description": "",
                     "graph_id": "dd19a93a-0202-11ed-a511-0050568377a0",
-                    "helpenabled": false,
+                    "helpenabled": true,
                     "helptext": {
-                        "en": ""
+                        "en": "<p><strong>Age undetermined</strong> &ndash; Check the box if the age of the fossil could not be determined.</p>\n\n<p><strong>Minimum time - </strong>Select the youngest age for the fossil.</p>\n\n<p><strong>Minimum time uncertain</strong> - Check the box if you are unsure of the age assignment.</p>\n\n<p><strong>Maximum time - </strong>Select the oldest age for the fossil.</p>\n\n<p><strong>Maximum time uncertain</strong> - Check the box if you are unsure of the age assignment.</p>\n"
                     },
                     "helptitle": {
+                        "en": "Geological Age Help"
+                    },
+                    "instructions": {
                         "en": ""
+                    },
+                    "is_editable": true,
+                    "name": {
+                        "en": "Geological Age"
+                    },
+                    "nodegroup_id": "1cd5b21e-46b1-11ee-b9bb-080027b7463b",
+                    "sortorder": 5,
+                    "visible": true
+                },
+                {
+                    "active": true,
+                    "cardid": "3397f660-46b1-11ee-8ea1-080027b7463b",
+                    "component_id": "f05e4d3a-53c1-11e8-b0ea-784f435179ea",
+                    "config": null,
+                    "constraints": [],
+                    "cssclass": null,
+                    "description": "",
+                    "graph_id": "dd19a93a-0202-11ed-a511-0050568377a0",
+                    "helpenabled": true,
+                    "helptext": {
+                        "en": "<p><strong>Geological Group or Lithodemic/Lithotectonic Grouping</strong> &ndash; Select unit from which fossil was sampled:</p>\n\n<ul>\n\t<li>Stratigraphic Group (or Supergroup) or</li>\n\t<li>Lithodemic grouping such as a Complex or</li>\n\t<li>Lithotectonic grouping such as an Assemblage</li>\n</ul>\n\n<p><strong>Geological Group Uncertain</strong> - Check the box if you are unsure of the Group or Grouping term.</p>\n\n<p><strong>Geological Formation</strong> &ndash; Select the stratigraphic Formation (or equivalent term) from which the fossil was sampled.</p>\n\n<p><strong>Geological Formation Uncertain</strong> &ndash; Check the box if you are unsure of the Formation.</p>\n\n<p><strong>Geological Member</strong> &ndash; Select the stratigraphic Member&nbsp;from which the fossil was sampled.</p>\n\n<p><strong>Geological Member Uncertain</strong> - Check the box if you are unsure of the Member.</p>\n\n<p><strong>Informal Map Unit or Name </strong>&ndash; If formal stratigraphic rank names (group, formation, member) do not apply to the rocks sampled, select an informal stratigraphic name or map unit name from which the fossil was sampled.</p>\n\n<p><strong>Other Informal/Other Unit Name</strong> &ndash; Enter the informal rock unit name or map unit name (or code) if the unit is not found within the existing picklists.</p>\n"
+                    },
+                    "helptitle": {
+                        "en": "Stratigraphy Help"
                     },
                     "instructions": {
                         "en": ""
@@ -26,7 +53,7 @@
                     "name": {
                         "en": "Stratigraphy"
                     },
-                    "nodegroup_id": "dd19acbe-0202-11ed-a511-0050568377a0",
+                    "nodegroup_id": "3397f340-46b1-11ee-8ea1-080027b7463b",
                     "sortorder": 7,
                     "visible": true
                 },
@@ -54,7 +81,7 @@
                         "en": "Site Notes"
                     },
                     "nodegroup_id": "dd19b7e0-0202-11ed-a511-0050568377a0",
-                    "sortorder": null,
+                    "sortorder": 1,
                     "visible": true
                 },
                 {
@@ -78,7 +105,7 @@
                     "instructions": {
                         "en": ""
                     },
-                    "is_editable": false,
+                    "is_editable": true,
                     "name": {
                         "en": "Location"
                     },
@@ -107,7 +134,7 @@
                     "instructions": {
                         "en": "Define the spatial location."
                     },
-                    "is_editable": false,
+                    "is_editable": true,
                     "name": {
                         "en": "Spatial Location"
                     },
@@ -304,39 +331,12 @@
                     "instructions": {
                         "en": ""
                     },
-                    "is_editable": false,
+                    "is_editable": true,
                     "name": {
                         "en": "Site Name"
                     },
                     "nodegroup_id": "dd19fa84-0202-11ed-a511-0050568377a0",
                     "sortorder": 0,
-                    "visible": true
-                },
-                {
-                    "active": true,
-                    "cardid": "dd1a039e-0202-11ed-a511-0050568377a0",
-                    "component_id": "f05e4d3a-53c1-11e8-b0ea-784f435179ea",
-                    "config": null,
-                    "constraints": [],
-                    "cssclass": null,
-                    "description": null,
-                    "graph_id": "dd19a93a-0202-11ed-a511-0050568377a0",
-                    "helpenabled": false,
-                    "helptext": {
-                        "en": ""
-                    },
-                    "helptitle": {
-                        "en": ""
-                    },
-                    "instructions": {
-                        "en": ""
-                    },
-                    "is_editable": true,
-                    "name": {
-                        "en": "Geological Age"
-                    },
-                    "nodegroup_id": "dd1a0024-0202-11ed-a511-0050568377a0",
-                    "sortorder": 5,
                     "visible": true
                 },
                 {
@@ -398,7 +398,22 @@
             ],
             "cards_x_nodes_x_widgets": [
                 {
-                    "card_id": "dd19b29a-0202-11ed-a511-0050568377a0",
+                    "card_id": "1cd5b980-46b1-11ee-b9bb-080027b7463b",
+                    "config": {
+                        "defaultValue": null,
+                        "label": "Maximum Time Uncertain"
+                    },
+                    "id": "1cd5cc9a-46b1-11ee-b9bb-080027b7463b",
+                    "label": {
+                        "en": "Maximum Time Uncertain"
+                    },
+                    "node_id": "1cd5cbb4-46b1-11ee-b9bb-080027b7463b",
+                    "sortorder": 5,
+                    "visible": true,
+                    "widget_id": "0346bc9c-d235-4313-adc8-d0e210b2ef25"
+                },
+                {
+                    "card_id": "1cd5b980-46b1-11ee-b9bb-080027b7463b",
                     "config": {
                         "defaultValue": {
                             "en": {
@@ -409,7 +424,7 @@
                         "i18n_properties": [
                             "placeholder"
                         ],
-                        "label": "Geological Significance Ranking Code",
+                        "label": "Historical Values",
                         "maxLength": null,
                         "placeholder": {
                             "en": "Enter text"
@@ -417,104 +432,187 @@
                         "uneditable": false,
                         "width": "100%"
                     },
-                    "id": "1bd0f711-145f-4df6-85ce-619d6d96f068",
+                    "id": "1cd5cd8a-46b1-11ee-b9bb-080027b7463b",
                     "label": {
-                        "en": "Geological Significance Ranking Code"
+                        "en": "Historical Values"
                     },
-                    "node_id": "dd1a25c2-0202-11ed-a511-0050568377a0",
-                    "sortorder": null,
+                    "node_id": "1cd5c902-46b1-11ee-b9bb-080027b7463b",
+                    "sortorder": 6,
                     "visible": true,
                     "widget_id": "10000000-0000-0000-0000-000000000001"
                 },
                 {
-                    "card_id": "dd19b29a-0202-11ed-a511-0050568377a0",
+                    "card_id": "1cd5b980-46b1-11ee-b9bb-080027b7463b",
                     "config": {
-                        "defaultValue": {
-                            "en": {
-                                "direction": "ltr",
-                                "value": ""
-                            }
-                        },
+                        "defaultValue": "",
                         "i18n_properties": [
                             "placeholder"
                         ],
-                        "label": "Geological Formation",
-                        "maxLength": null,
+                        "label": "Maximum Time",
+                        "options": [],
                         "placeholder": {
-                            "en": "Enter text"
-                        },
-                        "uneditable": false,
-                        "width": "100%"
+                            "en": "Select an option"
+                        }
                     },
-                    "id": "4edab047-8afa-4f12-a940-9c10d18479b1",
+                    "id": "1cd5ce52-46b1-11ee-b9bb-080027b7463b",
                     "label": {
-                        "en": "Geological Formation"
+                        "en": "Maximum Time"
                     },
-                    "node_id": "dd1a14e2-0202-11ed-a511-0050568377a0",
-                    "sortorder": null,
+                    "node_id": "1cd5ca56-46b1-11ee-b9bb-080027b7463b",
+                    "sortorder": 4,
                     "visible": true,
-                    "widget_id": "10000000-0000-0000-0000-000000000001"
+                    "widget_id": "10000000-0000-0000-0000-000000000002"
                 },
                 {
-                    "card_id": "dd1a039e-0202-11ed-a511-0050568377a0",
+                    "card_id": "1cd5b980-46b1-11ee-b9bb-080027b7463b",
                     "config": {
-                        "defaultValue": {
-                            "en": {
-                                "direction": "ltr",
-                                "value": ""
-                            }
-                        },
+                        "defaultValue": null,
+                        "label": "Minimum Time Uncertain"
+                    },
+                    "id": "1cd5cf24-46b1-11ee-b9bb-080027b7463b",
+                    "label": {
+                        "en": "Minimum Time Uncertain"
+                    },
+                    "node_id": "1cd5c646-46b1-11ee-b9bb-080027b7463b",
+                    "sortorder": 3,
+                    "visible": true,
+                    "widget_id": "0346bc9c-d235-4313-adc8-d0e210b2ef25"
+                },
+                {
+                    "card_id": "1cd5b980-46b1-11ee-b9bb-080027b7463b",
+                    "config": {
+                        "defaultValue": "",
                         "i18n_properties": [
                             "placeholder"
                         ],
-                        "label": "Geological Start Date",
-                        "maxLength": null,
+                        "label": "Geologic Timescale Division",
+                        "options": [],
                         "placeholder": {
-                            "en": "Enter text"
-                        },
-                        "uneditable": false,
-                        "width": "100%"
+                            "en": "Select an option"
+                        }
                     },
-                    "id": "586eda78-3017-4b03-9a1e-fee19a8bb6d3",
+                    "id": "1cd5cfec-46b1-11ee-b9bb-080027b7463b",
                     "label": {
-                        "en": "Geological Start Date"
+                        "en": "Geologic Timescale Division"
                     },
-                    "node_id": "dd1a3080-0202-11ed-a511-0050568377a0",
-                    "sortorder": null,
+                    "node_id": "1cd5c7a4-46b1-11ee-b9bb-080027b7463b",
+                    "sortorder": 1,
                     "visible": true,
-                    "widget_id": "10000000-0000-0000-0000-000000000001"
+                    "widget_id": "10000000-0000-0000-0000-000000000002"
                 },
                 {
-                    "card_id": "dd19b29a-0202-11ed-a511-0050568377a0",
+                    "card_id": "1cd5b980-46b1-11ee-b9bb-080027b7463b",
                     "config": {
-                        "defaultValue": {
-                            "en": {
-                                "direction": "ltr",
-                                "value": ""
-                            }
-                        },
+                        "defaultValue": null,
+                        "label": "Age undetermined"
+                    },
+                    "id": "1cd5d0a0-46b1-11ee-b9bb-080027b7463b",
+                    "label": {
+                        "en": "Age undetermined"
+                    },
+                    "node_id": "1cd5c34e-46b1-11ee-b9bb-080027b7463b",
+                    "sortorder": 0,
+                    "visible": true,
+                    "widget_id": "0346bc9c-d235-4313-adc8-d0e210b2ef25"
+                },
+                {
+                    "card_id": "1cd5b980-46b1-11ee-b9bb-080027b7463b",
+                    "config": {
+                        "defaultValue": "",
+                        "i18n_properties": [
+                            "placeholder"
+                        ],
+                        "label": "Minimum Time",
+                        "options": [],
+                        "placeholder": {
+                            "en": "Select an option"
+                        }
+                    },
+                    "id": "1cd5d154-46b1-11ee-b9bb-080027b7463b",
+                    "label": {
+                        "en": "Minimum Time"
+                    },
+                    "node_id": "1cd5c4d4-46b1-11ee-b9bb-080027b7463b",
+                    "sortorder": 2,
+                    "visible": true,
+                    "widget_id": "10000000-0000-0000-0000-000000000002"
+                },
+                {
+                    "card_id": "3397f660-46b1-11ee-8ea1-080027b7463b",
+                    "config": {
+                        "defaultValue": null,
+                        "label": "Geological Group Uncertain"
+                    },
+                    "id": "33980240-46b1-11ee-8ea1-080027b7463b",
+                    "label": {
+                        "en": "Geological Group Uncertain"
+                    },
+                    "node_id": "33980178-46b1-11ee-8ea1-080027b7463b",
+                    "sortorder": 1,
+                    "visible": true,
+                    "widget_id": "0346bc9c-d235-4313-adc8-d0e210b2ef25"
+                },
+                {
+                    "card_id": "3397f660-46b1-11ee-8ea1-080027b7463b",
+                    "config": {
+                        "defaultValue": null,
+                        "label": "Geological Formation Uncertain"
+                    },
+                    "id": "33980308-46b1-11ee-8ea1-080027b7463b",
+                    "label": {
+                        "en": "Geological Formation Uncertain"
+                    },
+                    "node_id": "3397fd0e-46b1-11ee-8ea1-080027b7463b",
+                    "sortorder": 3,
+                    "visible": true,
+                    "widget_id": "0346bc9c-d235-4313-adc8-d0e210b2ef25"
+                },
+                {
+                    "card_id": "3397f660-46b1-11ee-8ea1-080027b7463b",
+                    "config": {
+                        "defaultValue": "",
                         "i18n_properties": [
                             "placeholder"
                         ],
                         "label": "Geological Member",
-                        "maxLength": null,
+                        "options": [],
                         "placeholder": {
-                            "en": "Enter text"
-                        },
-                        "uneditable": false,
-                        "width": "100%"
+                            "en": "Select an option"
+                        }
                     },
-                    "id": "87e3f532-0e2d-4f1a-b13e-1a5e17523993",
+                    "id": "339803b2-46b1-11ee-8ea1-080027b7463b",
                     "label": {
                         "en": "Geological Member"
                     },
-                    "node_id": "dd1a2194-0202-11ed-a511-0050568377a0",
-                    "sortorder": null,
+                    "node_id": "3397f99e-46b1-11ee-8ea1-080027b7463b",
+                    "sortorder": 4,
                     "visible": true,
-                    "widget_id": "10000000-0000-0000-0000-000000000001"
+                    "widget_id": "10000000-0000-0000-0000-000000000002"
                 },
                 {
-                    "card_id": "dd19b29a-0202-11ed-a511-0050568377a0",
+                    "card_id": "3397f660-46b1-11ee-8ea1-080027b7463b",
+                    "config": {
+                        "defaultValue": "",
+                        "i18n_properties": [
+                            "placeholder"
+                        ],
+                        "label": "Geological Formation",
+                        "options": [],
+                        "placeholder": {
+                            "en": "Select an option"
+                        }
+                    },
+                    "id": "33980452-46b1-11ee-8ea1-080027b7463b",
+                    "label": {
+                        "en": "Geological Formation"
+                    },
+                    "node_id": "3397fbf6-46b1-11ee-8ea1-080027b7463b",
+                    "sortorder": 2,
+                    "visible": true,
+                    "widget_id": "10000000-0000-0000-0000-000000000002"
+                },
+                {
+                    "card_id": "3397f660-46b1-11ee-8ea1-080027b7463b",
                     "config": {
                         "defaultValue": {
                             "en": {
@@ -525,7 +623,7 @@
                         "i18n_properties": [
                             "placeholder"
                         ],
-                        "label": "Ranking Detail",
+                        "label": "Other Informal / Other Unit Name",
                         "maxLength": null,
                         "placeholder": {
                             "en": "Enter text"
@@ -533,72 +631,95 @@
                         "uneditable": false,
                         "width": "100%"
                     },
-                    "id": "8c464755-de7b-42fb-afb4-4495df583084",
+                    "id": "339804f2-46b1-11ee-8ea1-080027b7463b",
                     "label": {
-                        "en": "Ranking Detail"
+                        "en": "Other Informal / Other Unit Name"
                     },
-                    "node_id": "dd1a2874-0202-11ed-a511-0050568377a0",
-                    "sortorder": null,
+                    "node_id": "3397f82c-46b1-11ee-8ea1-080027b7463b",
+                    "sortorder": 7,
                     "visible": true,
                     "widget_id": "10000000-0000-0000-0000-000000000001"
                 },
                 {
-                    "card_id": "dd1a039e-0202-11ed-a511-0050568377a0",
+                    "card_id": "3397f660-46b1-11ee-8ea1-080027b7463b",
                     "config": {
-                        "defaultValue": {
-                            "en": {
-                                "direction": "ltr",
-                                "value": ""
-                            }
-                        },
+                        "defaultValue": "",
                         "i18n_properties": [
                             "placeholder"
                         ],
-                        "label": "Max Geological Start Date",
-                        "maxLength": null,
+                        "label": "Fossil Resource Potential Classification",
+                        "options": [],
                         "placeholder": {
-                            "en": "Enter text"
-                        },
-                        "uneditable": false,
-                        "width": "100%"
+                            "en": "Select an option"
+                        }
                     },
-                    "id": "a9e127ae-33ae-4bc2-b45a-2898d9b21939",
+                    "id": "33980592-46b1-11ee-8ea1-080027b7463b",
                     "label": {
-                        "en": "Max Geological Start Date"
+                        "en": "Fossil Resource Potential Classification"
                     },
-                    "node_id": "dd1a29d2-0202-11ed-a511-0050568377a0",
-                    "sortorder": null,
+                    "node_id": "3397fe30-46b1-11ee-8ea1-080027b7463b",
+                    "sortorder": 9,
                     "visible": true,
-                    "widget_id": "10000000-0000-0000-0000-000000000001"
+                    "widget_id": "10000000-0000-0000-0000-000000000002"
                 },
                 {
-                    "card_id": "dd19b29a-0202-11ed-a511-0050568377a0",
+                    "card_id": "3397f660-46b1-11ee-8ea1-080027b7463b",
                     "config": {
-                        "defaultValue": {
-                            "en": {
-                                "direction": "ltr",
-                                "value": ""
-                            }
-                        },
+                        "defaultValue": "",
                         "i18n_properties": [
                             "placeholder"
                         ],
-                        "label": "Geological Group",
-                        "maxLength": null,
+                        "label": "Geological Group or Lithodemic/Lithotectonic Grouping",
+                        "options": [],
                         "placeholder": {
-                            "en": "Enter text"
-                        },
-                        "uneditable": false,
-                        "width": "100%"
+                            "en": "Select an option"
+                        }
                     },
-                    "id": "b8fa48ed-5921-4178-9508-1e3d5bc234d6",
+                    "id": "33980628-46b1-11ee-8ea1-080027b7463b",
                     "label": {
-                        "en": "Geological Group"
+                        "en": "Geological Group or Lithodemic/Lithotectonic Grouping"
                     },
-                    "node_id": "dd1a2464-0202-11ed-a511-0050568377a0",
-                    "sortorder": null,
+                    "node_id": "33980060-46b1-11ee-8ea1-080027b7463b",
+                    "sortorder": 0,
                     "visible": true,
-                    "widget_id": "10000000-0000-0000-0000-000000000001"
+                    "widget_id": "10000000-0000-0000-0000-000000000002"
+                },
+                {
+                    "card_id": "3397f660-46b1-11ee-8ea1-080027b7463b",
+                    "config": {
+                        "defaultValue": null,
+                        "label": "Geological Member Uncertain"
+                    },
+                    "id": "339806c8-46b1-11ee-8ea1-080027b7463b",
+                    "label": {
+                        "en": "Geological Member Uncertain"
+                    },
+                    "node_id": "3397faca-46b1-11ee-8ea1-080027b7463b",
+                    "sortorder": 5,
+                    "visible": true,
+                    "widget_id": "0346bc9c-d235-4313-adc8-d0e210b2ef25"
+                },
+                {
+                    "card_id": "3397f660-46b1-11ee-8ea1-080027b7463b",
+                    "config": {
+                        "defaultValue": "",
+                        "i18n_properties": [
+                            "placeholder"
+                        ],
+                        "label": "Informal Map Unit or Name",
+                        "options": [],
+                        "placeholder": {
+                            "en": "Select an option"
+                        }
+                    },
+                    "id": "33980768-46b1-11ee-8ea1-080027b7463b",
+                    "label": {
+                        "en": "Informal Map Unit or Name"
+                    },
+                    "node_id": "3397ff48-46b1-11ee-8ea1-080027b7463b",
+                    "sortorder": 6,
+                    "visible": true,
+                    "widget_id": "10000000-0000-0000-0000-000000000002"
                 },
                 {
                     "card_id": "dd19bc22-0202-11ed-a511-0050568377a0",
@@ -980,21 +1101,174 @@
             "edges": [
                 {
                     "description": null,
-                    "domainnode_id": "dd19acbe-0202-11ed-a511-0050568377a0",
-                    "edgeid": "dd1b47a4-0202-11ed-a511-0050568377a0",
+                    "domainnode_id": "1cd5ca56-46b1-11ee-b9bb-080027b7463b",
+                    "edgeid": "1cd60bb0-46b1-11ee-b9bb-080027b7463b",
                     "graph_id": "dd19a93a-0202-11ed-a511-0050568377a0",
                     "name": null,
                     "ontologyproperty": "http://www.cidoc-crm.org/cidoc-crm/P140i_was_attributed_by",
-                    "rangenode_id": "dd1a14e2-0202-11ed-a511-0050568377a0"
+                    "rangenode_id": "1cd5cbb4-46b1-11ee-b9bb-080027b7463b"
+                },
+                {
+                    "description": null,
+                    "domainnode_id": "1cd5c146-46b1-11ee-b9bb-080027b7463b",
+                    "edgeid": "1cd60dc2-46b1-11ee-b9bb-080027b7463b",
+                    "graph_id": "dd19a93a-0202-11ed-a511-0050568377a0",
+                    "name": null,
+                    "ontologyproperty": "http://www.cidoc-crm.org/cidoc-crm/P115_finishes",
+                    "rangenode_id": "1cd5ca56-46b1-11ee-b9bb-080027b7463b"
+                },
+                {
+                    "description": null,
+                    "domainnode_id": "1cd5b21e-46b1-11ee-b9bb-080027b7463b",
+                    "edgeid": "1cd60f48-46b1-11ee-b9bb-080027b7463b",
+                    "graph_id": "dd19a93a-0202-11ed-a511-0050568377a0",
+                    "name": null,
+                    "ontologyproperty": "http://www.ics.forth.gr/isl/CRMdig/L43i_is_annotated_by",
+                    "rangenode_id": "1cd5c902-46b1-11ee-b9bb-080027b7463b"
+                },
+                {
+                    "description": null,
+                    "domainnode_id": "1cd5b21e-46b1-11ee-b9bb-080027b7463b",
+                    "edgeid": "1cd610a6-46b1-11ee-b9bb-080027b7463b",
+                    "graph_id": "dd19a93a-0202-11ed-a511-0050568377a0",
+                    "name": null,
+                    "ontologyproperty": "http://www.cidoc-crm.org/cidoc-crm/P10_falls_within",
+                    "rangenode_id": "1cd5c146-46b1-11ee-b9bb-080027b7463b"
+                },
+                {
+                    "description": null,
+                    "domainnode_id": "1cd5b21e-46b1-11ee-b9bb-080027b7463b",
+                    "edgeid": "1cd611f0-46b1-11ee-b9bb-080027b7463b",
+                    "graph_id": "dd19a93a-0202-11ed-a511-0050568377a0",
+                    "name": null,
+                    "ontologyproperty": "http://www.cidoc-crm.org/cidoc-crm/P2_has_type",
+                    "rangenode_id": "1cd5c7a4-46b1-11ee-b9bb-080027b7463b"
+                },
+                {
+                    "description": null,
+                    "domainnode_id": "1cd5b21e-46b1-11ee-b9bb-080027b7463b",
+                    "edgeid": "1cd61330-46b1-11ee-b9bb-080027b7463b",
+                    "graph_id": "dd19a93a-0202-11ed-a511-0050568377a0",
+                    "name": null,
+                    "ontologyproperty": "http://www.cidoc-crm.org/cidoc-crm/P140i_was_attributed_by",
+                    "rangenode_id": "1cd5c34e-46b1-11ee-b9bb-080027b7463b"
+                },
+                {
+                    "description": null,
+                    "domainnode_id": "1cd5c4d4-46b1-11ee-b9bb-080027b7463b",
+                    "edgeid": "1cd61470-46b1-11ee-b9bb-080027b7463b",
+                    "graph_id": "dd19a93a-0202-11ed-a511-0050568377a0",
+                    "name": null,
+                    "ontologyproperty": "http://www.cidoc-crm.org/cidoc-crm/P140i_was_attributed_by",
+                    "rangenode_id": "1cd5c646-46b1-11ee-b9bb-080027b7463b"
+                },
+                {
+                    "description": null,
+                    "domainnode_id": "1cd5c146-46b1-11ee-b9bb-080027b7463b",
+                    "edgeid": "1cd615b0-46b1-11ee-b9bb-080027b7463b",
+                    "graph_id": "dd19a93a-0202-11ed-a511-0050568377a0",
+                    "name": null,
+                    "ontologyproperty": "http://www.cidoc-crm.org/cidoc-crm/P116_starts",
+                    "rangenode_id": "1cd5c4d4-46b1-11ee-b9bb-080027b7463b"
+                },
+                {
+                    "description": null,
+                    "domainnode_id": "3397f340-46b1-11ee-8ea1-080027b7463b",
+                    "edgeid": "33982d06-46b1-11ee-8ea1-080027b7463b",
+                    "graph_id": "dd19a93a-0202-11ed-a511-0050568377a0",
+                    "name": null,
+                    "ontologyproperty": "http://www.cidoc-crm.org/cidoc-crm/P140i_was_attributed_by",
+                    "rangenode_id": "3397ff48-46b1-11ee-8ea1-080027b7463b"
+                },
+                {
+                    "description": null,
+                    "domainnode_id": "3397f340-46b1-11ee-8ea1-080027b7463b",
+                    "edgeid": "33982eb4-46b1-11ee-8ea1-080027b7463b",
+                    "graph_id": "dd19a93a-0202-11ed-a511-0050568377a0",
+                    "name": null,
+                    "ontologyproperty": "http://www.cidoc-crm.org/cidoc-crm/P140i_was_attributed_by",
+                    "rangenode_id": "3397fbf6-46b1-11ee-8ea1-080027b7463b"
+                },
+                {
+                    "description": null,
+                    "domainnode_id": "3397fbf6-46b1-11ee-8ea1-080027b7463b",
+                    "edgeid": "33982fea-46b1-11ee-8ea1-080027b7463b",
+                    "graph_id": "dd19a93a-0202-11ed-a511-0050568377a0",
+                    "name": null,
+                    "ontologyproperty": "http://www.cidoc-crm.org/cidoc-crm/P141_assigned",
+                    "rangenode_id": "3397fd0e-46b1-11ee-8ea1-080027b7463b"
+                },
+                {
+                    "description": null,
+                    "domainnode_id": "3397f340-46b1-11ee-8ea1-080027b7463b",
+                    "edgeid": "3398310c-46b1-11ee-8ea1-080027b7463b",
+                    "graph_id": "dd19a93a-0202-11ed-a511-0050568377a0",
+                    "name": null,
+                    "ontologyproperty": "http://www.cidoc-crm.org/cidoc-crm/P140i_was_attributed_by",
+                    "rangenode_id": "33980060-46b1-11ee-8ea1-080027b7463b"
+                },
+                {
+                    "description": null,
+                    "domainnode_id": "3397f340-46b1-11ee-8ea1-080027b7463b",
+                    "edgeid": "33983210-46b1-11ee-8ea1-080027b7463b",
+                    "graph_id": "dd19a93a-0202-11ed-a511-0050568377a0",
+                    "name": null,
+                    "ontologyproperty": "http://www.cidoc-crm.org/cidoc-crm/P15i_influenced",
+                    "rangenode_id": "3397fe30-46b1-11ee-8ea1-080027b7463b"
+                },
+                {
+                    "description": null,
+                    "domainnode_id": "33980060-46b1-11ee-8ea1-080027b7463b",
+                    "edgeid": "33983314-46b1-11ee-8ea1-080027b7463b",
+                    "graph_id": "dd19a93a-0202-11ed-a511-0050568377a0",
+                    "name": null,
+                    "ontologyproperty": "http://www.cidoc-crm.org/cidoc-crm/P141_assigned",
+                    "rangenode_id": "33980178-46b1-11ee-8ea1-080027b7463b"
+                },
+                {
+                    "description": null,
+                    "domainnode_id": "3397f340-46b1-11ee-8ea1-080027b7463b",
+                    "edgeid": "33983418-46b1-11ee-8ea1-080027b7463b",
+                    "graph_id": "dd19a93a-0202-11ed-a511-0050568377a0",
+                    "name": null,
+                    "ontologyproperty": "http://www.cidoc-crm.org/cidoc-crm/P140i_was_attributed_by",
+                    "rangenode_id": "3397f82c-46b1-11ee-8ea1-080027b7463b"
+                },
+                {
+                    "description": null,
+                    "domainnode_id": "3397f340-46b1-11ee-8ea1-080027b7463b",
+                    "edgeid": "33983530-46b1-11ee-8ea1-080027b7463b",
+                    "graph_id": "dd19a93a-0202-11ed-a511-0050568377a0",
+                    "name": null,
+                    "ontologyproperty": "http://www.cidoc-crm.org/cidoc-crm/P140i_was_attributed_by",
+                    "rangenode_id": "3397f99e-46b1-11ee-8ea1-080027b7463b"
+                },
+                {
+                    "description": null,
+                    "domainnode_id": "3397f99e-46b1-11ee-8ea1-080027b7463b",
+                    "edgeid": "3398362a-46b1-11ee-8ea1-080027b7463b",
+                    "graph_id": "dd19a93a-0202-11ed-a511-0050568377a0",
+                    "name": null,
+                    "ontologyproperty": "http://www.cidoc-crm.org/cidoc-crm/P141_assigned",
+                    "rangenode_id": "3397faca-46b1-11ee-8ea1-080027b7463b"
                 },
                 {
                     "description": null,
                     "domainnode_id": "dd1a3238-0202-11ed-a511-0050568377a0",
-                    "edgeid": "dd1b4a56-0202-11ed-a511-0050568377a0",
+                    "edgeid": "86426d5b-988b-4ebb-b206-3e8af5bb5898",
                     "graph_id": "dd19a93a-0202-11ed-a511-0050568377a0",
                     "name": null,
-                    "ontologyproperty": "http://www.cidoc-crm.org/cidoc-crm/P130_shows_features_of",
-                    "rangenode_id": "dd19acbe-0202-11ed-a511-0050568377a0"
+                    "ontologyproperty": "http://www.cidoc-crm.org/cidoc-crm/BM.PX_is_related_to",
+                    "rangenode_id": "3397f340-46b1-11ee-8ea1-080027b7463b"
+                },
+                {
+                    "description": null,
+                    "domainnode_id": "dd1a3238-0202-11ed-a511-0050568377a0",
+                    "edgeid": "b32114fc-d0da-45d1-92d1-84bffa68ab2e",
+                    "graph_id": "dd19a93a-0202-11ed-a511-0050568377a0",
+                    "name": null,
+                    "ontologyproperty": "http://www.cidoc-crm.org/cidoc-crm/P133_is_separated_from",
+                    "rangenode_id": "1cd5b21e-46b1-11ee-b9bb-080027b7463b"
                 },
                 {
                     "description": null,
@@ -1106,15 +1380,6 @@
                 },
                 {
                     "description": null,
-                    "domainnode_id": "dd19acbe-0202-11ed-a511-0050568377a0",
-                    "edgeid": "dd1b5b22-0202-11ed-a511-0050568377a0",
-                    "graph_id": "dd19a93a-0202-11ed-a511-0050568377a0",
-                    "name": null,
-                    "ontologyproperty": "http://www.cidoc-crm.org/cidoc-crm/P140i_was_attributed_by",
-                    "rangenode_id": "dd1a2194-0202-11ed-a511-0050568377a0"
-                },
-                {
-                    "description": null,
                     "domainnode_id": "dd19debe-0202-11ed-a511-0050568377a0",
                     "edgeid": "dd1b5c58-0202-11ed-a511-0050568377a0",
                     "graph_id": "dd19a93a-0202-11ed-a511-0050568377a0",
@@ -1133,48 +1398,12 @@
                 },
                 {
                     "description": null,
-                    "domainnode_id": "dd19acbe-0202-11ed-a511-0050568377a0",
-                    "edgeid": "dd1b5ed8-0202-11ed-a511-0050568377a0",
-                    "graph_id": "dd19a93a-0202-11ed-a511-0050568377a0",
-                    "name": null,
-                    "ontologyproperty": "http://www.cidoc-crm.org/cidoc-crm/P140i_was_attributed_by",
-                    "rangenode_id": "dd1a2464-0202-11ed-a511-0050568377a0"
-                },
-                {
-                    "description": null,
-                    "domainnode_id": "dd19acbe-0202-11ed-a511-0050568377a0",
-                    "edgeid": "dd1b614e-0202-11ed-a511-0050568377a0",
-                    "graph_id": "dd19a93a-0202-11ed-a511-0050568377a0",
-                    "name": null,
-                    "ontologyproperty": "http://www.cidoc-crm.org/cidoc-crm/P41i_was_classified_by",
-                    "rangenode_id": "dd1a25c2-0202-11ed-a511-0050568377a0"
-                },
-                {
-                    "description": null,
-                    "domainnode_id": "dd1a3080-0202-11ed-a511-0050568377a0",
-                    "edgeid": "dd1b628e-0202-11ed-a511-0050568377a0",
-                    "graph_id": "dd19a93a-0202-11ed-a511-0050568377a0",
-                    "name": null,
-                    "ontologyproperty": "http://www.cidoc-crm.org/cidoc-crm/P2_has_type",
-                    "rangenode_id": "dd1a2716-0202-11ed-a511-0050568377a0"
-                },
-                {
-                    "description": null,
                     "domainnode_id": "dd19c0dc-0202-11ed-a511-0050568377a0",
                     "edgeid": "dd1b63c4-0202-11ed-a511-0050568377a0",
                     "graph_id": "dd19a93a-0202-11ed-a511-0050568377a0",
                     "name": null,
                     "ontologyproperty": "http://www.cidoc-crm.org/cidoc-crm/P87_is_identified_by",
                     "rangenode_id": "dd19eecc-0202-11ed-a511-0050568377a0"
-                },
-                {
-                    "description": null,
-                    "domainnode_id": "dd1a25c2-0202-11ed-a511-0050568377a0",
-                    "edgeid": "dd1b6504-0202-11ed-a511-0050568377a0",
-                    "graph_id": "dd19a93a-0202-11ed-a511-0050568377a0",
-                    "name": null,
-                    "ontologyproperty": "http://www.ics.forth.gr/isl/CRMsci/O11i_was_described_by",
-                    "rangenode_id": "dd1a2874-0202-11ed-a511-0050568377a0"
                 },
                 {
                     "description": null,
@@ -1196,15 +1425,6 @@
                 },
                 {
                     "description": null,
-                    "domainnode_id": "dd1a0024-0202-11ed-a511-0050568377a0",
-                    "edgeid": "dd1b68ba-0202-11ed-a511-0050568377a0",
-                    "graph_id": "dd19a93a-0202-11ed-a511-0050568377a0",
-                    "name": null,
-                    "ontologyproperty": "http://www.cidoc-crm.org/cidoc-crm/P92_brought_into_existence",
-                    "rangenode_id": "dd1a29d2-0202-11ed-a511-0050568377a0"
-                },
-                {
-                    "description": null,
                     "domainnode_id": "dd19d374-0202-11ed-a511-0050568377a0",
                     "edgeid": "dd1b69fa-0202-11ed-a511-0050568377a0",
                     "graph_id": "dd19a93a-0202-11ed-a511-0050568377a0",
@@ -1214,39 +1434,12 @@
                 },
                 {
                     "description": null,
-                    "domainnode_id": "dd1a29d2-0202-11ed-a511-0050568377a0",
-                    "edgeid": "dd1b6b30-0202-11ed-a511-0050568377a0",
-                    "graph_id": "dd19a93a-0202-11ed-a511-0050568377a0",
-                    "name": null,
-                    "ontologyproperty": "http://www.cidoc-crm.org/cidoc-crm/P2_has_type",
-                    "rangenode_id": "dd1a2c84-0202-11ed-a511-0050568377a0"
-                },
-                {
-                    "description": null,
-                    "domainnode_id": "dd1a3238-0202-11ed-a511-0050568377a0",
-                    "edgeid": "dd1b6cd4-0202-11ed-a511-0050568377a0",
-                    "graph_id": "dd19a93a-0202-11ed-a511-0050568377a0",
-                    "name": null,
-                    "ontologyproperty": "http://www.cidoc-crm.org/cidoc-crm/P10_falls_within",
-                    "rangenode_id": "dd1a0024-0202-11ed-a511-0050568377a0"
-                },
-                {
-                    "description": null,
                     "domainnode_id": "dd19d374-0202-11ed-a511-0050568377a0",
                     "edgeid": "dd1b6e3c-0202-11ed-a511-0050568377a0",
                     "graph_id": "dd19a93a-0202-11ed-a511-0050568377a0",
                     "name": null,
                     "ontologyproperty": "http://www.cidoc-crm.org/cidoc-crm/P3_has_note",
                     "rangenode_id": "dd1a2dce-0202-11ed-a511-0050568377a0"
-                },
-                {
-                    "description": null,
-                    "domainnode_id": "dd1a0024-0202-11ed-a511-0050568377a0",
-                    "edgeid": "dd1b6f7c-0202-11ed-a511-0050568377a0",
-                    "graph_id": "dd19a93a-0202-11ed-a511-0050568377a0",
-                    "name": null,
-                    "ontologyproperty": "http://www.cidoc-crm.org/cidoc-crm/P92_brought_into_existence",
-                    "rangenode_id": "dd1a3080-0202-11ed-a511-0050568377a0"
                 },
                 {
                     "description": null,
@@ -1290,12 +1483,12 @@
                     },
                     "function_id": "60000000-0000-0000-0000-000000000001",
                     "graph_id": "dd19a93a-0202-11ed-a511-0050568377a0",
-                    "id": "c52b6782-8bba-494d-a4af-df4735c3abad"
+                    "id": "0fd3fcbf-69a9-4025-9038-c6ef3dc0e4f7"
                 }
             ],
             "graphid": "dd19a93a-0202-11ed-a511-0050568377a0",
             "iconclass": "fa fa-crosshairs",
-            "is_editable": false,
+            "is_editable": true,
             "isresource": true,
             "jsonldcontext": null,
             "name": {
@@ -1305,7 +1498,13 @@
                 {
                     "cardinality": "1",
                     "legacygroupid": null,
-                    "nodegroupid": "dd19acbe-0202-11ed-a511-0050568377a0",
+                    "nodegroupid": "1cd5b21e-46b1-11ee-b9bb-080027b7463b",
+                    "parentnodegroup_id": null
+                },
+                {
+                    "cardinality": "1",
+                    "legacygroupid": null,
+                    "nodegroupid": "3397f340-46b1-11ee-8ea1-080027b7463b",
                     "parentnodegroup_id": null
                 },
                 {
@@ -1371,12 +1570,6 @@
                 {
                     "cardinality": "1",
                     "legacygroupid": null,
-                    "nodegroupid": "dd1a0024-0202-11ed-a511-0050568377a0",
-                    "parentnodegroup_id": null
-                },
-                {
-                    "cardinality": "1",
-                    "legacygroupid": null,
                     "nodegroupid": "dd1a05b0-0202-11ed-a511-0050568377a0",
                     "parentnodegroup_id": null
                 },
@@ -1389,7 +1582,30 @@
             ],
             "nodes": [
                 {
-                    "alias": "stratigraphy",
+                    "alias": "geological_age",
+                    "config": {
+                        "en": ""
+                    },
+                    "datatype": "semantic",
+                    "description": "",
+                    "exportable": false,
+                    "fieldname": null,
+                    "graph_id": "dd19a93a-0202-11ed-a511-0050568377a0",
+                    "hascustomalias": false,
+                    "is_collector": true,
+                    "isrequired": false,
+                    "issearchable": true,
+                    "istopnode": false,
+                    "name": "Geological Age",
+                    "nodegroup_id": "1cd5b21e-46b1-11ee-b9bb-080027b7463b",
+                    "nodeid": "1cd5b21e-46b1-11ee-b9bb-080027b7463b",
+                    "ontologyclass": "http://www.cidoc-crm.org/cidoc-crm/E4_Period",
+                    "parentproperty": "http://www.cidoc-crm.org/cidoc-crm/P133_is_separated_from",
+                    "sortorder": 0,
+                    "sourcebranchpublication_id": null
+                },
+                {
+                    "alias": "timespan",
                     "config": {
                         "en": ""
                     },
@@ -1399,15 +1615,462 @@
                     "fieldname": null,
                     "graph_id": "dd19a93a-0202-11ed-a511-0050568377a0",
                     "hascustomalias": false,
+                    "is_collector": false,
+                    "isrequired": false,
+                    "issearchable": true,
+                    "istopnode": false,
+                    "name": "Timespan",
+                    "nodegroup_id": "1cd5b21e-46b1-11ee-b9bb-080027b7463b",
+                    "nodeid": "1cd5c146-46b1-11ee-b9bb-080027b7463b",
+                    "ontologyclass": "http://www.cidoc-crm.org/cidoc-crm/E4_Period",
+                    "parentproperty": "http://www.cidoc-crm.org/cidoc-crm/P10_falls_within",
+                    "sortorder": 0,
+                    "sourcebranchpublication_id": null
+                },
+                {
+                    "alias": "age_undetermined",
+                    "config": {
+                        "falseLabel": {
+                            "en": "Age known"
+                        },
+                        "i18n_properties": [
+                            "trueLabel",
+                            "falseLabel"
+                        ],
+                        "trueLabel": {
+                            "en": "Age undetermined"
+                        }
+                    },
+                    "datatype": "boolean",
+                    "description": null,
+                    "exportable": false,
+                    "fieldname": null,
+                    "graph_id": "dd19a93a-0202-11ed-a511-0050568377a0",
+                    "hascustomalias": false,
+                    "is_collector": false,
+                    "isrequired": false,
+                    "issearchable": true,
+                    "istopnode": false,
+                    "name": "Age undetermined",
+                    "nodegroup_id": "1cd5b21e-46b1-11ee-b9bb-080027b7463b",
+                    "nodeid": "1cd5c34e-46b1-11ee-b9bb-080027b7463b",
+                    "ontologyclass": "http://www.cidoc-crm.org/cidoc-crm/E13_Attribute_Assignment",
+                    "parentproperty": "http://www.cidoc-crm.org/cidoc-crm/P140i_was_attributed_by",
+                    "sortorder": 0,
+                    "sourcebranchpublication_id": null
+                },
+                {
+                    "alias": "minimum_time",
+                    "config": {
+                        "en": "",
+                        "rdmCollection": "4b28af7f-a6f1-4090-a945-c14b75809621"
+                    },
+                    "datatype": "concept",
+                    "description": "",
+                    "exportable": false,
+                    "fieldname": null,
+                    "graph_id": "dd19a93a-0202-11ed-a511-0050568377a0",
+                    "hascustomalias": false,
+                    "is_collector": false,
+                    "isrequired": false,
+                    "issearchable": true,
+                    "istopnode": false,
+                    "name": "Minimum Time",
+                    "nodegroup_id": "1cd5b21e-46b1-11ee-b9bb-080027b7463b",
+                    "nodeid": "1cd5c4d4-46b1-11ee-b9bb-080027b7463b",
+                    "ontologyclass": "http://www.cidoc-crm.org/cidoc-crm/E63_Beginning_of_Existence",
+                    "parentproperty": "http://www.cidoc-crm.org/cidoc-crm/P116_starts",
+                    "sortorder": 0,
+                    "sourcebranchpublication_id": null
+                },
+                {
+                    "alias": "minimum_time_uncertain",
+                    "config": {
+                        "falseLabel": {
+                            "en": "Minimum time certain"
+                        },
+                        "i18n_properties": [
+                            "trueLabel",
+                            "falseLabel"
+                        ],
+                        "trueLabel": {
+                            "en": "Minimum time uncertain"
+                        }
+                    },
+                    "datatype": "boolean",
+                    "description": null,
+                    "exportable": false,
+                    "fieldname": null,
+                    "graph_id": "dd19a93a-0202-11ed-a511-0050568377a0",
+                    "hascustomalias": false,
+                    "is_collector": false,
+                    "isrequired": false,
+                    "issearchable": true,
+                    "istopnode": false,
+                    "name": "Minimum Time Uncertain",
+                    "nodegroup_id": "1cd5b21e-46b1-11ee-b9bb-080027b7463b",
+                    "nodeid": "1cd5c646-46b1-11ee-b9bb-080027b7463b",
+                    "ontologyclass": "http://www.cidoc-crm.org/cidoc-crm/E13_Attribute_Assignment",
+                    "parentproperty": "http://www.cidoc-crm.org/cidoc-crm/P140i_was_attributed_by",
+                    "sortorder": 0,
+                    "sourcebranchpublication_id": null
+                },
+                {
+                    "alias": "geologic_timescale_division",
+                    "config": {
+                        "rdmCollection": "3a7977fa-3acd-4c9e-802d-2c436f196c08"
+                    },
+                    "datatype": "concept",
+                    "description": null,
+                    "exportable": false,
+                    "fieldname": null,
+                    "graph_id": "dd19a93a-0202-11ed-a511-0050568377a0",
+                    "hascustomalias": false,
+                    "is_collector": false,
+                    "isrequired": false,
+                    "issearchable": true,
+                    "istopnode": false,
+                    "name": "Geologic Timescale Division",
+                    "nodegroup_id": "1cd5b21e-46b1-11ee-b9bb-080027b7463b",
+                    "nodeid": "1cd5c7a4-46b1-11ee-b9bb-080027b7463b",
+                    "ontologyclass": "http://www.cidoc-crm.org/cidoc-crm/E58_Measurement_Unit",
+                    "parentproperty": "http://www.cidoc-crm.org/cidoc-crm/P2_has_type",
+                    "sortorder": 0,
+                    "sourcebranchpublication_id": null
+                },
+                {
+                    "alias": "historical_values",
+                    "config": {
+                        "en": ""
+                    },
+                    "datatype": "string",
+                    "description": null,
+                    "exportable": false,
+                    "fieldname": null,
+                    "graph_id": "dd19a93a-0202-11ed-a511-0050568377a0",
+                    "hascustomalias": false,
+                    "is_collector": false,
+                    "isrequired": false,
+                    "issearchable": true,
+                    "istopnode": false,
+                    "name": "Historical Values",
+                    "nodegroup_id": "1cd5b21e-46b1-11ee-b9bb-080027b7463b",
+                    "nodeid": "1cd5c902-46b1-11ee-b9bb-080027b7463b",
+                    "ontologyclass": "http://www.ics.forth.gr/isl/CRMdig/D29_Annotation_Object",
+                    "parentproperty": "http://www.ics.forth.gr/isl/CRMdig/L43i_is_annotated_by",
+                    "sortorder": 0,
+                    "sourcebranchpublication_id": null
+                },
+                {
+                    "alias": "maximum_time",
+                    "config": {
+                        "en": "",
+                        "rdmCollection": "4b28af7f-a6f1-4090-a945-c14b75809621"
+                    },
+                    "datatype": "concept",
+                    "description": "",
+                    "exportable": false,
+                    "fieldname": null,
+                    "graph_id": "dd19a93a-0202-11ed-a511-0050568377a0",
+                    "hascustomalias": false,
+                    "is_collector": false,
+                    "isrequired": false,
+                    "issearchable": true,
+                    "istopnode": false,
+                    "name": "Maximum Time",
+                    "nodegroup_id": "1cd5b21e-46b1-11ee-b9bb-080027b7463b",
+                    "nodeid": "1cd5ca56-46b1-11ee-b9bb-080027b7463b",
+                    "ontologyclass": "http://www.cidoc-crm.org/cidoc-crm/E64_End_of_Existence",
+                    "parentproperty": "http://www.cidoc-crm.org/cidoc-crm/P115_finishes",
+                    "sortorder": 0,
+                    "sourcebranchpublication_id": null
+                },
+                {
+                    "alias": "maximum_time_uncertain",
+                    "config": {
+                        "falseLabel": {
+                            "en": "Maximum time certain"
+                        },
+                        "i18n_properties": [
+                            "trueLabel",
+                            "falseLabel"
+                        ],
+                        "trueLabel": {
+                            "en": "Maximum time uncertain"
+                        }
+                    },
+                    "datatype": "boolean",
+                    "description": null,
+                    "exportable": false,
+                    "fieldname": null,
+                    "graph_id": "dd19a93a-0202-11ed-a511-0050568377a0",
+                    "hascustomalias": false,
+                    "is_collector": false,
+                    "isrequired": false,
+                    "issearchable": true,
+                    "istopnode": false,
+                    "name": "Maximum Time Uncertain",
+                    "nodegroup_id": "1cd5b21e-46b1-11ee-b9bb-080027b7463b",
+                    "nodeid": "1cd5cbb4-46b1-11ee-b9bb-080027b7463b",
+                    "ontologyclass": "http://www.cidoc-crm.org/cidoc-crm/E13_Attribute_Assignment",
+                    "parentproperty": "http://www.cidoc-crm.org/cidoc-crm/P140i_was_attributed_by",
+                    "sortorder": 0,
+                    "sourcebranchpublication_id": null
+                },
+                {
+                    "alias": "stratigraphy",
+                    "config": {
+                        "en": ""
+                    },
+                    "datatype": "semantic",
+                    "description": "",
+                    "exportable": false,
+                    "fieldname": null,
+                    "graph_id": "dd19a93a-0202-11ed-a511-0050568377a0",
+                    "hascustomalias": false,
                     "is_collector": true,
                     "isrequired": false,
                     "issearchable": true,
                     "istopnode": false,
                     "name": "Stratigraphy",
-                    "nodegroup_id": "dd19acbe-0202-11ed-a511-0050568377a0",
-                    "nodeid": "dd19acbe-0202-11ed-a511-0050568377a0",
+                    "nodegroup_id": "3397f340-46b1-11ee-8ea1-080027b7463b",
+                    "nodeid": "3397f340-46b1-11ee-8ea1-080027b7463b",
                     "ontologyclass": "http://www.cidoc-crm.org/cidoc-crm/E57_Material",
-                    "parentproperty": "http://www.cidoc-crm.org/cidoc-crm/P130_shows_features_of",
+                    "parentproperty": "http://www.cidoc-crm.org/cidoc-crm/BM.PX_is_related_to",
+                    "sortorder": 0,
+                    "sourcebranchpublication_id": null
+                },
+                {
+                    "alias": "other_stratigraphic_name",
+                    "config": {
+                        "en": ""
+                    },
+                    "datatype": "string",
+                    "description": null,
+                    "exportable": false,
+                    "fieldname": null,
+                    "graph_id": "dd19a93a-0202-11ed-a511-0050568377a0",
+                    "hascustomalias": false,
+                    "is_collector": false,
+                    "isrequired": false,
+                    "issearchable": true,
+                    "istopnode": false,
+                    "name": "Other Stratigraphic Name",
+                    "nodegroup_id": "3397f340-46b1-11ee-8ea1-080027b7463b",
+                    "nodeid": "3397f82c-46b1-11ee-8ea1-080027b7463b",
+                    "ontologyclass": "http://www.cidoc-crm.org/cidoc-crm/E17_Type_Assignment",
+                    "parentproperty": "http://www.cidoc-crm.org/cidoc-crm/P140i_was_attributed_by",
+                    "sortorder": 0,
+                    "sourcebranchpublication_id": null
+                },
+                {
+                    "alias": "geological_member",
+                    "config": {
+                        "rdmCollection": "38a03bf4-045e-4f8a-9898-a596d3045e55"
+                    },
+                    "datatype": "concept-list",
+                    "description": null,
+                    "exportable": false,
+                    "fieldname": null,
+                    "graph_id": "dd19a93a-0202-11ed-a511-0050568377a0",
+                    "hascustomalias": false,
+                    "is_collector": false,
+                    "isrequired": false,
+                    "issearchable": true,
+                    "istopnode": false,
+                    "name": "Geological Member",
+                    "nodegroup_id": "3397f340-46b1-11ee-8ea1-080027b7463b",
+                    "nodeid": "3397f99e-46b1-11ee-8ea1-080027b7463b",
+                    "ontologyclass": "http://www.cidoc-crm.org/cidoc-crm/E17_Type_Assignment",
+                    "parentproperty": "http://www.cidoc-crm.org/cidoc-crm/P140i_was_attributed_by",
+                    "sortorder": 0,
+                    "sourcebranchpublication_id": null
+                },
+                {
+                    "alias": "geological_member_uncertain",
+                    "config": {
+                        "falseLabel": {
+                            "en": "Geological Member Certain"
+                        },
+                        "i18n_properties": [
+                            "trueLabel",
+                            "falseLabel"
+                        ],
+                        "trueLabel": {
+                            "en": "Geological Member Uncertain"
+                        }
+                    },
+                    "datatype": "boolean",
+                    "description": "",
+                    "exportable": false,
+                    "fieldname": null,
+                    "graph_id": "dd19a93a-0202-11ed-a511-0050568377a0",
+                    "hascustomalias": false,
+                    "is_collector": false,
+                    "isrequired": false,
+                    "issearchable": true,
+                    "istopnode": false,
+                    "name": "Geological Member Uncertain",
+                    "nodegroup_id": "3397f340-46b1-11ee-8ea1-080027b7463b",
+                    "nodeid": "3397faca-46b1-11ee-8ea1-080027b7463b",
+                    "ontologyclass": "http://www.ics.forth.gr/isl/CRMinf/I3_Inference_Logic",
+                    "parentproperty": "http://www.cidoc-crm.org/cidoc-crm/P141_assigned",
+                    "sortorder": 0,
+                    "sourcebranchpublication_id": null
+                },
+                {
+                    "alias": "geological_formation",
+                    "config": {
+                        "rdmCollection": "93af3576-7716-47b2-a16c-933b9cf6ed4f"
+                    },
+                    "datatype": "concept-list",
+                    "description": null,
+                    "exportable": false,
+                    "fieldname": null,
+                    "graph_id": "dd19a93a-0202-11ed-a511-0050568377a0",
+                    "hascustomalias": false,
+                    "is_collector": false,
+                    "isrequired": false,
+                    "issearchable": true,
+                    "istopnode": false,
+                    "name": "Geological Formation",
+                    "nodegroup_id": "3397f340-46b1-11ee-8ea1-080027b7463b",
+                    "nodeid": "3397fbf6-46b1-11ee-8ea1-080027b7463b",
+                    "ontologyclass": "http://www.cidoc-crm.org/cidoc-crm/E17_Type_Assignment",
+                    "parentproperty": "http://www.cidoc-crm.org/cidoc-crm/P140i_was_attributed_by",
+                    "sortorder": 0,
+                    "sourcebranchpublication_id": null
+                },
+                {
+                    "alias": "geological_formation_uncertain",
+                    "config": {
+                        "falseLabel": {
+                            "en": "Geological Formation Certain"
+                        },
+                        "i18n_properties": [
+                            "trueLabel",
+                            "falseLabel"
+                        ],
+                        "trueLabel": {
+                            "en": "Geological Formation Uncertain"
+                        }
+                    },
+                    "datatype": "boolean",
+                    "description": "",
+                    "exportable": false,
+                    "fieldname": null,
+                    "graph_id": "dd19a93a-0202-11ed-a511-0050568377a0",
+                    "hascustomalias": false,
+                    "is_collector": false,
+                    "isrequired": false,
+                    "issearchable": true,
+                    "istopnode": false,
+                    "name": "Geological Formation Uncertain",
+                    "nodegroup_id": "3397f340-46b1-11ee-8ea1-080027b7463b",
+                    "nodeid": "3397fd0e-46b1-11ee-8ea1-080027b7463b",
+                    "ontologyclass": "http://www.ics.forth.gr/isl/CRMinf/I3_Inference_Logic",
+                    "parentproperty": "http://www.cidoc-crm.org/cidoc-crm/P141_assigned",
+                    "sortorder": 0,
+                    "sourcebranchpublication_id": null
+                },
+                {
+                    "alias": "fossil_resource_potential_classification",
+                    "config": {
+                        "rdmCollection": "43b6403a-9f4a-4c27-ab31-7dafae0b2980"
+                    },
+                    "datatype": "concept",
+                    "description": "",
+                    "exportable": false,
+                    "fieldname": null,
+                    "graph_id": "dd19a93a-0202-11ed-a511-0050568377a0",
+                    "hascustomalias": false,
+                    "is_collector": false,
+                    "isrequired": false,
+                    "issearchable": true,
+                    "istopnode": false,
+                    "name": "Fossil Resource Potential Classification",
+                    "nodegroup_id": "3397f340-46b1-11ee-8ea1-080027b7463b",
+                    "nodeid": "3397fe30-46b1-11ee-8ea1-080027b7463b",
+                    "ontologyclass": "http://www.cidoc-crm.org/cidoc-crm/E17_Type_Assignment",
+                    "parentproperty": "http://www.cidoc-crm.org/cidoc-crm/P15i_influenced",
+                    "sortorder": 0,
+                    "sourcebranchpublication_id": null
+                },
+                {
+                    "alias": "informal_map_unit_or_name",
+                    "config": {
+                        "rdmCollection": "bc3b01e1-cccf-4f77-a62e-e578bb6c199f"
+                    },
+                    "datatype": "concept-list",
+                    "description": null,
+                    "exportable": false,
+                    "fieldname": null,
+                    "graph_id": "dd19a93a-0202-11ed-a511-0050568377a0",
+                    "hascustomalias": false,
+                    "is_collector": false,
+                    "isrequired": false,
+                    "issearchable": true,
+                    "istopnode": false,
+                    "name": "Informal Map Unit or Name",
+                    "nodegroup_id": "3397f340-46b1-11ee-8ea1-080027b7463b",
+                    "nodeid": "3397ff48-46b1-11ee-8ea1-080027b7463b",
+                    "ontologyclass": "http://www.cidoc-crm.org/cidoc-crm/E17_Type_Assignment",
+                    "parentproperty": "http://www.cidoc-crm.org/cidoc-crm/P140i_was_attributed_by",
+                    "sortorder": 0,
+                    "sourcebranchpublication_id": null
+                },
+                {
+                    "alias": "geological_group",
+                    "config": {
+                        "rdmCollection": "1d5f0d46-d2d9-4a1e-826e-b68ada021ed3"
+                    },
+                    "datatype": "concept-list",
+                    "description": null,
+                    "exportable": false,
+                    "fieldname": null,
+                    "graph_id": "dd19a93a-0202-11ed-a511-0050568377a0",
+                    "hascustomalias": false,
+                    "is_collector": false,
+                    "isrequired": false,
+                    "issearchable": true,
+                    "istopnode": false,
+                    "name": "Geological Group",
+                    "nodegroup_id": "3397f340-46b1-11ee-8ea1-080027b7463b",
+                    "nodeid": "33980060-46b1-11ee-8ea1-080027b7463b",
+                    "ontologyclass": "http://www.cidoc-crm.org/cidoc-crm/E17_Type_Assignment",
+                    "parentproperty": "http://www.cidoc-crm.org/cidoc-crm/P140i_was_attributed_by",
+                    "sortorder": 0,
+                    "sourcebranchpublication_id": null
+                },
+                {
+                    "alias": "geological_group_uncertain",
+                    "config": {
+                        "falseLabel": {
+                            "en": "Geological Group Certain"
+                        },
+                        "i18n_properties": [
+                            "trueLabel",
+                            "falseLabel"
+                        ],
+                        "trueLabel": {
+                            "en": "Geological Group Uncertain"
+                        }
+                    },
+                    "datatype": "boolean",
+                    "description": "",
+                    "exportable": false,
+                    "fieldname": null,
+                    "graph_id": "dd19a93a-0202-11ed-a511-0050568377a0",
+                    "hascustomalias": false,
+                    "is_collector": false,
+                    "isrequired": false,
+                    "issearchable": true,
+                    "istopnode": false,
+                    "name": "Geological Group Uncertain",
+                    "nodegroup_id": "3397f340-46b1-11ee-8ea1-080027b7463b",
+                    "nodeid": "33980178-46b1-11ee-8ea1-080027b7463b",
+                    "ontologyclass": "http://www.ics.forth.gr/isl/CRMinf/I3_Inference_Logic",
+                    "parentproperty": "http://www.cidoc-crm.org/cidoc-crm/P141_assigned",
                     "sortorder": 0,
                     "sourcebranchpublication_id": null
                 },
@@ -1660,29 +2323,6 @@
                     "sourcebranchpublication_id": null
                 },
                 {
-                    "alias": "geological_age",
-                    "config": {
-                        "en": ""
-                    },
-                    "datatype": "semantic",
-                    "description": null,
-                    "exportable": false,
-                    "fieldname": null,
-                    "graph_id": "dd19a93a-0202-11ed-a511-0050568377a0",
-                    "hascustomalias": false,
-                    "is_collector": true,
-                    "isrequired": false,
-                    "issearchable": true,
-                    "istopnode": false,
-                    "name": "Geological Age",
-                    "nodegroup_id": "dd1a0024-0202-11ed-a511-0050568377a0",
-                    "nodeid": "dd1a0024-0202-11ed-a511-0050568377a0",
-                    "ontologyclass": "http://www.cidoc-crm.org/cidoc-crm/E63_Beginning_of_Existence",
-                    "parentproperty": "http://www.cidoc-crm.org/cidoc-crm/P10_falls_within",
-                    "sortorder": 0,
-                    "sourcebranchpublication_id": null
-                },
-                {
                     "alias": "protection_status",
                     "config": {},
                     "datatype": "string",
@@ -1730,27 +2370,6 @@
                     "nodeid": "dd1a0e5c-0202-11ed-a511-0050568377a0",
                     "ontologyclass": "http://www.ics.forth.gr/isl/CRMdig/D35_Area",
                     "parentproperty": "http://www.cidoc-crm.org/cidoc-crm/P10_falls_within",
-                    "sortorder": 0,
-                    "sourcebranchpublication_id": null
-                },
-                {
-                    "alias": "geological_formation",
-                    "config": {},
-                    "datatype": "string",
-                    "description": null,
-                    "exportable": false,
-                    "fieldname": null,
-                    "graph_id": "dd19a93a-0202-11ed-a511-0050568377a0",
-                    "hascustomalias": false,
-                    "is_collector": false,
-                    "isrequired": false,
-                    "issearchable": true,
-                    "istopnode": false,
-                    "name": "Geological Formation",
-                    "nodegroup_id": "dd19acbe-0202-11ed-a511-0050568377a0",
-                    "nodeid": "dd1a14e2-0202-11ed-a511-0050568377a0",
-                    "ontologyclass": "http://www.cidoc-crm.org/cidoc-crm/E13_Attribute_Assignment",
-                    "parentproperty": "http://www.cidoc-crm.org/cidoc-crm/P140i_was_attributed_by",
                     "sortorder": 0,
                     "sourcebranchpublication_id": null
                 },
@@ -1887,27 +2506,6 @@
                     "sourcebranchpublication_id": null
                 },
                 {
-                    "alias": "geological_member",
-                    "config": {},
-                    "datatype": "string",
-                    "description": null,
-                    "exportable": false,
-                    "fieldname": null,
-                    "graph_id": "dd19a93a-0202-11ed-a511-0050568377a0",
-                    "hascustomalias": false,
-                    "is_collector": false,
-                    "isrequired": false,
-                    "issearchable": true,
-                    "istopnode": false,
-                    "name": "Geological Member",
-                    "nodegroup_id": "dd19acbe-0202-11ed-a511-0050568377a0",
-                    "nodeid": "dd1a2194-0202-11ed-a511-0050568377a0",
-                    "ontologyclass": "http://www.cidoc-crm.org/cidoc-crm/E13_Attribute_Assignment",
-                    "parentproperty": "http://www.cidoc-crm.org/cidoc-crm/P140i_was_attributed_by",
-                    "sortorder": 0,
-                    "sourcebranchpublication_id": null
-                },
-                {
                     "alias": "information_carrier_format_type",
                     "config": {
                         "rdmCollection": "3b5a3cd9-c0ff-4053-88a2-9ce94aeec2cb"
@@ -1927,115 +2525,6 @@
                     "nodeid": "dd1a22fc-0202-11ed-a511-0050568377a0",
                     "ontologyclass": "http://www.cidoc-crm.org/cidoc-crm/E55_Type",
                     "parentproperty": "http://www.cidoc-crm.org/cidoc-crm/P2_has_type",
-                    "sortorder": 0,
-                    "sourcebranchpublication_id": null
-                },
-                {
-                    "alias": "geological_group",
-                    "config": {},
-                    "datatype": "string",
-                    "description": null,
-                    "exportable": false,
-                    "fieldname": null,
-                    "graph_id": "dd19a93a-0202-11ed-a511-0050568377a0",
-                    "hascustomalias": false,
-                    "is_collector": false,
-                    "isrequired": false,
-                    "issearchable": true,
-                    "istopnode": false,
-                    "name": "Geological Group",
-                    "nodegroup_id": "dd19acbe-0202-11ed-a511-0050568377a0",
-                    "nodeid": "dd1a2464-0202-11ed-a511-0050568377a0",
-                    "ontologyclass": "http://www.cidoc-crm.org/cidoc-crm/E17_Type_Assignment",
-                    "parentproperty": "http://www.cidoc-crm.org/cidoc-crm/P140i_was_attributed_by",
-                    "sortorder": 0,
-                    "sourcebranchpublication_id": null
-                },
-                {
-                    "alias": "geological_significance_ranking_code",
-                    "config": {},
-                    "datatype": "string",
-                    "description": "Should this be attached to the Fossil?",
-                    "exportable": false,
-                    "fieldname": null,
-                    "graph_id": "dd19a93a-0202-11ed-a511-0050568377a0",
-                    "hascustomalias": false,
-                    "is_collector": false,
-                    "isrequired": false,
-                    "issearchable": true,
-                    "istopnode": false,
-                    "name": "Geological Significance Ranking Code",
-                    "nodegroup_id": "dd19acbe-0202-11ed-a511-0050568377a0",
-                    "nodeid": "dd1a25c2-0202-11ed-a511-0050568377a0",
-                    "ontologyclass": "http://www.cidoc-crm.org/cidoc-crm/E17_Type_Assignment",
-                    "parentproperty": "http://www.cidoc-crm.org/cidoc-crm/P41i_was_classified_by",
-                    "sortorder": 0,
-                    "sourcebranchpublication_id": null
-                },
-                {
-                    "alias": "minimum_time_unit",
-                    "config": {
-                        "en": ""
-                    },
-                    "datatype": "semantic",
-                    "description": null,
-                    "exportable": false,
-                    "fieldname": null,
-                    "graph_id": "dd19a93a-0202-11ed-a511-0050568377a0",
-                    "hascustomalias": false,
-                    "is_collector": false,
-                    "isrequired": false,
-                    "issearchable": true,
-                    "istopnode": false,
-                    "name": "Minimum Time Unit",
-                    "nodegroup_id": "dd1a0024-0202-11ed-a511-0050568377a0",
-                    "nodeid": "dd1a2716-0202-11ed-a511-0050568377a0",
-                    "ontologyclass": "http://www.cidoc-crm.org/cidoc-crm/E58_Measurement_Unit",
-                    "parentproperty": "http://www.cidoc-crm.org/cidoc-crm/P2_has_type",
-                    "sortorder": 0,
-                    "sourcebranchpublication_id": null
-                },
-                {
-                    "alias": "ranking_detail",
-                    "config": {},
-                    "datatype": "string",
-                    "description": null,
-                    "exportable": false,
-                    "fieldname": null,
-                    "graph_id": "dd19a93a-0202-11ed-a511-0050568377a0",
-                    "hascustomalias": false,
-                    "is_collector": false,
-                    "isrequired": false,
-                    "issearchable": true,
-                    "istopnode": false,
-                    "name": "Ranking Detail",
-                    "nodegroup_id": "dd19acbe-0202-11ed-a511-0050568377a0",
-                    "nodeid": "dd1a2874-0202-11ed-a511-0050568377a0",
-                    "ontologyclass": "http://www.ics.forth.gr/isl/CRMsci/S6_Data_Evaluation",
-                    "parentproperty": "http://www.ics.forth.gr/isl/CRMsci/O11i_was_described_by",
-                    "sortorder": 0,
-                    "sourcebranchpublication_id": null
-                },
-                {
-                    "alias": "maximum_time",
-                    "config": {
-                        "en": ""
-                    },
-                    "datatype": "string",
-                    "description": null,
-                    "exportable": false,
-                    "fieldname": null,
-                    "graph_id": "dd19a93a-0202-11ed-a511-0050568377a0",
-                    "hascustomalias": false,
-                    "is_collector": false,
-                    "isrequired": false,
-                    "issearchable": true,
-                    "istopnode": false,
-                    "name": "Maximum Time",
-                    "nodegroup_id": "dd1a0024-0202-11ed-a511-0050568377a0",
-                    "nodeid": "dd1a29d2-0202-11ed-a511-0050568377a0",
-                    "ontologyclass": "http://www.cidoc-crm.org/cidoc-crm/E18_Physical_Thing",
-                    "parentproperty": "http://www.cidoc-crm.org/cidoc-crm/P92_brought_into_existence",
                     "sortorder": 0,
                     "sourcebranchpublication_id": null
                 },
@@ -2061,29 +2550,6 @@
                     "sourcebranchpublication_id": null
                 },
                 {
-                    "alias": "maximum_time_unit",
-                    "config": {
-                        "en": ""
-                    },
-                    "datatype": "semantic",
-                    "description": null,
-                    "exportable": false,
-                    "fieldname": null,
-                    "graph_id": "dd19a93a-0202-11ed-a511-0050568377a0",
-                    "hascustomalias": false,
-                    "is_collector": false,
-                    "isrequired": false,
-                    "issearchable": true,
-                    "istopnode": false,
-                    "name": "Maximum Time Unit",
-                    "nodegroup_id": "dd1a0024-0202-11ed-a511-0050568377a0",
-                    "nodeid": "dd1a2c84-0202-11ed-a511-0050568377a0",
-                    "ontologyclass": "http://www.cidoc-crm.org/cidoc-crm/E58_Measurement_Unit",
-                    "parentproperty": "http://www.cidoc-crm.org/cidoc-crm/P2_has_type",
-                    "sortorder": 0,
-                    "sourcebranchpublication_id": null
-                },
-                {
                     "alias": "detailed_location",
                     "config": {},
                     "datatype": "string",
@@ -2101,29 +2567,6 @@
                     "nodeid": "dd1a2dce-0202-11ed-a511-0050568377a0",
                     "ontologyclass": "http://www.cidoc-crm.org/cidoc-crm/E62_String",
                     "parentproperty": "http://www.cidoc-crm.org/cidoc-crm/P3_has_note",
-                    "sortorder": 0,
-                    "sourcebranchpublication_id": null
-                },
-                {
-                    "alias": "minimum_time",
-                    "config": {
-                        "en": ""
-                    },
-                    "datatype": "string",
-                    "description": null,
-                    "exportable": false,
-                    "fieldname": null,
-                    "graph_id": "dd19a93a-0202-11ed-a511-0050568377a0",
-                    "hascustomalias": false,
-                    "is_collector": false,
-                    "isrequired": false,
-                    "issearchable": true,
-                    "istopnode": false,
-                    "name": "Minimum Time",
-                    "nodegroup_id": "dd1a0024-0202-11ed-a511-0050568377a0",
-                    "nodeid": "dd1a3080-0202-11ed-a511-0050568377a0",
-                    "ontologyclass": "http://www.cidoc-crm.org/cidoc-crm/E18_Physical_Thing",
-                    "parentproperty": "http://www.cidoc-crm.org/cidoc-crm/P92_brought_into_existence",
                     "sortorder": 0,
                     "sourcebranchpublication_id": null
                 },
@@ -2153,8 +2596,8 @@
             "publication": {
                 "graph_id": "dd19a93a-0202-11ed-a511-0050568377a0",
                 "notes": null,
-                "publicationid": "39b2f1a2-41ee-11ee-8d03-080027b7463b",
-                "published_time": "2023-08-23T14:49:52.111"
+                "publicationid": "3f48683c-46b1-11ee-81bc-080027b7463b",
+                "published_time": "2023-08-29T16:15:57.993"
             },
             "relatable_resource_model_ids": [],
             "resource_2_resource_constraints": [],
@@ -2188,7 +2631,7 @@
     ],
     "metadata": {
         "db": "PostgreSQL 15.3 on x86_64-pc-linux-gnu, compiled by gcc (GCC) 11.3.1 20221121 (Red Hat 11.3.1-4), 64-bit",
-        "git hash": "866134572 2023-07-27 09:40:45 -0700",
+        "git hash": "857a693c6 2023-08-28 11:26:52 -0700",
         "os": "Linux",
         "os version": "5.14.0-333.el9.x86_64"
     }
