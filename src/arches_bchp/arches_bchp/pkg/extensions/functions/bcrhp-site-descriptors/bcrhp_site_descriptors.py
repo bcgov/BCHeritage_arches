@@ -55,9 +55,9 @@ class BCRHPSiteDescriptors(AbstractPrimaryDescriptorsFunction):
     # @todo Change these to aliases
     _name_nodes = [aliases.NAME_TYPE, aliases.NAME]
     _sig_event_nodes = [aliases.START_YEAR, aliases.START_YEAR_QUALIFIER, aliases.SIGNIFICANT_EVENTS]
-    _popup_nodes = [aliases.BORDEN_NUMBER, 'address', aliases.RECOGNITION_TYPE]
-    _card_nodes = [aliases.BORDEN_NUMBER, aliases.CITY, aliases.RECOGNITION_TYPE, 'construction_date']
-    _address_nodes = [['street_number', 'street_name'],[aliases.CITY,'postal_code']]
+    _popup_nodes = [aliases.BORDEN_NUMBER, 'address']
+    _card_nodes = [aliases.BORDEN_NUMBER, aliases.CITY,  'construction_date']
+    _address_nodes = [['street_address'],[aliases.CITY,'postal_code']]
 
 
     # Initializes the static nodes and datatypes data
@@ -199,7 +199,7 @@ class BCRHPSiteDescriptors(AbstractPrimaryDescriptorsFunction):
         for tile in models.TileModel.objects.filter(
                 nodegroup_id=BCRHPSiteDescriptors._nodes[aliases.NAME].nodegroup_id
         ).filter(resourceinstance_id=resource.resourceinstanceid).all():
-            if name_type_datatype.get_display_value(tile, BCRHPSiteDescriptors._nodes[aliases.NAME_TYPE]) == 'Primary':
+            if name_type_datatype.get_display_value(tile, BCRHPSiteDescriptors._nodes[aliases.NAME_TYPE]) == 'Common':
                 name = name_datatype.get_display_value(tile, BCRHPSiteDescriptors._nodes[aliases.NAME])
                 if display_value and name:
                     display_value = display_value + ",<br>"

@@ -217,7 +217,7 @@
                         </div>
 
                     <div class="grid-row-1 grid-col-3 bc-details-images">
-                    <!-- ko let: { photocard: getCardWithName('Site Images') } -->
+                    <!-- ko let: { photocard: getCardWithName('Images') } -->
                     <!-- ko let: { photoWidget: getWidgetWithLabel(photocard, 'Site Image') } -->
                         <!-- ko let: { titleWidget: getWidgetWithLabel(photocard, 'Image Title') } -->
                         <!-- ko let: { descriptionWidget: getWidgetWithLabel(photocard, 'Image Description') } -->
@@ -247,7 +247,7 @@
                     <!-- /ko -->
                 </div>
                     <div class="bcrhp-grid-item grid-col-1 grid-row-2">
-                        <!-- ko let: { card: getCardWithName(['BC Heritage Resource Place', 'BC Property Address']) } -->
+                        <!-- ko let: { card: getCardWithName(['Heritage Site Location', 'BC Property Address']) } -->
                         <!-- ko foreach: { data: card.tiles, as: 'tile' } -->
                         <dl class="dl-vertical dl-vertical-bc"
                             data-bind="css: {'provisional': ko.unwrap(tile.provisionaledits) !== null && tile.userisreviewer === false}">
@@ -293,7 +293,7 @@
                         <!-- /ko -->
                     </div>
                     <div class="bcrhp-grid-item grid-col-1 grid-row-3">
-                        <!-- ko let: { card: getCardWithName('Significant Events') } -->
+                        <!-- ko let: { card: getCardWithName('Chronology') } -->
                         <!-- ko foreach: { data: card.tiles, as: 'tile' } -->
                         <dl class="dl-vertical dl-vertical-bc"
                             data-bind="css: {'provisional': ko.unwrap(tile.provisionaledits) !== null && tile.userisreviewer === false}">
@@ -316,7 +316,7 @@
                     </div>
                     <div class="bcrhp-grid-item grid-col-2 grid-row-3">
                         <!-- ko let: { card: getCardWithName(['Official Recognition Information', 'Official Recognition Details']) } -->
-                        <!-- ko let: { widget: getWidgetWithLabel(card, 'Authority') } -->
+                        <!-- ko let: { widget: getWidgetWithLabel(card, 'Legislative Act') } -->
                         <!-- ko if: !!card.tiles && card.tiles().length > 0 -->
                         <dl class="dl-vertical dl-vertical-bc">
                             <dt data-bind="text: widget.label()"></dt>
