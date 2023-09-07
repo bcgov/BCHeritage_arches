@@ -14,9 +14,6 @@ module.exports = () => {
             resolve(merge(commonWebpackConfig, {
                 mode: 'development',
                 // devtool: 'inline-source-map',
-                resolve: {
-                    symlinks: true
-                },
                 output: {
                     chunkFilename: Path.join('js', '[name].chunk.js'),
                 },
@@ -25,14 +22,20 @@ module.exports = () => {
                     client: {
                         overlay: {
                             errors: true,
-                            warnings: true,
+                            warnings: false,
+                            runtimeErrors: (error) => {
+                                if (error.message === "ResizeObserver loop limit exceeded") {
+                                  return false;
+                                }
+                                return true;
+                            },
                         },
                     },
                     hot: true,
-                    host: 'rhel9.local',
+                    host: '0.0.0.0',
                     devMiddleware: {
                         index: true,
-                        publicPath: commonWebpackConfig.output.publicPath,
+                        publicPath: commonWebpackConfig.STATIC_URL,
                         writeToDisk: true,
                     },
                     port: commonWebpackConfig.WEBPACK_DEVELOPMENT_SERVER_PORT,
