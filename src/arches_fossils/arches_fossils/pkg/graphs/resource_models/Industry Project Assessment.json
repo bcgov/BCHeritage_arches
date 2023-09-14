@@ -388,7 +388,16 @@
                     "cardid": "9de5c571-f507-4df0-af17-a90204edd2db",
                     "component_id": "f05e4d3a-53c1-11e8-b0ea-784f435179ea",
                     "config": null,
-                    "constraints": [],
+                    "constraints": [
+                        {
+                            "card_id": "9de5c571-f507-4df0-af17-a90204edd2db",
+                            "constraintid": "ac26de2f-ca5f-4ae6-9e78-caf33144b960",
+                            "nodes": [
+                                "59c1b050-3c49-11ee-9268-080027b7463b"
+                            ],
+                            "uniquetoallinstances": true
+                        }
+                    ],
                     "cssclass": null,
                     "description": null,
                     "graph_id": "2aa724d1-ffd3-4823-8ff1-15a385b9a407",
@@ -2588,7 +2597,7 @@
                         "label": "Project Name",
                         "maxLength": "40",
                         "placeholder": {
-                            "en": "Enter text"
+                            "en": "Enter brief name - maximum 40 chars"
                         },
                         "uneditable": false,
                         "width": "100%"
@@ -8458,8 +8467,8 @@
             "publication": {
                 "graph_id": "2aa724d1-ffd3-4823-8ff1-15a385b9a407",
                 "notes": null,
-                "publicationid": "06f82ddc-41ed-11ee-87b5-080027b7463b",
-                "published_time": "2023-08-23T14:41:17.504"
+                "publicationid": "fbe8c68c-4916-11ee-9962-080027b7463b",
+                "published_time": "2023-09-01T17:29:15.950"
             },
             "relatable_resource_model_ids": [],
             "resource_2_resource_constraints": [],
@@ -8495,7 +8504,7 @@
     ],
     "metadata": {
         "db": "PostgreSQL 15.3 on x86_64-pc-linux-gnu, compiled by gcc (GCC) 11.3.1 20221121 (Red Hat 11.3.1-4), 64-bit",
-        "git hash": "866134572 2023-07-27 09:40:45 -0700",
+        "git hash": "857a693c6 2023-08-28 11:26:52 -0700",
         "os": "Linux",
         "os version": "5.14.0-333.el9.x86_64"
     }

@@ -22,7 +22,7 @@
                     "instructions": {
                         "en": ""
                     },
-                    "is_editable": false,
+                    "is_editable": true,
                     "name": {
                         "en": "Reference Link"
                     },
@@ -49,7 +49,7 @@
                     "instructions": {
                         "en": ""
                     },
-                    "is_editable": false,
+                    "is_editable": true,
                     "name": {
                         "en": "Publication Identifier"
                     },
@@ -76,7 +76,7 @@
                     "instructions": {
                         "en": "Enter a description for the reference."
                     },
-                    "is_editable": false,
+                    "is_editable": true,
                     "name": {
                         "en": "Publication Details"
                     },
@@ -103,7 +103,7 @@
                     "instructions": {
                         "en": "Select the author(s) or corporate author"
                     },
-                    "is_editable": false,
+                    "is_editable": true,
                     "name": {
                         "en": "Authors"
                     },
@@ -132,7 +132,7 @@
                     "instructions": {
                         "en": "Upload pdf(s) of the reference."
                     },
-                    "is_editable": false,
+                    "is_editable": true,
                     "name": {
                         "en": "Publication File"
                     },
@@ -215,7 +215,7 @@
                     "instructions": {
                         "en": ""
                     },
-                    "is_editable": false,
+                    "is_editable": true,
                     "name": {
                         "en": "Historical Values"
                     },
@@ -1080,12 +1080,12 @@
                     },
                     "function_id": "60000000-0000-0000-0000-000000001003",
                     "graph_id": "3caf329f-b8f7-11e6-84a5-026d961c88e6",
-                    "id": "5185af88-7c2f-41eb-b703-2488e8dc5274"
+                    "id": "0ac76df9-549a-465a-93d0-cb89b61a5c38"
                 }
             ],
             "graphid": "3caf329f-b8f7-11e6-84a5-026d961c88e6",
             "iconclass": "fa fa-book",
-            "is_editable": false,
+            "is_editable": true,
             "isresource": true,
             "jsonldcontext": null,
             "name": {
@@ -1771,7 +1771,7 @@
                             {
                                 "graphid": "605b0bbc-8661-4cf2-b340-df743a8c5f89",
                                 "inverseRelationshipConcept": "ac41d9be-79db-4256-b368-2f4559cfbe55",
-                                "name": "BC Fossil Contributor",
+                                "name": "Contributor",
                                 "relationshipCollection": "00000000-0000-0000-0000-000000000005",
                                 "relationshipConcept": "ac41d9be-79db-4256-b368-2f4559cfbe55",
                                 "useOntologyRelationship": false
@@ -1783,7 +1783,29 @@
                                     {
                                         "terms": {
                                             "graph_id": [
-                                                "605b0bbc-8661-4cf2-b340-df743a8c5f89"
+                                                "3ffba33a-9c20-11ec-92da-5254008afee6",
+                                                "3e6a2880-14d4-11ec-9df0-5254008afee6",
+                                                "3eec83c6-9dd5-11ed-a81c-5254004d77d3",
+                                                "605b0bbc-8661-4cf2-b340-df743a8c5f89",
+                                                "c3923080-d21e-42d7-b8f1-637b9d0ab63c",
+                                                "0ad40a02-0b01-11ee-b317-5254004d77d3",
+                                                "86700278-117b-11ec-90d4-5254008afee6",
+                                                "3bad9ec8-a35e-11ed-884a-5254004d77d3",
+                                                "4d6c9226-10c6-11ec-9a94-5254008afee6",
+                                                "3caf329f-b8f7-11e6-84a5-026d961c88e6",
+                                                "d735935c-3ddb-11ed-814d-5254008afee6",
+                                                "109a0272-d968-11ed-b8ae-5254004d77d3",
+                                                "ff623370-fa12-11e6-b98b-6c4008b05c4c",
+                                                "67574dc6-9c20-11ec-964d-5254008afee6",
+                                                "fac1b1b4-1034-11ec-8a7a-5254008afee6",
+                                                "2aa724d1-ffd3-4823-8ff1-15a385b9a407",
+                                                "df3ee1ae-9c1c-11ec-964d-5254008afee6",
+                                                "7f2c2082-6c51-11ed-9b7d-5254004d77d3",
+                                                "5b52dcac-9c1b-11ec-964d-5254008afee6",
+                                                "82efcd14-82db-11ec-b8e6-5254008afee6",
+                                                "8a209060-9c20-11ec-955e-5254008afee6",
+                                                "3746ffc8-a878-11ec-ab9a-5254008afee6",
+                                                "dd19a93a-0202-11ed-a511-0050568377a0"
                                             ]
                                         }
                                     }
@@ -1842,7 +1864,7 @@
                                 "should": []
                             }
                         },
-                        "searchString": "http://arches7.local/int/arches-fossils/search?paging-filter=1&tiles=true&format=tilecsv&reportlink=false&precision=6&total=1526&resource-type-filter=%5B%7B%22graphid%22%3A%22605b0bbc-8661-4cf2-b340-df743a8c5f89%22%2C%22name%22%3A%22BC+Fossil+Contributor%22%2C%22inverted%22%3Afalse%7D%5D&advanced-search=%5B%7B%22op%22%3A%22and%22%2C%22c4eca2de-9dea-11ed-9a7b-5254004d77d3%22%3A%7B%22op%22%3A%22%22%2C%22val%22%3A%22%22%7D%2C%22e2f1c29a-c500-11ed-9089-5254004d77d3%22%3A%7B%22op%22%3A%22%22%2C%22val%22%3A%22d71acc49-0f84-4e92-af66-ac576eaea58f%22%7D%2C%22a5b2cd72-c4f4-11ed-a06d-5254004d77d3%22%3A%7B%22op%22%3A%22~%22%2C%22lang%22%3A%22en%22%2C%22val%22%3A%22%22%7D%2C%22b5ed0072-c4f4-11ed-94de-5254004d77d3%22%3A%7B%22op%22%3A%22~%22%2C%22lang%22%3A%22en%22%2C%22val%22%3A%22%22%7D%2C%2299643f1e-9e4e-11ed-b6d5-5254004d77d3%22%3A%7B%22val%22%3A%22%22%7D%7D%5D"
+                        "searchString": "http://rhel9/int/arches-fossils/search?paging-filter=1&tiles=true&format=tilecsv&reportlink=false&precision=6&total=0&advanced-search=%5B%7B%22op%22%3A%22and%22%2C%22c4eca2de-9dea-11ed-9a7b-5254004d77d3%22%3A%7B%22op%22%3A%22eq%22%2C%22val%22%3A%22%22%7D%2C%22e2f1c29a-c500-11ed-9089-5254004d77d3%22%3A%7B%22op%22%3A%22eq%22%2C%22val%22%3A%22d71acc49-0f84-4e92-af66-ac576eaea58f%22%7D%2C%22c4ec9b2c-9dea-11ed-9a7b-5254004d77d3%22%3A%7B%22op%22%3A%22~%22%2C%22lang%22%3A%22en%22%2C%22val%22%3A%22%22%7D%2C%22c4eca13a-9dea-11ed-9a7b-5254004d77d3%22%3A%7B%22op%22%3A%22~%22%2C%22lang%22%3A%22en%22%2C%22val%22%3A%22%22%7D%2C%22a5b2cd72-c4f4-11ed-a06d-5254004d77d3%22%3A%7B%22op%22%3A%22~%22%2C%22lang%22%3A%22en%22%2C%22val%22%3A%22%22%7D%2C%22b5ed0072-c4f4-11ed-94de-5254004d77d3%22%3A%7B%22op%22%3A%22~%22%2C%22lang%22%3A%22en%22%2C%22val%22%3A%22%22%7D%2C%22009ba8da-faf6-11ed-ac37-5254004d77d3%22%3A%7B%22op%22%3A%22%22%2C%22val%22%3A%22%22%7D%2C%2299643f1e-9e4e-11ed-b6d5-5254004d77d3%22%3A%7B%22val%22%3A%22%22%7D%7D%5D&sort-results=asc"
                     },
                     "datatype": "resource-instance-list",
                     "description": null,
@@ -2071,8 +2093,8 @@
             "publication": {
                 "graph_id": "3caf329f-b8f7-11e6-84a5-026d961c88e6",
                 "notes": null,
-                "publicationid": "9a44d46a-36f7-11ee-806a-0050568377a0",
-                "published_time": "2023-08-09T15:59:16.808"
+                "publicationid": "f5d69832-4911-11ee-b755-080027b7463b",
+                "published_time": "2023-09-01T16:53:18.281"
             },
             "relatable_resource_model_ids": [],
             "resource_2_resource_constraints": [],
@@ -2105,9 +2127,9 @@
         }
     ],
     "metadata": {
-        "db": "PostgreSQL 12.11 on x86_64-pc-linux-gnu, compiled by gcc (GCC) 4.8.5 20150623 (Red Hat 4.8.5-44), 64-bit",
-        "git hash": "8661345 2023-07-27 09:40:45 -0700",
+        "db": "PostgreSQL 15.3 on x86_64-pc-linux-gnu, compiled by gcc (GCC) 11.3.1 20221121 (Red Hat 11.3.1-4), 64-bit",
+        "git hash": "857a693c6 2023-08-28 11:26:52 -0700",
         "os": "Linux",
-        "os version": "3.10.0-1160.92.1.el7.x86_64"
+        "os version": "5.14.0-333.el9.x86_64"
     }
 }
