@@ -40,9 +40,9 @@
                             "card_id": "7e71fa57-b986-406b-bde6-3a8996937fe8",
                             "constraintid": "f3445b24-505e-4d78-b03b-36c53d96ae2c",
                             "nodes": [
-                                "7d3bcc42-3b8a-11ee-a93e-080027b7463b",
-                                "7789d580-3b87-11ee-a701-080027b7463b",
                                 "488c680a-3b88-11ee-a701-080027b7463b",
+                                "7789d580-3b87-11ee-a701-080027b7463b",
+                                "7d3bcc42-3b8a-11ee-a93e-080027b7463b",
                                 "9e49c774-3b88-11ee-a701-080027b7463b"
                             ],
                             "uniquetoallinstances": true
@@ -61,7 +61,7 @@
                     "instructions": {
                         "en": ""
                     },
-                    "is_editable": true,
+                    "is_editable": false,
                     "name": {
                         "en": "Authority"
                     },
@@ -300,12 +300,12 @@
                     },
                     "function_id": "60000000-0000-0000-0000-000000000001",
                     "graph_id": "52dd40f2-1dee-45d2-b72c-234c8cbb5418",
-                    "id": "fcb4a22b-904e-449c-a8ab-a3dc4c9d32d8"
+                    "id": "6d165cd1-b18f-4e5c-9432-47d7b6e7587e"
                 }
             ],
             "graphid": "52dd40f2-1dee-45d2-b72c-234c8cbb5418",
             "iconclass": "fa fa-book",
-            "is_editable": true,
+            "is_editable": false,
             "isresource": true,
             "jsonldcontext": null,
             "name": {
@@ -515,8 +515,8 @@
             "publication": {
                 "graph_id": "52dd40f2-1dee-45d2-b72c-234c8cbb5418",
                 "notes": null,
-                "publicationid": "ee96ee80-3b8f-11ee-a455-080027b7463b",
-                "published_time": "2023-08-15T12:19:46.429"
+                "publicationid": "dfe78fca-5be2-11ee-8616-080027b7463b",
+                "published_time": "2023-09-25T15:34:07.229"
             },
             "relatable_resource_model_ids": [],
             "resource_2_resource_constraints": [],
@@ -542,7 +542,7 @@
                 "sortorder": 0,
                 "sourcebranchpublication_id": null
             },
-            "slug": null,
+            "slug": "legislative_act",
             "subtitle": {
                 "en": ""
             },
@@ -552,7 +552,7 @@
     ],
     "metadata": {
         "db": "PostgreSQL 15.3 on x86_64-pc-linux-gnu, compiled by gcc (GCC) 11.3.1 20221121 (Red Hat 11.3.1-4), 64-bit",
-        "git hash": "866134572 2023-07-27 09:40:45 -0700",
+        "git hash": "e26d7a472 2023-09-22 08:02:04 -0700",
         "os": "Linux",
         "os version": "5.14.0-333.el9.x86_64"
     }
