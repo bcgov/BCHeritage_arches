@@ -7,6 +7,7 @@ import os
 import sys
 import arches
 import inspect
+import semantic_version
 from django.utils.translation import gettext_lazy as _
 
 try:
@@ -15,16 +16,11 @@ except ImportError:
     pass
 
 APP_NAME = 'arches_fossils'
+APP_VERSION = semantic_version.Version(major=0, minor=0, patch=0)
 APP_ROOT = os.path.dirname(os.path.abspath(inspect.getfile(inspect.currentframe())))
-STATICFILES_DIRS =  (
-                        os.path.join(APP_ROOT, 'media', 'build'),
-                        os.path.join(APP_ROOT, 'media'),
-                    ) + STATICFILES_DIRS
+MIN_ARCHES_VERSION = arches.__version__
+MAX_ARCHES_VERSION = arches.__version__
 
-# This is the namespace to use for export of data (for RDF/XML for example)
-# Ideally this should point to the url where you host your site
-# Make sure to use a trailing slash
-# ARCHES_NAMESPACE_FOR_DATA_EXPORT = "http://localhost:8000/"
 
 WEBPACK_LOADER = {
     "DEFAULT": {
@@ -37,25 +33,23 @@ DATATYPE_LOCATIONS.append('arches_fossils.datatypes')
 FUNCTION_LOCATIONS.append('arches_fossils.functions')
 ETL_MODULE_LOCATIONS.append('arches_fossils.etl_modules')
 SEARCH_COMPONENT_LOCATIONS.append('arches_fossils.search_components')
-TEMPLATES[0]['DIRS'].append(os.path.join(APP_ROOT, 'functions', 'templates'))
-TEMPLATES[0]['DIRS'].append(os.path.join(APP_ROOT, 'widgets', 'templates'))
-TEMPLATES[0]['DIRS'].insert(0, os.path.join(APP_ROOT, 'templates'))
+# TEMPLATES[0]['DIRS'].append(os.path.join(APP_ROOT, 'functions', 'templates'))
+# TEMPLATES[0]['DIRS'].append(os.path.join(APP_ROOT, 'widgets', 'templates'))
+# TEMPLATES[0]['DIRS'].insert(0, os.path.join(APP_ROOT, 'templates'))
 
 LOCALE_PATHS.append(os.path.join(APP_ROOT, 'locale'))
 
 FILE_TYPE_CHECKING = False
 FILE_TYPES = ["bmp", "gif", "jpg", "jpeg", "pdf", "png", "psd", "rtf", "tif", "tiff", "xlsx", "csv", "zip"]
+FILENAME_GENERATOR = "arches_fossils.util.storage_filename_generator.generate_filename"
 
-# # SECURITY WARNING: keep the secret key used in production secret!
-# SECRET_KEY = '{{ jenkins_secret_key }}'
+# SECURITY WARNING: keep the secret key used in production secret!
+# SECRET_KEY = ''
 
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
 ROOT_URLCONF = 'arches_fossils.urls'
-
-# Modify this line as needed for your project to connect to elasticsearch with a password that you generate
-ELASTICSEARCH_CONNECTION_OPTIONS = {"timeout": 30, "verify_certs": False, "basic_auth": ("arches_fossils", "arches_fossils")}
 
 # a prefix to append to all elasticsearch indexes, note: must be lower case
 ELASTICSEARCH_PREFIX = 'arches_fossils'
@@ -73,29 +67,6 @@ KIBANA_CONFIG_BASEPATH = "kibana"  # must match Kibana config.yml setting (serve
 
 LOAD_DEFAULT_ONTOLOGY = False
 LOAD_PACKAGE_ONTOLOGIES = True
-
-# DATABASES = {
-#     "default": {
-#         "ATOMIC_REQUESTS": False,
-#         "AUTOCOMMIT": True,
-#         "CONN_MAX_AGE": 0,
-#         "ENGINE": "django.contrib.gis.db.backends.postgis",
-#         "HOST": "{ db_host }",
-#         "NAME": "{ db_name }",
-#         "OPTIONS": {},
-#         "PASSWORD": "{ db_password }",
-#         "PORT": "5432",
-#         "POSTGIS_TEMPLATE": "template_postgis",
-#         "TEST": {
-#             "CHARSET": None,
-#             "COLLATION": None,
-#             "MIRROR": None,
-#             "NAME": None
-#         },
-#         "TIME_ZONE": None,
-#         "USER": "{ db_username }"
-#     }
-# }
 
 INSTALLED_APPS = (
     "webpack_loader",
@@ -117,10 +88,26 @@ INSTALLED_APPS = (
     "django_celery_results",
     "compressor",
     # "silk",
+    "storages",
     "arches_fossils",
 )
 
-# ALLOWED_HOSTS = [{ allowed_hosts }]
+ARCHES_APPLICATIONS = ()
+
+STATICFILES_DIRS = build_staticfiles_dirs(
+    root_dir=ROOT_DIR,
+    app_root=APP_ROOT,
+    arches_applications=ARCHES_APPLICATIONS,
+)
+
+TEMPLATES = build_templates_config(
+    root_dir=ROOT_DIR,
+    debug=DEBUG,
+    app_root=APP_ROOT,
+    arches_applications=ARCHES_APPLICATIONS,
+)
+
+# ALLOWED_HOSTS = []
 
 SYSTEM_SETTINGS_LOCAL_PATH = os.path.join(APP_ROOT, 'system_settings', 'System_Settings.json')
 WSGI_APPLICATION = 'arches_fossils.wsgi.application'
@@ -144,6 +131,8 @@ STATIC_ROOT = os.path.join(APP_ROOT, "staticfiles")
 
 # when hosting Arches under a sub path set this value to the sub path eg : "/{sub_path}/"
 FORCE_SCRIPT_NAME = None
+
+OVERRIDE_RESOURCE_MODEL_LOCK = False
 
 RESOURCE_IMPORT_LOG = os.path.join(APP_ROOT, 'logs', 'resource_import.log')
 DEFAULT_RESOURCE_IMPORT_USER = {'username': 'admin', 'userid': 1}
@@ -201,7 +190,7 @@ HIDE_EMPTY_NODES_IN_REPORT = True
 BYPASS_UNIQUE_CONSTRAINT_TILE_VALIDATION = False
 BYPASS_REQUIRED_VALUE_TILE_VALIDATION = False
 
-DATE_IMPORT_EXPORT_FORMAT = "%Y-%m-%d"  # Custom date format for dates imported from and exported to csv
+DATE_IMPORT_EXPORT_FORMAT = "%Y-%m-%d" # Custom date format for dates imported from and exported to csv
 
 # This is used to indicate whether the data in the CSV and SHP exports should be
 # ordered as seen in the resource cards or not.
@@ -215,7 +204,7 @@ GRAPH_MODEL_CACHE_TIMEOUT = None
 
 OAUTH_CLIENT_ID = ''  #'9JCibwrWQ4hwuGn5fu2u1oRZSs9V6gK8Vu8hpRC4'
 
-APP_TITLE = 'BC Government | Fossils Data Management'
+APP_TITLE = 'BC Government | Fossil Management System'
 COPYRIGHT_TEXT = 'All Rights Reserved.'
 COPYRIGHT_YEAR = '2019'
 
@@ -263,7 +252,7 @@ CANTALOUPE_HTTP_ENDPOINT = "http://localhost:8182/"
 ACCESSIBILITY_MODE = False
 
 # By setting RESTRICT_MEDIA_ACCESS to True, media file requests outside of Arches will checked against nodegroup permissions.
-RESTRICT_MEDIA_ACCESS = False
+RESTRICT_MEDIA_ACCESS = True
 
 # By setting RESTRICT_CELERY_EXPORT_FOR_ANONYMOUS_USER to True, if the user is attempting
 # to export search results above the SEARCH_EXPORT_IMMEDIATE_DOWNLOAD_THRESHOLD
@@ -298,10 +287,10 @@ LANGUAGE_CODE = "en"
 # {langcode}-{regioncode} eg: en, en-gb ....
 # a list of language codes can be found here http://www.i18nguy.com/unicode/language-identifiers.html
 LANGUAGES = [
-    #   ('de', _('German')),
-       ('en', _('English')),
-    #   ('en-gb', _('British English')),
-    #   ('es', _('Spanish')),
+#   ('de', _('German')),
+   ('en', _('English')),
+#   ('en-gb', _('British English')),
+#   ('es', _('Spanish')),
 ]
 
 # override this to permenantly display/hide the language switcher
@@ -325,14 +314,12 @@ except ImportError as e:
 
 # returns an output that can be read by NODEJS
 if __name__ == "__main__":
-    print(
-        json.dumps({
-            'ARCHES_NAMESPACE_FOR_DATA_EXPORT': ARCHES_NAMESPACE_FOR_DATA_EXPORT,
-            'STATIC_URL': STATIC_URL,
-            'ROOT_DIR': ROOT_DIR,
-            'APP_ROOT': APP_ROOT,
-            'WEBPACK_DEVELOPMENT_SERVER_PORT': WEBPACK_DEVELOPMENT_SERVER_PORT,
-        })
+    transmit_webpack_django_config(
+        root_dir=ROOT_DIR,
+        app_root=APP_ROOT,
+        arches_applications=ARCHES_APPLICATIONS,
+        public_server_address=PUBLIC_SERVER_ADDRESS,
+        static_url=STATIC_URL,
+        webpack_development_server_port=WEBPACK_DEVELOPMENT_SERVER_PORT,
     )
-    sys.stdout.flush()
 
