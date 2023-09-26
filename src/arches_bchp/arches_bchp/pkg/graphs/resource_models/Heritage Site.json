@@ -22,7 +22,7 @@
                     "instructions": {
                         "en": "Enter a description and description type for the resource."
                     },
-                    "is_editable": true,
+                    "is_editable": false,
                     "name": {
                         "en": "Remarks"
                     },
@@ -3671,6 +3671,18 @@
             "functions_x_graphs": [
                 {
                     "config": {
+                        "node_id": "703bbe62-3d24-11ee-93bd-080027b7463b",
+                        "triggering_nodegroups": [
+                            "0a883b80-2fb6-11ed-be5f-5254008afee6"
+                        ],
+                        "unique_value": true
+                    },
+                    "function_id": "60000000-0000-0000-0000-000000002001",
+                    "graph_id": "cef9c510-e3e6-4057-ac08-89ad926180b4",
+                    "id": "3d996acc-80fc-446e-bbd4-1de06d748a44"
+                },
+                {
+                    "config": {
                         "class_name": "BCRHPSiteDescriptors",
                         "descriptor_types": {
                             "description": {
@@ -3711,19 +3723,7 @@
                     },
                     "function_id": "60000000-0000-0000-0000-000000001002",
                     "graph_id": "cef9c510-e3e6-4057-ac08-89ad926180b4",
-                    "id": "39842ca9-5979-4536-91f2-b80484ab28ed"
-                },
-                {
-                    "config": {
-                        "node_id": "703bbe62-3d24-11ee-93bd-080027b7463b",
-                        "triggering_nodegroups": [
-                            "0a883b80-2fb6-11ed-be5f-5254008afee6"
-                        ],
-                        "unique_value": true
-                    },
-                    "function_id": "60000000-0000-0000-0000-000000002001",
-                    "graph_id": "cef9c510-e3e6-4057-ac08-89ad926180b4",
-                    "id": "a0a47262-bd0a-44a0-9812-42f3d292c313"
+                    "id": "fe26731e-1d11-49be-beaf-a1c92c5caaaf"
                 }
             ],
             "graphid": "cef9c510-e3e6-4057-ac08-89ad926180b4",
@@ -3908,7 +3908,7 @@
                     },
                     "datatype": "string",
                     "description": null,
-                    "exportable": true,
+                    "exportable": false,
                     "fieldname": "STRATALOT",
                     "graph_id": "cef9c510-e3e6-4057-ac08-89ad926180b4",
                     "hascustomalias": false,
@@ -4272,10 +4272,12 @@
                 },
                 {
                     "alias": "legal_address_notes",
-                    "config": {},
+                    "config": {
+                        "en": ""
+                    },
                     "datatype": "string",
                     "description": null,
-                    "exportable": true,
+                    "exportable": false,
                     "fieldname": null,
                     "graph_id": "cef9c510-e3e6-4057-ac08-89ad926180b4",
                     "hascustomalias": false,
@@ -4497,7 +4499,7 @@
                     },
                     "datatype": "string",
                     "description": null,
-                    "exportable": true,
+                    "exportable": false,
                     "fieldname": "PID",
                     "graph_id": "cef9c510-e3e6-4057-ac08-89ad926180b4",
                     "hascustomalias": false,
@@ -4515,11 +4517,13 @@
                 },
                 {
                     "alias": "city",
-                    "config": {},
+                    "config": {
+                        "en": ""
+                    },
                     "datatype": "string",
                     "description": null,
-                    "exportable": false,
-                    "fieldname": null,
+                    "exportable": true,
+                    "fieldname": "city",
                     "graph_id": "cef9c510-e3e6-4057-ac08-89ad926180b4",
                     "hascustomalias": false,
                     "is_collector": false,
@@ -4564,8 +4568,8 @@
                     },
                     "datatype": "string",
                     "description": "The numeric part of the Street Address. Eg 1283, 11b.",
-                    "exportable": false,
-                    "fieldname": null,
+                    "exportable": true,
+                    "fieldname": "address",
                     "graph_id": "cef9c510-e3e6-4057-ac08-89ad926180b4",
                     "hascustomalias": false,
                     "is_collector": false,
@@ -4673,7 +4677,7 @@
                     },
                     "datatype": "string",
                     "description": null,
-                    "exportable": true,
+                    "exportable": false,
                     "fieldname": "STRATAPLAN",
                     "graph_id": "cef9c510-e3e6-4057-ac08-89ad926180b4",
                     "hascustomalias": false,
@@ -4741,12 +4745,12 @@
                                 "should": []
                             }
                         },
-                        "searchString": "http://rhel9/int/arches-bchp/search?paging-filter=1&tiles=true&format=tilecsv&reportlink=false&precision=6&total=55&resource-type-filter=%5B%7B%22graphid%22%3A%2252dd40f2-1dee-45d2-b72c-234c8cbb5418%22%2C%22name%22%3A%22Legislative+Act%22%2C%22inverted%22%3Afalse%7D%5D&sort-results=asc"
+                        "searchString": "https://rhel9/int/arches-bchp/search?paging-filter=1&tiles=true&format=tilecsv&reportlink=false&precision=6&total=55&resource-type-filter=%5B%7B%22graphid%22%3A%2252dd40f2-1dee-45d2-b72c-234c8cbb5418%22%2C%22name%22%3A%22Legislative+Act%22%2C%22inverted%22%3Afalse%7D%5D&sort-results=asc"
                     },
                     "datatype": "resource-instance",
                     "description": null,
-                    "exportable": false,
-                    "fieldname": null,
+                    "exportable": true,
+                    "fieldname": "legact",
                     "graph_id": "cef9c510-e3e6-4057-ac08-89ad926180b4",
                     "hascustomalias": false,
                     "is_collector": false,
@@ -4791,7 +4795,7 @@
                     },
                     "datatype": "string",
                     "description": null,
-                    "exportable": true,
+                    "exportable": false,
                     "fieldname": "PLNNUM",
                     "graph_id": "cef9c510-e3e6-4057-ac08-89ad926180b4",
                     "hascustomalias": false,
@@ -4971,8 +4975,8 @@
                     },
                     "datatype": "concept",
                     "description": null,
-                    "exportable": false,
-                    "fieldname": null,
+                    "exportable": true,
+                    "fieldname": "regstatus",
                     "graph_id": "cef9c510-e3e6-4057-ac08-89ad926180b4",
                     "hascustomalias": false,
                     "is_collector": false,
@@ -4994,7 +4998,7 @@
                     },
                     "datatype": "string",
                     "description": null,
-                    "exportable": true,
+                    "exportable": false,
                     "fieldname": "RGNLDSTRCT",
                     "graph_id": "cef9c510-e3e6-4057-ac08-89ad926180b4",
                     "hascustomalias": false,
@@ -5017,7 +5021,7 @@
                             {
                                 "graphid": "aacf8bb6-3f6e-46d9-a551-b0749d7efffc",
                                 "inverseRelationshipConcept": "ac41d9be-79db-4256-b368-2f4559cfbe55",
-                                "name": "BC Local Government",
+                                "name": "Government",
                                 "relationshipCollection": "00000000-0000-0000-0000-000000000005",
                                 "relationshipConcept": "ac41d9be-79db-4256-b368-2f4559cfbe55",
                                 "useOntologyRelationship": false
@@ -5028,8 +5032,8 @@
                     },
                     "datatype": "resource-instance",
                     "description": null,
-                    "exportable": false,
-                    "fieldname": null,
+                    "exportable": true,
+                    "fieldname": "government",
                     "graph_id": "cef9c510-e3e6-4057-ac08-89ad926180b4",
                     "hascustomalias": false,
                     "is_collector": false,
@@ -5074,8 +5078,8 @@
                     },
                     "datatype": "concept",
                     "description": null,
-                    "exportable": false,
-                    "fieldname": null,
+                    "exportable": true,
+                    "fieldname": "enddate",
                     "graph_id": "cef9c510-e3e6-4057-ac08-89ad926180b4",
                     "hascustomalias": false,
                     "is_collector": false,
@@ -5157,11 +5161,13 @@
                 },
                 {
                     "alias": "reference_number",
-                    "config": {},
+                    "config": {
+                        "en": ""
+                    },
                     "datatype": "string",
                     "description": "What is this?",
-                    "exportable": false,
-                    "fieldname": null,
+                    "exportable": true,
+                    "fieldname": "refnum",
                     "graph_id": "cef9c510-e3e6-4057-ac08-89ad926180b4",
                     "hascustomalias": false,
                     "is_collector": false,
@@ -5206,8 +5212,8 @@
                     },
                     "datatype": "date",
                     "description": "Represents a single node in a graph",
-                    "exportable": false,
-                    "fieldname": "",
+                    "exportable": true,
+                    "fieldname": "desigend",
                     "graph_id": "cef9c510-e3e6-4057-ac08-89ad926180b4",
                     "hascustomalias": false,
                     "is_collector": false,
@@ -5250,8 +5256,8 @@
                     },
                     "datatype": "date",
                     "description": "Represents a single node in a graph",
-                    "exportable": false,
-                    "fieldname": "",
+                    "exportable": true,
+                    "fieldname": "desigstart",
                     "graph_id": "cef9c510-e3e6-4057-ac08-89ad926180b4",
                     "hascustomalias": false,
                     "is_collector": false,
@@ -5305,7 +5311,7 @@
                     },
                     "datatype": "string",
                     "description": null,
-                    "exportable": true,
+                    "exportable": false,
                     "fieldname": "MUNICIPAL",
                     "graph_id": "cef9c510-e3e6-4057-ac08-89ad926180b4",
                     "hascustomalias": false,
@@ -5328,8 +5334,8 @@
                     },
                     "datatype": "date",
                     "description": null,
-                    "exportable": false,
-                    "fieldname": null,
+                    "exportable": true,
+                    "fieldname": "startyear",
                     "graph_id": "cef9c510-e3e6-4057-ac08-89ad926180b4",
                     "hascustomalias": false,
                     "is_collector": false,
@@ -5478,11 +5484,13 @@
                 },
                 {
                     "alias": "significance_description",
-                    "config": {},
+                    "config": {
+                        "en": ""
+                    },
                     "datatype": "string",
                     "description": null,
-                    "exportable": false,
-                    "fieldname": null,
+                    "exportable": true,
+                    "fieldname": "sosdescrip",
                     "graph_id": "cef9c510-e3e6-4057-ac08-89ad926180b4",
                     "hascustomalias": false,
                     "is_collector": false,
@@ -5525,8 +5533,8 @@
                     },
                     "datatype": "concept",
                     "description": null,
-                    "exportable": false,
-                    "fieldname": null,
+                    "exportable": true,
+                    "fieldname": "sostype",
                     "graph_id": "cef9c510-e3e6-4057-ac08-89ad926180b4",
                     "hascustomalias": false,
                     "is_collector": false,
@@ -5706,8 +5714,8 @@
                     },
                     "datatype": "concept-list",
                     "description": null,
-                    "exportable": false,
-                    "fieldname": null,
+                    "exportable": true,
+                    "fieldname": "regtype",
                     "graph_id": "cef9c510-e3e6-4057-ac08-89ad926180b4",
                     "hascustomalias": false,
                     "is_collector": false,
@@ -5775,7 +5783,7 @@
                     },
                     "datatype": "string",
                     "description": null,
-                    "exportable": true,
+                    "exportable": false,
                     "fieldname": "DL",
                     "graph_id": "cef9c510-e3e6-4057-ac08-89ad926180b4",
                     "hascustomalias": false,
@@ -5798,8 +5806,8 @@
                     },
                     "datatype": "concept",
                     "description": null,
-                    "exportable": false,
-                    "fieldname": null,
+                    "exportable": true,
+                    "fieldname": "event",
                     "graph_id": "cef9c510-e3e6-4057-ac08-89ad926180b4",
                     "hascustomalias": false,
                     "is_collector": true,
@@ -5844,7 +5852,7 @@
                     },
                     "datatype": "string",
                     "description": null,
-                    "exportable": true,
+                    "exportable": false,
                     "fieldname": null,
                     "graph_id": "cef9c510-e3e6-4057-ac08-89ad926180b4",
                     "hascustomalias": false,
@@ -5867,7 +5875,7 @@
                     },
                     "datatype": "string",
                     "description": null,
-                    "exportable": true,
+                    "exportable": false,
                     "fieldname": "OWNRTYP",
                     "graph_id": "cef9c510-e3e6-4057-ac08-89ad926180b4",
                     "hascustomalias": false,
@@ -5885,11 +5893,13 @@
                 },
                 {
                     "alias": "name",
-                    "config": {},
+                    "config": {
+                        "en": ""
+                    },
                     "datatype": "string",
                     "description": null,
-                    "exportable": false,
-                    "fieldname": null,
+                    "exportable": true,
+                    "fieldname": "sitename",
                     "graph_id": "cef9c510-e3e6-4057-ac08-89ad926180b4",
                     "hascustomalias": false,
                     "is_collector": false,
@@ -5911,7 +5921,7 @@
                     },
                     "datatype": "string",
                     "description": null,
-                    "exportable": true,
+                    "exportable": false,
                     "fieldname": "PARCELTYPE",
                     "graph_id": "cef9c510-e3e6-4057-ac08-89ad926180b4",
                     "hascustomalias": false,
@@ -5943,8 +5953,8 @@
                     },
                     "datatype": "boolean",
                     "description": null,
-                    "exportable": false,
-                    "fieldname": null,
+                    "exportable": true,
+                    "fieldname": "recognized",
                     "graph_id": "cef9c510-e3e6-4057-ac08-89ad926180b4",
                     "hascustomalias": false,
                     "is_collector": false,
@@ -5991,7 +6001,7 @@
                     },
                     "datatype": "string",
                     "description": null,
-                    "exportable": true,
+                    "exportable": false,
                     "fieldname": "GROUP",
                     "graph_id": "cef9c510-e3e6-4057-ac08-89ad926180b4",
                     "hascustomalias": false,
@@ -6062,8 +6072,8 @@
                     },
                     "datatype": "borden-number-datatype",
                     "description": null,
-                    "exportable": false,
-                    "fieldname": null,
+                    "exportable": true,
+                    "fieldname": "borden",
                     "graph_id": "cef9c510-e3e6-4057-ac08-89ad926180b4",
                     "hascustomalias": false,
                     "is_collector": true,
@@ -6131,8 +6141,8 @@
                     },
                     "datatype": "concept",
                     "description": null,
-                    "exportable": false,
-                    "fieldname": null,
+                    "exportable": true,
+                    "fieldname": "nametype",
                     "graph_id": "cef9c510-e3e6-4057-ac08-89ad926180b4",
                     "hascustomalias": false,
                     "is_collector": false,
@@ -6175,8 +6185,8 @@
             "publication": {
                 "graph_id": "cef9c510-e3e6-4057-ac08-89ad926180b4",
                 "notes": null,
-                "publicationid": "93547344-5be2-11ee-a762-080027b7463b",
-                "published_time": "2023-09-25T15:31:58.758"
+                "publicationid": "192d18d6-5c9c-11ee-b10c-0050568377a0",
+                "published_time": "2023-09-26T13:40:00.210"
             },
             "relatable_resource_model_ids": [],
             "resource_2_resource_constraints": [],
@@ -6209,9 +6219,9 @@
         }
     ],
     "metadata": {
-        "db": "PostgreSQL 15.3 on x86_64-pc-linux-gnu, compiled by gcc (GCC) 11.3.1 20221121 (Red Hat 11.3.1-4), 64-bit",
-        "git hash": "e26d7a472 2023-09-22 08:02:04 -0700",
+        "db": "PostgreSQL 12.11 on x86_64-pc-linux-gnu, compiled by gcc (GCC) 4.8.5 20150623 (Red Hat 4.8.5-44), 64-bit",
+        "git hash": "6489cc1 2023-09-25 20:10:05 -0700",
         "os": "Linux",
-        "os version": "5.14.0-333.el9.x86_64"
+        "os version": "3.10.0-1160.92.1.el7.x86_64"
     }
 }

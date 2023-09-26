@@ -836,7 +836,7 @@
                     },
                     "function_id": "60000000-0000-0000-0000-000000000001",
                     "graph_id": "4e69d0a9-7af2-473f-929f-71d462ea32d1",
-                    "id": "1625e9fc-484e-465a-91e3-efa7b25c021b"
+                    "id": "f3a7bc88-d8e2-4c46-bff0-720715b9aeec"
                 }
             ],
             "graphid": "4e69d0a9-7af2-473f-929f-71d462ea32d1",
@@ -1056,7 +1056,7 @@
                                 "should": []
                             }
                         },
-                        "searchString": "http://rhel9/int/arches-bchp/search?paging-filter=1&tiles=true&format=tilecsv&reportlink=false&precision=6&resource-type-filter=%5B%7B%22graphid%22%3A%22412444dd-b13f-4289-9f04-5c7f1878ad4e%22%2C%22name%22%3A%22Government%2BPerson%22%2C%22inverted%22%3Afalse%7D%5D&sort-results=asc&advanced-search=%5B%7B%22op%22%3A%22and%22%2C%229e00e99c-a983-11ed-8958-5254004d77d3%22%3A%7B%22op%22%3A%22~%22%2C%22lang%22%3A%22en%22%2C%22val%22%3A%22%22%7D%2C%223892c576-a983-11ed-b7d3-5254004d77d3%22%3A%7B%22op%22%3A%22%22%2C%22val%22%3A%22d9b5cf00-f6e2-46a4-817e-9c2e372d0678%22%7D%7D%5D&total=3"
+                        "searchString": "https://rhel9/int/arches-bchp/search?paging-filter=1&tiles=true&format=tilecsv&reportlink=false&precision=6&resource-type-filter=%5B%7B%22graphid%22%3A%22412444dd-b13f-4289-9f04-5c7f1878ad4e%22%2C%22name%22%3A%22Government%2BPerson%22%2C%22inverted%22%3Afalse%7D%5D&sort-results=asc&advanced-search=%5B%7B%22op%22%3A%22and%22%2C%229e00e99c-a983-11ed-8958-5254004d77d3%22%3A%7B%22op%22%3A%22~%22%2C%22lang%22%3A%22en%22%2C%22val%22%3A%22%22%7D%2C%223892c576-a983-11ed-b7d3-5254004d77d3%22%3A%7B%22op%22%3A%22%22%2C%22val%22%3A%22d9b5cf00-f6e2-46a4-817e-9c2e372d0678%22%7D%7D%5D&total=3"
                     },
                     "datatype": "resource-instance",
                     "description": null,
@@ -1154,12 +1154,12 @@
                                 "should": []
                             }
                         },
-                        "searchString": "http://rhel9/int/arches-bchp/search?paging-filter=1&tiles=true&format=tilecsv&reportlink=false&precision=6&resource-type-filter=%5B%7B%22graphid%22%3A%22412444dd-b13f-4289-9f04-5c7f1878ad4e%22%2C%22name%22%3A%22Government%2BPerson%22%2C%22inverted%22%3Afalse%7D%5D&sort-results=asc&advanced-search=%5B%7B%22op%22%3A%22and%22%2C%229e00e99c-a983-11ed-8958-5254004d77d3%22%3A%7B%22op%22%3A%22~%22%2C%22lang%22%3A%22en%22%2C%22val%22%3A%22%22%7D%2C%223892c576-a983-11ed-b7d3-5254004d77d3%22%3A%7B%22op%22%3A%22%22%2C%22val%22%3A%22d9b5cf00-f6e2-46a4-817e-9c2e372d0678%22%7D%7D%5D&total=3"
+                        "searchString": "https://rhel9/int/arches-bchp/search?paging-filter=1&tiles=true&format=tilecsv&reportlink=false&precision=6&resource-type-filter=%5B%7B%22graphid%22%3A%22412444dd-b13f-4289-9f04-5c7f1878ad4e%22%2C%22name%22%3A%22Government%2BPerson%22%2C%22inverted%22%3Afalse%7D%5D&sort-results=asc&advanced-search=%5B%7B%22op%22%3A%22and%22%2C%229e00e99c-a983-11ed-8958-5254004d77d3%22%3A%7B%22op%22%3A%22~%22%2C%22lang%22%3A%22en%22%2C%22val%22%3A%22%22%7D%2C%223892c576-a983-11ed-b7d3-5254004d77d3%22%3A%7B%22op%22%3A%22%22%2C%22val%22%3A%22d9b5cf00-f6e2-46a4-817e-9c2e372d0678%22%7D%7D%5D&total=3"
                     },
                     "datatype": "resource-instance",
                     "description": null,
-                    "exportable": false,
-                    "fieldname": null,
+                    "exportable": true,
+                    "fieldname": "assignee",
                     "graph_id": "4e69d0a9-7af2-473f-929f-71d462ea32d1",
                     "hascustomalias": false,
                     "is_collector": false,
@@ -1204,8 +1204,8 @@
                     },
                     "datatype": "date",
                     "description": "Date the submission was received by Heritage Branch",
-                    "exportable": false,
-                    "fieldname": null,
+                    "exportable": true,
+                    "fieldname": "submitdate",
                     "graph_id": "4e69d0a9-7af2-473f-929f-71d462ea32d1",
                     "hascustomalias": false,
                     "is_collector": false,
@@ -1244,12 +1244,16 @@
                     "sourcebranchpublication_id": null
                 },
                 {
-                    "alias": null,
+                    "alias": "historic_site",
                     "config": {
                         "graphs": [
                             {
                                 "graphid": "cef9c510-e3e6-4057-ac08-89ad926180b4",
-                                "name": "BC Heritage Resource"
+                                "inverseRelationshipConcept": "ac41d9be-79db-4256-b368-2f4559cfbe55",
+                                "name": "Heritage Site",
+                                "relationshipCollection": "00000000-0000-0000-0000-000000000005",
+                                "relationshipConcept": "ac41d9be-79db-4256-b368-2f4559cfbe55",
+                                "useOntologyRelationship": false
                             }
                         ],
                         "rdmCollection": null,
@@ -1258,8 +1262,8 @@
                     },
                     "datatype": "resource-instance",
                     "description": null,
-                    "exportable": false,
-                    "fieldname": null,
+                    "exportable": true,
+                    "fieldname": "site",
                     "graph_id": "4e69d0a9-7af2-473f-929f-71d462ea32d1",
                     "hascustomalias": false,
                     "is_collector": true,
@@ -1329,8 +1333,8 @@
                     },
                     "datatype": "file-list",
                     "description": null,
-                    "exportable": false,
-                    "fieldname": null,
+                    "exportable": true,
+                    "fieldname": "documents",
                     "graph_id": "4e69d0a9-7af2-473f-929f-71d462ea32d1",
                     "hascustomalias": false,
                     "is_collector": true,
@@ -1375,8 +1379,8 @@
                     },
                     "datatype": "string",
                     "description": "BCRHP Internal notes about the submission",
-                    "exportable": false,
-                    "fieldname": null,
+                    "exportable": true,
+                    "fieldname": "notes",
                     "graph_id": "4e69d0a9-7af2-473f-929f-71d462ea32d1",
                     "hascustomalias": false,
                     "is_collector": true,
@@ -1398,8 +1402,8 @@
                     },
                     "datatype": "date",
                     "description": "Date the submission was completed.",
-                    "exportable": false,
-                    "fieldname": null,
+                    "exportable": true,
+                    "fieldname": "completed",
                     "graph_id": "4e69d0a9-7af2-473f-929f-71d462ea32d1",
                     "hascustomalias": false,
                     "is_collector": false,
@@ -1456,17 +1460,17 @@
                                     {
                                         "terms": {
                                             "graph_id": [
-                                                "4e69d0a9-7af2-473f-929f-71d462ea32d1",
+                                                "52dd40f2-1dee-45d2-b72c-234c8cbb5418",
+                                                "ff623370-fa12-11e6-b98b-6c4008b05c4c",
+                                                "e53d0716-9335-11eb-adb6-5254008afee6",
                                                 "1722187a-7bb2-11eb-8b09-5254008afee6",
                                                 "debd5adc-7bb4-11eb-9b0e-5254008afee6",
-                                                "412444dd-b13f-4289-9f04-5c7f1878ad4e",
-                                                "4d6dafbc-7c47-11eb-a180-5254008afee6",
+                                                "4e69d0a9-7af2-473f-929f-71d462ea32d1",
                                                 "cef9c510-e3e6-4057-ac08-89ad926180b4",
-                                                "e53d0716-9335-11eb-adb6-5254008afee6",
                                                 "aacf8bb6-3f6e-46d9-a551-b0749d7efffc",
-                                                "ff623370-fa12-11e6-b98b-6c4008b05c4c",
+                                                "412444dd-b13f-4289-9f04-5c7f1878ad4e",
                                                 "e8ce03a0-7c40-11eb-a2e5-5254008afee6",
-                                                "52dd40f2-1dee-45d2-b72c-234c8cbb5418"
+                                                "4d6dafbc-7c47-11eb-a180-5254008afee6"
                                             ]
                                         }
                                     }
@@ -1531,7 +1535,7 @@
                                 "should": []
                             }
                         },
-                        "searchString": "http://rhel9/int/arches-bchp/search?paging-filter=1&tiles=true&format=tilecsv&reportlink=false&precision=6&total=1&advanced-search=%5B%7B%22op%22%3A%22and%22%2C%223892c576-a983-11ed-b7d3-5254004d77d3%22%3A%7B%22op%22%3A%22!%22%2C%22val%22%3A%22d9b5cf00-f6e2-46a4-817e-9c2e372d0678%22%7D%2C%229e00e99c-a983-11ed-8958-5254004d77d3%22%3A%7B%22op%22%3A%22~%22%2C%22lang%22%3A%22en%22%2C%22val%22%3A%22%22%7D%7D%5D&sort-results=asc"
+                        "searchString": "https://rhel9/int/arches-bchp/search?paging-filter=1&tiles=true&format=tilecsv&reportlink=false&precision=6&total=1&advanced-search=%5B%7B%22op%22%3A%22and%22%2C%223892c576-a983-11ed-b7d3-5254004d77d3%22%3A%7B%22op%22%3A%22!%22%2C%22val%22%3A%22d9b5cf00-f6e2-46a4-817e-9c2e372d0678%22%7D%2C%229e00e99c-a983-11ed-8958-5254004d77d3%22%3A%7B%22op%22%3A%22~%22%2C%22lang%22%3A%22en%22%2C%22val%22%3A%22%22%7D%7D%5D&sort-results=asc"
                     },
                     "datatype": "resource-instance-list",
                     "description": null,
@@ -1558,8 +1562,8 @@
                     },
                     "datatype": "number",
                     "description": null,
-                    "exportable": false,
-                    "fieldname": null,
+                    "exportable": true,
+                    "fieldname": "sitenumber",
                     "graph_id": "4e69d0a9-7af2-473f-929f-71d462ea32d1",
                     "hascustomalias": false,
                     "is_collector": false,
@@ -1659,8 +1663,8 @@
             "publication": {
                 "graph_id": "4e69d0a9-7af2-473f-929f-71d462ea32d1",
                 "notes": null,
-                "publicationid": "99c9ce8c-5c7c-11ee-b615-080027b7463b",
-                "published_time": "2023-09-26T09:54:32.090"
+                "publicationid": "16d7cab2-5c9d-11ee-a401-0050568377a0",
+                "published_time": "2023-09-26T13:47:05.792"
             },
             "relatable_resource_model_ids": [],
             "resource_2_resource_constraints": [],
@@ -1695,9 +1699,9 @@
         }
     ],
     "metadata": {
-        "db": "PostgreSQL 15.3 on x86_64-pc-linux-gnu, compiled by gcc (GCC) 11.3.1 20221121 (Red Hat 11.3.1-4), 64-bit",
-        "git hash": "6489cc142 2023-09-25 20:10:05 -0700",
+        "db": "PostgreSQL 12.11 on x86_64-pc-linux-gnu, compiled by gcc (GCC) 4.8.5 20150623 (Red Hat 4.8.5-44), 64-bit",
+        "git hash": "6489cc1 2023-09-25 20:10:05 -0700",
         "os": "Linux",
-        "os version": "5.14.0-333.el9.x86_64"
+        "os version": "3.10.0-1160.92.1.el7.x86_64"
     }
 }
