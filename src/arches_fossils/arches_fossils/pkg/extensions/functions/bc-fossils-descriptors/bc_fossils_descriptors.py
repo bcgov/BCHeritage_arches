@@ -1,7 +1,6 @@
 from arches.app.functions.primary_descriptors import AbstractPrimaryDescriptorsFunction
 from arches.app.models import models
 from arches.app.datatypes.datatypes import DataTypeFactory
-from django.utils.translation import ugettext as _
 
 details = {
     "functionid": "60000000-0000-0000-0000-000000001001",

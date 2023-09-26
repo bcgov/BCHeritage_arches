@@ -3,8 +3,6 @@ from arches.app.models import models
 from arches.app.datatypes.datatypes import DataTypeFactory
 from arches.settings import LANGUAGE_CODE
 
-from django.utils.translation import ugettext as _
-
 details = {
     "functionid": "60000000-0000-0000-0000-000000001002",
     "name": "Fossil Type Descriptors",
