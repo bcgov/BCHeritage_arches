@@ -55,7 +55,7 @@
                     },
                     "is_editable": true,
                     "name": {
-                        "en": "Local Government Location"
+                        "en": "Government Location"
                     },
                     "nodegroup_id": "1d43cfe4-a31c-11ed-bbb0-5254004d77d3",
                     "sortorder": 1,
@@ -84,7 +84,7 @@
                     },
                     "is_editable": true,
                     "name": {
-                        "en": "BC Heritage Resource Place"
+                        "en": "Office Address"
                     },
                     "nodegroup_id": "1d43d930-a31c-11ed-bbb0-5254004d77d3",
                     "sortorder": 1,
@@ -120,7 +120,7 @@
                     },
                     "is_editable": false,
                     "name": {
-                        "en": "Local Government Name"
+                        "en": "Government Name"
                     },
                     "nodegroup_id": "91cc2384-a31c-11ed-b90e-5254004d77d3",
                     "sortorder": 0,
@@ -128,30 +128,6 @@
                 }
             ],
             "cards_x_nodes_x_widgets": [
-                {
-                    "card_id": "1d43db4c-a31c-11ed-bbb0-5254004d77d3",
-                    "config": {
-                        "defaultValue": "",
-                        "i18n_properties": [
-                            "placeholder"
-                        ],
-                        "label": "Street Number",
-                        "maxLength": null,
-                        "placeholder": {
-                            "en": "Enter text"
-                        },
-                        "uneditable": false,
-                        "width": "100%"
-                    },
-                    "id": "1d43f3d4-a31c-11ed-bbb0-5254004d77d3",
-                    "label": {
-                        "en": "Street Number"
-                    },
-                    "node_id": "1d43e63c-a31c-11ed-bbb0-5254004d77d3",
-                    "sortorder": 1,
-                    "visible": true,
-                    "widget_id": "10000000-0000-0000-0000-000000000001"
-                },
                 {
                     "card_id": "1d43db4c-a31c-11ed-bbb0-5254004d77d3",
                     "config": {
@@ -249,7 +225,7 @@
                 {
                     "card_id": "1d43b888-a31c-11ed-bbb0-5254004d77d3",
                     "config": {
-                        "basemap": "streets",
+                        "basemap": "British Columbia Roads",
                         "bearing": 0,
                         "centerX": -0.547685351243202,
                         "centerY": 53.203633260099,
@@ -275,7 +251,7 @@
                                 "text": "Polygon"
                             }
                         ],
-                        "label": "Spatial Coordinates Geometry",
+                        "label": "Boundary Geometry",
                         "maxZoom": 20,
                         "minZoom": 0,
                         "overlayConfigs": [],
@@ -286,10 +262,10 @@
                     },
                     "id": "1d43fc4e-a31c-11ed-bbb0-5254004d77d3",
                     "label": {
-                        "en": "Spatial Coordinates Geometry"
+                        "en": "Boundary Geometry"
                     },
                     "node_id": "1d43b3ba-a31c-11ed-bbb0-5254004d77d3",
-                    "sortorder": null,
+                    "sortorder": 0,
                     "visible": true,
                     "widget_id": "10000000-0000-0000-0000-000000000007"
                 },
@@ -305,7 +281,7 @@
                         "i18n_properties": [
                             "placeholder"
                         ],
-                        "label": "Local Government Name",
+                        "label": "Government Name",
                         "maxLength": null,
                         "placeholder": {
                             "en": "Enter text"
@@ -315,12 +291,34 @@
                     },
                     "id": "9afed5a0-9186-4d3d-ae4b-bfe520a89e37",
                     "label": {
-                        "en": "Local Government Name"
+                        "en": "Government Name"
                     },
                     "node_id": "91cc2384-a31c-11ed-b90e-5254004d77d3",
                     "sortorder": 0,
                     "visible": true,
                     "widget_id": "10000000-0000-0000-0000-000000000001"
+                },
+                {
+                    "card_id": "7d35e296-ba54-4879-88aa-c2951dce0d1c",
+                    "config": {
+                        "defaultValue": "",
+                        "i18n_properties": [
+                            "placeholder"
+                        ],
+                        "label": "Government Type",
+                        "options": [],
+                        "placeholder": {
+                            "en": "Select an option"
+                        }
+                    },
+                    "id": "c25837e6-feef-4120-ab19-8631e52583a1",
+                    "label": {
+                        "en": "Government Type"
+                    },
+                    "node_id": "f3c9024a-c9ab-11ed-9888-5254004d77d3",
+                    "sortorder": null,
+                    "visible": true,
+                    "widget_id": "10000000-0000-0000-0000-000000000002"
                 }
             ],
             "color": "rgba(80,80,250,1)",
@@ -348,15 +346,6 @@
                     "name": null,
                     "ontologyproperty": "http://www.cidoc-crm.org/cidoc-crm/P87_is_identified_by",
                     "rangenode_id": "1d43b3ba-a31c-11ed-bbb0-5254004d77d3"
-                },
-                {
-                    "description": null,
-                    "domainnode_id": "1d43d930-a31c-11ed-bbb0-5254004d77d3",
-                    "edgeid": "1d4505c6-a31c-11ed-bbb0-5254004d77d3",
-                    "graph_id": "aacf8bb6-3f6e-46d9-a551-b0749d7efffc",
-                    "name": null,
-                    "ontologyproperty": "http://www.cidoc-crm.org/cidoc-crm/P140i_was_attributed_by",
-                    "rangenode_id": "1d43e63c-a31c-11ed-bbb0-5254004d77d3"
                 },
                 {
                     "description": null,
@@ -428,15 +417,15 @@
                         "descriptor_types": {
                             "description": {
                                 "nodegroup_id": "1d43d930-a31c-11ed-bbb0-5254004d77d3",
-                                "string_template": "<Street Number> <Street Name>, <City>, <Province> <Postal Code>"
+                                "string_template": "<Street Address>, <City>, <Province> <Postal Code>"
                             },
                             "map_popup": {
                                 "nodegroup_id": "1d43d930-a31c-11ed-bbb0-5254004d77d3",
-                                "string_template": "<Street Number> <Street Name>, <City>, <Province> <Postal Code>"
+                                "string_template": "<Street Address>, <City>, <Province> <Postal Code>"
                             },
                             "name": {
                                 "nodegroup_id": "91cc2384-a31c-11ed-b90e-5254004d77d3",
-                                "string_template": "<Local Government Name>"
+                                "string_template": "<Government Name>"
                             }
                         },
                         "triggering_nodegroups": []
@@ -452,7 +441,7 @@
             "isresource": true,
             "jsonldcontext": null,
             "name": {
-                "en": "BC Local Government"
+                "en": "Government"
             },
             "nodegroups": [
                 {
@@ -482,7 +471,7 @@
             ],
             "nodes": [
                 {
-                    "alias": "local_government_boundary",
+                    "alias": "government_boundary",
                     "config": {
                         "addToMap": false,
                         "advancedStyle": "",
@@ -519,7 +508,7 @@
                     "isrequired": false,
                     "issearchable": true,
                     "istopnode": false,
-                    "name": "Local Government Boundary",
+                    "name": "Government Boundary",
                     "nodegroup_id": "1d43b3ba-a31c-11ed-bbb0-5254004d77d3",
                     "nodeid": "1d43b3ba-a31c-11ed-bbb0-5254004d77d3",
                     "ontologyclass": "http://www.cidoc-crm.org/cidoc-crm/E47_Spatial_Coordinates",
@@ -528,7 +517,7 @@
                     "sourcebranchpublication_id": null
                 },
                 {
-                    "alias": "local_government_location",
+                    "alias": "government_location",
                     "config": {
                         "en": ""
                     },
@@ -542,7 +531,7 @@
                     "isrequired": false,
                     "issearchable": true,
                     "istopnode": false,
-                    "name": "Local Government Location",
+                    "name": "Government Location",
                     "nodegroup_id": "1d43cfe4-a31c-11ed-bbb0-5254004d77d3",
                     "nodeid": "1d43cfe4-a31c-11ed-bbb0-5254004d77d3",
                     "ontologyclass": "http://www.cidoc-crm.org/cidoc-crm/E53_Place",
@@ -595,29 +584,10 @@
                     "sourcebranchpublication_id": null
                 },
                 {
-                    "alias": "street_number",
-                    "config": {},
-                    "datatype": "string",
-                    "description": "The numeric part of the Street Address. Eg 1283, 11b.",
-                    "exportable": false,
-                    "fieldname": null,
-                    "graph_id": "aacf8bb6-3f6e-46d9-a551-b0749d7efffc",
-                    "hascustomalias": false,
-                    "is_collector": false,
-                    "isrequired": false,
-                    "issearchable": true,
-                    "istopnode": false,
-                    "name": "Street Number",
-                    "nodegroup_id": "1d43d930-a31c-11ed-bbb0-5254004d77d3",
-                    "nodeid": "1d43e63c-a31c-11ed-bbb0-5254004d77d3",
-                    "ontologyclass": "http://www.cidoc-crm.org/cidoc-crm/E13_Attribute_Assignment",
-                    "parentproperty": "http://www.cidoc-crm.org/cidoc-crm/P140i_was_attributed_by",
-                    "sortorder": 0,
-                    "sourcebranchpublication_id": null
-                },
-                {
-                    "alias": "street_name",
-                    "config": {},
+                    "alias": "street_address",
+                    "config": {
+                        "en": ""
+                    },
                     "datatype": "string",
                     "description": null,
                     "exportable": false,
@@ -628,7 +598,7 @@
                     "isrequired": false,
                     "issearchable": true,
                     "istopnode": false,
-                    "name": "Street Name",
+                    "name": "Street Address",
                     "nodegroup_id": "1d43d930-a31c-11ed-bbb0-5254004d77d3",
                     "nodeid": "1d43e7d6-a31c-11ed-bbb0-5254004d77d3",
                     "ontologyclass": "http://www.cidoc-crm.org/cidoc-crm/E13_Attribute_Assignment",
@@ -681,7 +651,7 @@
                     "sourcebranchpublication_id": null
                 },
                 {
-                    "alias": "local_government_name",
+                    "alias": "government_name",
                     "config": {
                         "en": ""
                     },
@@ -695,7 +665,7 @@
                     "isrequired": true,
                     "issearchable": true,
                     "istopnode": false,
-                    "name": "Local Government Name",
+                    "name": "Government Name",
                     "nodegroup_id": "91cc2384-a31c-11ed-b90e-5254004d77d3",
                     "nodeid": "91cc2384-a31c-11ed-b90e-5254004d77d3",
                     "ontologyclass": "http://www.cidoc-crm.org/cidoc-crm/E82_Actor_Appellation",
@@ -718,7 +688,7 @@
                     "isrequired": false,
                     "issearchable": true,
                     "istopnode": true,
-                    "name": "BC Local Government",
+                    "name": "Government",
                     "nodegroup_id": null,
                     "nodeid": "97a57356-a31b-11ed-bfc5-5254004d77d3",
                     "ontologyclass": "http://www.cidoc-crm.org/cidoc-crm/E40_Legal_Body",
@@ -754,8 +724,8 @@
             "publication": {
                 "graph_id": "aacf8bb6-3f6e-46d9-a551-b0749d7efffc",
                 "notes": null,
-                "publicationid": "456f15f2-5be3-11ee-a762-080027b7463b",
-                "published_time": "2023-09-25T15:36:57.567"
+                "publicationid": "e86d3180-5bfc-11ee-aafb-080027b7463b",
+                "published_time": "2023-09-25T18:40:28.442"
             },
             "relatable_resource_model_ids": [],
             "resource_2_resource_constraints": [],
@@ -774,7 +744,7 @@
                 "isrequired": false,
                 "issearchable": true,
                 "istopnode": true,
-                "name": "BC Local Government",
+                "name": "Government",
                 "nodegroup_id": null,
                 "nodeid": "97a57356-a31b-11ed-bfc5-5254004d77d3",
                 "ontologyclass": "http://www.cidoc-crm.org/cidoc-crm/E40_Legal_Body",

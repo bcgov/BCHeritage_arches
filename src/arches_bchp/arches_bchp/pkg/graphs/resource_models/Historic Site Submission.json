@@ -26,7 +26,7 @@
                     },
                     "is_editable": true,
                     "name": {
-                        "en": "Comments to LG"
+                        "en": "Comments to Submitting Government"
                     },
                     "nodegroup_id": "98a21d7a-a32c-11ed-8143-5254004d77d3",
                     "sortorder": null,
@@ -51,7 +51,7 @@
                     "instructions": {
                         "en": ""
                     },
-                    "is_editable": true,
+                    "is_editable": false,
                     "name": {
                         "en": "Submission Details"
                     },
@@ -78,7 +78,7 @@
                     "instructions": {
                         "en": ""
                     },
-                    "is_editable": true,
+                    "is_editable": false,
                     "name": {
                         "en": "Historic Site"
                     },
@@ -117,6 +117,33 @@
                 },
                 {
                     "active": true,
+                    "cardid": "9cb75982-f020-4ac8-9585-0ef3e1589042",
+                    "component_id": "f05e4d3a-53c1-11e8-b0ea-784f435179ea",
+                    "config": null,
+                    "constraints": [],
+                    "cssclass": null,
+                    "description": null,
+                    "graph_id": "4e69d0a9-7af2-473f-929f-71d462ea32d1",
+                    "helpenabled": false,
+                    "helptext": {
+                        "en": ""
+                    },
+                    "helptitle": {
+                        "en": ""
+                    },
+                    "instructions": {
+                        "en": ""
+                    },
+                    "is_editable": false,
+                    "name": {
+                        "en": "Submission Documents"
+                    },
+                    "nodegroup_id": "749a361e-5bf1-11ee-943d-080027b7463b",
+                    "sortorder": null,
+                    "visible": true
+                },
+                {
+                    "active": true,
                     "cardid": "e56e7935-132a-452a-a098-3e8e9f8ea760",
                     "component_id": "f05e4d3a-53c1-11e8-b0ea-784f435179ea",
                     "config": null,
@@ -136,7 +163,7 @@
                     "instructions": {
                         "en": "Details about the sites that have been submittied for processing / review"
                     },
-                    "is_editable": true,
+                    "is_editable": false,
                     "name": {
                         "en": "Submitted Sites"
                     },
@@ -175,14 +202,14 @@
                         "i18n_properties": [
                             "placeholder"
                         ],
-                        "label": "Delivery Recipients",
+                        "label": "Recipients",
                         "placeholder": {
                             "en": "Select recipients of this comment"
                         }
                     },
                     "id": "20879fb9-72e3-4eb3-b9f7-f48c01debd16",
                     "label": {
-                        "en": "Delivery Recipients"
+                        "en": "Recipients"
                     },
                     "node_id": "9d1f461e-a32e-11ed-8f5c-5254004d77d3",
                     "sortorder": 1,
@@ -298,7 +325,7 @@
                         "en": "Submission Date"
                     },
                     "node_id": "29e141e0-a327-11ed-8ef6-5254004d77d3",
-                    "sortorder": 2,
+                    "sortorder": 1,
                     "visible": true,
                     "widget_id": "10000000-0000-0000-0000-000000000004"
                 },
@@ -314,7 +341,7 @@
                         "i18n_properties": [
                             "placeholder"
                         ],
-                        "label": "Site Submission Internal Notes",
+                        "label": "Internal Notes",
                         "maxLength": null,
                         "placeholder": {
                             "en": "Enter text"
@@ -324,10 +351,10 @@
                     },
                     "id": "6cf28e30-8ec7-4e9d-bb1c-8a18064388d5",
                     "label": {
-                        "en": "Site Submission Internal Notes"
+                        "en": "Internal Notes"
                     },
                     "node_id": "55129e2c-a32c-11ed-a0e3-5254004d77d3",
-                    "sortorder": 5,
+                    "sortorder": 6,
                     "visible": true,
                     "widget_id": "10000000-0000-0000-0000-000000000005"
                 },
@@ -397,44 +424,23 @@
                     "widget_id": "10000000-0000-0000-0000-000000000008"
                 },
                 {
-                    "card_id": "29b8f4ca-7306-406b-9e30-f617e86d3eb5",
-                    "config": {
-                        "defaultResourceInstance": [],
-                        "i18n_properties": [
-                            "placeholder"
-                        ],
-                        "label": "Submitted By",
-                        "placeholder": {
-                            "en": ""
-                        }
-                    },
-                    "id": "7d3c1f9f-10b8-4dac-bf38-92ce2058b8a9",
-                    "label": {
-                        "en": "Submitted By"
-                    },
-                    "node_id": "e0ec22e2-a985-11ed-b137-5254004d77d3",
-                    "sortorder": 1,
-                    "visible": true,
-                    "widget_id": "31f3728c-7613-11e7-a139-784f435179ea"
-                },
-                {
                     "card_id": "496b9d34-958a-41fd-8302-d6d877bbb477",
                     "config": {
                         "defaultResourceInstance": [],
                         "i18n_properties": [
                             "placeholder"
                         ],
-                        "label": "BCRHP Asignee",
+                        "label": "Alternate BCRHP Asignee",
                         "placeholder": {
-                            "en": "Select BCRHP Assignee"
+                            "en": "Select BCRHP Assignee if different from Submission Assignee"
                         }
                     },
                     "id": "7eb9cbcc-b60c-4fdf-a75c-62654ce64ea8",
                     "label": {
-                        "en": "BCRHP Asignee"
+                        "en": "Alternate BCRHP Asignee"
                     },
                     "node_id": "02c58238-a985-11ed-9f00-5254004d77d3",
-                    "sortorder": 3,
+                    "sortorder": 4,
                     "visible": true,
                     "widget_id": "31f3728c-7613-11e7-a139-784f435179ea"
                 },
@@ -454,7 +460,7 @@
                         "en": "Completion Date"
                     },
                     "node_id": "964aed72-a327-11ed-a0e3-5254004d77d3",
-                    "sortorder": 4,
+                    "sortorder": 3,
                     "visible": true,
                     "widget_id": "10000000-0000-0000-0000-000000000004"
                 },
@@ -465,14 +471,14 @@
                         "i18n_properties": [
                             "placeholder"
                         ],
-                        "label": "Submitting Authority",
+                        "label": "Submitting Government",
                         "placeholder": {
-                            "en": ""
+                            "en": "Select government responsible for the submitted site(s)"
                         }
                     },
                     "id": "9bb9ed89-96a1-4f19-8736-a47fd667affd",
                     "label": {
-                        "en": "Submitting Authority"
+                        "en": "Submitting Government"
                     },
                     "node_id": "e0ec1df6-a985-11ed-b137-5254004d77d3",
                     "sortorder": 0,
@@ -496,16 +502,56 @@
                         "en": "Historic Site"
                     },
                     "node_id": "4506b49e-a324-11ed-bbb0-5254004d77d3",
-                    "sortorder": 4,
+                    "sortorder": 5,
                     "visible": true,
                     "widget_id": "31f3728c-7613-11e7-a139-784f435179ea"
+                },
+                {
+                    "card_id": "496b9d34-958a-41fd-8302-d6d877bbb477",
+                    "config": {
+                        "defaultValue": "",
+                        "i18n_properties": [
+                            "placeholder"
+                        ],
+                        "label": "Information Provided",
+                        "options": [
+                            {
+                                "children": [],
+                                "collector": "",
+                                "conceptid": "67b1e543-c947-46a6-b138-18621aa5ac85",
+                                "id": "5b940fe7-75f2-48e3-b0dd-0562f0f291aa",
+                                "sortorder": "",
+                                "text": "Basic Record"
+                            },
+                            {
+                                "children": [],
+                                "collector": "",
+                                "conceptid": "24a4a0a5-3233-4842-a58b-c5fbf69caebe",
+                                "id": "33ddc451-9f67-42b7-bdf7-f7f4d8c924a3",
+                                "sortorder": "",
+                                "text": "Full Record"
+                            }
+                        ],
+                        "placeholder": {
+                            "en": "Select an option"
+                        },
+                        "url": "/int/arches-bchp/concepts/dropdown?conceptid=72c95a59-0d85-4ee9-8491-7def12dd9b9e"
+                    },
+                    "id": "a21636ac-6a5d-40ab-aa63-7773187d7d39",
+                    "label": {
+                        "en": "Information Provided"
+                    },
+                    "node_id": "59066780-5c0d-11ee-b28c-080027b7463b",
+                    "sortorder": 3,
+                    "visible": true,
+                    "widget_id": "10000000-0000-0000-0000-000000000009"
                 },
                 {
                     "card_id": "247a4e3c-3122-4351-9b1e-83f1d5e104bb",
                     "config": {
                         "dateFormat": "YYYY-MM-DD HH:mm:ssZ",
                         "defaultValue": "",
-                        "label": "Delivery Date",
+                        "label": "Date",
                         "maxDate": false,
                         "minDate": false,
                         "placeholder": "Enter date",
@@ -513,7 +559,7 @@
                     },
                     "id": "d1904688-dc81-444e-9252-de11dc2bbce3",
                     "label": {
-                        "en": "Delivery Date"
+                        "en": "Date"
                     },
                     "node_id": "75f702a2-a32e-11ed-ab8e-5254004d77d3",
                     "sortorder": 2,
@@ -532,7 +578,7 @@
                         "i18n_properties": [
                             "placeholder"
                         ],
-                        "label": "Comments to Local Government",
+                        "label": "Comments to Submitting Government",
                         "maxLength": null,
                         "placeholder": {
                             "en": "Enter text"
@@ -542,7 +588,7 @@
                     },
                     "id": "de8c9b00-b865-40f9-bc1b-84bdd57cd7e7",
                     "label": {
-                        "en": "Comments to Local Government"
+                        "en": "Comments to Submitting Government"
                     },
                     "node_id": "98a21d7a-a32c-11ed-8143-5254004d77d3",
                     "sortorder": 0,
@@ -556,17 +602,17 @@
                         "i18n_properties": [
                             "placeholder"
                         ],
-                        "label": "BCRHP Submission Assignee",
+                        "label": "Assigned To",
                         "placeholder": {
                             "en": ""
                         }
                     },
                     "id": "e57ec601-8888-41b4-a0ce-5a809080c4c6",
                     "label": {
-                        "en": "BCRHP Submission Assignee"
+                        "en": "Assigned To"
                     },
                     "node_id": "119a788a-a986-11ed-b0c4-5254004d77d3",
-                    "sortorder": 3,
+                    "sortorder": 2,
                     "visible": true,
                     "widget_id": "31f3728c-7613-11e7-a139-784f435179ea"
                 }
@@ -689,6 +735,15 @@
                 },
                 {
                     "description": null,
+                    "domainnode_id": "02c5723e-a985-11ed-9f00-5254004d77d3",
+                    "edgeid": "8ac551d7-6225-4ca2-a93f-9161d0e7ae73",
+                    "graph_id": "4e69d0a9-7af2-473f-929f-71d462ea32d1",
+                    "name": null,
+                    "ontologyproperty": "http://www.ics.forth.gr/isl/CRMdig/L43i_is_annotated_by",
+                    "rangenode_id": "59066780-5c0d-11ee-b28c-080027b7463b"
+                },
+                {
+                    "description": null,
                     "domainnode_id": "e750627a-a326-11ed-a0e3-5254004d77d3",
                     "edgeid": "9c083a70-c39e-4fd0-801b-a460cc61c55b",
                     "graph_id": "4e69d0a9-7af2-473f-929f-71d462ea32d1",
@@ -725,15 +780,6 @@
                 },
                 {
                     "description": null,
-                    "domainnode_id": "e0ec1df6-a985-11ed-b137-5254004d77d3",
-                    "edgeid": "e0ec466e-a985-11ed-b137-5254004d77d3",
-                    "graph_id": "4e69d0a9-7af2-473f-929f-71d462ea32d1",
-                    "name": null,
-                    "ontologyproperty": "http://www.cidoc-crm.org/cidoc-crm/P107_has_current_or_former_member",
-                    "rangenode_id": "e0ec22e2-a985-11ed-b137-5254004d77d3"
-                },
-                {
-                    "description": null,
                     "domainnode_id": "e750627a-a326-11ed-a0e3-5254004d77d3",
                     "edgeid": "e47d6414-b32e-4d72-a969-a97b178a6487",
                     "graph_id": "4e69d0a9-7af2-473f-929f-71d462ea32d1",
@@ -749,6 +795,15 @@
                     "name": null,
                     "ontologyproperty": "http://www.cidoc-crm.org/cidoc-crm/P141_assigned",
                     "rangenode_id": "119a788a-a986-11ed-b0c4-5254004d77d3"
+                },
+                {
+                    "description": null,
+                    "domainnode_id": "e750627a-a326-11ed-a0e3-5254004d77d3",
+                    "edgeid": "f18d13a4-f2e6-42e3-a317-33a99a352588",
+                    "graph_id": "4e69d0a9-7af2-473f-929f-71d462ea32d1",
+                    "name": null,
+                    "ontologyproperty": "http://www.cidoc-crm.org/cidoc-crm/P129i_is_subject_of",
+                    "rangenode_id": "749a361e-5bf1-11ee-943d-080027b7463b"
                 },
                 {
                     "description": null,
@@ -774,23 +829,23 @@
                             },
                             "name": {
                                 "nodegroup_id": "e750627a-a326-11ed-a0e3-5254004d77d3",
-                                "string_template": "<Submission Date> - <Submitting Authority>"
+                                "string_template": "<Submission Date> - <Submitting Government>"
                             }
                         },
                         "triggering_nodegroups": []
                     },
                     "function_id": "60000000-0000-0000-0000-000000000001",
                     "graph_id": "4e69d0a9-7af2-473f-929f-71d462ea32d1",
-                    "id": "58a3cd92-665c-4ac2-8665-6ba683db1c50"
+                    "id": "1625e9fc-484e-465a-91e3-efa7b25c021b"
                 }
             ],
             "graphid": "4e69d0a9-7af2-473f-929f-71d462ea32d1",
             "iconclass": "fa fa-envelope",
-            "is_editable": true,
+            "is_editable": false,
             "isresource": true,
             "jsonldcontext": null,
             "name": {
-                "en": "BC Historic Site Submission"
+                "en": "Historic Site Submission"
             },
             "nodegroups": [
                 {
@@ -804,6 +859,12 @@
                     "legacygroupid": null,
                     "nodegroupid": "4506b49e-a324-11ed-bbb0-5254004d77d3",
                     "parentnodegroup_id": "12b4bf14-a323-11ed-8e85-5254004d77d3"
+                },
+                {
+                    "cardinality": "1",
+                    "legacygroupid": null,
+                    "nodegroupid": "749a361e-5bf1-11ee-943d-080027b7463b",
+                    "parentnodegroup_id": "e750627a-a326-11ed-a0e3-5254004d77d3"
                 },
                 {
                     "cardinality": "1",
@@ -895,7 +956,7 @@
                     "sourcebranchpublication_id": null
                 },
                 {
-                    "alias": "submission_type_n1",
+                    "alias": "submission_type",
                     "config": {
                         "rdmCollection": "c99b8763-d118-4869-9c58-4bcbf705e810"
                     },
@@ -906,7 +967,7 @@
                     "graph_id": "4e69d0a9-7af2-473f-929f-71d462ea32d1",
                     "hascustomalias": false,
                     "is_collector": false,
-                    "isrequired": false,
+                    "isrequired": true,
                     "issearchable": true,
                     "istopnode": false,
                     "name": "Submission Type",
@@ -918,16 +979,84 @@
                     "sourcebranchpublication_id": null
                 },
                 {
-                    "alias": "bcrhp_asignee",
+                    "alias": "alternate_bcrhp_asignee",
                     "config": {
                         "graphs": [
                             {
                                 "graphid": "412444dd-b13f-4289-9f04-5c7f1878ad4e",
-                                "name": "BC Local Government Resource"
+                                "inverseRelationshipConcept": "ac41d9be-79db-4256-b368-2f4559cfbe55",
+                                "name": "Government Person",
+                                "relationshipCollection": "00000000-0000-0000-0000-000000000005",
+                                "relationshipConcept": "ac41d9be-79db-4256-b368-2f4559cfbe55",
+                                "useOntologyRelationship": false
                             }
                         ],
-                        "searchDsl": "",
-                        "searchString": ""
+                        "searchDsl": {
+                            "bool": {
+                                "filter": [
+                                    {
+                                        "terms": {
+                                            "graph_id": [
+                                                "412444dd-b13f-4289-9f04-5c7f1878ad4e"
+                                            ]
+                                        }
+                                    }
+                                ],
+                                "must": [
+                                    {
+                                        "bool": {
+                                            "filter": [],
+                                            "minimum_should_match": 1,
+                                            "must": [],
+                                            "must_not": [],
+                                            "should": [
+                                                {
+                                                    "bool": {
+                                                        "filter": [],
+                                                        "must": [
+                                                            {
+                                                                "nested": {
+                                                                    "path": "tiles",
+                                                                    "query": {
+                                                                        "bool": {
+                                                                            "filter": [],
+                                                                            "must": [
+                                                                                {
+                                                                                    "terms": {
+                                                                                        "tiles.data.3892c576-a983-11ed-b7d3-5254004d77d3.resourceId.keyword": [
+                                                                                            "d9b5cf00-f6e2-46a4-817e-9c2e372d0678"
+                                                                                        ]
+                                                                                    }
+                                                                                }
+                                                                            ],
+                                                                            "must_not": [],
+                                                                            "should": []
+                                                                        }
+                                                                    }
+                                                                }
+                                                            },
+                                                            {
+                                                                "bool": {
+                                                                    "filter": [],
+                                                                    "must": [],
+                                                                    "must_not": [],
+                                                                    "should": []
+                                                                }
+                                                            }
+                                                        ],
+                                                        "must_not": [],
+                                                        "should": []
+                                                    }
+                                                }
+                                            ]
+                                        }
+                                    }
+                                ],
+                                "must_not": [],
+                                "should": []
+                            }
+                        },
+                        "searchString": "http://rhel9/int/arches-bchp/search?paging-filter=1&tiles=true&format=tilecsv&reportlink=false&precision=6&resource-type-filter=%5B%7B%22graphid%22%3A%22412444dd-b13f-4289-9f04-5c7f1878ad4e%22%2C%22name%22%3A%22Government%2BPerson%22%2C%22inverted%22%3Afalse%7D%5D&sort-results=asc&advanced-search=%5B%7B%22op%22%3A%22and%22%2C%229e00e99c-a983-11ed-8958-5254004d77d3%22%3A%7B%22op%22%3A%22~%22%2C%22lang%22%3A%22en%22%2C%22val%22%3A%22%22%7D%2C%223892c576-a983-11ed-b7d3-5254004d77d3%22%3A%7B%22op%22%3A%22%22%2C%22val%22%3A%22d9b5cf00-f6e2-46a4-817e-9c2e372d0678%22%7D%7D%5D&total=3"
                     },
                     "datatype": "resource-instance",
                     "description": null,
@@ -939,7 +1068,7 @@
                     "isrequired": false,
                     "issearchable": true,
                     "istopnode": false,
-                    "name": "BCRHP Asignee",
+                    "name": "Alternate BCRHP Asignee",
                     "nodegroup_id": "4506b49e-a324-11ed-bbb0-5254004d77d3",
                     "nodeid": "02c58238-a985-11ed-9f00-5254004d77d3",
                     "ontologyclass": "http://www.cidoc-crm.org/cidoc-crm/E21_Person",
@@ -948,16 +1077,84 @@
                     "sourcebranchpublication_id": null
                 },
                 {
-                    "alias": "bcrhp_submission_assignee",
+                    "alias": "assigned_to",
                     "config": {
                         "graphs": [
                             {
                                 "graphid": "412444dd-b13f-4289-9f04-5c7f1878ad4e",
-                                "name": "BC Local Government Person"
+                                "inverseRelationshipConcept": "ac41d9be-79db-4256-b368-2f4559cfbe55",
+                                "name": "Government Person",
+                                "relationshipCollection": "00000000-0000-0000-0000-000000000005",
+                                "relationshipConcept": "ac41d9be-79db-4256-b368-2f4559cfbe55",
+                                "useOntologyRelationship": false
                             }
                         ],
-                        "searchDsl": "",
-                        "searchString": ""
+                        "searchDsl": {
+                            "bool": {
+                                "filter": [
+                                    {
+                                        "terms": {
+                                            "graph_id": [
+                                                "412444dd-b13f-4289-9f04-5c7f1878ad4e"
+                                            ]
+                                        }
+                                    }
+                                ],
+                                "must": [
+                                    {
+                                        "bool": {
+                                            "filter": [],
+                                            "minimum_should_match": 1,
+                                            "must": [],
+                                            "must_not": [],
+                                            "should": [
+                                                {
+                                                    "bool": {
+                                                        "filter": [],
+                                                        "must": [
+                                                            {
+                                                                "nested": {
+                                                                    "path": "tiles",
+                                                                    "query": {
+                                                                        "bool": {
+                                                                            "filter": [],
+                                                                            "must": [
+                                                                                {
+                                                                                    "terms": {
+                                                                                        "tiles.data.3892c576-a983-11ed-b7d3-5254004d77d3.resourceId.keyword": [
+                                                                                            "d9b5cf00-f6e2-46a4-817e-9c2e372d0678"
+                                                                                        ]
+                                                                                    }
+                                                                                }
+                                                                            ],
+                                                                            "must_not": [],
+                                                                            "should": []
+                                                                        }
+                                                                    }
+                                                                }
+                                                            },
+                                                            {
+                                                                "bool": {
+                                                                    "filter": [],
+                                                                    "must": [],
+                                                                    "must_not": [],
+                                                                    "should": []
+                                                                }
+                                                            }
+                                                        ],
+                                                        "must_not": [],
+                                                        "should": []
+                                                    }
+                                                }
+                                            ]
+                                        }
+                                    }
+                                ],
+                                "must_not": [],
+                                "should": []
+                            }
+                        },
+                        "searchString": "http://rhel9/int/arches-bchp/search?paging-filter=1&tiles=true&format=tilecsv&reportlink=false&precision=6&resource-type-filter=%5B%7B%22graphid%22%3A%22412444dd-b13f-4289-9f04-5c7f1878ad4e%22%2C%22name%22%3A%22Government%2BPerson%22%2C%22inverted%22%3Afalse%7D%5D&sort-results=asc&advanced-search=%5B%7B%22op%22%3A%22and%22%2C%229e00e99c-a983-11ed-8958-5254004d77d3%22%3A%7B%22op%22%3A%22~%22%2C%22lang%22%3A%22en%22%2C%22val%22%3A%22%22%7D%2C%223892c576-a983-11ed-b7d3-5254004d77d3%22%3A%7B%22op%22%3A%22%22%2C%22val%22%3A%22d9b5cf00-f6e2-46a4-817e-9c2e372d0678%22%7D%7D%5D&total=3"
                     },
                     "datatype": "resource-instance",
                     "description": null,
@@ -969,7 +1166,7 @@
                     "isrequired": false,
                     "issearchable": true,
                     "istopnode": false,
-                    "name": "BCRHP Submission Assignee",
+                    "name": "Assigned To",
                     "nodegroup_id": "e750627a-a326-11ed-a0e3-5254004d77d3",
                     "nodeid": "119a788a-a986-11ed-b0c4-5254004d77d3",
                     "ontologyclass": "http://www.cidoc-crm.org/cidoc-crm/E21_Person",
@@ -1038,7 +1235,7 @@
                     "isrequired": false,
                     "issearchable": true,
                     "istopnode": true,
-                    "name": "BC Historic Site Submission",
+                    "name": "Historic Site Submission",
                     "nodegroup_id": null,
                     "nodeid": "4443720a-9da1-11ed-976d-5254004d77d3",
                     "ontologyclass": "http://www.cidoc-crm.org/cidoc-crm/E7_Activity",
@@ -1097,6 +1294,54 @@
                     "nodeid": "55129e2c-a32c-11ed-a0e3-5254004d77d3",
                     "ontologyclass": "http://www.ics.forth.gr/isl/CRMdig/D29_Annotation_Object",
                     "parentproperty": "http://www.ics.forth.gr/isl/CRMdig/L43i_is_annotated_by",
+                    "sortorder": 0,
+                    "sourcebranchpublication_id": null
+                },
+                {
+                    "alias": "information_provided",
+                    "config": {
+                        "rdmCollection": "72c95a59-0d85-4ee9-8491-7def12dd9b9e"
+                    },
+                    "datatype": "concept",
+                    "description": null,
+                    "exportable": false,
+                    "fieldname": null,
+                    "graph_id": "4e69d0a9-7af2-473f-929f-71d462ea32d1",
+                    "hascustomalias": false,
+                    "is_collector": false,
+                    "isrequired": false,
+                    "issearchable": true,
+                    "istopnode": false,
+                    "name": "Information Provided",
+                    "nodegroup_id": "4506b49e-a324-11ed-bbb0-5254004d77d3",
+                    "nodeid": "59066780-5c0d-11ee-b28c-080027b7463b",
+                    "ontologyclass": "http://www.ics.forth.gr/isl/CRMdig/D29_Annotation_Object",
+                    "parentproperty": "http://www.ics.forth.gr/isl/CRMdig/L43i_is_annotated_by",
+                    "sortorder": 0,
+                    "sourcebranchpublication_id": null
+                },
+                {
+                    "alias": "submission_documents",
+                    "config": {
+                        "activateMax": false,
+                        "maxFileSize": null,
+                        "maxFiles": 20
+                    },
+                    "datatype": "file-list",
+                    "description": null,
+                    "exportable": false,
+                    "fieldname": null,
+                    "graph_id": "4e69d0a9-7af2-473f-929f-71d462ea32d1",
+                    "hascustomalias": false,
+                    "is_collector": true,
+                    "isrequired": false,
+                    "issearchable": true,
+                    "istopnode": false,
+                    "name": "Submission Documents",
+                    "nodegroup_id": "749a361e-5bf1-11ee-943d-080027b7463b",
+                    "nodeid": "749a361e-5bf1-11ee-943d-080027b7463b",
+                    "ontologyclass": "http://www.ics.forth.gr/isl/CRMdig/D1_Digital_Object",
+                    "parentproperty": "http://www.cidoc-crm.org/cidoc-crm/P129i_is_subject_of",
                     "sortorder": 0,
                     "sourcebranchpublication_id": null
                 },
@@ -1193,12 +1438,16 @@
                     "sourcebranchpublication_id": null
                 },
                 {
-                    "alias": "delivery_recipients",
+                    "alias": "recipients",
                     "config": {
                         "graphs": [
                             {
                                 "graphid": "412444dd-b13f-4289-9f04-5c7f1878ad4e",
-                                "name": "BC Local Government Resource"
+                                "inverseRelationshipConcept": "ac41d9be-79db-4256-b368-2f4559cfbe55",
+                                "name": "BC Local Government Person",
+                                "relationshipCollection": "00000000-0000-0000-0000-000000000005",
+                                "relationshipConcept": "ac41d9be-79db-4256-b368-2f4559cfbe55",
+                                "useOntologyRelationship": false
                             }
                         ],
                         "searchDsl": "",
@@ -1214,7 +1463,7 @@
                     "isrequired": false,
                     "issearchable": true,
                     "istopnode": false,
-                    "name": "Delivery Recipients",
+                    "name": "Recipients",
                     "nodegroup_id": "98a21d7a-a32c-11ed-8143-5254004d77d3",
                     "nodeid": "9d1f461e-a32e-11ed-8f5c-5254004d77d3",
                     "ontologyclass": "http://www.cidoc-crm.org/cidoc-crm/E39_Actor",
@@ -1246,12 +1495,16 @@
                     "sourcebranchpublication_id": null
                 },
                 {
-                    "alias": "submitting_authority",
+                    "alias": "submitting_government",
                     "config": {
                         "graphs": [
                             {
                                 "graphid": "aacf8bb6-3f6e-46d9-a551-b0749d7efffc",
-                                "name": "BC Local Government"
+                                "inverseRelationshipConcept": "ac41d9be-79db-4256-b368-2f4559cfbe55",
+                                "name": "BC Local Government",
+                                "relationshipCollection": "00000000-0000-0000-0000-000000000005",
+                                "relationshipConcept": "ac41d9be-79db-4256-b368-2f4559cfbe55",
+                                "useOntologyRelationship": false
                             }
                         ],
                         "searchDsl": "",
@@ -1259,49 +1512,19 @@
                     },
                     "datatype": "resource-instance",
                     "description": "",
-                    "exportable": false,
-                    "fieldname": null,
+                    "exportable": true,
+                    "fieldname": "govname",
                     "graph_id": "4e69d0a9-7af2-473f-929f-71d462ea32d1",
                     "hascustomalias": false,
                     "is_collector": false,
                     "isrequired": true,
                     "issearchable": true,
                     "istopnode": false,
-                    "name": "Submitting Authority",
+                    "name": "Submitting Government",
                     "nodegroup_id": "e750627a-a326-11ed-a0e3-5254004d77d3",
                     "nodeid": "e0ec1df6-a985-11ed-b137-5254004d77d3",
                     "ontologyclass": "http://www.cidoc-crm.org/cidoc-crm/E40_Legal_Body",
                     "parentproperty": "http://www.cidoc-crm.org/cidoc-crm/P14_carried_out_by",
-                    "sortorder": 0,
-                    "sourcebranchpublication_id": null
-                },
-                {
-                    "alias": "submitted_by",
-                    "config": {
-                        "graphs": [
-                            {
-                                "graphid": "412444dd-b13f-4289-9f04-5c7f1878ad4e",
-                                "name": "BC Local Government Resource"
-                            }
-                        ],
-                        "searchDsl": "",
-                        "searchString": ""
-                    },
-                    "datatype": "resource-instance",
-                    "description": null,
-                    "exportable": false,
-                    "fieldname": null,
-                    "graph_id": "4e69d0a9-7af2-473f-929f-71d462ea32d1",
-                    "hascustomalias": false,
-                    "is_collector": false,
-                    "isrequired": false,
-                    "issearchable": true,
-                    "istopnode": false,
-                    "name": "Submitted By",
-                    "nodegroup_id": "e750627a-a326-11ed-a0e3-5254004d77d3",
-                    "nodeid": "e0ec22e2-a985-11ed-b137-5254004d77d3",
-                    "ontologyclass": "http://www.cidoc-crm.org/cidoc-crm/E39_Actor",
-                    "parentproperty": "http://www.cidoc-crm.org/cidoc-crm/P107_has_current_or_former_member",
                     "sortorder": 0,
                     "sourcebranchpublication_id": null
                 },
@@ -1356,8 +1579,8 @@
             "publication": {
                 "graph_id": "4e69d0a9-7af2-473f-929f-71d462ea32d1",
                 "notes": null,
-                "publicationid": "15434fce-5be3-11ee-8616-080027b7463b",
-                "published_time": "2023-09-25T15:35:36.750"
+                "publicationid": "617dddde-5c18-11ee-bb0c-080027b7463b",
+                "published_time": "2023-09-25T21:57:07.967"
             },
             "relatable_resource_model_ids": [],
             "resource_2_resource_constraints": [],
@@ -1376,7 +1599,7 @@
                 "isrequired": false,
                 "issearchable": true,
                 "istopnode": true,
-                "name": "BC Historic Site Submission",
+                "name": "Historic Site Submission",
                 "nodegroup_id": null,
                 "nodeid": "4443720a-9da1-11ed-976d-5254004d77d3",
                 "ontologyclass": "http://www.cidoc-crm.org/cidoc-crm/E7_Activity",

@@ -40,6 +40,7 @@ LOCALE_PATHS.append(os.path.join(APP_ROOT, 'locale'))
 
 FILE_TYPE_CHECKING = False
 FILE_TYPES = ["bmp", "gif", "jpg", "jpeg", "pdf", "png", "psd", "rtf", "tif", "tiff", "xlsx", "csv", "zip"]
+FILENAME_GENERATOR = "arches_bchp.util.storage_filename_generator.generate_filename"
 
 # SECURITY WARNING: keep the secret key used in production secret!
 # SECRET_KEY = ''
@@ -65,29 +66,6 @@ KIBANA_CONFIG_BASEPATH = "kibana"  # must match Kibana config.yml setting (serve
 
 LOAD_DEFAULT_ONTOLOGY = False
 LOAD_PACKAGE_ONTOLOGIES = True
-
-# DATABASES = {
-#     "default": {
-#         "ATOMIC_REQUESTS": False,
-#         "AUTOCOMMIT": True,
-#         "CONN_MAX_AGE": 0,
-#         "ENGINE": "django.contrib.gis.db.backends.postgis",
-#         "HOST": DATABASE_HOST,
-#         "NAME": DATABASE_NAME,
-#         "OPTIONS": {},
-#         "PASSWORD": DATABASE_PASSWORD,
-#         "PORT": DATABASE_PORT,
-#         "POSTGIS_TEMPLATE": "template_postgis",
-#         "TEST": {
-#             "CHARSET": None,
-#             "COLLATION": None,
-#             "MIRROR": None,
-#             "NAME": None
-#         },
-#         "TIME_ZONE": None,
-#         "USER": DATABASE_USER
-#     }
-# }
 
 INSTALLED_APPS = (
     "webpack_loader",
@@ -138,7 +116,7 @@ WSGI_APPLICATION = 'arches_bchp.wsgi.application'
 MEDIA_URL = '/files/'
 
 # Absolute filesystem path to the directory that will hold user-uploaded files.
-MEDIA_ROOT =  os.path.join(APP_ROOT)
+MEDIA_ROOT = os.path.join(APP_ROOT)
 
 # URL prefix for static files.
 # Example: "http://media.lawrence.com/static/"
@@ -188,7 +166,6 @@ LOGGING = {
     }
 }
 
-
 # Sets default max upload size to 15MB
 DATA_UPLOAD_MAX_MEMORY_SIZE = 15728640
 
@@ -226,7 +203,7 @@ GRAPH_MODEL_CACHE_TIMEOUT = None
 
 OAUTH_CLIENT_ID = ''  #'9JCibwrWQ4hwuGn5fu2u1oRZSs9V6gK8Vu8hpRC4'
 
-APP_TITLE = 'Arches | Heritage Data Management'
+APP_TITLE = 'BC Government | Historic Place Inventory'
 COPYRIGHT_TEXT = 'All Rights Reserved.'
 COPYRIGHT_YEAR = '2019'
 
@@ -253,7 +230,6 @@ CELERY_BROKER_URL = "" # RabbitMQ --> "amqp://guest:guest@localhost",  Redis -->
 CELERY_ACCEPT_CONTENT = ['json']
 CELERY_RESULT_BACKEND = 'django-db' # Use 'django-cache' if you want to use your cache as your backend
 CELERY_TASK_SERIALIZER = 'json'
-
 
 CELERY_SEARCH_EXPORT_EXPIRES = 24 * 3600  # seconds
 CELERY_SEARCH_EXPORT_CHECK = 3600  # seconds

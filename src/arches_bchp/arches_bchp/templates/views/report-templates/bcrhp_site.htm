@@ -169,7 +169,7 @@
                         <!-- ko let: { card: getCardWithName('Site Names') } -->
                         <!-- ko let: { widget: getWidgetWithLabel(card, 'Name') } -->
                         <dl class="dl-vertical dl-vertical-bc" >
-                                <dt data-bind="text: widget.label()"></dt>
+                                <dt data-bind="text: widget.label(), class: widget.node.alias"></dt>
                                 <dd>
                                 <!-- ko foreach: { data: card.tiles, as: 'tile' } -->
                                 <div data-bind="component: {
@@ -197,7 +197,7 @@
                             <dl class="dl-vertical dl-vertical-bc"
                                 data-bind="css: {'provisional': ko.unwrap(tile.provisionaledits) !== null && tile.userisreviewer === false}">
                                 <!-- ko if: tileIndex() === 0 -->
-                                <dt data-bind="text: widget.label()"></dt>
+                                <dt data-bind="text: widget.label(), class: widget.node.alias"></dt>
                                 <!-- /ko -->
                                 <dd data-bind="component: {
                                             name: widget.widgetLookup[widget.widget_id()].name,
@@ -222,7 +222,7 @@
                         <!-- ko let: { titleWidget: getWidgetWithLabel(photocard, 'Image Title') } -->
                         <!-- ko let: { descriptionWidget: getWidgetWithLabel(photocard, 'Image Description') } -->
                         <dl class="dl-vertical">
-                            <dt></dt>
+                            <dt data-bind="class: photoWidget.node.alias"></dt>
                             <dd>
                                 <!-- ko foreach: { data: photocard.tiles, as: 'phototile' } -->
                                 <span data-bind="component: {
@@ -274,7 +274,7 @@
                         <dl class="dl-vertical dl-vertical-bc"
                             data-bind="css: {'provisional': ko.unwrap(tile.provisionaledits) !== null && tile.userisreviewer === false}">
                             <!-- ko if: tileIndex() === 0 -->
-                            <dt data-bind="text: widget.label()"></dt>
+                            <dt data-bind="text: widget.label(), class: widget.node.alias"></dt>
                             <!-- /ko -->
                             <dd data-bind="component: {
                                             name: widget.widgetLookup[widget.widget_id()].name,
@@ -319,7 +319,7 @@
                         <!-- ko let: { widget: getWidgetWithLabel(card, 'Legislative Act') } -->
                         <!-- ko if: !!card.tiles && card.tiles().length > 0 -->
                         <dl class="dl-vertical dl-vertical-bc">
-                            <dt data-bind="text: widget.label()"></dt>
+                            <dt data-bind="text: widget.label(), class: widget.node.alias"></dt>
                             <dd>
                                 <!-- ko foreach: { data: card.tiles, as: 'tile' } -->
                                 <div data-bind="component: {
@@ -349,7 +349,7 @@
                         <!-- ko foreach: { data: card.tiles, as: 'tile' } -->
                         <dl class="dl-vertical dl-vertical-bc" data-bind="css: {'provisional': ko.unwrap(tile.provisionaledits) !== null && tile.userisreviewer === false}">
                             <!-- ko if: tileIndex() === 0 -->
-                            <dt data-bind="text: widget.label()"></dt>
+                            <dt data-bind="text: widget.label(), class: sigTypeWidget.node.alias"></dt>
                             <!-- /ko -->
                             <dd style="text-decoration: underline;" data-bind="component: {
                                             name: sigTypeWidget.widgetLookup[sigTypeWidget.widget_id()].name,
