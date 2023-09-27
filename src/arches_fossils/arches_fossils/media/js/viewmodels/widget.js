@@ -63,6 +63,11 @@ define([
             this.config = ko.observable(this.config);
         }
 
+        this.nodeCssClasses = ko.pureComputed(function() {
+            return [ko.unwrap(self.node?.alias),
+                self.widget?.widgetLookup[ko.unwrap(self.widget?.widget_id)].name
+            ].join(" ").trim();
+        });
         // If the node for this widget has been flagged as a control
         // node, register the value change in the card
         if (!!params.bc_card)
@@ -105,7 +110,7 @@ define([
             subscribeConfigObservable(obs, key);
         });
 
-        if (ko.isObservable(this.defaultValue)) {
+        if (ko.isObservable(this.value) && ko.isObservable(this.defaultValue)) {
             var defaultValue = this.defaultValue();
             if (this.tile && !this.tile.noDefaults && ko.unwrap(this.tile.tileid) == "" && defaultValue != null && defaultValue != "") {
                 this.value(defaultValue);
