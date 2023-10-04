@@ -90,13 +90,13 @@ class BCFossilPublicationDescriptors(AbstractPrimaryDescriptorsFunction):
         except ValueError as e:
             print(e, "invalid nodegroupid participating in descriptor function.")
 
-    def _get_value_from_node(self, name_node, resourceinstanceid):
+    def _get_value_from_node(self, name_node, resource):
 
         tile = models.TileModel.objects.filter(
             nodegroup_id=name_node.nodegroup_id
-        ).filter(resourceinstance_id=resourceinstanceid).first()
+        ).filter(resourceinstance_id=resource).first()
         if not tile:
-            return None
+            return ""
         datatype = self._get_datatype_factory().get_instance(name_node.datatype)
         return datatype.get_display_value(tile, name_node)
 
