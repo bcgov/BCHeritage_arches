@@ -4,7 +4,7 @@
     "provinces-states-source": {
       "type": "vector",
       "tiles": [
-        "https://openmaps.gov.bc.ca/geo/pub/WHSE_BASEMAPPING.DBM_BC_7H_MIL_POLITICAL_POLY/ows?format=pbf&service=WMS&version=1.3.0&request=GetMap&srs=EPSG:3857&width=512&height=512&transparent=true&layers=pub:WHSE_BASEMAPPING.DBM_BC_7H_MIL_POLITICAL_POLY&bbox={bbox-epsg-3857}"
+        "/{ url_context_root }/bctileserver/geo/pub/WHSE_BASEMAPPING.DBM_BC_7H_MIL_POLITICAL_POLY/ows?format=pbf&service=WMS&version=1.3.0&request=GetMap&srs=EPSG:3857&width=512&height=512&transparent=true&layers=pub:WHSE_BASEMAPPING.DBM_BC_7H_MIL_POLITICAL_POLY&bbox={bbox-epsg-3857}"
       ],
       "tileSize": 512
     }

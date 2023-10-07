@@ -3,21 +3,7 @@
 
 {% block display_value %}
 <div>
-    <!-- ko let: {addressPart: streetNumber()} -->
-    <span data-bind="component: {
-                                            name: addressPart.widgetLookup[addressPart.widget_id()].name,
-                                            params: {
-                                                tile: tile(),
-                                                node: addressPart.node,
-                                                config: addressPart.config,
-                                                label: addressPart.label(),
-                                                value: tile().data[addressPart.attributes.node_id()],
-                                                state: 'display_value',
-                                            }
-                                        }, click: function(){console.log(card);}">
-    </span>
-    <!-- /ko -->
-    <!-- ko let: {addressPart: streetName()} -->
+    <!-- ko let: {addressPart: streetAddress()} -->
     <span data-bind="component: {
                                             name: addressPart.widgetLookup[addressPart.widget_id()].name,
                                             params: {

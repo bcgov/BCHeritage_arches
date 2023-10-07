@@ -24,15 +24,10 @@ define(['knockout', 'underscore', 'viewmodels/widget', 'templates/views/componen
                 return namedWidget;
             };
 
-            this.streetNumber = ko.computed(function()
+            this.streetAddress = ko.computed(function()
             {
-                let widget = self.getWidgetWithLabel(self.card(), "street_number");
+                let widget = self.getWidgetWithLabel(self.card(), "street_address");
                 return widget;
-            });
-
-            this.streetName = ko.computed(function()
-            {
-                return self.getWidgetWithLabel(self.card(), "street_name");
             });
 
             this.city = ko.computed(function()

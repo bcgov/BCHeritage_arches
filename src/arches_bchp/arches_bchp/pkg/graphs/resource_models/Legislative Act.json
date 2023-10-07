@@ -1,0 +1,559 @@
+{
+    "graph": [
+        {
+            "author": "Brett Ferguson",
+            "cards": [
+                {
+                    "active": true,
+                    "cardid": "3793ef41-20e8-4570-9b82-5e944f11ccf9",
+                    "component_id": "f05e4d3a-53c1-11e8-b0ea-784f435179ea",
+                    "config": null,
+                    "constraints": [],
+                    "cssclass": null,
+                    "description": null,
+                    "graph_id": "52dd40f2-1dee-45d2-b72c-234c8cbb5418",
+                    "helpenabled": false,
+                    "helptext": {
+                        "en": ""
+                    },
+                    "helptitle": {
+                        "en": ""
+                    },
+                    "instructions": {
+                        "en": ""
+                    },
+                    "is_editable": true,
+                    "name": {
+                        "en": "Validity Period"
+                    },
+                    "nodegroup_id": "1d670b02-3b89-11ee-a701-080027b7463b",
+                    "sortorder": 1,
+                    "visible": true
+                },
+                {
+                    "active": true,
+                    "cardid": "7e71fa57-b986-406b-bde6-3a8996937fe8",
+                    "component_id": "f05e4d3a-53c1-11e8-b0ea-784f435179ea",
+                    "config": null,
+                    "constraints": [
+                        {
+                            "card_id": "7e71fa57-b986-406b-bde6-3a8996937fe8",
+                            "constraintid": "f3445b24-505e-4d78-b03b-36c53d96ae2c",
+                            "nodes": [
+                                "7d3bcc42-3b8a-11ee-a93e-080027b7463b",
+                                "7789d580-3b87-11ee-a701-080027b7463b",
+                                "9e49c774-3b88-11ee-a701-080027b7463b",
+                                "488c680a-3b88-11ee-a701-080027b7463b"
+                            ],
+                            "uniquetoallinstances": true
+                        }
+                    ],
+                    "cssclass": null,
+                    "description": null,
+                    "graph_id": "52dd40f2-1dee-45d2-b72c-234c8cbb5418",
+                    "helpenabled": false,
+                    "helptext": {
+                        "en": ""
+                    },
+                    "helptitle": {
+                        "en": ""
+                    },
+                    "instructions": {
+                        "en": ""
+                    },
+                    "is_editable": false,
+                    "name": {
+                        "en": "Authority"
+                    },
+                    "nodegroup_id": "7789d580-3b87-11ee-a701-080027b7463b",
+                    "sortorder": 0,
+                    "visible": true
+                }
+            ],
+            "cards_x_nodes_x_widgets": [
+                {
+                    "card_id": "7e71fa57-b986-406b-bde6-3a8996937fe8",
+                    "config": {
+                        "defaultValue": "",
+                        "i18n_properties": [
+                            "placeholder"
+                        ],
+                        "label": "Legal Instrument",
+                        "options": [],
+                        "placeholder": {
+                            "en": "Select the legal instrument"
+                        }
+                    },
+                    "id": "0b9a5abf-40c4-4008-b3a1-4be3f721661f",
+                    "label": {
+                        "en": "Legal Instrument"
+                    },
+                    "node_id": "488c680a-3b88-11ee-a701-080027b7463b",
+                    "sortorder": 1,
+                    "visible": true,
+                    "widget_id": "10000000-0000-0000-0000-000000000002"
+                },
+                {
+                    "card_id": "3793ef41-20e8-4570-9b82-5e944f11ccf9",
+                    "config": {
+                        "dateFormat": "YYYY",
+                        "defaultValue": "",
+                        "label": "End Date",
+                        "maxDate": false,
+                        "minDate": false,
+                        "placeholder": "Enter date",
+                        "viewMode": "years"
+                    },
+                    "id": "49010064-9ef2-4ab4-890a-17d6dbcad26f",
+                    "label": {
+                        "en": "End Date"
+                    },
+                    "node_id": "cb45b8b8-3b89-11ee-ab32-080027b7463b",
+                    "sortorder": 1,
+                    "visible": true,
+                    "widget_id": "10000000-0000-0000-0000-000000000004"
+                },
+                {
+                    "card_id": "7e71fa57-b986-406b-bde6-3a8996937fe8",
+                    "config": {
+                        "defaultValue": {
+                            "en": {
+                                "direction": "ltr",
+                                "value": ""
+                            }
+                        },
+                        "i18n_properties": [
+                            "placeholder"
+                        ],
+                        "label": "Act Section",
+                        "maxLength": null,
+                        "placeholder": {
+                            "en": "Enter the section of the act"
+                        },
+                        "uneditable": false,
+                        "width": "100%"
+                    },
+                    "id": "60455986-cd21-490f-95cf-2171a504f38f",
+                    "label": {
+                        "en": "Act Section"
+                    },
+                    "node_id": "7d3bcc42-3b8a-11ee-a93e-080027b7463b",
+                    "sortorder": 2,
+                    "visible": true,
+                    "widget_id": "10000000-0000-0000-0000-000000000001"
+                },
+                {
+                    "card_id": "7e71fa57-b986-406b-bde6-3a8996937fe8",
+                    "config": {
+                        "defaultValue": "",
+                        "i18n_properties": [
+                            "placeholder"
+                        ],
+                        "label": "Recognition Type",
+                        "options": [],
+                        "placeholder": {
+                            "en": "Select the recognition type"
+                        }
+                    },
+                    "id": "69336e69-b8d9-4bfa-8137-94978e337ad7",
+                    "label": {
+                        "en": "Recognition Type"
+                    },
+                    "node_id": "9e49c774-3b88-11ee-a701-080027b7463b",
+                    "sortorder": 3,
+                    "visible": true,
+                    "widget_id": "10000000-0000-0000-0000-000000000002"
+                },
+                {
+                    "card_id": "3793ef41-20e8-4570-9b82-5e944f11ccf9",
+                    "config": {
+                        "dateFormat": "YYYY",
+                        "defaultValue": "",
+                        "label": "Start Date",
+                        "maxDate": false,
+                        "minDate": false,
+                        "placeholder": "Enter date",
+                        "viewMode": "years"
+                    },
+                    "id": "7f24eaf6-d9e1-46a3-a0a0-4920c823ff2b",
+                    "label": {
+                        "en": "Start Date"
+                    },
+                    "node_id": "9f7ba0f8-3b89-11ee-a701-080027b7463b",
+                    "sortorder": 0,
+                    "visible": true,
+                    "widget_id": "10000000-0000-0000-0000-000000000004"
+                },
+                {
+                    "card_id": "7e71fa57-b986-406b-bde6-3a8996937fe8",
+                    "config": {
+                        "defaultValue": "",
+                        "i18n_properties": [
+                            "placeholder"
+                        ],
+                        "label": "Authority",
+                        "options": [],
+                        "placeholder": {
+                            "en": "Select the level of the responsible government"
+                        }
+                    },
+                    "id": "e4a4e087-a7de-40d8-9f24-15a74781ef97",
+                    "label": {
+                        "en": "Authority"
+                    },
+                    "node_id": "7789d580-3b87-11ee-a701-080027b7463b",
+                    "sortorder": 0,
+                    "visible": true,
+                    "widget_id": "10000000-0000-0000-0000-000000000002"
+                }
+            ],
+            "color": null,
+            "config": {},
+            "deploymentdate": null,
+            "deploymentfile": null,
+            "description": {
+                "en": ""
+            },
+            "edges": [
+                {
+                    "description": null,
+                    "domainnode_id": "b57ec304-3ad4-11ee-855f-080027b7463b",
+                    "edgeid": "19b67300-03b1-425a-9b42-07c9ad822b69",
+                    "graph_id": "52dd40f2-1dee-45d2-b72c-234c8cbb5418",
+                    "name": null,
+                    "ontologyproperty": "http://www.ics.forth.gr/isl/CRMdig/L54_is_same-as",
+                    "rangenode_id": "1d670b02-3b89-11ee-a701-080027b7463b"
+                },
+                {
+                    "description": null,
+                    "domainnode_id": "7789d580-3b87-11ee-a701-080027b7463b",
+                    "edgeid": "561503b1-ace9-4772-a1b5-848744c710d2",
+                    "graph_id": "52dd40f2-1dee-45d2-b72c-234c8cbb5418",
+                    "name": null,
+                    "ontologyproperty": "http://www.cidoc-crm.org/cidoc-crm/P105i_has_right_on",
+                    "rangenode_id": "488c680a-3b88-11ee-a701-080027b7463b"
+                },
+                {
+                    "description": null,
+                    "domainnode_id": "1d670b02-3b89-11ee-a701-080027b7463b",
+                    "edgeid": "b22281d2-b20e-424b-b556-1840e7e34e1a",
+                    "graph_id": "52dd40f2-1dee-45d2-b72c-234c8cbb5418",
+                    "name": null,
+                    "ontologyproperty": "http://www.cidoc-crm.org/cidoc-crm/P4i_is_time-span_of",
+                    "rangenode_id": "cb45b8b8-3b89-11ee-ab32-080027b7463b"
+                },
+                {
+                    "description": null,
+                    "domainnode_id": "488c680a-3b88-11ee-a701-080027b7463b",
+                    "edgeid": "b2c5b054-8600-406a-8329-f0af0addfa7f",
+                    "graph_id": "52dd40f2-1dee-45d2-b72c-234c8cbb5418",
+                    "name": null,
+                    "ontologyproperty": "http://www.cidoc-crm.org/cidoc-crm/P70i_is_documented_in",
+                    "rangenode_id": "7d3bcc42-3b8a-11ee-a93e-080027b7463b"
+                },
+                {
+                    "description": null,
+                    "domainnode_id": "488c680a-3b88-11ee-a701-080027b7463b",
+                    "edgeid": "b41ad08f-609c-4f0e-b7ba-40f28483b119",
+                    "graph_id": "52dd40f2-1dee-45d2-b72c-234c8cbb5418",
+                    "name": null,
+                    "ontologyproperty": "http://www.cidoc-crm.org/cidoc-crm/P140i_was_attributed_by",
+                    "rangenode_id": "9e49c774-3b88-11ee-a701-080027b7463b"
+                },
+                {
+                    "description": null,
+                    "domainnode_id": "b57ec304-3ad4-11ee-855f-080027b7463b",
+                    "edgeid": "b80f9476-41a5-442a-ab7d-e6d9eb60e38e",
+                    "graph_id": "52dd40f2-1dee-45d2-b72c-234c8cbb5418",
+                    "name": null,
+                    "ontologyproperty": "http://www.cidoc-crm.org/cidoc-crm/P105_right_held_by",
+                    "rangenode_id": "7789d580-3b87-11ee-a701-080027b7463b"
+                },
+                {
+                    "description": null,
+                    "domainnode_id": "1d670b02-3b89-11ee-a701-080027b7463b",
+                    "edgeid": "df16c5d4-d70f-4889-8644-6c94e793449c",
+                    "graph_id": "52dd40f2-1dee-45d2-b72c-234c8cbb5418",
+                    "name": null,
+                    "ontologyproperty": "http://www.cidoc-crm.org/cidoc-crm/P4i_is_time-span_of",
+                    "rangenode_id": "9f7ba0f8-3b89-11ee-a701-080027b7463b"
+                }
+            ],
+            "functions_x_graphs": [
+                {
+                    "config": {
+                        "descriptor_types": {
+                            "description": {
+                                "nodegroup_id": "1d670b02-3b89-11ee-a701-080027b7463b",
+                                "string_template": "<Start Date> - <End Date>"
+                            },
+                            "map_popup": {
+                                "nodegroup_id": "",
+                                "string_template": ""
+                            },
+                            "name": {
+                                "nodegroup_id": "7789d580-3b87-11ee-a701-080027b7463b",
+                                "string_template": "<Authority>, <Legal Instrument>, <Act Section>, <Recognition Type>"
+                            }
+                        },
+                        "triggering_nodegroups": []
+                    },
+                    "function_id": "60000000-0000-0000-0000-000000000001",
+                    "graph_id": "52dd40f2-1dee-45d2-b72c-234c8cbb5418",
+                    "id": "fa6f3b01-1fed-41ca-aeae-3756eba6a02e"
+                }
+            ],
+            "graphid": "52dd40f2-1dee-45d2-b72c-234c8cbb5418",
+            "iconclass": "fa fa-book",
+            "is_editable": false,
+            "isresource": true,
+            "jsonldcontext": null,
+            "name": {
+                "en": "Legislative Act"
+            },
+            "nodegroups": [
+                {
+                    "cardinality": "1",
+                    "legacygroupid": null,
+                    "nodegroupid": "1d670b02-3b89-11ee-a701-080027b7463b",
+                    "parentnodegroup_id": null
+                },
+                {
+                    "cardinality": "1",
+                    "legacygroupid": null,
+                    "nodegroupid": "7789d580-3b87-11ee-a701-080027b7463b",
+                    "parentnodegroup_id": null
+                }
+            ],
+            "nodes": [
+                {
+                    "alias": "validity_period",
+                    "config": {
+                        "en": ""
+                    },
+                    "datatype": "semantic",
+                    "description": null,
+                    "exportable": false,
+                    "fieldname": null,
+                    "graph_id": "52dd40f2-1dee-45d2-b72c-234c8cbb5418",
+                    "hascustomalias": false,
+                    "is_collector": true,
+                    "isrequired": false,
+                    "issearchable": true,
+                    "istopnode": false,
+                    "name": "Validity Period",
+                    "nodegroup_id": "1d670b02-3b89-11ee-a701-080027b7463b",
+                    "nodeid": "1d670b02-3b89-11ee-a701-080027b7463b",
+                    "ontologyclass": "http://www.cidoc-crm.org/cidoc-crm/E52_Time-Span",
+                    "parentproperty": "http://www.ics.forth.gr/isl/CRMdig/L54_is_same-as",
+                    "sortorder": 0,
+                    "sourcebranchpublication_id": null
+                },
+                {
+                    "alias": "legal_instrument",
+                    "config": {
+                        "rdmCollection": "8e16a8d0-a992-45bc-ac91-a93b584db93f"
+                    },
+                    "datatype": "concept",
+                    "description": null,
+                    "exportable": true,
+                    "fieldname": "legalact",
+                    "graph_id": "52dd40f2-1dee-45d2-b72c-234c8cbb5418",
+                    "hascustomalias": false,
+                    "is_collector": false,
+                    "isrequired": false,
+                    "issearchable": true,
+                    "istopnode": false,
+                    "name": "Legal Instrument",
+                    "nodegroup_id": "7789d580-3b87-11ee-a701-080027b7463b",
+                    "nodeid": "488c680a-3b88-11ee-a701-080027b7463b",
+                    "ontologyclass": "http://www.cidoc-crm.org/cidoc-crm/E72_Legal_Object",
+                    "parentproperty": "http://www.cidoc-crm.org/cidoc-crm/P105i_has_right_on",
+                    "sortorder": 0,
+                    "sourcebranchpublication_id": null
+                },
+                {
+                    "alias": "authority",
+                    "config": {
+                        "rdmCollection": "2c0be96f-6ddf-4043-ba08-dfe840f4659a"
+                    },
+                    "datatype": "concept",
+                    "description": null,
+                    "exportable": true,
+                    "fieldname": "authority",
+                    "graph_id": "52dd40f2-1dee-45d2-b72c-234c8cbb5418",
+                    "hascustomalias": false,
+                    "is_collector": true,
+                    "isrequired": false,
+                    "issearchable": true,
+                    "istopnode": false,
+                    "name": "Authority",
+                    "nodegroup_id": "7789d580-3b87-11ee-a701-080027b7463b",
+                    "nodeid": "7789d580-3b87-11ee-a701-080027b7463b",
+                    "ontologyclass": "http://www.cidoc-crm.org/cidoc-crm/E74_Group",
+                    "parentproperty": "http://www.cidoc-crm.org/cidoc-crm/P105_right_held_by",
+                    "sortorder": 0,
+                    "sourcebranchpublication_id": null
+                },
+                {
+                    "alias": "act_section",
+                    "config": {
+                        "rdmCollection": null
+                    },
+                    "datatype": "string",
+                    "description": null,
+                    "exportable": false,
+                    "fieldname": null,
+                    "graph_id": "52dd40f2-1dee-45d2-b72c-234c8cbb5418",
+                    "hascustomalias": false,
+                    "is_collector": false,
+                    "isrequired": false,
+                    "issearchable": true,
+                    "istopnode": false,
+                    "name": "Act Section",
+                    "nodegroup_id": "7789d580-3b87-11ee-a701-080027b7463b",
+                    "nodeid": "7d3bcc42-3b8a-11ee-a93e-080027b7463b",
+                    "ontologyclass": "http://www.cidoc-crm.org/cidoc-crm/E31_Document",
+                    "parentproperty": "http://www.cidoc-crm.org/cidoc-crm/P70i_is_documented_in",
+                    "sortorder": 0,
+                    "sourcebranchpublication_id": null
+                },
+                {
+                    "alias": "recognition_type",
+                    "config": {
+                        "rdmCollection": "a6c45d0e-1226-42e8-a0b8-cf8888fc4f0b"
+                    },
+                    "datatype": "concept",
+                    "description": null,
+                    "exportable": false,
+                    "fieldname": null,
+                    "graph_id": "52dd40f2-1dee-45d2-b72c-234c8cbb5418",
+                    "hascustomalias": false,
+                    "is_collector": false,
+                    "isrequired": false,
+                    "issearchable": true,
+                    "istopnode": false,
+                    "name": "Recognition Type",
+                    "nodegroup_id": "7789d580-3b87-11ee-a701-080027b7463b",
+                    "nodeid": "9e49c774-3b88-11ee-a701-080027b7463b",
+                    "ontologyclass": "http://www.cidoc-crm.org/cidoc-crm/E13_Attribute_Assignment",
+                    "parentproperty": "http://www.cidoc-crm.org/cidoc-crm/P140i_was_attributed_by",
+                    "sortorder": 0,
+                    "sourcebranchpublication_id": null
+                },
+                {
+                    "alias": "start_date",
+                    "config": {
+                        "dateFormat": "YYYY"
+                    },
+                    "datatype": "date",
+                    "description": null,
+                    "exportable": true,
+                    "fieldname": "startdate",
+                    "graph_id": "52dd40f2-1dee-45d2-b72c-234c8cbb5418",
+                    "hascustomalias": false,
+                    "is_collector": false,
+                    "isrequired": false,
+                    "issearchable": true,
+                    "istopnode": false,
+                    "name": "Start Date",
+                    "nodegroup_id": "1d670b02-3b89-11ee-a701-080027b7463b",
+                    "nodeid": "9f7ba0f8-3b89-11ee-a701-080027b7463b",
+                    "ontologyclass": "http://www.cidoc-crm.org/cidoc-crm/E63_Beginning_of_Existence",
+                    "parentproperty": "http://www.cidoc-crm.org/cidoc-crm/P4i_is_time-span_of",
+                    "sortorder": 0,
+                    "sourcebranchpublication_id": null
+                },
+                {
+                    "alias": null,
+                    "config": {
+                        "en": ""
+                    },
+                    "datatype": "semantic",
+                    "description": "",
+                    "exportable": false,
+                    "fieldname": null,
+                    "graph_id": "52dd40f2-1dee-45d2-b72c-234c8cbb5418",
+                    "hascustomalias": false,
+                    "is_collector": false,
+                    "isrequired": false,
+                    "issearchable": true,
+                    "istopnode": true,
+                    "name": "Legislative Act",
+                    "nodegroup_id": null,
+                    "nodeid": "b57ec304-3ad4-11ee-855f-080027b7463b",
+                    "ontologyclass": "http://www.cidoc-crm.org/cidoc-crm/E72_Legal_Object",
+                    "parentproperty": "",
+                    "sortorder": 0,
+                    "sourcebranchpublication_id": null
+                },
+                {
+                    "alias": "end_date",
+                    "config": {
+                        "dateFormat": "YYYY"
+                    },
+                    "datatype": "date",
+                    "description": null,
+                    "exportable": true,
+                    "fieldname": "enddate",
+                    "graph_id": "52dd40f2-1dee-45d2-b72c-234c8cbb5418",
+                    "hascustomalias": false,
+                    "is_collector": false,
+                    "isrequired": false,
+                    "issearchable": true,
+                    "istopnode": false,
+                    "name": "End Date",
+                    "nodegroup_id": "1d670b02-3b89-11ee-a701-080027b7463b",
+                    "nodeid": "cb45b8b8-3b89-11ee-ab32-080027b7463b",
+                    "ontologyclass": "http://www.cidoc-crm.org/cidoc-crm/E64_End_of_Existence",
+                    "parentproperty": "http://www.cidoc-crm.org/cidoc-crm/P4i_is_time-span_of",
+                    "sortorder": 0,
+                    "sourcebranchpublication_id": null
+                }
+            ],
+            "ontology_id": "e6e8db47-2ccf-11e6-927e-b8f6b115d7dd",
+            "publication": {
+                "graph_id": "52dd40f2-1dee-45d2-b72c-234c8cbb5418",
+                "notes": null,
+                "publicationid": "9c8ff68e-5c9d-11ee-9024-0050568377a0",
+                "published_time": "2023-09-26T13:50:50.136"
+            },
+            "relatable_resource_model_ids": [],
+            "resource_2_resource_constraints": [],
+            "root": {
+                "alias": null,
+                "config": {
+                    "en": ""
+                },
+                "datatype": "semantic",
+                "description": "",
+                "exportable": false,
+                "fieldname": null,
+                "graph_id": "52dd40f2-1dee-45d2-b72c-234c8cbb5418",
+                "hascustomalias": false,
+                "is_collector": false,
+                "isrequired": false,
+                "issearchable": true,
+                "istopnode": true,
+                "name": "Legislative Act",
+                "nodegroup_id": null,
+                "nodeid": "b57ec304-3ad4-11ee-855f-080027b7463b",
+                "ontologyclass": "http://www.cidoc-crm.org/cidoc-crm/E72_Legal_Object",
+                "sortorder": 0,
+                "sourcebranchpublication_id": null
+            },
+            "slug": "legislative_act",
+            "subtitle": {
+                "en": ""
+            },
+            "template_id": "50000000-0000-0000-0000-000000000001",
+            "version": ""
+        }
+    ],
+    "metadata": {
+        "db": "PostgreSQL 12.11 on x86_64-pc-linux-gnu, compiled by gcc (GCC) 4.8.5 20150623 (Red Hat 4.8.5-44), 64-bit",
+        "git hash": "6489cc1 2023-09-25 20:10:05 -0700",
+        "os": "Linux",
+        "os version": "3.10.0-1160.92.1.el7.x86_64"
+    }
+}

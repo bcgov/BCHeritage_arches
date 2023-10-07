@@ -23,13 +23,19 @@ module.exports = () => {
                         overlay: {
                             errors: true,
                             warnings: false,
+                            runtimeErrors: (error) => {
+                                if (error.message === "ResizeObserver loop limit exceeded") {
+                                  return false;
+                                }
+                                return true;
+                            },
                         },
                     },
                     hot: true,
                     host: '0.0.0.0',
                     devMiddleware: {
                         index: true,
-                        publicPath: commonWebpackConfig.output.publicPath,
+                        publicPath: commonWebpackConfig.STATIC_URL,
                         writeToDisk: true,
                     },
                     port: commonWebpackConfig.WEBPACK_DEVELOPMENT_SERVER_PORT,

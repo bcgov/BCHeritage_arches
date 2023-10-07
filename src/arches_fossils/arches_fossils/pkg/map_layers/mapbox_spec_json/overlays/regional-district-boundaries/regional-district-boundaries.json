@@ -4,7 +4,7 @@
     "regional-district-boundaries-source": {
       "type": "vector",
       "tiles": [
-        "https://openmaps.gov.bc.ca/geo/pub/WHSE_ADMIN_BOUNDARIES.EBC_REGIONAL_DISTRICTS_SP/ows?service=WMS&request=GetMap&layers=pub:WHSE_ADMIN_BOUNDARIES.EBC_REGIONAL_DISTRICTS_SP&styles=&format=pbf&transparent=true&version=1.1.1&height=512&width=512&srs=EPSG:3857&bbox={bbox-epsg-3857}"
+        "/{ url_context_root }/bctileserver/geo/pub/WHSE_ADMIN_BOUNDARIES.EBC_REGIONAL_DISTRICTS_SP/ows?service=WMS&request=GetMap&layers=pub:WHSE_ADMIN_BOUNDARIES.EBC_REGIONAL_DISTRICTS_SP&styles=&format=pbf&transparent=true&version=1.1.1&height=512&width=512&srs=EPSG:3857&bbox={bbox-epsg-3857}"
       ],
       "tileSize": 512
     }
@@ -18,9 +18,19 @@
       "minzoom": 0,
       "maxzoom": 20,
       "paint": {
-        "line-color": "#7777aa",
-        "line-width": 3,
-        "line-offset": 2
+        "line-color": "rgba(153,112,171,1)",
+        "line-width": 1.6
+      }
+    },
+    {
+      "id": "regional-district-boundaries-fill",
+      "type": "fill",
+      "source": "regional-district-boundaries-source",
+      "source-layer": "WHSE_ADMIN_BOUNDARIES.EBC_REGIONAL_DISTRICTS_SP",
+      "minzoom": 0,
+      "maxzoom": 20,
+      "paint": {
+        "fill-color": "rgba(153,112,171,.3)"
       }
     },
     {
@@ -28,14 +38,15 @@
       "type": "symbol",
       "source": "regional-district-boundaries-source",
       "source-layer": "WHSE_ADMIN_BOUNDARIES.EBC_REGIONAL_DISTRICTS_SP",
-      "minzoom": 4,
+      "minzoom": 10,
       "maxzoom": 20,
       "layout": {
         "text-field": "{REGIONAL_DISTRICT_NAME}",
-        "text-size": 20
+        "text-size": 14,
+        "text-font": ["Open Sans Bold","Arial Unicode MS Bold"]
       },
       "paint": {
-        "text-color": "#7777aa"
+        "text-color": "rgb(0, 0, 0)"
       }
     }
   ]

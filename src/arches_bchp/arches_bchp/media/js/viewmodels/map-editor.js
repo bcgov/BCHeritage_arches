@@ -398,7 +398,11 @@ define([
                 };
                 self.draw = new MapboxDraw({
                     displayControlsDefault: false,
-                    modes: modes
+                    modes: modes,
+                    controls: {
+                        "trash": true,
+                        "combine_features": true
+                    }
                 });
                 map.addControl(self.draw);
                 self.draw.set({

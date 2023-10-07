@@ -1,11 +1,10 @@
 from arches.app.functions.primary_descriptors import AbstractPrimaryDescriptorsFunction
 from arches.app.models import models
 from arches.app.datatypes.datatypes import DataTypeFactory
-from django.utils.translation import ugettext as _
 
 details = {
     "functionid": "60000000-0000-0000-0000-000000001001",
-    "name": "BC Fossils Descriptors",
+    "name": "BC Fossils Resource Descriptors",
     "type": "primarydescriptors",
     "modulename": "bc_fossils_descriptors.py",
     "description": "Function that provides the primary descriptors for BC Fossils resources",
@@ -42,7 +41,7 @@ details = {
 
 
 class BCFossilsDescriptors(AbstractPrimaryDescriptorsFunction):
-    _sample_graph_name = {"en": "BC Fossil Sample"}
+    _sample_graph_name = {"en": "Fossil Sample"}
     _datatype_factory = None
     _formation_node = None
     _geologic_minimum_time_node = None
@@ -67,7 +66,7 @@ class BCFossilsDescriptors(AbstractPrimaryDescriptorsFunction):
         ).first()
         BCFossilsDescriptors._collection_event_graph_id = \
         models.GraphModel.objects.filter(
-            name__contains={"en": "BC Fossil Collection Event"}
+            name__contains={"en": "Fossil Collection Event"}
         ).filter(isresource=True).values(
             "graphid").first()["graphid"]
         BCFossilsDescriptors._coll_event_samples_values_config = [
@@ -169,7 +168,7 @@ class BCFossilsDescriptors(AbstractPrimaryDescriptorsFunction):
 
         start_date_node = models.Node.objects.filter(graph=resource.graph_id) .filter(name="Collection Start Year") .first()
         end_date_node = models.Node.objects.filter(graph=resource.graph_id) .filter(name="Collection End Year") .first()
-        geographical_node = models.Node.objects.filter(graph=resource.graph_id) .filter(name="Geographical Name") .first()
+        geographical_node = models.Node.objects.filter(graph=resource.graph_id) .filter(name="General Location") .first()
 
         if start_date_node:
             value = self._get_value_from_node(

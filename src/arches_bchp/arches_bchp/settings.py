@@ -7,6 +7,7 @@ import os
 import sys
 import arches
 import inspect
+import semantic_version
 from django.utils.translation import gettext_lazy as _
 
 try:
@@ -15,16 +16,11 @@ except ImportError:
     pass
 
 APP_NAME = 'arches_bchp'
+APP_VERSION = semantic_version.Version(major=0, minor=0, patch=0)
 APP_ROOT = os.path.dirname(os.path.abspath(inspect.getfile(inspect.currentframe())))
-STATICFILES_DIRS =  (
-    os.path.join(APP_ROOT, 'media', 'build'),
-    os.path.join(APP_ROOT, 'media'),
-) + STATICFILES_DIRS
+MIN_ARCHES_VERSION = arches.__version__
+MAX_ARCHES_VERSION = arches.__version__
 
-# This is the namespace to use for export of data (for RDF/XML for example)
-# Ideally this should point to the url where you host your site
-# Make sure to use a trailing slash
-# ARCHES_NAMESPACE_FOR_DATA_EXPORT = "http://localhost:8000/"
 
 WEBPACK_LOADER = {
     "DEFAULT": {
@@ -36,14 +32,15 @@ DATATYPE_LOCATIONS.append('arches_bchp.datatypes')
 FUNCTION_LOCATIONS.append('arches_bchp.functions')
 ETL_MODULE_LOCATIONS.append('arches_bchp.etl_modules')
 SEARCH_COMPONENT_LOCATIONS.append('arches_bchp.search_components')
-TEMPLATES[0]['DIRS'].append(os.path.join(APP_ROOT, 'functions', 'templates'))
-TEMPLATES[0]['DIRS'].append(os.path.join(APP_ROOT, 'widgets', 'templates'))
-TEMPLATES[0]['DIRS'].insert(0, os.path.join(APP_ROOT, 'templates'))
+# TEMPLATES[0]['DIRS'].append(os.path.join(APP_ROOT, 'functions', 'templates'))
+# TEMPLATES[0]['DIRS'].append(os.path.join(APP_ROOT, 'widgets', 'templates'))
+# TEMPLATES[0]['DIRS'].insert(0, os.path.join(APP_ROOT, 'templates'))
 
 LOCALE_PATHS.append(os.path.join(APP_ROOT, 'locale'))
 
 FILE_TYPE_CHECKING = False
 FILE_TYPES = ["bmp", "gif", "jpg", "jpeg", "pdf", "png", "psd", "rtf", "tif", "tiff", "xlsx", "csv", "zip"]
+FILENAME_GENERATOR = "arches_bchp.util.storage_filename_generator.generate_filename"
 
 # SECURITY WARNING: keep the secret key used in production secret!
 # SECRET_KEY = ''
@@ -70,29 +67,6 @@ KIBANA_CONFIG_BASEPATH = "kibana"  # must match Kibana config.yml setting (serve
 LOAD_DEFAULT_ONTOLOGY = False
 LOAD_PACKAGE_ONTOLOGIES = True
 
-# DATABASES = {
-#     "default": {
-#         "ATOMIC_REQUESTS": False,
-#         "AUTOCOMMIT": True,
-#         "CONN_MAX_AGE": 0,
-#         "ENGINE": "django.contrib.gis.db.backends.postgis",
-#         "HOST": DATABASE_HOST,
-#         "NAME": DATABASE_NAME,
-#         "OPTIONS": {},
-#         "PASSWORD": DATABASE_PASSWORD,
-#         "PORT": DATABASE_PORT,
-#         "POSTGIS_TEMPLATE": "template_postgis",
-#         "TEST": {
-#             "CHARSET": None,
-#             "COLLATION": None,
-#             "MIRROR": None,
-#             "NAME": None
-#         },
-#         "TIME_ZONE": None,
-#         "USER": DATABASE_USER
-#     }
-# }
-
 INSTALLED_APPS = (
     "webpack_loader",
     "django.contrib.admin",
@@ -113,7 +87,23 @@ INSTALLED_APPS = (
     "django_celery_results",
     "compressor",
     # "silk",
+    "storages",
     "arches_bchp",
+)
+
+ARCHES_APPLICATIONS = ()
+
+STATICFILES_DIRS = build_staticfiles_dirs(
+    root_dir=ROOT_DIR,
+    app_root=APP_ROOT,
+    arches_applications=ARCHES_APPLICATIONS,
+)
+
+TEMPLATES = build_templates_config(
+    root_dir=ROOT_DIR,
+    debug=DEBUG,
+    app_root=APP_ROOT,
+    arches_applications=ARCHES_APPLICATIONS,
 )
 
 # ALLOWED_HOSTS = []
@@ -126,7 +116,7 @@ WSGI_APPLICATION = 'arches_bchp.wsgi.application'
 MEDIA_URL = '/files/'
 
 # Absolute filesystem path to the directory that will hold user-uploaded files.
-MEDIA_ROOT =  os.path.join(APP_ROOT)
+MEDIA_ROOT = os.path.join(APP_ROOT)
 
 # URL prefix for static files.
 # Example: "http://media.lawrence.com/static/"
@@ -140,6 +130,8 @@ STATIC_ROOT = os.path.join(APP_ROOT, "staticfiles")
 
 # when hosting Arches under a sub path set this value to the sub path eg : "/{sub_path}/"
 FORCE_SCRIPT_NAME = None
+
+OVERRIDE_RESOURCE_MODEL_LOCK = False
 
 RESOURCE_IMPORT_LOG = os.path.join(APP_ROOT, 'logs', 'resource_import.log')
 DEFAULT_RESOURCE_IMPORT_USER = {'username': 'admin', 'userid': 1}
@@ -173,7 +165,6 @@ LOGGING = {
         }
     }
 }
-
 
 # Sets default max upload size to 15MB
 DATA_UPLOAD_MAX_MEMORY_SIZE = 15728640
@@ -212,7 +203,7 @@ GRAPH_MODEL_CACHE_TIMEOUT = None
 
 OAUTH_CLIENT_ID = ''  #'9JCibwrWQ4hwuGn5fu2u1oRZSs9V6gK8Vu8hpRC4'
 
-APP_TITLE = 'Arches | Heritage Data Management'
+APP_TITLE = 'BC Government | Historic Place Inventory'
 COPYRIGHT_TEXT = 'All Rights Reserved.'
 COPYRIGHT_YEAR = '2019'
 
@@ -240,7 +231,6 @@ CELERY_ACCEPT_CONTENT = ['json']
 CELERY_RESULT_BACKEND = 'django-db' # Use 'django-cache' if you want to use your cache as your backend
 CELERY_TASK_SERIALIZER = 'json'
 
-
 CELERY_SEARCH_EXPORT_EXPIRES = 24 * 3600  # seconds
 CELERY_SEARCH_EXPORT_CHECK = 3600  # seconds
 
@@ -261,7 +251,7 @@ CANTALOUPE_HTTP_ENDPOINT = "http://localhost:8182/"
 ACCESSIBILITY_MODE = False
 
 # By setting RESTRICT_MEDIA_ACCESS to True, media file requests outside of Arches will checked against nodegroup permissions.
-RESTRICT_MEDIA_ACCESS = False
+RESTRICT_MEDIA_ACCESS = True
 
 # By setting RESTRICT_CELERY_EXPORT_FOR_ANONYMOUS_USER to True, if the user is attempting
 # to export search results above the SEARCH_EXPORT_IMMEDIATE_DOWNLOAD_THRESHOLD
@@ -305,7 +295,6 @@ LANGUAGES = [
 # override this to permenantly display/hide the language switcher
 SHOW_LANGUAGE_SWITCH = len(LANGUAGES) > 1
 
-
 try:
     from .package_settings import *
 except ImportError:
@@ -324,14 +313,12 @@ except ImportError as e:
 
 # returns an output that can be read by NODEJS
 if __name__ == "__main__":
-    print(
-        json.dumps({
-            'ARCHES_NAMESPACE_FOR_DATA_EXPORT': ARCHES_NAMESPACE_FOR_DATA_EXPORT,
-            'STATIC_URL': STATIC_URL,
-            'ROOT_DIR': ROOT_DIR,
-            'APP_ROOT': APP_ROOT,
-            'WEBPACK_DEVELOPMENT_SERVER_PORT': WEBPACK_DEVELOPMENT_SERVER_PORT,
-        })
+    transmit_webpack_django_config(
+        root_dir=ROOT_DIR,
+        app_root=APP_ROOT,
+        arches_applications=ARCHES_APPLICATIONS,
+        public_server_address=PUBLIC_SERVER_ADDRESS,
+        static_url=STATIC_URL,
+        webpack_development_server_port=WEBPACK_DEVELOPMENT_SERVER_PORT,
     )
-    sys.stdout.flush()
 

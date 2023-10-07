@@ -63,7 +63,7 @@
 <!--/ko-->
 
 <div class="rp-report-section relative rp-report-section-root">
-    <div class="rp-report-section-title">
+    <div class="rp-report-section-title bc-columns-report">
         <!-- ko foreach: { data: report.cards, as: 'card' } -->
         <!-- ko if: $parent.hideEmptyNodes() === false || card.tiles().length > 0 -->
                 <!-- ko if: $index() !== 0 --><hr class="rp-tile-separator"><!-- /ko -->
@@ -168,8 +168,8 @@
                     <div class="bcrhp-grid-item grid-col-1 grid-row-1">
                         <!-- ko let: { card: getCardWithName('Site Names') } -->
                         <!-- ko let: { widget: getWidgetWithLabel(card, 'Name') } -->
-                        <dl class="dl-horizontal dl-horizontal-bc" >
-                                <dt data-bind="text: widget.label()"></dt>
+                        <dl class="dl-vertical dl-vertical-bc" >
+                                <dt data-bind="text: widget.label(), class: widget.node.alias"></dt>
                                 <dd>
                                 <!-- ko foreach: { data: card.tiles, as: 'tile' } -->
                                 <div data-bind="component: {
@@ -190,14 +190,14 @@
                         <!-- /ko -->
                         <!-- /ko -->
                     </div>
-                    <div class="bchrp-grid-item grod-col-2 grid-col-2 grid-row-1">
+                    <div class="bchrp-grid-item grid-col-2 grid-col-2 grid-row-1">
                             <!-- ko let: { card: getCardWithName('Borden Number') } -->
                             <!-- ko let: { widget: getWidgetWithLabel(card, 'Borden Number') } -->
                             <!-- ko foreach: { data: card.tiles, as: 'tile' } -->
-                            <dl class="dl-horizontal dl-horizontal-bc"
+                            <dl class="dl-vertical dl-vertical-bc"
                                 data-bind="css: {'provisional': ko.unwrap(tile.provisionaledits) !== null && tile.userisreviewer === false}">
                                 <!-- ko if: tileIndex() === 0 -->
-                                <dt data-bind="text: widget.label()"></dt>
+                                <dt data-bind="text: widget.label(), class: widget.node.alias"></dt>
                                 <!-- /ko -->
                                 <dd data-bind="component: {
                                             name: widget.widgetLookup[widget.widget_id()].name,
@@ -217,36 +217,43 @@
                         </div>
 
                     <div class="grid-row-1 grid-col-3 bc-details-images">
-                    <!-- ko let: { mycard: getCardWithName('Site Images') } -->
-                    <!-- ko let: { mywidget: getWidgetWithLabel(mycard, 'Site Image') } -->
-                    <dl class="dl-vertical">
-                        <dt></dt>
-                        <dd>
-                            <!-- ko foreach: { data: mycard.tiles, as: 'mytile' } -->
-                            <span data-bind="component: {
+                    <!-- ko let: { photocard: getCardWithName('Images') } -->
+                    <!-- ko let: { photoWidget: getWidgetWithLabel(photocard, 'Site Image') } -->
+                        <!-- ko let: { titleWidget: getWidgetWithLabel(photocard, 'Image Title') } -->
+                        <!-- ko let: { descriptionWidget: getWidgetWithLabel(photocard, 'Image Description') } -->
+                        <dl class="dl-vertical">
+                            <dt data-bind="class: photoWidget.node.alias"></dt>
+                            <dd>
+                                <!-- ko foreach: { data: photocard.tiles, as: 'phototile' } -->
+                                <span data-bind="component: {
                                             name: 'photo-widget',
                                             params: {
-                                                tile: mytile,
-                                                node: mywidget.node,
-                                                config: mywidget.config,
-                                                value: mytile.data[mywidget.attributes.node_id()],
+                                                tile: phototile,
+                                                node: photoWidget.node,
+                                                config: photoWidget.config,
+                                                value: phototile.data[photoWidget.attributes.node_id()],
+                                                imageTitle: phototile.data[titleWidget.attributes.node_id()],
+                                                imageDescription: phototile.data[descriptionWidget.attributes.node_id()],
                                                 state: 'display_value',
                                             }
-                                        }, click: function(){console.log(mycard);}"></span>
-                            <!-- /ko -->
+                                        }, click: function(event){console.log(photocard);}"></span>
+                                <!-- /ko -->
 
-                        </dd>
-                    </dl>
+                            </dd>
+                        </dl>
+                        <!-- /ko -->
+                        <!-- /ko -->
                     <!-- /ko -->
                     <!-- /ko -->
                 </div>
                     <div class="bcrhp-grid-item grid-col-1 grid-row-2">
-                        <!-- ko let: { card: getCardWithName(['BC Heritage Resource Place', 'BC Property Address']) } -->
-                        <!-- ko let: { widget: getWidgetWithLabel(card, 'Borden Number') } -->
+                        <!-- ko let: { card: getCardWithName(['Heritage Site Location', 'BC Property Address']) } -->
                         <!-- ko foreach: { data: card.tiles, as: 'tile' } -->
-                        <dl class="dl-horizontal dl-horizontal-bc"
+                        <dl class="dl-vertical dl-vertical-bc"
                             data-bind="css: {'provisional': ko.unwrap(tile.provisionaledits) !== null && tile.userisreviewer === false}">
-                            <dt data-bind="text: 'Civic Address '+($index()+1)">Civic Address</dt>
+                            <!-- ko if: tileIndex() === 0 -->
+                            <dt data-bind="text: 'Civic Addresses'"></dt>
+                            <!-- /ko -->
                             <dd data-bind="component: {
                                             name: 'civic-address-widget',
                                             params: {
@@ -259,16 +266,15 @@
                         </dl>
                         <!-- /ko -->
                         <!-- /ko -->
-                        <!-- /ko -->
                     </div>
                     <div class="bcrhp-grid-item grid-col-2 grid-row-2">
-                        <!-- ko let: { card: getCardWithName('BC Right') } -->
+                        <!-- ko let: { card: getCardWithName('Official Recognition Information') } -->
                         <!-- ko let: { widget: getWidgetWithLabel(card, 'Registry Types') } -->
                         <!-- ko foreach: { data: card.tiles, as: 'tile' } -->
-                        <dl class="dl-horizontal dl-horizontal-bc"
+                        <dl class="dl-vertical dl-vertical-bc"
                             data-bind="css: {'provisional': ko.unwrap(tile.provisionaledits) !== null && tile.userisreviewer === false}">
                             <!-- ko if: tileIndex() === 0 -->
-                            <dt data-bind="text: widget.label()"></dt>
+                            <dt data-bind="text: widget.label(), class: widget.node.alias"></dt>
                             <!-- /ko -->
                             <dd data-bind="component: {
                                             name: widget.widgetLookup[widget.widget_id()].name,
@@ -278,7 +284,7 @@
                                                 config: widget.config,
                                                 label: widget.label(),
                                                 value: tile.data[widget.attributes.node_id()],
-                                                state: 'display_value',
+                                                state: 'display_value'
                                             }
                                         }, click: function(){console.log(card);}"></dd>
                         </dl>
@@ -286,12 +292,34 @@
                         <!-- /ko -->
                         <!-- /ko -->
                     </div>
+                    <div class="bcrhp-grid-item grid-col-1 grid-row-3">
+                        <!-- ko let: { card: getCardWithName('Chronology') } -->
+                        <!-- ko foreach: { data: card.tiles, as: 'tile' } -->
+                        <dl class="dl-vertical dl-vertical-bc"
+                            data-bind="css: {'provisional': ko.unwrap(tile.provisionaledits) !== null && tile.userisreviewer === false}">
+                            <!-- ko if: tileIndex() === 0 -->
+                            <dt data-bind="text: `Significant Events`"></dt>
+                            <!-- /ko -->
+                            <dd data-bind="component: {
+                                            name: 'significant-event-widget',
+                                            params: {
+                                                tile: tile,
+                                                card: card,
+                                                value: tile.data,
+                                                state: 'display_value',
+                                                event_types: ['Construction']
+                                            }
+                                        }, click: function(){console.log(card);}"></dd>
+                        </dl>
+                        <!-- /ko -->
+                        <!-- /ko -->
+                    </div>
                     <div class="bcrhp-grid-item grid-col-2 grid-row-3">
-                        <!-- ko let: { card: getCardWithName(['BC Right', 'Designation or Protection']) } -->
-                        <!-- ko let: { widget: getWidgetWithLabel(card, 'Authority') } -->
+                        <!-- ko let: { card: getCardWithName(['Official Recognition Information', 'Official Recognition Details']) } -->
+                        <!-- ko let: { widget: getWidgetWithLabel(card, 'Legislative Act') } -->
                         <!-- ko if: !!card.tiles && card.tiles().length > 0 -->
-                        <dl class="dl-horizontal dl-horizontal-bc">
-                            <dt data-bind="text: widget.label()"></dt>
+                        <dl class="dl-vertical dl-vertical-bc">
+                            <dt data-bind="text: widget.label(), class: widget.node.alias"></dt>
                             <dd>
                                 <!-- ko foreach: { data: card.tiles, as: 'tile' } -->
                                 <div data-bind="component: {
@@ -315,16 +343,25 @@
                     </div>
 
                     <div class="bcrhp-grid-item bcrhp-full-width-grid-item bc-top-offset">
-                        <!-- ko let: { card: getCardWithName('BC Statement of Significance') } -->
+                        <!-- ko let: { card: getCardWithName('Statement of Significance') } -->
                         <!-- ko let: { widget: getWidgetWithLabel(card, 'Significance Description') } -->
+                        <!-- ko let: { sigTypeWidget: getWidgetWithLabel(card, 'Significance Type') } -->
                         <!-- ko foreach: { data: card.tiles, as: 'tile' } -->
-                        <dl class="dl-horizontal dl-horizontal-bc" data-bind="css: {'provisional': ko.unwrap(tile.provisionaledits) !== null && tile.userisreviewer === false}">
+                        <dl class="dl-vertical dl-vertical-bc" data-bind="css: {'provisional': ko.unwrap(tile.provisionaledits) !== null && tile.userisreviewer === false}">
                             <!-- ko if: tileIndex() === 0 -->
-                            <dt data-bind="text: widget.label()"></dt>
+                            <dt data-bind="text: widget.label(), class: sigTypeWidget.node.alias"></dt>
                             <!-- /ko -->
-                            <!-- ko if: tileIndex() !== 0 -->
-                            <dt data-bind="text: tileIndex"></dt>
-                            <!-- /ko -->
+                            <dd style="text-decoration: underline;" data-bind="component: {
+                                            name: sigTypeWidget.widgetLookup[sigTypeWidget.widget_id()].name,
+                                            params: {
+                                                tile: tile,
+                                                node: sigTypeWidget.node,
+                                                config: sigTypeWidget.config,
+                                                displayfullvalue: true,
+                                                value: tile.data[sigTypeWidget.attributes.node_id()],
+                                                state: 'display_value',
+                                            }
+                                        }, click: function(){console.log(card);}"></dd>
                             <dd data-bind="component: {
                                             name: widget.widgetLookup[widget.widget_id()].name,
                                             params: {
@@ -337,6 +374,7 @@
                                             }
                                         }, click: function(){console.log(card);}"></dd>
                         </dl>
+                        <!-- /ko -->
                         <!-- /ko -->
                         <!-- /ko -->
                         <!-- /ko -->

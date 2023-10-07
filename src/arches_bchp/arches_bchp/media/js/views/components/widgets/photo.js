@@ -7,8 +7,9 @@ define([
     'viewmodels/widget',
     'bindings/gallery',
     'bindings/dropzone',
+    'arches',
     'templates/views/components/widgets/photo.htm'
-], function($, ko, _, Dropzone, uuid, WidgetViewModel, GalleryBinding, DropzoneBinding, defaultPhotoTemplate) {
+], function($, ko, _, Dropzone, uuid, WidgetViewModel, GalleryBinding, DropzoneBinding, arches, defaultPhotoTemplate) {
     /**
      * registers a file-widget component for use in forms
      * @function external:"ko.components".file-widget
@@ -25,12 +26,35 @@ define([
             var self = this;
             WidgetViewModel.apply(this, [params]);
 
+            this.currentLanguage = arches.activeLanguage;
+
+            this.imageTitle = ko.observable(params.imageTitle || "")
+            this.imageDescription = ko.observable(params.imageDescription || null)
+
             this.uploadedFiles = ko.observableArray();
             this.unsupportedImageTypes = ['tif', 'tiff', 'vnd.adobe.photoshop'];
 
             if (Array.isArray(self.value())) {
                 this.uploadedFiles(self.value());
             }
+
+            this.fullSizeUrl = ko.observable("");
+            this.fullSizeAlt = ko.observable("");
+            this.fullSizeTitle = ko.observable("");
+            this.overlayVisible = ko.observable(true);
+
+            this.getImageTitle = function() {
+                var title = ko.unwrap(self.imageTitle);
+                if (!!title && !!title[self.currentLanguage])
+                {
+                    return title[self.currentLanguage].value()
+                }
+                return "";
+            };
+
+            this.getImageDescription = function(){
+                return self.imageDescription && self.imageDescription["en"] ? self.imageDescription["en"] : "";
+            };
 
             this.hoveredOverImage = ko.observable(false);
 
@@ -51,6 +75,28 @@ define([
                 });
             });
 
+            this.getFileUrl = function(url){
+                url = ko.unwrap(url);
+                var httpRegex = /^https?:\/\//;
+                // test whether the url is external (starts with http(s), if it is just return it)
+                if (httpRegex.test(url)){
+                    return url;
+                }else{
+                    return (arches.urls.url_subpath + url).replace('//', '/');
+                }
+            };
+
+            this.showOverlay = function(shouldShow) {
+                this.overlayVisible(shouldShow);
+            }
+
+            this.showPhoto = function(url, title)
+            {
+                console.log(`Need to show this image ${url}`);
+                this.fullSizeUrl(this.getFileUrl(url));
+                this.fullSizeTitle(title);
+                this.overlayVisible(true);
+            }
         },
         template: defaultPhotoTemplate
     });

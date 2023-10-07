@@ -44,6 +44,8 @@ along with this program. If not, see <http://www.gnu.org/licenses/>.
     <link href="{% webpack_static 'css/unify.css' %}" rel="stylesheet">
     <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/font-awesome/4.2.0/css/font-awesome.min.css">
     <link href="{% webpack_static 'css/index.css' %}" rel="stylesheet">
+    <link href="{% webpack_static 'css/project.css' %}" rel="stylesheet">
+    <link href="{% webpack_static 'css/bc_index.css' %}" rel="stylesheet">
     {% if app_settings.ACCESSIBILITY_MODE %}
     <link href="{% webpack_static 'css/accessibility.css' %}" rel="stylesheet">
     {% endif %}
@@ -54,6 +56,7 @@ along with this program. If not, see <http://www.gnu.org/licenses/>.
 <!--=== Header ===-->
 <header>
     <nav class="v5-splash-navbar navbar" role="navigation">
+        <div class="feedback-bar">{% blocktrans %}Welcome to the new BC Fossil Management System{% endblocktrans %}</div>
         <div class="container-fluid">
             <div class="navbar-header">
                 <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#myNavbar" aria-expanded="false" aria-controls="myNavbar">
@@ -65,10 +68,12 @@ along with this program. If not, see <http://www.gnu.org/licenses/>.
 
                 <div class="relative nav-brand-container">
                     <div class="navbar-brand-v5-icon-container">
-                        <img class="navbar-brand-v5-icon" src="{% webpack_static 'img/logo/BCID_H_gry_rev_clipped.png' %}" alt="Arches Logo">
+                        <a href="https://www2.gov.bc.ca/gov/content/home" target="BCGov Home">
+                        <img class="navbar-brand-v5-icon" src="{% webpack_static 'img/logo/BCID_H_rgb_rev.png' %}" alt="BC Government Logo">
+                        </a>
+                        <h1>{% blocktrans %}BC Fossil Management System{% endblocktrans %}</h1>
                     </div>
                     <div class="application-name">
-                        <h1>{% blocktrans %}BC Fossils Management System{% endblocktrans %}</h1>
                     </div>
                 </div>
             </div>
@@ -92,9 +97,9 @@ along with this program. If not, see <http://www.gnu.org/licenses/>.
                             {% trans "Welcome, " %} {{ user.first_name|default:user.username }}
                         </a>
                     </li>
-                    <li>
+                    <!--li>
                         <a class="application-login" href="{% url 'auth' %}?next={% url 'home' %}{% if user.username != 'anonymous' %}&logout=true{% endif %}">{% trans 'Log off' %}</a>
-                    </li>
+                    </li-->
                     {% endif %}
                     {% if show_language_swtich %}
                     <li>
@@ -119,9 +124,9 @@ along with this program. If not, see <http://www.gnu.org/licenses/>.
         <!-- Intro Section -->
         <section id="info-block-0" class="app-info-block intro-section relative">
             <!-- Vertical Nav -->
-            <div class="vertical-nav-container-background"></div>
+<!--            <div class="vertical-nav-container-background"></div>-->
 
-            <div id="cd-vertical-nav" class="vertical-nav-container">
+            <div id="cd-vertical-nav" class="vertical-nav-container" style="display: none;">
                 <ul class="vertical-nav-list">
                     <li class="active">
                         <a class="vertical-nav-list-link" href="#info-block-0" data-number="1" aria-label="Go to the top of the page">
@@ -129,22 +134,27 @@ along with this program. If not, see <http://www.gnu.org/licenses/>.
                         </a>
                     </li>
                     <li>
-                        <a class="vertical-nav-list-link" href="#info-block-1" data-number="2" aria-label="Go to the fast section">
-                            <span class="vertical-nav-list-ref">{% trans "Fast" %}</span>
+                        <a class="vertical-nav-list-link" href="#info-block-1" data-number="2" aria-label="Go to the fossil management system section">
+                            <span class="vertical-nav-list-ref">{% trans "BC Fossil Management System" %}</span>
                         </a>
                     </li>
                     <li>
-                        <a class="vertical-nav-list-link" href="#info-block-2" data-number="3" aria-label="Go to the workflows section">
-                            <span class="vertical-nav-list-ref">{% trans "Workflows" %}</span>
+                        <a class="vertical-nav-list-link" href="#info-block-2" data-number="3" aria-label="Go to the data management section">
+                            <span class="vertical-nav-list-ref">{% trans "Data Management and Use" %}</span>
                         </a>
                     </li>
                     <li>
-                        <a class="vertical-nav-list-link" href="#info-block-3" data-number="4" aria-label="Go to the search tools section">
-                            <span class="vertical-nav-list-ref">{% trans "Search Tools" %}</span>
+                        <a class="vertical-nav-list-link" href="#info-block-3" data-number="4" aria-label="Go to the search section">
+                            <span class="vertical-nav-list-ref">{% trans "BC Fossil Data Search and Visualization " %}</span>
                         </a>
                     </li>
                     <li>
-                        <a class="vertical-nav-list-link" href="#info-block-4" data-number="5" aria-label="Go to the mobile section">
+                        <a class="vertical-nav-list-link" href="#info-block-4" data-number="5" aria-label="Go to the workflow section">
+                            <span class="vertical-nav-list-ref">{% trans "Workflow" %}</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a class="vertical-nav-list-link" href="#info-block-5" data-number="6" aria-label="Go to the mobile section">
                             <span class="vertical-nav-list-ref">{% trans "Mobile" %}</span>
                         </a>
                     </li>
@@ -158,14 +168,12 @@ along with this program. If not, see <http://www.gnu.org/licenses/>.
                         <!-- SLIDE 1 -->
                         <li data-transition="fade" data-slotamount="9" data-masterspeed="0" data-title="Slide 1">
                             <!-- MAIN IMAGE -->
-<!--                            <img src="{% static 'img/landing/bhutan_tigersnest_lr.jpg' %}" alt="slidebg1" data-bgfit="cover" data-bgposition="center center" data-bgrepeat="no-repeat">-->
                             <img src="{% webpack_static 'img/front/mcabee.jpg' %}" alt="slidebg1" data-bgfit="cover" data-bgposition="center center" data-bgrepeat="no-repeat">
                             <!-- LAYERS -->
                             <!-- NEW LAYER -->
-                            <div class="tp-caption sft start text-bold v5-splash-caption" delay="4500" data-hoffset="0" data-y="400" data-speed="800" data-start="100" data-easing="Back.easeInOut" data-endspeed="300" data-x="0">
-                                <h2>{% blocktrans %}BC Fossils Management System{% endblocktrans %}</h2>
-                                <p>{% trans "Providing information, guidance and policies to support" %}</p>
-                                <p>{% trans "protection and management of fossils and fossil sites in B.C." %}</p>
+                            <div class="tp-caption sft start text-bold bc-splash-caption" delay="4500" data-hoffset="0" data-y="400" data-speed="800" data-start="100" data-easing="Back.easeInOut" data-endspeed="300" data-x="0">
+                                <h2>{% blocktrans %}BC Fossil Management System{% endblocktrans %}</h2>
+                                <h4 class="area-description">{% trans "Providing information, guidance and policies to support protection and management of fossils and fossil sites in B.C." %}</h4>
                             </div>
 
                             <!-- Gradient -->
@@ -188,131 +196,119 @@ along with this program. If not, see <http://www.gnu.org/licenses/>.
         <!-- End Intro Section -->
 
         <!-- Info Block 1 -->
-        <section id="info-block-1" class="app-info-block relative">
+        <section id="info-block-1" class="app-info-block app-info-content relative">
             <div>
-
                 <!-- Heading Info -->
-                <div class="sub-section">
-                    <div class="col-lg-7">
-                        <div class="app-info-block-intro text-center">
-                            <h2 class="app-info-block-header">{% trans "Fast" %}</h2>
-                            <h3 class="app-info-block-title">{% trans "Deploy Applications Rapidly" %}</h3>
+                <div class="info-section">
+                        <div class="app-info-block-intro">
+                            <h3 class="app-info-block-title">{% trans "BC Fossil Management System" %}</h3>
                             <p class="app-info-block-text">
-                                {% trans "Design custom information management applications in hours.  Build your databases with Arches Designer, then configure your interface all without having to write any code." %}
+                                {% trans "The BC Fossil Management System is a database of fossil collection locations and fossil sites. The System is intended as a two-way street for users to access information about known fossil occurrences and to build the inventory of fossil sites by contributing new information about fossil discoveries." %}
                             </p>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Content -->
-                <div class="splash-img">
-                    <img src="{% webpack_static 'img/landing/imac_designer.png' %}"  alt="Arches Designer">
-                </div>
-
-                <!-- Sub-section -->
-                <div class="row app-info-sub-block">
-
-                    <!-- Arches Data Type Block -->
-                    <div class="col-lg-6">
-                        <div class="sub-block-container">
-                            <h3 class="app-info-block-title">{% trans "Interface Manager" %}</h3>
-                            <p class="sub-block-description">
-                                {% trans "Arches automatically creates data entry forms based on your data models.  Use Arches' Card Manager to configure the look and feel of your data entry UI." %}
-                            </p>
-                            <img class="sub-block-image" src="{% webpack_static 'img/landing/card_manager.png' %}" alt="Card Manager">
-                        </div>
-                    </div>
-
-                    <!-- Arches Data Type Block -->
-                    <div class="col-lg-6">
-                        <div class="sub-block-container">
-                            <h3 class="app-info-block-title">{% trans "Data Security" %}</h3>
-                            <p class="sub-block-description">
-                                {% trans "Use Arches' Permissions Manager to set up data access rules for all your user groups and individual accounts.  You can define read/write/delete and no-access permissions." %}
-                            </p>
-                            <img class="sub-block-image" src="{% webpack_static 'img/landing/permissions_manager.png' %}" alt="Permissions Manager">
-                        </div>
-                    </div>
-
-                </div>
-                <!-- End Sub-section -->
-
-            </div>
-        </section>
-        <!-- End Info Block 1 -->
-
-        <!-- Info Block 2 -->
-        <section id="info-block-2" class="app-info-block relative">
-            <div>
-
-                <!-- Heading Info -->
-                <div class="sub-section">
-                    <div class="col-lg-7">
-                        <div class="app-info-block-intro text-center">
-                            <h2 class="app-info-block-header">{% trans "Workflows" %}</h2>
-                            <h3 class="app-info-block-title">{% trans "Orchestrate your data entry" %}</h3>
                             <p class="app-info-block-text">
-                                {% trans "Design step-wise data management interfaces that simplify complex editing tasks.  Ensure that everyone enters data completely and consistently" %}
+                                {% trans "The Fossil Management Office, Heritage Branch is the custodian of this data that serve as a foundation for fossil site protection, impact prevention, and access management of the resource. Information management supports all values of fossils – scientific, heritage, and educational." %}
                             </p>
                         </div>
-                    </div>
                 </div>
-
-                <!-- Content -->
-                <div class="splash-img">
-                    <img class="sub-block-image" src="{% webpack_static 'img/landing/consultation_workflow.jpg' %}" alt="Arches Workflows">
-                </div>
-
             </div>
         </section>
         <!-- End Info Block 2 -->
 
-        <!-- Info Block 3 -->
-        <section id="info-block-3" class="app-info-block relative">
+        <!-- Info Block 2 -->
+        <section id="info-block-2" class="app-info-block app-info-content relative">
             <div>
-
-                <!-- Heading Info -->
-                <div class="sub-section">
-                    <div class="col-lg-7">
-                        <div class="app-info-block-intro text-center">
-                            <h2 class="app-info-block-header">{% trans "Arches Search Tools" %}</h2>
-                            <h3 class="app-info-block-title">{% trans "Find what you're looking for" %}</h3>
-                            <p class="app-info-block-text">
-                                {% trans "Arches comes with powerful built-in search tools.  Quickly filter large databases with term, geospatial, and time-based search components" %}
-                            </p>
-                        </div>
+                <div class="info-section">
+                    <div class="app-info-block-intro">
+                        <h3 class="app-info-block-title">{% trans "Data Management and Use" %}</h3>
+                        <p class="app-info-block-text">
+                            {% trans "The system is maintained by the Fossil Management Office. The inventory of fossil sites contains spatial and attribute data to provide different users appropriate levels of access to information." %}
+                        </p>
+                        <p class="app-info-block-text">
+                            {% trans "Base maps and map overlays for data that are not maintained within the Fossil Management System are integrated from the BC Geographic Warehouse." %}
+                        </p>
+                        <p class="app-info-block-text">
+                            {% trans "Different kinds of information are represented by <b>Resource Types</b> such as Fossil Sample, Collection Event, and Publication. These Resource Types can be related to each other, for example a Collection Event can have one or more Fossil Samples. All Resource Types, along with their related Resources, are searchable within the system." %}
+                        </p>
                     </div>
                 </div>
 
-                <div class="splash-img">
-                    <img class="sub-block-image" src="{% webpack_static 'img/landing/arches_search.png' %}" alt="Arches Search">
-                </div>
+                <!-- Content -->
+                <figure class="splash-img">
+                    <img src="{% webpack_static 'img/front/2023-08-01_relation_graph.png' %}"  alt="Arches Designer">
+                    <figcaption>{% trans "Figure 1. Collection Event (orange) linked to the Fossil Samples (grey) and associated publication (green)." %}</figcaption>
+                </figure>
+            </div>
+        </section>
+        <!-- End Info Block 2 -->
 
-                <!-- Sub-section -->
-                <div class="wide-box">
-                    <div class="box-highlight">
-                        <h3 class="app-info-block-header">{% trans "Search Options" %}</h3>
-                        <p>
-                            {% trans "Arches gives you many ways to find precisely the information you need, even if your Arches application contains 10's of millions of records.  In addition to term, thesaurus, geospatial, and temporal filters, Arches provides you with advanced filtering options that support boolean logic, inverses, and many other filtering options." %}
-                        </p>
-                        <br>
-                        <p>
-                            {% trans "Arches' search capabilities also provide for sophisticated data visualizations, including interactive displays of the connections between your data objects using a Force Directed Graph." %}
-                        </p>
-                        <br>
-                        <p>
-                            {% trans "If you're a software developer, you can build on Arches modular search services and create your own filters, reports, and visualizations to best show off your particular dataset." %}
-                        </p>
 
+        <!-- Info Block 3 -->
+        <section id="info-block-3" class="app-info-block app-info-content relative">
+            <div>
+                <div class="info-body">
+                    <div class="app-info-block-intro">
+                        <h3 class="app-info-block-title">{% trans "BC Fossil Data Search and Visualization" %}</h3>
+                        <p class="app-info-block-text">
+                            {% trans "You can search for and retrieve information about where fossils have been collected, visualize the data using a variety of overlays, and then use the data to suit your research or site assessment needs." %}
+                        </p>
+                        <p class="app-info-block-text">
+                            {% trans "The system opens with a BC map showing key roads, water features and outlines of Important Fossil Areas. A general location search function in the upper right can help focus the search area by geographical term or by using a Zoom tool in the upper left of the map. The toolbar to the right of the map allows you to conduct a <b>Map Search</b> using filters, choose a <b>Base map</b>, select <b>Overlays</b> for visualization (e.g., adding fossil collection events, bedrock geology, parks, or rivers), and generate a <b>Legend</b>." %}
+                        </p>
+                        <figure class="splash-img">
+                            <img src="{% webpack_static 'img/front/2023-04-01_screenshot_search.png' %}"  alt="Arches Designer">
+                            <figcaption style="color: red">{% trans "Figure 2. Need text." %}</figcaption>
+                        </figure>
                     </div>
                 </div>
 
+                <div class="info-body">
+                    <div>
+                        <h4 class="app-info-block-title">{% trans "Data Discovery and Search" %}</h4>
+                        <p class="app-info-block-text">
+                            {% trans "The data can be explored in a general way by using the Map view. With the Fossil Collection Event overlay on, you can view information by clicking on a fossil location (orange dots) and see a Map Pop-up with brief information. Selecting the word Report at the bottom of the pop-up card will provide details about the event." %}
+                        </p>
+                        <p class="app-info-block-text" style="color: red">
+                            {% trans "Insert image once we have Report formatted" %}
+                        </p>
+                        <p class="app-info-block-text">
+                            {% trans "The data can be searched in more detail by using the Search function in two ways:" %}
+                        </p>
+                        <ol>
+                            <li class="app-info-block-text">
+                                {% trans "The search screen allows you to do a general Search using the text field in the upper left to look for comparative data. If you come to the system looking specifically for a fossil name or a location, you could enter this here and generate Results, listed as a series of Search Result Cards." %}
+                            </li>
+                            <li class="app-info-block-text">
+                                {% trans "Alternatively, you can start in the central screen, where you will see the Advanced Search function tab on the top of the screen. This allows you to apply filters to find fossil occurrences such as by location, time, geology, collector, or taxonomy. Each of these attributes is related to information stored under the blue tab called Resource Types." %}
+                            </li>
+                        </ol>
+                        <figure class="splash-img">
+                            <img src="{% webpack_static 'img/front/2023-04-01_screenshot_search.png' %}"  alt="Arches Designer">
+                            <figcaption style="color: red">{% trans "Figure 3. Need screen shot. Need caption text." %}</figcaption>
+                        </figure>
+                    </div>
+                </div>
             </div>
         </section>
         <!-- End Info Block 3 -->
 
         <!-- Info Block 4 -->
-        <section id="info-block-4" class="app-info-block relative">
+        <section id="info-block-4" class="app-info-block app-info-content relative">
+            <div>
+                <div class="info-section">
+                    <div class="app-info-block-intro">
+                        <h3 class="app-info-block-title">{% trans "Workflow" %}</h3>
+                        <p class="app-info-block-text">
+                            {% trans "The system has a workflow for new data entry, with a built-in list of the steps to walk users through the process of adding a new fossil collection event or to report a new fossil site. Help Guides are available to define fields for data entry. All items entered here will become searchable in the system. Workflows guide users to input new data that expands the provincial inventory of fossil occurrences." %}
+                        </p>
+                    </div>
+                </div>
+
+            </div>
+        </section>
+        <!-- End Info Block 4 -->
+
+        <!-- Info Block 5 -->
+        <section id="info-block-5" class="app-info-block app-info-content relative">
             <div>
                 <!-- Heading Info -->
                 <div class="sub-section">
@@ -339,105 +335,32 @@ along with this program. If not, see <http://www.gnu.org/licenses/>.
                 </div>
             </div>
         </section>
-        <!-- End Info Block 4 -->
+        <!-- End Info Block 5 -->
     </article>
 </main>
 
 
 
 <!-- Footer -->
-<footer>
-
-    <!-- footer content container -->
-    <div class="row footer-links">
-
-        <!-- branding column -->
-        <div class="col-lg-4">
-            <h2 class="app-footer-heading">{% trans "Sample Institution Name" %}</h2>
-
-            <div class="organization-address">
-                {% trans "Sample Address" %}<br>
-                {% trans "Getty Conservation Institute" %}<br>
-                {% trans "1200 Getty Center Drive" %}<br>
-                {% trans "Los Angeles, CA  90049" %}<br>
-            </div>
-        </div>
-
-        <!-- Info Column -->
-        <div class="col-lg-8">
-            <h2 class="app-footer-heading">{% trans "Guides and Documentation" %}</h2>
-
-            <!-- Links -->
-            <div class="splash-links">
-                <div class="row">
-                    <div class="col-lg-4">
-                        <ul class="splash-link-container">
-                            <li>
-                                <a class="splash-link-address" href="http://https://www.archesproject.org/what-is-arches/" target="_blank">{% trans "What is Arches" %}</a>
-                            </li>
-                            <li>
-                                <a class="splash-link-address" href="https://www.archesproject.org/collector/" target="_blank">{% trans "Arches Collector" %}</a>
-                            </li>
-                            <li>
-                                <a class="splash-link-address" href="https://www.archesproject.org/implementation-considerations/" target="_blank">{% trans "Implementation Considerations" %}</a>
-                            </li>
-                            <li>
-                                <a class="splash-link-address" href="https://www.archesproject.org/development/" target="_blank">{% trans "Information For Developers" %}</a>
-                            </li>
-
-
-                        </ul>
-                    </div>
-
-                    <div class="col-lg-4">
-                        <ul class="splash-link-container">
-                            <li>
-                                <a class="splash-link-address" href="https://www.archesproject.org/faq/" target="_blank">{% trans "FAQ" %}</a>
-                            </li>
-                            <li>
-                                <a class="splash-link-address" href="https://www.archesproject.org/standards/" target="_blank">{% trans "Standards and Interoperability" %}</a>
-                            </li>
-                            <li>
-                                <a class="splash-link-address" href="https://arches.readthedocs.io/en/stable/requirements-and-dependencies/" target="_blank">{% trans "Installation Guide" %}</a>
-                            </li>
-                        </ul>
-                    </div>
-
-                    <div class="col-lg-4">
-                        <ul class="splash-link-container">
-                            <li>
-                                <a class="splash-link-address" href="https://www.archesproject.org/project-background/" target="_blank">{% trans "Arches Project Background" %}</a>
-                            </li>
-                            <li>
-                                <a class="splash-link-address" href="https://www.archesproject.org/videos/" target="_blank">{% trans "Arches Webinars/Presentations" %}</a>
-                            </li>
-                            <li>
-                                <a class="splash-link-address" href="https://www.archesproject.org/resource-models/" target="_blank">{% trans "Resource Models" %}</a>
-                            </li>
-                        </ul>
-                    </div>
-
-                </div>
-            </div>
-
+<footer class="footer">
+    <div class="arches_footer">
+        <a class="arches_link" target="archesproject" href="https://archesproject.org" >
+            <img class="arches_logo"
+                 src="{% webpack_static 'img/logo/arches/Arches_badge_white_powered_by_2.png' %}" alt="Powered by Arches logo">
+        </a>
+    </div>
+    <div style="display: flex; flex-direction: column;">
+        <div class="container">
+            <ul>
+                <li><a href=".">Home</a></li>
+                <li><a href=".">Disclaimer</a></li>
+                <li><a href=".">Privacy</a></li>
+                <li><a href=".">Accessibility</a></li>
+                <li><a href=".">Copyright</a></li>
+                <li><a href=".">Contact Us</a></li>
+            </ul>
         </div>
     </div>
-
-    <!-- Copyright Panel -->
-    <div class="row copyright-container">
-        <!-- Arches link -->
-        <div class="app-footer-links">
-            <div class="col-sm-8">
-                <a class="link-spacing" href="#">{% trans "Terms & Conditions" %}</a>
-                <a class="link-spacing" href="#">{% trans "Privacy Policy" %}</a>
-            </div>
-            <div class="col-sm-4">
-                <a class="app-footer-arches-link" href="http://www.archesproject.org" target="_blank">{% trans "Powered by Arches" %}</a>
-            </div>
-        </div>
-    </div>
-    <!-- End Copyright Container -->
-
 </footer>
 <!-- End Footer -->
 
@@ -516,13 +439,26 @@ along with this program. If not, see <http://www.gnu.org/licenses/>.
                     smoothScroll($(this.hash));
                 });
 
+                $("a.down-button").on('click', function (event) {
+                    event.preventDefault();
+                    smoothScroll($("#info-block-1"));
+                });
+
 
                 function updateNavigation() {
                     contentSections.each(function () {
                         $this = $(this);
                         var activeSection = $('#cd-vertical-nav a[href="#' + $this.attr('id') + '"]').data('number') - 1;
-                        if (($this.offset().top - $(window).height() / 2 < $(window).scrollTop()) && ($this.offset().top + $this.height() - $(window).height() / 2 > $(window).scrollTop())) {
-                            navigationItems.eq(activeSection).addClass('is-selected');
+                        if (($this.offset().top - $(window).height() / 3 < $(window).scrollTop()) && ($this.offset().top + $this.height() - $(window).height() / 3 > $(window).scrollTop())) {
+                            if (activeSection === 0)
+                            {
+                                $("#cd-vertical-nav").css("display","none");
+                            }
+                            else {
+                                console.log(`Active section: ${activeSection}`)
+                                navigationItems.eq(activeSection).addClass('is-selected');
+                                $("#cd-vertical-nav").css("display","");
+                            }
                         } else {
                             navigationItems.eq(activeSection).removeClass('is-selected');
                         }

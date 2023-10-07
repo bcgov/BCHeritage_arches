@@ -3,14 +3,12 @@ from arches.app.models import models
 from arches.app.datatypes.datatypes import DataTypeFactory
 from arches.settings import LANGUAGE_CODE
 
-from django.utils.translation import ugettext as _
-
 details = {
     "functionid": "60000000-0000-0000-0000-000000001002",
-    "name": "BC Fossil Type Descriptors",
+    "name": "Fossil Type Descriptors",
     "type": "primarydescriptors",
     "modulename": "bc_fossil_type_descriptors.py",
-    "description": "Function that provides the primary descriptors for BC Fossil Type resources",
+    "description": "Function that provides the primary descriptors for Fossil Type resources",
     "defaultconfig": {
         "module": "arches_fossils.functions.bc_fossil_type_descriptors",
         "class_name": "BCFossilTypeDescriptors",
@@ -44,7 +42,7 @@ details = {
 
 
 class BCFossilTypeDescriptors(AbstractPrimaryDescriptorsFunction):
-    _type_graph_name = {"en": "BC Fossil Type"}
+    _type_graph_name = {"en": "Fossil Type"}
     _datatype_factory = None
     _parent_name_node = None
     _taxonomic_rank_node = None
