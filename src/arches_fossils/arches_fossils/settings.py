@@ -28,7 +28,6 @@ WEBPACK_LOADER = {
     },
 }
 
-
 DATATYPE_LOCATIONS.append('arches_fossils.datatypes')
 FUNCTION_LOCATIONS.append('arches_fossils.functions')
 ETL_MODULE_LOCATIONS.append('arches_fossils.etl_modules')

@@ -349,7 +349,6 @@ module.exports = () => {
                                     removeComments: false,
                                 },
                                 preprocessor: async (content, loaderContext) => {
-                                    console.log('preprocessor');
                                     // console.log(`content: ${content}`);
                                     // console.log(`loaderContext: ${loaderContext}`);
                                     const resourcePath = loaderContext['resourcePath'];
@@ -362,7 +361,6 @@ module.exports = () => {
                                         }
                                     }
 
-                                    console.log(`resourcePath: ${resourcePath}`);
                                     if (!templatePath && resourcePath.includes(APP_ROOT)) {  // project-level component
                                         templatePath = resourcePath.split(APP_ROOT)[1];
                                     }
