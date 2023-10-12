@@ -6,7 +6,7 @@ define([
 ], function (ko, _, default_template, edit_popup) {
     var popupDataProvider = {
             layerConfigs: {
-                "WHSE_CADASTRE.PMBC_PARCEL_FABRIC_POLY_SVW":
+                "WHSE_CADASTRE.PMBC_PARCEL_FABRIC_POLY_FA_SVW":
                     {displayname: [{"key": "PID", title:""}],
                         "map_popup": [{key: "OWNER_TYPE", title: "Owner Type: "},
                             {key: "PLAN_NUMBER", title: "Plan #: "},
