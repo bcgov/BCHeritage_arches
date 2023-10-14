@@ -1,9 +1,7 @@
 from arches.app.datatypes.datatypes import StringDataType
 from arches.app.models import models
-from arches.app.models.system_settings import settings
-from arches.app.search.elasticsearch_dsl_builder import Bool, Match, Range, Term, Terms, Nested, Exists, RangeDSLException
-from arches.app.search.search_term import SearchTerm
 import re
+from arches_bchp.util.borden_number_api import BordenNumberApi
 
 borden_number_widget = models.Widget.objects.get(name="borden-number-widget")
 
@@ -23,9 +21,11 @@ details = {
 
 class BordenNumberDataType(StringDataType):
     borden_number_format = re.compile('^[A-Z][a-z][A-Z][a-z]-\d{1,4}$')
+    bn_api = BordenNumberApi()
 
     def validate(self, value, row_number=None, source=None, node=None, nodeid=None, strict=False, **kwargs):
         errors = super(BordenNumberDataType, self).validate(value, row_number, source, node, nodeid, strict, **kwargs)
+        # print(source)
         try:
             if value is not None:
                 result = self.borden_number_format.match(value['en']['value'])
@@ -40,6 +40,15 @@ class BordenNumberDataType(StringDataType):
                             ),
                         }
                     )
+                else:
+                    if self.bn_api.borden_number_exists(value['en']['value']):
+                        errors.append(
+                            {
+                                "type": "ERROR",
+                                "message": "Borden Number already exists."
+                            }
+                        )
+
 
         except Exception as e:
             print(e)
@@ -67,6 +76,12 @@ class BordenNumberDataType(StringDataType):
         borden_number = tile.data[nodeid]['en']['value']
         if borden_number is not None and len(borden_number) >= 6:
             tile.data[nodeid]['en']['value'] = re.sub(r"(.{2})(.{2})", r"\1 \2", borden_number, 1).title().replace(" ","")
+
+    def pre_tile_save(self, tile, nodeid):
+        # print("Tile: %s" % tile.data[nodeid])
+        value = tile.data[nodeid]['en']['value']
+        # print("Saving %s:%s" % (tile.resourceinstance_id, value))
+        self.bn_api.reserve_borden_number(value, tile.resourceinstance_id)
 
     # def transform_export_values(self, value, *args, **kwargs):
     #     super(BordenNumberDataType, self).transform_export_values(value, args, kwargs)

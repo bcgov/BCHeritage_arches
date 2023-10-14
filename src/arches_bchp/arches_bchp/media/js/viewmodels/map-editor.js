@@ -599,7 +599,7 @@ define([
         self.selectFeatureAsSource = function(feature)
         {
             console.log(feature);
-            var myfeature  = externalUtils.getFeatureFromWFS(feature, 'WHSE_CADASTRE.PMBC_PARCEL_FABRIC_POLY_SVW');
+            var myfeature  = externalUtils.getFeatureFromWFS(feature, 'WHSE_CADASTRE.PMBC_PARCEL_FABRIC_POLY_FA_SVW');
             addSelectFeatures([myfeature]);
         };
 

@@ -17,5 +17,11 @@ class BCRHPSiteAliases:
 
     RECOGNITION_TYPE = 'recognition_type'
 
+    SITE_GEOMETRY = 'spatial_coordinates_geometry'
+    OFFICIALLY_RECOGNIZED = 'officially_recognized_site'
+
 class BCRHPLocalGovernmentAliases:
     TEST = 'test'
+
+class GraphSlugs:
+    HERITAGE_SITE = "heritage_site"

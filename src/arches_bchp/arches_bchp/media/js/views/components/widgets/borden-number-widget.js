@@ -1,12 +1,13 @@
 define([
+    'jquery',
     'knockout',
     'knockout-mapping',
     'underscore',
     'viewmodels/widget',
     'arches',
-    'templates/views/components/widgets/text.htm',
+    'templates/views/components/widgets/borden-number-widget.htm',
     'bindings/chosen'
-], function(ko, koMapping, _, WidgetViewModel, arches, bordenNumberWidgetTemplate) {
+], function($, ko, koMapping, _, WidgetViewModel, arches, bordenNumberWidgetTemplate) {
     /**
      * registers a text-widget component for use in forms
      * @function external:"ko.components".text-widget
@@ -34,6 +35,7 @@ define([
             self.currentDefaultText = ko.observable();
             self.currentDefaultDirection = ko.observable();
             self.currentDefaultLanguage = ko.observable({code: arches.activeLanguage});
+            self.urls = arches.urls;
 
             const initialCurrent = {};
             const initialDefault = {};
@@ -74,6 +76,7 @@ define([
                     currentValue[currentLanguage.code] = {value: '', direction: 'ltr'};
                 }
 
+
                 if(currentLanguage?.code && currentDefaultValue?.[currentLanguage.code]){
                     self.currentDefaultText(currentDefaultValue?.[currentLanguage.code]?.value);
                     self.currentDefaultDirection(currentDefaultValue?.[currentLanguage.code]?.direction);
@@ -90,7 +93,9 @@ define([
             init();
 
             self.disable = ko.computed(() => {
-                return ko.unwrap(self.disabled) || ko.unwrap(self.uneditable);
+                return ko.unwrap(self.disabled) ||
+                    ko.unwrap(self.uneditable) ||
+                    !!ko.unwrap(self.currentText);
             }, self);
 
             self.currentDefaultText.subscribe(newValue => {
@@ -163,6 +168,24 @@ define([
                 self.currentDirection(koMapping.toJS(self.value)[currentLanguage.code]?.direction);
 
             });
+
+            self.getBordenNumber = function() {
+                let url = self.urls.borden_number;
+                console.log(`Get borden number from ${url}...`)
+                self.form.loading(true);
+                $.ajax({
+                    // type: "PUT",
+                    url: `/int/arches-bchp/borden_number/${self.tile.resourceinstance_id}`
+                }).done(function(data){
+                    console.log(`Data: ${JSON.stringify(data)}`);
+                    console.log(data);
+                    if (data.status === "success")
+                    {
+                        self.currentText(data.borden_number);
+                    }
+                    self.form.loading(false);
+                });
+            }
             /*
             var self = this;
             if (this.value()) {

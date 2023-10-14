@@ -70,7 +70,7 @@ define([
                 // console.log("bchp.isFeatureClickable()")
                 // console.log(`Context: ${map.context}`);
                 if (map.context === "resource-editor" &&
-                    feature.sourceLayer === "WHSE_CADASTRE.PMBC_PARCEL_FABRIC_POLY_SVW" ||
+                    feature.sourceLayer === "WHSE_CADASTRE.PMBC_PARCEL_FABRIC_POLY_FA_SVW" ||
                     !!feature.properties.resourceinstanceid
                 )
                 {
@@ -86,7 +86,7 @@ define([
             },
 
             getPopupTemplate: function(features){
-                if (_.some(features, function(feature) {return feature.sourceLayer === "WHSE_CADASTRE.PMBC_PARCEL_FABRIC_POLY_SVW"}))
+                if (_.some(features, function(feature) {return feature.sourceLayer === "WHSE_CADASTRE.PMBC_PARCEL_FABRIC_POLY_FA_SVW"}))
                     return edit_popup;
                 return default_template;
             },
