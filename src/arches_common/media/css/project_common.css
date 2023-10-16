@@ -158,6 +158,34 @@ hr {
     width: auto !important;
 }
 
+/**************************/
+/* Map Legend definitions */
+/**************************/
+.legend-listing {
+    padding-top: 5px;
+    padding-bottom: 5px;
+}
+
+.legend-listing .legend-content {
+    padding-top: 5px;
+}
+
+.layer-listing-icon::before {
+    width: 20px;
+    height: 20px;
+}
+
+img.legend-swatch {
+    border-style:solid;
+    border-width:1px;
+    height:10px;
+    margin:0 5px;
+    width:10px;
+}
+/******************************/
+/* END Map Legend Definitions */
+/******************************/
+
 @media (min-width: 1366px)
 {
     .dl-horizontal {
