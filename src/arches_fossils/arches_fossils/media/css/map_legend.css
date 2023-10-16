@@ -59,6 +59,7 @@ img.frpc_ovb-high {
     background: rgba(82,82,82,.2);
     border-color: rgba(82,82,82,1);
 }
+
 img.frpc_ovb-medium {
     background: rgba(150,150,150,.2);
     border-color: rgba(150,150,150,1);
@@ -74,3 +75,28 @@ img.frpc_ovb-very-low {
     border-color: rgba(247,247,247,1);
 }
 
+/* Lakes */
+img.lakes {
+    background: rgba(116,173,209, .3);
+    border-color: rgba(116,173,209, 1);
+}
+
+/* Municipal Boundaries */
+img.municipal-boundaries {
+    background: rgba(194, 165, 207, .3);
+    border-color: rgba(194, 165, 207, 1);
+    border-style: dashed;
+    border-spacing: 4px;
+}
+
+/* Municipal Parks */
+img.parks-municipal {
+    background: rgba(217,240,211, 0.3);
+    border-color: rgba(117, 128, 102, 1);
+}
+
+/* Municipal Parks */
+img.parks-national {
+    background: rgba(27,120,55, 0.4);
+    border-color: rgba(27,120,55, 1);
+}
