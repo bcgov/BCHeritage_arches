@@ -9,6 +9,18 @@
       "tileSize": 512
     }
   },
+  "arches-metadata": {
+    "ispublic": false,
+    "addtomap": false,
+    "centerx": null,
+    "centery": null,
+    "icon": "fa fa-globe",
+    "isoverlay": true,
+    "legend": "<p><img alt=\"\" class=\"nts50 legend-line\" src=\"/int/arches-bchp/static/img/blank.png\" />National Topographic System 1:50k Grid</p>",
+    "searchonly": false,
+    "sortorder": 0,
+    "zoom": null
+  },
   "layers": [
     {
       "id": "nts50k-vector",
@@ -17,7 +29,7 @@
       "source-layer": "WHSE_BASEMAPPING.NTS_50K_GRID",
       "minzoom": 6,
       "paint": {
-        "line-color": "rgb(52, 52, 52)"
+        "line-color": "rgba(152, 152, 152, 1)"
       }
     },
     {
@@ -35,7 +47,7 @@
         "text-size": 11
       },
       "paint": {
-        "text-color": "rgb(52, 52, 52)"
+        "text-color": "rgba(52, 52, 52, 1)"
       }
     }
   ]
