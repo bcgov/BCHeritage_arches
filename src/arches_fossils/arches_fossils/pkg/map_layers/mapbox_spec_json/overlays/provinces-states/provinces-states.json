@@ -9,6 +9,18 @@
       "tileSize": 512
     }
   },
+  "arches-metadata": {
+    "ispublic": true,
+    "addtomap": false,
+    "centerx": null,
+    "centery": null,
+    "icon": "fa fa-globe",
+    "isoverlay": true,
+    "legend": "<p><img alt=\"\" class=\"province-state legend-line\" style=\"width: 8px;\" src=\"/int/arches-bchp/static/img/blank.png\" /><img alt=\"\" class=\"cadastral legend-line\" src=\"/int/arches-bchp/static/img/blank.png\" />Province/State Boundary</p>",
+    "searchonly": false,
+    "sortorder": 0,
+    "zoom": null
+  },
   "layers": [
     {
       "id": "provinces-states",
@@ -17,7 +29,7 @@
       "source-layer": "WHSE_BASEMAPPING.DBM_BC_7H_MIL_POLITICAL_POLY",
       "paint": {
         "line-width": 2,
-        "line-color": "#668866",
+        "line-color": "rgba(102,136,102,1)",
         "line-dasharray": [8,4,4,4]
       }
     }

@@ -83,10 +83,10 @@ img.lakes {
 
 /* Municipal Boundaries */
 img.municipal-boundaries {
-    background: rgba(194, 165, 207, .3);
-    border-color: rgba(194, 165, 207, 1);
+    background: rgba(0, 0, 0, 1);
     border-style: dashed;
-    border-spacing: 4px;
+    width: 8px;
+    margin-right: 8px;
 }
 
 /* Municipal Parks */
@@ -95,8 +95,37 @@ img.parks-municipal {
     border-color: rgba(117, 128, 102, 1);
 }
 
-/* Municipal Parks */
+/* National Parks */
 img.parks-national {
     background: rgba(27,120,55, 0.4);
     border-color: rgba(27,120,55, 1);
+}
+
+/* Provincial Parks, Protected Areas and Ecological Reserves */
+img.parks-protected-area {
+    background: rgba(166,219,160, 0.3);
+    border-color: rgba(117, 128, 102, 1);
+}
+
+img.parks-provincial {
+    background: rgba(90,174,97, 0.3);
+    border-color: rgba(117, 128, 102, 1);
+}
+
+img.parks-ecological-reserve {
+    background: rgba(27,120,55, 0.3);
+    border-color: rgba(117, 128, 102, 1);
+}
+
+/* Provinces and States */
+img.province-state {
+    background: rgb(102,136,102);
+    border-width: 2px;
+}
+
+/* Regional Districts */
+img.regional-district-boundaries {
+    background: black;
+    width: 6px;
+    margin-right: 6px;
 }

@@ -9,6 +9,18 @@
       "tileSize": 512
     }
   },
+  "arches-metadata": {
+    "ispublic": false,
+    "addtomap": false,
+    "centerx": null,
+    "centery": null,
+    "icon": "fa fa-globe",
+    "isoverlay": true,
+    "legend": "<p><img alt=\"\" class=\"regional-district-boundaries legend-line\" src=\"/int/arches-bchp/static/img/blank.png\" />Regional District Boundary</p>",
+    "searchonly": false,
+    "sortorder": 0,
+    "zoom": null
+  },
   "layers": [
     {
       "id": "regional-district-boundaries",
@@ -18,19 +30,9 @@
       "minzoom": 0,
       "maxzoom": 20,
       "paint": {
-        "line-color": "rgba(153,112,171,1)",
-        "line-width": 1.6
-      }
-    },
-    {
-      "id": "regional-district-boundaries-fill",
-      "type": "fill",
-      "source": "regional-district-boundaries-source",
-      "source-layer": "WHSE_ADMIN_BOUNDARIES.EBC_REGIONAL_DISTRICTS_SP",
-      "minzoom": 0,
-      "maxzoom": 20,
-      "paint": {
-        "fill-color": "rgba(153,112,171,.3)"
+        "line-color": "rgba(0,0,0, 1)",
+        "line-width": 1.5,
+        "line-dasharray": [6,6,6,6]
       }
     },
     {
@@ -38,7 +40,7 @@
       "type": "symbol",
       "source": "regional-district-boundaries-source",
       "source-layer": "WHSE_ADMIN_BOUNDARIES.EBC_REGIONAL_DISTRICTS_SP",
-      "minzoom": 10,
+      "minzoom": 0,
       "maxzoom": 20,
       "layout": {
         "text-field": "{REGIONAL_DISTRICT_NAME}",
