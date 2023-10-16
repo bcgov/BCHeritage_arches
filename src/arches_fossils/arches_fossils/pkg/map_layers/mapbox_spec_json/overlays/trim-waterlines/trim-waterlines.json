@@ -9,6 +9,18 @@
       "tileSize": 512
     }
   },
+  "arches-metadata": {
+    "ispublic": false,
+    "addtomap": false,
+    "centerx": null,
+    "centery": null,
+    "icon": "fa fa-globe",
+    "isoverlay": true,
+    "legend": "<p><img alt=\"\" class=\"trim-waterlines legend-line\" src=\"/int/arches-bchp/static/img/blank.png\" />TRIM Waterlines</p>",
+    "searchonly": false,
+    "sortorder": 0,
+    "zoom": null
+  },
   "layers": [
     {
       "id": "trim-waterlines",
@@ -18,8 +30,8 @@
       "minzoom": 0,
       "maxzoom": 20,
       "paint": {
-        "line-color": "rgb(49, 54, 149)",
-        "line-width": 1
+        "line-color": "rgb(98, 206, 217)",
+        "line-width": 0.5
       }
     }
   ]

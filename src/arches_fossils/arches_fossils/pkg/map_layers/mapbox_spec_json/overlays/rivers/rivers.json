@@ -9,6 +9,18 @@
       "tileSize": 512
     }
   },
+  "arches-metadata": {
+    "ispublic": false,
+    "addtomap": false,
+    "centerx": null,
+    "centery": null,
+    "icon": "fa fa-globe",
+    "isoverlay": true,
+    "legend": "<p><img alt=\"\" class=\"rivers legend-swatch\" src=\"/int/arches-bchp/static/img/blank.png\" />Rivers</p>",
+    "searchonly": false,
+    "sortorder": 0,
+    "zoom": null
+  },
   "layers": [
     {
       "id": "rivers",
@@ -26,7 +38,7 @@
       "id": "rivers-fill",
       "type": "fill",
       "paint": {
-        "fill-color": "rgba(171,217,233, .3)"
+        "fill-color": "rgba(171,217,233, .5)"
       },
       "source": "rivers-source",
       "minzoom": 0,

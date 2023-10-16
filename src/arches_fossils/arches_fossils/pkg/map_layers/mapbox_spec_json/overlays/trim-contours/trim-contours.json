@@ -9,6 +9,18 @@
       "tileSize": 512
     }
   },
+  "arches-metadata": {
+    "ispublic": false,
+    "addtomap": false,
+    "centerx": null,
+    "centery": null,
+    "icon": "fa fa-globe",
+    "isoverlay": true,
+    "legend": "<p><img alt=\"\" class=\"legend-line trim-contours-20\" src=\"/int/arches-bchp/static/img/blank.png\" />20m contours<br /><img alt=\"\" class=\"legend-line trim-contours-100\" src=\"/int/arches-bchp/static/img/blank.png\" />100m contours</p>",
+    "searchonly": false,
+    "sortorder": 0,
+    "zoom": null
+  },
   "layers": [
     {
       "id": "trim-contours",
@@ -20,9 +32,12 @@
       "paint": {
         "line-color": [
           "case",
-          ["==", ["%",["to-number",["get","ELEVATION"]], 100], 0], "rgb(49, 54, 149)",
-          ["==", ["%",["to-number",["get","ELEVATION"]], 20], 0], "rgb(69, 117, 180)",
-          "rgba(130,0,0,.1)" ]
+          ["==", ["%",["to-number",["get","ELEVATION"]], 100], 0], "rgb(130, 130, 130)",
+          "rgba(178,178,178,1)" ],
+        "line-width": [
+          "case",
+          ["==", ["%",["to-number",["get","ELEVATION"]], 100], 0], 0.3,
+          0.25 ]
       }
     }
   ]

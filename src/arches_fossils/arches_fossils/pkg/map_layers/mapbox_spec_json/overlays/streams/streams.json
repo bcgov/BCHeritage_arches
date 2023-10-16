@@ -9,6 +9,18 @@
       "tileSize": 512
     }
   },
+  "arches-metadata": {
+    "ispublic": false,
+    "addtomap": false,
+    "centerx": null,
+    "centery": null,
+    "icon": "fa fa-globe",
+    "isoverlay": true,
+    "legend": "<p><img alt=\"\" class=\"streams legend-line\" src=\"/int/arches-bchp/static/img/blank.png\" />Streams</p>",
+    "searchonly": false,
+    "sortorder": 0,
+    "zoom": null
+  },
   "layers": [
     {
       "id": "stream-networks",
@@ -18,8 +30,8 @@
       "minzoom": 0,
       "maxzoom": 20,
       "paint": {
-        "line-color": "rgb(224, 243, 248)",
-        "line-width": 1.6
+        "line-color": "rgba(90,209,230, 1)",
+        "line-width": 1.2
       }
     },
     {
@@ -32,7 +44,7 @@
         "text-size": 11
       },
       "paint": {
-        "text-color": "rgb(91, 140, 140)"
+        "text-color": "rgba(90,209,230, 1)"
       }
     }
 

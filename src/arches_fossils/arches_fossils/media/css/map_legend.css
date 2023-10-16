@@ -129,3 +129,34 @@ img.regional-district-boundaries {
     width: 6px;
     margin-right: 6px;
 }
+
+/* Rivers */
+img.rivers {
+    background: rgba(204, 255, 255, 0.5);
+    border-color: rgba(98, 206, 217, 1);
+}
+
+/* Streams */
+img.streams {
+    background: rgba(90,209,230, 1);
+    width: 10px;
+}
+
+/* TRIM Contours */
+img.trim-contours-100 {
+    background: rgba(130,130,130, 1);
+    width: 10px;
+    height: 1px;
+}
+
+img.trim-contours-20 {
+    background: rgba(130,130,130, 0.5);
+    width: 10px;
+    height: 1px;
+}
+
+/* TRIM Waterlines */
+img.trim-waterlines {
+    background: rgba(98, 206, 217, 1);
+    width: 10px;
+}
