@@ -13,7 +13,7 @@ import ssl
 # API to get next borden number sequence, check if a borden number already exists and
 # reserve a borden number in HRIA
 class BordenNumberApi:
-    _datatype_factory = DataTypeFactory()
+    _datatype_factory = None
     _url = "https://openmaps.gov.bc.ca/geo/pub/WHSE_ARCHAEOLOGY.RAAD_BORDENGRID/ows?service=WFS&request=GetFeature&outputFormat=json&version=2.3.0&typeNames=WHSE_ARCHAEOLOGY.RAAD_BORDENGRID&cql_filter=DWITHIN(GEOMETRY,POINT(%s%%20%s),1,meters)"
     ctx = ssl.create_default_context()
     ctx.check_hostname = False
@@ -24,11 +24,16 @@ class BordenNumberApi:
 
     def __init__(self):
         super().__init__()
-        graph = models.GraphModel.objects.filter(slug=slugs.HERITAGE_SITE).first()
-        self.geom_node = models.Node.objects.filter(alias=site_aliases.SITE_GEOMETRY,
-                                                    graph=graph).first()
-        self.officially_recognized_node = models.Node.objects.filter(alias=site_aliases.OFFICIALLY_RECOGNIZED,
-                                               graph=graph).first()
+
+    def _initialize_models(self):
+        if not self.geom_node or not self.officially_recognized_node:
+            self._datatype_factory = DataTypeFactory()
+            graph = models.GraphModel.objects.filter(slug=slugs.HERITAGE_SITE).first()
+            self.geom_node = models.Node.objects.filter(alias=site_aliases.SITE_GEOMETRY,
+                                                        graph=graph).first()
+            self.officially_recognized_node = models.Node.objects.filter(alias=site_aliases.OFFICIALLY_RECOGNIZED,
+                                                                         graph=graph).first()
+
     def _get_borden_grid(self, resourceinstanceid):
         tile = models.TileModel.objects.filter(resourceinstance_id=resourceinstanceid,
                                                nodegroup_id=self.geom_node.nodegroup_id).first()
@@ -64,6 +69,7 @@ class BordenNumberApi:
         return borden_grid
 
     def get_next_borden_number(self, resourceinstanceid):
+        self._initialize_models()
         borden_grid = self._get_borden_grid(resourceinstanceid)
         with connection.cursor() as cursor:
             cursor.execute("SELECT get_next_borden_number(%s)", [borden_grid])
@@ -82,6 +88,7 @@ class BordenNumberApi:
             return row[0]
 
     def reserve_borden_number(self, borden_number, resourceinstanceid):
+        self._initialize_models()
         is_heritage_site = "Y"
         tile = models.TileModel.objects.filter(resourceinstance_id=resourceinstanceid,
                                                nodegroup_id=self.officially_recognized_node.nodegroup_id).first()

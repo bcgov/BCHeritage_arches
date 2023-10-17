@@ -17,7 +17,7 @@ class BCRHPSiteAliases:
 
     RECOGNITION_TYPE = 'recognition_type'
 
-    SITE_GEOMETRY = 'spatial_coordinates_geometry'
+    SITE_GEOMETRY = 'site_boundary'
     OFFICIALLY_RECOGNIZED = 'officially_recognized_site'
 
 class BCRHPLocalGovernmentAliases:
