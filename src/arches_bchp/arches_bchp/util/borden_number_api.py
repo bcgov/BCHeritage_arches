@@ -38,7 +38,7 @@ class BordenNumberApi:
         tile = models.TileModel.objects.filter(resourceinstance_id=resourceinstanceid,
                                                nodegroup_id=self.geom_node.nodegroup_id).first()
         print("Got tile: %s" % tile)
-        datatype = BordenNumberApi._datatype_factory.get_instance(self.geom_node.datatype)
+        datatype = self._datatype_factory.get_instance(self.geom_node.datatype)
         # geometry = datatype.get_display_value(tile, self.node)
         print("Tile data: %s" % tile.data)
         geometry = tile.data[str(self.geom_node.nodeid)]
@@ -93,9 +93,9 @@ class BordenNumberApi:
         tile = models.TileModel.objects.filter(resourceinstance_id=resourceinstanceid,
                                                nodegroup_id=self.officially_recognized_node.nodegroup_id).first()
 
-        print("Got tile: %s" % tile)
+        # print("Got tile: %s" % tile)
         if tile and tile.data:
-            is_heritage_site = "Y" if tile.data[self.officially_recognized_node.nodeid] else "N"
+            is_heritage_site = "Y" if tile.data[str(self.officially_recognized_node.nodeid)] else "N"
 
         with connection.cursor() as cursor:
             cursor.execute("SELECT reserve_borden_number(%s, %s, %s)", [borden_number, is_heritage_site, resourceinstanceid])
