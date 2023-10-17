@@ -1,0 +1,110 @@
+/*****************/
+/* Map Legends   */
+/*****************/
+
+/* Cadastral ParcelMap */
+img.cadastral {
+    background: rgb(118, 42, 131);
+}
+
+/* Lakes */
+img.lakes {
+    background: rgba(116,173,209, .3);
+    border-color: rgba(116,173,209, 1);
+}
+
+/* Municipal Boundaries */
+img.municipal-boundaries {
+    background: rgba(0, 0, 0, 1);
+    border-style: dashed;
+    width: 8px;
+    margin-right: 8px;
+}
+
+/* Municipal Parks */
+img.parks-municipal {
+    background: rgba(217,240,211, 0.3);
+    border-color: rgba(117, 128, 102, 1);
+}
+
+/* National Parks */
+img.parks-national {
+    background: rgba(27,120,55, 0.4);
+    border-color: rgba(27,120,55, 1);
+}
+
+/* NTS 1:250k */
+img.nts250 {
+    background: rgba(0, 0, 0, 1);
+    width: 10px;
+    margin-right: 5px;
+    height: 1px;
+}
+
+/* NTS 1:50k */
+img.nts50 {
+    background: rgba(152, 152, 152, 1);
+    width: 10px;
+    margin-right: 5px;
+    height: 1px;
+}
+
+/* Provincial Parks, Protected Areas and Ecological Reserves */
+img.parks-protected-area {
+    background: rgba(166,219,160, 0.3);
+    border-color: rgba(117, 128, 102, 1);
+}
+
+img.parks-provincial {
+    background: rgba(90,174,97, 0.3);
+    border-color: rgba(117, 128, 102, 1);
+}
+
+img.parks-ecological-reserve {
+    background: rgba(27,120,55, 0.3);
+    border-color: rgba(117, 128, 102, 1);
+}
+
+/* Provinces and States */
+img.province-state {
+    background: rgb(102,136,102);
+    border-width: 2px;
+}
+
+/* Regional Districts */
+img.regional-district-boundaries {
+    background: black;
+    width: 6px;
+    margin-right: 6px;
+}
+
+/* Rivers */
+img.rivers {
+    background: rgba(204, 255, 255, 0.5);
+    border-color: rgba(98, 206, 217, 1);
+}
+
+/* Streams */
+img.streams {
+    background: rgba(90,209,230, 1);
+    width: 10px;
+}
+
+/* TRIM Contours */
+img.trim-contours-100 {
+    background: rgba(130,130,130, 1);
+    width: 10px;
+    height: 1px;
+}
+
+img.trim-contours-20 {
+    background: rgba(130,130,130, 0.5);
+    width: 10px;
+    height: 1px;
+}
+
+/* TRIM Waterlines */
+img.trim-waterlines {
+    background: rgba(98, 206, 217, 1);
+    width: 10px;
+}

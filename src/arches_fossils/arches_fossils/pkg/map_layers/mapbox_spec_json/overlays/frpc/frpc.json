@@ -4,7 +4,7 @@
     "frpc-source": {
       "type": "vector",
       "tiles": [
-        "/int/arches-fossils/bclocaltileserver/map_data.fiss_frpc_br/{z}/{x}/{y}.pbf?source=local"
+        "/{ url_context_root }/bclocaltileserver/map_data.fiss_frpc_br/{z}/{x}/{y}.pbf?source=local"
       ],
       "tileSize": 512
     }
@@ -16,7 +16,7 @@
     "centery": null,
     "icon": "fa fa-globe",
     "isoverlay": true,
-    "legend": "<p><em>Fossil Resource Potential Classification - Bedrock</em><br /><img alt=\"\" class=\"frpc-high legend-swatch\" src=\"/int/arches-bchp/static/img/blank.png\" />High Potential<br /> <img alt=\"\" class=\"frpc-medium legend-swatch\" src=\"/int/arches-bchp/static/img/blank.png\" />Medium Potential<br /> <img alt=\"\" class=\"frpc-low legend-swatch\" src=\"/int/arches-bchp/static/img/blank.png\" />Low Potential<br /> <img alt=\"\" class=\"frpc-very-low legend-swatch\" src=\"/int/arches-bchp/static/img/blank.png\" />Very Low Potential</p>",
+    "legend": "<p><em>Fossil Resource Potential Classification - Bedrock</em><br /><img alt=\"\" class=\"frpc-high legend-swatch\" src=\"/{ url_context_root }/static/img/blank.png\" />High Potential<br /> <img alt=\"\" class=\"frpc-medium legend-swatch\" src=\"/{ url_context_root }/static/img/blank.png\" />Medium Potential<br /> <img alt=\"\" class=\"frpc-low legend-swatch\" src=\"/{ url_context_root }/static/img/blank.png\" />Low Potential<br /> <img alt=\"\" class=\"frpc-very-low legend-swatch\" src=\"/{ url_context_root }/static/img/blank.png\" />Very Low Potential</p>",
     "searchonly": false,
     "sortorder": 0,
     "zoom": null
