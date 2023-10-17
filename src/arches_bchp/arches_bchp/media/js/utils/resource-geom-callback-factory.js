@@ -1,8 +1,14 @@
-define(['jquery','underscore' ], function($, _) {
+define([ ], function($, _, arches, ko, BaseFilter, MapComponentViewModel, binFeatureCollection, mapStyles, turf, geohash, geojsonExtent, uuid, geojsonhint, popupDataProvider, mapFilterUtils) {
     let resourceGeomCallbackFactory = {
-        // This isn't currently used in BCRHP. Look at Fossils implementation for working example
+        sandboxGeometryCallback: function(resource) {
+            return JSON.parse(resource["Sandcastle Project"]["Project Location"]["Project Boundary"][0]["@value"].replaceAll("'", "\"")).features;
+        },
         getCallbackForFeature: function(feature) {
-            return null;
+            console.log(`Feature: ${feature}`);
+            if (feature.sourceLayer === "9f2c9e28-dedb-11ed-ac5a-5254004d77d3") // Project Sandbox
+            {
+                return this.sandboxGeometryCallback;
+            }
         }
     };
     return resourceGeomCallbackFactory;

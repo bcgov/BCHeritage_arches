@@ -49,11 +49,11 @@
                         "en": ""
                     },
                     "instructions": {
-                        "en": "Define the spatial location."
+                        "en": "Define the boundaries of the project"
                     },
                     "is_editable": true,
                     "name": {
-                        "en": "BC Fossil Site Location"
+                        "en": "Project Boundaries"
                     },
                     "nodegroup_id": "9f2c9e28-dedb-11ed-ac5a-5254004d77d3",
                     "sortorder": 2,
@@ -139,7 +139,7 @@
                                 "text": "Polygon"
                             }
                         ],
-                        "label": "Spatial Coordinates Geometry",
+                        "label": "Project Boundary",
                         "maxZoom": 20,
                         "minZoom": 0,
                         "overlayConfigs": [],
@@ -150,10 +150,10 @@
                     },
                     "id": "9f2cbea8-dedb-11ed-ac5a-5254004d77d3",
                     "label": {
-                        "en": "Spatial Coordinates Geometry"
+                        "en": "Project Boundary"
                     },
                     "node_id": "9f2c9e28-dedb-11ed-ac5a-5254004d77d3",
-                    "sortorder": null,
+                    "sortorder": 0,
                     "visible": true,
                     "widget_id": "10000000-0000-0000-0000-000000000007"
                 },
@@ -182,7 +182,7 @@
                         "en": "Geometry Description"
                     },
                     "node_id": "f6236db0-dedb-11ed-ac2f-5254004d77d3",
-                    "sortorder": null,
+                    "sortorder": 1,
                     "visible": true,
                     "widget_id": "10000000-0000-0000-0000-000000000001"
                 },
@@ -347,7 +347,7 @@
                     },
                     "function_id": "60000000-0000-0000-0000-000000000001",
                     "graph_id": "c3923080-d21e-42d7-b8f1-637b9d0ab63c",
-                    "id": "3089d854-6b8e-4712-a0a8-efb6f316fc14"
+                    "id": "aee9e736-8b6f-4d74-9327-fb9b31b799ab"
                 }
             ],
             "graphid": "c3923080-d21e-42d7-b8f1-637b9d0ab63c",
@@ -443,7 +443,7 @@
                     "sourcebranchpublication_id": null
                 },
                 {
-                    "alias": "spatial_coordinates_geometry",
+                    "alias": "project_boundary",
                     "config": {
                         "addToMap": true,
                         "advancedStyle": "",
@@ -478,7 +478,7 @@
                     "isrequired": false,
                     "issearchable": true,
                     "istopnode": false,
-                    "name": "Spatial Coordinates Geometry",
+                    "name": "Project Boundary",
                     "nodegroup_id": "9f2c9e28-dedb-11ed-ac5a-5254004d77d3",
                     "nodeid": "9f2c9e28-dedb-11ed-ac5a-5254004d77d3",
                     "ontologyclass": "http://www.cidoc-crm.org/cidoc-crm/E47_Spatial_Coordinates",
@@ -629,8 +629,8 @@
             "publication": {
                 "graph_id": "c3923080-d21e-42d7-b8f1-637b9d0ab63c",
                 "notes": null,
-                "publicationid": "627fe11e-69d8-11ee-978d-080027b7463b",
-                "published_time": "2023-10-13T09:54:18.146"
+                "publicationid": "f56dc9c6-6ceb-11ee-ac64-080027b7463b",
+                "published_time": "2023-10-17T07:51:58.579"
             },
             "relatable_resource_model_ids": [],
             "resource_2_resource_constraints": [],
@@ -666,7 +666,7 @@
     ],
     "metadata": {
         "db": "PostgreSQL 15.3 on x86_64-pc-linux-gnu, compiled by gcc (GCC) 11.3.1 20221121 (Red Hat 11.3.1-4), 64-bit",
-        "git hash": "9f6550d4f 2023-10-07 06:13:58 -0700",
+        "git hash": "7f6b69d38 2023-10-11 12:18:07 -0700",
         "os": "Linux",
         "os version": "5.14.0-333.el9.x86_64"
     }

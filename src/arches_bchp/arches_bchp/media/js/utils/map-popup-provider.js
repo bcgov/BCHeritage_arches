@@ -63,7 +63,7 @@ define([
             "WHSE_ADMIN_BOUNDARIES.CLAB_INDIAN_RESERVES",
             "WHSE_TANTALIS.TA_CROWN_TENURES_SVW",
             "WHSE_ARCHAEOLOGY.RAAD_BORDENGRID",
-            /* "c66518e2-10c6-11ec-adef-5254008afee6", Important Areas Resource layer */
+            "9f2c9e28-dedb-11ed-ac5a-5254004d77d3", /* Project Sandbox layer */
         ],
 
             isFeatureClickable: function(feature, map){
