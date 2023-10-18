@@ -1,6 +1,49 @@
 /*****************/
 /* Map Legends   */
 /*****************/
+/******************************/
+/* General Legend definitions */
+/******************************/
+.legend-listing {
+    padding-top: 5px;
+    padding-bottom: 5px;
+}
+
+.legend-listing .legend-content {
+    padding-top: 5px;
+}
+
+.layer-listing-icon::before {
+    width: 20px;
+    height: 20px;
+}
+
+img.legend-swatch {
+    border-style:solid;
+    border-width:1px;
+    height:10px;
+    margin:0 5px;
+    width:10px;
+}
+
+img.legend-line {
+    height: 2px;
+    width: 4px;
+    vertical-align: middle;
+    margin-right: 4px;
+}
+
+img.legend-point {
+    height:10px;
+    margin:0 5px;
+    width:10px;
+    border-radius: 50%;
+    border-width: 1px;
+    border-style: solid;
+}
+/******************************/
+/* END Map Legend Definitions */
+/******************************/
 
 /* Cadastral ParcelMap */
 img.cadastral {
