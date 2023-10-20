@@ -5,7 +5,7 @@ class BCRHPSiteAliases:
     NAME = 'name'
     NAME_TYPE = 'name_type'
 
-    START_YEAR_QUALIFIER = 'start_year_qualifier'
+    EVENT_DATES_APPROXIMATE = 'dates_approximate'
     START_YEAR = 'start_year'
     SIGNIFICANT_EVENTS = 'significant_events'
 

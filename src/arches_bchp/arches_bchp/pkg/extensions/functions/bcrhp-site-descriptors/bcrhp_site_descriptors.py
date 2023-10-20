@@ -54,7 +54,7 @@ class BCRHPSiteDescriptors(AbstractPrimaryDescriptorsFunction):
 
     # @todo Change these to aliases
     _name_nodes = [aliases.NAME_TYPE, aliases.NAME]
-    _sig_event_nodes = [aliases.START_YEAR, aliases.START_YEAR_QUALIFIER, aliases.SIGNIFICANT_EVENTS]
+    _sig_event_nodes = [aliases.START_YEAR, aliases.EVENT_DATES_APPROXIMATE, aliases.SIGNIFICANT_EVENTS]
     _popup_nodes = [aliases.BORDEN_NUMBER, 'address']
     _card_nodes = [aliases.BORDEN_NUMBER, aliases.CITY,  'construction_date']
     _address_nodes = [['street_address'],[aliases.CITY,'postal_code']]
@@ -185,7 +185,7 @@ class BCRHPSiteDescriptors(AbstractPrimaryDescriptorsFunction):
         data_types = BCRHPSiteDescriptors._datatypes
         for tile in tiles:
             if data_types[aliases.SIGNIFICANT_EVENTS].get_display_value(tile, nodes[aliases.SIGNIFICANT_EVENTS]) == 'Construction':
-                qualifier = data_types[aliases.START_YEAR_QUALIFIER].get_display_value(tile, nodes[aliases.START_YEAR_QUALIFIER])
+                qualifier = "Circa" if data_types[aliases.EVENT_DATES_APPROXIMATE].get_display_value(tile, nodes[aliases.EVENT_DATES_APPROXIMATE]) == "True" else ""
                 const_date = data_types[aliases.START_YEAR].get_display_value(tile, nodes[aliases.START_YEAR])
                 if const_date:
                     return ("{qualifier} {const_date}" if qualifier else "{const_date}").format(qualifier=qualifier, const_date=const_date)
