@@ -16,7 +16,7 @@
     "centery": null,
     "icon": "fa fa-globe",
     "isoverlay": true,
-    "legend": "<p><img alt=\"\" class=\"cadastral legend-line\" src=\"/{ url_context_root }/static/img/blank.png\" /><img alt=\"\" class=\"cadastral legend-line\" src=\"/{ url_context_root }/static/img/blank.png\" />Parcel Boundary</p>",
+    "legend": "<p> <img alt=\"\" class=\"cadastral-crown-agency legend-swatch\" src=\"/int/arches-fossils/static/img/blank.png\" />Crown Agency<br> <img alt=\"\" class=\"cadastral-crown-provincial legend-swatch\" src=\"/int/arches-fossils/static/img/blank.png\" />Crown Provincial<br> <img alt=\"\" class=\"cadastral-federal legend-swatch\" src=\"/int/arches-fossils/static/img/blank.png\" />Federal<br> <img alt=\"\" class=\"cadastral-first-nations legend-swatch\" src=\"/int/arches-fossils/static/img/blank.png\" />First Nations<br> <img alt=\"\" class=\"cadastral-mixed legend-swatch\" src=\"/int/arches-fossils/static/img/blank.png\" />Mixed Ownership<br> <img alt=\"\" class=\"cadastral-municipal legend-swatch\" src=\"/int/arches-fossils/static/img/blank.png\" />Municipal<br> <img alt=\"\" class=\"cadastral-private legend-swatch\" src=\"/int/arches-fossils/static/img/blank.png\" />Private <img alt=\"\" class=\"cadastral-unclassified legend-swatch\" src=\"/int/arches-fossils/static/img/blank.png\" />Unclassified<br> <img alt=\"\" class=\"cadastral-untitled_provincial legend-swatch\" src=\"/int/arches-fossils/static/img/blank.png\" />Untitled Provincial </p>",
     "searchonly": false,
     "sortorder": 0,
     "zoom": null
@@ -29,8 +29,40 @@
       "source-layer": "WHSE_CADASTRE.PMBC_PARCEL_FABRIC_POLY_FA_SVW",
       "minzoom": 13,
       "paint": {
-        "line-color": "rgb(118, 42, 131)",
-        "line-dasharray": [ 4, 4, 4, 4 ]
+        "line-color": [
+          "case",
+          ["match", ["get","OWNER_TYPE"], ["First Nations"], true, false], "rgba(181,160,124,1)",
+          ["match", ["get","OWNER_TYPE"], ["Private"], true, false], "rgba(255,206,85,1)",
+          ["match", ["get","OWNER_TYPE"], ["Municipal"], true, false], "rgba(48,171,69,1)",
+          ["match", ["get","OWNER_TYPE"], ["Federal"], true, false], "rgba(117,166,209,1)",
+          ["match", ["get","OWNER_TYPE"], ["Crown Agency"], true, false], "rgba(255,195,230,1)",
+          ["match", ["get","OWNER_TYPE"], ["Crown Provincial"], true, false], "rgba(255,159,229,1)",
+          ["match", ["get","OWNER_TYPE"], ["Untitled Provincial"], true, false], "rgba(167,150,198,1)",
+          ["match", ["get","OWNER_TYPE"], ["Mixed Ownership"], true, false], "rgba(252,128,114,1)",
+          ["match", ["get","OWNER_TYPE"], ["Unclassified"], true, false], "rgba(137,137,137,1)",
+          "rgba(0,0,0,1)" ]
+      }
+    },
+    {
+      "id": "cadastral-fill",
+      "type": "fill",
+      "source": "cadastral-vector-source",
+      "source-layer": "WHSE_CADASTRE.PMBC_PARCEL_FABRIC_POLY_FA_SVW",
+      "minzoom": 0,
+      "maxzoom": 20,
+      "paint": {
+        "fill-color": [
+          "case",
+          ["match", ["get","OWNER_TYPE"], ["First Nations"], true, false], "rgba(215,194,159,.6)",
+          ["match", ["get","OWNER_TYPE"], ["Private"], true, false], "rgba(255,235,118,.6)",
+          ["match", ["get","OWNER_TYPE"], ["Municipal"], true, false], "rgba(36,174,96,.6)",
+          ["match", ["get","OWNER_TYPE"], ["Federal"], true, false], "rgba(128,177,211,.6)",
+          ["match", ["get","OWNER_TYPE"], ["Crown Agency"], true, false], "rgba(255,209,257,.6)",
+          ["match", ["get","OWNER_TYPE"], ["Crown Provincial"], true, false], "rgba(255,190,232,.6)",
+          ["match", ["get","OWNER_TYPE"], ["Untitled Provincial"], true, false], "rgba(206,180,253,0.6)",
+          ["match", ["get","OWNER_TYPE"], ["Mixed Ownership"], true, false], "rgba(252,128,114,.6)",
+          ["match", ["get","OWNER_TYPE"], ["Unclassified"], true, false], "rgba(157,157,157,.6)",
+          "rgba(0,0,0,.1)" ]
       }
     },
     {
