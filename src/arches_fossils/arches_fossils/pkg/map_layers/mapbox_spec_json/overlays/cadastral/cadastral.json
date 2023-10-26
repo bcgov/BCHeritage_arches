@@ -30,17 +30,17 @@
       "minzoom": 13,
       "paint": {
         "line-color": [
-          "case",
-          ["match", ["get","OWNER_TYPE"], ["First Nations"], true, false], "rgba(181,160,124,1)",
-          ["match", ["get","OWNER_TYPE"], ["Private"], true, false], "rgba(255,206,85,1)",
-          ["match", ["get","OWNER_TYPE"], ["Municipal"], true, false], "rgba(48,171,69,1)",
-          ["match", ["get","OWNER_TYPE"], ["Federal"], true, false], "rgba(117,166,209,1)",
-          ["match", ["get","OWNER_TYPE"], ["Crown Agency"], true, false], "rgba(255,195,230,1)",
-          ["match", ["get","OWNER_TYPE"], ["Crown Provincial"], true, false], "rgba(255,159,229,1)",
-          ["match", ["get","OWNER_TYPE"], ["Untitled Provincial"], true, false], "rgba(167,150,198,1)",
-          ["match", ["get","OWNER_TYPE"], ["Mixed Ownership"], true, false], "rgba(252,128,114,1)",
-          ["match", ["get","OWNER_TYPE"], ["Unclassified"], true, false], "rgba(137,137,137,1)",
-          "rgba(0,0,0,1)" ]
+          "match", ["get","OWNER_TYPE"],
+            "First Nations", "rgba(181,160,124,1)",
+            "Private", "rgba(255,206,85,1)",
+            "Municipal", "rgba(48,171,69,1)",
+            "Federal", "rgba(117,166,209,1)",
+            "Crown Agency", "rgba(255,195,230,1)",
+            "Crown Provincial", "rgba(255,159,229,1)",
+            "Untitled Provincial", "rgba(167,150,198,1)",
+            "Mixed Ownership", "rgba(252,128,114,1)",
+            "Unclassified", "rgba(137,137,137,1)",
+            "rgba(0,0,0,1)" ]
       }
     },
     {
@@ -52,17 +52,17 @@
       "maxzoom": 20,
       "paint": {
         "fill-color": [
-          "case",
-          ["match", ["get","OWNER_TYPE"], ["First Nations"], true, false], "rgba(215,194,159,.6)",
-          ["match", ["get","OWNER_TYPE"], ["Private"], true, false], "rgba(255,235,118,.6)",
-          ["match", ["get","OWNER_TYPE"], ["Municipal"], true, false], "rgba(36,174,96,.6)",
-          ["match", ["get","OWNER_TYPE"], ["Federal"], true, false], "rgba(128,177,211,.6)",
-          ["match", ["get","OWNER_TYPE"], ["Crown Agency"], true, false], "rgba(255,209,257,.6)",
-          ["match", ["get","OWNER_TYPE"], ["Crown Provincial"], true, false], "rgba(255,190,232,.6)",
-          ["match", ["get","OWNER_TYPE"], ["Untitled Provincial"], true, false], "rgba(206,180,253,0.6)",
-          ["match", ["get","OWNER_TYPE"], ["Mixed Ownership"], true, false], "rgba(252,128,114,.6)",
-          ["match", ["get","OWNER_TYPE"], ["Unclassified"], true, false], "rgba(157,157,157,.6)",
-          "rgba(0,0,0,.1)" ]
+          "match", ["get","OWNER_TYPE"],
+            "First Nations", "rgba(215,194,159,.6)",
+            "Private", "rgba(255,235,118,.6)",
+            "Municipal", "rgba(36,174,96,.6)",
+            "Federal", "rgba(128,177,211,.6)",
+            "Crown Agency", "rgba(255,209,257,.6)",
+            "Crown Provincial", "rgba(255,190,232,.6)",
+            "Untitled Provincial", "rgba(206,180,253,0.6)",
+            "Mixed Ownership", "rgba(252,128,114,.6)",
+            "Unclassified", "rgba(157,157,157,.6)",
+            "rgba(0,0,0,.1)" ]
       }
     },
     {

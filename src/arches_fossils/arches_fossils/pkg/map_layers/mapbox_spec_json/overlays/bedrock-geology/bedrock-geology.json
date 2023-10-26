@@ -40,13 +40,13 @@
       "type": "fill",
       "paint": {
         "fill-color": [
-          "case",
-          ["match", ["get","ROCK_CLASS"], ["intrusive rocks"], true, false], "rgba(246,239,247, 0.3)",
-          ["match", ["get","ROCK_CLASS"], ["metamorphic rocks"], true, false], "rgba(189,201,225, 0.3)",
-          ["match", ["get","ROCK_CLASS"], ["sedimentary rocks"], true, false], "rgba(103,169,207, 0.4)",
-          ["match", ["get","ROCK_CLASS"], ["ultramafic rocks"], true, false], "rgba(28,144,153, 0.3)",
-          ["match", ["get","ROCK_CLASS"], ["volcanic rocks"], true, false], "rgba(1,108,89, 0.3)",
-          "rgba(0 ,0 ,0 , .1)" ]
+          "match", ["get","ROCK_CLASS"],
+            "intrusive rocks", "rgba(246,239,247, 0.3)",
+            "metamorphic rocks", "rgba(189,201,225, 0.3)",
+            "sedimentary rocks", "rgba(103,169,207, 0.4)",
+            "ultramafic rocks", "rgba(28,144,153, 0.3)",
+            "volcanic rocks", "rgba(1,108,89, 0.3)",
+            "rgba(0 ,0 ,0 , .1)" ]
       },
       "source": "bedrock-geology-source",
       "minzoom": 0,

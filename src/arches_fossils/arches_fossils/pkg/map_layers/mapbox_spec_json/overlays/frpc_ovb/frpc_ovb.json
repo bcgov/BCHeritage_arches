@@ -32,12 +32,12 @@
       "paint": {
         "line-width": 0.6,
         "line-color": [
-          "case",
-          ["match", ["get","frpc"], ["High"], true, false], "rgba(82,82,82,1)",
-          ["match", ["get","frpc"], ["Medium"], true, false], "rgba(150,150,150,1)",
-          ["match", ["get","frpc"], ["Low"], true, false], "rgba(204,204,204,1)",
-          ["match", ["get","frpc"], ["Very Low"], true, false], "rgba(247,247,247,1)",
-          "rgba(0,0,0,1)" ]
+          "match", ["get","frpc"],
+             "High", "rgba(82,82,82,1)",
+             "Medium", "rgba(150,150,150,1)",
+             "Low", "rgba(204,204,204,1)",
+             "Very Low", "rgba(247,247,247,1)",
+             "rgba(0,0,0,1)" ]
       }
     },
     {
@@ -49,12 +49,12 @@
       "maxzoom": 20,
       "paint": {
         "fill-color": [
-          "case",
-          ["match", ["get","frpc"], ["High"], true, false], "rgba(82,82,82,.2)",
-          ["match", ["get","frpc"], ["Medium"], true, false], "rgba(150,150,150,.2)",
-          ["match", ["get","frpc"], ["Low"], true, false], "rgba(204,204,204,.2)",
-          ["match", ["get","frpc"], ["Very Low"], true, false], "rgba(247,247,247,.2)",
-          "rgba(0,0,0,.1)" ]
+          "match", ["get","frpc"],
+            "High", "rgba(82,82,82,.2)",
+            "Medium", "rgba(150,150,150,.2)",
+            "Low", "rgba(204,204,204,.2)",
+            "Very Low", "rgba(247,247,247,.2)",
+            "rgba(0,0,0,.1)" ]
       }
     },
     {
@@ -70,9 +70,9 @@
       },
       "paint": {
         "text-color": [
-          "case",
-          [ "match", [ "get", "frpc" ], [ "High" ], true, false ], "rgba(255,255,255,1)",
-          "rgb(78, 78, 78)"
+           "match", [ "get", "frpc" ],
+              "High",  "rgba(255,255,255,1)",
+              "rgb(78, 78, 78)"
         ]
       }
     }
