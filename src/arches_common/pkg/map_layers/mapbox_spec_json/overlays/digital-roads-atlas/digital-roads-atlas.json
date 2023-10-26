@@ -9,6 +9,18 @@
       "tileSize": 512
     }
   },
+  "arches-metadata": {
+    "ispublic": false,
+    "addtomap": false,
+    "centerx": null,
+    "centery": null,
+    "icon": "fa fa-globe",
+    "isoverlay": true,
+    "legend": "<p> <img alt=\"\" class=\"road-freeway legend-line\" src=\"/{ url_context_root }/static/img/blank.png\" />Freeway<br/> <img alt=\"\" class=\"road-arterial legend-line\" src=\"/{ url_context_root }/static/img/blank.png\" />Arterial / Collector<br/> <img alt=\"\" class=\"road-local legend-line\" src=\"/{ url_context_root }/static/img/blank.png\" />Local<br/> <img alt=\"\" class=\"road-alleyway legend-line\" src=\"/{ url_context_root }/static/img/blank.png\" />Alleyway / Lane<br/> <img alt=\"\" class=\"road-trail legend-line\" src=\"/{ url_context_root }/static/img/blank.png\" />Trail<br/> <img alt=\"\" class=\"road-restricted legend-line\" src=\"/{ url_context_root }/static/img/blank.png\" />Restricted<br/> <img alt=\"\" class=\"road-runway legend-line\" src=\"/{ url_context_root }/static/img/blank.png\" />Runway<br/> <img alt=\"\" class=\"road-other legend-line\" src=\"/{ url_context_root }/static/img/blank.png\" />Other </p>",
+    "searchonly": false,
+    "sortorder": 0,
+    "zoom": null
+  },
   "layers": [
     {
       "id": "digital-roads-atlas",
@@ -16,8 +28,27 @@
       "source": "digital-roads-atlas-source",
       "source-layer": "WHSE_BASEMAPPING.DRA_DGTL_ROAD_ATLAS_MPAR_SP",
       "paint": {
-        "line-color": "rgb(247, 247, 247)",
-        "line-width": 2.67
+        "line-color": [
+          "match", ["get","ROAD_CLASS"],
+          "freeway","rgb(255,51,51)",
+          "ramp","rgb(255,51,51)",
+          "arterial","rgb(161,123,105)",
+          "collector","rgb(161,123,105)",
+          "local","rgb(247,196,100)",
+          "alleyway","rgb(253,169,152)",
+          "lane","rgb(253,169,152)",
+          "trail","rgb(148,249,82)",
+          "restricted","rgb(157,51,185)",
+          "runway","rgb(36,36,138)",
+          "rgb(152, 152, 152)"],
+        "line-width": [
+          "match", ["get","ROAD_CLASS"],
+          "freeway", 3,
+          "arterial",2,
+          "collector",2,
+          "ramp",2,
+          1
+        ]
       }
     },
     {
