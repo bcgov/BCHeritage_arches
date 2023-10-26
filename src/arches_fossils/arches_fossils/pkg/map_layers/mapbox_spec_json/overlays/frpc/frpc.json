@@ -36,12 +36,12 @@
       "paint": {
         "line-width":  0.6,
         "line-color": [
-          "case",
-          ["match", ["get","frpc"], ["High"], true, false], "rgba(136,65,157,1)",
-          ["match", ["get","frpc"], ["Medium"], true, false], "rgba(140,150,198,1)",
-          ["match", ["get","frpc"], ["Low"], true, false], "rgba(179,205,227,1)",
-          ["match", ["get","frpc"], ["Very Low"], true, false], "rgba(237,248,251,1)",
-          "rgba(0,0,0,1)" ]
+          "match", ["get","frpc"],
+            "High", "rgba(136,65,157,1)",
+            "Medium", "rgba(140,150,198,1)",
+            "Low", "rgba(179,205,227,1)",
+            "Very Low", "rgba(237,248,251,1)",
+              "rgba(0,0,0,1)" ]
       }
     },
     {
@@ -53,12 +53,12 @@
       "maxzoom": 20,
       "paint": {
         "fill-color": [
-          "case",
-          ["match", ["get","frpc"], ["High"], true, false], "rgba(136,65,157,.6)",
-          ["match", ["get","frpc"], ["Medium"], true, false], "rgba(140,150,198,.6)",
-          ["match", ["get","frpc"], ["Low"], true, false], "rgba(179,205,227,.6)",
-          ["match", ["get","frpc"], ["Very Low"], true, false], "rgba(237,248,251,.6)",
-          "rgba(0,0,0,.1)" ]
+          "match", ["get","frpc"],
+            "High", "rgba(136,65,157,.6)",
+            "Medium", "rgba(140,150,198,.6)",
+            "Low", "rgba(179,205,227,.6)",
+            "Very Low", "rgba(237,248,251,.6)",
+            "rgba(0,0,0,.1)" ]
       }
     },
     {
