@@ -175,7 +175,7 @@ define([
                 self.form.loading(true);
                 $.ajax({
                     // type: "PUT",
-                    url: `/int/arches-bchp/borden_number/${self.tile.resourceinstance_id}`
+                    url: `/int/bcrhp/borden_number/${self.tile.resourceinstance_id}`
                 }).done(function(data){
                     console.log(`Data: ${JSON.stringify(data)}`);
                     console.log(data);
