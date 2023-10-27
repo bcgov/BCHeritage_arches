@@ -3,8 +3,8 @@ from django.conf import settings
 from django.conf.urls.static import static
 from django.conf.urls.i18n import i18n_patterns
 from django.urls.resolvers import RegexPattern
-from arches_fossils.views.api import MVT
-from arches_fossils.views.map import BCTileserverProxyView, BCTileserverLocalProxyView
+from bcfms.views.api import MVT
+from bcfms.views.map import BCTileserverProxyView, BCTileserverLocalProxyView
 
 uuid_regex = settings.UUID_REGEX
 

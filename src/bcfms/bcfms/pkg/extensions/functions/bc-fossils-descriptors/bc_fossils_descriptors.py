@@ -9,7 +9,7 @@ details = {
     "modulename": "bc_fossils_descriptors.py",
     "description": "Function that provides the primary descriptors for BC Fossils resources",
     "defaultconfig": {
-        "module": "arches_fossils.functions.bc_fossils_descriptors",
+        "module": "bcfms.functions.bc_fossils_descriptors",
         "class_name": "BCFossilsDescriptors",
         "descriptor_types": {
             "name": {

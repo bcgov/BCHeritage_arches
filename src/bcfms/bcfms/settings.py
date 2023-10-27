@@ -1,5 +1,5 @@
 """
-Django settings for arches_fossils project.
+Django settings for bcfms project.
 """
 
 import json
@@ -15,7 +15,7 @@ try:
 except ImportError:
     pass
 
-APP_NAME = 'arches_fossils'
+APP_NAME = 'bcfms'
 APP_VERSION = semantic_version.Version(major=0, minor=0, patch=0)
 APP_ROOT = os.path.dirname(os.path.abspath(inspect.getfile(inspect.currentframe())))
 MIN_ARCHES_VERSION = arches.__version__
@@ -28,10 +28,10 @@ WEBPACK_LOADER = {
     },
 }
 
-DATATYPE_LOCATIONS.append('arches_fossils.datatypes')
-FUNCTION_LOCATIONS.append('arches_fossils.functions')
-ETL_MODULE_LOCATIONS.append('arches_fossils.etl_modules')
-SEARCH_COMPONENT_LOCATIONS.append('arches_fossils.search_components')
+DATATYPE_LOCATIONS.append('bcfms.datatypes')
+FUNCTION_LOCATIONS.append('bcfms.functions')
+ETL_MODULE_LOCATIONS.append('bcfms.etl_modules')
+SEARCH_COMPONENT_LOCATIONS.append('bcfms.search_components')
 # TEMPLATES[0]['DIRS'].append(os.path.join(APP_ROOT, 'functions', 'templates'))
 # TEMPLATES[0]['DIRS'].append(os.path.join(APP_ROOT, 'widgets', 'templates'))
 # TEMPLATES[0]['DIRS'].insert(0, os.path.join(APP_ROOT, 'templates'))
@@ -40,7 +40,7 @@ LOCALE_PATHS.append(os.path.join(APP_ROOT, 'locale'))
 
 FILE_TYPE_CHECKING = False
 FILE_TYPES = ["bmp", "gif", "jpg", "jpeg", "pdf", "png", "psd", "rtf", "tif", "tiff", "xlsx", "csv", "zip"]
-FILENAME_GENERATOR = "arches_fossils.util.storage_filename_generator.generate_filename"
+FILENAME_GENERATOR = "bcfms.util.storage_filename_generator.generate_filename"
 
 # SECURITY WARNING: keep the secret key used in production secret!
 # SECRET_KEY = ''
@@ -48,14 +48,14 @@ FILENAME_GENERATOR = "arches_fossils.util.storage_filename_generator.generate_fi
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ROOT_URLCONF = 'arches_fossils.urls'
+ROOT_URLCONF = 'bcfms.urls'
 
 # a prefix to append to all elasticsearch indexes, note: must be lower case
-ELASTICSEARCH_PREFIX = 'arches_fossils'
+ELASTICSEARCH_PREFIX = 'bcfms'
 
 ELASTICSEARCH_CUSTOM_INDEXES = []
 # [{
-#     'module': 'arches_fossils.search_indexes.sample_index.SampleIndex',
+#     'module': 'bcfms.search_indexes.sample_index.SampleIndex',
 #     'name': 'my_new_custom_index', <-- follow ES index naming rules
 #     'should_update_asynchronously': False  <-- denotes if asynchronously updating the index would affect custom functionality within the project.
 # }]
@@ -88,7 +88,7 @@ INSTALLED_APPS = (
     "compressor",
     # "silk",
     "storages",
-    "arches_fossils",
+    "bcfms",
 )
 
 ARCHES_APPLICATIONS = ()
@@ -109,7 +109,7 @@ TEMPLATES = build_templates_config(
 # ALLOWED_HOSTS = []
 
 SYSTEM_SETTINGS_LOCAL_PATH = os.path.join(APP_ROOT, 'system_settings', 'System_Settings.json')
-WSGI_APPLICATION = 'arches_fossils.wsgi.application'
+WSGI_APPLICATION = 'bcfms.wsgi.application'
 
 # URL that handles the media served from MEDIA_ROOT, used for managing stored files.
 # It must end in a slash if set to a non-empty value.
@@ -170,7 +170,7 @@ LOGGING = {
 DATA_UPLOAD_MAX_MEMORY_SIZE = 15728640
 
 # Unique session cookie ensures that logins are treated separately for each app
-SESSION_COOKIE_NAME = 'arches_fossils'
+SESSION_COOKIE_NAME = 'bcfms'
 
 # For more info on configuring your cache: https://docs.djangoproject.com/en/2.2/topics/cache/
 CACHES = {

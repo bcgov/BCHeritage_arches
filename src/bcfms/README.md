@@ -1,2 +1,2 @@
-# arches_fossils
+# bcfms
 BC Fossil Management implementation of Arches
