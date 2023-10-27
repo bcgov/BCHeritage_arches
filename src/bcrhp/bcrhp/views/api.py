@@ -4,7 +4,7 @@ from django.http import HttpResponse
 
 from django.views.decorators.csrf import csrf_exempt
 from django.utils.decorators import method_decorator
-from arches_bchp.util.borden_number_api import BordenNumberApi
+from bcrhp.util.borden_number_api import BordenNumberApi
 
 logger = logging.getLogger(__name__)
 

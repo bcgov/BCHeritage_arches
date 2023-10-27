@@ -1,7 +1,7 @@
 from arches.app.datatypes.datatypes import StringDataType
 from arches.app.models import models
 import re
-from arches_bchp.util.borden_number_api import BordenNumberApi
+from bcrhp.util.borden_number_api import BordenNumberApi
 
 borden_number_widget = models.Widget.objects.get(name="borden-number-widget")
 

@@ -1,7 +1,7 @@
 from arches.app.functions.primary_descriptors import AbstractPrimaryDescriptorsFunction
 from arches.app.models import models
 from arches.app.datatypes.datatypes import DataTypeFactory
-from arches_bchp.util.bcrhp_aliases import BCRHPSiteAliases as aliases
+from bcrhp.util.bcrhp_aliases import BCRHPSiteAliases as aliases
 
 details = {
     "functionid": "60000000-0000-0000-0000-000000001002",

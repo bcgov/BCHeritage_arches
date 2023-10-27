@@ -5,7 +5,7 @@ from arches.app.datatypes.datatypes import DataTypeFactory
 from django.contrib.gis.geos import Point
 from arches.app.utils import geo_utils
 import json
-from arches_bchp.util.bcrhp_aliases import BCRHPSiteAliases as site_aliases, GraphSlugs as slugs
+from bcrhp.util.bcrhp_aliases import BCRHPSiteAliases as site_aliases, GraphSlugs as slugs
 
 import urllib
 import ssl
