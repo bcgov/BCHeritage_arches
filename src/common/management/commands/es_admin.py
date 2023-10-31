@@ -1,4 +1,5 @@
 from django.core.management.base import BaseCommand
+from arches.app.models.system_settings import settings
 import urllib3.request, urllib3.response
 import json
 import re
@@ -9,21 +10,15 @@ import re
 # 3. Application created in 2. creates an encoded API Key to be stored in the application
 #    settings
 class Command(BaseCommand):
-    # es_host = "localhost"
-    # es_port = "9200"
-    # es_mgr_username = "arches_bchp"
-    # es_mgr_password = "arches_bchp"
+    # Parameters used to connect to the Elasticsearch instance
     es_connection_parameters = {
-        "host": "localhost",
-        "port": "9200",
+        "host": settings.ELASTICSEARCH_HTTP_HOST,
+        "port": settings.ELASTICSEARCH_HTTP_PORT,
         "username": None,
         "password": None
     }
 
-    # es_mgr_username = "bcrhp-dev"
-    # es_mgr_password = "bcrhp-dev"
-
-    crt_location = "/etc/elasticsearch/certs/http_ca.crt"
+    crt_location = "{{ es_cert_file }}"
 
     endpoints = {
         "get_roles": {"mode": "GET", "path": "_security/role"},
@@ -122,7 +117,7 @@ class Command(BaseCommand):
             "--es_username",
             action="store",
             dest="elasticsearch_username",
-            default="elastic",
+            default="",
             help="Username for Elasticsearch API calls",
         )
 
@@ -291,12 +286,28 @@ class Command(BaseCommand):
         response = self._make_es_call("delete_role", {"role_name": "%s-user" % app_name if app_name else role_name})
         print(json.dumps(response, indent=4, sort_keys=True))
 
+# Tries to set the ES admin credentials. Uses the command line values if provided,
+# otherwise tries the values set in the .settings_es_admin file
     def _set_es_connection_parameters(self, options):
-        for key in ["elasticsearch_username", "elasticsearch_password"]:
-            if key not in options or not options[key]:
-                print("%s must be specified in in commandline" % key)
-            else:
-                self.es_connection_parameters[key.replace("elasticsearch_","")] = options[key]
+        if options["elasticsearch_username"]:
+            self.es_connection_parameters["username"] = options["elasticsearch_username"]
+        elif settings.setting_exists("ES_ADMIN_USER"):
+            print("Setting admin user to: %s" % settings.ES_ADMIN_USER)
+            self.es_connection_parameters["username"] = settings.ES_ADMIN_USER
+        else:
+            print("ES Admin Username must be set in settings file or on the command line.")
+            exit(1)
+
+        if options["elasticsearch_password"]:
+            self.es_connection_parameters["password"] = options["elasticsearch_password"]
+        elif settings.setting_exists("ES_ADMIN_PASSWORD"):
+            print("Setting admin password to: %s" % settings.ES_ADMIN_PASSWORD)
+            self.es_connection_parameters["password"] = settings.ES_ADMIN_PASSWORD
+        else:
+            print("ES Admin password must be set in settings file or on the command line.")
+            exit(1)
+
+        print("Connection settings: %s" % self.es_connection_parameters)
 
 
     def handle(self,  *args, **options):
