@@ -14,11 +14,10 @@ class Command(BaseCommand):
     es_connection_parameters = {
         "host": settings.ELASTICSEARCH_HTTP_HOST,
         "port": settings.ELASTICSEARCH_HTTP_PORT,
+        "cert_location":  settings.ELASTICSEARCH_CERT_LOCATION,
         "username": None,
         "password": None
     }
-
-    crt_location = "{{ es_cert_file }}"
 
     endpoints = {
         "get_roles": {"mode": "GET", "path": "_security/role"},
@@ -205,7 +204,7 @@ class Command(BaseCommand):
         # use the opener to fetch a URL
 
         # print("Parameters: %s " % parameters)
-        http = urllib3.PoolManager(cert_reqs='CERT_REQUIRED', ca_certs=self.crt_location)
+        http = urllib3.PoolManager(cert_reqs='CERT_REQUIRED', ca_certs=self.es_connection_parameters["cert_location"])
         headers = self._get_headers()
         endpoint = self.endpoints[endpoint_name]
 
