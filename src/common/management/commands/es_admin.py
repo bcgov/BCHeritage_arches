@@ -35,7 +35,7 @@ class Command(BaseCommand):
           "indices": [
           {
             "names": ["%(app_name)s_*"],
-            "privileges": ["create_index", "delete_index", "write"]
+            "privileges": ["create_index", "delete_index", "write", "read"]
           }
           ], "metadata": {
             "application": ["%(app_name)s"],
@@ -57,7 +57,7 @@ class Command(BaseCommand):
         "delete_user": {"mode": "DELETE", "path": "_security/user/%(app_name)s"},
 
 
-        "get_api_keys": {"mode": "GET", "path": "_security/api_key?name=%(key_name)s"},
+        "get_api_keys": {"mode": "GET", "path": "_security/api_key?name=%(key_name)s&owner=true"},
         "delete_api_key": {"mode": "DELETE", "path": "_security/api_key", "payload": """ { "name": "%(app_name)s-key", "owner": "true" }"""},
         "create_api_key": {"mode": "POST", "path": "_security/api_key", "payload": """{ "name": "%(app_name)s-key",
           "role_descriptors": {
@@ -186,7 +186,7 @@ class Command(BaseCommand):
 
         parser.add_argument(
             "-ap",
-            "--app_user_password",
+            "--app_password",
             action="store",
             dest="app_user_password",
             default="",
@@ -291,7 +291,7 @@ class Command(BaseCommand):
         if options["elasticsearch_username"]:
             self.es_connection_parameters["username"] = options["elasticsearch_username"]
         elif settings.setting_exists("ES_ADMIN_USER"):
-            print("Setting admin user to: %s" % settings.ES_ADMIN_USER)
+            # print("Setting admin user to: %s" % settings.ES_ADMIN_USER)
             self.es_connection_parameters["username"] = settings.ES_ADMIN_USER
         else:
             print("ES Admin Username must be set in settings file or on the command line.")
@@ -300,13 +300,13 @@ class Command(BaseCommand):
         if options["elasticsearch_password"]:
             self.es_connection_parameters["password"] = options["elasticsearch_password"]
         elif settings.setting_exists("ES_ADMIN_PASSWORD"):
-            print("Setting admin password to: %s" % settings.ES_ADMIN_PASSWORD)
+            # print("Setting admin password to: %s" % settings.ES_ADMIN_PASSWORD)
             self.es_connection_parameters["password"] = settings.ES_ADMIN_PASSWORD
         else:
             print("ES Admin password must be set in settings file or on the command line.")
             exit(1)
 
-        print("Connection settings: %s" % self.es_connection_parameters)
+        # print("Connection settings: %s" % self.es_connection_parameters)
 
 
     def handle(self,  *args, **options):
