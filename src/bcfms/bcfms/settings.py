@@ -314,8 +314,8 @@ except ImportError as e:
 # returns an output that can be read by NODEJS
 if __name__ == "__main__":
     transmit_webpack_django_config(
-        root_dir=ROOT_DIR,
-        app_root=APP_ROOT,
+        root_dir=os.path.realpath(ROOT_DIR),
+        app_root=os.path.realpath(APP_ROOT),
         arches_applications=ARCHES_APPLICATIONS,
         public_server_address=PUBLIC_SERVER_ADDRESS,
         static_url=STATIC_URL,
