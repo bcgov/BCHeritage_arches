@@ -51,7 +51,7 @@ DEBUG = True
 ROOT_URLCONF = 'bcrhp.urls'
 
 # a prefix to append to all elasticsearch indexes, note: must be lower case
-ELASTICSEARCH_PREFIX = 'bcrhp'
+ELASTICSEARCH_PREFIX = 'bcrhp{{ arches_app_suffix }}'
 
 ELASTICSEARCH_CUSTOM_INDEXES = []
 # [{
