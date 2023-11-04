@@ -51,7 +51,7 @@ DEBUG = True
 ROOT_URLCONF = 'bcfms.urls'
 
 # a prefix to append to all elasticsearch indexes, note: must be lower case
-ELASTICSEARCH_PREFIX = 'bcfms'
+ELASTICSEARCH_PREFIX = 'bcfms{{ arches_app_suffix }}'
 
 ELASTICSEARCH_CUSTOM_INDEXES = []
 # [{
