@@ -54,7 +54,7 @@ define(['knockout', 'underscore', 'arches', 'viewmodels/widget', 'templates/view
 
             this.startYearQualifier = ko.computed(function()
             {
-                return self.getWidgetWithLabel(self.card(), "start_year_qualifier");
+                return self.getWidgetWithLabel(self.card(), "dates_approximate");
             });
 
         },
