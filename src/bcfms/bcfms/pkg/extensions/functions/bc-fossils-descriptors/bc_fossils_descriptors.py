@@ -168,7 +168,7 @@ class BCFossilsDescriptors(AbstractPrimaryDescriptorsFunction):
 
         start_date_node = models.Node.objects.filter(graph=resource.graph_id) .filter(name="Collection Start Year") .first()
         end_date_node = models.Node.objects.filter(graph=resource.graph_id) .filter(name="Collection End Year") .first()
-        geographical_node = models.Node.objects.filter(graph=resource.graph_id) .filter(name="General Location") .first()
+        geographical_node = models.Node.objects.filter(graph=resource.graph_id) .filter(name="Location Descriptor") .first()
 
         if start_date_node:
             value = self._get_value_from_node(
