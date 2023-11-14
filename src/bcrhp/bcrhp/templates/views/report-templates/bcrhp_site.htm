@@ -344,7 +344,7 @@
 
                     <div class="bcrhp-grid-item bcrhp-full-width-grid-item bc-top-offset">
                         <!-- ko let: { card: getCardWithName('Statement of Significance') } -->
-                        <!-- ko let: { widget: getWidgetWithLabel(card, 'Significance Description') } -->
+                        <!-- ko let: { widget: getWidgetWithLabel(card, 'Description') } -->
                         <!-- ko let: { sigTypeWidget: getWidgetWithLabel(card, 'Significance Type') } -->
                         <!-- ko foreach: { data: card.tiles, as: 'tile' } -->
                         <dl class="dl-vertical dl-vertical-bc" data-bind="css: {'provisional': ko.unwrap(tile.provisionaledits) !== null && tile.userisreviewer === false}">
