@@ -32,6 +32,12 @@ class ScientificTermsFormatter:
         return "%s - %s" % (min_time_str if min_time_str else " ", max_time_str if max_time_str else "")
 
     @staticmethod
+    def format_uncertain(value, is_uncertain):
+        if not value:
+            return None
+        return ScientificTermsFormatter._format_uncertain(value, is_uncertain)
+
+    @staticmethod
     def _format_uncertain(value, is_uncertain):
         if value:
             return "%s ?"%value if is_uncertain else value
