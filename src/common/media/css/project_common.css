@@ -296,3 +296,10 @@ img.bc-details-image
         break-inside: avoid-column;
     }
 }
+
+@media only print {
+    section.search-results-panel {
+        display: none;
+    }
+
+}
