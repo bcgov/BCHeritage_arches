@@ -29,7 +29,7 @@ class ScientificTermsFormatter:
         max_time_str = ScientificTermsFormatter._format_uncertain(max_time, max_time_uncertain)
         if not min_time_str and not max_time_str:
             return None
-        return "%s - %s" % (min_time_str if min_time_str else " ", max_time_str if max_time_str else "")
+        return ("%s - %s" % (min_time_str if min_time_str else "", max_time_str if max_time_str else "")).rstrip()
 
     @staticmethod
     def format_uncertain(value, is_uncertain):
