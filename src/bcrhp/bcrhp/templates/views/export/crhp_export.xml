@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="utf-8"?>
+<HistoricPlaces xmlns="http://tempuri.org/CRHPSchema.xsd" xmlns:gml="http://www.opengis.net/gml" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+    <HistoricPlace>
+        <Jurisdiction>
+            <FPTID>{{ data.borden_number }}</FPTID>
+            <Name>BC</Name>
+        </Jurisdiction>
+        <CommonName Language="ENGLISH">{{ common_name }}</CommonName>
+        <PlaceDescription Language="ENGLISH">{{ data.location_description }}</PlaceDescription>
+        <HeritageValue Language="ENGLISH">{{ data.heritage_value }}</HeritageValue>
+        <CharacterDefiningElements Language="ENGLISH">{{ data.defining_elements }}</CharacterDefiningElements>
+        <DocumentLocation Language="ENGLISH">{{ data.document_location }}</DocumentLocation>
+        <Location>
+            <Address Language="ENGLISH">{{ data.street_address }}</Address>
+            <Community>{{ location.city }}</Community>
+            <District>{{ location.district }}??? Where does this come from?</District>
+            <ProvinceTerritory>BC</ProvinceTerritory>
+            <Country>CA</Country>
+            <NTSMapSheetNumber>{{ location.nts_mapsheet_number }}</NTSMapSheetNumber>
+            <AreaInSquareMetres>{{ data.area_sqm }}</AreaInSquareMetres>
+            <UTM>
+                <CoordinateDetermination>Digital Maps???? Can this be another coordinate ref?</CoordinateDetermination>
+                <Datum>NAD83</Datum>
+                <Zone>10</Zone>
+                <Northing>5445163</Northing>
+                <Easting>504637</Easting>
+            </UTM>
+            <RecognitionBoundary Language="ENGLISH">Refer to BC Spatial Data</RecognitionBoundary>
+        </Location>
+        <Classification>
+            <Ownership>{{ data.ownership }}</Ownership>
+            <ContributingResources>
+                <ContributingResource Type="{{ data.heritage_category }}">
+                    <ContributingCount>{{ data.contributing_resource_count }}</ContributingCount>
+                </ContributingResource>
+            </ContributingResources>
+        </Classification>
+        <FunctionalTypeGroup>
+            <Item>
+                <OriginalCurrent>{{ data.functional_state }}</OriginalCurrent>
+                <FunctionalCategory>!!!Need to get parent</FunctionalCategory>
+                <FunctionalType>{{ data.functional_category }}</FunctionalType>
+            </Item>
+            <Item>
+                <OriginalCurrent>!!! Need to iterate stateCurrent</OriginalCurrent>
+                <FunctionalCategory>Residence</FunctionalCategory>
+                <FunctionalType>Single Dwelling</FunctionalType>
+            </Item>
+        </FunctionalTypeGroup>
+        <Dates>
+            <Date Type="Construction">
+                <FromDate Format="YYYY/MM/DD">1928/01/01</FromDate>
+                <ToDate Format="YYYY/MM/DD">1929/01/01</ToDate>
+            </Date>
+        </Dates>
+        <Themes>
+            <Item>
+                <ThemeCategory>!!! Need to get parent</ThemeCategory>
+                <ThemeType>!!! Need to iterate{{ data.heritage_themes }}</ThemeType>
+            </Item>
+        </Themes>
+        <Recognition>
+            <Authority>Local Governments (BC)</Authority>
+            <Type>{{ data.recognition_type }}</Type>
+            <Date Format="YYYY/MM/DD">{{ data.designation_or_protection_start_date | date:'Y/m/d'}}</Date>
+        </Recognition>
+        <Images>
+            {% for site_image in data.site_images %}
+            <Image Type="{{ site_image.image_content_type }} !!!Need to translate values">
+                <Copyright>{{ site_image.copyright }}</Copyright>
+                <Link>{{ site_image.site_images.0.url }}</Link>
+                <Caption Language="ENGLISH">{{ site_image.image_caption }}</Caption>
+                <ImageDesc Language="ENGLISH">{{ site_image.image_description }}!!! Need to deal with concat data</ImageDesc>
+            </Image>
+            {% endfor %}
+        </Images>
+        <Links>
+            <Link Type="LINK-Local !!! Need to iterate!">
+                <URL Language="ENGLISH">{{ data.external_url.url }}</URL>
+                <LinkDesc Language="ENGLISH">{{ data.external_url.url_label }}</LinkDesc>
+            </Link>
+        </Links>
+        <Management>
+            <OwnerNotificationSent>N</OwnerNotificationSent>
+            <OwnersResponse>NA</OwnersResponse>
+            <FPTR>
+                <FirstName>Emerald</FirstName>
+                <LastName>Johnstone-Bedell</LastName>
+                <EmailAddress>N/A</EmailAddress>
+            </FPTR>
+        </Management>
+    </HistoricPlace>
+</HistoricPlaces>

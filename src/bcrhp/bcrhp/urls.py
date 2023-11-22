@@ -4,6 +4,7 @@ from django.conf.urls.static import static
 from django.conf.urls.i18n import i18n_patterns
 from django.urls.resolvers import RegexPattern
 from bcrhp.views.api import BordenNumber
+from bcrhp.views.crhp import CRHPXmlExport
 from .views.map import BCTileserverProxyView
 
 uuid_regex = settings.UUID_REGEX
@@ -34,6 +35,11 @@ urlpatterns = [
                   re_path(
                       r"^%sborden_number/(?P<resourceinstanceid>%s)$" % (settings.BCGOV_PROXY_PREFIX, uuid_regex),
                       BordenNumber.as_view(),
+                      name="borden_number",
+                      ),
+                  re_path(
+                      r"^%scrhp_export/(?P<resourceinstanceid>%s)$" % (settings.BCGOV_PROXY_PREFIX, uuid_regex),
+                      CRHPXmlExport.as_view(),
                       name="borden_number",
                       ),
                   bc_url_resolver,
