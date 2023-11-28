@@ -1,12 +1,9 @@
-import django.contrib.postgres.fields.jsonb
-from django.db import migrations, models
+select __arches_create_resource_model_views(graphid)
+from graphs
+where isresource = true
+  and publicationid is not null
+  and name->>'en' != 'Arches System Settings';
 
-
-class Migration(migrations.Migration):
-
-    dependencies = [  ]
-
-    update_staging_function = """
 create view bcrhp_crhp_data_vw as
 select i.resourceinstanceid,
        i.descriptors site_descriptors,
@@ -94,16 +91,3 @@ from heritage_site.instances i
     from heritage_site.site_images where submit_to_crhp group by resourceinstanceid) si on i.resourceinstanceid = si.resourceinstanceid
 
          left join heritage_site.external_url eu on i.resourceinstanceid = eu.resourceinstanceid;
-    """
-
-    revert_staging_function = """
-        DROP VIEW IF EXISTS bcrhp_crhp_data_vw;
-    """
-
-
-    operations = [
-        migrations.RunSQL(
-            update_staging_function,
-            revert_staging_function,
-        ),
-    ]

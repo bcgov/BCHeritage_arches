@@ -7,9 +7,7 @@ class Migration(migrations.Migration):
 
     initial = True
 
-    dependencies = [
-        ('bcrhp', '0001_add_crhp_export_view'),
-    ]
+    dependencies = [ ]
 
     operations = [
         migrations.CreateModel(
