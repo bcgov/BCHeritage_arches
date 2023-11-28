@@ -50,7 +50,7 @@ end $$
 
 
 create view bcrhp_crhp_data_vw as
-select i.resourceinstanceid,
+select distinct i.resourceinstanceid,
        i.descriptors site_descriptors,
        bn.borden_number->'en'->>'value' borden_number,
        sos.defining_elements->'en'->>'value' defining_elements,
