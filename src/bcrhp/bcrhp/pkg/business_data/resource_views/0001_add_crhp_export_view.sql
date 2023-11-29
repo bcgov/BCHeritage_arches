@@ -54,10 +54,11 @@ select distinct i.resourceinstanceid,
        i.descriptors site_descriptors,
        sn.site_names,
        bn.borden_number->'en'->>'value' borden_number,
-       sos.defining_elements->'en'->>'value' defining_elements,
-       sos.physical_description->'en'->>'value' physical_description,
-       sos.document_location->'en'->>'value' document_location,
-       sos.heritage_value->'en'->>'value' heritage_value,
+       sos.sos,
+--        sos.defining_elements->'en'->>'value' defining_elements,
+--        sos.physical_description->'en'->>'value' physical_description,
+--        sos.document_location->'en'->>'value' document_location,
+--        sos.heritage_value->'en'->>'value' heritage_value,
 --        addr.*,
        addr.street_address->'en'->>'value' street_address,
        addr.city->'en'->>'value' city,
@@ -69,12 +70,13 @@ select distinct i.resourceinstanceid,
        st_x(st_centroid(sb.site_boundary)) site_centroid_longitude,
        st_y(st_centroid(sb.site_boundary)) site_centroid_latitude,
        st_area(sb.site_boundary::geography) area_sqm,
+       hc.heritage_categories,
 --        hc.*,
 --        (select child_label from get_uuid_lookup_table('Ownership Type') where child_value_uuid = hc.ownership) ownership,
-       __arches_get_concept_label(hc.ownership) ownership,
---        (select child_label from get_uuid_lookup_table('Heritage Category') where child_value_uuid = hc.heritage_category) heritage_category,
-       __arches_get_concept_label(hc.heritage_category) heritage_category,
-       hc.contributing_resource_count,
+--        __arches_get_concept_label(hc.ownership) ownership,
+-- --        (select child_label from get_uuid_lookup_table('Heritage Category') where child_value_uuid = hc.heritage_category) heritage_category,
+--        __arches_get_concept_label(hc.heritage_category) heritage_category,
+--        hc.contributing_resource_count,
 --        hf.*,
        hf.heritage_functions,
 --        hf.functional_state,
@@ -105,10 +107,28 @@ select distinct i.resourceinstanceid,
 from heritage_site.instances i
          left join heritage_site.borden_number bn on bn.resourceinstanceid = i.resourceinstanceid
          left join (select resourceinstanceid, jsonb_agg( jsonb_build_object('name_type', __arches_get_concept_label(name_type), 'name', name->'en'->>'value')) site_names from heritage_site.site_names group by resourceinstanceid) sn on sn.resourceinstanceid = i.resourceinstanceid
-         left join heritage_site.bc_statement_of_significance sos on i.resourceinstanceid = sos.resourceinstanceid
+         left join ( select resourceinstanceid,
+                            jsonb_agg(
+                                jsonb_build_object(
+                                                'significance_type', __arches_get_concept_label(significance_type),
+                                                'defining_elements', defining_elements->'en'->>'value',
+                                                'physical_description', physical_description->'en'->>'value',
+                                                'document_location', document_location->'en'->>'value',
+                                                'heritage_value', heritage_value->'en'->>'value'
+                                    )
+                                ) sos
+                     from heritage_site.bc_statement_of_significance
+                     group by resourceinstanceid
+                     ) sos on i.resourceinstanceid = sos.resourceinstanceid
          left join heritage_site.bc_property_address addr on i.resourceinstanceid = addr.resourceinstanceid
          left join heritage_site.site_boundary sb on i.resourceinstanceid = sb.resourceinstanceid
-         left join heritage_site.heritage_class hc on i.resourceinstanceid = hc.resourceinstanceid
+         left join (select resourceinstanceid,
+                           jsonb_agg(jsonb_build_object('ownership', __arches_get_concept_label(ownership),
+                                                        'category', __arches_get_concept_label(heritage_category),
+                                                        'contributing_resource_count', contributing_resource_count)) heritage_categories
+                    from heritage_site.heritage_class
+                    group by resourceinstanceid) hc
+                   on i.resourceinstanceid = hc.resourceinstanceid
          left join (
             with c as (
                 select resourceinstanceid, parent_label, child_label, unnest(functional_state) functional_state
@@ -132,7 +152,7 @@ from heritage_site.instances i
     -- @todo - sort these out
          left join heritage_site.bc_right br on i.resourceinstanceid = br.resourceinstanceid
          left join (select --prote.*,
-                           auth.resourceinstanceid,
+                           prote.resourceinstanceid,
                            jsonb_agg(jsonb_build_object(
                                'authority', __arches_get_concept_label(auth.authority),
                                'legal_instrument', __arches_get_concept_label(auth.legal_instrument),
@@ -144,7 +164,7 @@ from heritage_site.instances i
                     from heritage_site.protection_event prote
                              left join legislative_act.authority auth on (legislative_act[0]->>'resourceId')::uuid = auth.resourceinstanceid
                              left join government.government_name govt on (responsible_government[0]->>'resourceId')::uuid = govt.resourceinstanceid
-                    group by auth.resourceinstanceid
+                    group by prote.resourceinstanceid
 ) pe on i.resourceinstanceid = pe.resourceinstanceid
          left join (select resourceinstanceid,
                            (select jsonb_agg(
@@ -158,4 +178,5 @@ from heritage_site.instances i
     from heritage_site.site_images where submit_to_crhp group by resourceinstanceid) si on i.resourceinstanceid = si.resourceinstanceid
 
          left join
-    (select resourceinstanceid, jsonb_agg( jsonb_concat(jsonb_build_object('url_type',__arches_get_concept_label(external_url_type)), external_url)) external_urls from heritage_site.external_url group by resourceinstanceid) eu on i.resourceinstanceid = eu.resourceinstanceid ;
+    (select resourceinstanceid, jsonb_agg( jsonb_concat(jsonb_build_object('url_type',__arches_get_concept_label(external_url_type)), external_url)) external_urls from heritage_site.external_url group by resourceinstanceid) eu on i.resourceinstanceid = eu.resourceinstanceid;
+-- where i.resourceinstanceid = '01b702dd-dd7f-4594-b9fb-43685d8e37d6';

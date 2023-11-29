@@ -7,8 +7,16 @@
         </Jurisdiction>
         <CommonName Language="ENGLISH">{{ data.common_names.0.name }}</CommonName>
         <PlaceDescription Language="ENGLISH">{{ data.location_description }}</PlaceDescription>
-        <HeritageValue Language="ENGLISH">{{ data.heritage_value }}</HeritageValue>
-        <CharacterDefiningElements Language="ENGLISH">{{ data.defining_elements }}</CharacterDefiningElements>
+        <HeritageValue Language="ENGLISH">{{ data.heritage_value }}
+        </HeritageValue>
+        <CharacterDefiningElements Language="ENGLISH">{{ data.defining_elements }}
+        </CharacterDefiningElements>
+        {% if data.common_names|length > 1 or data.other_names|length > 0 %}
+        <Names>
+            {% for name in data.common_names|add:data.other_names %}{% if not forloop.first %}<Name Language="ENGLISH" Type="{{ name.name_type }}">{{ name.name }}</Name>{% endif %}
+            {% endfor %}
+        </Names>
+        {% endif %}
         <DocumentLocation Language="ENGLISH">{{ data.document_location }}</DocumentLocation>
         <Location>
             <Address Language="ENGLISH">{{ data.street_address }}</Address>
@@ -27,11 +35,13 @@
             <RecognitionBoundary Language="ENGLISH">Refer to BC Spatial Data</RecognitionBoundary>
         </Location>
         <Classification>
-            <Ownership>{{ data.ownership }}</Ownership>
+            <Ownership>{{ heritage_categories.0.ownership }}</Ownership>
             <ContributingResources>
-                <ContributingResource Type="{{ data.heritage_category }}">
-                    <ContributingCount>{{ data.contributing_resource_count }}</ContributingCount>
+                {% for heritage_category in data.heritage_categories %}
+                <ContributingResource Type="{{ heritage_category.category }}">
+                    <ContributingCount>{{ heritage_category.contributing_resource_count }}</ContributingCount>
                 </ContributingResource>
+                {% endfor %}
             </ContributingResources>
         </Classification>
         <FunctionalTypeGroup>
@@ -58,9 +68,9 @@
             {% endfor %}
         </Themes>
         <Recognition>
-            <Authority>Local Governments (BC)</Authority>
-            <Type>{{ data.recognition_type }}</Type>
-            <Date Format="YYYY/MM/DD">{{ data.designation_or_protection_start_date | date:'Y/m/d'}}</Date>
+            <Authority>{{ data.protection_events.0.crhp_authority }}</Authority>
+            <Type>{{ data.protection_events.0.recognition_type }}</Type>
+            <Date Format="YYYY/MM/DD">{{ data.protection_events.0.designation_or_protection_start_date|date:"Y/m/d" }}</Date>
         </Recognition>
         <Images>
             {% for site_image in data.site_images %}
@@ -86,7 +96,7 @@
             <FPTR>
                 <FirstName>Emerald</FirstName>
                 <LastName>Johnstone-Bedell</LastName>
-                <EmailAddress>N/A</EmailAddress>
+                <EmailAddress>BChistoricplacesregister@gov.bc.ca</EmailAddress>
             </FPTR>
         </Management>
     </HistoricPlace>
