@@ -33,6 +33,12 @@ class CRHPXmlExport(APIBase):
         if obj:
             obj[key] = datetime.datetime.fromisoformat(obj[key])
 
+    def format_event_type(self, se):
+        if se["event_type"] == "Construction":
+            se["event_type"] = "Construction Date" + (" (circa)" if se["dates_approximate"] else "")
+        else:
+            se["event_type"] = "Significant Dates"
+
     def get_context_data(self, resourceinstanceid):
         context = {}
         try:
@@ -62,6 +68,14 @@ class CRHPXmlExport(APIBase):
 
             for item in context["data"].protection_events:
                 print("\tAuthority: %s:%s" % (item["authority"], item["designation_or_protection_start_date"]))
+
+            for se in context["data"].significant_events:
+                print("Significant event (before): %s" % se)
+                self.convert_string_to_date(se, "start_year")
+                self.convert_string_to_date(se, "end_year")
+                self.format_event_type(se)
+                print("Significant event: %s" % se)
+
             print("site_images type %s" % type(context["data"].site_images))
             print("heritage_themes type %s" % type(context["data"].heritage_themes))
         except Exception as e:

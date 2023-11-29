@@ -60,10 +60,7 @@ select distinct i.resourceinstanceid,
 --        sos.document_location->'en'->>'value' document_location,
 --        sos.heritage_value->'en'->>'value' heritage_value,
 --        addr.*,
-       addr.street_address->'en'->>'value' street_address,
-       addr.city->'en'->>'value' city,
-       addr.locality->'en'->>'value' locality,
-       addr.location_description->'en'->>'value' location_description,
+       addr.addresses,
 --        sb.*,
        st_srid(sb.site_boundary) site_boundary,
        st_astext(sb.site_boundary) boundary_geojson,
@@ -79,6 +76,7 @@ select distinct i.resourceinstanceid,
 --        hc.contributing_resource_count,
 --        hf.*,
        hf.heritage_functions,
+       se.significant_events,
 --        hf.functional_state,
 --        (select jsonb_agg(child_label) from get_uuid_lookup_table('BC Functional Status') where child_value_uuid = any(hf.functional_state)) functional_state,
 --        ht.*,
@@ -120,7 +118,15 @@ from heritage_site.instances i
                      from heritage_site.bc_statement_of_significance
                      group by resourceinstanceid
                      ) sos on i.resourceinstanceid = sos.resourceinstanceid
-         left join heritage_site.bc_property_address addr on i.resourceinstanceid = addr.resourceinstanceid
+         left join (select resourceinstanceid,
+                           jsonb_agg(jsonb_build_object(
+                                   'street_address', street_address->'en'->>'value',
+                                   'city', city->'en'->>'value',
+                                   'locality', locality->'en'->>'value',
+                                   'location_description', location_description->'en'->>'value'
+                               )) addresses
+                           from heritage_site.bc_property_address
+                           group by resourceinstanceid) addr on i.resourceinstanceid = addr.resourceinstanceid
          left join heritage_site.site_boundary sb on i.resourceinstanceid = sb.resourceinstanceid
          left join (select resourceinstanceid,
                            jsonb_agg(jsonb_build_object('ownership', __arches_get_concept_label(ownership),
@@ -175,8 +181,15 @@ from heritage_site.instances i
                                                'image_content_type', __arches_get_concept_label(image_content_type),
                                                'image_description', regexp_replace( image_description->'en'->>'value','<br>.*',''))
                                        )) site_images
-    from heritage_site.site_images where submit_to_crhp group by resourceinstanceid) si on i.resourceinstanceid = si.resourceinstanceid
+                   from heritage_site.site_images where submit_to_crhp group by resourceinstanceid) si on i.resourceinstanceid = si.resourceinstanceid
 
-         left join
-    (select resourceinstanceid, jsonb_agg( jsonb_concat(jsonb_build_object('url_type',__arches_get_concept_label(external_url_type)), external_url)) external_urls from heritage_site.external_url group by resourceinstanceid) eu on i.resourceinstanceid = eu.resourceinstanceid;
--- where i.resourceinstanceid = '01b702dd-dd7f-4594-b9fb-43685d8e37d6';
+        left join (select resourceinstanceid, jsonb_agg( jsonb_concat(jsonb_build_object('url_type',__arches_get_concept_label(external_url_type)), external_url)) external_urls from heritage_site.external_url group by resourceinstanceid) eu on i.resourceinstanceid = eu.resourceinstanceid
+        left join (select resourceinstanceid,
+                   jsonb_agg(jsonb_build_object(
+                   'event_type', __arches_get_concept_label(significant_events),
+                       'start_year', start_year,
+                       'end_year', end_year,
+                       'dates_approximate', dates_approximate
+                   )) significant_events
+                   from heritage_site.significant_events group by resourceinstanceid) se on se.resourceinstanceid = i.resourceinstanceid;
+-- where i.resourceinstanceid = 'ab27f75c-4b35-4c60-a4e9-5f4c944493d0';
