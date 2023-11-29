@@ -5,26 +5,25 @@
             <FPTID>{{ data.borden_number }}</FPTID>
             <Name>BC</Name>
         </Jurisdiction>
-        <CommonName Language="ENGLISH">{{ common_name }}</CommonName>
+        <CommonName Language="ENGLISH">{{ data.common_names.0.name }}</CommonName>
         <PlaceDescription Language="ENGLISH">{{ data.location_description }}</PlaceDescription>
         <HeritageValue Language="ENGLISH">{{ data.heritage_value }}</HeritageValue>
         <CharacterDefiningElements Language="ENGLISH">{{ data.defining_elements }}</CharacterDefiningElements>
         <DocumentLocation Language="ENGLISH">{{ data.document_location }}</DocumentLocation>
         <Location>
             <Address Language="ENGLISH">{{ data.street_address }}</Address>
-            <Community>{{ location.city }}</Community>
+            <Community>{{ data.city }}</Community>
             <District>{{ location.district }}??? Where does this come from?</District>
             <ProvinceTerritory>BC</ProvinceTerritory>
             <Country>CA</Country>
             <NTSMapSheetNumber>{{ location.nts_mapsheet_number }}</NTSMapSheetNumber>
-            <AreaInSquareMetres>{{ data.area_sqm }}</AreaInSquareMetres>
-            <UTM>
+            <AreaInSquareMetres>{{ data.area_sqm | floatformat:3}}</AreaInSquareMetres>
+            <LatLong>
                 <CoordinateDetermination>Digital Maps???? Can this be another coordinate ref?</CoordinateDetermination>
                 <Datum>NAD83</Datum>
-                <Zone>10</Zone>
-                <Northing>5445163</Northing>
-                <Easting>504637</Easting>
-            </UTM>
+                <Latitude>{{ data.site_centroid_latitude | floatformat:7 }}</Latitude>
+                <Longitude>{{ data.site_centroid_longitude | floatformat:7 }}</Longitude>
+            </LatLong>
             <RecognitionBoundary Language="ENGLISH">Refer to BC Spatial Data</RecognitionBoundary>
         </Location>
         <Classification>
@@ -36,16 +35,13 @@
             </ContributingResources>
         </Classification>
         <FunctionalTypeGroup>
+            {% for heritage_function in data.heritage_functions %}
             <Item>
-                <OriginalCurrent>{{ data.functional_state }}</OriginalCurrent>
-                <FunctionalCategory>!!!Need to get parent</FunctionalCategory>
-                <FunctionalType>{{ data.functional_category }}</FunctionalType>
+                <OriginalCurrent>{{ heritage_function.function_state }}</OriginalCurrent>
+                <FunctionalCategory>{{ heritage_function.function_category }}</FunctionalCategory>
+                <FunctionalType>{{ heritage_function.function_type }}</FunctionalType>
             </Item>
-            <Item>
-                <OriginalCurrent>!!! Need to iterate stateCurrent</OriginalCurrent>
-                <FunctionalCategory>Residence</FunctionalCategory>
-                <FunctionalType>Single Dwelling</FunctionalType>
-            </Item>
+            {% endfor %}
         </FunctionalTypeGroup>
         <Dates>
             <Date Type="Construction">
@@ -54,10 +50,12 @@
             </Date>
         </Dates>
         <Themes>
+            {% for theme in data.heritage_themes %}
             <Item>
-                <ThemeCategory>!!! Need to get parent</ThemeCategory>
-                <ThemeType>!!! Need to iterate{{ data.heritage_themes }}</ThemeType>
+                <ThemeCategory>{{ theme.category }}</ThemeCategory>
+                <ThemeType>{{ theme.type }}</ThemeType>
             </Item>
+            {% endfor %}
         </Themes>
         <Recognition>
             <Authority>Local Governments (BC)</Authority>
@@ -66,19 +64,21 @@
         </Recognition>
         <Images>
             {% for site_image in data.site_images %}
-            <Image Type="{{ site_image.image_content_type }} !!!Need to translate values">
+            <Image Type="{{ site_image.image_content_type }}">
                 <Copyright>{{ site_image.copyright }}</Copyright>
                 <Link>{{ site_image.site_images.0.url }}</Link>
                 <Caption Language="ENGLISH">{{ site_image.image_caption }}</Caption>
-                <ImageDesc Language="ENGLISH">{{ site_image.image_description }}!!! Need to deal with concat data</ImageDesc>
+                <ImageDesc Language="ENGLISH">{{ site_image.image_description }}!!! Concatenating everything after the br</ImageDesc>
             </Image>
             {% endfor %}
         </Images>
         <Links>
-            <Link Type="LINK-Local !!! Need to iterate!">
-                <URL Language="ENGLISH">{{ data.external_url.url }}</URL>
-                <LinkDesc Language="ENGLISH">{{ data.external_url.url_label }}</LinkDesc>
+            {% for external_url in data.external_urls %}
+            <Link Type="{{external_url.url_type}} !!!Needs translation?">
+                <URL Language="ENGLISH">{{ external_url.url }}</URL>
+                <LinkDesc Language="ENGLISH">{{ external_url.url_label }}</LinkDesc>
             </Link>
+            {% endfor %}
         </Links>
         <Management>
             <OwnerNotificationSent>N</OwnerNotificationSent>
