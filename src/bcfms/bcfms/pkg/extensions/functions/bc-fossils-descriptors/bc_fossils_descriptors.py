@@ -73,7 +73,7 @@ class BCFossilsDescriptors(AbstractPrimaryDescriptorsFunction):
             {"node": BCFossilsDescriptors._formation_node, "label": "Formation"},
             {"node": BCFossilsDescriptors._geologic_minimum_time_node, "label": "Period"}]
 
-    def get_primary_descriptor_from_nodes(self, resource, config, context=None):
+    def get_primary_descriptor_from_nodes(self, resource, config, context=None, descriptor=None):
         return_value = None
         display_values = {}
 

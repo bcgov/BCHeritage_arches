@@ -71,7 +71,7 @@ class BCFossilPublicationDescriptors(AbstractPrimaryDescriptorsFunction):
             graph__name__contains=BCFossilPublicationDescriptors._graph_name
         ).first()
 
-    def get_primary_descriptor_from_nodes(self, resource, config, context=None):
+    def get_primary_descriptor_from_nodes(self, resource, config, context=None, descriptor=None):
         return_value = None
         display_values = {}
         # print("get_primary_descriptor_from_nodes")

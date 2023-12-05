@@ -75,7 +75,7 @@ class BCRHPSiteDescriptors(AbstractPrimaryDescriptorsFunction):
 
         BCRHPSiteDescriptors._initialized = True
 
-    def get_primary_descriptor_from_nodes(self, resource, config, context=None):
+    def get_primary_descriptor_from_nodes(self, resource, config, context=None, descriptor=None):
         if not BCRHPSiteDescriptors._initialized:
             self.initialize()
 

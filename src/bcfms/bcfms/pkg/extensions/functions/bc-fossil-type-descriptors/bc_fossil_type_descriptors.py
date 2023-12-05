@@ -71,7 +71,7 @@ class BCFossilTypeDescriptors(AbstractPrimaryDescriptorsFunction):
             models.GraphModel.objects.filter(name=BCFossilTypeDescriptors._type_graph_name).filter(isresource=True).values(
                 "graphid").first()["graphid"]
 
-    def get_primary_descriptor_from_nodes(self, resource, config, context=None):
+    def get_primary_descriptor_from_nodes(self, resource, config, context=None, descriptor=None):
         if BCFossilTypeDescriptors._name_node is None:
             BCFossilTypeDescriptors.initialize_static_data()
 

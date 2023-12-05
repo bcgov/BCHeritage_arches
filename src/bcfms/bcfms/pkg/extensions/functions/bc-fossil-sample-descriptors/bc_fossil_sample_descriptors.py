@@ -69,7 +69,7 @@ class BCFossilSampleDescriptors(AbstractPrimaryDescriptorsFunction):
                 graph__slug=BCFossilSampleDescriptors._sample_graph_slug
             ).first()
 
-    def get_primary_descriptor_from_nodes(self, resource, config, context=None):
+    def get_primary_descriptor_from_nodes(self, resource, config, context=None, descriptor=None):
         return_value = None
         display_values = []
 
