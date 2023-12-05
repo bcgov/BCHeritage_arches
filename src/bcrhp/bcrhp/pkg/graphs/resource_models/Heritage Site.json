@@ -5,33 +5,6 @@
             "cards": [
                 {
                     "active": true,
-                    "cardid": "058bf374-6f73-4163-a919-387b5a5a3d0c",
-                    "component_id": "f05e4d3a-53c1-11e8-b0ea-784f435179ea",
-                    "config": null,
-                    "constraints": [],
-                    "cssclass": null,
-                    "description": null,
-                    "graph_id": "cef9c510-e3e6-4057-ac08-89ad926180b4",
-                    "helpenabled": false,
-                    "helptext": {
-                        "en": ""
-                    },
-                    "helptitle": {
-                        "en": ""
-                    },
-                    "instructions": {
-                        "en": ""
-                    },
-                    "is_editable": false,
-                    "name": {
-                        "en": "CRHP Admin"
-                    },
-                    "nodegroup_id": "611029e8-8f11-11ee-976b-080027b7463b",
-                    "sortorder": null,
-                    "visible": true
-                },
-                {
-                    "active": true,
                     "cardid": "068500bc-0d07-11ed-8804-5254008afee6",
                     "component_id": "f05e4d3a-53c1-11e8-b0ea-784f435179ea",
                     "config": null,
@@ -199,7 +172,7 @@
                     "instructions": {
                         "en": "Define the spatial location."
                     },
-                    "is_editable": false,
+                    "is_editable": true,
                     "name": {
                         "en": "Spatial Location"
                     },
@@ -890,6 +863,28 @@
                 {
                     "card_id": "068500bc-0d07-11ed-8804-5254008afee6",
                     "config": {
+                        "defaultValue": "",
+                        "i18n_properties": [
+                            "placeholder"
+                        ],
+                        "label": "CRHP Elegibility",
+                        "options": [],
+                        "placeholder": {
+                            "en": "Select an option"
+                        }
+                    },
+                    "id": "0d31f4fb-dc7f-4f3b-ad0b-51f7b3e5180d",
+                    "label": {
+                        "en": "CRHP Elegibility"
+                    },
+                    "node_id": "af750d9c-8f11-11ee-976b-080027b7463b",
+                    "sortorder": 0,
+                    "visible": true,
+                    "widget_id": "10000000-0000-0000-0000-000000000002"
+                },
+                {
+                    "card_id": "068500bc-0d07-11ed-8804-5254008afee6",
+                    "config": {
                         "defaultValue": {
                             "en": {
                                 "direction": "ltr",
@@ -912,7 +907,7 @@
                         "en": "Restrictions"
                     },
                     "node_id": "77b951e8-8f10-11ee-976b-080027b7463b",
-                    "sortorder": 1,
+                    "sortorder": 4,
                     "visible": true,
                     "widget_id": "10000000-0000-0000-0000-000000000001"
                 },
@@ -944,6 +939,42 @@
                     "sortorder": 4,
                     "visible": true,
                     "widget_id": "10000000-0000-0000-0000-000000000001"
+                },
+                {
+                    "card_id": "068500bc-0d07-11ed-8804-5254008afee6",
+                    "config": {
+                        "defaultValue": "",
+                        "format": "",
+                        "i18n_properties": [
+                            "placeholder",
+                            "prefix",
+                            "suffix"
+                        ],
+                        "label": "Federal ID Number",
+                        "max": "",
+                        "min": "",
+                        "placeholder": {
+                            "en": "Enter number"
+                        },
+                        "precision": "",
+                        "prefix": {
+                            "en": ""
+                        },
+                        "step": "",
+                        "suffix": {
+                            "en": ""
+                        },
+                        "uneditable": false,
+                        "width": "100%"
+                    },
+                    "id": "147dc1e3-9575-4b13-b4f9-c39b3112d9ec",
+                    "label": {
+                        "en": "Federal ID Number"
+                    },
+                    "node_id": "1eb0d10c-8f15-11ee-b395-080027b7463b",
+                    "sortorder": 2,
+                    "visible": true,
+                    "widget_id": "10000000-0000-0000-0000-000000000008"
                 },
                 {
                     "card_id": "1b623006-0d0f-11ed-98c2-5254008afee6",
@@ -1276,26 +1307,6 @@
                     "widget_id": "10000000-0000-0000-0000-000000000101"
                 },
                 {
-                    "card_id": "058bf374-6f73-4163-a919-387b5a5a3d0c",
-                    "config": {
-                        "dateFormat": "YYYY-MM-DD",
-                        "defaultValue": "",
-                        "label": "Date Submitted to CRHP",
-                        "maxDate": false,
-                        "minDate": false,
-                        "placeholder": "Enter date",
-                        "viewMode": "days"
-                    },
-                    "id": "3129f79e-5093-41a2-a29c-803cc4917d00",
-                    "label": {
-                        "en": "Date Submitted to CRHP"
-                    },
-                    "node_id": "bb294f88-8f14-11ee-aaf0-080027b7463b",
-                    "sortorder": 1,
-                    "visible": true,
-                    "widget_id": "10000000-0000-0000-0000-000000000004"
-                },
-                {
                     "card_id": "068500bc-0d07-11ed-8804-5254008afee6",
                     "config": {
                         "defaultValue": null,
@@ -1306,7 +1317,7 @@
                         "en": "Restricted"
                     },
                     "node_id": "dc974e68-8f0f-11ee-85a0-080027b7463b",
-                    "sortorder": 0,
+                    "sortorder": 3,
                     "visible": true,
                     "widget_id": "0346bc9c-d235-4313-adc8-d0e210b2ef25"
                 },
@@ -2095,28 +2106,6 @@
                     "widget_id": "10000000-0000-0000-0000-000000000001"
                 },
                 {
-                    "card_id": "058bf374-6f73-4163-a919-387b5a5a3d0c",
-                    "config": {
-                        "defaultValue": "",
-                        "i18n_properties": [
-                            "placeholder"
-                        ],
-                        "label": "CRHP Elegibility",
-                        "options": [],
-                        "placeholder": {
-                            "en": "Select an option"
-                        }
-                    },
-                    "id": "844ccce9-90be-4ceb-9844-980424be74bf",
-                    "label": {
-                        "en": "CRHP Elegibility"
-                    },
-                    "node_id": "af750d9c-8f11-11ee-976b-080027b7463b",
-                    "sortorder": 0,
-                    "visible": true,
-                    "widget_id": "10000000-0000-0000-0000-000000000002"
-                },
-                {
                     "card_id": "5c75b466-cbdc-4498-bcb6-d0e30243b849",
                     "config": {
                         "dateFormat": "YYYY-MM-DD",
@@ -2208,42 +2197,6 @@
                     "sortorder": 6,
                     "visible": true,
                     "widget_id": "10000000-0000-0000-0000-000000000002"
-                },
-                {
-                    "card_id": "058bf374-6f73-4163-a919-387b5a5a3d0c",
-                    "config": {
-                        "defaultValue": "",
-                        "format": "",
-                        "i18n_properties": [
-                            "placeholder",
-                            "prefix",
-                            "suffix"
-                        ],
-                        "label": "Federal ID Number",
-                        "max": "99999",
-                        "min": "0",
-                        "placeholder": {
-                            "en": "Enter number"
-                        },
-                        "precision": "0",
-                        "prefix": {
-                            "en": ""
-                        },
-                        "step": "",
-                        "suffix": {
-                            "en": ""
-                        },
-                        "uneditable": false,
-                        "width": "100%%"
-                    },
-                    "id": "a13bd82d-8941-4db5-85e4-a5b7e2dacf10",
-                    "label": {
-                        "en": "Federal ID Number"
-                    },
-                    "node_id": "1eb0d10c-8f15-11ee-b395-080027b7463b",
-                    "sortorder": 2,
-                    "visible": true,
-                    "widget_id": "10000000-0000-0000-0000-000000000008"
                 },
                 {
                     "card_id": "e6286387-d046-4d80-aa72-0f6cf7ad5413",
@@ -2554,6 +2507,26 @@
                     "sortorder": 0,
                     "visible": true,
                     "widget_id": "10000000-0000-0000-0000-000000000001"
+                },
+                {
+                    "card_id": "068500bc-0d07-11ed-8804-5254008afee6",
+                    "config": {
+                        "dateFormat": "YYYY-MM-DD",
+                        "defaultValue": "",
+                        "label": "Date Submitted to CRHP",
+                        "maxDate": false,
+                        "minDate": false,
+                        "placeholder": "Enter date",
+                        "viewMode": "days"
+                    },
+                    "id": "f05e8c04-91b9-4fa9-8eca-406ce6c7c2ec",
+                    "label": {
+                        "en": "Date Submitted to CRHP"
+                    },
+                    "node_id": "bb294f88-8f14-11ee-aaf0-080027b7463b",
+                    "sortorder": 1,
+                    "visible": true,
+                    "widget_id": "10000000-0000-0000-0000-000000000004"
                 },
                 {
                     "card_id": "6cc30640-0d06-11ed-8804-5254008afee6",
@@ -3498,18 +3471,6 @@
             "functions_x_graphs": [
                 {
                     "config": {
-                        "node_id": "703bbe62-3d24-11ee-93bd-080027b7463b",
-                        "triggering_nodegroups": [
-                            "0a883b80-2fb6-11ed-be5f-5254008afee6"
-                        ],
-                        "unique_value": true
-                    },
-                    "function_id": "60000000-0000-0000-0000-000000002001",
-                    "graph_id": "cef9c510-e3e6-4057-ac08-89ad926180b4",
-                    "id": "867e3f73-4526-4c03-ae29-26ec72b7ee68"
-                },
-                {
-                    "config": {
                         "class_name": "BCRHPSiteDescriptors",
                         "descriptor_types": {
                             "description": {
@@ -3550,7 +3511,19 @@
                     },
                     "function_id": "60000000-0000-0000-0000-000000001002",
                     "graph_id": "cef9c510-e3e6-4057-ac08-89ad926180b4",
-                    "id": "ee9c3476-595f-40a1-b55a-84b97d990445"
+                    "id": "0d890137-43da-4675-8639-b39209b1d93d"
+                },
+                {
+                    "config": {
+                        "node_id": "703bbe62-3d24-11ee-93bd-080027b7463b",
+                        "triggering_nodegroups": [
+                            "0a883b80-2fb6-11ed-be5f-5254008afee6"
+                        ],
+                        "unique_value": true
+                    },
+                    "function_id": "60000000-0000-0000-0000-000000002001",
+                    "graph_id": "cef9c510-e3e6-4057-ac08-89ad926180b4",
+                    "id": "e07d7b81-417d-4855-aa5f-cd20e9227b29"
                 }
             ],
             "graphid": "cef9c510-e3e6-4057-ac08-89ad926180b4",
@@ -3627,12 +3600,6 @@
                     "legacygroupid": null,
                     "nodegroupid": "3ee73f28-ca40-11ed-af48-5254004d77d3",
                     "parentnodegroup_id": null
-                },
-                {
-                    "cardinality": "1",
-                    "legacygroupid": null,
-                    "nodegroupid": "611029e8-8f11-11ee-976b-080027b7463b",
-                    "parentnodegroup_id": "0684fec8-0d07-11ed-8804-5254008afee6"
                 },
                 {
                     "cardinality": "n",
@@ -4080,7 +4047,7 @@
                     "issearchable": true,
                     "istopnode": false,
                     "name": "New Node",
-                    "nodegroup_id": "611029e8-8f11-11ee-976b-080027b7463b",
+                    "nodegroup_id": "0684fec8-0d07-11ed-8804-5254008afee6",
                     "nodeid": "1539333a-8f15-11ee-b395-080027b7463b",
                     "ontologyclass": "http://www.cidoc-crm.org/cidoc-crm/E7_Activity",
                     "parentproperty": "http://www.cidoc-crm.org/cidoc-crm/P15i_influenced",
@@ -4200,8 +4167,8 @@
                     "alias": "site_boundary",
                     "config": {
                         "addToMap": true,
-                        "advancedStyle": "",
-                        "advancedStyling": false,
+                        "advancedStyle": "[\n  {\n    \"id\": \"resources-fill-1b6235b0-0d0f-11ed-98c2-5254008afee6\",\n    \"type\": \"fill\",\n    \"source\": \"resources-1b6235b0-0d0f-11ed-98c2-5254008afee6\",\n    \"source-layer\": \"1b6235b0-0d0f-11ed-98c2-5254008afee6\",\n    \"layout\": {\n      \"visibility\": \"visible\"\n    },\n    \"filter\": [ \"all\", [ \"==\", \"$type\", \"Polygon\" ], [ \"==\", \"total\", 1 ] ],\n    \"paint\": {\n      \"fill-color\": [ \"case\",\n      [\"in\", \"Federal\", [\"get\",\"authorities\"]], \"rgba(244,109,67,1)\",\n      [\"in\", \"Provincial\", [\"get\",\"authorities\"]], \"rgba(165,0,138,1)\",\n      [\"in\", \"Municipal\", [\"get\",\"authorities\"]], \"rgba(254,224,144,1)\",\n      \"rgba(0,0,0,.3)\" ] }\n  },\n  {\n    \"id\": \"resources-fill-1b6235b0-0d0f-11ed-98c2-5254008afee6-click\",\n    \"type\": \"fill\",\n    \"source\": \"resources-1b6235b0-0d0f-11ed-98c2-5254008afee6\",\n    \"source-layer\": \"1b6235b0-0d0f-11ed-98c2-5254008afee6\",\n    \"layout\": {\n      \"visibility\": \"visible\"\n    },\n    \"filter\": [ \"all\", [ \"==\", \"$type\", \"Polygon\" ], [ \"==\", \"total\", 1 ], [ \"==\", \"resourceinstanceid\", \"\" ] ],\n    \"paint\": {\n      \"fill-color\": [ \"case\",\n        [\"in\", \"Federal\", [\"get\",\"authorities\"]], \"rgba(244,109,67,1)\",\n        [\"in\", \"Provincial\", [\"get\",\"authorities\"]], \"rgba(165,0,138,1)\",\n        [\"in\", \"Municipal\", [\"get\",\"authorities\"]], \"rgba(254,224,144,1)\",\n        \"rgba(0,0,0,.3)\" ]\n    }\n  },\n  {\n    \"id\": \"resources-fill-1b6235b0-0d0f-11ed-98c2-5254008afee6-hover\",\n    \"type\": \"fill\",\n    \"source\": \"resources-1b6235b0-0d0f-11ed-98c2-5254008afee6\",\n    \"source-layer\": \"1b6235b0-0d0f-11ed-98c2-5254008afee6\",\n    \"layout\": {\n      \"visibility\": \"visible\"\n    },\n    \"filter\": [ \"all\", [ \"==\", \"$type\", \"Polygon\" ], [ \"==\", \"total\", 1 ], [ \"==\", \"resourceinstanceid\", \"\" ] ],\n    \"paint\": {\n      \"fill-color\": \"rgba(255,122,0,0.73)\"\n    }\n  },\n  {\n    \"id\": \"resources-poly-outline-1b6235b0-0d0f-11ed-98c2-5254008afee6\",\n    \"type\": \"line\",\n    \"source\": \"resources-1b6235b0-0d0f-11ed-98c2-5254008afee6\",\n    \"source-layer\": \"1b6235b0-0d0f-11ed-98c2-5254008afee6\",\n    \"layout\": {\n      \"visibility\": \"visible\"\n    },\n    \"filter\": [ \"all\", [ \"==\", \"$type\", \"Polygon\" ], [ \"==\", \"total\", 1 ] ],\n    \"paint\": {\n      \"line-width\": 2,\n      \"line-color\": [ \"case\",\n        [\"in\", \"Federal\", [\"get\",\"authorities\"]], \"rgba(244,109,67,1)\",\n        [\"in\", \"Provincial\", [\"get\",\"authorities\"]], \"rgba(165,0,138,1)\",\n        [\"in\", \"Municipal\", [\"get\",\"authorities\"]], \"rgba(254,224,144,1)\",\n        \"rgba(0,0,0,.3)\" ]\n    }\n  },\n  {\n    \"id\": \"resources-poly-outline-1b6235b0-0d0f-11ed-98c2-5254008afee6-hover\",\n    \"type\": \"line\",\n    \"source\": \"resources-1b6235b0-0d0f-11ed-98c2-5254008afee6\",\n    \"source-layer\": \"1b6235b0-0d0f-11ed-98c2-5254008afee6\",\n    \"layout\": {\n      \"visibility\": \"visible\"\n    },\n    \"filter\": [ \"all\", [ \"==\", \"$type\", \"Polygon\" ], [ \"==\", \"total\", 1 ], [ \"==\", \"resourceinstanceid\", \"\" ] ],\n    \"paint\": {\n      \"line-width\": 4,\n      \"line-color\": \"rgba(255,122,0,0.3)\"\n    }\n  },\n  {\n    \"id\": \"resources-poly-outline-1b6235b0-0d0f-11ed-98c2-5254008afee6-click\",\n    \"type\": \"line\",\n    \"source\": \"resources-1b6235b0-0d0f-11ed-98c2-5254008afee6\",\n    \"source-layer\": \"1b6235b0-0d0f-11ed-98c2-5254008afee6\",\n    \"layout\": {\n      \"visibility\": \"visible\"\n    },\n    \"filter\": [ \"all\", [ \"==\", \"$type\", \"Polygon\" ], [ \"==\", \"total\", 1 ], [ \"==\", \"resourceinstanceid\", \"\" ]\n    ],\n    \"paint\": {\n      \"line-width\": 4,\n      \"line-color\": \"rgba(255,122,0,0.3)\"\n    }\n  },\n  {\n    \"id\": \"resources-line-halo-1b6235b0-0d0f-11ed-98c2-5254008afee6\",\n    \"type\": \"line\",\n    \"source\": \"resources-1b6235b0-0d0f-11ed-98c2-5254008afee6\",\n    \"source-layer\": \"1b6235b0-0d0f-11ed-98c2-5254008afee6\",\n    \"layout\": {\n      \"visibility\": \"visible\"\n    },\n    \"filter\": [\n      \"all\",\n      [\n        \"==\",\n        \"$type\",\n        \"LineString\"\n      ],\n      [\n        \"==\",\n        \"total\",\n        1\n      ]\n    ],\n    \"paint\": {\n      \"line-width\": 4,\n      \"line-color\": \"rgba(255,122,0,0.3)\"\n    }\n  },\n  {\n    \"id\": \"resources-line-1b6235b0-0d0f-11ed-98c2-5254008afee6\",\n    \"type\": \"line\",\n    \"source\": \"resources-1b6235b0-0d0f-11ed-98c2-5254008afee6\",\n    \"source-layer\": \"1b6235b0-0d0f-11ed-98c2-5254008afee6\",\n    \"layout\": {\n      \"visibility\": \"visible\"\n    },\n    \"filter\": [\n      \"all\",\n      [\n        \"==\",\n        \"$type\",\n        \"LineString\"\n      ],\n      [\n        \"==\",\n        \"total\",\n        1\n      ]\n    ],\n    \"paint\": {\n      \"line-width\": 2,\n      \"line-color\": \"rgba(255,122,0,0.73)\"\n    }\n  },\n  {\n    \"id\": \"resources-line-halo-1b6235b0-0d0f-11ed-98c2-5254008afee6-hover\",\n    \"type\": \"line\",\n    \"source\": \"resources-1b6235b0-0d0f-11ed-98c2-5254008afee6\",\n    \"source-layer\": \"1b6235b0-0d0f-11ed-98c2-5254008afee6\",\n    \"layout\": {\n      \"visibility\": \"visible\"\n    },\n    \"filter\": [\n      \"all\",\n      [\n        \"==\",\n        \"$type\",\n        \"LineString\"\n      ],\n      [\n        \"==\",\n        \"total\",\n        1\n      ],\n      [\n        \"==\",\n        \"resourceinstanceid\",\n        \"\"\n      ]\n    ],\n    \"paint\": {\n      \"line-width\": 8,\n      \"line-color\": \"rgba(255,122,0,0.3)\"\n    }\n  },\n  {\n    \"id\": \"resources-line-1b6235b0-0d0f-11ed-98c2-5254008afee6-hover\",\n    \"type\": \"line\",\n    \"source\": \"resources-1b6235b0-0d0f-11ed-98c2-5254008afee6\",\n    \"source-layer\": \"1b6235b0-0d0f-11ed-98c2-5254008afee6\",\n    \"layout\": {\n      \"visibility\": \"visible\"\n    },\n    \"filter\": [\n      \"all\",\n      [\n        \"==\",\n        \"$type\",\n        \"LineString\"\n      ],\n      [\n        \"==\",\n        \"total\",\n        1\n      ],\n      [\n        \"==\",\n        \"resourceinstanceid\",\n        \"\"\n      ]\n    ],\n    \"paint\": {\n      \"line-width\": 4,\n      \"line-color\": \"rgba(255,122,0,0.73)\"\n    }\n  },\n  {\n    \"id\": \"resources-line-halo-1b6235b0-0d0f-11ed-98c2-5254008afee6-click\",\n    \"type\": \"line\",\n    \"source\": \"resources-1b6235b0-0d0f-11ed-98c2-5254008afee6\",\n    \"source-layer\": \"1b6235b0-0d0f-11ed-98c2-5254008afee6\",\n    \"layout\": {\n      \"visibility\": \"visible\"\n    },\n    \"filter\": [\n      \"all\",\n      [\n        \"==\",\n        \"$type\",\n        \"LineString\"\n      ],\n      [\n        \"==\",\n        \"total\",\n        1\n      ],\n      [\n        \"==\",\n        \"resourceinstanceid\",\n        \"\"\n      ]\n    ],\n    \"paint\": {\n      \"line-width\": 8,\n      \"line-color\": \"rgba(255,122,0,0.3)\"\n    }\n  },\n  {\n    \"id\": \"resources-line-1b6235b0-0d0f-11ed-98c2-5254008afee6-click\",\n    \"type\": \"line\",\n    \"source\": \"resources-1b6235b0-0d0f-11ed-98c2-5254008afee6\",\n    \"source-layer\": \"1b6235b0-0d0f-11ed-98c2-5254008afee6\",\n    \"layout\": {\n      \"visibility\": \"visible\"\n    },\n    \"filter\": [\n      \"all\",\n      [\n        \"==\",\n        \"$type\",\n        \"LineString\"\n      ],\n      [\n        \"==\",\n        \"total\",\n        1\n      ],\n      [\n        \"==\",\n        \"resourceinstanceid\",\n        \"\"\n      ]\n    ],\n    \"paint\": {\n      \"line-width\": 4,\n      \"line-color\": \"rgba(255,122,0,0.73)\"\n    }\n  },\n  {\n    \"id\": \"resources-point-halo-1b6235b0-0d0f-11ed-98c2-5254008afee6-hover\",\n    \"type\": \"circle\",\n    \"source\": \"resources-1b6235b0-0d0f-11ed-98c2-5254008afee6\",\n    \"source-layer\": \"1b6235b0-0d0f-11ed-98c2-5254008afee6\",\n    \"layout\": {\n      \"visibility\": \"visible\"\n    },\n    \"filter\": [\n      \"all\",\n      [\n        \"==\",\n        \"$type\",\n        \"Point\"\n      ],\n      [\n        \"==\",\n        \"total\",\n        1\n      ],\n      [\n        \"==\",\n        \"resourceinstanceid\",\n        \"\"\n      ]\n    ],\n    \"paint\": {\n      \"circle-radius\": 8,\n      \"circle-color\": \"rgba(255,122,0,0.3)\"\n    }\n  },\n  {\n    \"id\": \"resources-point-1b6235b0-0d0f-11ed-98c2-5254008afee6-hover\",\n    \"type\": \"circle\",\n    \"source\": \"resources-1b6235b0-0d0f-11ed-98c2-5254008afee6\",\n    \"source-layer\": \"1b6235b0-0d0f-11ed-98c2-5254008afee6\",\n    \"layout\": {\n      \"visibility\": \"visible\"\n    },\n    \"filter\": [\n      \"all\",\n      [\n        \"==\",\n        \"$type\",\n        \"Point\"\n      ],\n      [\n        \"==\",\n        \"total\",\n        1\n      ],\n      [\n        \"==\",\n        \"resourceinstanceid\",\n        \"\"\n      ]\n    ],\n    \"paint\": {\n      \"circle-radius\": 4,\n      \"circle-color\": \"rgba(255,122,0,0.73)\"\n    }\n  },\n  {\n    \"id\": \"resources-point-halo-1b6235b0-0d0f-11ed-98c2-5254008afee6\",\n    \"type\": \"circle\",\n    \"source\": \"resources-1b6235b0-0d0f-11ed-98c2-5254008afee6\",\n    \"source-layer\": \"1b6235b0-0d0f-11ed-98c2-5254008afee6\",\n    \"layout\": {\n      \"visibility\": \"visible\"\n    },\n    \"filter\": [\n      \"all\",\n      [\n        \"==\",\n        \"$type\",\n        \"Point\"\n      ],\n      [\n        \"==\",\n        \"total\",\n        1\n      ]\n    ],\n    \"paint\": {\n      \"circle-radius\": 4,\n      \"circle-color\": \"rgba(255,122,0,0.3)\"\n    }\n  },\n  {\n    \"id\": \"resources-point-1b6235b0-0d0f-11ed-98c2-5254008afee6\",\n    \"type\": \"circle\",\n    \"source\": \"resources-1b6235b0-0d0f-11ed-98c2-5254008afee6\",\n    \"source-layer\": \"1b6235b0-0d0f-11ed-98c2-5254008afee6\",\n    \"layout\": {\n      \"visibility\": \"visible\"\n    },\n    \"filter\": [\n      \"all\",\n      [\n        \"==\",\n        \"$type\",\n        \"Point\"\n      ],\n      [\n        \"==\",\n        \"total\",\n        1\n      ]\n    ],\n    \"paint\": {\n      \"circle-radius\": 2,\n      \"circle-color\": \"rgba(255,122,0,0.73)\"\n    }\n  },\n  {\n    \"id\": \"resources-point-halo-1b6235b0-0d0f-11ed-98c2-5254008afee6-click\",\n    \"type\": \"circle\",\n    \"source\": \"resources-1b6235b0-0d0f-11ed-98c2-5254008afee6\",\n    \"source-layer\": \"1b6235b0-0d0f-11ed-98c2-5254008afee6\",\n    \"layout\": {\n      \"visibility\": \"visible\"\n    },\n    \"filter\": [\n      \"all\",\n      [\n        \"==\",\n        \"$type\",\n        \"Point\"\n      ],\n      [\n        \"==\",\n        \"total\",\n        1\n      ],\n      [\n        \"==\",\n        \"resourceinstanceid\",\n        \"\"\n      ]\n    ],\n    \"paint\": {\n      \"circle-radius\": 8,\n      \"circle-color\": \"rgba(255,122,0,0.3)\"\n    }\n  },\n  {\n    \"id\": \"resources-point-1b6235b0-0d0f-11ed-98c2-5254008afee6-click\",\n    \"type\": \"circle\",\n    \"source\": \"resources-1b6235b0-0d0f-11ed-98c2-5254008afee6\",\n    \"source-layer\": \"1b6235b0-0d0f-11ed-98c2-5254008afee6\",\n    \"layout\": {\n      \"visibility\": \"visible\"\n    },\n    \"filter\": [\n      \"all\",\n      [\n        \"==\",\n        \"$type\",\n        \"Point\"\n      ],\n      [\n        \"==\",\n        \"total\",\n        1\n      ],\n      [\n        \"==\",\n        \"resourceinstanceid\",\n        \"\"\n      ]\n    ],\n    \"paint\": {\n      \"circle-radius\": 4,\n      \"circle-color\": \"rgba(255,122,0,0.73)\"\n    }\n  },\n  {\n    \"id\": \"resources-cluster-point-halo-1b6235b0-0d0f-11ed-98c2-5254008afee6\",\n    \"type\": \"circle\",\n    \"source\": \"resources-1b6235b0-0d0f-11ed-98c2-5254008afee6\",\n    \"source-layer\": \"1b6235b0-0d0f-11ed-98c2-5254008afee6\",\n    \"layout\": {\n      \"visibility\": \"visible\"\n    },\n    \"filter\": [\n      \"all\",\n      [\n        \"==\",\n        \"$type\",\n        \"Point\"\n      ],\n      [\n        \">\",\n        \"total\",\n        1\n      ]\n    ],\n    \"paint\": {\n      \"circle-radius\": {\n        \"property\": \"total\",\n        \"stops\": [\n          [\n            0,\n            22\n          ],\n          [\n            50,\n            24\n          ],\n          [\n            100,\n            26\n          ],\n          [\n            200,\n            28\n          ],\n          [\n            400,\n            30\n          ],\n          [\n            800,\n            32\n          ],\n          [\n            1200,\n            34\n          ],\n          [\n            1600,\n            36\n          ],\n          [\n            2000,\n            38\n          ],\n          [\n            2500,\n            40\n          ],\n          [\n            3000,\n            42\n          ],\n          [\n            4000,\n            44\n          ],\n          [\n            5000,\n            46\n          ]\n        ]\n      },\n      \"circle-color\": \"rgba(255,122,0,0.3)\"\n    }\n  },\n  {\n    \"id\": \"resources-cluster-point-1b6235b0-0d0f-11ed-98c2-5254008afee6\",\n    \"type\": \"circle\",\n    \"source\": \"resources-1b6235b0-0d0f-11ed-98c2-5254008afee6\",\n    \"source-layer\": \"1b6235b0-0d0f-11ed-98c2-5254008afee6\",\n    \"layout\": {\n      \"visibility\": \"visible\"\n    },\n    \"filter\": [\n      \"all\",\n      [\n        \"==\",\n        \"$type\",\n        \"Point\"\n      ],\n      [\n        \">\",\n        \"total\",\n        1\n      ]\n    ],\n    \"paint\": {\n      \"circle-radius\": {\n        \"property\": \"total\",\n        \"type\": \"exponential\",\n        \"stops\": [\n          [\n            0,\n            12\n          ],\n          [\n            50,\n            14\n          ],\n          [\n            100,\n            16\n          ],\n          [\n            200,\n            18\n          ],\n          [\n            400,\n            20\n          ],\n          [\n            800,\n            22\n          ],\n          [\n            1200,\n            24\n          ],\n          [\n            1600,\n            26\n          ],\n          [\n            2000,\n            28\n          ],\n          [\n            2500,\n            30\n          ],\n          [\n            3000,\n            32\n          ],\n          [\n            4000,\n            34\n          ],\n          [\n            5000,\n            36\n          ]\n        ]\n      },\n      \"circle-color\": \"rgba(255,122,0,0.73)\"\n    }\n  },\n  {\n    \"id\": \"resources-cluster-count-1b6235b0-0d0f-11ed-98c2-5254008afee6\",\n    \"type\": \"symbol\",\n    \"source\": \"resources-1b6235b0-0d0f-11ed-98c2-5254008afee6\",\n    \"source-layer\": \"1b6235b0-0d0f-11ed-98c2-5254008afee6\",\n    \"layout\": {\n      \"text-field\": \"{total}\",\n      \"text-size\": 10\n    },\n    \"paint\": {\n      \"text-color\": \"#fff\"\n    },\n    \"filter\": [\n      \"all\",\n      [\n        \">\",\n        \"total\",\n        1\n      ]\n    ]\n  }\n]",
+                        "advancedStyling": true,
                         "autoManageCache": false,
                         "cacheTiles": false,
                         "clusterDistance": 20,
@@ -4211,7 +4178,7 @@
                         "haloRadius": 4,
                         "haloWeight": 4,
                         "layerActivated": true,
-                        "layerIcon": "",
+                        "layerIcon": "fa fa-bank",
                         "layerLegend": "",
                         "layerName": "",
                         "lineColor": "rgba(255,122,0,0.73)",
@@ -4459,7 +4426,7 @@
                     "issearchable": true,
                     "istopnode": false,
                     "name": "Federal ID Number",
-                    "nodegroup_id": "611029e8-8f11-11ee-976b-080027b7463b",
+                    "nodegroup_id": "0684fec8-0d07-11ed-8804-5254008afee6",
                     "nodeid": "1eb0d10c-8f15-11ee-b395-080027b7463b",
                     "ontologyclass": "http://www.cidoc-crm.org/cidoc-crm/E42_Identifier",
                     "parentproperty": "http://www.cidoc-crm.org/cidoc-crm/P1_is_identified_by",
@@ -4864,12 +4831,12 @@
                     "fieldname": null,
                     "graph_id": "cef9c510-e3e6-4057-ac08-89ad926180b4",
                     "hascustomalias": false,
-                    "is_collector": true,
+                    "is_collector": false,
                     "isrequired": false,
                     "issearchable": true,
                     "istopnode": false,
                     "name": "CRHP Admin",
-                    "nodegroup_id": "611029e8-8f11-11ee-976b-080027b7463b",
+                    "nodegroup_id": "0684fec8-0d07-11ed-8804-5254008afee6",
                     "nodeid": "611029e8-8f11-11ee-976b-080027b7463b",
                     "ontologyclass": "http://www.ics.forth.gr/isl/CRMdig/D29_Annotation_Object",
                     "parentproperty": "http://www.cidoc-crm.org/cidoc-crm/P129i_is_subject_of",
@@ -5621,7 +5588,7 @@
                     "issearchable": true,
                     "istopnode": false,
                     "name": "CRHP Elegibility",
-                    "nodegroup_id": "611029e8-8f11-11ee-976b-080027b7463b",
+                    "nodegroup_id": "0684fec8-0d07-11ed-8804-5254008afee6",
                     "nodeid": "af750d9c-8f11-11ee-976b-080027b7463b",
                     "ontologyclass": "http://www.cidoc-crm.org/cidoc-crm/E3_Condition_State",
                     "parentproperty": "http://www.cidoc-crm.org/cidoc-crm/P67_refers_to",
@@ -5667,7 +5634,7 @@
                     "issearchable": true,
                     "istopnode": false,
                     "name": "Date Submitted to CRHP",
-                    "nodegroup_id": "611029e8-8f11-11ee-976b-080027b7463b",
+                    "nodegroup_id": "0684fec8-0d07-11ed-8804-5254008afee6",
                     "nodeid": "bb294f88-8f14-11ee-aaf0-080027b7463b",
                     "ontologyclass": "http://www.cidoc-crm.org/cidoc-crm/E50_Date",
                     "parentproperty": "http://www.ics.forth.gr/isl/CRMdig/L43_annotates",
@@ -5964,8 +5931,8 @@
             "publication": {
                 "graph_id": "cef9c510-e3e6-4057-ac08-89ad926180b4",
                 "notes": null,
-                "publicationid": "9a323f22-8f43-11ee-8bda-080027b7463b",
-                "published_time": "2023-11-29T23:45:00.762"
+                "publicationid": "bce28872-937d-11ee-9bae-080027b7463b",
+                "published_time": "2023-12-05T08:51:14.422"
             },
             "relatable_resource_model_ids": [],
             "resource_2_resource_constraints": [],
@@ -5998,8 +5965,8 @@
         }
     ],
     "metadata": {
-        "db": "PostgreSQL 15.3 on x86_64-pc-linux-gnu, compiled by gcc (GCC) 11.3.1 20221121 (Red Hat 11.3.1-4), 64-bit",
-        "git hash": "474ca9529 2023-11-20 12:09:49 -0800",
+        "db": "PostgreSQL 16.0 on x86_64-pc-linux-gnu, compiled by gcc (GCC) 11.3.1 20221121 (Red Hat 11.3.1-4), 64-bit",
+        "git hash": "47a54adb8 2023-12-04 16:03:47 -0800",
         "os": "Linux",
         "os version": "5.14.0-333.el9.x86_64"
     }
