@@ -172,7 +172,7 @@
                     "instructions": {
                         "en": "Define the spatial location."
                     },
-                    "is_editable": true,
+                    "is_editable": false,
                     "name": {
                         "en": "Spatial Location"
                     },
@@ -863,28 +863,6 @@
                 {
                     "card_id": "068500bc-0d07-11ed-8804-5254008afee6",
                     "config": {
-                        "defaultValue": "",
-                        "i18n_properties": [
-                            "placeholder"
-                        ],
-                        "label": "CRHP Elegibility",
-                        "options": [],
-                        "placeholder": {
-                            "en": "Select an option"
-                        }
-                    },
-                    "id": "0d31f4fb-dc7f-4f3b-ad0b-51f7b3e5180d",
-                    "label": {
-                        "en": "CRHP Elegibility"
-                    },
-                    "node_id": "af750d9c-8f11-11ee-976b-080027b7463b",
-                    "sortorder": 0,
-                    "visible": true,
-                    "widget_id": "10000000-0000-0000-0000-000000000002"
-                },
-                {
-                    "card_id": "068500bc-0d07-11ed-8804-5254008afee6",
-                    "config": {
                         "defaultValue": {
                             "en": {
                                 "direction": "ltr",
@@ -907,7 +885,7 @@
                         "en": "Restrictions"
                     },
                     "node_id": "77b951e8-8f10-11ee-976b-080027b7463b",
-                    "sortorder": 4,
+                    "sortorder": 1,
                     "visible": true,
                     "widget_id": "10000000-0000-0000-0000-000000000001"
                 },
@@ -939,42 +917,6 @@
                     "sortorder": 4,
                     "visible": true,
                     "widget_id": "10000000-0000-0000-0000-000000000001"
-                },
-                {
-                    "card_id": "068500bc-0d07-11ed-8804-5254008afee6",
-                    "config": {
-                        "defaultValue": "",
-                        "format": "",
-                        "i18n_properties": [
-                            "placeholder",
-                            "prefix",
-                            "suffix"
-                        ],
-                        "label": "Federal ID Number",
-                        "max": "",
-                        "min": "",
-                        "placeholder": {
-                            "en": "Enter number"
-                        },
-                        "precision": "",
-                        "prefix": {
-                            "en": ""
-                        },
-                        "step": "",
-                        "suffix": {
-                            "en": ""
-                        },
-                        "uneditable": false,
-                        "width": "100%"
-                    },
-                    "id": "147dc1e3-9575-4b13-b4f9-c39b3112d9ec",
-                    "label": {
-                        "en": "Federal ID Number"
-                    },
-                    "node_id": "1eb0d10c-8f15-11ee-b395-080027b7463b",
-                    "sortorder": 2,
-                    "visible": true,
-                    "widget_id": "10000000-0000-0000-0000-000000000008"
                 },
                 {
                     "card_id": "1b623006-0d0f-11ed-98c2-5254008afee6",
@@ -1253,6 +1195,26 @@
                     "widget_id": "10000000-0000-0000-0000-000000000007"
                 },
                 {
+                    "card_id": "068500bc-0d07-11ed-8804-5254008afee6",
+                    "config": {
+                        "dateFormat": "YYYY-MM-DD",
+                        "defaultValue": "",
+                        "label": "Date Submitted to CRHP",
+                        "maxDate": false,
+                        "minDate": false,
+                        "placeholder": "Enter date",
+                        "viewMode": "days"
+                    },
+                    "id": "21a41194-7ffd-471d-9035-e0bf96e3171c",
+                    "label": {
+                        "en": "Date Submitted to CRHP"
+                    },
+                    "node_id": "bb294f88-8f14-11ee-aaf0-080027b7463b",
+                    "sortorder": null,
+                    "visible": true,
+                    "widget_id": "10000000-0000-0000-0000-000000000004"
+                },
+                {
                     "card_id": "e6286387-d046-4d80-aa72-0f6cf7ad5413",
                     "config": {
                         "defaultValue": null,
@@ -1317,7 +1279,7 @@
                         "en": "Restricted"
                     },
                     "node_id": "dc974e68-8f0f-11ee-85a0-080027b7463b",
-                    "sortorder": 3,
+                    "sortorder": 0,
                     "visible": true,
                     "widget_id": "0346bc9c-d235-4313-adc8-d0e210b2ef25"
                 },
@@ -1407,6 +1369,64 @@
                     "sortorder": 5,
                     "visible": true,
                     "widget_id": "10000000-0000-0000-0000-000000000001"
+                },
+                {
+                    "card_id": "068500bc-0d07-11ed-8804-5254008afee6",
+                    "config": {
+                        "defaultValue": "",
+                        "i18n_properties": [
+                            "placeholder"
+                        ],
+                        "label": "CRHP Elegibility",
+                        "options": [],
+                        "placeholder": {
+                            "en": "Select an option"
+                        }
+                    },
+                    "id": "4a1d72b3-6548-4b75-a035-bd7dfb9be1b4",
+                    "label": {
+                        "en": "CRHP Elegibility"
+                    },
+                    "node_id": "af750d9c-8f11-11ee-976b-080027b7463b",
+                    "sortorder": null,
+                    "visible": true,
+                    "widget_id": "10000000-0000-0000-0000-000000000002"
+                },
+                {
+                    "card_id": "068500bc-0d07-11ed-8804-5254008afee6",
+                    "config": {
+                        "defaultValue": "",
+                        "format": "",
+                        "i18n_properties": [
+                            "placeholder",
+                            "prefix",
+                            "suffix"
+                        ],
+                        "label": "Federal ID Number",
+                        "max": "999999",
+                        "min": "0",
+                        "placeholder": {
+                            "en": "Enter the CRHP identifier"
+                        },
+                        "precision": "",
+                        "prefix": {
+                            "en": ""
+                        },
+                        "step": "",
+                        "suffix": {
+                            "en": ""
+                        },
+                        "uneditable": false,
+                        "width": "100%%"
+                    },
+                    "id": "4a4c3b00-ca49-4082-8161-9540818255fa",
+                    "label": {
+                        "en": "Federal ID Number"
+                    },
+                    "node_id": "1eb0d10c-8f15-11ee-b395-080027b7463b",
+                    "sortorder": null,
+                    "visible": true,
+                    "widget_id": "10000000-0000-0000-0000-000000000008"
                 },
                 {
                     "card_id": "a9ce5a20-d085-4fa2-9f5b-2b812223b3d1",
@@ -2509,26 +2529,6 @@
                     "widget_id": "10000000-0000-0000-0000-000000000001"
                 },
                 {
-                    "card_id": "068500bc-0d07-11ed-8804-5254008afee6",
-                    "config": {
-                        "dateFormat": "YYYY-MM-DD",
-                        "defaultValue": "",
-                        "label": "Date Submitted to CRHP",
-                        "maxDate": false,
-                        "minDate": false,
-                        "placeholder": "Enter date",
-                        "viewMode": "days"
-                    },
-                    "id": "f05e8c04-91b9-4fa9-8eca-406ce6c7c2ec",
-                    "label": {
-                        "en": "Date Submitted to CRHP"
-                    },
-                    "node_id": "bb294f88-8f14-11ee-aaf0-080027b7463b",
-                    "sortorder": 1,
-                    "visible": true,
-                    "widget_id": "10000000-0000-0000-0000-000000000004"
-                },
-                {
                     "card_id": "6cc30640-0d06-11ed-8804-5254008afee6",
                     "config": {
                         "defaultValue": true,
@@ -3471,6 +3471,18 @@
             "functions_x_graphs": [
                 {
                     "config": {
+                        "node_id": "703bbe62-3d24-11ee-93bd-080027b7463b",
+                        "triggering_nodegroups": [
+                            "0a883b80-2fb6-11ed-be5f-5254008afee6"
+                        ],
+                        "unique_value": true
+                    },
+                    "function_id": "60000000-0000-0000-0000-000000002001",
+                    "graph_id": "cef9c510-e3e6-4057-ac08-89ad926180b4",
+                    "id": "0af6fbef-ceea-4c44-b954-6c3a15fb091c"
+                },
+                {
+                    "config": {
                         "class_name": "BCRHPSiteDescriptors",
                         "descriptor_types": {
                             "description": {
@@ -3511,19 +3523,7 @@
                     },
                     "function_id": "60000000-0000-0000-0000-000000001002",
                     "graph_id": "cef9c510-e3e6-4057-ac08-89ad926180b4",
-                    "id": "0d890137-43da-4675-8639-b39209b1d93d"
-                },
-                {
-                    "config": {
-                        "node_id": "703bbe62-3d24-11ee-93bd-080027b7463b",
-                        "triggering_nodegroups": [
-                            "0a883b80-2fb6-11ed-be5f-5254008afee6"
-                        ],
-                        "unique_value": true
-                    },
-                    "function_id": "60000000-0000-0000-0000-000000002001",
-                    "graph_id": "cef9c510-e3e6-4057-ac08-89ad926180b4",
-                    "id": "e07d7b81-417d-4855-aa5f-cd20e9227b29"
+                    "id": "4a8c09f3-52bc-49b1-86b7-3eb05474240e"
                 }
             ],
             "graphid": "cef9c510-e3e6-4057-ac08-89ad926180b4",
@@ -4167,8 +4167,8 @@
                     "alias": "site_boundary",
                     "config": {
                         "addToMap": true,
-                        "advancedStyle": "[\n  {\n    \"id\": \"resources-fill-1b6235b0-0d0f-11ed-98c2-5254008afee6\",\n    \"type\": \"fill\",\n    \"source\": \"resources-1b6235b0-0d0f-11ed-98c2-5254008afee6\",\n    \"source-layer\": \"1b6235b0-0d0f-11ed-98c2-5254008afee6\",\n    \"layout\": {\n      \"visibility\": \"visible\"\n    },\n    \"filter\": [ \"all\", [ \"==\", \"$type\", \"Polygon\" ], [ \"==\", \"total\", 1 ] ],\n    \"paint\": {\n      \"fill-color\": [ \"case\",\n      [\"in\", \"Federal\", [\"get\",\"authorities\"]], \"rgba(244,109,67,1)\",\n      [\"in\", \"Provincial\", [\"get\",\"authorities\"]], \"rgba(165,0,138,1)\",\n      [\"in\", \"Municipal\", [\"get\",\"authorities\"]], \"rgba(254,224,144,1)\",\n      \"rgba(0,0,0,.3)\" ] }\n  },\n  {\n    \"id\": \"resources-fill-1b6235b0-0d0f-11ed-98c2-5254008afee6-click\",\n    \"type\": \"fill\",\n    \"source\": \"resources-1b6235b0-0d0f-11ed-98c2-5254008afee6\",\n    \"source-layer\": \"1b6235b0-0d0f-11ed-98c2-5254008afee6\",\n    \"layout\": {\n      \"visibility\": \"visible\"\n    },\n    \"filter\": [ \"all\", [ \"==\", \"$type\", \"Polygon\" ], [ \"==\", \"total\", 1 ], [ \"==\", \"resourceinstanceid\", \"\" ] ],\n    \"paint\": {\n      \"fill-color\": [ \"case\",\n        [\"in\", \"Federal\", [\"get\",\"authorities\"]], \"rgba(244,109,67,1)\",\n        [\"in\", \"Provincial\", [\"get\",\"authorities\"]], \"rgba(165,0,138,1)\",\n        [\"in\", \"Municipal\", [\"get\",\"authorities\"]], \"rgba(254,224,144,1)\",\n        \"rgba(0,0,0,.3)\" ]\n    }\n  },\n  {\n    \"id\": \"resources-fill-1b6235b0-0d0f-11ed-98c2-5254008afee6-hover\",\n    \"type\": \"fill\",\n    \"source\": \"resources-1b6235b0-0d0f-11ed-98c2-5254008afee6\",\n    \"source-layer\": \"1b6235b0-0d0f-11ed-98c2-5254008afee6\",\n    \"layout\": {\n      \"visibility\": \"visible\"\n    },\n    \"filter\": [ \"all\", [ \"==\", \"$type\", \"Polygon\" ], [ \"==\", \"total\", 1 ], [ \"==\", \"resourceinstanceid\", \"\" ] ],\n    \"paint\": {\n      \"fill-color\": \"rgba(255,122,0,0.73)\"\n    }\n  },\n  {\n    \"id\": \"resources-poly-outline-1b6235b0-0d0f-11ed-98c2-5254008afee6\",\n    \"type\": \"line\",\n    \"source\": \"resources-1b6235b0-0d0f-11ed-98c2-5254008afee6\",\n    \"source-layer\": \"1b6235b0-0d0f-11ed-98c2-5254008afee6\",\n    \"layout\": {\n      \"visibility\": \"visible\"\n    },\n    \"filter\": [ \"all\", [ \"==\", \"$type\", \"Polygon\" ], [ \"==\", \"total\", 1 ] ],\n    \"paint\": {\n      \"line-width\": 2,\n      \"line-color\": [ \"case\",\n        [\"in\", \"Federal\", [\"get\",\"authorities\"]], \"rgba(244,109,67,1)\",\n        [\"in\", \"Provincial\", [\"get\",\"authorities\"]], \"rgba(165,0,138,1)\",\n        [\"in\", \"Municipal\", [\"get\",\"authorities\"]], \"rgba(254,224,144,1)\",\n        \"rgba(0,0,0,.3)\" ]\n    }\n  },\n  {\n    \"id\": \"resources-poly-outline-1b6235b0-0d0f-11ed-98c2-5254008afee6-hover\",\n    \"type\": \"line\",\n    \"source\": \"resources-1b6235b0-0d0f-11ed-98c2-5254008afee6\",\n    \"source-layer\": \"1b6235b0-0d0f-11ed-98c2-5254008afee6\",\n    \"layout\": {\n      \"visibility\": \"visible\"\n    },\n    \"filter\": [ \"all\", [ \"==\", \"$type\", \"Polygon\" ], [ \"==\", \"total\", 1 ], [ \"==\", \"resourceinstanceid\", \"\" ] ],\n    \"paint\": {\n      \"line-width\": 4,\n      \"line-color\": \"rgba(255,122,0,0.3)\"\n    }\n  },\n  {\n    \"id\": \"resources-poly-outline-1b6235b0-0d0f-11ed-98c2-5254008afee6-click\",\n    \"type\": \"line\",\n    \"source\": \"resources-1b6235b0-0d0f-11ed-98c2-5254008afee6\",\n    \"source-layer\": \"1b6235b0-0d0f-11ed-98c2-5254008afee6\",\n    \"layout\": {\n      \"visibility\": \"visible\"\n    },\n    \"filter\": [ \"all\", [ \"==\", \"$type\", \"Polygon\" ], [ \"==\", \"total\", 1 ], [ \"==\", \"resourceinstanceid\", \"\" ]\n    ],\n    \"paint\": {\n      \"line-width\": 4,\n      \"line-color\": \"rgba(255,122,0,0.3)\"\n    }\n  },\n  {\n    \"id\": \"resources-line-halo-1b6235b0-0d0f-11ed-98c2-5254008afee6\",\n    \"type\": \"line\",\n    \"source\": \"resources-1b6235b0-0d0f-11ed-98c2-5254008afee6\",\n    \"source-layer\": \"1b6235b0-0d0f-11ed-98c2-5254008afee6\",\n    \"layout\": {\n      \"visibility\": \"visible\"\n    },\n    \"filter\": [\n      \"all\",\n      [\n        \"==\",\n        \"$type\",\n        \"LineString\"\n      ],\n      [\n        \"==\",\n        \"total\",\n        1\n      ]\n    ],\n    \"paint\": {\n      \"line-width\": 4,\n      \"line-color\": \"rgba(255,122,0,0.3)\"\n    }\n  },\n  {\n    \"id\": \"resources-line-1b6235b0-0d0f-11ed-98c2-5254008afee6\",\n    \"type\": \"line\",\n    \"source\": \"resources-1b6235b0-0d0f-11ed-98c2-5254008afee6\",\n    \"source-layer\": \"1b6235b0-0d0f-11ed-98c2-5254008afee6\",\n    \"layout\": {\n      \"visibility\": \"visible\"\n    },\n    \"filter\": [\n      \"all\",\n      [\n        \"==\",\n        \"$type\",\n        \"LineString\"\n      ],\n      [\n        \"==\",\n        \"total\",\n        1\n      ]\n    ],\n    \"paint\": {\n      \"line-width\": 2,\n      \"line-color\": \"rgba(255,122,0,0.73)\"\n    }\n  },\n  {\n    \"id\": \"resources-line-halo-1b6235b0-0d0f-11ed-98c2-5254008afee6-hover\",\n    \"type\": \"line\",\n    \"source\": \"resources-1b6235b0-0d0f-11ed-98c2-5254008afee6\",\n    \"source-layer\": \"1b6235b0-0d0f-11ed-98c2-5254008afee6\",\n    \"layout\": {\n      \"visibility\": \"visible\"\n    },\n    \"filter\": [\n      \"all\",\n      [\n        \"==\",\n        \"$type\",\n        \"LineString\"\n      ],\n      [\n        \"==\",\n        \"total\",\n        1\n      ],\n      [\n        \"==\",\n        \"resourceinstanceid\",\n        \"\"\n      ]\n    ],\n    \"paint\": {\n      \"line-width\": 8,\n      \"line-color\": \"rgba(255,122,0,0.3)\"\n    }\n  },\n  {\n    \"id\": \"resources-line-1b6235b0-0d0f-11ed-98c2-5254008afee6-hover\",\n    \"type\": \"line\",\n    \"source\": \"resources-1b6235b0-0d0f-11ed-98c2-5254008afee6\",\n    \"source-layer\": \"1b6235b0-0d0f-11ed-98c2-5254008afee6\",\n    \"layout\": {\n      \"visibility\": \"visible\"\n    },\n    \"filter\": [\n      \"all\",\n      [\n        \"==\",\n        \"$type\",\n        \"LineString\"\n      ],\n      [\n        \"==\",\n        \"total\",\n        1\n      ],\n      [\n        \"==\",\n        \"resourceinstanceid\",\n        \"\"\n      ]\n    ],\n    \"paint\": {\n      \"line-width\": 4,\n      \"line-color\": \"rgba(255,122,0,0.73)\"\n    }\n  },\n  {\n    \"id\": \"resources-line-halo-1b6235b0-0d0f-11ed-98c2-5254008afee6-click\",\n    \"type\": \"line\",\n    \"source\": \"resources-1b6235b0-0d0f-11ed-98c2-5254008afee6\",\n    \"source-layer\": \"1b6235b0-0d0f-11ed-98c2-5254008afee6\",\n    \"layout\": {\n      \"visibility\": \"visible\"\n    },\n    \"filter\": [\n      \"all\",\n      [\n        \"==\",\n        \"$type\",\n        \"LineString\"\n      ],\n      [\n        \"==\",\n        \"total\",\n        1\n      ],\n      [\n        \"==\",\n        \"resourceinstanceid\",\n        \"\"\n      ]\n    ],\n    \"paint\": {\n      \"line-width\": 8,\n      \"line-color\": \"rgba(255,122,0,0.3)\"\n    }\n  },\n  {\n    \"id\": \"resources-line-1b6235b0-0d0f-11ed-98c2-5254008afee6-click\",\n    \"type\": \"line\",\n    \"source\": \"resources-1b6235b0-0d0f-11ed-98c2-5254008afee6\",\n    \"source-layer\": \"1b6235b0-0d0f-11ed-98c2-5254008afee6\",\n    \"layout\": {\n      \"visibility\": \"visible\"\n    },\n    \"filter\": [\n      \"all\",\n      [\n        \"==\",\n        \"$type\",\n        \"LineString\"\n      ],\n      [\n        \"==\",\n        \"total\",\n        1\n      ],\n      [\n        \"==\",\n        \"resourceinstanceid\",\n        \"\"\n      ]\n    ],\n    \"paint\": {\n      \"line-width\": 4,\n      \"line-color\": \"rgba(255,122,0,0.73)\"\n    }\n  },\n  {\n    \"id\": \"resources-point-halo-1b6235b0-0d0f-11ed-98c2-5254008afee6-hover\",\n    \"type\": \"circle\",\n    \"source\": \"resources-1b6235b0-0d0f-11ed-98c2-5254008afee6\",\n    \"source-layer\": \"1b6235b0-0d0f-11ed-98c2-5254008afee6\",\n    \"layout\": {\n      \"visibility\": \"visible\"\n    },\n    \"filter\": [\n      \"all\",\n      [\n        \"==\",\n        \"$type\",\n        \"Point\"\n      ],\n      [\n        \"==\",\n        \"total\",\n        1\n      ],\n      [\n        \"==\",\n        \"resourceinstanceid\",\n        \"\"\n      ]\n    ],\n    \"paint\": {\n      \"circle-radius\": 8,\n      \"circle-color\": \"rgba(255,122,0,0.3)\"\n    }\n  },\n  {\n    \"id\": \"resources-point-1b6235b0-0d0f-11ed-98c2-5254008afee6-hover\",\n    \"type\": \"circle\",\n    \"source\": \"resources-1b6235b0-0d0f-11ed-98c2-5254008afee6\",\n    \"source-layer\": \"1b6235b0-0d0f-11ed-98c2-5254008afee6\",\n    \"layout\": {\n      \"visibility\": \"visible\"\n    },\n    \"filter\": [\n      \"all\",\n      [\n        \"==\",\n        \"$type\",\n        \"Point\"\n      ],\n      [\n        \"==\",\n        \"total\",\n        1\n      ],\n      [\n        \"==\",\n        \"resourceinstanceid\",\n        \"\"\n      ]\n    ],\n    \"paint\": {\n      \"circle-radius\": 4,\n      \"circle-color\": \"rgba(255,122,0,0.73)\"\n    }\n  },\n  {\n    \"id\": \"resources-point-halo-1b6235b0-0d0f-11ed-98c2-5254008afee6\",\n    \"type\": \"circle\",\n    \"source\": \"resources-1b6235b0-0d0f-11ed-98c2-5254008afee6\",\n    \"source-layer\": \"1b6235b0-0d0f-11ed-98c2-5254008afee6\",\n    \"layout\": {\n      \"visibility\": \"visible\"\n    },\n    \"filter\": [\n      \"all\",\n      [\n        \"==\",\n        \"$type\",\n        \"Point\"\n      ],\n      [\n        \"==\",\n        \"total\",\n        1\n      ]\n    ],\n    \"paint\": {\n      \"circle-radius\": 4,\n      \"circle-color\": \"rgba(255,122,0,0.3)\"\n    }\n  },\n  {\n    \"id\": \"resources-point-1b6235b0-0d0f-11ed-98c2-5254008afee6\",\n    \"type\": \"circle\",\n    \"source\": \"resources-1b6235b0-0d0f-11ed-98c2-5254008afee6\",\n    \"source-layer\": \"1b6235b0-0d0f-11ed-98c2-5254008afee6\",\n    \"layout\": {\n      \"visibility\": \"visible\"\n    },\n    \"filter\": [\n      \"all\",\n      [\n        \"==\",\n        \"$type\",\n        \"Point\"\n      ],\n      [\n        \"==\",\n        \"total\",\n        1\n      ]\n    ],\n    \"paint\": {\n      \"circle-radius\": 2,\n      \"circle-color\": \"rgba(255,122,0,0.73)\"\n    }\n  },\n  {\n    \"id\": \"resources-point-halo-1b6235b0-0d0f-11ed-98c2-5254008afee6-click\",\n    \"type\": \"circle\",\n    \"source\": \"resources-1b6235b0-0d0f-11ed-98c2-5254008afee6\",\n    \"source-layer\": \"1b6235b0-0d0f-11ed-98c2-5254008afee6\",\n    \"layout\": {\n      \"visibility\": \"visible\"\n    },\n    \"filter\": [\n      \"all\",\n      [\n        \"==\",\n        \"$type\",\n        \"Point\"\n      ],\n      [\n        \"==\",\n        \"total\",\n        1\n      ],\n      [\n        \"==\",\n        \"resourceinstanceid\",\n        \"\"\n      ]\n    ],\n    \"paint\": {\n      \"circle-radius\": 8,\n      \"circle-color\": \"rgba(255,122,0,0.3)\"\n    }\n  },\n  {\n    \"id\": \"resources-point-1b6235b0-0d0f-11ed-98c2-5254008afee6-click\",\n    \"type\": \"circle\",\n    \"source\": \"resources-1b6235b0-0d0f-11ed-98c2-5254008afee6\",\n    \"source-layer\": \"1b6235b0-0d0f-11ed-98c2-5254008afee6\",\n    \"layout\": {\n      \"visibility\": \"visible\"\n    },\n    \"filter\": [\n      \"all\",\n      [\n        \"==\",\n        \"$type\",\n        \"Point\"\n      ],\n      [\n        \"==\",\n        \"total\",\n        1\n      ],\n      [\n        \"==\",\n        \"resourceinstanceid\",\n        \"\"\n      ]\n    ],\n    \"paint\": {\n      \"circle-radius\": 4,\n      \"circle-color\": \"rgba(255,122,0,0.73)\"\n    }\n  },\n  {\n    \"id\": \"resources-cluster-point-halo-1b6235b0-0d0f-11ed-98c2-5254008afee6\",\n    \"type\": \"circle\",\n    \"source\": \"resources-1b6235b0-0d0f-11ed-98c2-5254008afee6\",\n    \"source-layer\": \"1b6235b0-0d0f-11ed-98c2-5254008afee6\",\n    \"layout\": {\n      \"visibility\": \"visible\"\n    },\n    \"filter\": [\n      \"all\",\n      [\n        \"==\",\n        \"$type\",\n        \"Point\"\n      ],\n      [\n        \">\",\n        \"total\",\n        1\n      ]\n    ],\n    \"paint\": {\n      \"circle-radius\": {\n        \"property\": \"total\",\n        \"stops\": [\n          [\n            0,\n            22\n          ],\n          [\n            50,\n            24\n          ],\n          [\n            100,\n            26\n          ],\n          [\n            200,\n            28\n          ],\n          [\n            400,\n            30\n          ],\n          [\n            800,\n            32\n          ],\n          [\n            1200,\n            34\n          ],\n          [\n            1600,\n            36\n          ],\n          [\n            2000,\n            38\n          ],\n          [\n            2500,\n            40\n          ],\n          [\n            3000,\n            42\n          ],\n          [\n            4000,\n            44\n          ],\n          [\n            5000,\n            46\n          ]\n        ]\n      },\n      \"circle-color\": \"rgba(255,122,0,0.3)\"\n    }\n  },\n  {\n    \"id\": \"resources-cluster-point-1b6235b0-0d0f-11ed-98c2-5254008afee6\",\n    \"type\": \"circle\",\n    \"source\": \"resources-1b6235b0-0d0f-11ed-98c2-5254008afee6\",\n    \"source-layer\": \"1b6235b0-0d0f-11ed-98c2-5254008afee6\",\n    \"layout\": {\n      \"visibility\": \"visible\"\n    },\n    \"filter\": [\n      \"all\",\n      [\n        \"==\",\n        \"$type\",\n        \"Point\"\n      ],\n      [\n        \">\",\n        \"total\",\n        1\n      ]\n    ],\n    \"paint\": {\n      \"circle-radius\": {\n        \"property\": \"total\",\n        \"type\": \"exponential\",\n        \"stops\": [\n          [\n            0,\n            12\n          ],\n          [\n            50,\n            14\n          ],\n          [\n            100,\n            16\n          ],\n          [\n            200,\n            18\n          ],\n          [\n            400,\n            20\n          ],\n          [\n            800,\n            22\n          ],\n          [\n            1200,\n            24\n          ],\n          [\n            1600,\n            26\n          ],\n          [\n            2000,\n            28\n          ],\n          [\n            2500,\n            30\n          ],\n          [\n            3000,\n            32\n          ],\n          [\n            4000,\n            34\n          ],\n          [\n            5000,\n            36\n          ]\n        ]\n      },\n      \"circle-color\": \"rgba(255,122,0,0.73)\"\n    }\n  },\n  {\n    \"id\": \"resources-cluster-count-1b6235b0-0d0f-11ed-98c2-5254008afee6\",\n    \"type\": \"symbol\",\n    \"source\": \"resources-1b6235b0-0d0f-11ed-98c2-5254008afee6\",\n    \"source-layer\": \"1b6235b0-0d0f-11ed-98c2-5254008afee6\",\n    \"layout\": {\n      \"text-field\": \"{total}\",\n      \"text-size\": 10\n    },\n    \"paint\": {\n      \"text-color\": \"#fff\"\n    },\n    \"filter\": [\n      \"all\",\n      [\n        \">\",\n        \"total\",\n        1\n      ]\n    ]\n  }\n]",
-                        "advancedStyling": true,
+                        "advancedStyle": "",
+                        "advancedStyling": false,
                         "autoManageCache": false,
                         "cacheTiles": false,
                         "clusterDistance": 20,
@@ -4178,7 +4178,7 @@
                         "haloRadius": 4,
                         "haloWeight": 4,
                         "layerActivated": true,
-                        "layerIcon": "fa fa-bank",
+                        "layerIcon": "",
                         "layerLegend": "",
                         "layerName": "",
                         "lineColor": "rgba(255,122,0,0.73)",
@@ -5931,8 +5931,8 @@
             "publication": {
                 "graph_id": "cef9c510-e3e6-4057-ac08-89ad926180b4",
                 "notes": null,
-                "publicationid": "bce28872-937d-11ee-9bae-080027b7463b",
-                "published_time": "2023-12-05T08:51:14.422"
+                "publicationid": "40064acc-93ba-11ee-89f8-080027b7463b",
+                "published_time": "2023-12-05T16:04:24.241"
             },
             "relatable_resource_model_ids": [],
             "resource_2_resource_constraints": [],
@@ -5965,7 +5965,7 @@
         }
     ],
     "metadata": {
-        "db": "PostgreSQL 16.0 on x86_64-pc-linux-gnu, compiled by gcc (GCC) 11.3.1 20221121 (Red Hat 11.3.1-4), 64-bit",
+        "db": "PostgreSQL 15.3 on x86_64-pc-linux-gnu, compiled by gcc (GCC) 11.3.1 20221121 (Red Hat 11.3.1-4), 64-bit",
         "git hash": "47a54adb8 2023-12-04 16:03:47 -0800",
         "os": "Linux",
         "os version": "5.14.0-333.el9.x86_64"
