@@ -24,6 +24,11 @@
     url('fonts/BCSans/BCSans-BoldItalic.woff') format('woff'); /* Modern Browsers */
 }
 
+#main-content
+{
+    overflow: scroll;
+}
+
 body, h1, h2, h3, h4, h5
 {
     font-family: 'BCSans', 'Open Sans', 'Noto Sans', Verdana, Arial, sans-serif !important;
