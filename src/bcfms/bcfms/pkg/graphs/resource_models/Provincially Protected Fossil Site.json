@@ -105,7 +105,7 @@
                     "instructions": {
                         "en": ""
                     },
-                    "is_editable": true,
+                    "is_editable": false,
                     "name": {
                         "en": "Location"
                     },
@@ -134,7 +134,7 @@
                     "instructions": {
                         "en": "Define the spatial location."
                     },
-                    "is_editable": true,
+                    "is_editable": false,
                     "name": {
                         "en": "Spatial Location"
                     },
@@ -331,7 +331,7 @@
                     "instructions": {
                         "en": ""
                     },
-                    "is_editable": true,
+                    "is_editable": false,
                     "name": {
                         "en": "Site Name"
                     },
@@ -1483,12 +1483,12 @@
                     },
                     "function_id": "60000000-0000-0000-0000-000000000001",
                     "graph_id": "dd19a93a-0202-11ed-a511-0050568377a0",
-                    "id": "0fd3fcbf-69a9-4025-9038-c6ef3dc0e4f7"
+                    "id": "44d12f51-7c02-442e-863c-163e090e1994"
                 }
             ],
             "graphid": "dd19a93a-0202-11ed-a511-0050568377a0",
             "iconclass": "fa fa-crosshairs",
-            "is_editable": true,
+            "is_editable": false,
             "isresource": true,
             "jsonldcontext": null,
             "name": {
@@ -2145,7 +2145,7 @@
                     "datatype": "geojson-feature-collection",
                     "description": "Represents a single node in a graph",
                     "exportable": false,
-                    "fieldname": "",
+                    "fieldname": "pps_geom",
                     "graph_id": "dd19a93a-0202-11ed-a511-0050568377a0",
                     "hascustomalias": false,
                     "is_collector": true,
@@ -2229,6 +2229,7 @@
                     "alias": "information_carrier",
                     "config": {
                         "activateMax": false,
+                        "imagesOnly": false,
                         "maxFileSize": null,
                         "maxFiles": 1
                     },
@@ -2277,7 +2278,11 @@
                         "graphs": [
                             {
                                 "graphid": "df3ee1ae-9c1c-11ec-964d-5254008afee6",
-                                "name": "BC Fossil Collection Event"
+                                "inverseRelationshipConcept": "ac41d9be-79db-4256-b368-2f4559cfbe55",
+                                "name": "Fossil Collection Event",
+                                "relationshipCollection": "00000000-0000-0000-0000-000000000005",
+                                "relationshipConcept": "ac41d9be-79db-4256-b368-2f4559cfbe55",
+                                "useOntologyRelationship": false
                             }
                         ],
                         "searchDsl": "",
@@ -2286,7 +2291,7 @@
                     "datatype": "resource-instance-list",
                     "description": null,
                     "exportable": false,
-                    "fieldname": null,
+                    "fieldname": "coll_event",
                     "graph_id": "dd19a93a-0202-11ed-a511-0050568377a0",
                     "hascustomalias": false,
                     "is_collector": true,
@@ -2303,11 +2308,13 @@
                 },
                 {
                     "alias": "site_name",
-                    "config": {},
+                    "config": {
+                        "en": ""
+                    },
                     "datatype": "string",
                     "description": null,
                     "exportable": false,
-                    "fieldname": null,
+                    "fieldname": "ppfsite_nm",
                     "graph_id": "dd19a93a-0202-11ed-a511-0050568377a0",
                     "hascustomalias": false,
                     "is_collector": true,
@@ -2324,11 +2331,13 @@
                 },
                 {
                     "alias": "protection_status",
-                    "config": {},
+                    "config": {
+                        "en": ""
+                    },
                     "datatype": "string",
                     "description": "The protection status of the site.\n\nThis should be turned into a Vocabulary.",
                     "exportable": false,
-                    "fieldname": null,
+                    "fieldname": "status",
                     "graph_id": "dd19a93a-0202-11ed-a511-0050568377a0",
                     "hascustomalias": false,
                     "is_collector": true,
@@ -2349,7 +2358,11 @@
                         "graphs": [
                             {
                                 "graphid": "fac1b1b4-1034-11ec-8a7a-5254008afee6",
-                                "name": "BC Fossil Site Model"
+                                "inverseRelationshipConcept": "ac41d9be-79db-4256-b368-2f4559cfbe55",
+                                "name": "Fossil Site",
+                                "relationshipCollection": "00000000-0000-0000-0000-000000000005",
+                                "relationshipConcept": "ac41d9be-79db-4256-b368-2f4559cfbe55",
+                                "useOntologyRelationship": false
                             }
                         ],
                         "searchDsl": "",
@@ -2358,7 +2371,7 @@
                     "datatype": "resource-instance",
                     "description": null,
                     "exportable": false,
-                    "fieldname": null,
+                    "fieldname": "parsite_nm",
                     "graph_id": "dd19a93a-0202-11ed-a511-0050568377a0",
                     "hascustomalias": false,
                     "is_collector": true,
@@ -2425,7 +2438,7 @@
                     "datatype": "concept",
                     "description": "Represents a single node in a graph",
                     "exportable": false,
-                    "fieldname": "",
+                    "fieldname": "geom_qlfr",
                     "graph_id": "dd19a93a-0202-11ed-a511-0050568377a0",
                     "hascustomalias": false,
                     "is_collector": false,
@@ -2596,8 +2609,8 @@
             "publication": {
                 "graph_id": "dd19a93a-0202-11ed-a511-0050568377a0",
                 "notes": null,
-                "publicationid": "3f48683c-46b1-11ee-81bc-080027b7463b",
-                "published_time": "2023-08-29T16:15:57.993"
+                "publicationid": "de4eed46-93a7-11ee-96d0-005056a3bc47",
+                "published_time": "2023-12-05T13:52:49.360"
             },
             "relatable_resource_model_ids": [],
             "resource_2_resource_constraints": [],
@@ -2630,9 +2643,9 @@
         }
     ],
     "metadata": {
-        "db": "PostgreSQL 15.3 on x86_64-pc-linux-gnu, compiled by gcc (GCC) 11.3.1 20221121 (Red Hat 11.3.1-4), 64-bit",
-        "git hash": "857a693c6 2023-08-28 11:26:52 -0700",
+        "db": "PostgreSQL 16.1 on x86_64-pc-linux-gnu, compiled by gcc (GCC) 11.4.1 20230605 (Red Hat 11.4.1-2), 64-bit",
+        "git hash": "fatal: not a git repository (or any parent up to mount point /fs)",
         "os": "Linux",
-        "os version": "5.14.0-333.el9.x86_64"
+        "os version": "5.14.0-284.30.1.el9_2.x86_64"
     }
 }

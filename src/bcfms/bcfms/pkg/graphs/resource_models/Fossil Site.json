@@ -638,7 +638,7 @@
                     },
                     "function_id": "60000000-0000-0000-0000-000000000001",
                     "graph_id": "fac1b1b4-1034-11ec-8a7a-5254008afee6",
-                    "id": "513f0026-754b-4d64-ae94-98b2edd01edc"
+                    "id": "b56b27d3-5716-4542-bcaa-e2f228678aff"
                 }
             ],
             "graphid": "fac1b1b4-1034-11ec-8a7a-5254008afee6",
@@ -705,11 +705,13 @@
                 },
                 {
                     "alias": "description",
-                    "config": {},
+                    "config": {
+                        "en": ""
+                    },
                     "datatype": "string",
                     "description": null,
                     "exportable": false,
-                    "fieldname": null,
+                    "fieldname": "desc",
                     "graph_id": "fac1b1b4-1034-11ec-8a7a-5254008afee6",
                     "hascustomalias": false,
                     "is_collector": false,
@@ -774,7 +776,7 @@
                     "datatype": "geojson-feature-collection",
                     "description": "Represents a single node in a graph",
                     "exportable": true,
-                    "fieldname": "geom",
+                    "fieldname": "area_geom",
                     "graph_id": "fac1b1b4-1034-11ec-8a7a-5254008afee6",
                     "hascustomalias": false,
                     "is_collector": false,
@@ -797,7 +799,7 @@
                     "datatype": "concept",
                     "description": "Represents a single node in a graph",
                     "exportable": false,
-                    "fieldname": "",
+                    "fieldname": "geom_qlfr",
                     "graph_id": "fac1b1b4-1034-11ec-8a7a-5254008afee6",
                     "hascustomalias": false,
                     "is_collector": false,
@@ -843,7 +845,7 @@
                     "datatype": "string",
                     "description": null,
                     "exportable": true,
-                    "fieldname": "name",
+                    "fieldname": "site_name",
                     "graph_id": "fac1b1b4-1034-11ec-8a7a-5254008afee6",
                     "hascustomalias": false,
                     "is_collector": true,
@@ -960,8 +962,8 @@
             "publication": {
                 "graph_id": "fac1b1b4-1034-11ec-8a7a-5254008afee6",
                 "notes": null,
-                "publicationid": "0ca6050e-6c2e-11ee-8a29-0050568377a0",
-                "published_time": "2023-10-16T09:12:33.157"
+                "publicationid": "6909125a-93a7-11ee-a22e-005056a3bc47",
+                "published_time": "2023-12-05T13:49:32.608"
             },
             "relatable_resource_model_ids": [],
             "resource_2_resource_constraints": [],
@@ -994,9 +996,9 @@
         }
     ],
     "metadata": {
-        "db": "PostgreSQL 12.11 on x86_64-pc-linux-gnu, compiled by gcc (GCC) 4.8.5 20150623 (Red Hat 4.8.5-44), 64-bit",
-        "git hash": "6656b68 2023-10-07 06:15:00 -0700",
+        "db": "PostgreSQL 16.1 on x86_64-pc-linux-gnu, compiled by gcc (GCC) 11.4.1 20230605 (Red Hat 11.4.1-2), 64-bit",
+        "git hash": "fatal: not a git repository (or any parent up to mount point /fs)",
         "os": "Linux",
-        "os version": "3.10.0-1160.92.1.el7.x86_64"
+        "os version": "5.14.0-284.30.1.el9_2.x86_64"
     }
 }

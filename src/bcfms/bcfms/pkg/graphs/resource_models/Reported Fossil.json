@@ -170,6 +170,7 @@
                     "card_id": "c26e76e8-82db-11ec-b00b-5254008afee6",
                     "config": {
                         "acceptedFiles": "",
+                        "defaultValue": [],
                         "label": "Photographs",
                         "maxFilesize": "200",
                         "rerender": true
@@ -525,7 +526,7 @@
                     },
                     "function_id": "60000000-0000-0000-0000-000000000001",
                     "graph_id": "82efcd14-82db-11ec-b8e6-5254008afee6",
-                    "id": "003596a8-be8e-4dd6-9711-e753ebed5b0a"
+                    "id": "73216e0d-7f91-4d61-b6a7-8f60e45a0cdf"
                 }
             ],
             "graphid": "82efcd14-82db-11ec-b8e6-5254008afee6",
@@ -655,11 +656,13 @@
                 },
                 {
                     "alias": "location_description",
-                    "config": {},
+                    "config": {
+                        "en": ""
+                    },
                     "datatype": "string",
                     "description": null,
                     "exportable": false,
-                    "fieldname": null,
+                    "fieldname": "rf_locdesc",
                     "graph_id": "82efcd14-82db-11ec-b8e6-5254008afee6",
                     "hascustomalias": false,
                     "is_collector": false,
@@ -678,6 +681,7 @@
                     "alias": "location_map_file",
                     "config": {
                         "activateMax": false,
+                        "imagesOnly": false,
                         "maxFileSize": null,
                         "maxFiles": 1
                     },
@@ -724,6 +728,7 @@
                     "alias": "photographs",
                     "config": {
                         "activateMax": false,
+                        "imagesOnly": false,
                         "maxFileSize": null,
                         "maxFiles": 5
                     },
@@ -774,7 +779,7 @@
                     "datatype": "geojson-feature-collection",
                     "description": null,
                     "exportable": false,
-                    "fieldname": null,
+                    "fieldname": "repfos_loc",
                     "graph_id": "82efcd14-82db-11ec-b8e6-5254008afee6",
                     "hascustomalias": false,
                     "is_collector": true,
@@ -797,7 +802,7 @@
                     "datatype": "concept",
                     "description": null,
                     "exportable": false,
-                    "fieldname": null,
+                    "fieldname": "geom_qlfr",
                     "graph_id": "82efcd14-82db-11ec-b8e6-5254008afee6",
                     "hascustomalias": false,
                     "is_collector": false,
@@ -859,8 +864,8 @@
             "publication": {
                 "graph_id": "82efcd14-82db-11ec-b8e6-5254008afee6",
                 "notes": null,
-                "publicationid": "5fd9f4fc-3799-11ee-b1ee-0050568377a0",
-                "published_time": "2023-08-10T11:17:17.270"
+                "publicationid": "e86669d2-93aa-11ee-bf36-005056a3bc47",
+                "published_time": "2023-12-05T14:14:34.781"
             },
             "relatable_resource_model_ids": [],
             "resource_2_resource_constraints": [],
@@ -893,9 +898,9 @@
         }
     ],
     "metadata": {
-        "db": "PostgreSQL 12.11 on x86_64-pc-linux-gnu, compiled by gcc (GCC) 4.8.5 20150623 (Red Hat 4.8.5-44), 64-bit",
-        "git hash": "8661345 2023-07-27 09:40:45 -0700",
+        "db": "PostgreSQL 16.1 on x86_64-pc-linux-gnu, compiled by gcc (GCC) 11.4.1 20230605 (Red Hat 11.4.1-2), 64-bit",
+        "git hash": "fatal: not a git repository (or any parent up to mount point /fs)",
         "os": "Linux",
-        "os version": "3.10.0-1160.92.1.el7.x86_64"
+        "os version": "5.14.0-284.30.1.el9_2.x86_64"
     }
 }

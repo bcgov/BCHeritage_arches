@@ -386,6 +386,7 @@
                     "card_id": "10710974-fb0c-11ed-a587-5254004d77d3",
                     "config": {
                         "acceptedFiles": "",
+                        "defaultValue": [],
                         "label": "Attachments",
                         "maxFilesize": "200",
                         "rerender": true
@@ -717,6 +718,7 @@
                     "card_id": "109a8e72-d968-11ed-b8ae-5254004d77d3",
                     "config": {
                         "acceptedFiles": ".pdf",
+                        "defaultValue": [],
                         "label": "Final Report File",
                         "maxFilesize": "50",
                         "rerender": true
@@ -763,6 +765,7 @@
                     "card_id": "109b48ee-d968-11ed-b8ae-5254004d77d3",
                     "config": {
                         "acceptedFiles": "",
+                        "defaultValue": [],
                         "label": "Research Plan File",
                         "maxFilesize": "200",
                         "rerender": true
@@ -1673,6 +1676,7 @@
                     "alias": "attachments",
                     "config": {
                         "activateMax": false,
+                        "imagesOnly": false,
                         "maxFileSize": null,
                         "maxFiles": 3
                     },
@@ -2033,7 +2037,7 @@
                     "datatype": "concept",
                     "description": "If only one geometry is drawn, qualify the meaning of the geometry.",
                     "exportable": false,
-                    "fieldname": null,
+                    "fieldname": "geom_qlfr",
                     "graph_id": "109a0272-d968-11ed-b8ae-5254004d77d3",
                     "hascustomalias": false,
                     "is_collector": false,
@@ -2421,7 +2425,7 @@
                     "datatype": "string",
                     "description": null,
                     "exportable": false,
-                    "fieldname": null,
+                    "fieldname": "rp_locdesc",
                     "graph_id": "109a0272-d968-11ed-b8ae-5254004d77d3",
                     "hascustomalias": false,
                     "is_collector": false,
@@ -2440,6 +2444,7 @@
                     "alias": "final_report_file",
                     "config": {
                         "activateMax": false,
+                        "imagesOnly": false,
                         "maxFileSize": null,
                         "maxFiles": 4
                     },
@@ -2567,7 +2572,7 @@
                     "datatype": "resource-instance",
                     "description": null,
                     "exportable": false,
-                    "fieldname": null,
+                    "fieldname": "init_name",
                     "graph_id": "109a0272-d968-11ed-b8ae-5254004d77d3",
                     "hascustomalias": false,
                     "is_collector": false,
@@ -2687,6 +2692,7 @@
                     "alias": "research_plan_file",
                     "config": {
                         "activateMax": false,
+                        "imagesOnly": false,
                         "maxFileSize": null,
                         "maxFiles": 1
                     },
@@ -2737,7 +2743,7 @@
                     "datatype": "geojson-feature-collection",
                     "description": null,
                     "exportable": false,
-                    "fieldname": null,
+                    "fieldname": "res_loc",
                     "graph_id": "109a0272-d968-11ed-b8ae-5254004d77d3",
                     "hascustomalias": false,
                     "is_collector": false,
@@ -2783,7 +2789,7 @@
                     "datatype": "string",
                     "description": null,
                     "exportable": false,
-                    "fieldname": null,
+                    "fieldname": "proj_name",
                     "graph_id": "109a0272-d968-11ed-b8ae-5254004d77d3",
                     "hascustomalias": false,
                     "is_collector": false,
@@ -2956,7 +2962,7 @@
                     "datatype": "date",
                     "description": null,
                     "exportable": false,
-                    "fieldname": null,
+                    "fieldname": "proj_year",
                     "graph_id": "109a0272-d968-11ed-b8ae-5254004d77d3",
                     "hascustomalias": false,
                     "is_collector": false,
@@ -3119,8 +3125,8 @@
             "publication": {
                 "graph_id": "109a0272-d968-11ed-b8ae-5254004d77d3",
                 "notes": null,
-                "publicationid": "d305213e-6a18-11ee-8e92-0050568377a0",
-                "published_time": "2023-10-13T17:35:34.715"
+                "publicationid": "ac5f1290-93aa-11ee-b288-005056a3bc47",
+                "published_time": "2023-12-05T14:12:54.069"
             },
             "relatable_resource_model_ids": [],
             "resource_2_resource_constraints": [],
@@ -3155,9 +3161,9 @@
         }
     ],
     "metadata": {
-        "db": "PostgreSQL 12.11 on x86_64-pc-linux-gnu, compiled by gcc (GCC) 4.8.5 20150623 (Red Hat 4.8.5-44), 64-bit",
-        "git hash": "6656b68 2023-10-07 06:15:00 -0700",
+        "db": "PostgreSQL 16.1 on x86_64-pc-linux-gnu, compiled by gcc (GCC) 11.4.1 20230605 (Red Hat 11.4.1-2), 64-bit",
+        "git hash": "fatal: not a git repository (or any parent up to mount point /fs)",
         "os": "Linux",
-        "os version": "3.10.0-1160.92.1.el7.x86_64"
+        "os version": "5.14.0-284.30.1.el9_2.x86_64"
     }
 }

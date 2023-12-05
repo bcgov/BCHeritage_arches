@@ -2076,6 +2076,18 @@
             "functions_x_graphs": [
                 {
                     "config": {
+                        "node_id": "7f2c823e-6c51-11ed-9b7d-5254004d77d3",
+                        "triggering_nodegroups": [
+                            "7f2c2dde-6c51-11ed-9b7d-5254004d77d3"
+                        ],
+                        "unique_value": true
+                    },
+                    "function_id": "60000000-0000-0000-0000-000000002001",
+                    "graph_id": "7f2c2082-6c51-11ed-9b7d-5254004d77d3",
+                    "id": "b4fded03-b927-4faf-80b5-d419a39e6827"
+                },
+                {
+                    "config": {
                         "class_name": "BCFossilSampleDescriptors",
                         "descriptor_types": {
                             "description": {
@@ -2104,19 +2116,7 @@
                     },
                     "function_id": "60000000-0000-0000-0000-000000001004",
                     "graph_id": "7f2c2082-6c51-11ed-9b7d-5254004d77d3",
-                    "id": "8e5a7610-3231-4877-b02d-b2ff8b523702"
-                },
-                {
-                    "config": {
-                        "node_id": "7f2c823e-6c51-11ed-9b7d-5254004d77d3",
-                        "triggering_nodegroups": [
-                            "7f2c2dde-6c51-11ed-9b7d-5254004d77d3"
-                        ],
-                        "unique_value": true
-                    },
-                    "function_id": "60000000-0000-0000-0000-000000002001",
-                    "graph_id": "7f2c2082-6c51-11ed-9b7d-5254004d77d3",
-                    "id": "f75f32ad-f873-4fcc-8eae-4c38668fcc5b"
+                    "id": "c6fd4f25-a527-401b-b9ab-ed15b09678dd"
                 }
             ],
             "graphid": "7f2c2082-6c51-11ed-9b7d-5254004d77d3",
@@ -2223,7 +2223,7 @@
                     },
                     "datatype": "boolean",
                     "description": null,
-                    "exportable": true,
+                    "exportable": false,
                     "fieldname": "fossil_uc",
                     "graph_id": "7f2c2082-6c51-11ed-9b7d-5254004d77d3",
                     "hascustomalias": false,
@@ -2749,7 +2749,7 @@
                     "datatype": "string",
                     "description": null,
                     "exportable": false,
-                    "fieldname": null,
+                    "fieldname": "stor_ref",
                     "graph_id": "7f2c2082-6c51-11ed-9b7d-5254004d77d3",
                     "hascustomalias": false,
                     "is_collector": false,
@@ -2782,7 +2782,7 @@
                     },
                     "datatype": "resource-instance",
                     "description": null,
-                    "exportable": true,
+                    "exportable": false,
                     "fieldname": "rep_name",
                     "graph_id": "7f2c2082-6c51-11ed-9b7d-5254004d77d3",
                     "hascustomalias": false,
@@ -3273,7 +3273,7 @@
                     },
                     "datatype": "boolean",
                     "description": null,
-                    "exportable": true,
+                    "exportable": false,
                     "fieldname": "com_nameuc",
                     "graph_id": "7f2c2082-6c51-11ed-9b7d-5254004d77d3",
                     "hascustomalias": false,
@@ -3374,8 +3374,8 @@
                     },
                     "datatype": "concept",
                     "description": "",
-                    "exportable": false,
-                    "fieldname": null,
+                    "exportable": true,
+                    "fieldname": "size",
                     "graph_id": "7f2c2082-6c51-11ed-9b7d-5254004d77d3",
                     "hascustomalias": true,
                     "is_collector": false,
@@ -3814,8 +3814,8 @@
             "publication": {
                 "graph_id": "7f2c2082-6c51-11ed-9b7d-5254004d77d3",
                 "notes": null,
-                "publicationid": "25894b1e-7f28-11ee-a786-080027b7463b",
-                "published_time": "2023-11-09T11:48:10.023"
+                "publicationid": "393edbcc-93ac-11ee-bf36-005056a3bc47",
+                "published_time": "2023-12-05T14:23:59.914"
             },
             "relatable_resource_model_ids": [],
             "resource_2_resource_constraints": [],
@@ -3848,9 +3848,9 @@
         }
     ],
     "metadata": {
-        "db": "PostgreSQL 16.0 on x86_64-pc-linux-gnu, compiled by gcc (GCC) 11.3.1 20221121 (Red Hat 11.3.1-4), 64-bit",
-        "git hash": "367af3cea 2023-11-09 09:30:34 -0800",
+        "db": "PostgreSQL 16.1 on x86_64-pc-linux-gnu, compiled by gcc (GCC) 11.4.1 20230605 (Red Hat 11.4.1-2), 64-bit",
+        "git hash": "fatal: not a git repository (or any parent up to mount point /fs)",
         "os": "Linux",
-        "os version": "5.14.0-333.el9.x86_64"
+        "os version": "5.14.0-284.30.1.el9_2.x86_64"
     }
 }
