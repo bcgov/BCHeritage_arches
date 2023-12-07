@@ -4,7 +4,21 @@ create or replace function get_map_attribute_data(p_resourceinstanceid uuid, nod
 declare
     data jsonb;
 begin
-    if nodeid = 'c66518e2-10c6-11ec-adef-5254008afee6'::uuid then -- Important Fossil Areas
+    if nodeid = '692d8938-9c1d-11ec-a5e5-5254008afee6'::uuid then -- Collection Events
+        with collection_events as
+            (select jsonb_array_elements(tiledata -> '5e4b75ba-a079-11ec-bc6e-5254008afee6') ->>
+                    'resourceId' sampleResourceId
+             from tiles
+             where resourceinstanceid = p_resourceinstanceid
+               and nodegroupid = '5e4b75ba-a079-11ec-bc6e-5254008afee6'),
+            samples as (select resourceinstanceid,
+                               (tiledata ->> '80f69f30-6f3c-11ed-92e2-5254004d77d3')::uuid size_category_uuid from tiles where nodegroupid = '80f68310-6f3c-11ed-92e2-5254004d77d3')
+        select jsonb_build_object('size_categories', jsonb_agg(size_categories), 'both', cardinality(array_agg(size_categories))) from
+        (select distinct __arches_get_concept_label(size_category_uuid) size_categories
+         into data
+        from collection_events ce left join
+              samples on samples.resourceinstanceid = ce.sampleResourceId::uuid) a;
+    elsif nodeid = 'c66518e2-10c6-11ec-adef-5254008afee6'::uuid then -- Important Fossil Areas
         select jsonb_build_object( 'name', namet.tiledata->'49b837b0-10c7-11ec-81af-5254008afee6'->'en'->>'value',
                                    'ranking', rankt.tiledata -> '69230292-10c7-11ec-8a7a-5254008afee6' -> 'en' ->> 'value')
         into data

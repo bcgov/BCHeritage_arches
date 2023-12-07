@@ -548,8 +548,8 @@
                     "config": {
                         "basemap": "British Columbia Roads",
                         "bearing": 0,
-                        "centerX": -125.2111215300115,
-                        "centerY": 54.5952920093056,
+                        "centerX": -125.8041191652735,
+                        "centerY": 54.53909267900477,
                         "defaultValue": "",
                         "defaultValueType": "",
                         "featureColor": "#FF0000",
@@ -579,7 +579,7 @@
                         "overlayOpacity": 0,
                         "pitch": 0,
                         "rerender": true,
-                        "zoom": 0.5610978337913543
+                        "zoom": 4.020978191846662
                     },
                     "id": "58fb5650-c9ef-4431-a65a-32b93b83505e",
                     "label": {
@@ -1203,7 +1203,7 @@
                     },
                     "function_id": "60000000-0000-0000-0000-000000001001",
                     "graph_id": "df3ee1ae-9c1c-11ec-964d-5254008afee6",
-                    "id": "dcb5bae3-a62f-48c4-957e-abc82cd61cc0"
+                    "id": "dee86a2b-65cc-490a-882b-94c69ef1dc16"
                 }
             ],
             "graphid": "df3ee1ae-9c1c-11ec-964d-5254008afee6",
@@ -1496,8 +1496,8 @@
                     "alias": "spatial_coordinates_geometry",
                     "config": {
                         "addToMap": false,
-                        "advancedStyle": "",
-                        "advancedStyling": false,
+                        "advancedStyle": "[\n  {\n    \"id\": \"resources-fill-692d8938-9c1d-11ec-a5e5-5254008afee6\",\n    \"type\": \"fill\",\n    \"source\": \"resources-692d8938-9c1d-11ec-a5e5-5254008afee6\",\n    \"source-layer\": \"692d8938-9c1d-11ec-a5e5-5254008afee6\",\n    \"layout\": {\n      \"visibility\": \"visible\"\n    },\n    \"filter\": [\n      \"all\",\n      [\n        \"==\",\n        \"$type\",\n        \"Polygon\"\n      ],\n      [\n        \"==\",\n        \"total\",\n        1\n      ]\n    ],\n    \"paint\": {\n      \"fill-color\": \"rgba(244,109,67, 0.5)\"\n    }\n  },\n  {\n    \"id\": \"resources-fill-692d8938-9c1d-11ec-a5e5-5254008afee6-click\",\n    \"type\": \"fill\",\n    \"source\": \"resources-692d8938-9c1d-11ec-a5e5-5254008afee6\",\n    \"source-layer\": \"692d8938-9c1d-11ec-a5e5-5254008afee6\",\n    \"layout\": {\n      \"visibility\": \"visible\"\n    },\n    \"filter\": [\n      \"all\",\n      [\n        \"==\",\n        \"$type\",\n        \"Polygon\"\n      ],\n      [\n        \"==\",\n        \"total\",\n        1\n      ],\n      [\n        \"==\",\n        \"resourceinstanceid\",\n        \"\"\n      ]\n    ],\n    \"paint\": {\n      \"fill-color\": \"rgba(244,109,67, 0.5)\"\n    }\n  },\n  {\n    \"id\": \"resources-fill-692d8938-9c1d-11ec-a5e5-5254008afee6-hover\",\n    \"type\": \"fill\",\n    \"source\": \"resources-692d8938-9c1d-11ec-a5e5-5254008afee6\",\n    \"source-layer\": \"692d8938-9c1d-11ec-a5e5-5254008afee6\",\n    \"layout\": {\n      \"visibility\": \"visible\"\n    },\n    \"filter\": [\n      \"all\",\n      [\n        \"==\",\n        \"$type\",\n        \"Polygon\"\n      ],\n      [\n        \"==\",\n        \"total\",\n        1\n      ],\n      [\n        \"==\",\n        \"resourceinstanceid\",\n        \"\"\n      ]\n    ],\n    \"paint\": {\n      \"fill-color\": \"rgba(244,109,67, 0.5)\"\n    }\n  },\n  {\n    \"id\": \"resources-poly-outline-692d8938-9c1d-11ec-a5e5-5254008afee6\",\n    \"type\": \"line\",\n    \"source\": \"resources-692d8938-9c1d-11ec-a5e5-5254008afee6\",\n    \"source-layer\": \"692d8938-9c1d-11ec-a5e5-5254008afee6\",\n    \"layout\": {\n      \"visibility\": \"visible\"\n    },\n    \"filter\": [\n      \"all\",\n      [\n        \"==\",\n        \"$type\",\n        \"Polygon\"\n      ],\n      [\n        \"==\",\n        \"total\",\n        1\n      ]\n    ],\n    \"paint\": {\n      \"line-width\": 2,\n      \"line-color\": \"rgba(244,109,67, 0.7)\"\n    }\n  },\n  {\n    \"id\": \"resources-poly-outline-692d8938-9c1d-11ec-a5e5-5254008afee6-hover\",\n    \"type\": \"line\",\n    \"source\": \"resources-692d8938-9c1d-11ec-a5e5-5254008afee6\",\n    \"source-layer\": \"692d8938-9c1d-11ec-a5e5-5254008afee6\",\n    \"layout\": {\n      \"visibility\": \"visible\"\n    },\n    \"filter\": [\n      \"all\",\n      [\n        \"==\",\n        \"$type\",\n        \"Polygon\"\n      ],\n      [\n        \"==\",\n        \"total\",\n        1\n      ],\n      [\n        \"==\",\n        \"resourceinstanceid\",\n        \"\"\n      ]\n    ],\n    \"paint\": {\n      \"line-width\": 4,\n      \"line-color\": \"rgba(244,109,67, 0.7)\"\n    }\n  },\n  {\n    \"id\": \"resources-poly-outline-692d8938-9c1d-11ec-a5e5-5254008afee6-click\",\n    \"type\": \"line\",\n    \"source\": \"resources-692d8938-9c1d-11ec-a5e5-5254008afee6\",\n    \"source-layer\": \"692d8938-9c1d-11ec-a5e5-5254008afee6\",\n    \"layout\": {\n      \"visibility\": \"visible\"\n    },\n    \"filter\": [\n      \"all\",\n      [\n        \"==\",\n        \"$type\",\n        \"Polygon\"\n      ],\n      [\n        \"==\",\n        \"total\",\n        1\n      ],\n      [\n        \"==\",\n        \"resourceinstanceid\",\n        \"\"\n      ]\n    ],\n    \"paint\": {\n      \"line-width\": 4,\n      \"line-color\": \"rgba(244,109,67, 0.7)\"\n    }\n  },\n  {\n    \"id\": \"resources-line-halo-692d8938-9c1d-11ec-a5e5-5254008afee6\",\n    \"type\": \"line\",\n    \"source\": \"resources-692d8938-9c1d-11ec-a5e5-5254008afee6\",\n    \"source-layer\": \"692d8938-9c1d-11ec-a5e5-5254008afee6\",\n    \"layout\": {\n      \"visibility\": \"visible\"\n    },\n    \"filter\": [\n      \"all\",\n      [\n        \"==\",\n        \"$type\",\n        \"LineString\"\n      ],\n      [\n        \"==\",\n        \"total\",\n        1\n      ]\n    ],\n    \"paint\": {\n      \"line-width\": 4,\n      \"line-color\": \"rgba(244,109,67, 0.5)\"\n    }\n  },\n  {\n    \"id\": \"resources-line-692d8938-9c1d-11ec-a5e5-5254008afee6\",\n    \"type\": \"line\",\n    \"source\": \"resources-692d8938-9c1d-11ec-a5e5-5254008afee6\",\n    \"source-layer\": \"692d8938-9c1d-11ec-a5e5-5254008afee6\",\n    \"layout\": {\n      \"visibility\": \"visible\"\n    },\n    \"filter\": [\n      \"all\",\n      [\n        \"==\",\n        \"$type\",\n        \"LineString\"\n      ],\n      [\n        \"==\",\n        \"total\",\n        1\n      ]\n    ],\n    \"paint\": {\n      \"line-width\": 2,\n      \"line-color\": \"rgba(244,109,67, 0.7)\"\n    }\n  },\n  {\n    \"id\": \"resources-line-halo-692d8938-9c1d-11ec-a5e5-5254008afee6-hover\",\n    \"type\": \"line\",\n    \"source\": \"resources-692d8938-9c1d-11ec-a5e5-5254008afee6\",\n    \"source-layer\": \"692d8938-9c1d-11ec-a5e5-5254008afee6\",\n    \"layout\": {\n      \"visibility\": \"visible\"\n    },\n    \"filter\": [\n      \"all\",\n      [\n        \"==\",\n        \"$type\",\n        \"LineString\"\n      ],\n      [\n        \"==\",\n        \"total\",\n        1\n      ],\n      [\n        \"==\",\n        \"resourceinstanceid\",\n        \"\"\n      ]\n    ],\n    \"paint\": {\n      \"line-width\": 8,\n      \"line-color\": \"rgba(244,109,67, 0.5)\"\n    }\n  },\n  {\n    \"id\": \"resources-line-692d8938-9c1d-11ec-a5e5-5254008afee6-hover\",\n    \"type\": \"line\",\n    \"source\": \"resources-692d8938-9c1d-11ec-a5e5-5254008afee6\",\n    \"source-layer\": \"692d8938-9c1d-11ec-a5e5-5254008afee6\",\n    \"layout\": {\n      \"visibility\": \"visible\"\n    },\n    \"filter\": [\n      \"all\",\n      [\n        \"==\",\n        \"$type\",\n        \"LineString\"\n      ],\n      [\n        \"==\",\n        \"total\",\n        1\n      ],\n      [\n        \"==\",\n        \"resourceinstanceid\",\n        \"\"\n      ]\n    ],\n    \"paint\": {\n      \"line-width\": 4,\n      \"line-color\": \"rgba(244,109,67, 0.7)\"\n    }\n  },\n  {\n    \"id\": \"resources-line-halo-692d8938-9c1d-11ec-a5e5-5254008afee6-click\",\n    \"type\": \"line\",\n    \"source\": \"resources-692d8938-9c1d-11ec-a5e5-5254008afee6\",\n    \"source-layer\": \"692d8938-9c1d-11ec-a5e5-5254008afee6\",\n    \"layout\": {\n      \"visibility\": \"visible\"\n    },\n    \"filter\": [\n      \"all\",\n      [\n        \"==\",\n        \"$type\",\n        \"LineString\"\n      ],\n      [\n        \"==\",\n        \"total\",\n        1\n      ],\n      [\n        \"==\",\n        \"resourceinstanceid\",\n        \"\"\n      ]\n    ],\n    \"paint\": {\n      \"line-width\": 8,\n      \"line-color\": \"rgba(244,109,67, 0.5)\"\n    }\n  },\n  {\n    \"id\": \"resources-line-692d8938-9c1d-11ec-a5e5-5254008afee6-click\",\n    \"type\": \"line\",\n    \"source\": \"resources-692d8938-9c1d-11ec-a5e5-5254008afee6\",\n    \"source-layer\": \"692d8938-9c1d-11ec-a5e5-5254008afee6\",\n    \"layout\": {\n      \"visibility\": \"visible\"\n    },\n    \"filter\": [\n      \"all\",\n      [\n        \"==\",\n        \"$type\",\n        \"LineString\"\n      ],\n      [\n        \"==\",\n        \"total\",\n        1\n      ],\n      [\n        \"==\",\n        \"resourceinstanceid\",\n        \"\"\n      ]\n    ],\n    \"paint\": {\n      \"line-width\": 4,\n      \"line-color\": \"rgba(244,109,67, 0.7)\"\n    }\n  },\n  {\n    \"id\": \"resources-point-692d8938-9c1d-11ec-a5e5-5254008afee6\",\n    \"type\": \"symbol\",\n    \"source\": \"resources-692d8938-9c1d-11ec-a5e5-5254008afee6\",\n    \"source-layer\": \"692d8938-9c1d-11ec-a5e5-5254008afee6\",\n    \"layout\": {\n      \"visibility\": \"visible\",\n      \"icon-image\": [\"case\",\n                      [\"all\", [\"in\", \"Macrofossil\", [\"get\",\"size_categories\"]],\n                              [\"in\", \"Microfossil\", [\"get\",\"size_categories\"]]\n                      ], \"macromicro-marker\",\n                      [\"in\", \"Macrofossil\", [\"get\",\"size_categories\"]], \"macro-marker\",\n                      [\"in\", \"Microfossil\", [\"get\",\"size_categories\"]], \"micro-marker\",\n                       \"nosize-marker\" ],\n      \"icon-ignore-placement\": true,\n      \"icon-allow-overlap\": true,\n      \"symbol-sort-key\": [\"case\",\n        [\"all\", [\"in\", \"Macrofossil\", [\"get\",\"size_categories\"]],\n          [\"in\", \"Microfossil\", [\"get\",\"size_categories\"]]\n        ], 10,\n        [\"in\", \"Macrofossil\", [\"get\",\"size_categories\"]], 5,\n        [\"in\", \"Microfossil\", [\"get\",\"size_categories\"]], 5,\n        0 ]\n    },\n    \"filter\": [\n      \"all\",\n      [\n        \"==\",\n        \"$type\",\n        \"Point\"\n      ],\n      [\n        \"==\",\n        \"total\",\n        1\n      ]\n    ],\n    \"paint\": {\n    }\n  },\n  {\n    \"id\": \"resources-point-halo-692d8938-9c1d-11ec-a5e5-5254008afee6-click\",\n    \"type\": \"circle\",\n    \"source\": \"resources-692d8938-9c1d-11ec-a5e5-5254008afee6\",\n    \"source-layer\": \"692d8938-9c1d-11ec-a5e5-5254008afee6\",\n    \"layout\": {\n      \"visibility\": \"visible\"\n    },\n    \"filter\": [\n      \"all\",\n      [\n        \"==\",\n        \"$type\",\n        \"Point\"\n      ],\n      [\n        \"==\",\n        \"total\",\n        1\n      ],\n      [\n        \"==\",\n        \"resourceinstanceid\",\n        \"\"\n      ]\n    ],\n    \"paint\": {\n      \"circle-radius\": 12,\n      \"circle-color\": \"rgba(244,109,67,0.4)\"\n    }\n  },\n  {\n    \"id\": \"resources-point-692d8938-9c1d-11ec-a5e5-5254008afee6-click\",\n    \"type\": \"circle\",\n    \"source\": \"resources-692d8938-9c1d-11ec-a5e5-5254008afee6\",\n    \"source-layer\": \"692d8938-9c1d-11ec-a5e5-5254008afee6\",\n    \"layout\": {\n      \"visibility\": \"visible\"\n    },\n    \"filter\": [\n      \"all\",\n      [\n        \"==\",\n        \"$type\",\n        \"Point\"\n      ],\n      [\n        \"==\",\n        \"total\",\n        1\n      ],\n      [\n        \"==\",\n        \"resourceinstanceid\",\n        \"\"\n      ]\n    ],\n    \"paint\": {\n      \"circle-radius\": 6,\n      \"circle-color\": \"rgba(244,109,67,0.7)\"\n    }\n  },\n  {\n    \"id\": \"resources-cluster-point-halo-692d8938-9c1d-11ec-a5e5-5254008afee6\",\n    \"type\": \"circle\",\n    \"source\": \"resources-692d8938-9c1d-11ec-a5e5-5254008afee6\",\n    \"source-layer\": \"692d8938-9c1d-11ec-a5e5-5254008afee6\",\n    \"layout\": {\n      \"visibility\": \"visible\"\n    },\n    \"filter\": [\n      \"all\",\n      [\n        \"==\",\n        \"$type\",\n        \"Point\"\n      ],\n      [\n        \">\",\n        \"total\",\n        1\n      ]\n    ],\n    \"paint\": {\n      \"circle-radius\": {\n        \"property\": \"total\",\n        \"stops\": [\n          [\n            0,\n            22\n          ],\n          [\n            50,\n            24\n          ],\n          [\n            100,\n            26\n          ],\n          [\n            200,\n            28\n          ],\n          [\n            400,\n            30\n          ],\n          [\n            800,\n            32\n          ],\n          [\n            1200,\n            34\n          ],\n          [\n            1600,\n            36\n          ],\n          [\n            2000,\n            38\n          ],\n          [\n            2500,\n            40\n          ],\n          [\n            3000,\n            42\n          ],\n          [\n            4000,\n            44\n          ],\n          [\n            5000,\n            46\n          ]\n        ]\n      },\n      \"circle-color\": \"rgba(244,109,67,0.4)\"\n    }\n  },\n  {\n    \"id\": \"resources-cluster-point-692d8938-9c1d-11ec-a5e5-5254008afee6\",\n    \"type\": \"circle\",\n    \"source\": \"resources-692d8938-9c1d-11ec-a5e5-5254008afee6\",\n    \"source-layer\": \"692d8938-9c1d-11ec-a5e5-5254008afee6\",\n    \"layout\": {\n      \"visibility\": \"visible\"\n    },\n    \"filter\": [\n      \"all\",\n      [\n        \"==\",\n        \"$type\",\n        \"Point\"\n      ],\n      [\n        \">\",\n        \"total\",\n        1\n      ]\n    ],\n    \"paint\": {\n      \"circle-radius\": {\n        \"property\": \"total\",\n        \"type\": \"exponential\",\n        \"stops\": [\n          [\n            0,\n            12\n          ],\n          [\n            50,\n            14\n          ],\n          [\n            100,\n            16\n          ],\n          [\n            200,\n            18\n          ],\n          [\n            400,\n            20\n          ],\n          [\n            800,\n            22\n          ],\n          [\n            1200,\n            24\n          ],\n          [\n            1600,\n            26\n          ],\n          [\n            2000,\n            28\n          ],\n          [\n            2500,\n            30\n          ],\n          [\n            3000,\n            32\n          ],\n          [\n            4000,\n            34\n          ],\n          [\n            5000,\n            36\n          ]\n        ]\n      },\n      \"circle-color\": \"rgba(244,109,67,0.7)\"\n    }\n  },\n  {\n    \"id\": \"resources-cluster-count-692d8938-9c1d-11ec-a5e5-5254008afee6\",\n    \"type\": \"symbol\",\n    \"source\": \"resources-692d8938-9c1d-11ec-a5e5-5254008afee6\",\n    \"source-layer\": \"692d8938-9c1d-11ec-a5e5-5254008afee6\",\n    \"layout\": {\n      \"text-field\": \"{total}\",\n      \"text-size\": 10\n    },\n    \"paint\": {\n      \"text-color\": \"#fff\"\n    },\n    \"filter\": [\n      \"all\",\n      [\n        \">\",\n        \"total\",\n        1\n      ]\n    ]\n  }\n]",
+                        "advancedStyling": true,
                         "clusterDistance": 20,
                         "clusterMaxZoom": 7,
                         "clusterMinPoints": 3,
@@ -1521,7 +1521,7 @@
                     "datatype": "geojson-feature-collection",
                     "description": "Represents a single node in a graph",
                     "exportable": true,
-                    "fieldname": "event_geom",
+                    "fieldname": "geom",
                     "graph_id": "df3ee1ae-9c1c-11ec-964d-5254008afee6",
                     "hascustomalias": false,
                     "is_collector": false,
@@ -1613,7 +1613,7 @@
                     "datatype": "string",
                     "description": "Represents a single node in a graph",
                     "exportable": true,
-                    "fieldname": "locdesc",
+                    "fieldname": "gen_loc",
                     "graph_id": "df3ee1ae-9c1c-11ec-964d-5254008afee6",
                     "hascustomalias": false,
                     "is_collector": false,
@@ -1656,7 +1656,7 @@
                     },
                     "datatype": "string",
                     "description": null,
-                    "exportable": false,
+                    "exportable": true,
                     "fieldname": "detail_loc",
                     "graph_id": "df3ee1ae-9c1c-11ec-964d-5254008afee6",
                     "hascustomalias": false,
@@ -1801,7 +1801,7 @@
                     },
                     "datatype": "string",
                     "description": null,
-                    "exportable": false,
+                    "exportable": true,
                     "fieldname": "note",
                     "graph_id": "df3ee1ae-9c1c-11ec-964d-5254008afee6",
                     "hascustomalias": false,
@@ -1824,7 +1824,7 @@
                     },
                     "datatype": "concept",
                     "description": null,
-                    "exportable": false,
+                    "exportable": true,
                     "fieldname": "precis",
                     "graph_id": "df3ee1ae-9c1c-11ec-964d-5254008afee6",
                     "hascustomalias": false,
@@ -1940,7 +1940,7 @@
                                 "should": []
                             }
                         },
-                        "searchString": "/int/bc-fossil-management/search?paging-filter=1&tiles=true&format=tilecsv&reportlink=false&precision=6&total=0&advanced-search=%5B%7B%22op%22%3A%22and%22%2C%22c4eca2de-9dea-11ed-9a7b-5254004d77d3%22%3A%7B%22op%22%3A%22eq%22%2C%22val%22%3A%22%22%7D%2C%22e2f1c29a-c500-11ed-9089-5254004d77d3%22%3A%7B%22op%22%3A%22eq%22%2C%22val%22%3A%22a144a32b-8ce0-41e5-af8e-bf5dd3a636ca%22%7D%2C%22c4ec9b2c-9dea-11ed-9a7b-5254004d77d3%22%3A%7B%22op%22%3A%22~%22%2C%22lang%22%3A%22en%22%2C%22val%22%3A%22%22%7D%2C%22c4eca13a-9dea-11ed-9a7b-5254004d77d3%22%3A%7B%22op%22%3A%22~%22%2C%22lang%22%3A%22en%22%2C%22val%22%3A%22%22%7D%2C%22a5b2cd72-c4f4-11ed-a06d-5254004d77d3%22%3A%7B%22op%22%3A%22~%22%2C%22lang%22%3A%22en%22%2C%22val%22%3A%22%22%7D%2C%22b5ed0072-c4f4-11ed-94de-5254004d77d3%22%3A%7B%22op%22%3A%22~%22%2C%22lang%22%3A%22en%22%2C%22val%22%3A%22%22%7D%2C%22009ba8da-faf6-11ed-ac37-5254004d77d3%22%3A%7B%22op%22%3A%22%22%2C%22val%22%3A%22%22%7D%2C%2299643f1e-9e4e-11ed-b6d5-5254004d77d3%22%3A%7B%22val%22%3A%22%22%7D%7D%5D&sort-results=asc"
+                        "searchString": "http://rhel9/int/bc-fossil-management/search?paging-filter=1&tiles=true&format=tilecsv&reportlink=false&precision=6&total=0&advanced-search=%5B%7B%22op%22%3A%22and%22%2C%22c4eca2de-9dea-11ed-9a7b-5254004d77d3%22%3A%7B%22op%22%3A%22eq%22%2C%22val%22%3A%22%22%7D%2C%22e2f1c29a-c500-11ed-9089-5254004d77d3%22%3A%7B%22op%22%3A%22eq%22%2C%22val%22%3A%22a144a32b-8ce0-41e5-af8e-bf5dd3a636ca%22%7D%2C%22c4ec9b2c-9dea-11ed-9a7b-5254004d77d3%22%3A%7B%22op%22%3A%22~%22%2C%22lang%22%3A%22en%22%2C%22val%22%3A%22%22%7D%2C%22c4eca13a-9dea-11ed-9a7b-5254004d77d3%22%3A%7B%22op%22%3A%22~%22%2C%22lang%22%3A%22en%22%2C%22val%22%3A%22%22%7D%2C%22a5b2cd72-c4f4-11ed-a06d-5254004d77d3%22%3A%7B%22op%22%3A%22~%22%2C%22lang%22%3A%22en%22%2C%22val%22%3A%22%22%7D%2C%22b5ed0072-c4f4-11ed-94de-5254004d77d3%22%3A%7B%22op%22%3A%22~%22%2C%22lang%22%3A%22en%22%2C%22val%22%3A%22%22%7D%2C%22009ba8da-faf6-11ed-ac37-5254004d77d3%22%3A%7B%22op%22%3A%22%22%2C%22val%22%3A%22%22%7D%2C%2299643f1e-9e4e-11ed-b6d5-5254004d77d3%22%3A%7B%22val%22%3A%22%22%7D%7D%5D&sort-results=asc"
                     },
                     "datatype": "resource-instance-list",
                     "description": null,
@@ -2030,8 +2030,8 @@
             "publication": {
                 "graph_id": "df3ee1ae-9c1c-11ec-964d-5254008afee6",
                 "notes": null,
-                "publicationid": "7456d688-938e-11ee-b288-005056a3bc47",
-                "published_time": "2023-12-05T10:50:54.155"
+                "publicationid": "2903070c-9522-11ee-9f58-080027b7463b",
+                "published_time": "2023-12-07T11:00:44.455"
             },
             "relatable_resource_model_ids": [],
             "resource_2_resource_constraints": [],
@@ -2064,9 +2064,9 @@
         }
     ],
     "metadata": {
-        "db": "PostgreSQL 16.1 on x86_64-pc-linux-gnu, compiled by gcc (GCC) 11.4.1 20230605 (Red Hat 11.4.1-2), 64-bit",
-        "git hash": "fatal: not a git repository (or any parent up to mount point /fs)",
+        "db": "PostgreSQL 15.3 on x86_64-pc-linux-gnu, compiled by gcc (GCC) 11.3.1 20221121 (Red Hat 11.3.1-4), 64-bit",
+        "git hash": "bbaaba233 2023-12-06 11:59:58 -0800",
         "os": "Linux",
-        "os version": "5.14.0-284.30.1.el9_2.x86_64"
+        "os version": "5.14.0-333.el9.x86_64"
     }
 }

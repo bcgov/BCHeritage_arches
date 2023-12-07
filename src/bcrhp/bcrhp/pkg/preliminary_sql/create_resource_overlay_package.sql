@@ -11,13 +11,11 @@ begin
     if nodeid = l_heritage_site_geom_node_id::uuid then -- Heritage Site
 
     -- Legislative Act tile in Heritage Site
-        with heritage_site as (select r.resourceinstanceid,
-                                      (r.descriptors->'en'->>'name') displayname,
-                                      (r.descriptors->'en'->>'map_popup') map_popup,
+        with heritage_site as (select t.resourceinstanceid,
                                       (tiledata -> l_heritage_site_legislative_act_id -> 0 ->> 'resourceId')::uuid legislative_act_id/*, * */
-                               from resource_instances r join tiles t on r.resourceinstanceid = t.resourceinstanceid
+                               from tiles t
                                where nodegroupid = '6cc30064-0d06-11ed-8804-5254008afee6'::uuid
-                               and r.resourceinstanceid = p_resourceinstanceid /*(select nodegroupid
+                               and t.resourceinstanceid = p_resourceinstanceid /*(select nodegroupid
                                                     from nodes n
                                                     where n.nodeid = l_heritage_site_legislative_act_id::uuid)*/),
              authorities as (select resourceinstanceid,
@@ -26,12 +24,12 @@ begin
                              where nodegroupid = '7789d580-3b87-11ee-a701-080027b7463b'::uuid /*((select nodegroupid
                                                    from nodes n
                                                    where n.nodeid = l_leg_act_authority_node_id::uuid))*/)
-        select jsonb_build_object('displayname',displayname, 'map_popup', map_popup, 'authorities', array_agg(distinct authority))
+        select jsonb_build_object('authorities', array_agg(distinct authority))
         into data
         from heritage_site hs
                  left join authorities a on a.resourceinstanceid = hs.legislative_act_id
         where hs.resourceinstanceid = p_resourceinstanceid
-        group by hs.resourceinstanceid, displayname, map_popup;
+        group by hs.resourceinstanceid;
     end if;
     return data;
 end;
