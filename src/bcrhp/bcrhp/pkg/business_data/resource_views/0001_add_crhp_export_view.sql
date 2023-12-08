@@ -176,9 +176,9 @@ from heritage_site.instances i
                            (select jsonb_agg(
                                            jsonb_build_object(
                                                'site_images', site_images,
-                                               'image_caption', image_caption->'en'->>'value',
+                                               'image_caption', image_features->'en'->>'value',
                                                'copyright', copyright->'en'->>'value',
-                                               'image_content_type', __arches_get_concept_label(image_content_type),
+                                               'image_content_type', __arches_get_concept_label(image_view),
                                                'image_description', regexp_replace( image_description->'en'->>'value','<br>.*',''))
                                        )) site_images
                    from heritage_site.site_images where submit_to_crhp group by resourceinstanceid) si on i.resourceinstanceid = si.resourceinstanceid
