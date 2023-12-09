@@ -32,9 +32,6 @@ DATATYPE_LOCATIONS.append('bcrhp.datatypes')
 FUNCTION_LOCATIONS.append('bcrhp.functions')
 ETL_MODULE_LOCATIONS.append('bcrhp.etl_modules')
 SEARCH_COMPONENT_LOCATIONS.append('bcrhp.search_components')
-# TEMPLATES[0]['DIRS'].append(os.path.join(APP_ROOT, 'functions', 'templates'))
-# TEMPLATES[0]['DIRS'].append(os.path.join(APP_ROOT, 'widgets', 'templates'))
-# TEMPLATES[0]['DIRS'].insert(0, os.path.join(APP_ROOT, 'templates'))
 
 LOCALE_PATHS.append(os.path.join(APP_ROOT, 'locale'))
 

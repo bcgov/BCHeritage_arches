@@ -48,6 +48,14 @@ begin
 end $$
     language plpgsql;
 
+drop function bcrhp_build_image_caption;
+create or replace function bcrhp_build_image_caption(image_view text, image_features text, image_date timestamp) returns text as $$
+begin
+    return image_view || case when image_features is not null and image_features <> '' then ' - '||image_features else '' end ||
+    case when image_date is not null then ', '||to_char(image_date,'yyyy') else '' end;
+end $$
+    language plpgsql;
+
 drop view if exists bcrhp_crhp_data_vw;
 create or replace view bcrhp_crhp_data_vw as
 select distinct i.resourceinstanceid,
@@ -176,7 +184,11 @@ from heritage_site.instances i
                            (select jsonb_agg(
                                            jsonb_build_object(
                                                'site_images', site_images,
-                                               'image_caption', image_features->'en'->>'value',
+                                               'image_caption', bcrhp_build_image_caption(
+                                                       __arches_get_concept_label(image_view),
+                                                   image_features->'en'->>'value',
+                                                   image_date
+                                                   ),
                                                'copyright', copyright->'en'->>'value',
                                                'image_content_type', __arches_get_concept_label(image_view),
                                                'image_description', regexp_replace( image_description->'en'->>'value','<br>.*',''))
