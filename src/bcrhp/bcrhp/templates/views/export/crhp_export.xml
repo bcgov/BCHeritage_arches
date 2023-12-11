@@ -5,19 +5,17 @@
             <FPTID>{{ data.borden_number }}</FPTID>
             <Name>BC</Name>
         </Jurisdiction>
-        <CommonName Language="ENGLISH">{{ data.common_names.0.name }}</CommonName>
-        <PlaceDescription Language="ENGLISH">{{ data.location_description }}</PlaceDescription>
-        <HeritageValue Language="ENGLISH">{{ data.heritage_value }}
-        </HeritageValue>
-        <CharacterDefiningElements Language="ENGLISH">{{ data.defining_elements }}
-        </CharacterDefiningElements>
+        <CommonName Language="ENGLISH">{{ data.common_names.0.name|safe }}</CommonName>
+        <PlaceDescription Language="ENGLISH">{{ data.location_description|safe }}</PlaceDescription>
+        <HeritageValue Language="ENGLISH">{{ data.heritage_value|safe }}</HeritageValue>
+        <CharacterDefiningElements Language="ENGLISH">{{ data.defining_elements|safe }}</CharacterDefiningElements>
         {% if data.common_names|length > 1 or data.other_names|length > 0 %}
         <Names>
             {% for name in data.common_names|add:data.other_names %}{% if not forloop.first %}<Name Language="ENGLISH" Type="{{ name.name_type }}">{{ name.name }}</Name>{% endif %}
             {% endfor %}
         </Names>
         {% endif %}
-        <DocumentLocation Language="ENGLISH">{{ data.document_location }}</DocumentLocation>
+        <DocumentLocation Language="ENGLISH">{{ data.document_location|safe }}</DocumentLocation>
         <Location>
             <Address Language="ENGLISH">{{ data.addresses.0.street_address }}</Address>
             <Community>{{ data.addresses.0.city }}</Community>
@@ -26,7 +24,7 @@
             <NTSMapSheetNumber>{{ location.nts_mapsheet_number }}</NTSMapSheetNumber>
             <AreaInSquareMetres>{{ data.area_sqm | floatformat:3}}</AreaInSquareMetres>
             <LatLong>
-                <CoordinateDetermination>Digital Maps???? Can this be another coordinate ref?</CoordinateDetermination>
+                <CoordinateDetermination>Digital Maps</CoordinateDetermination>
                 <Datum>NAD83</Datum>
                 <Latitude>{{ data.site_centroid_latitude | floatformat:7 }}</Latitude>
                 <Longitude>{{ data.site_centroid_longitude | floatformat:7 }}</Longitude>
@@ -60,6 +58,12 @@
             </Date>
             {% endfor %}
         </Dates>
+        {% if data.construction_actors|length > 0 %}<AssociatedEPOs>
+           {% for actor in data.construction_actors %}
+           <AssociatedEPO Language="ENGLISH" Type="{{ actor.type }}">{{ actor.name }}</AssociatedEPO>
+           {% endfor %}
+        </AssociatedEPOs>
+        {% endif %}
         <Themes>
             {% for theme in data.heritage_themes %}
             <Item>
@@ -76,18 +80,18 @@
         <Images>
             {% for site_image in data.site_images %}
             <Image Type="{{ site_image.image_content_type }}">
-                <Copyright>{{ site_image.copyright }}</Copyright>
+                <Copyright>{{ site_image.copyright|safe }}</Copyright>
                 <Link>{{ site_image.site_images.0.url }}</Link>
-                <Caption Language="ENGLISH">{{ site_image.image_caption }}</Caption>
-                <ImageDesc Language="ENGLISH">{{ site_image.image_description }}!!! Concatenating everything after the br</ImageDesc>
+                <Caption Language="ENGLISH">{{ site_image.image_caption|safe }}</Caption>
+                <ImageDesc Language="ENGLISH">{{ site_image.image_description|safe }}</ImageDesc>
             </Image>
             {% endfor %}
         </Images>
         <Links>
             {% for external_url in data.external_urls %}
-            <Link Type="{{external_url.url_type}} !!!Needs translation?">
+            <Link Type="{{external_url.url_type}}">
                 <URL Language="ENGLISH">{{ external_url.url }}</URL>
-                <LinkDesc Language="ENGLISH">{{ external_url.url_label }}</LinkDesc>
+                <LinkDesc Language="ENGLISH">{{ external_url.url_label|safe }}</LinkDesc>
             </Link>
             {% endfor %}
         </Links>

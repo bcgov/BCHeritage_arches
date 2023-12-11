@@ -88,6 +88,7 @@ select distinct i.resourceinstanceid,
 --        hf.functional_state,
 --        (select jsonb_agg(child_label) from get_uuid_lookup_table('BC Functional Status') where child_value_uuid = any(hf.functional_state)) functional_state,
 --        ht.*,
+       ca.construction_actors,
        ht.heritage_themes,
 --         br.*,
 --         br.registration_status,
@@ -157,6 +158,8 @@ from heritage_site.instances i
                        group by resourceinstanceid
                        ) hf
                    on i.resourceinstanceid = hf.resourceinstanceid
+         left join (select resourceinstanceid, jsonb_agg(jsonb_build_object('type', __arches_get_concept_label(construction_actor_type), 'name', construction_actor->'en'->>'value' )) construction_actors from heritage_site.construction_actors group by resourceinstanceid) ca
+                    on i.resourceinstanceid = ca.resourceinstanceid
          left join (select resourceinstanceid, jsonb_agg( jsonb_build_object('category', parent_label , 'type', child_label)) heritage_themes
                     from heritage_site.heritage_theme
                     join get_uuid_lookup_table('BC Heritage Theme') lu

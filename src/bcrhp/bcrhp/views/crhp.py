@@ -49,10 +49,10 @@ class CRHPXmlExport(APIBase):
             print("Heritage Categories: %s" % context["data"].heritage_categories)
             if len(context["data"].sos) > 0:
                 context["data"].sos.sort(key=lambda x: 0 if x["significance_type"] == "Provincial" else 1)
-                context["data"].heritage_value = self.text_converter.handle(context["data"].sos[0]["heritage_value"])
-                context["data"].defining_elements = self.text_converter.handle(context["data"].sos[0]["defining_elements"])
-                context["data"].pysical_description = self.text_converter.handle(context["data"].sos[0]["physical_description"])
-                context["data"].document_location = self.text_converter.handle(context["data"].sos[0]["document_location"])
+                context["data"].heritage_value = self.text_converter.handle(context["data"].sos[0]["heritage_value"]).strip()
+                context["data"].defining_elements = self.text_converter.handle(context["data"].sos[0]["defining_elements"]).strip()
+                context["data"].pysical_description = self.text_converter.handle(context["data"].sos[0]["physical_description"]).strip()
+                context["data"].document_location = self.text_converter.handle(context["data"].sos[0]["document_location"]).strip()
 
             print("Protection events %s" % str(context["data"].protection_events))
             for item in context["data"].protection_events:

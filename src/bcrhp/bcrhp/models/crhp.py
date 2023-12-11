@@ -14,6 +14,7 @@ class CrhpExportData(models.Model):
     heritage_categories = models.JSONField()
     heritage_functions = models.JSONField()
     significant_events = models.JSONField()
+    construction_actors = models.JSONField()
     heritage_themes = models.JSONField()
     registration_status = models.CharField()
     registry_types = models.JSONField()
