@@ -48,7 +48,7 @@ begin
 end $$
     language plpgsql;
 
-drop function bcrhp_build_image_caption;
+drop function if exists bcrhp_build_image_caption;
 create or replace function bcrhp_build_image_caption(image_view text, image_features text, image_date timestamp) returns text as $$
 begin
     return image_view || case when image_features is not null and image_features <> '' then ' - '||image_features else '' end ||
