@@ -1,0 +1,38 @@
+{
+  "name": "TRIM Water Lines",
+  "sources": {
+    "trim-waterlines-source": {
+      "type": "vector",
+      "tiles": [
+        "/{ url_context_root }/bctileserver/geo/pub/WHSE_BASEMAPPING.TRIM_WATER_LINES/ows?service=WMS&request=GetMap&layers=WHSE_BASEMAPPING.TRIM_WATER_LINES&styles=&format=pbf&transparent=true&version=1.3.0&height=512&width=512&srs=EPSG:3857&bbox={bbox-epsg-3857}"
+      ],
+      "tileSize": 512
+    }
+  },
+  "arches-metadata": {
+    "ispublic": false,
+    "addtomap": false,
+    "centerx": null,
+    "centery": null,
+    "icon": "fa fa-globe",
+    "isoverlay": true,
+    "legend": "<p><img alt=\"\" class=\"trim-waterlines legend-line\" src=\"/{ url_context_root }/static/img/blank.png\" />TRIM Waterlines</p>",
+    "searchonly": false,
+    "sortorder": 0,
+    "zoom": null
+  },
+  "layers": [
+    {
+      "id": "trim-waterlines",
+      "type": "line",
+      "source": "trim-waterlines-source",
+      "source-layer": "WHSE_BASEMAPPING.TRIM_WATER_LINES",
+      "minzoom": 0,
+      "maxzoom": 20,
+      "paint": {
+        "line-color": "rgb(98, 206, 217)",
+        "line-width": 0.5
+      }
+    }
+  ]
+}

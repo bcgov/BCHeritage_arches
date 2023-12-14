@@ -1,0 +1,11 @@
+@import "project_common.css";
+@import "map_legend.css";
+
+.card_component.start_year, .card_component.end_year, .card_component.dates_approximate {
+    display: inline-block;
+    width: 30%;
+}
+
+.card_component.dates_approximate {
+    vertical-align: bottom;
+}

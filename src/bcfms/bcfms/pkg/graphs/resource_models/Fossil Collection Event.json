@@ -1,0 +1,2072 @@
+{
+    "graph": [
+        {
+            "author": "Brett Ferguson",
+            "cards": [
+                {
+                    "active": true,
+                    "cardid": "2371431c-70d9-11ed-9e2c-5254004d77d3",
+                    "component_id": "f05e4d3a-53c1-11e8-b0ea-784f435179ea",
+                    "config": null,
+                    "constraints": [],
+                    "cssclass": null,
+                    "description": "",
+                    "graph_id": "df3ee1ae-9c1c-11ec-964d-5254008afee6",
+                    "helpenabled": false,
+                    "helptext": {
+                        "en": ""
+                    },
+                    "helptitle": {
+                        "en": ""
+                    },
+                    "instructions": {
+                        "en": ""
+                    },
+                    "is_editable": true,
+                    "name": {
+                        "en": "Collection Event Significance"
+                    },
+                    "nodegroup_id": "23714006-70d9-11ed-9e2c-5254004d77d3",
+                    "sortorder": 7,
+                    "visible": true
+                },
+                {
+                    "active": true,
+                    "cardid": "5e4ba65c-a079-11ec-bc6e-5254008afee6",
+                    "component_id": "f05e4d3a-53c1-11e8-b0ea-784f435179ea",
+                    "config": null,
+                    "constraints": [],
+                    "cssclass": null,
+                    "description": null,
+                    "graph_id": "df3ee1ae-9c1c-11ec-964d-5254008afee6",
+                    "helpenabled": true,
+                    "helptext": {
+                        "en": "<strong>Samples Collected</strong> -&nbsp;Enter a non-existent character string to prompt new sample entry."
+                    },
+                    "helptitle": {
+                        "en": "Fossil Collection Event Help Guide"
+                    },
+                    "instructions": {
+                        "en": ""
+                    },
+                    "is_editable": true,
+                    "name": {
+                        "en": "Samples Collected"
+                    },
+                    "nodegroup_id": "5e4b75ba-a079-11ec-bc6e-5254008afee6",
+                    "sortorder": 4,
+                    "visible": true
+                },
+                {
+                    "active": true,
+                    "cardid": "692d9ed2-9c1d-11ec-a5e5-5254008afee6",
+                    "component_id": "f05e4d3a-53c1-11e8-b0ea-784f435179ea",
+                    "config": null,
+                    "constraints": [],
+                    "cssclass": "",
+                    "description": "",
+                    "graph_id": "df3ee1ae-9c1c-11ec-964d-5254008afee6",
+                    "helpenabled": true,
+                    "helptext": {
+                        "en": "<p><strong>Location Descriptor</strong> - enter a brief description of the general location in 40 characters or less.</p>\n\n<p><strong>Detailed Location</strong> - provide a description of the fossil location such as: 1) the distance and cardinal direction (north, east, south, west) where the fossil site lies in relation to a specific geographic feature; 2)&nbsp;metres above the base of a geological section; 3)&nbsp;relationship of the fossil layer to a prominent layer such as a coal seam or thick sandstone; 4)&nbsp;elevation; or 5)&nbsp;if the fossil comes from talus or scree.&nbsp;&nbsp;</p>\n"
+                    },
+                    "helptitle": {
+                        "en": "Collection Event Location Help Guide"
+                    },
+                    "instructions": {
+                        "en": ""
+                    },
+                    "is_editable": true,
+                    "name": {
+                        "en": "Collection Event Location"
+                    },
+                    "nodegroup_id": "692d9c2a-9c1d-11ec-a5e5-5254008afee6",
+                    "sortorder": 2,
+                    "visible": true
+                },
+                {
+                    "active": true,
+                    "cardid": "9207c71e-ab96-11ec-87fd-5254008afee6",
+                    "component_id": "f05e4d3a-53c1-11e8-b0ea-784f435179ea",
+                    "config": null,
+                    "constraints": [],
+                    "cssclass": null,
+                    "description": "",
+                    "graph_id": "df3ee1ae-9c1c-11ec-964d-5254008afee6",
+                    "helpenabled": false,
+                    "helptext": {
+                        "en": ""
+                    },
+                    "helptitle": {
+                        "en": ""
+                    },
+                    "instructions": {
+                        "en": "If needed, add additional information about the fossil collection event."
+                    },
+                    "is_editable": true,
+                    "name": {
+                        "en": "Collection Notes"
+                    },
+                    "nodegroup_id": "9207c3fe-ab96-11ec-87fd-5254008afee6",
+                    "sortorder": 6,
+                    "visible": true
+                },
+                {
+                    "active": true,
+                    "cardid": "b7943b64-9c20-11ec-9b9a-5254008afee6",
+                    "component_id": "f05e4d3a-53c1-11e8-b0ea-784f435179ea",
+                    "config": null,
+                    "constraints": [],
+                    "cssclass": null,
+                    "description": null,
+                    "graph_id": "df3ee1ae-9c1c-11ec-964d-5254008afee6",
+                    "helpenabled": false,
+                    "helptext": {
+                        "en": ""
+                    },
+                    "helptitle": {
+                        "en": ""
+                    },
+                    "instructions": {
+                        "en": ""
+                    },
+                    "is_editable": true,
+                    "name": {
+                        "en": "Collectors"
+                    },
+                    "nodegroup_id": "b7940db0-9c20-11ec-9b9a-5254008afee6",
+                    "sortorder": 3,
+                    "visible": true
+                },
+                {
+                    "active": true,
+                    "cardid": "b7c0c475-da15-4a18-b1ff-92ee0bbbce6e",
+                    "component_id": "f05e4d3a-53c1-11e8-b0ea-784f435179ea",
+                    "config": null,
+                    "constraints": [],
+                    "cssclass": null,
+                    "description": {
+                        "en": "This is data that was historically collected in the Excel spreadsheet but cannot be parsed into Fossil Site or Fossil Sample Resources due to cardinality discrepancies in the original data."
+                    },
+                    "graph_id": "df3ee1ae-9c1c-11ec-964d-5254008afee6",
+                    "helpenabled": false,
+                    "helptext": {
+                        "en": ""
+                    },
+                    "helptitle": {
+                        "en": ""
+                    },
+                    "instructions": {
+                        "en": ""
+                    },
+                    "is_editable": true,
+                    "name": {
+                        "en": "Historical Data"
+                    },
+                    "nodegroup_id": "731312e0-70db-11ed-a567-5254004d77d3",
+                    "sortorder": 5,
+                    "visible": true
+                },
+                {
+                    "active": true,
+                    "cardid": "ebc52034-a07a-11ec-8bc4-5254008afee6",
+                    "component_id": "f05e4d3a-53c1-11e8-b0ea-784f435179ea",
+                    "config": null,
+                    "constraints": [],
+                    "cssclass": null,
+                    "description": {
+                        "en": "Years or year ranges that fossil collection took place."
+                    },
+                    "graph_id": "df3ee1ae-9c1c-11ec-964d-5254008afee6",
+                    "helpenabled": false,
+                    "helptext": {
+                        "en": ""
+                    },
+                    "helptitle": {
+                        "en": ""
+                    },
+                    "instructions": {
+                        "en": ""
+                    },
+                    "is_editable": true,
+                    "name": {
+                        "en": "Collection Year"
+                    },
+                    "nodegroup_id": "ebc4f8e8-a07a-11ec-8bc4-5254008afee6",
+                    "sortorder": 1,
+                    "visible": true
+                },
+                {
+                    "active": true,
+                    "cardid": "fa15d98f-3e13-4963-8857-9bf77fcc3724",
+                    "component_id": "f05e4d3a-53c1-11e8-b0ea-784f435179ea",
+                    "config": null,
+                    "constraints": [],
+                    "cssclass": null,
+                    "description": null,
+                    "graph_id": "df3ee1ae-9c1c-11ec-964d-5254008afee6",
+                    "helpenabled": false,
+                    "helptext": {
+                        "en": ""
+                    },
+                    "helptitle": {
+                        "en": ""
+                    },
+                    "instructions": {
+                        "en": "Note fossil abundance from collection event"
+                    },
+                    "is_editable": true,
+                    "name": {
+                        "en": "Fossil Abundance"
+                    },
+                    "nodegroup_id": "74fb7b5c-7279-11ed-adf3-5254004d77d3",
+                    "sortorder": 0,
+                    "visible": true
+                }
+            ],
+            "cards_x_nodes_x_widgets": [
+                {
+                    "card_id": "692d9ed2-9c1d-11ec-a5e5-5254008afee6",
+                    "config": {
+                        "defaultValue": {
+                            "en": {
+                                "direction": "ltr",
+                                "value": ""
+                            }
+                        },
+                        "i18n_properties": [
+                            "placeholder"
+                        ],
+                        "label": "Nearest Municipality",
+                        "maxLength": null,
+                        "placeholder": {
+                            "en": "Enter text"
+                        },
+                        "uneditable": false,
+                        "width": "100%"
+                    },
+                    "id": "1d1ac027-c4c0-4675-a802-e25a3a1af49c",
+                    "label": {
+                        "en": "Nearest Municipality"
+                    },
+                    "node_id": "692da652-9c1d-11ec-a5e5-5254008afee6",
+                    "sortorder": 5,
+                    "visible": true,
+                    "widget_id": "10000000-0000-0000-0000-000000000001"
+                },
+                {
+                    "card_id": "692d9ed2-9c1d-11ec-a5e5-5254008afee6",
+                    "config": {
+                        "defaultValue": {
+                            "en": {
+                                "direction": "ltr",
+                                "value": ""
+                            }
+                        },
+                        "i18n_properties": [
+                            "placeholder"
+                        ],
+                        "label": "Detailed Location",
+                        "maxLength": null,
+                        "placeholder": {
+                            "en": "<p>Enter text</p>\n"
+                        },
+                        "uneditable": false,
+                        "width": "100%"
+                    },
+                    "id": "1e8a8b27-f564-4aab-81cc-ab7734bcb459",
+                    "label": {
+                        "en": "Detailed Location"
+                    },
+                    "node_id": "692da79c-9c1d-11ec-a5e5-5254008afee6",
+                    "sortorder": 4,
+                    "visible": true,
+                    "widget_id": "10000000-0000-0000-0000-000000000005"
+                },
+                {
+                    "card_id": "2371431c-70d9-11ed-9e2c-5254004d77d3",
+                    "config": {
+                        "defaultValue": "",
+                        "i18n_properties": [
+                            "placeholder"
+                        ],
+                        "label": "Significance Ranking Details",
+                        "options": [
+                            {
+                                "children": [],
+                                "collector": "",
+                                "conceptid": "9e3150c7-8350-4373-ac78-4da05a9b8b2e",
+                                "id": "1ba9d078-f47d-4a9d-965c-ae0f8588d97b",
+                                "sortorder": "",
+                                "text": "Abundance value"
+                            },
+                            {
+                                "children": [],
+                                "collector": "",
+                                "conceptid": "b5a7541e-9f0f-4bcb-8499-6469c056f730",
+                                "id": "739225a4-6b77-44af-8449-ff49e453a5ec",
+                                "sortorder": "",
+                                "text": "Age determination"
+                            },
+                            {
+                                "children": [],
+                                "collector": "",
+                                "conceptid": "37546e29-5c2c-4eb8-96ef-0ce85c62b0f2",
+                                "id": "2424a415-24b1-42ec-977d-10effccf8696",
+                                "sortorder": "",
+                                "text": "Diversity value"
+                            },
+                            {
+                                "children": [],
+                                "collector": "",
+                                "conceptid": "ee4c9b5e-49bb-4397-970f-b54112218afa",
+                                "id": "5b20e860-5f4e-46c8-9645-8b1db65aae1a",
+                                "sortorder": "",
+                                "text": "Exceptional preservation"
+                            },
+                            {
+                                "children": [],
+                                "collector": "",
+                                "conceptid": "96941abf-ab36-4acb-8717-485ca84d7ccf",
+                                "id": "341b60a6-2376-4a7c-a0f5-a8ef007892eb",
+                                "sortorder": "",
+                                "text": "Heritage value"
+                            },
+                            {
+                                "children": [],
+                                "collector": "",
+                                "conceptid": "d8c5c009-7326-45f8-ae3d-8d58957a602f",
+                                "id": "36e6e81f-7527-46d9-a9a9-5f0c7e19b89c",
+                                "sortorder": "",
+                                "text": "Holotype"
+                            },
+                            {
+                                "children": [],
+                                "collector": "",
+                                "conceptid": "79120b00-6978-4189-b957-486b32fa2771",
+                                "id": "7702c30c-3067-4910-a4a9-e4fefc60cb16",
+                                "sortorder": "",
+                                "text": "Paleobiogeographic interpretation"
+                            },
+                            {
+                                "children": [],
+                                "collector": "",
+                                "conceptid": "41f0f998-ff59-4323-a6e3-2293f55a2d44",
+                                "id": "42fa8258-5121-4bff-8e78-3784fface31d",
+                                "sortorder": "",
+                                "text": "Paleoclimate interpretation"
+                            },
+                            {
+                                "children": [],
+                                "collector": "",
+                                "conceptid": "4b564b35-4c73-404c-9de9-cc6149b6b994",
+                                "id": "ee81274b-8807-43dc-b056-4cddccb2a911",
+                                "sortorder": "",
+                                "text": "Paleoecological interpretation"
+                            },
+                            {
+                                "children": [],
+                                "collector": "",
+                                "conceptid": "7887a861-a64e-4354-bea8-1ed713a161ab",
+                                "id": "9857ab3b-b571-4c67-a32c-772ad2e30307",
+                                "sortorder": "",
+                                "text": "Paleoenvironmental interpretation"
+                            },
+                            {
+                                "children": [],
+                                "collector": "",
+                                "conceptid": "54c45925-d3cd-47e5-b0c5-3b08579995e4",
+                                "id": "82062d1e-7393-458b-97c9-0e7e5eca5e42",
+                                "sortorder": "",
+                                "text": "Paleogeographic interpretation"
+                            },
+                            {
+                                "children": [],
+                                "collector": "",
+                                "conceptid": "4fb09e05-be19-47f5-81e9-e8ddc2260b70",
+                                "id": "26e2f466-314a-4844-a877-28fc277dd9ad",
+                                "sortorder": "",
+                                "text": "Rare"
+                            },
+                            {
+                                "children": [],
+                                "collector": "",
+                                "conceptid": "0a475a91-19ab-4c48-8212-c717ba29ebc6",
+                                "id": "71678bb8-1809-4f2e-bccd-604bf7ae733f",
+                                "sortorder": "",
+                                "text": "Taxonomic value"
+                            },
+                            {
+                                "children": [],
+                                "collector": "",
+                                "conceptid": "5da69431-8970-43d0-9c75-7ef67b1d45d9",
+                                "id": "d5d39cc2-ccfc-4522-8061-f392da4961ab",
+                                "sortorder": "",
+                                "text": "Vertebrate"
+                            }
+                        ],
+                        "placeholder": {
+                            "en": "Select an option"
+                        },
+                        "url": "/int/bc-fossil-management/concepts/dropdown?conceptid=5776a0d2-0e15-45ca-9d9d-7a007bd90f67"
+                    },
+                    "id": "23714664-70d9-11ed-9e2c-5254004d77d3",
+                    "label": {
+                        "en": "Significance Ranking Details"
+                    },
+                    "node_id": "23714510-70d9-11ed-9e2c-5254004d77d3",
+                    "sortorder": 1,
+                    "visible": true,
+                    "widget_id": "10000000-0000-0000-0000-000000000013"
+                },
+                {
+                    "card_id": "2371431c-70d9-11ed-9e2c-5254004d77d3",
+                    "config": {
+                        "defaultValue": null,
+                        "label": "Collection Event Significant"
+                    },
+                    "id": "2371477c-70d9-11ed-9e2c-5254004d77d3",
+                    "label": {
+                        "en": "Collection Event Significant"
+                    },
+                    "node_id": "23714006-70d9-11ed-9e2c-5254004d77d3",
+                    "sortorder": 0,
+                    "visible": true,
+                    "widget_id": "0346bc9c-d235-4313-adc8-d0e210b2ef25"
+                },
+                {
+                    "card_id": "b7943b64-9c20-11ec-9b9a-5254008afee6",
+                    "config": {
+                        "defaultValue": null,
+                        "label": "Collector Unknown"
+                    },
+                    "id": "2c8cd0a8-9a4e-4574-93a2-8ad34d5c8c18",
+                    "label": {
+                        "en": "Collector Unknown"
+                    },
+                    "node_id": "7f9f62a2-00b9-11ee-aea6-5254004d77d3",
+                    "sortorder": 1,
+                    "visible": true,
+                    "widget_id": "0346bc9c-d235-4313-adc8-d0e210b2ef25"
+                },
+                {
+                    "card_id": "b7c0c475-da15-4a18-b1ff-92ee0bbbce6e",
+                    "config": {
+                        "defaultValue": "",
+                        "i18n_properties": [
+                            "placeholder"
+                        ],
+                        "label": "Significance Ranking Code",
+                        "options": [
+                            {
+                                "children": [],
+                                "collector": "",
+                                "conceptid": "7132cad2-1533-43b4-9f3a-711bad5e8dc3",
+                                "id": "54eb890a-a6ab-45f3-a59e-3413381280a1",
+                                "sortorder": "",
+                                "text": "High"
+                            },
+                            {
+                                "children": [],
+                                "collector": "",
+                                "conceptid": "3dffec79-e92c-4b18-9cb5-d67ce5244a53",
+                                "id": "f13344cc-319f-4f1b-9823-e3f9670b32de",
+                                "sortorder": "",
+                                "text": "Low"
+                            },
+                            {
+                                "children": [],
+                                "collector": "",
+                                "conceptid": "8166391c-fa68-4311-b2a2-390a938cdf21",
+                                "id": "842040a4-4b79-4195-b4ba-9fe9928cc30c",
+                                "sortorder": "",
+                                "text": "Medium"
+                            },
+                            {
+                                "children": [],
+                                "collector": "",
+                                "conceptid": "802ff20e-5263-4706-904c-fb4b250371c1",
+                                "id": "4e67f552-3f20-491d-84d3-1010fa44aacd",
+                                "sortorder": "",
+                                "text": "Very Low"
+                            }
+                        ],
+                        "placeholder": {
+                            "en": "Select an option"
+                        }
+                    },
+                    "id": "2ceb3c00-a3b0-4cf0-a468-8a3f72829ee7",
+                    "label": {
+                        "en": "Significance Ranking Code"
+                    },
+                    "node_id": "168664e0-70dc-11ed-b134-5254004d77d3",
+                    "sortorder": 0,
+                    "visible": true,
+                    "widget_id": "10000000-0000-0000-0000-000000000013"
+                },
+                {
+                    "card_id": "ebc52034-a07a-11ec-8bc4-5254008afee6",
+                    "config": {
+                        "defaultValue": "",
+                        "label": "Collection End Year (Historical data only)",
+                        "maxDate": false,
+                        "minDate": false,
+                        "placeholder": "Enter date",
+                        "viewMode": "years"
+                    },
+                    "id": "5372f5c6-a07b-11ec-a171-5254008afee6",
+                    "label": {
+                        "en": "Collection End Year (Historical data only)"
+                    },
+                    "node_id": "328a4e2c-a07b-11ec-959f-5254008afee6",
+                    "sortorder": 1,
+                    "visible": true,
+                    "widget_id": "10000000-0000-0000-0000-000000000004"
+                },
+                {
+                    "card_id": "ebc52034-a07a-11ec-8bc4-5254008afee6",
+                    "config": {
+                        "dateFormat": "YYYY",
+                        "defaultValue": null,
+                        "label": "Collection Year",
+                        "maxDate": false,
+                        "minDate": false,
+                        "placeholder": "Enter date",
+                        "viewMode": "years"
+                    },
+                    "id": "53736e48-a07b-11ec-a171-5254008afee6",
+                    "label": {
+                        "en": "Collection Year"
+                    },
+                    "node_id": "0bbd0096-a07b-11ec-855d-5254008afee6",
+                    "sortorder": 0,
+                    "visible": true,
+                    "widget_id": "10000000-0000-0000-0000-000000000004"
+                },
+                {
+                    "card_id": "692d9ed2-9c1d-11ec-a5e5-5254008afee6",
+                    "config": {
+                        "basemap": "British Columbia Roads",
+                        "bearing": 0,
+                        "centerX": -125.8041191652735,
+                        "centerY": 54.53909267900477,
+                        "defaultValue": "",
+                        "defaultValueType": "",
+                        "featureColor": "#FF0000",
+                        "featureLineWidth": 1,
+                        "featurePointSize": 3,
+                        "geocodePlaceholder": "Search",
+                        "geocodeProvider": "10000000-0000-0000-0000-010000000000",
+                        "geocoderVisible": true,
+                        "geometryTypes": [
+                            {
+                                "id": "Point",
+                                "text": "Point"
+                            },
+                            {
+                                "id": "Line",
+                                "text": "Line"
+                            },
+                            {
+                                "id": "Polygon",
+                                "text": "Polygon"
+                            }
+                        ],
+                        "label": "Spatial Coordinates Geometry",
+                        "maxZoom": 20,
+                        "minZoom": 0,
+                        "overlayConfigs": [],
+                        "overlayOpacity": 0,
+                        "pitch": 0,
+                        "rerender": true,
+                        "zoom": 4.020978191846662
+                    },
+                    "id": "58fb5650-c9ef-4431-a65a-32b93b83505e",
+                    "label": {
+                        "en": "Spatial Coordinates Geometry"
+                    },
+                    "node_id": "692d8938-9c1d-11ec-a5e5-5254008afee6",
+                    "sortorder": 0,
+                    "visible": true,
+                    "widget_id": "10000000-0000-0000-0000-000000000007"
+                },
+                {
+                    "card_id": "692d9ed2-9c1d-11ec-a5e5-5254008afee6",
+                    "config": {
+                        "defaultValue": {
+                            "en": {
+                                "direction": "ltr",
+                                "value": ""
+                            }
+                        },
+                        "i18n_properties": [
+                            "placeholder"
+                        ],
+                        "label": "1:250k Mapsheet Name",
+                        "maxLength": null,
+                        "placeholder": {
+                            "en": "Enter text"
+                        },
+                        "uneditable": true,
+                        "width": "100%"
+                    },
+                    "id": "65a05abb-c12a-4ad5-9f47-5cbec88cf7e0",
+                    "label": {
+                        "en": "1:250k Mapsheet Name"
+                    },
+                    "node_id": "609e26e8-00bb-11ee-aea6-5254004d77d3",
+                    "sortorder": 8,
+                    "visible": true,
+                    "widget_id": "10000000-0000-0000-0000-000000000001"
+                },
+                {
+                    "card_id": "692d9ed2-9c1d-11ec-a5e5-5254008afee6",
+                    "config": {
+                        "defaultValue": "",
+                        "i18n_properties": [
+                            "placeholder"
+                        ],
+                        "label": "Locational Precision",
+                        "options": [],
+                        "placeholder": {
+                            "en": "Select the precision of the collection point"
+                        }
+                    },
+                    "id": "6c0c5b41-f887-4c3e-9df5-8a12c13b25ad",
+                    "label": {
+                        "en": "Locational Precision"
+                    },
+                    "node_id": "9e93ab8c-9c1f-11ec-964d-5254008afee6",
+                    "sortorder": 1,
+                    "visible": true,
+                    "widget_id": "10000000-0000-0000-0000-000000000002"
+                },
+                {
+                    "card_id": "2371431c-70d9-11ed-9e2c-5254004d77d3",
+                    "config": {
+                        "defaultValue": {
+                            "en": {
+                                "direction": "ltr",
+                                "value": ""
+                            }
+                        },
+                        "i18n_properties": [
+                            "placeholder"
+                        ],
+                        "label": "Internal Notes",
+                        "maxLength": null,
+                        "placeholder": {
+                            "en": "Enter notes"
+                        },
+                        "uneditable": false,
+                        "width": "100%"
+                    },
+                    "id": "7c53e346-82f5-4c76-b6bd-f1567f6c63c7",
+                    "label": {
+                        "en": "Internal Notes"
+                    },
+                    "node_id": "fd7060c4-00b8-11ee-8e96-5254004d77d3",
+                    "sortorder": 2,
+                    "visible": true,
+                    "widget_id": "10000000-0000-0000-0000-000000000005"
+                },
+                {
+                    "card_id": "692d9ed2-9c1d-11ec-a5e5-5254008afee6",
+                    "config": {
+                        "defaultValue": {
+                            "en": {
+                                "direction": "ltr",
+                                "value": ""
+                            }
+                        },
+                        "i18n_properties": [
+                            "placeholder"
+                        ],
+                        "label": "1:50k Mapsheet Number",
+                        "maxLength": null,
+                        "placeholder": {
+                            "en": "Enter text"
+                        },
+                        "uneditable": true,
+                        "width": "100%"
+                    },
+                    "id": "7e662ab1-cce6-4e4b-a846-3c44f35c3634",
+                    "label": {
+                        "en": "1:50k Mapsheet Number"
+                    },
+                    "node_id": "62d8d22c-00bc-11ee-83ab-5254004d77d3",
+                    "sortorder": 6,
+                    "visible": true,
+                    "widget_id": "10000000-0000-0000-0000-000000000001"
+                },
+                {
+                    "card_id": "9207c71e-ab96-11ec-87fd-5254008afee6",
+                    "config": {
+                        "defaultValue": {
+                            "en": {
+                                "direction": "ltr",
+                                "value": ""
+                            }
+                        },
+                        "i18n_properties": [
+                            "placeholder"
+                        ],
+                        "label": "Field Notes",
+                        "maxLength": null,
+                        "placeholder": {
+                            "en": "Enter notes"
+                        },
+                        "uneditable": false,
+                        "width": "100%"
+                    },
+                    "id": "9207cb38-ab96-11ec-87fd-5254008afee6",
+                    "label": {
+                        "en": "Field Notes"
+                    },
+                    "node_id": "9207c87c-ab96-11ec-87fd-5254008afee6",
+                    "sortorder": 0,
+                    "visible": true,
+                    "widget_id": "10000000-0000-0000-0000-000000000005"
+                },
+                {
+                    "card_id": "692d9ed2-9c1d-11ec-a5e5-5254008afee6",
+                    "config": {
+                        "defaultValue": {
+                            "en": {
+                                "direction": "ltr",
+                                "value": ""
+                            }
+                        },
+                        "i18n_properties": [
+                            "placeholder"
+                        ],
+                        "label": "Location Descriptor",
+                        "maxLength": "40",
+                        "placeholder": {
+                            "en": "Enter text"
+                        },
+                        "uneditable": false,
+                        "width": "100%"
+                    },
+                    "id": "c1527a85-d0e1-473c-84cf-b754c41c027e",
+                    "label": {
+                        "en": "Location Descriptor"
+                    },
+                    "node_id": "692da3b4-9c1d-11ec-a5e5-5254008afee6",
+                    "sortorder": 3,
+                    "visible": true,
+                    "widget_id": "10000000-0000-0000-0000-000000000001"
+                },
+                {
+                    "card_id": "692d9ed2-9c1d-11ec-a5e5-5254008afee6",
+                    "config": {
+                        "defaultValue": "",
+                        "i18n_properties": [
+                            "placeholder"
+                        ],
+                        "label": "Geometry Qualifier",
+                        "options": [],
+                        "placeholder": {
+                            "en": "Select an option"
+                        }
+                    },
+                    "id": "caf514dd-9d39-4e22-8c6d-38f2f492c606",
+                    "label": {
+                        "en": "Geometry Qualifier"
+                    },
+                    "node_id": "692da0d0-9c1d-11ec-a5e5-5254008afee6",
+                    "sortorder": 2,
+                    "visible": true,
+                    "widget_id": "10000000-0000-0000-0000-000000000002"
+                },
+                {
+                    "card_id": "b7943b64-9c20-11ec-9b9a-5254008afee6",
+                    "config": {
+                        "defaultResourceInstance": [],
+                        "i18n_properties": [
+                            "placeholder"
+                        ],
+                        "label": "Collector",
+                        "placeholder": {
+                            "en": "Select Person or Organization that collected the fossils"
+                        }
+                    },
+                    "id": "ce13e47a-9c20-11ec-8ea2-5254008afee6",
+                    "label": {
+                        "en": "Collector"
+                    },
+                    "node_id": "b7940db0-9c20-11ec-9b9a-5254008afee6",
+                    "sortorder": 0,
+                    "visible": true,
+                    "widget_id": "ff3c400a-76ec-11e7-a793-784f435179ea"
+                },
+                {
+                    "card_id": "692d9ed2-9c1d-11ec-a5e5-5254008afee6",
+                    "config": {
+                        "defaultValue": {
+                            "en": {
+                                "direction": "ltr",
+                                "value": ""
+                            }
+                        },
+                        "i18n_properties": [
+                            "placeholder"
+                        ],
+                        "label": "1:50k Mapsheet Name",
+                        "maxLength": null,
+                        "placeholder": {
+                            "en": "Enter text"
+                        },
+                        "uneditable": true,
+                        "width": "100%"
+                    },
+                    "id": "ce3978d6-8414-48f6-87e3-8d37fb0c1d58",
+                    "label": {
+                        "en": "1:50k Mapsheet Name"
+                    },
+                    "node_id": "899fd194-00bc-11ee-8092-5254004d77d3",
+                    "sortorder": 7,
+                    "visible": true,
+                    "widget_id": "10000000-0000-0000-0000-000000000001"
+                },
+                {
+                    "card_id": "5e4ba65c-a079-11ec-bc6e-5254008afee6",
+                    "config": {
+                        "defaultResourceInstance": [],
+                        "i18n_properties": [
+                            "placeholder"
+                        ],
+                        "label": "Samples Collected",
+                        "placeholder": {
+                            "en": ""
+                        }
+                    },
+                    "id": "e47714e6-78a5-4872-9df5-666b40a414df",
+                    "label": {
+                        "en": "Samples Collected"
+                    },
+                    "node_id": "5e4b75ba-a079-11ec-bc6e-5254008afee6",
+                    "sortorder": 0,
+                    "visible": true,
+                    "widget_id": "ff3c400a-76ec-11e7-a793-784f435179ea"
+                },
+                {
+                    "card_id": "fa15d98f-3e13-4963-8857-9bf77fcc3724",
+                    "config": {
+                        "defaultValue": "",
+                        "i18n_properties": [
+                            "placeholder"
+                        ],
+                        "label": "Fossil Abundance",
+                        "options": [
+                            {
+                                "children": [],
+                                "collector": "",
+                                "conceptid": "05e38520-678b-46c5-bbe2-9164d52ec4fe",
+                                "id": "00b29319-f28d-4b50-88e1-ab190fdfbde6",
+                                "sortorder": "00",
+                                "text": "None/Barren"
+                            },
+                            {
+                                "children": [],
+                                "collector": "",
+                                "conceptid": "fdbfc78a-620e-48d7-99b7-ba25cd9ae10b",
+                                "id": "c26c8d58-9dcb-47a0-a869-ecb93c3dce00",
+                                "sortorder": "01",
+                                "text": "Single Fossil (1)"
+                            },
+                            {
+                                "children": [],
+                                "collector": "",
+                                "conceptid": "5dfc8eff-ff8c-4f76-a645-0d89f697c6d3",
+                                "id": "68785da4-a1bc-47b2-89dc-a3c617a07406",
+                                "sortorder": "02",
+                                "text": "Few (< 5)"
+                            },
+                            {
+                                "children": [],
+                                "collector": "",
+                                "conceptid": "b951d714-d3e8-486a-beba-0550ebb58b9d",
+                                "id": "0ade6a3a-170a-4889-af0d-c55b783747c0",
+                                "sortorder": "05",
+                                "text": "Many (5-10)"
+                            },
+                            {
+                                "children": [],
+                                "collector": "",
+                                "conceptid": "f295722a-5605-4a7d-b6d3-fb16f9ccd0b0",
+                                "id": "6956cf66-4a04-429e-933b-181a7bdaa3da",
+                                "sortorder": "11",
+                                "text": "Abundant (> 10)"
+                            }
+                        ],
+                        "placeholder": {
+                            "en": "Note if sample is barren or note number of specimens present"
+                        },
+                        "url": "/int/bc-fossil-management/concepts/dropdown?conceptid=a727f7c8-b11a-4dc2-962c-b23baf9eb046"
+                    },
+                    "id": "fa99c24a-e153-447f-be52-598efce9ba5c",
+                    "label": {
+                        "en": "Fossil Abundance"
+                    },
+                    "node_id": "74fb7b5c-7279-11ed-adf3-5254004d77d3",
+                    "sortorder": 0,
+                    "visible": true,
+                    "widget_id": "10000000-0000-0000-0000-000000000009"
+                }
+            ],
+            "color": "rgba(244,109,67,1)",
+            "config": {
+                "basemap": "British Columbia Roads"
+            },
+            "deploymentdate": null,
+            "deploymentfile": null,
+            "description": {
+                "en": ""
+            },
+            "edges": [
+                {
+                    "description": null,
+                    "domainnode_id": "ebc4f8e8-a07a-11ec-8bc4-5254008afee6",
+                    "edgeid": "0bbd035c-a07b-11ec-855d-5254008afee6",
+                    "graph_id": "df3ee1ae-9c1c-11ec-964d-5254008afee6",
+                    "name": null,
+                    "ontologyproperty": "http://www.cidoc-crm.org/cidoc-crm/P116_starts",
+                    "rangenode_id": "0bbd0096-a07b-11ec-855d-5254008afee6"
+                },
+                {
+                    "description": null,
+                    "domainnode_id": "23714006-70d9-11ed-9e2c-5254004d77d3",
+                    "edgeid": "23716842-70d9-11ed-9e2c-5254004d77d3",
+                    "graph_id": "df3ee1ae-9c1c-11ec-964d-5254008afee6",
+                    "name": null,
+                    "ontologyproperty": "http://www.cidoc-crm.org/cidoc-crm/P15i_influenced",
+                    "rangenode_id": "23714510-70d9-11ed-9e2c-5254004d77d3"
+                },
+                {
+                    "description": null,
+                    "domainnode_id": "731312e0-70db-11ed-a567-5254004d77d3",
+                    "edgeid": "24b3e7cc-34ae-4fc2-a836-b84cc64aba64",
+                    "graph_id": "df3ee1ae-9c1c-11ec-964d-5254008afee6",
+                    "name": null,
+                    "ontologyproperty": "http://www.cidoc-crm.org/cidoc-crm/P141i_was_assigned_by",
+                    "rangenode_id": "168664e0-70dc-11ed-b134-5254004d77d3"
+                },
+                {
+                    "description": null,
+                    "domainnode_id": "210931f8-00bb-11ee-a50c-5254004d77d3",
+                    "edgeid": "27316ae1-d0fd-47d3-adba-ecd19e316085",
+                    "graph_id": "df3ee1ae-9c1c-11ec-964d-5254008afee6",
+                    "name": null,
+                    "ontologyproperty": "http://www.ics.forth.gr/isl/CRMdig/L54_is_same-as",
+                    "rangenode_id": "62d8d22c-00bc-11ee-83ab-5254004d77d3"
+                },
+                {
+                    "description": null,
+                    "domainnode_id": "62d8d22c-00bc-11ee-83ab-5254004d77d3",
+                    "edgeid": "2cad9ed1-6482-47ba-9c56-09eefced91e2",
+                    "graph_id": "df3ee1ae-9c1c-11ec-964d-5254008afee6",
+                    "name": null,
+                    "ontologyproperty": "http://www.ics.forth.gr/isl/CRMdig/L54_is_same-as",
+                    "rangenode_id": "899fd194-00bc-11ee-8092-5254004d77d3"
+                },
+                {
+                    "description": null,
+                    "domainnode_id": "ebc4f8e8-a07a-11ec-8bc4-5254008afee6",
+                    "edgeid": "328a51a6-a07b-11ec-959f-5254008afee6",
+                    "graph_id": "df3ee1ae-9c1c-11ec-964d-5254008afee6",
+                    "name": null,
+                    "ontologyproperty": "http://www.cidoc-crm.org/cidoc-crm/P115_finishes",
+                    "rangenode_id": "328a4e2c-a07b-11ec-959f-5254008afee6"
+                },
+                {
+                    "description": null,
+                    "domainnode_id": "210931f8-00bb-11ee-a50c-5254004d77d3",
+                    "edgeid": "38ebea22-d93a-468e-bc6c-ddccb028d350",
+                    "graph_id": "df3ee1ae-9c1c-11ec-964d-5254008afee6",
+                    "name": null,
+                    "ontologyproperty": "http://www.ics.forth.gr/isl/CRMdig/L54_is_same-as",
+                    "rangenode_id": "609e26e8-00bb-11ee-aea6-5254004d77d3"
+                },
+                {
+                    "description": null,
+                    "domainnode_id": "df3edef2-9c1c-11ec-964d-5254008afee6",
+                    "edgeid": "4366d0e8-25a0-4afa-8bf0-4693db57b324",
+                    "graph_id": "df3ee1ae-9c1c-11ec-964d-5254008afee6",
+                    "name": null,
+                    "ontologyproperty": "http://www.cidoc-crm.org/cidoc-crm/P15i_influenced",
+                    "rangenode_id": "23714006-70d9-11ed-9e2c-5254004d77d3"
+                },
+                {
+                    "description": null,
+                    "domainnode_id": "692d9c2a-9c1d-11ec-a5e5-5254008afee6",
+                    "edgeid": "43714111-9747-4468-b210-022c8cd57e2b",
+                    "graph_id": "df3ee1ae-9c1c-11ec-964d-5254008afee6",
+                    "name": null,
+                    "ontologyproperty": "http://www.cidoc-crm.org/cidoc-crm/P59i_is_located_on_or_within",
+                    "rangenode_id": "210931f8-00bb-11ee-a50c-5254004d77d3"
+                },
+                {
+                    "description": null,
+                    "domainnode_id": "df3edef2-9c1c-11ec-964d-5254008afee6",
+                    "edgeid": "5e4bdf96-a079-11ec-bc6e-5254008afee6",
+                    "graph_id": "df3ee1ae-9c1c-11ec-964d-5254008afee6",
+                    "name": null,
+                    "ontologyproperty": "http://www.cidoc-crm.org/cidoc-crm/P9i_forms_part_of",
+                    "rangenode_id": "5e4b75ba-a079-11ec-bc6e-5254008afee6"
+                },
+                {
+                    "description": null,
+                    "domainnode_id": "692d8e06-9c1d-11ec-a5e5-5254008afee6",
+                    "edgeid": "692de338-9c1d-11ec-a5e5-5254008afee6",
+                    "graph_id": "df3ee1ae-9c1c-11ec-964d-5254008afee6",
+                    "name": null,
+                    "ontologyproperty": "http://www.cidoc-crm.org/cidoc-crm/P3_has_note",
+                    "rangenode_id": "692da3b4-9c1d-11ec-a5e5-5254008afee6"
+                },
+                {
+                    "description": null,
+                    "domainnode_id": "692d8938-9c1d-11ec-a5e5-5254008afee6",
+                    "edgeid": "692de52c-9c1d-11ec-a5e5-5254008afee6",
+                    "graph_id": "df3ee1ae-9c1c-11ec-964d-5254008afee6",
+                    "name": null,
+                    "ontologyproperty": "http://www.cidoc-crm.org/cidoc-crm/P2_has_type",
+                    "rangenode_id": "692da0d0-9c1d-11ec-a5e5-5254008afee6"
+                },
+                {
+                    "description": null,
+                    "domainnode_id": "692d9c2a-9c1d-11ec-a5e5-5254008afee6",
+                    "edgeid": "692de8c4-9c1d-11ec-a5e5-5254008afee6",
+                    "graph_id": "df3ee1ae-9c1c-11ec-964d-5254008afee6",
+                    "name": null,
+                    "ontologyproperty": "http://www.cidoc-crm.org/cidoc-crm/P140i_was_attributed_by",
+                    "rangenode_id": "692d8e06-9c1d-11ec-a5e5-5254008afee6"
+                },
+                {
+                    "description": null,
+                    "domainnode_id": "692d9c2a-9c1d-11ec-a5e5-5254008afee6",
+                    "edgeid": "692de9a0-9c1d-11ec-a5e5-5254008afee6",
+                    "graph_id": "df3ee1ae-9c1c-11ec-964d-5254008afee6",
+                    "name": null,
+                    "ontologyproperty": "http://www.cidoc-crm.org/cidoc-crm/P87_is_identified_by",
+                    "rangenode_id": "692d8938-9c1d-11ec-a5e5-5254008afee6"
+                },
+                {
+                    "description": null,
+                    "domainnode_id": "692d8e06-9c1d-11ec-a5e5-5254008afee6",
+                    "edgeid": "692deb62-9c1d-11ec-a5e5-5254008afee6",
+                    "graph_id": "df3ee1ae-9c1c-11ec-964d-5254008afee6",
+                    "name": null,
+                    "ontologyproperty": "http://www.cidoc-crm.org/cidoc-crm/P140i_was_attributed_by",
+                    "rangenode_id": "692da652-9c1d-11ec-a5e5-5254008afee6"
+                },
+                {
+                    "description": null,
+                    "domainnode_id": "692d8e06-9c1d-11ec-a5e5-5254008afee6",
+                    "edgeid": "692dec3e-9c1d-11ec-a5e5-5254008afee6",
+                    "graph_id": "df3ee1ae-9c1c-11ec-964d-5254008afee6",
+                    "name": null,
+                    "ontologyproperty": "http://www.cidoc-crm.org/cidoc-crm/P3_has_note",
+                    "rangenode_id": "692da79c-9c1d-11ec-a5e5-5254008afee6"
+                },
+                {
+                    "description": null,
+                    "domainnode_id": "df3edef2-9c1c-11ec-964d-5254008afee6",
+                    "edgeid": "692def2c-9c1d-11ec-a5e5-5254008afee6",
+                    "graph_id": "df3ee1ae-9c1c-11ec-964d-5254008afee6",
+                    "name": null,
+                    "ontologyproperty": "http://www.cidoc-crm.org/cidoc-crm/P7_took_place_at",
+                    "rangenode_id": "692d9c2a-9c1d-11ec-a5e5-5254008afee6"
+                },
+                {
+                    "description": null,
+                    "domainnode_id": "9207c3fe-ab96-11ec-87fd-5254008afee6",
+                    "edgeid": "9207ce1c-ab96-11ec-87fd-5254008afee6",
+                    "graph_id": "df3ee1ae-9c1c-11ec-964d-5254008afee6",
+                    "name": null,
+                    "ontologyproperty": "http://www.cidoc-crm.org/cidoc-crm/P3_has_note",
+                    "rangenode_id": "9207c87c-ab96-11ec-87fd-5254008afee6"
+                },
+                {
+                    "description": null,
+                    "domainnode_id": "df3edef2-9c1c-11ec-964d-5254008afee6",
+                    "edgeid": "9207d038-ab96-11ec-87fd-5254008afee6",
+                    "graph_id": "df3ee1ae-9c1c-11ec-964d-5254008afee6",
+                    "name": null,
+                    "ontologyproperty": "http://www.cidoc-crm.org/cidoc-crm/P129i_is_subject_of",
+                    "rangenode_id": "9207c3fe-ab96-11ec-87fd-5254008afee6"
+                },
+                {
+                    "description": null,
+                    "domainnode_id": "692d8938-9c1d-11ec-a5e5-5254008afee6",
+                    "edgeid": "9e93ae8e-9c1f-11ec-964d-5254008afee6",
+                    "graph_id": "df3ee1ae-9c1c-11ec-964d-5254008afee6",
+                    "name": null,
+                    "ontologyproperty": "http://www.ics.forth.gr/isl/CRMdig/L43i_is_annotated_by",
+                    "rangenode_id": "9e93ab8c-9c1f-11ec-964d-5254008afee6"
+                },
+                {
+                    "description": null,
+                    "domainnode_id": "b7940db0-9c20-11ec-9b9a-5254008afee6",
+                    "edgeid": "a6d625c8-d84a-43c6-ae00-eceb3609d793",
+                    "graph_id": "df3ee1ae-9c1c-11ec-964d-5254008afee6",
+                    "name": null,
+                    "ontologyproperty": "http://www.cidoc-crm.org/cidoc-crm/P3_has_note",
+                    "rangenode_id": "7f9f62a2-00b9-11ee-aea6-5254004d77d3"
+                },
+                {
+                    "description": null,
+                    "domainnode_id": "df3edef2-9c1c-11ec-964d-5254008afee6",
+                    "edgeid": "b7947444-9c20-11ec-9b9a-5254008afee6",
+                    "graph_id": "df3ee1ae-9c1c-11ec-964d-5254008afee6",
+                    "name": null,
+                    "ontologyproperty": "http://www.cidoc-crm.org/cidoc-crm/P11_had_participant",
+                    "rangenode_id": "b7940db0-9c20-11ec-9b9a-5254008afee6"
+                },
+                {
+                    "description": null,
+                    "domainnode_id": "df3edef2-9c1c-11ec-964d-5254008afee6",
+                    "edgeid": "b90ead40-7ecf-4f67-808a-8c0e7af1be82",
+                    "graph_id": "df3ee1ae-9c1c-11ec-964d-5254008afee6",
+                    "name": null,
+                    "ontologyproperty": "http://www.ics.forth.gr/isl/CRMdig/L54_is_same-as",
+                    "rangenode_id": "74fb7b5c-7279-11ed-adf3-5254004d77d3"
+                },
+                {
+                    "description": null,
+                    "domainnode_id": "23714006-70d9-11ed-9e2c-5254004d77d3",
+                    "edgeid": "e321c134-273c-48b6-947d-f68f35e3348c",
+                    "graph_id": "df3ee1ae-9c1c-11ec-964d-5254008afee6",
+                    "name": null,
+                    "ontologyproperty": "http://www.cidoc-crm.org/cidoc-crm/P3_has_note",
+                    "rangenode_id": "fd7060c4-00b8-11ee-8e96-5254004d77d3"
+                },
+                {
+                    "description": null,
+                    "domainnode_id": "df3edef2-9c1c-11ec-964d-5254008afee6",
+                    "edgeid": "e64b6da9-8603-46dd-a79a-54df646e8ac5",
+                    "graph_id": "df3ee1ae-9c1c-11ec-964d-5254008afee6",
+                    "name": null,
+                    "ontologyproperty": "http://www.cidoc-crm.org/cidoc-crm/P117i_includes",
+                    "rangenode_id": "731312e0-70db-11ed-a567-5254004d77d3"
+                },
+                {
+                    "description": null,
+                    "domainnode_id": "df3edef2-9c1c-11ec-964d-5254008afee6",
+                    "edgeid": "ebc557de-a07a-11ec-8bc4-5254008afee6",
+                    "graph_id": "df3ee1ae-9c1c-11ec-964d-5254008afee6",
+                    "name": null,
+                    "ontologyproperty": "http://www.cidoc-crm.org/cidoc-crm/P117_occurs_during",
+                    "rangenode_id": "ebc4f8e8-a07a-11ec-8bc4-5254008afee6"
+                }
+            ],
+            "functions_x_graphs": [
+                {
+                    "config": {
+                        "class_name": "BCFossilsDescriptors",
+                        "descriptor_types": {
+                            "description": {
+                                "delimiter": "<br>",
+                                "first_only": false,
+                                "node_ids": [
+                                    "692da3b4-9c1d-11ec-a5e5-5254008afee6",
+                                    "692da79c-9c1d-11ec-a5e5-5254008afee6",
+                                    "5e4b75ba-a079-11ec-bc6e-5254008afee6"
+                                ],
+                                "show_name": true,
+                                "type": "description"
+                            },
+                            "map_popup": {
+                                "delimiter": "<br>",
+                                "first_only": false,
+                                "node_ids": [
+                                    "692da79c-9c1d-11ec-a5e5-5254008afee6",
+                                    "5e4b75ba-a079-11ec-bc6e-5254008afee6",
+                                    "692da3b4-9c1d-11ec-a5e5-5254008afee6"
+                                ],
+                                "show_name": true,
+                                "type": "map_popup"
+                            },
+                            "name": {
+                                "first_only": true,
+                                "node_ids": [
+                                    "328a4e2c-a07b-11ec-959f-5254008afee6",
+                                    "0bbd0096-a07b-11ec-855d-5254008afee6",
+                                    "263d0df0-f2ef-11ec-8e30-5254008afee6"
+                                ],
+                                "show_name": false,
+                                "type": "name"
+                            }
+                        },
+                        "module": "bcfms.functions.bc_fossils_descriptors",
+                        "triggering_nodegroups": []
+                    },
+                    "function_id": "60000000-0000-0000-0000-000000001001",
+                    "graph_id": "df3ee1ae-9c1c-11ec-964d-5254008afee6",
+                    "id": "9bd69461-483a-4d7a-a525-6e5dddee990e"
+                }
+            ],
+            "graphid": "df3ee1ae-9c1c-11ec-964d-5254008afee6",
+            "iconclass": "fa fa-suitcase",
+            "is_editable": true,
+            "isresource": true,
+            "jsonldcontext": null,
+            "name": {
+                "en": "Fossil Collection Event"
+            },
+            "nodegroups": [
+                {
+                    "cardinality": "1",
+                    "legacygroupid": null,
+                    "nodegroupid": "23714006-70d9-11ed-9e2c-5254004d77d3",
+                    "parentnodegroup_id": null
+                },
+                {
+                    "cardinality": "1",
+                    "legacygroupid": null,
+                    "nodegroupid": "5e4b75ba-a079-11ec-bc6e-5254008afee6",
+                    "parentnodegroup_id": null
+                },
+                {
+                    "cardinality": "n",
+                    "legacygroupid": null,
+                    "nodegroupid": "692d9c2a-9c1d-11ec-a5e5-5254008afee6",
+                    "parentnodegroup_id": null
+                },
+                {
+                    "cardinality": "1",
+                    "legacygroupid": null,
+                    "nodegroupid": "731312e0-70db-11ed-a567-5254004d77d3",
+                    "parentnodegroup_id": null
+                },
+                {
+                    "cardinality": "1",
+                    "legacygroupid": null,
+                    "nodegroupid": "74fb7b5c-7279-11ed-adf3-5254004d77d3",
+                    "parentnodegroup_id": null
+                },
+                {
+                    "cardinality": "n",
+                    "legacygroupid": null,
+                    "nodegroupid": "9207c3fe-ab96-11ec-87fd-5254008afee6",
+                    "parentnodegroup_id": null
+                },
+                {
+                    "cardinality": "n",
+                    "legacygroupid": null,
+                    "nodegroupid": "b7940db0-9c20-11ec-9b9a-5254008afee6",
+                    "parentnodegroup_id": null
+                },
+                {
+                    "cardinality": "n",
+                    "legacygroupid": null,
+                    "nodegroupid": "ebc4f8e8-a07a-11ec-8bc4-5254008afee6",
+                    "parentnodegroup_id": null
+                }
+            ],
+            "nodes": [
+                {
+                    "alias": "collection_start_year",
+                    "config": {
+                        "dateFormat": "YYYY"
+                    },
+                    "datatype": "date",
+                    "description": null,
+                    "exportable": true,
+                    "fieldname": "collstyr",
+                    "graph_id": "df3ee1ae-9c1c-11ec-964d-5254008afee6",
+                    "hascustomalias": false,
+                    "is_collector": false,
+                    "isrequired": true,
+                    "issearchable": true,
+                    "istopnode": false,
+                    "name": "Collection Start Year",
+                    "nodegroup_id": "ebc4f8e8-a07a-11ec-8bc4-5254008afee6",
+                    "nodeid": "0bbd0096-a07b-11ec-855d-5254008afee6",
+                    "ontologyclass": "http://www.cidoc-crm.org/cidoc-crm/E7_Activity",
+                    "parentproperty": "http://www.cidoc-crm.org/cidoc-crm/P116_starts",
+                    "sortorder": 0,
+                    "sourcebranchpublication_id": null
+                },
+                {
+                    "alias": "significance_ranking_code",
+                    "config": {
+                        "rdmCollection": "43b6403a-9f4a-4c27-ab31-7dafae0b2980"
+                    },
+                    "datatype": "concept-list",
+                    "description": null,
+                    "exportable": true,
+                    "fieldname": "sigcode",
+                    "graph_id": "df3ee1ae-9c1c-11ec-964d-5254008afee6",
+                    "hascustomalias": false,
+                    "is_collector": false,
+                    "isrequired": false,
+                    "issearchable": true,
+                    "istopnode": false,
+                    "name": "Significance Ranking Code",
+                    "nodegroup_id": "731312e0-70db-11ed-a567-5254004d77d3",
+                    "nodeid": "168664e0-70dc-11ed-b134-5254004d77d3",
+                    "ontologyclass": "http://www.cidoc-crm.org/cidoc-crm/E13_Attribute_Assignment",
+                    "parentproperty": "http://www.cidoc-crm.org/cidoc-crm/P141i_was_assigned_by",
+                    "sortorder": 0,
+                    "sourcebranchpublication_id": null
+                },
+                {
+                    "alias": "historical_location_data",
+                    "config": {
+                        "en": ""
+                    },
+                    "datatype": "semantic",
+                    "description": null,
+                    "exportable": false,
+                    "fieldname": null,
+                    "graph_id": "df3ee1ae-9c1c-11ec-964d-5254008afee6",
+                    "hascustomalias": false,
+                    "is_collector": false,
+                    "isrequired": false,
+                    "issearchable": true,
+                    "istopnode": false,
+                    "name": "Historical Location Data",
+                    "nodegroup_id": "692d9c2a-9c1d-11ec-a5e5-5254008afee6",
+                    "nodeid": "210931f8-00bb-11ee-a50c-5254004d77d3",
+                    "ontologyclass": "http://www.ics.forth.gr/isl/CRMarchaeo/A8_Stratigraphic_Unit",
+                    "parentproperty": "http://www.cidoc-crm.org/cidoc-crm/P59i_is_located_on_or_within",
+                    "sortorder": 0,
+                    "sourcebranchpublication_id": null
+                },
+                {
+                    "alias": "collection_event_significant",
+                    "config": {
+                        "falseLabel": {
+                            "en": "Non-significant"
+                        },
+                        "i18n_properties": [
+                            "trueLabel",
+                            "falseLabel"
+                        ],
+                        "trueLabel": {
+                            "en": "Collection Event Significant"
+                        }
+                    },
+                    "datatype": "boolean",
+                    "description": "",
+                    "exportable": false,
+                    "fieldname": null,
+                    "graph_id": "df3ee1ae-9c1c-11ec-964d-5254008afee6",
+                    "hascustomalias": false,
+                    "is_collector": true,
+                    "isrequired": false,
+                    "issearchable": true,
+                    "istopnode": false,
+                    "name": "Collection Event Significant",
+                    "nodegroup_id": "23714006-70d9-11ed-9e2c-5254004d77d3",
+                    "nodeid": "23714006-70d9-11ed-9e2c-5254004d77d3",
+                    "ontologyclass": "http://www.ics.forth.gr/isl/CRMsci/S6_Data_Evaluation",
+                    "parentproperty": "http://www.cidoc-crm.org/cidoc-crm/P15i_influenced",
+                    "sortorder": 0,
+                    "sourcebranchpublication_id": null
+                },
+                {
+                    "alias": "significance_ranking_details",
+                    "config": {
+                        "rdmCollection": "5776a0d2-0e15-45ca-9d9d-7a007bd90f67"
+                    },
+                    "datatype": "concept-list",
+                    "description": "",
+                    "exportable": false,
+                    "fieldname": null,
+                    "graph_id": "df3ee1ae-9c1c-11ec-964d-5254008afee6",
+                    "hascustomalias": false,
+                    "is_collector": false,
+                    "isrequired": false,
+                    "issearchable": true,
+                    "istopnode": false,
+                    "name": "Significance Ranking Details",
+                    "nodegroup_id": "23714006-70d9-11ed-9e2c-5254004d77d3",
+                    "nodeid": "23714510-70d9-11ed-9e2c-5254004d77d3",
+                    "ontologyclass": "http://www.ics.forth.gr/isl/CRMsci/S6_Data_Evaluation",
+                    "parentproperty": "http://www.cidoc-crm.org/cidoc-crm/P15i_influenced",
+                    "sortorder": 0,
+                    "sourcebranchpublication_id": null
+                },
+                {
+                    "alias": "collection_end_year",
+                    "config": {
+                        "dateFormat": "YYYY"
+                    },
+                    "datatype": "date",
+                    "description": null,
+                    "exportable": false,
+                    "fieldname": "collendyr",
+                    "graph_id": "df3ee1ae-9c1c-11ec-964d-5254008afee6",
+                    "hascustomalias": false,
+                    "is_collector": false,
+                    "isrequired": false,
+                    "issearchable": true,
+                    "istopnode": false,
+                    "name": "Collection End Year",
+                    "nodegroup_id": "ebc4f8e8-a07a-11ec-8bc4-5254008afee6",
+                    "nodeid": "328a4e2c-a07b-11ec-959f-5254008afee6",
+                    "ontologyclass": "http://www.cidoc-crm.org/cidoc-crm/E7_Activity",
+                    "parentproperty": "http://www.cidoc-crm.org/cidoc-crm/P115_finishes",
+                    "sortorder": 0,
+                    "sourcebranchpublication_id": null
+                },
+                {
+                    "alias": "samples_collected",
+                    "config": {
+                        "graphs": [
+                            {
+                                "graphid": "7f2c2082-6c51-11ed-9b7d-5254004d77d3",
+                                "inverseRelationshipConcept": "ac41d9be-79db-4256-b368-2f4559cfbe55",
+                                "name": "Fossil Sample",
+                                "relationshipCollection": "00000000-0000-0000-0000-000000000005",
+                                "relationshipConcept": "ac41d9be-79db-4256-b368-2f4559cfbe55",
+                                "useOntologyRelationship": false
+                            }
+                        ],
+                        "searchDsl": "",
+                        "searchString": ""
+                    },
+                    "datatype": "resource-instance-list",
+                    "description": null,
+                    "exportable": true,
+                    "fieldname": "sample_col",
+                    "graph_id": "df3ee1ae-9c1c-11ec-964d-5254008afee6",
+                    "hascustomalias": false,
+                    "is_collector": true,
+                    "isrequired": false,
+                    "issearchable": true,
+                    "istopnode": false,
+                    "name": "Samples Collected",
+                    "nodegroup_id": "5e4b75ba-a079-11ec-bc6e-5254008afee6",
+                    "nodeid": "5e4b75ba-a079-11ec-bc6e-5254008afee6",
+                    "ontologyclass": "http://www.cidoc-crm.org/cidoc-crm/E80_Part_Removal",
+                    "parentproperty": "http://www.cidoc-crm.org/cidoc-crm/P9i_forms_part_of",
+                    "sortorder": 0,
+                    "sourcebranchpublication_id": null
+                },
+                {
+                    "alias": "geographical_name",
+                    "config": {
+                        "en": ""
+                    },
+                    "datatype": "string",
+                    "description": "1:250k Mapsheet name",
+                    "exportable": true,
+                    "fieldname": "map250k",
+                    "graph_id": "df3ee1ae-9c1c-11ec-964d-5254008afee6",
+                    "hascustomalias": false,
+                    "is_collector": false,
+                    "isrequired": false,
+                    "issearchable": true,
+                    "istopnode": false,
+                    "name": "Geographical Name",
+                    "nodegroup_id": "692d9c2a-9c1d-11ec-a5e5-5254008afee6",
+                    "nodeid": "609e26e8-00bb-11ee-aea6-5254004d77d3",
+                    "ontologyclass": "http://www.ics.forth.gr/isl/CRMarchaeo/A8_Stratigraphic_Unit",
+                    "parentproperty": "http://www.ics.forth.gr/isl/CRMdig/L54_is_same-as",
+                    "sortorder": 0,
+                    "sourcebranchpublication_id": null
+                },
+                {
+                    "alias": "nts_mapsheet_number",
+                    "config": {
+                        "en": ""
+                    },
+                    "datatype": "string",
+                    "description": "1:50k Mapsheet number",
+                    "exportable": true,
+                    "fieldname": "map50k",
+                    "graph_id": "df3ee1ae-9c1c-11ec-964d-5254008afee6",
+                    "hascustomalias": false,
+                    "is_collector": false,
+                    "isrequired": false,
+                    "issearchable": true,
+                    "istopnode": false,
+                    "name": "NTS Mapsheet Number",
+                    "nodegroup_id": "692d9c2a-9c1d-11ec-a5e5-5254008afee6",
+                    "nodeid": "62d8d22c-00bc-11ee-83ab-5254004d77d3",
+                    "ontologyclass": "http://www.ics.forth.gr/isl/CRMarchaeo/A8_Stratigraphic_Unit",
+                    "parentproperty": "http://www.ics.forth.gr/isl/CRMdig/L54_is_same-as",
+                    "sortorder": 0,
+                    "sourcebranchpublication_id": null
+                },
+                {
+                    "alias": "collection_location",
+                    "config": {
+                        "addToMap": false,
+                        "advancedStyle": "[\n  {\n    \"id\": \"resources-fill-692d8938-9c1d-11ec-a5e5-5254008afee6\",\n    \"type\": \"fill\",\n    \"source\": \"resources-692d8938-9c1d-11ec-a5e5-5254008afee6\",\n    \"source-layer\": \"692d8938-9c1d-11ec-a5e5-5254008afee6\",\n    \"layout\": {\n      \"visibility\": \"visible\"\n    },\n    \"filter\": [\n      \"all\",\n      [\n        \"==\",\n        \"$type\",\n        \"Polygon\"\n      ],\n      [\n        \"==\",\n        \"total\",\n        1\n      ]\n    ],\n    \"paint\": {\n      \"fill-color\": \"rgba(244,109,67, 0.5)\"\n    }\n  },\n  {\n    \"id\": \"resources-fill-692d8938-9c1d-11ec-a5e5-5254008afee6-click\",\n    \"type\": \"fill\",\n    \"source\": \"resources-692d8938-9c1d-11ec-a5e5-5254008afee6\",\n    \"source-layer\": \"692d8938-9c1d-11ec-a5e5-5254008afee6\",\n    \"layout\": {\n      \"visibility\": \"visible\"\n    },\n    \"filter\": [\n      \"all\",\n      [\n        \"==\",\n        \"$type\",\n        \"Polygon\"\n      ],\n      [\n        \"==\",\n        \"total\",\n        1\n      ],\n      [\n        \"==\",\n        \"resourceinstanceid\",\n        \"\"\n      ]\n    ],\n    \"paint\": {\n      \"fill-color\": \"rgba(244,109,67, 0.5)\"\n    }\n  },\n  {\n    \"id\": \"resources-fill-692d8938-9c1d-11ec-a5e5-5254008afee6-hover\",\n    \"type\": \"fill\",\n    \"source\": \"resources-692d8938-9c1d-11ec-a5e5-5254008afee6\",\n    \"source-layer\": \"692d8938-9c1d-11ec-a5e5-5254008afee6\",\n    \"layout\": {\n      \"visibility\": \"visible\"\n    },\n    \"filter\": [\n      \"all\",\n      [\n        \"==\",\n        \"$type\",\n        \"Polygon\"\n      ],\n      [\n        \"==\",\n        \"total\",\n        1\n      ],\n      [\n        \"==\",\n        \"resourceinstanceid\",\n        \"\"\n      ]\n    ],\n    \"paint\": {\n      \"fill-color\": \"rgba(244,109,67, 0.5)\"\n    }\n  },\n  {\n    \"id\": \"resources-poly-outline-692d8938-9c1d-11ec-a5e5-5254008afee6\",\n    \"type\": \"line\",\n    \"source\": \"resources-692d8938-9c1d-11ec-a5e5-5254008afee6\",\n    \"source-layer\": \"692d8938-9c1d-11ec-a5e5-5254008afee6\",\n    \"layout\": {\n      \"visibility\": \"visible\"\n    },\n    \"filter\": [\n      \"all\",\n      [\n        \"==\",\n        \"$type\",\n        \"Polygon\"\n      ],\n      [\n        \"==\",\n        \"total\",\n        1\n      ]\n    ],\n    \"paint\": {\n      \"line-width\": 2,\n      \"line-color\": \"rgba(244,109,67, 0.7)\"\n    }\n  },\n  {\n    \"id\": \"resources-poly-outline-692d8938-9c1d-11ec-a5e5-5254008afee6-hover\",\n    \"type\": \"line\",\n    \"source\": \"resources-692d8938-9c1d-11ec-a5e5-5254008afee6\",\n    \"source-layer\": \"692d8938-9c1d-11ec-a5e5-5254008afee6\",\n    \"layout\": {\n      \"visibility\": \"visible\"\n    },\n    \"filter\": [\n      \"all\",\n      [\n        \"==\",\n        \"$type\",\n        \"Polygon\"\n      ],\n      [\n        \"==\",\n        \"total\",\n        1\n      ],\n      [\n        \"==\",\n        \"resourceinstanceid\",\n        \"\"\n      ]\n    ],\n    \"paint\": {\n      \"line-width\": 4,\n      \"line-color\": \"rgba(244,109,67, 0.7)\"\n    }\n  },\n  {\n    \"id\": \"resources-poly-outline-692d8938-9c1d-11ec-a5e5-5254008afee6-click\",\n    \"type\": \"line\",\n    \"source\": \"resources-692d8938-9c1d-11ec-a5e5-5254008afee6\",\n    \"source-layer\": \"692d8938-9c1d-11ec-a5e5-5254008afee6\",\n    \"layout\": {\n      \"visibility\": \"visible\"\n    },\n    \"filter\": [\n      \"all\",\n      [\n        \"==\",\n        \"$type\",\n        \"Polygon\"\n      ],\n      [\n        \"==\",\n        \"total\",\n        1\n      ],\n      [\n        \"==\",\n        \"resourceinstanceid\",\n        \"\"\n      ]\n    ],\n    \"paint\": {\n      \"line-width\": 4,\n      \"line-color\": \"rgba(244,109,67, 0.7)\"\n    }\n  },\n  {\n    \"id\": \"resources-line-halo-692d8938-9c1d-11ec-a5e5-5254008afee6\",\n    \"type\": \"line\",\n    \"source\": \"resources-692d8938-9c1d-11ec-a5e5-5254008afee6\",\n    \"source-layer\": \"692d8938-9c1d-11ec-a5e5-5254008afee6\",\n    \"layout\": {\n      \"visibility\": \"visible\"\n    },\n    \"filter\": [\n      \"all\",\n      [\n        \"==\",\n        \"$type\",\n        \"LineString\"\n      ],\n      [\n        \"==\",\n        \"total\",\n        1\n      ]\n    ],\n    \"paint\": {\n      \"line-width\": 4,\n      \"line-color\": \"rgba(244,109,67, 0.5)\"\n    }\n  },\n  {\n    \"id\": \"resources-line-692d8938-9c1d-11ec-a5e5-5254008afee6\",\n    \"type\": \"line\",\n    \"source\": \"resources-692d8938-9c1d-11ec-a5e5-5254008afee6\",\n    \"source-layer\": \"692d8938-9c1d-11ec-a5e5-5254008afee6\",\n    \"layout\": {\n      \"visibility\": \"visible\"\n    },\n    \"filter\": [\n      \"all\",\n      [\n        \"==\",\n        \"$type\",\n        \"LineString\"\n      ],\n      [\n        \"==\",\n        \"total\",\n        1\n      ]\n    ],\n    \"paint\": {\n      \"line-width\": 2,\n      \"line-color\": \"rgba(244,109,67, 0.7)\"\n    }\n  },\n  {\n    \"id\": \"resources-line-halo-692d8938-9c1d-11ec-a5e5-5254008afee6-hover\",\n    \"type\": \"line\",\n    \"source\": \"resources-692d8938-9c1d-11ec-a5e5-5254008afee6\",\n    \"source-layer\": \"692d8938-9c1d-11ec-a5e5-5254008afee6\",\n    \"layout\": {\n      \"visibility\": \"visible\"\n    },\n    \"filter\": [\n      \"all\",\n      [\n        \"==\",\n        \"$type\",\n        \"LineString\"\n      ],\n      [\n        \"==\",\n        \"total\",\n        1\n      ],\n      [\n        \"==\",\n        \"resourceinstanceid\",\n        \"\"\n      ]\n    ],\n    \"paint\": {\n      \"line-width\": 8,\n      \"line-color\": \"rgba(244,109,67, 0.5)\"\n    }\n  },\n  {\n    \"id\": \"resources-line-692d8938-9c1d-11ec-a5e5-5254008afee6-hover\",\n    \"type\": \"line\",\n    \"source\": \"resources-692d8938-9c1d-11ec-a5e5-5254008afee6\",\n    \"source-layer\": \"692d8938-9c1d-11ec-a5e5-5254008afee6\",\n    \"layout\": {\n      \"visibility\": \"visible\"\n    },\n    \"filter\": [\n      \"all\",\n      [\n        \"==\",\n        \"$type\",\n        \"LineString\"\n      ],\n      [\n        \"==\",\n        \"total\",\n        1\n      ],\n      [\n        \"==\",\n        \"resourceinstanceid\",\n        \"\"\n      ]\n    ],\n    \"paint\": {\n      \"line-width\": 4,\n      \"line-color\": \"rgba(244,109,67, 0.7)\"\n    }\n  },\n  {\n    \"id\": \"resources-line-halo-692d8938-9c1d-11ec-a5e5-5254008afee6-click\",\n    \"type\": \"line\",\n    \"source\": \"resources-692d8938-9c1d-11ec-a5e5-5254008afee6\",\n    \"source-layer\": \"692d8938-9c1d-11ec-a5e5-5254008afee6\",\n    \"layout\": {\n      \"visibility\": \"visible\"\n    },\n    \"filter\": [\n      \"all\",\n      [\n        \"==\",\n        \"$type\",\n        \"LineString\"\n      ],\n      [\n        \"==\",\n        \"total\",\n        1\n      ],\n      [\n        \"==\",\n        \"resourceinstanceid\",\n        \"\"\n      ]\n    ],\n    \"paint\": {\n      \"line-width\": 8,\n      \"line-color\": \"rgba(244,109,67, 0.5)\"\n    }\n  },\n  {\n    \"id\": \"resources-line-692d8938-9c1d-11ec-a5e5-5254008afee6-click\",\n    \"type\": \"line\",\n    \"source\": \"resources-692d8938-9c1d-11ec-a5e5-5254008afee6\",\n    \"source-layer\": \"692d8938-9c1d-11ec-a5e5-5254008afee6\",\n    \"layout\": {\n      \"visibility\": \"visible\"\n    },\n    \"filter\": [\n      \"all\",\n      [\n        \"==\",\n        \"$type\",\n        \"LineString\"\n      ],\n      [\n        \"==\",\n        \"total\",\n        1\n      ],\n      [\n        \"==\",\n        \"resourceinstanceid\",\n        \"\"\n      ]\n    ],\n    \"paint\": {\n      \"line-width\": 4,\n      \"line-color\": \"rgba(244,109,67, 0.7)\"\n    }\n  },\n  {\n    \"id\": \"resources-point-692d8938-9c1d-11ec-a5e5-5254008afee6\",\n    \"type\": \"symbol\",\n    \"source\": \"resources-692d8938-9c1d-11ec-a5e5-5254008afee6\",\n    \"source-layer\": \"692d8938-9c1d-11ec-a5e5-5254008afee6\",\n    \"layout\": {\n      \"visibility\": \"visible\",\n      \"icon-image\": [\"case\",\n                      [\"all\", [\"in\", \"Macrofossil\", [\"get\",\"size_categories\"]],\n                              [\"in\", \"Microfossil\", [\"get\",\"size_categories\"]]\n                      ], \"macromicro-marker\",\n                      [\"in\", \"Macrofossil\", [\"get\",\"size_categories\"]], \"macro-marker\",\n                      [\"in\", \"Microfossil\", [\"get\",\"size_categories\"]], \"micro-marker\",\n                       \"nosize-marker\" ],\n      \"icon-ignore-placement\": true,\n      \"icon-allow-overlap\": true,\n      \"symbol-sort-key\": [\"case\",\n        [\"all\", [\"in\", \"Macrofossil\", [\"get\",\"size_categories\"]],\n          [\"in\", \"Microfossil\", [\"get\",\"size_categories\"]]\n        ], 10,\n        [\"in\", \"Macrofossil\", [\"get\",\"size_categories\"]], 5,\n        [\"in\", \"Microfossil\", [\"get\",\"size_categories\"]], 5,\n        0 ]\n    },\n    \"filter\": [\n      \"all\",\n      [\n        \"==\",\n        \"$type\",\n        \"Point\"\n      ],\n      [\n        \"==\",\n        \"total\",\n        1\n      ]\n    ],\n    \"paint\": {\n    }\n  },\n  {\n    \"id\": \"resources-point-halo-692d8938-9c1d-11ec-a5e5-5254008afee6-click\",\n    \"type\": \"circle\",\n    \"source\": \"resources-692d8938-9c1d-11ec-a5e5-5254008afee6\",\n    \"source-layer\": \"692d8938-9c1d-11ec-a5e5-5254008afee6\",\n    \"layout\": {\n      \"visibility\": \"visible\"\n    },\n    \"filter\": [\n      \"all\",\n      [\n        \"==\",\n        \"$type\",\n        \"Point\"\n      ],\n      [\n        \"==\",\n        \"total\",\n        1\n      ],\n      [\n        \"==\",\n        \"resourceinstanceid\",\n        \"\"\n      ]\n    ],\n    \"paint\": {\n      \"circle-radius\": 12,\n      \"circle-color\": \"rgba(244,109,67,0.4)\"\n    }\n  },\n  {\n    \"id\": \"resources-point-692d8938-9c1d-11ec-a5e5-5254008afee6-click\",\n    \"type\": \"circle\",\n    \"source\": \"resources-692d8938-9c1d-11ec-a5e5-5254008afee6\",\n    \"source-layer\": \"692d8938-9c1d-11ec-a5e5-5254008afee6\",\n    \"layout\": {\n      \"visibility\": \"visible\"\n    },\n    \"filter\": [\n      \"all\",\n      [\n        \"==\",\n        \"$type\",\n        \"Point\"\n      ],\n      [\n        \"==\",\n        \"total\",\n        1\n      ],\n      [\n        \"==\",\n        \"resourceinstanceid\",\n        \"\"\n      ]\n    ],\n    \"paint\": {\n      \"circle-radius\": 6,\n      \"circle-color\": \"rgba(244,109,67,0.7)\"\n    }\n  },\n  {\n    \"id\": \"resources-cluster-point-halo-692d8938-9c1d-11ec-a5e5-5254008afee6\",\n    \"type\": \"circle\",\n    \"source\": \"resources-692d8938-9c1d-11ec-a5e5-5254008afee6\",\n    \"source-layer\": \"692d8938-9c1d-11ec-a5e5-5254008afee6\",\n    \"layout\": {\n      \"visibility\": \"visible\"\n    },\n    \"filter\": [\n      \"all\",\n      [\n        \"==\",\n        \"$type\",\n        \"Point\"\n      ],\n      [\n        \">\",\n        \"total\",\n        1\n      ]\n    ],\n    \"paint\": {\n      \"circle-radius\": {\n        \"property\": \"total\",\n        \"stops\": [\n          [\n            0,\n            22\n          ],\n          [\n            50,\n            24\n          ],\n          [\n            100,\n            26\n          ],\n          [\n            200,\n            28\n          ],\n          [\n            400,\n            30\n          ],\n          [\n            800,\n            32\n          ],\n          [\n            1200,\n            34\n          ],\n          [\n            1600,\n            36\n          ],\n          [\n            2000,\n            38\n          ],\n          [\n            2500,\n            40\n          ],\n          [\n            3000,\n            42\n          ],\n          [\n            4000,\n            44\n          ],\n          [\n            5000,\n            46\n          ]\n        ]\n      },\n      \"circle-color\": \"rgba(244,109,67,0.4)\"\n    }\n  },\n  {\n    \"id\": \"resources-cluster-point-692d8938-9c1d-11ec-a5e5-5254008afee6\",\n    \"type\": \"circle\",\n    \"source\": \"resources-692d8938-9c1d-11ec-a5e5-5254008afee6\",\n    \"source-layer\": \"692d8938-9c1d-11ec-a5e5-5254008afee6\",\n    \"layout\": {\n      \"visibility\": \"visible\"\n    },\n    \"filter\": [\n      \"all\",\n      [\n        \"==\",\n        \"$type\",\n        \"Point\"\n      ],\n      [\n        \">\",\n        \"total\",\n        1\n      ]\n    ],\n    \"paint\": {\n      \"circle-radius\": {\n        \"property\": \"total\",\n        \"type\": \"exponential\",\n        \"stops\": [\n          [\n            0,\n            12\n          ],\n          [\n            50,\n            14\n          ],\n          [\n            100,\n            16\n          ],\n          [\n            200,\n            18\n          ],\n          [\n            400,\n            20\n          ],\n          [\n            800,\n            22\n          ],\n          [\n            1200,\n            24\n          ],\n          [\n            1600,\n            26\n          ],\n          [\n            2000,\n            28\n          ],\n          [\n            2500,\n            30\n          ],\n          [\n            3000,\n            32\n          ],\n          [\n            4000,\n            34\n          ],\n          [\n            5000,\n            36\n          ]\n        ]\n      },\n      \"circle-color\": \"rgba(244,109,67,0.7)\"\n    }\n  },\n  {\n    \"id\": \"resources-cluster-count-692d8938-9c1d-11ec-a5e5-5254008afee6\",\n    \"type\": \"symbol\",\n    \"source\": \"resources-692d8938-9c1d-11ec-a5e5-5254008afee6\",\n    \"source-layer\": \"692d8938-9c1d-11ec-a5e5-5254008afee6\",\n    \"layout\": {\n      \"text-field\": \"{total}\",\n      \"text-size\": 10\n    },\n    \"paint\": {\n      \"text-color\": \"#fff\"\n    },\n    \"filter\": [\n      \"all\",\n      [\n        \">\",\n        \"total\",\n        1\n      ]\n    ]\n  }\n]",
+                        "advancedStyling": true,
+                        "clusterDistance": 20,
+                        "clusterMaxZoom": 7,
+                        "clusterMinPoints": 3,
+                        "fillColor": "rgba(244,109,67, 0.5)",
+                        "haloRadius": 6,
+                        "haloWeight": 4,
+                        "layerActivated": true,
+                        "layerIcon": "fa fa-spoon",
+                        "layerLegend": "<p><img alt=\"\" class=\"collection-event legend-swatch\" src=\"/int/bc-fossil-management/static/img/markers/macro.png\" />Macrofossil<br /><img alt=\"\" class=\"collection-event legend-swatch\" src=\"/int/bc-fossil-management/static/img/markers/micro.png\" />Microfossil<br /> <img alt=\"\" class=\"collection-event legend-swatch\" src=\"/int/bc-fossil-management/static/img/markers/macromicro.png\" />Macrofossil &amp; Microfossil<br /> <img alt=\"\" class=\"collection-event legend-swatch\" src=\"/int/bc-fossil-management/static/img/markers/nosize.png\" />None / Uncertain</p>",
+                        "layerName": "",
+                        "lineColor": "rgba(244,109,67, 0.7)",
+                        "lineHaloColor": "rgba(244,109,67, 0.5)",
+                        "outlineColor": "rgba(244,109,67, 0.7)",
+                        "outlineWeight": 2,
+                        "pointColor": "rgba(244,109,67,0.7)",
+                        "pointHaloColor": "rgba(244,109,67,0.4)",
+                        "radius": 3,
+                        "simplification": 0.3,
+                        "weight": 2
+                    },
+                    "datatype": "geojson-feature-collection",
+                    "description": "Represents a single node in a graph",
+                    "exportable": true,
+                    "fieldname": "event_geom",
+                    "graph_id": "df3ee1ae-9c1c-11ec-964d-5254008afee6",
+                    "hascustomalias": false,
+                    "is_collector": false,
+                    "isrequired": true,
+                    "issearchable": true,
+                    "istopnode": false,
+                    "name": "Collection Location",
+                    "nodegroup_id": "692d9c2a-9c1d-11ec-a5e5-5254008afee6",
+                    "nodeid": "692d8938-9c1d-11ec-a5e5-5254008afee6",
+                    "ontologyclass": "http://www.cidoc-crm.org/cidoc-crm/E47_Spatial_Coordinates",
+                    "parentproperty": "http://www.cidoc-crm.org/cidoc-crm/P87_is_identified_by",
+                    "sortorder": 0,
+                    "sourcebranchpublication_id": null
+                },
+                {
+                    "alias": "place_description_assignment",
+                    "config": {
+                        "en": ""
+                    },
+                    "datatype": "semantic",
+                    "description": "Represents a single node in a graph",
+                    "exportable": false,
+                    "fieldname": "",
+                    "graph_id": "df3ee1ae-9c1c-11ec-964d-5254008afee6",
+                    "hascustomalias": false,
+                    "is_collector": false,
+                    "isrequired": false,
+                    "issearchable": true,
+                    "istopnode": false,
+                    "name": "Place Description Assignment",
+                    "nodegroup_id": "692d9c2a-9c1d-11ec-a5e5-5254008afee6",
+                    "nodeid": "692d8e06-9c1d-11ec-a5e5-5254008afee6",
+                    "ontologyclass": "http://www.cidoc-crm.org/cidoc-crm/E13_Attribute_Assignment",
+                    "parentproperty": "http://www.cidoc-crm.org/cidoc-crm/P140i_was_attributed_by",
+                    "sortorder": 0,
+                    "sourcebranchpublication_id": null
+                },
+                {
+                    "alias": "collection_event_location",
+                    "config": {
+                        "en": ""
+                    },
+                    "datatype": "semantic",
+                    "description": "",
+                    "exportable": false,
+                    "fieldname": "",
+                    "graph_id": "df3ee1ae-9c1c-11ec-964d-5254008afee6",
+                    "hascustomalias": false,
+                    "is_collector": true,
+                    "isrequired": false,
+                    "issearchable": true,
+                    "istopnode": false,
+                    "name": "Collection Event Location",
+                    "nodegroup_id": "692d9c2a-9c1d-11ec-a5e5-5254008afee6",
+                    "nodeid": "692d9c2a-9c1d-11ec-a5e5-5254008afee6",
+                    "ontologyclass": "http://www.cidoc-crm.org/cidoc-crm/E53_Place",
+                    "parentproperty": "http://www.cidoc-crm.org/cidoc-crm/P7_took_place_at",
+                    "sortorder": 0,
+                    "sourcebranchpublication_id": null
+                },
+                {
+                    "alias": "geometry_qualifier",
+                    "config": {
+                        "rdmCollection": "85fd6ca4-9539-4784-8889-09c794878bfb"
+                    },
+                    "datatype": "concept",
+                    "description": "Represents a single node in a graph",
+                    "exportable": true,
+                    "fieldname": "geom_qlfr",
+                    "graph_id": "df3ee1ae-9c1c-11ec-964d-5254008afee6",
+                    "hascustomalias": false,
+                    "is_collector": false,
+                    "isrequired": false,
+                    "issearchable": true,
+                    "istopnode": false,
+                    "name": "Geometry Qualifier",
+                    "nodegroup_id": "692d9c2a-9c1d-11ec-a5e5-5254008afee6",
+                    "nodeid": "692da0d0-9c1d-11ec-a5e5-5254008afee6",
+                    "ontologyclass": "http://www.cidoc-crm.org/cidoc-crm/E55_Type",
+                    "parentproperty": "http://www.cidoc-crm.org/cidoc-crm/P2_has_type",
+                    "sortorder": 0,
+                    "sourcebranchpublication_id": null
+                },
+                {
+                    "alias": "location_descriptor",
+                    "config": {
+                        "en": ""
+                    },
+                    "datatype": "string",
+                    "description": "Represents a single node in a graph",
+                    "exportable": true,
+                    "fieldname": "locdesc",
+                    "graph_id": "df3ee1ae-9c1c-11ec-964d-5254008afee6",
+                    "hascustomalias": false,
+                    "is_collector": false,
+                    "isrequired": true,
+                    "issearchable": true,
+                    "istopnode": false,
+                    "name": "Location Descriptor",
+                    "nodegroup_id": "692d9c2a-9c1d-11ec-a5e5-5254008afee6",
+                    "nodeid": "692da3b4-9c1d-11ec-a5e5-5254008afee6",
+                    "ontologyclass": "http://www.cidoc-crm.org/cidoc-crm/E62_String",
+                    "parentproperty": "http://www.cidoc-crm.org/cidoc-crm/P3_has_note",
+                    "sortorder": 0,
+                    "sourcebranchpublication_id": null
+                },
+                {
+                    "alias": "nearest_municipality",
+                    "config": {},
+                    "datatype": "string",
+                    "description": null,
+                    "exportable": false,
+                    "fieldname": null,
+                    "graph_id": "df3ee1ae-9c1c-11ec-964d-5254008afee6",
+                    "hascustomalias": false,
+                    "is_collector": false,
+                    "isrequired": false,
+                    "issearchable": true,
+                    "istopnode": false,
+                    "name": "Nearest Municipality",
+                    "nodegroup_id": "692d9c2a-9c1d-11ec-a5e5-5254008afee6",
+                    "nodeid": "692da652-9c1d-11ec-a5e5-5254008afee6",
+                    "ontologyclass": "http://www.ics.forth.gr/isl/CRMsci/S4_Observation",
+                    "parentproperty": "http://www.cidoc-crm.org/cidoc-crm/P140i_was_attributed_by",
+                    "sortorder": 0,
+                    "sourcebranchpublication_id": null
+                },
+                {
+                    "alias": "detailed_location",
+                    "config": {
+                        "en": ""
+                    },
+                    "datatype": "string",
+                    "description": null,
+                    "exportable": false,
+                    "fieldname": "detail_loc",
+                    "graph_id": "df3ee1ae-9c1c-11ec-964d-5254008afee6",
+                    "hascustomalias": false,
+                    "is_collector": false,
+                    "isrequired": true,
+                    "issearchable": true,
+                    "istopnode": false,
+                    "name": "Detailed Location",
+                    "nodegroup_id": "692d9c2a-9c1d-11ec-a5e5-5254008afee6",
+                    "nodeid": "692da79c-9c1d-11ec-a5e5-5254008afee6",
+                    "ontologyclass": "http://www.cidoc-crm.org/cidoc-crm/E62_String",
+                    "parentproperty": "http://www.cidoc-crm.org/cidoc-crm/P3_has_note",
+                    "sortorder": 0,
+                    "sourcebranchpublication_id": null
+                },
+                {
+                    "alias": "historical_data",
+                    "config": {
+                        "en": ""
+                    },
+                    "datatype": "semantic",
+                    "description": "This is data that was historically collected in the Excel spreadsheet but cannot be parsed into Fossil Site or Fossil Sample Resources due to cardinality discrepancies in the original data.",
+                    "exportable": false,
+                    "fieldname": null,
+                    "graph_id": "df3ee1ae-9c1c-11ec-964d-5254008afee6",
+                    "hascustomalias": false,
+                    "is_collector": true,
+                    "isrequired": false,
+                    "issearchable": true,
+                    "istopnode": false,
+                    "name": "Historical Data",
+                    "nodegroup_id": "731312e0-70db-11ed-a567-5254004d77d3",
+                    "nodeid": "731312e0-70db-11ed-a567-5254004d77d3",
+                    "ontologyclass": "http://www.cidoc-crm.org/cidoc-crm/E13_Attribute_Assignment",
+                    "parentproperty": "http://www.cidoc-crm.org/cidoc-crm/P117i_includes",
+                    "sortorder": 0,
+                    "sourcebranchpublication_id": null
+                },
+                {
+                    "alias": "fossil_abundance",
+                    "config": {
+                        "rdmCollection": "a727f7c8-b11a-4dc2-962c-b23baf9eb046"
+                    },
+                    "datatype": "concept",
+                    "description": null,
+                    "exportable": true,
+                    "fieldname": "abundance",
+                    "graph_id": "df3ee1ae-9c1c-11ec-964d-5254008afee6",
+                    "hascustomalias": false,
+                    "is_collector": true,
+                    "isrequired": true,
+                    "issearchable": true,
+                    "istopnode": false,
+                    "name": "Fossil Abundance",
+                    "nodegroup_id": "74fb7b5c-7279-11ed-adf3-5254004d77d3",
+                    "nodeid": "74fb7b5c-7279-11ed-adf3-5254004d77d3",
+                    "ontologyclass": "http://www.ics.forth.gr/isl/CRMsci/S15_Observable_Entity",
+                    "parentproperty": "http://www.ics.forth.gr/isl/CRMdig/L54_is_same-as",
+                    "sortorder": 0,
+                    "sourcebranchpublication_id": null
+                },
+                {
+                    "alias": "collector_unknown",
+                    "config": {
+                        "falseLabel": {
+                            "en": "Collector Known"
+                        },
+                        "i18n_properties": [
+                            "trueLabel",
+                            "falseLabel"
+                        ],
+                        "trueLabel": {
+                            "en": "Collector Unknown"
+                        }
+                    },
+                    "datatype": "boolean",
+                    "description": "",
+                    "exportable": false,
+                    "fieldname": null,
+                    "graph_id": "df3ee1ae-9c1c-11ec-964d-5254008afee6",
+                    "hascustomalias": false,
+                    "is_collector": false,
+                    "isrequired": false,
+                    "issearchable": true,
+                    "istopnode": false,
+                    "name": "Collector Unknown",
+                    "nodegroup_id": "b7940db0-9c20-11ec-9b9a-5254008afee6",
+                    "nodeid": "7f9f62a2-00b9-11ee-aea6-5254004d77d3",
+                    "ontologyclass": "http://www.cidoc-crm.org/cidoc-crm/E59_Primitive_Value",
+                    "parentproperty": "http://www.cidoc-crm.org/cidoc-crm/P3_has_note",
+                    "sortorder": 0,
+                    "sourcebranchpublication_id": null
+                },
+                {
+                    "alias": "nts_mapsheet_name",
+                    "config": {
+                        "en": ""
+                    },
+                    "datatype": "string",
+                    "description": "1:50k Mapsheet name",
+                    "exportable": true,
+                    "fieldname": "map50kname",
+                    "graph_id": "df3ee1ae-9c1c-11ec-964d-5254008afee6",
+                    "hascustomalias": false,
+                    "is_collector": false,
+                    "isrequired": false,
+                    "issearchable": true,
+                    "istopnode": false,
+                    "name": "NTS Mapsheet Name",
+                    "nodegroup_id": "692d9c2a-9c1d-11ec-a5e5-5254008afee6",
+                    "nodeid": "899fd194-00bc-11ee-8092-5254004d77d3",
+                    "ontologyclass": "http://www.ics.forth.gr/isl/CRMarchaeo/A8_Stratigraphic_Unit",
+                    "parentproperty": "http://www.ics.forth.gr/isl/CRMdig/L54_is_same-as",
+                    "sortorder": 0,
+                    "sourcebranchpublication_id": null
+                },
+                {
+                    "alias": "collection_notes",
+                    "config": {},
+                    "datatype": "semantic",
+                    "description": "",
+                    "exportable": false,
+                    "fieldname": null,
+                    "graph_id": "df3ee1ae-9c1c-11ec-964d-5254008afee6",
+                    "hascustomalias": false,
+                    "is_collector": true,
+                    "isrequired": false,
+                    "issearchable": true,
+                    "istopnode": false,
+                    "name": "Collection Notes",
+                    "nodegroup_id": "9207c3fe-ab96-11ec-87fd-5254008afee6",
+                    "nodeid": "9207c3fe-ab96-11ec-87fd-5254008afee6",
+                    "ontologyclass": "http://www.cidoc-crm.org/cidoc-crm/E33_Linguistic_Object",
+                    "parentproperty": "http://www.cidoc-crm.org/cidoc-crm/P129i_is_subject_of",
+                    "sortorder": 0,
+                    "sourcebranchpublication_id": null
+                },
+                {
+                    "alias": "field_notes",
+                    "config": {
+                        "en": ""
+                    },
+                    "datatype": "string",
+                    "description": null,
+                    "exportable": false,
+                    "fieldname": "note",
+                    "graph_id": "df3ee1ae-9c1c-11ec-964d-5254008afee6",
+                    "hascustomalias": false,
+                    "is_collector": false,
+                    "isrequired": false,
+                    "issearchable": true,
+                    "istopnode": false,
+                    "name": "Field Notes",
+                    "nodegroup_id": "9207c3fe-ab96-11ec-87fd-5254008afee6",
+                    "nodeid": "9207c87c-ab96-11ec-87fd-5254008afee6",
+                    "ontologyclass": "http://www.w3.org/2000/01/rdf-schema#Literal",
+                    "parentproperty": "http://www.cidoc-crm.org/cidoc-crm/P3_has_note",
+                    "sortorder": 0,
+                    "sourcebranchpublication_id": null
+                },
+                {
+                    "alias": "precision",
+                    "config": {
+                        "rdmCollection": "7310e0e1-6902-4852-a09c-5c72ca27afe0"
+                    },
+                    "datatype": "concept",
+                    "description": null,
+                    "exportable": false,
+                    "fieldname": "precis",
+                    "graph_id": "df3ee1ae-9c1c-11ec-964d-5254008afee6",
+                    "hascustomalias": false,
+                    "is_collector": false,
+                    "isrequired": false,
+                    "issearchable": true,
+                    "istopnode": false,
+                    "name": "Precision",
+                    "nodegroup_id": "692d9c2a-9c1d-11ec-a5e5-5254008afee6",
+                    "nodeid": "9e93ab8c-9c1f-11ec-964d-5254008afee6",
+                    "ontologyclass": "http://www.ics.forth.gr/isl/CRMdig/D29_Annotation_Object",
+                    "parentproperty": "http://www.ics.forth.gr/isl/CRMdig/L43i_is_annotated_by",
+                    "sortorder": 0,
+                    "sourcebranchpublication_id": null
+                },
+                {
+                    "alias": "collectors",
+                    "config": {
+                        "graphs": [
+                            {
+                                "graphid": "605b0bbc-8661-4cf2-b340-df743a8c5f89",
+                                "inverseRelationshipConcept": "ac41d9be-79db-4256-b368-2f4559cfbe55",
+                                "name": "Contributor",
+                                "relationshipCollection": "00000000-0000-0000-0000-000000000005",
+                                "relationshipConcept": "ac41d9be-79db-4256-b368-2f4559cfbe55",
+                                "useOntologyRelationship": false
+                            }
+                        ],
+                        "searchDsl": {
+                            "bool": {
+                                "filter": [
+                                    {
+                                        "terms": {
+                                            "graph_id": [
+                                                "3ffba33a-9c20-11ec-92da-5254008afee6",
+                                                "3e6a2880-14d4-11ec-9df0-5254008afee6",
+                                                "3eec83c6-9dd5-11ed-a81c-5254004d77d3",
+                                                "605b0bbc-8661-4cf2-b340-df743a8c5f89",
+                                                "c3923080-d21e-42d7-b8f1-637b9d0ab63c",
+                                                "0ad40a02-0b01-11ee-b317-5254004d77d3",
+                                                "86700278-117b-11ec-90d4-5254008afee6",
+                                                "3bad9ec8-a35e-11ed-884a-5254004d77d3",
+                                                "4d6c9226-10c6-11ec-9a94-5254008afee6",
+                                                "3caf329f-b8f7-11e6-84a5-026d961c88e6",
+                                                "d735935c-3ddb-11ed-814d-5254008afee6",
+                                                "109a0272-d968-11ed-b8ae-5254004d77d3",
+                                                "ff623370-fa12-11e6-b98b-6c4008b05c4c",
+                                                "67574dc6-9c20-11ec-964d-5254008afee6",
+                                                "fac1b1b4-1034-11ec-8a7a-5254008afee6",
+                                                "2aa724d1-ffd3-4823-8ff1-15a385b9a407",
+                                                "df3ee1ae-9c1c-11ec-964d-5254008afee6",
+                                                "7f2c2082-6c51-11ed-9b7d-5254004d77d3",
+                                                "5b52dcac-9c1b-11ec-964d-5254008afee6",
+                                                "82efcd14-82db-11ec-b8e6-5254008afee6",
+                                                "8a209060-9c20-11ec-955e-5254008afee6",
+                                                "3746ffc8-a878-11ec-ab9a-5254008afee6",
+                                                "dd19a93a-0202-11ed-a511-0050568377a0"
+                                            ]
+                                        }
+                                    }
+                                ],
+                                "must": [
+                                    {
+                                        "bool": {
+                                            "filter": [],
+                                            "minimum_should_match": 1,
+                                            "must": [],
+                                            "must_not": [],
+                                            "should": [
+                                                {
+                                                    "bool": {
+                                                        "filter": [],
+                                                        "must": [
+                                                            {
+                                                                "nested": {
+                                                                    "path": "tiles",
+                                                                    "query": {
+                                                                        "bool": {
+                                                                            "filter": [],
+                                                                            "must": [
+                                                                                {
+                                                                                    "match_phrase": {
+                                                                                        "tiles.data.e2f1c29a-c500-11ed-9089-5254004d77d3": {
+                                                                                            "query": "a144a32b-8ce0-41e5-af8e-bf5dd3a636ca"
+                                                                                        }
+                                                                                    }
+                                                                                }
+                                                                            ],
+                                                                            "must_not": [],
+                                                                            "should": []
+                                                                        }
+                                                                    }
+                                                                }
+                                                            },
+                                                            {
+                                                                "bool": {
+                                                                    "filter": [],
+                                                                    "must": [],
+                                                                    "must_not": [],
+                                                                    "should": []
+                                                                }
+                                                            }
+                                                        ],
+                                                        "must_not": [],
+                                                        "should": []
+                                                    }
+                                                }
+                                            ]
+                                        }
+                                    }
+                                ],
+                                "must_not": [],
+                                "should": []
+                            }
+                        },
+                        "searchString": "/int/bc-fossil-management/search?paging-filter=1&tiles=true&format=tilecsv&reportlink=false&precision=6&total=0&advanced-search=%5B%7B%22op%22%3A%22and%22%2C%22c4eca2de-9dea-11ed-9a7b-5254004d77d3%22%3A%7B%22op%22%3A%22eq%22%2C%22val%22%3A%22%22%7D%2C%22e2f1c29a-c500-11ed-9089-5254004d77d3%22%3A%7B%22op%22%3A%22eq%22%2C%22val%22%3A%22a144a32b-8ce0-41e5-af8e-bf5dd3a636ca%22%7D%2C%22c4ec9b2c-9dea-11ed-9a7b-5254004d77d3%22%3A%7B%22op%22%3A%22~%22%2C%22lang%22%3A%22en%22%2C%22val%22%3A%22%22%7D%2C%22c4eca13a-9dea-11ed-9a7b-5254004d77d3%22%3A%7B%22op%22%3A%22~%22%2C%22lang%22%3A%22en%22%2C%22val%22%3A%22%22%7D%2C%22a5b2cd72-c4f4-11ed-a06d-5254004d77d3%22%3A%7B%22op%22%3A%22~%22%2C%22lang%22%3A%22en%22%2C%22val%22%3A%22%22%7D%2C%22b5ed0072-c4f4-11ed-94de-5254004d77d3%22%3A%7B%22op%22%3A%22~%22%2C%22lang%22%3A%22en%22%2C%22val%22%3A%22%22%7D%2C%22009ba8da-faf6-11ed-ac37-5254004d77d3%22%3A%7B%22op%22%3A%22%22%2C%22val%22%3A%22%22%7D%2C%2299643f1e-9e4e-11ed-b6d5-5254004d77d3%22%3A%7B%22val%22%3A%22%22%7D%7D%5D&sort-results=asc"
+                    },
+                    "datatype": "resource-instance-list",
+                    "description": null,
+                    "exportable": true,
+                    "fieldname": "collctrs",
+                    "graph_id": "df3ee1ae-9c1c-11ec-964d-5254008afee6",
+                    "hascustomalias": false,
+                    "is_collector": true,
+                    "isrequired": false,
+                    "issearchable": true,
+                    "istopnode": false,
+                    "name": "Collectors",
+                    "nodegroup_id": "b7940db0-9c20-11ec-9b9a-5254008afee6",
+                    "nodeid": "b7940db0-9c20-11ec-9b9a-5254008afee6",
+                    "ontologyclass": "http://www.cidoc-crm.org/cidoc-crm/E39_Actor",
+                    "parentproperty": "http://www.cidoc-crm.org/cidoc-crm/P11_had_participant",
+                    "sortorder": 0,
+                    "sourcebranchpublication_id": null
+                },
+                {
+                    "alias": "bc_fossil_collection_event",
+                    "config": {},
+                    "datatype": "semantic",
+                    "description": "",
+                    "exportable": false,
+                    "fieldname": null,
+                    "graph_id": "df3ee1ae-9c1c-11ec-964d-5254008afee6",
+                    "hascustomalias": false,
+                    "is_collector": false,
+                    "isrequired": false,
+                    "issearchable": true,
+                    "istopnode": true,
+                    "name": "Fossil Collection Event",
+                    "nodegroup_id": null,
+                    "nodeid": "df3edef2-9c1c-11ec-964d-5254008afee6",
+                    "ontologyclass": "http://www.ics.forth.gr/isl/CRMarchaeo/A9_Archaeological_Excavation",
+                    "parentproperty": "",
+                    "sortorder": 0,
+                    "sourcebranchpublication_id": null
+                },
+                {
+                    "alias": "collection_years",
+                    "config": {},
+                    "datatype": "semantic",
+                    "description": "Years or year ranges that fossil collection took place.",
+                    "exportable": false,
+                    "fieldname": null,
+                    "graph_id": "df3ee1ae-9c1c-11ec-964d-5254008afee6",
+                    "hascustomalias": false,
+                    "is_collector": true,
+                    "isrequired": false,
+                    "issearchable": true,
+                    "istopnode": false,
+                    "name": "Collection Years",
+                    "nodegroup_id": "ebc4f8e8-a07a-11ec-8bc4-5254008afee6",
+                    "nodeid": "ebc4f8e8-a07a-11ec-8bc4-5254008afee6",
+                    "ontologyclass": "http://www.cidoc-crm.org/cidoc-crm/E4_Period",
+                    "parentproperty": "http://www.cidoc-crm.org/cidoc-crm/P117_occurs_during",
+                    "sortorder": 0,
+                    "sourcebranchpublication_id": null
+                },
+                {
+                    "alias": "internal_notes",
+                    "config": {
+                        "en": ""
+                    },
+                    "datatype": "string",
+                    "description": null,
+                    "exportable": false,
+                    "fieldname": null,
+                    "graph_id": "df3ee1ae-9c1c-11ec-964d-5254008afee6",
+                    "hascustomalias": false,
+                    "is_collector": false,
+                    "isrequired": false,
+                    "issearchable": true,
+                    "istopnode": false,
+                    "name": "Internal Notes",
+                    "nodegroup_id": "23714006-70d9-11ed-9e2c-5254004d77d3",
+                    "nodeid": "fd7060c4-00b8-11ee-8e96-5254004d77d3",
+                    "ontologyclass": "http://www.w3.org/2000/01/rdf-schema#Literal",
+                    "parentproperty": "http://www.cidoc-crm.org/cidoc-crm/P3_has_note",
+                    "sortorder": 0,
+                    "sourcebranchpublication_id": null
+                }
+            ],
+            "ontology_id": "e6e8db47-2ccf-11e6-927e-b8f6b115d7dd",
+            "publication": {
+                "graph_id": "df3ee1ae-9c1c-11ec-964d-5254008afee6",
+                "notes": null,
+                "publicationid": "62d0151a-9a18-11ee-83da-080027b7463b",
+                "published_time": "2023-12-13T18:33:22.276"
+            },
+            "relatable_resource_model_ids": [],
+            "resource_2_resource_constraints": [],
+            "root": {
+                "alias": "bc_fossil_collection_event",
+                "config": {},
+                "datatype": "semantic",
+                "description": "",
+                "exportable": false,
+                "fieldname": null,
+                "graph_id": "df3ee1ae-9c1c-11ec-964d-5254008afee6",
+                "hascustomalias": false,
+                "is_collector": false,
+                "isrequired": false,
+                "issearchable": true,
+                "istopnode": true,
+                "name": "Fossil Collection Event",
+                "nodegroup_id": null,
+                "nodeid": "df3edef2-9c1c-11ec-964d-5254008afee6",
+                "ontologyclass": "http://www.ics.forth.gr/isl/CRMarchaeo/A9_Archaeological_Excavation",
+                "sortorder": 0,
+                "sourcebranchpublication_id": null
+            },
+            "slug": "collection_event",
+            "subtitle": {
+                "en": "Describes when and where a fossil collection was made"
+            },
+            "template_id": "50000000-0000-0000-0000-000000000002",
+            "version": ""
+        }
+    ],
+    "metadata": {
+        "db": "PostgreSQL 16.0 on x86_64-pc-linux-gnu, compiled by gcc (GCC) 11.3.1 20221121 (Red Hat 11.3.1-4), 64-bit",
+        "git hash": "e10813e38 2023-12-11 05:06:58 -0800",
+        "os": "Linux",
+        "os version": "5.14.0-333.el9.x86_64"
+    }
+}

@@ -1,0 +1,63 @@
+{
+  "name": "Parks - Municipal",
+  "sources": {
+    "municipal-parks-source": {
+      "type": "vector",
+      "tiles": [
+        "/{ url_context_root }/bctileserver/geo/pub/WHSE_BASEMAPPING.GBA_LOCAL_REG_GREENSPACES_SP/ows?service=WMS&request=GetMap&layers=WHSE_BASEMAPPING.GBA_LOCAL_REG_GREENSPACES_SP&styles=&format=pbf&transparent=true&version=1.3.0&height=512&width=512&srs=EPSG:3857&bbox={bbox-epsg-3857}"
+      ],
+      "tileSize": 512
+    }
+  },
+  "arches-metadata": {
+    "ispublic": false,
+    "addtomap": false,
+    "centerx": null,
+    "centery": null,
+    "icon": "fa fa-globe",
+    "isoverlay": true,
+    "legend": "<p><img alt=\"\" class=\"parks-municipal legend-swatch\" src=\"/{ url_context_root }/static/img/blank.png\" />Municipal Park Boundary</p>",
+    "searchonly": false,
+    "sortorder": 0,
+    "zoom": null
+  },
+  "layers": [
+    {
+      "id": "municipal-parks",
+      "type": "line",
+      "source": "municipal-parks-source",
+      "source-layer": "WHSE_BASEMAPPING.GBA_LOCAL_REG_GREENSPACES_SP",
+      "minzoom": 0,
+      "maxzoom": 20,
+      "paint": {
+        "line-color": "rgb(117, 128, 102)",
+        "line-width": 0.6
+      }
+    },
+    {
+      "id": "municipal-parks-fill",
+      "type": "fill",
+      "paint": {
+        "fill-color": "rgba(217,240,211, 0.3)"
+      },
+      "source": "municipal-parks-source",
+      "minzoom": 0,
+      "maxzoom": 20,
+      "source-layer": "WHSE_BASEMAPPING.GBA_LOCAL_REG_GREENSPACES_SP"
+    },
+    {
+      "id": "municipal-parks-symbol",
+      "type": "symbol",
+      "source": "municipal-parks-source",
+      "minzoom": 13,
+      "source-layer": "WHSE_BASEMAPPING.GBA_LOCAL_REG_GREENSPACES_SP",
+      "layout": {
+        "text-field": "{PARK_NAME}",
+        "text-size": 12
+      },
+      "paint": {
+        "text-color": "rgb(52,52,52)"
+      }
+    }
+  ]
+}

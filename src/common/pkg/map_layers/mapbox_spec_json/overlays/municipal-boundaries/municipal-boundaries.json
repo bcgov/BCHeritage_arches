@@ -1,0 +1,55 @@
+{
+  "name": "Municipal Boundaries",
+  "sources": {
+    "municipal-boundaries-source": {
+      "type": "vector",
+      "tiles": [
+        "/{ url_context_root }/bctileserver/geo/pub/WHSE_LEGAL_ADMIN_BOUNDARIES.ABMS_MUNICIPALITIES_SP/ows?service=WMS&request=GetMap&layers=WHSE_LEGAL_ADMIN_BOUNDARIES.ABMS_MUNICIPALITIES_SP&styles=&format=pbf&transparent=true&version=1.1.1&height=512&width=512&srs=EPSG:3857&bbox={bbox-epsg-3857}"
+      ],
+      "tileSize": 512
+    }
+  },
+  "arches-metadata": {
+    "ispublic": false,
+    "addtomap": false,
+    "centerx": null,
+    "centery": null,
+    "icon": "fa fa-globe",
+    "isoverlay": true,
+    "legend": "<p><img alt=\"\" class=\"municipal-boundaries legend-line\" src=\"/{ url_context_root }/static/img/blank.png\" />Municipal Boundary</p>",
+    "searchonly": false,
+    "sortorder": 0,
+    "zoom": null
+  },
+  "layers": [
+    {
+      "id": "municipal-boundaries",
+      "type": "line",
+      "source": "municipal-boundaries-source",
+      "source-layer": "WHSE_LEGAL_ADMIN_BOUNDARIES.ABMS_MUNICIPALITIES_SP",
+      "minzoom": 8,
+      "maxzoom": 20,
+      "paint": {
+        "line-color": "rgba(0, 0, 0, 1)",
+        "line-width": 0.7,
+        "line-dasharray": [8,8]
+      }
+    },
+    {
+      "id": "municipal-boundaries-symbol",
+      "type": "symbol",
+      "source": "municipal-boundaries-source",
+      "source-layer": "WHSE_LEGAL_ADMIN_BOUNDARIES.ABMS_MUNICIPALITIES_SP",
+      "minzoom": 8,
+      "maxzoom": 20,
+      "layout": {
+        "text-field": "{ADMIN_AREA_ABBREVIATION}",
+        "text-font": ["Open Sans Bold","Arial Unicode MS Bold"],
+        "text-size": 13
+      },
+      "paint": {
+        "text-color": "rgb(78,78,78)"
+      }
+    }
+  ]
+}

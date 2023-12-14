@@ -1,0 +1,108 @@
+<?xml version="1.0" encoding="utf-8"?>
+<HistoricPlaces xmlns="http://tempuri.org/CRHPSchema.xsd" xmlns:gml="http://www.opengis.net/gml" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+    <HistoricPlace>
+        <Jurisdiction>
+            <FPTID>{{ data.borden_number }}</FPTID>
+            <Name>BC</Name>
+        </Jurisdiction>
+        <CommonName Language="ENGLISH">{{ data.common_names.0.name|safe }}</CommonName>
+        <PlaceDescription Language="ENGLISH">{{ data.location_description|safe }}</PlaceDescription>
+        <HeritageValue Language="ENGLISH">{{ data.heritage_value|safe }}</HeritageValue>
+        <CharacterDefiningElements Language="ENGLISH">{{ data.defining_elements|safe }}</CharacterDefiningElements>
+        {% if data.common_names|length > 1 or data.other_names|length > 0 %}
+        <Names>
+            {% for name in data.common_names|add:data.other_names %}{% if not forloop.first %}<Name Language="ENGLISH" Type="{{ name.name_type }}">{{ name.name }}</Name>{% endif %}
+            {% endfor %}
+        </Names>
+        {% endif %}
+        <DocumentLocation Language="ENGLISH">{{ data.document_location|safe }}</DocumentLocation>
+        <Location>
+            <Address Language="ENGLISH">{{ data.addresses.0.street_address }}</Address>
+            <Community>{{ data.addresses.0.city }}</Community>
+            <ProvinceTerritory>BC</ProvinceTerritory>
+            <Country>CA</Country>
+            <NTSMapSheetNumber>{{ location.nts_mapsheet_number }}</NTSMapSheetNumber>
+            <AreaInSquareMetres>{{ data.area_sqm | floatformat:3}}</AreaInSquareMetres>
+            <LatLong>
+                <CoordinateDetermination>Digital Maps</CoordinateDetermination>
+                <Datum>NAD83</Datum>
+                <Latitude>{{ data.site_centroid_latitude | floatformat:7 }}</Latitude>
+                <Longitude>{{ data.site_centroid_longitude | floatformat:7 }}</Longitude>
+            </LatLong>
+            <RecognitionBoundary Language="ENGLISH">Refer to BC Spatial Data</RecognitionBoundary>
+        </Location>
+        <Classification>
+            <Ownership>{{ heritage_categories.0.ownership }}</Ownership>
+            <ContributingResources>
+                {% for heritage_category in data.heritage_categories %}
+                <ContributingResource Type="{{ heritage_category.category }}">
+                    <ContributingCount>{{ heritage_category.contributing_resource_count }}</ContributingCount>
+                </ContributingResource>
+                {% endfor %}
+            </ContributingResources>
+        </Classification>
+        <FunctionalTypeGroup>
+            {% for heritage_function in data.heritage_functions %}
+            <Item>
+                <OriginalCurrent>{{ heritage_function.function_state }}</OriginalCurrent>
+                <FunctionalCategory>{{ heritage_function.function_category }}</FunctionalCategory>
+                <FunctionalType>{{ heritage_function.function_type }}</FunctionalType>
+            </Item>
+            {% endfor %}
+        </FunctionalTypeGroup>
+        <Dates>
+            {% for significant_event in data.significant_events %}
+            <Date Type="{{ significant_event.event_type }}">
+                <FromDate Format="YYYY/MM/DD">{{ significant_event.start_year|date:"Y/m/d" }}</FromDate>
+                <ToDate Format="YYYY/MM/DD">{{ significant_event.end_year|date:"Y/m/d" }}</ToDate>
+            </Date>
+            {% endfor %}
+        </Dates>
+        {% if data.construction_actors|length > 0 %}<AssociatedEPOs>
+           {% for actor in data.construction_actors %}
+           <AssociatedEPO Language="ENGLISH" Type="{{ actor.type }}">{{ actor.name }}</AssociatedEPO>
+           {% endfor %}
+        </AssociatedEPOs>
+        {% endif %}
+        <Themes>
+            {% for theme in data.heritage_themes %}
+            <Item>
+                <ThemeCategory>{{ theme.category }}</ThemeCategory>
+                <ThemeType>{{ theme.type }}</ThemeType>
+            </Item>
+            {% endfor %}
+        </Themes>
+        <Recognition>
+            <Authority>{{ data.protection_events.0.crhp_authority }}</Authority>
+            <Type>{{ data.protection_events.0.recognition_type }}</Type>
+            <Date Format="YYYY/MM/DD">{{ data.protection_events.0.designation_or_protection_start_date|date:"Y/m/d" }}</Date>
+        </Recognition>
+        <Images>
+            {% for site_image in data.site_images %}
+            <Image Type="{{ site_image.image_content_type }}">
+                <Copyright>{{ site_image.copyright|safe }}</Copyright>
+                <Link>{{ site_image.site_images.0.url }}</Link>
+                <Caption Language="ENGLISH">{{ site_image.image_caption|safe }}</Caption>
+                <ImageDesc Language="ENGLISH">{{ site_image.image_description|safe }}</ImageDesc>
+            </Image>
+            {% endfor %}
+        </Images>
+        <Links>
+            {% for external_url in data.external_urls %}
+            <Link Type="{{external_url.url_type}}">
+                <URL Language="ENGLISH">{{ external_url.url }}</URL>
+                <LinkDesc Language="ENGLISH">{{ external_url.url_label|safe }}</LinkDesc>
+            </Link>
+            {% endfor %}
+        </Links>
+        <Management>
+            <OwnerNotificationSent>N</OwnerNotificationSent>
+            <OwnersResponse>NA</OwnersResponse>
+            <FPTR>
+                <FirstName>Emerald</FirstName>
+                <LastName>Johnstone-Bedell</LastName>
+                <EmailAddress>BChistoricplacesregister@gov.bc.ca</EmailAddress>
+            </FPTR>
+        </Management>
+    </HistoricPlace>
+</HistoricPlaces>

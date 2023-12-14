@@ -1,0 +1,80 @@
+{
+  "name": "FRPC Bedrock",
+  "sources": {
+    "frpc-source": {
+      "type": "vector",
+      "tiles": [
+        "/{ url_context_root }/bclocaltileserver/map_data.fiss_frpc_br/{z}/{x}/{y}.pbf?source=local"
+      ],
+      "tileSize": 512
+    }
+  },
+  "arches-metadata": {
+    "ispublic": false,
+    "addtomap": false,
+    "centerx": null,
+    "centery": null,
+    "icon": "fa fa-globe",
+    "isoverlay": true,
+    "legend": "<p><em>Fossil Resource Potential Classification - Bedrock</em><br /><img alt=\"\" class=\"frpc-high legend-swatch\" src=\"/{ url_context_root }/static/img/blank.png\" />High Potential<br /> <img alt=\"\" class=\"frpc-medium legend-swatch\" src=\"/{ url_context_root }/static/img/blank.png\" />Medium Potential<br /> <img alt=\"\" class=\"frpc-low legend-swatch\" src=\"/{ url_context_root }/static/img/blank.png\" />Low Potential<br /> <img alt=\"\" class=\"frpc-very-low legend-swatch\" src=\"/{ url_context_root }/static/img/blank.png\" />Very Low Potential</p>",
+    "searchonly": false,
+    "sortorder": 0,
+    "zoom": null
+  },
+
+  "layers": [
+    {
+      "id": "frpc",
+      "type": "line",
+      "source": "frpc-source",
+      "source-layer": "map_data.fiss_frpc_br",
+      "minzoom": 0,
+      "maxzoom": 20,
+      "metadata": {
+        "fossils:restricted_users": ["bferguso","edom"]
+      },
+      "paint": {
+        "line-width":  0.6,
+        "line-color": [
+          "match", ["get","frpc"],
+            "High", "rgba(136,65,157,1)",
+            "Medium", "rgba(140,150,198,1)",
+            "Low", "rgba(179,205,227,1)",
+            "Very Low", "rgba(237,248,251,1)",
+              "rgba(0,0,0,1)" ]
+      }
+    },
+    {
+      "id": "frpc-fill",
+      "type": "fill",
+      "source": "frpc-source",
+      "source-layer": "map_data.fiss_frpc_br",
+      "minzoom": 0,
+      "maxzoom": 20,
+      "paint": {
+        "fill-color": [
+          "match", ["get","frpc"],
+            "High", "rgba(136,65,157,.6)",
+            "Medium", "rgba(140,150,198,.6)",
+            "Low", "rgba(179,205,227,.6)",
+            "Very Low", "rgba(237,248,251,.6)",
+            "rgba(0,0,0,.1)" ]
+      }
+    },
+    {
+      "id": "frpc-symbol",
+      "type": "symbol",
+      "source": "frpc-source",
+      "source-layer": "map_data.fiss_frpc_br",
+      "minzoom": 10,
+      "layout": {
+        "text-field": "{strat_unit}",
+        "text-font": ["Open Sans Italic","Arial Unicode MS Regular"],
+        "text-size": 12
+      },
+      "paint": {
+        "text-color": "rgb(78, 78, 78)"
+      }
+    }
+  ]
+}

@@ -1,0 +1,86 @@
+{
+  "name": "Cadastral ParcelMap",
+  "sources": {
+    "cadastral-vector-source": {
+      "type": "vector",
+      "tiles": [
+        "/{ url_context_root }/bctileserver/geo/pub/WHSE_CADASTRE.PMBC_PARCEL_FABRIC_POLY_FA_SVW/ows?service=WMS&request=GetMap&layers=WHSE_CADASTRE.PMBC_PARCEL_FABRIC_POLY_FA_SVW&styles=&format=pbf&transparent=true&version=1.3.0&height=512&width=512&srs=EPSG:3857&bbox={bbox-epsg-3857}"
+      ],
+      "tileSize": 512
+    }
+  },
+  "arches-metadata": {
+    "ispublic": true,
+    "addtomap": false,
+    "centerx": null,
+    "centery": null,
+    "icon": "fa fa-globe",
+    "isoverlay": true,
+    "legend": "<p> <img alt=\"\" class=\"cadastral-crown-agency legend-swatch\" src=\"/{ url_context_root }/static/img/blank.png\" />Crown Agency<br> <img alt=\"\" class=\"cadastral-crown-provincial legend-swatch\" src=\"/{ url_context_root }/static/img/blank.png\" />Crown Provincial<br> <img alt=\"\" class=\"cadastral-federal legend-swatch\" src=\"/{ url_context_root }/static/img/blank.png\" />Federal<br> <img alt=\"\" class=\"cadastral-first-nations legend-swatch\" src=\"/{ url_context_root }/static/img/blank.png\" />First Nations<br> <img alt=\"\" class=\"cadastral-mixed legend-swatch\" src=\"/{ url_context_root }/static/img/blank.png\" />Mixed Ownership<br> <img alt=\"\" class=\"cadastral-municipal legend-swatch\" src=\"/{ url_context_root }/static/img/blank.png\" />Municipal<br> <img alt=\"\" class=\"cadastral-private legend-swatch\" src=\"/{ url_context_root }/static/img/blank.png\" />Private<br><img alt=\"\" class=\"cadastral-unclassified legend-swatch\" src=\"/{ url_context_root }/static/img/blank.png\" />Unclassified<br> <img alt=\"\" class=\"cadastral-untitled_provincial legend-swatch\" src=\"/{ url_context_root }/static/img/blank.png\" />Untitled Provincial </p>",
+    "searchonly": false,
+    "sortorder": 0,
+    "zoom": null
+  },
+  "layers": [
+    {
+      "id": "cadastral-vector",
+      "type": "line",
+      "source": "cadastral-vector-source",
+      "source-layer": "WHSE_CADASTRE.PMBC_PARCEL_FABRIC_POLY_FA_SVW",
+      "minzoom": 13,
+      "paint": {
+        "line-color": [
+          "match", ["get","OWNER_TYPE"],
+            "First Nations", "rgba(181,160,124,1)",
+            "Private", "rgba(255,206,85,1)",
+            "Municipal", "rgba(48,171,69,1)",
+            "Federal", "rgba(117,166,209,1)",
+            "Crown Agency", "rgba(255,195,230,1)",
+            "Crown Provincial", "rgba(255,159,229,1)",
+            "Untitled Provincial", "rgba(167,150,198,1)",
+            "Mixed Ownership", "rgba(252,128,114,1)",
+            "Unclassified", "rgba(137,137,137,1)",
+            "rgba(0,0,0,1)" ]
+      }
+    },
+    {
+      "id": "cadastral-fill",
+      "type": "fill",
+      "source": "cadastral-vector-source",
+      "source-layer": "WHSE_CADASTRE.PMBC_PARCEL_FABRIC_POLY_FA_SVW",
+      "minzoom": 0,
+      "maxzoom": 20,
+      "paint": {
+        "fill-color": [
+          "match", ["get","OWNER_TYPE"],
+            "First Nations", "rgba(215,194,159,.6)",
+            "Private", "rgba(255,235,118,.6)",
+            "Municipal", "rgba(36,174,96,.6)",
+            "Federal", "rgba(128,177,211,.6)",
+            "Crown Agency", "rgba(255,209,257,.6)",
+            "Crown Provincial", "rgba(255,190,232,.6)",
+            "Untitled Provincial", "rgba(206,180,253,0.6)",
+            "Mixed Ownership", "rgba(252,128,114,.6)",
+            "Unclassified", "rgba(157,157,157,.6)",
+            "rgba(0,0,0,.1)" ]
+      }
+    },
+    {
+      "id": "cadastral-symbol",
+      "type": "symbol",
+      "source": "cadastral-vector-source",
+      "source-layer": "WHSE_CADASTRE.PMBC_PARCEL_FABRIC_POLY_FA_SVW",
+      "layout": {
+        "text-field": "{strat_unit}",
+        "text-font": [
+          "Open Sans Italic",
+          "Arial Unicode MS Regular"
+        ],
+        "text-size": 11
+      },
+      "paint": {
+        "text-color": "rgb(52, 52, 52)"
+      }
+    }
+  ]
+}

@@ -1,0 +1,19 @@
+*.pyc
+*.log
+bcrhp/logs
+bcrhp/management/data/*
+bcrhp/export_deliverables
+bcrhp/cantaloupe/*
+bcrhp/media/packages
+bcrhp/uploadedfiles/*
+bcrhp/settings_local.py
+bcrhp/staticfiles
+bcrhp/webpack/webpack-stats.json
+bcrhp/webpack/webpack-user-config.js
+
+# Common resources that are copied from arches_common
+bcrhp/media/css/project_common.css
+arches_fossils/media/css/bc_index.css
+node_modules
+.vscode/
+CACHE
