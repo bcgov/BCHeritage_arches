@@ -22,7 +22,7 @@
                     "instructions": {
                         "en": "Enter a description and description type for the resource."
                     },
-                    "is_editable": true,
+                    "is_editable": false,
                     "name": {
                         "en": "Site Record Admin"
                     },
@@ -49,39 +49,12 @@
                     "instructions": {
                         "en": ""
                     },
-                    "is_editable": true,
+                    "is_editable": false,
                     "name": {
                         "en": "Heritage Theme"
                     },
                     "nodegroup_id": "08e4e0fe-cd71-11ed-bcae-5254004d77d3",
                     "sortorder": 6,
-                    "visible": true
-                },
-                {
-                    "active": true,
-                    "cardid": "0c533e5a-0d07-11ed-a6f1-5254008afee6",
-                    "component_id": "f05e4d3a-53c1-11e8-b0ea-784f435179ea",
-                    "config": null,
-                    "constraints": [],
-                    "cssclass": null,
-                    "description": "",
-                    "graph_id": "cef9c510-e3e6-4057-ac08-89ad926180b4",
-                    "helpenabled": false,
-                    "helptext": {
-                        "en": ""
-                    },
-                    "helptitle": {
-                        "en": ""
-                    },
-                    "instructions": {
-                        "en": ""
-                    },
-                    "is_editable": true,
-                    "name": {
-                        "en": "Decision History"
-                    },
-                    "nodegroup_id": "0c533c8e-0d07-11ed-a6f1-5254008afee6",
-                    "sortorder": 14,
                     "visible": true
                 },
                 {
@@ -105,7 +78,7 @@
                     "instructions": {
                         "en": ""
                     },
-                    "is_editable": true,
+                    "is_editable": false,
                     "name": {
                         "en": "BC Property Legal Description"
                     },
@@ -143,7 +116,7 @@
                     "instructions": {
                         "en": "Enter the address of the location."
                     },
-                    "is_editable": true,
+                    "is_editable": false,
                     "name": {
                         "en": "BC Property Address"
                     },
@@ -172,7 +145,7 @@
                     "instructions": {
                         "en": "Define the spatial location."
                     },
-                    "is_editable": true,
+                    "is_editable": false,
                     "name": {
                         "en": "Spatial Location"
                     },
@@ -199,7 +172,7 @@
                     "instructions": {
                         "en": ""
                     },
-                    "is_editable": true,
+                    "is_editable": false,
                     "name": {
                         "en": "Heritage Site Location"
                     },
@@ -226,7 +199,7 @@
                     "instructions": {
                         "en": ""
                     },
-                    "is_editable": true,
+                    "is_editable": false,
                     "name": {
                         "en": "Borden Number"
                     },
@@ -255,7 +228,7 @@
                     "instructions": {
                         "en": ""
                     },
-                    "is_editable": true,
+                    "is_editable": false,
                     "name": {
                         "en": "Internal Remarks"
                     },
@@ -282,7 +255,7 @@
                     "instructions": {
                         "en": "Define the resource's designation or protection status."
                     },
-                    "is_editable": true,
+                    "is_editable": false,
                     "name": {
                         "en": "Official Recognition Details"
                     },
@@ -311,7 +284,7 @@
                     "instructions": {
                         "en": ""
                     },
-                    "is_editable": true,
+                    "is_editable": false,
                     "name": {
                         "en": "Official Recognition Information"
                     },
@@ -338,7 +311,7 @@
                     "instructions": {
                         "en": ""
                     },
-                    "is_editable": true,
+                    "is_editable": false,
                     "name": {
                         "en": "Heritage Class"
                     },
@@ -365,7 +338,7 @@
                     "instructions": {
                         "en": ""
                     },
-                    "is_editable": true,
+                    "is_editable": false,
                     "name": {
                         "en": "Statement of Significance"
                     },
@@ -392,12 +365,39 @@
                     "instructions": {
                         "en": ""
                     },
-                    "is_editable": true,
+                    "is_editable": false,
                     "name": {
                         "en": "Heritage Function"
                     },
                     "nodegroup_id": "895887a2-0d07-11ed-a4d8-5254008afee6",
                     "sortorder": 5,
+                    "visible": true
+                },
+                {
+                    "active": true,
+                    "cardid": "a4ea0fe0-9901-11ee-b789-080027b7463b",
+                    "component_id": "f05e4d3a-53c1-11e8-b0ea-784f435179ea",
+                    "config": null,
+                    "constraints": [],
+                    "cssclass": null,
+                    "description": "{\"en\": \"\"}",
+                    "graph_id": "cef9c510-e3e6-4057-ac08-89ad926180b4",
+                    "helpenabled": false,
+                    "helptext": {
+                        "en": ""
+                    },
+                    "helptitle": {
+                        "en": ""
+                    },
+                    "instructions": {
+                        "en": ""
+                    },
+                    "is_editable": false,
+                    "name": {
+                        "en": "Decision History"
+                    },
+                    "nodegroup_id": "a4ea0cfc-9901-11ee-b789-080027b7463b",
+                    "sortorder": 14,
                     "visible": true
                 },
                 {
@@ -419,7 +419,7 @@
                     "instructions": {
                         "en": ""
                     },
-                    "is_editable": true,
+                    "is_editable": false,
                     "name": {
                         "en": "Architects / Builders"
                     },
@@ -446,7 +446,7 @@
                     "instructions": {
                         "en": "Enter any external URLs associated with this Historic Place"
                     },
-                    "is_editable": true,
+                    "is_editable": false,
                     "name": {
                         "en": "External URLs"
                     },
@@ -473,7 +473,7 @@
                     "instructions": {
                         "en": "Attach digital documents with information regarding the Site."
                     },
-                    "is_editable": true,
+                    "is_editable": false,
                     "name": {
                         "en": "Documents"
                     },
@@ -502,7 +502,7 @@
                     "instructions": {
                         "en": ""
                     },
-                    "is_editable": true,
+                    "is_editable": false,
                     "name": {
                         "en": "Images"
                     },
@@ -529,7 +529,7 @@
                     "instructions": {
                         "en": ""
                     },
-                    "is_editable": true,
+                    "is_editable": false,
                     "name": {
                         "en": "Chronology"
                     },
@@ -556,7 +556,7 @@
                     "instructions": {
                         "en": ""
                     },
-                    "is_editable": true,
+                    "is_editable": false,
                     "name": {
                         "en": "Site Names"
                     },
@@ -616,249 +616,6 @@
                     "sortorder": 1,
                     "visible": true,
                     "widget_id": "10000000-0000-0000-0000-000000000005"
-                },
-                {
-                    "card_id": "0c533e5a-0d07-11ed-a6f1-5254008afee6",
-                    "config": {
-                        "defaultValue": {
-                            "en": {
-                                "direction": "ltr",
-                                "value": ""
-                            }
-                        },
-                        "i18n_properties": [
-                            "placeholder"
-                        ],
-                        "label": "Decided By First Name",
-                        "maxLength": null,
-                        "placeholder": {
-                            "en": "Enter text"
-                        },
-                        "uneditable": false,
-                        "width": "100%"
-                    },
-                    "id": "0c53494a-0d07-11ed-a6f1-5254008afee6",
-                    "label": {
-                        "en": "Decided By First Name"
-                    },
-                    "node_id": "0c5340a8-0d07-11ed-a6f1-5254008afee6",
-                    "sortorder": 0,
-                    "visible": true,
-                    "widget_id": "10000000-0000-0000-0000-000000000001"
-                },
-                {
-                    "card_id": "0c533e5a-0d07-11ed-a6f1-5254008afee6",
-                    "config": {
-                        "dateFormat": "YYYY-MM-DD",
-                        "defaultValue": "",
-                        "label": "Recommended Date",
-                        "maxDate": false,
-                        "minDate": false,
-                        "placeholder": "Enter date",
-                        "viewMode": "days"
-                    },
-                    "id": "0c5349ea-0d07-11ed-a6f1-5254008afee6",
-                    "label": {
-                        "en": "Recommended Date"
-                    },
-                    "node_id": "0c5348aa-0d07-11ed-a6f1-5254008afee6",
-                    "sortorder": 4,
-                    "visible": true,
-                    "widget_id": "10000000-0000-0000-0000-000000000004"
-                },
-                {
-                    "card_id": "0c533e5a-0d07-11ed-a6f1-5254008afee6",
-                    "config": {
-                        "dateFormat": "YYYY-MM-DD",
-                        "defaultValue": "",
-                        "label": "Decision Date",
-                        "maxDate": false,
-                        "minDate": false,
-                        "placeholder": "Enter date",
-                        "viewMode": "days"
-                    },
-                    "id": "0c534a6c-0d07-11ed-a6f1-5254008afee6",
-                    "label": {
-                        "en": "Decision Date"
-                    },
-                    "node_id": "0c5347c4-0d07-11ed-a6f1-5254008afee6",
-                    "sortorder": 8,
-                    "visible": true,
-                    "widget_id": "10000000-0000-0000-0000-000000000004"
-                },
-                {
-                    "card_id": "0c533e5a-0d07-11ed-a6f1-5254008afee6",
-                    "config": {
-                        "defaultValue": {
-                            "en": {
-                                "direction": "ltr",
-                                "value": ""
-                            }
-                        },
-                        "i18n_properties": [
-                            "placeholder"
-                        ],
-                        "label": "Recommended By Last Name",
-                        "maxLength": null,
-                        "placeholder": {
-                            "en": "Enter text"
-                        },
-                        "uneditable": false,
-                        "width": "100%"
-                    },
-                    "id": "0c534aee-0d07-11ed-a6f1-5254008afee6",
-                    "label": {
-                        "en": "Recommended By Last Name"
-                    },
-                    "node_id": "0c533f90-0d07-11ed-a6f1-5254008afee6",
-                    "sortorder": 2,
-                    "visible": true,
-                    "widget_id": "10000000-0000-0000-0000-000000000001"
-                },
-                {
-                    "card_id": "0c533e5a-0d07-11ed-a6f1-5254008afee6",
-                    "config": {
-                        "defaultValue": {
-                            "en": {
-                                "direction": "ltr",
-                                "value": ""
-                            }
-                        },
-                        "i18n_properties": [
-                            "placeholder"
-                        ],
-                        "label": "Recommended By First Name",
-                        "maxLength": null,
-                        "placeholder": {
-                            "en": "Enter text"
-                        },
-                        "uneditable": false,
-                        "width": "100%"
-                    },
-                    "id": "0c534b70-0d07-11ed-a6f1-5254008afee6",
-                    "label": {
-                        "en": "Recommended By First Name"
-                    },
-                    "node_id": "0c5341a2-0d07-11ed-a6f1-5254008afee6",
-                    "sortorder": 3,
-                    "visible": true,
-                    "widget_id": "10000000-0000-0000-0000-000000000001"
-                },
-                {
-                    "card_id": "0c533e5a-0d07-11ed-a6f1-5254008afee6",
-                    "config": {
-                        "defaultValue": {
-                            "en": {
-                                "direction": "ltr",
-                                "value": ""
-                            }
-                        },
-                        "i18n_properties": [
-                            "placeholder"
-                        ],
-                        "label": "Decision Criteria",
-                        "maxLength": null,
-                        "placeholder": {
-                            "en": "Enter text"
-                        },
-                        "uneditable": false,
-                        "width": "100%"
-                    },
-                    "id": "0c534bf2-0d07-11ed-a6f1-5254008afee6",
-                    "label": {
-                        "en": "Decision Criteria"
-                    },
-                    "node_id": "0c534530-0d07-11ed-a6f1-5254008afee6",
-                    "sortorder": 5,
-                    "visible": true,
-                    "widget_id": "10000000-0000-0000-0000-000000000001"
-                },
-                {
-                    "card_id": "0c533e5a-0d07-11ed-a6f1-5254008afee6",
-                    "config": {
-                        "defaultValue": {
-                            "en": {
-                                "direction": "ltr",
-                                "value": ""
-                            }
-                        },
-                        "i18n_properties": [
-                            "placeholder"
-                        ],
-                        "label": "Decision Description",
-                        "maxLength": null,
-                        "placeholder": {
-                            "en": "Enter text"
-                        },
-                        "uneditable": false,
-                        "width": "100%"
-                    },
-                    "id": "0c534c74-0d07-11ed-a6f1-5254008afee6",
-                    "label": {
-                        "en": "Decision Description"
-                    },
-                    "node_id": "0c5346e8-0d07-11ed-a6f1-5254008afee6",
-                    "sortorder": 6,
-                    "visible": true,
-                    "widget_id": "10000000-0000-0000-0000-000000000001"
-                },
-                {
-                    "card_id": "0c533e5a-0d07-11ed-a6f1-5254008afee6",
-                    "config": {
-                        "defaultValue": {
-                            "en": {
-                                "direction": "ltr",
-                                "value": ""
-                            }
-                        },
-                        "i18n_properties": [
-                            "placeholder"
-                        ],
-                        "label": "Decision",
-                        "maxLength": null,
-                        "placeholder": {
-                            "en": "Enter text"
-                        },
-                        "uneditable": false,
-                        "width": "100%"
-                    },
-                    "id": "0c534cf6-0d07-11ed-a6f1-5254008afee6",
-                    "label": {
-                        "en": "Decision"
-                    },
-                    "node_id": "0c534454-0d07-11ed-a6f1-5254008afee6",
-                    "sortorder": 7,
-                    "visible": true,
-                    "widget_id": "10000000-0000-0000-0000-000000000001"
-                },
-                {
-                    "card_id": "0c533e5a-0d07-11ed-a6f1-5254008afee6",
-                    "config": {
-                        "defaultValue": {
-                            "en": {
-                                "direction": "ltr",
-                                "value": ""
-                            }
-                        },
-                        "i18n_properties": [
-                            "placeholder"
-                        ],
-                        "label": "Decided By Last Name",
-                        "maxLength": null,
-                        "placeholder": {
-                            "en": "Enter text"
-                        },
-                        "uneditable": false,
-                        "width": "100%"
-                    },
-                    "id": "0c534d78-0d07-11ed-a6f1-5254008afee6",
-                    "label": {
-                        "en": "Decided By Last Name"
-                    },
-                    "node_id": "0c53460c-0d07-11ed-a6f1-5254008afee6",
-                    "sortorder": 1,
-                    "visible": true,
-                    "widget_id": "10000000-0000-0000-0000-000000000001"
                 },
                 {
                     "card_id": "1b623006-0d0f-11ed-98c2-5254008afee6",
@@ -2235,6 +1992,249 @@
                     "widget_id": "10000000-0000-0000-0000-000000000004"
                 },
                 {
+                    "card_id": "a4ea0fe0-9901-11ee-b789-080027b7463b",
+                    "config": {
+                        "defaultValue": {
+                            "en": {
+                                "direction": "ltr",
+                                "value": ""
+                            }
+                        },
+                        "i18n_properties": [
+                            "placeholder"
+                        ],
+                        "label": "Decided By First Name",
+                        "maxLength": null,
+                        "placeholder": {
+                            "en": "Enter text"
+                        },
+                        "uneditable": true,
+                        "width": "100%"
+                    },
+                    "id": "a4ea2070-9901-11ee-b789-080027b7463b",
+                    "label": {
+                        "en": "Decided By First Name"
+                    },
+                    "node_id": "a4ea133c-9901-11ee-b789-080027b7463b",
+                    "sortorder": 0,
+                    "visible": true,
+                    "widget_id": "10000000-0000-0000-0000-000000000001"
+                },
+                {
+                    "card_id": "a4ea0fe0-9901-11ee-b789-080027b7463b",
+                    "config": {
+                        "dateFormat": "YYYY-MM-DD",
+                        "defaultValue": "",
+                        "label": "Recommended Date",
+                        "maxDate": false,
+                        "minDate": false,
+                        "placeholder": "Enter date",
+                        "viewMode": "days"
+                    },
+                    "id": "a4ea2142-9901-11ee-b789-080027b7463b",
+                    "label": {
+                        "en": "Recommended Date"
+                    },
+                    "node_id": "a4ea1f94-9901-11ee-b789-080027b7463b",
+                    "sortorder": 4,
+                    "visible": true,
+                    "widget_id": "10000000-0000-0000-0000-000000000004"
+                },
+                {
+                    "card_id": "a4ea0fe0-9901-11ee-b789-080027b7463b",
+                    "config": {
+                        "dateFormat": "YYYY-MM-DD",
+                        "defaultValue": "",
+                        "label": "Decision Date",
+                        "maxDate": false,
+                        "minDate": false,
+                        "placeholder": "Enter date",
+                        "viewMode": "days"
+                    },
+                    "id": "a4ea2200-9901-11ee-b789-080027b7463b",
+                    "label": {
+                        "en": "Decision Date"
+                    },
+                    "node_id": "a4ea1e36-9901-11ee-b789-080027b7463b",
+                    "sortorder": 8,
+                    "visible": true,
+                    "widget_id": "10000000-0000-0000-0000-000000000004"
+                },
+                {
+                    "card_id": "a4ea0fe0-9901-11ee-b789-080027b7463b",
+                    "config": {
+                        "defaultValue": {
+                            "en": {
+                                "direction": "ltr",
+                                "value": ""
+                            }
+                        },
+                        "i18n_properties": [
+                            "placeholder"
+                        ],
+                        "label": "Recommended By Last Name",
+                        "maxLength": null,
+                        "placeholder": {
+                            "en": "Enter text"
+                        },
+                        "uneditable": true,
+                        "width": "100%"
+                    },
+                    "id": "a4ea22b4-9901-11ee-b789-080027b7463b",
+                    "label": {
+                        "en": "Recommended By Last Name"
+                    },
+                    "node_id": "a4ea11ac-9901-11ee-b789-080027b7463b",
+                    "sortorder": 2,
+                    "visible": true,
+                    "widget_id": "10000000-0000-0000-0000-000000000001"
+                },
+                {
+                    "card_id": "a4ea0fe0-9901-11ee-b789-080027b7463b",
+                    "config": {
+                        "defaultValue": {
+                            "en": {
+                                "direction": "ltr",
+                                "value": ""
+                            }
+                        },
+                        "i18n_properties": [
+                            "placeholder"
+                        ],
+                        "label": "Recommended By First Name",
+                        "maxLength": null,
+                        "placeholder": {
+                            "en": "Enter text"
+                        },
+                        "uneditable": true,
+                        "width": "100%"
+                    },
+                    "id": "a4ea235e-9901-11ee-b789-080027b7463b",
+                    "label": {
+                        "en": "Recommended By First Name"
+                    },
+                    "node_id": "a4ea149a-9901-11ee-b789-080027b7463b",
+                    "sortorder": 3,
+                    "visible": true,
+                    "widget_id": "10000000-0000-0000-0000-000000000001"
+                },
+                {
+                    "card_id": "a4ea0fe0-9901-11ee-b789-080027b7463b",
+                    "config": {
+                        "defaultValue": {
+                            "en": {
+                                "direction": "ltr",
+                                "value": ""
+                            }
+                        },
+                        "i18n_properties": [
+                            "placeholder"
+                        ],
+                        "label": "Decision Criteria",
+                        "maxLength": null,
+                        "placeholder": {
+                            "en": "Enter text"
+                        },
+                        "uneditable": true,
+                        "width": "100%"
+                    },
+                    "id": "a4ea2408-9901-11ee-b789-080027b7463b",
+                    "label": {
+                        "en": "Decision Criteria"
+                    },
+                    "node_id": "a4ea199a-9901-11ee-b789-080027b7463b",
+                    "sortorder": 5,
+                    "visible": true,
+                    "widget_id": "10000000-0000-0000-0000-000000000001"
+                },
+                {
+                    "card_id": "a4ea0fe0-9901-11ee-b789-080027b7463b",
+                    "config": {
+                        "defaultValue": {
+                            "en": {
+                                "direction": "ltr",
+                                "value": ""
+                            }
+                        },
+                        "i18n_properties": [
+                            "placeholder"
+                        ],
+                        "label": "Decision Description",
+                        "maxLength": null,
+                        "placeholder": {
+                            "en": "Enter text"
+                        },
+                        "uneditable": true,
+                        "width": "100%"
+                    },
+                    "id": "a4ea24b2-9901-11ee-b789-080027b7463b",
+                    "label": {
+                        "en": "Decision Description"
+                    },
+                    "node_id": "a4ea1cc4-9901-11ee-b789-080027b7463b",
+                    "sortorder": 6,
+                    "visible": true,
+                    "widget_id": "10000000-0000-0000-0000-000000000001"
+                },
+                {
+                    "card_id": "a4ea0fe0-9901-11ee-b789-080027b7463b",
+                    "config": {
+                        "defaultValue": {
+                            "en": {
+                                "direction": "ltr",
+                                "value": ""
+                            }
+                        },
+                        "i18n_properties": [
+                            "placeholder"
+                        ],
+                        "label": "Decision",
+                        "maxLength": null,
+                        "placeholder": {
+                            "en": "Enter text"
+                        },
+                        "uneditable": true,
+                        "width": "100%"
+                    },
+                    "id": "a4ea255c-9901-11ee-b789-080027b7463b",
+                    "label": {
+                        "en": "Decision"
+                    },
+                    "node_id": "a4ea1864-9901-11ee-b789-080027b7463b",
+                    "sortorder": 7,
+                    "visible": true,
+                    "widget_id": "10000000-0000-0000-0000-000000000001"
+                },
+                {
+                    "card_id": "a4ea0fe0-9901-11ee-b789-080027b7463b",
+                    "config": {
+                        "defaultValue": {
+                            "en": {
+                                "direction": "ltr",
+                                "value": ""
+                            }
+                        },
+                        "i18n_properties": [
+                            "placeholder"
+                        ],
+                        "label": "Decided By Last Name",
+                        "maxLength": null,
+                        "placeholder": {
+                            "en": "Enter text"
+                        },
+                        "uneditable": true,
+                        "width": "100%"
+                    },
+                    "id": "a4ea2606-9901-11ee-b789-080027b7463b",
+                    "label": {
+                        "en": "Decided By Last Name"
+                    },
+                    "node_id": "a4ea1ac6-9901-11ee-b789-080027b7463b",
+                    "sortorder": 1,
+                    "visible": true,
+                    "widget_id": "10000000-0000-0000-0000-000000000001"
+                },
+                {
                     "card_id": "6cc302c6-0d06-11ed-8804-5254008afee6",
                     "config": {
                         "defaultResourceInstance": [],
@@ -2634,105 +2634,6 @@
                     "name": null,
                     "ontologyproperty": "http://www.ics.forth.gr/isl/CRMdig/L43i_is_annotated_by",
                     "rangenode_id": "06850210-0d07-11ed-8804-5254008afee6"
-                },
-                {
-                    "description": null,
-                    "domainnode_id": "0c53436e-0d07-11ed-a6f1-5254008afee6",
-                    "edgeid": "0c53582c-0d07-11ed-a6f1-5254008afee6",
-                    "graph_id": "cef9c510-e3e6-4057-ac08-89ad926180b4",
-                    "name": null,
-                    "ontologyproperty": "http://www.cidoc-crm.org/cidoc-crm/P131_is_identified_by",
-                    "rangenode_id": "0c533f90-0d07-11ed-a6f1-5254008afee6"
-                },
-                {
-                    "description": null,
-                    "domainnode_id": "0c533c8e-0d07-11ed-a6f1-5254008afee6",
-                    "edgeid": "0c53593a-0d07-11ed-a6f1-5254008afee6",
-                    "graph_id": "cef9c510-e3e6-4057-ac08-89ad926180b4",
-                    "name": null,
-                    "ontologyproperty": "http://www.cidoc-crm.org/cidoc-crm/P1_is_identified_by",
-                    "rangenode_id": "0c5348aa-0d07-11ed-a6f1-5254008afee6"
-                },
-                {
-                    "description": null,
-                    "domainnode_id": "0c533c8e-0d07-11ed-a6f1-5254008afee6",
-                    "edgeid": "0c535a16-0d07-11ed-a6f1-5254008afee6",
-                    "graph_id": "cef9c510-e3e6-4057-ac08-89ad926180b4",
-                    "name": null,
-                    "ontologyproperty": "http://www.cidoc-crm.org/cidoc-crm/P19i_was_made_for",
-                    "rangenode_id": "0c534454-0d07-11ed-a6f1-5254008afee6"
-                },
-                {
-                    "description": null,
-                    "domainnode_id": "0c534288-0d07-11ed-a6f1-5254008afee6",
-                    "edgeid": "0c535ae8-0d07-11ed-a6f1-5254008afee6",
-                    "graph_id": "cef9c510-e3e6-4057-ac08-89ad926180b4",
-                    "name": null,
-                    "ontologyproperty": "http://www.cidoc-crm.org/cidoc-crm/P131_is_identified_by",
-                    "rangenode_id": "0c5340a8-0d07-11ed-a6f1-5254008afee6"
-                },
-                {
-                    "description": null,
-                    "domainnode_id": "0c534288-0d07-11ed-a6f1-5254008afee6",
-                    "edgeid": "0c535bba-0d07-11ed-a6f1-5254008afee6",
-                    "graph_id": "cef9c510-e3e6-4057-ac08-89ad926180b4",
-                    "name": null,
-                    "ontologyproperty": "http://www.cidoc-crm.org/cidoc-crm/P1_is_identified_by",
-                    "rangenode_id": "0c53460c-0d07-11ed-a6f1-5254008afee6"
-                },
-                {
-                    "description": null,
-                    "domainnode_id": "0c533c8e-0d07-11ed-a6f1-5254008afee6",
-                    "edgeid": "0c5360d8-0d07-11ed-a6f1-5254008afee6",
-                    "graph_id": "cef9c510-e3e6-4057-ac08-89ad926180b4",
-                    "name": null,
-                    "ontologyproperty": "http://www.cidoc-crm.org/cidoc-crm/P129_is_about",
-                    "rangenode_id": "0c534288-0d07-11ed-a6f1-5254008afee6"
-                },
-                {
-                    "description": null,
-                    "domainnode_id": "0c533c8e-0d07-11ed-a6f1-5254008afee6",
-                    "edgeid": "0c536560-0d07-11ed-a6f1-5254008afee6",
-                    "graph_id": "cef9c510-e3e6-4057-ac08-89ad926180b4",
-                    "name": null,
-                    "ontologyproperty": "http://www.cidoc-crm.org/cidoc-crm/P67_refers_to",
-                    "rangenode_id": "0c53436e-0d07-11ed-a6f1-5254008afee6"
-                },
-                {
-                    "description": null,
-                    "domainnode_id": "0c533c8e-0d07-11ed-a6f1-5254008afee6",
-                    "edgeid": "0c536880-0d07-11ed-a6f1-5254008afee6",
-                    "graph_id": "cef9c510-e3e6-4057-ac08-89ad926180b4",
-                    "name": null,
-                    "ontologyproperty": "http://www.cidoc-crm.org/cidoc-crm/P3_has_note",
-                    "rangenode_id": "0c5346e8-0d07-11ed-a6f1-5254008afee6"
-                },
-                {
-                    "description": null,
-                    "domainnode_id": "0c53436e-0d07-11ed-a6f1-5254008afee6",
-                    "edgeid": "0c536b1e-0d07-11ed-a6f1-5254008afee6",
-                    "graph_id": "cef9c510-e3e6-4057-ac08-89ad926180b4",
-                    "name": null,
-                    "ontologyproperty": "http://www.cidoc-crm.org/cidoc-crm/P131_is_identified_by",
-                    "rangenode_id": "0c5341a2-0d07-11ed-a6f1-5254008afee6"
-                },
-                {
-                    "description": null,
-                    "domainnode_id": "0c533c8e-0d07-11ed-a6f1-5254008afee6",
-                    "edgeid": "0c536c9a-0d07-11ed-a6f1-5254008afee6",
-                    "graph_id": "cef9c510-e3e6-4057-ac08-89ad926180b4",
-                    "name": null,
-                    "ontologyproperty": "http://www.cidoc-crm.org/cidoc-crm/P1_is_identified_by",
-                    "rangenode_id": "0c5347c4-0d07-11ed-a6f1-5254008afee6"
-                },
-                {
-                    "description": null,
-                    "domainnode_id": "0c533c8e-0d07-11ed-a6f1-5254008afee6",
-                    "edgeid": "0c53708c-0d07-11ed-a6f1-5254008afee6",
-                    "graph_id": "cef9c510-e3e6-4057-ac08-89ad926180b4",
-                    "name": null,
-                    "ontologyproperty": "http://www.cidoc-crm.org/cidoc-crm/P15i_influenced",
-                    "rangenode_id": "0c534530-0d07-11ed-a6f1-5254008afee6"
                 },
                 {
                     "description": null,
@@ -3285,21 +3186,111 @@
                 },
                 {
                     "description": null,
+                    "domainnode_id": "a4ea0cfc-9901-11ee-b789-080027b7463b",
+                    "edgeid": "a4ea75fc-9901-11ee-b789-080027b7463b",
+                    "graph_id": "cef9c510-e3e6-4057-ac08-89ad926180b4",
+                    "name": null,
+                    "ontologyproperty": "http://www.cidoc-crm.org/cidoc-crm/P1_is_identified_by",
+                    "rangenode_id": "a4ea1f94-9901-11ee-b789-080027b7463b"
+                },
+                {
+                    "description": null,
+                    "domainnode_id": "a4ea0cfc-9901-11ee-b789-080027b7463b",
+                    "edgeid": "a4ea7818-9901-11ee-b789-080027b7463b",
+                    "graph_id": "cef9c510-e3e6-4057-ac08-89ad926180b4",
+                    "name": null,
+                    "ontologyproperty": "http://www.cidoc-crm.org/cidoc-crm/P19i_was_made_for",
+                    "rangenode_id": "a4ea1864-9901-11ee-b789-080027b7463b"
+                },
+                {
+                    "description": null,
+                    "domainnode_id": "a4ea15e4-9901-11ee-b789-080027b7463b",
+                    "edgeid": "a4ea7976-9901-11ee-b789-080027b7463b",
+                    "graph_id": "cef9c510-e3e6-4057-ac08-89ad926180b4",
+                    "name": null,
+                    "ontologyproperty": "http://www.cidoc-crm.org/cidoc-crm/P131_is_identified_by",
+                    "rangenode_id": "a4ea133c-9901-11ee-b789-080027b7463b"
+                },
+                {
+                    "description": null,
+                    "domainnode_id": "a4ea15e4-9901-11ee-b789-080027b7463b",
+                    "edgeid": "a4ea7ab6-9901-11ee-b789-080027b7463b",
+                    "graph_id": "cef9c510-e3e6-4057-ac08-89ad926180b4",
+                    "name": null,
+                    "ontologyproperty": "http://www.cidoc-crm.org/cidoc-crm/P1_is_identified_by",
+                    "rangenode_id": "a4ea1ac6-9901-11ee-b789-080027b7463b"
+                },
+                {
+                    "description": null,
+                    "domainnode_id": "a4ea0cfc-9901-11ee-b789-080027b7463b",
+                    "edgeid": "a4ea7be2-9901-11ee-b789-080027b7463b",
+                    "graph_id": "cef9c510-e3e6-4057-ac08-89ad926180b4",
+                    "name": null,
+                    "ontologyproperty": "http://www.cidoc-crm.org/cidoc-crm/P129_is_about",
+                    "rangenode_id": "a4ea15e4-9901-11ee-b789-080027b7463b"
+                },
+                {
+                    "description": null,
+                    "domainnode_id": "a4ea0cfc-9901-11ee-b789-080027b7463b",
+                    "edgeid": "a4ea7d18-9901-11ee-b789-080027b7463b",
+                    "graph_id": "cef9c510-e3e6-4057-ac08-89ad926180b4",
+                    "name": null,
+                    "ontologyproperty": "http://www.cidoc-crm.org/cidoc-crm/P67_refers_to",
+                    "rangenode_id": "a4ea172e-9901-11ee-b789-080027b7463b"
+                },
+                {
+                    "description": null,
+                    "domainnode_id": "a4ea0cfc-9901-11ee-b789-080027b7463b",
+                    "edgeid": "a4ea7e44-9901-11ee-b789-080027b7463b",
+                    "graph_id": "cef9c510-e3e6-4057-ac08-89ad926180b4",
+                    "name": null,
+                    "ontologyproperty": "http://www.cidoc-crm.org/cidoc-crm/P3_has_note",
+                    "rangenode_id": "a4ea1cc4-9901-11ee-b789-080027b7463b"
+                },
+                {
+                    "description": null,
+                    "domainnode_id": "a4ea172e-9901-11ee-b789-080027b7463b",
+                    "edgeid": "a4ea7f5c-9901-11ee-b789-080027b7463b",
+                    "graph_id": "cef9c510-e3e6-4057-ac08-89ad926180b4",
+                    "name": null,
+                    "ontologyproperty": "http://www.cidoc-crm.org/cidoc-crm/P131_is_identified_by",
+                    "rangenode_id": "a4ea149a-9901-11ee-b789-080027b7463b"
+                },
+                {
+                    "description": null,
+                    "domainnode_id": "a4ea0cfc-9901-11ee-b789-080027b7463b",
+                    "edgeid": "a4ea8074-9901-11ee-b789-080027b7463b",
+                    "graph_id": "cef9c510-e3e6-4057-ac08-89ad926180b4",
+                    "name": null,
+                    "ontologyproperty": "http://www.cidoc-crm.org/cidoc-crm/P1_is_identified_by",
+                    "rangenode_id": "a4ea1e36-9901-11ee-b789-080027b7463b"
+                },
+                {
+                    "description": null,
+                    "domainnode_id": "a4ea0cfc-9901-11ee-b789-080027b7463b",
+                    "edgeid": "a4ea8196-9901-11ee-b789-080027b7463b",
+                    "graph_id": "cef9c510-e3e6-4057-ac08-89ad926180b4",
+                    "name": null,
+                    "ontologyproperty": "http://www.cidoc-crm.org/cidoc-crm/P15i_influenced",
+                    "rangenode_id": "a4ea199a-9901-11ee-b789-080027b7463b"
+                },
+                {
+                    "description": null,
+                    "domainnode_id": "a4ea172e-9901-11ee-b789-080027b7463b",
+                    "edgeid": "a4ea82b8-9901-11ee-b789-080027b7463b",
+                    "graph_id": "cef9c510-e3e6-4057-ac08-89ad926180b4",
+                    "name": null,
+                    "ontologyproperty": "http://www.cidoc-crm.org/cidoc-crm/P131_is_identified_by",
+                    "rangenode_id": "a4ea11ac-9901-11ee-b789-080027b7463b"
+                },
+                {
+                    "description": null,
                     "domainnode_id": "19d560d2-0d05-11ed-a4d8-5254008afee6",
                     "edgeid": "a6951746-01b6-4930-8926-0972515b4568",
                     "graph_id": "cef9c510-e3e6-4057-ac08-89ad926180b4",
                     "name": null,
                     "ontologyproperty": "http://www.ics.forth.gr/isl/CRMdig/L33_has_maker",
                     "rangenode_id": "fdd1b2ca-cd78-11ed-b7b5-5254004d77d3"
-                },
-                {
-                    "description": null,
-                    "domainnode_id": "19d560d2-0d05-11ed-a4d8-5254008afee6",
-                    "edgeid": "a71abfe8-4c16-4065-bc39-04678ce49dd1",
-                    "graph_id": "cef9c510-e3e6-4057-ac08-89ad926180b4",
-                    "name": null,
-                    "ontologyproperty": "http://www.cidoc-crm.org/cidoc-crm/P130_shows_features_of",
-                    "rangenode_id": "0c533c8e-0d07-11ed-a6f1-5254008afee6"
                 },
                 {
                     "description": null,
@@ -3318,15 +3309,6 @@
                     "name": null,
                     "ontologyproperty": "http://www.cidoc-crm.org/cidoc-crm/P116_starts",
                     "rangenode_id": "727808be-cdaa-11ed-9868-5254004d77d3"
-                },
-                {
-                    "description": null,
-                    "domainnode_id": "611029e8-8f11-11ee-976b-080027b7463b",
-                    "edgeid": "bc3cf636-e1c7-4de0-8c5d-bb6c2cd078bb",
-                    "graph_id": "cef9c510-e3e6-4057-ac08-89ad926180b4",
-                    "name": null,
-                    "ontologyproperty": "http://www.cidoc-crm.org/cidoc-crm/P15i_influenced",
-                    "rangenode_id": "1539333a-8f15-11ee-b395-080027b7463b"
                 },
                 {
                     "description": null,
@@ -3354,6 +3336,15 @@
                     "name": null,
                     "ontologyproperty": "http://www.cidoc-crm.org/cidoc-crm/P14_carried_out_by",
                     "rangenode_id": "50c26f28-3b93-11ee-ac05-080027b7463b"
+                },
+                {
+                    "description": null,
+                    "domainnode_id": "0684fec8-0d07-11ed-8804-5254008afee6",
+                    "edgeid": "d29c891d-c63a-4603-a2a1-47c10d270ed5",
+                    "graph_id": "cef9c510-e3e6-4057-ac08-89ad926180b4",
+                    "name": null,
+                    "ontologyproperty": "http://www.cidoc-crm.org/cidoc-crm/P140_assigned_attribute_to",
+                    "rangenode_id": "a4ea0cfc-9901-11ee-b789-080027b7463b"
                 },
                 {
                     "description": null,
@@ -3467,6 +3458,18 @@
             "functions_x_graphs": [
                 {
                     "config": {
+                        "node_id": "703bbe62-3d24-11ee-93bd-080027b7463b",
+                        "triggering_nodegroups": [
+                            "0a883b80-2fb6-11ed-be5f-5254008afee6"
+                        ],
+                        "unique_value": true
+                    },
+                    "function_id": "60000000-0000-0000-0000-000000002001",
+                    "graph_id": "cef9c510-e3e6-4057-ac08-89ad926180b4",
+                    "id": "83b6ee68-52f0-4219-973a-6d16df207347"
+                },
+                {
+                    "config": {
                         "class_name": "BCRHPSiteDescriptors",
                         "descriptor_types": {
                             "description": {
@@ -3507,24 +3510,12 @@
                     },
                     "function_id": "60000000-0000-0000-0000-000000001002",
                     "graph_id": "cef9c510-e3e6-4057-ac08-89ad926180b4",
-                    "id": "91c39720-d6bc-4eda-87a2-7dd5a439d93c"
-                },
-                {
-                    "config": {
-                        "node_id": "703bbe62-3d24-11ee-93bd-080027b7463b",
-                        "triggering_nodegroups": [
-                            "0a883b80-2fb6-11ed-be5f-5254008afee6"
-                        ],
-                        "unique_value": true
-                    },
-                    "function_id": "60000000-0000-0000-0000-000000002001",
-                    "graph_id": "cef9c510-e3e6-4057-ac08-89ad926180b4",
-                    "id": "a7e84e4e-f649-47bb-801f-90e7486d5203"
+                    "id": "c0e010f6-1942-4627-875c-c4aa066c8b51"
                 }
             ],
             "graphid": "cef9c510-e3e6-4057-ac08-89ad926180b4",
             "iconclass": "fa fa-bank",
-            "is_editable": true,
+            "is_editable": false,
             "isresource": true,
             "jsonldcontext": null,
             "name": {
@@ -3553,12 +3544,6 @@
                     "cardinality": "n",
                     "legacygroupid": null,
                     "nodegroupid": "0a883b80-2fb6-11ed-be5f-5254008afee6",
-                    "parentnodegroup_id": null
-                },
-                {
-                    "cardinality": "n",
-                    "legacygroupid": null,
-                    "nodegroupid": "0c533c8e-0d07-11ed-a6f1-5254008afee6",
                     "parentnodegroup_id": null
                 },
                 {
@@ -3632,6 +3617,12 @@
                     "legacygroupid": null,
                     "nodegroupid": "98347640-cd88-11ed-bda2-5254004d77d3",
                     "parentnodegroup_id": null
+                },
+                {
+                    "cardinality": "n",
+                    "legacygroupid": null,
+                    "nodegroupid": "a4ea0cfc-9901-11ee-b789-080027b7463b",
+                    "parentnodegroup_id": "0684fec8-0d07-11ed-8804-5254008afee6"
                 },
                 {
                     "cardinality": "n",
@@ -3768,285 +3759,6 @@
                     "nodeid": "0a883b80-2fb6-11ed-be5f-5254008afee6",
                     "ontologyclass": "http://www.ics.forth.gr/isl/CRMdig/D13_Digital_Information_Carrier",
                     "parentproperty": "http://www.cidoc-crm.org/cidoc-crm/P62i_is_depicted_by",
-                    "sortorder": 0,
-                    "sourcebranchpublication_id": null
-                },
-                {
-                    "alias": "decision_history",
-                    "config": {},
-                    "datatype": "semantic",
-                    "description": "",
-                    "exportable": false,
-                    "fieldname": null,
-                    "graph_id": "cef9c510-e3e6-4057-ac08-89ad926180b4",
-                    "hascustomalias": false,
-                    "is_collector": true,
-                    "isrequired": false,
-                    "issearchable": true,
-                    "istopnode": false,
-                    "name": "Decision History",
-                    "nodegroup_id": "0c533c8e-0d07-11ed-a6f1-5254008afee6",
-                    "nodeid": "0c533c8e-0d07-11ed-a6f1-5254008afee6",
-                    "ontologyclass": "http://www.ics.forth.gr/isl/CRMinf/I3_Inference_Logic",
-                    "parentproperty": "http://www.cidoc-crm.org/cidoc-crm/P130_shows_features_of",
-                    "sortorder": 0,
-                    "sourcebranchpublication_id": null
-                },
-                {
-                    "alias": "recommended_by_last_name",
-                    "config": {},
-                    "datatype": "string",
-                    "description": null,
-                    "exportable": false,
-                    "fieldname": null,
-                    "graph_id": "cef9c510-e3e6-4057-ac08-89ad926180b4",
-                    "hascustomalias": false,
-                    "is_collector": false,
-                    "isrequired": false,
-                    "issearchable": true,
-                    "istopnode": false,
-                    "name": "Recommended By Last Name",
-                    "nodegroup_id": "0c533c8e-0d07-11ed-a6f1-5254008afee6",
-                    "nodeid": "0c533f90-0d07-11ed-a6f1-5254008afee6",
-                    "ontologyclass": "http://www.ics.forth.gr/isl/CRMdig/D21_Person_Name",
-                    "parentproperty": "http://www.cidoc-crm.org/cidoc-crm/P131_is_identified_by",
-                    "sortorder": 0,
-                    "sourcebranchpublication_id": null
-                },
-                {
-                    "alias": "decided_by_first_name",
-                    "config": {},
-                    "datatype": "string",
-                    "description": null,
-                    "exportable": false,
-                    "fieldname": null,
-                    "graph_id": "cef9c510-e3e6-4057-ac08-89ad926180b4",
-                    "hascustomalias": false,
-                    "is_collector": false,
-                    "isrequired": false,
-                    "issearchable": true,
-                    "istopnode": false,
-                    "name": "Decided By First Name",
-                    "nodegroup_id": "0c533c8e-0d07-11ed-a6f1-5254008afee6",
-                    "nodeid": "0c5340a8-0d07-11ed-a6f1-5254008afee6",
-                    "ontologyclass": "http://www.ics.forth.gr/isl/CRMdig/D21_Person_Name",
-                    "parentproperty": "http://www.cidoc-crm.org/cidoc-crm/P131_is_identified_by",
-                    "sortorder": 0,
-                    "sourcebranchpublication_id": null
-                },
-                {
-                    "alias": "recommended_by_first_name",
-                    "config": {},
-                    "datatype": "string",
-                    "description": null,
-                    "exportable": false,
-                    "fieldname": null,
-                    "graph_id": "cef9c510-e3e6-4057-ac08-89ad926180b4",
-                    "hascustomalias": false,
-                    "is_collector": false,
-                    "isrequired": false,
-                    "issearchable": true,
-                    "istopnode": false,
-                    "name": "Recommended By First Name",
-                    "nodegroup_id": "0c533c8e-0d07-11ed-a6f1-5254008afee6",
-                    "nodeid": "0c5341a2-0d07-11ed-a6f1-5254008afee6",
-                    "ontologyclass": "http://www.ics.forth.gr/isl/CRMdig/D21_Person_Name",
-                    "parentproperty": "http://www.cidoc-crm.org/cidoc-crm/P131_is_identified_by",
-                    "sortorder": 0,
-                    "sourcebranchpublication_id": null
-                },
-                {
-                    "alias": "decision_made_by",
-                    "config": {},
-                    "datatype": "semantic",
-                    "description": "",
-                    "exportable": false,
-                    "fieldname": null,
-                    "graph_id": "cef9c510-e3e6-4057-ac08-89ad926180b4",
-                    "hascustomalias": false,
-                    "is_collector": false,
-                    "isrequired": false,
-                    "issearchable": true,
-                    "istopnode": false,
-                    "name": "Decision Made By",
-                    "nodegroup_id": "0c533c8e-0d07-11ed-a6f1-5254008afee6",
-                    "nodeid": "0c534288-0d07-11ed-a6f1-5254008afee6",
-                    "ontologyclass": "http://www.cidoc-crm.org/cidoc-crm/E21_Person",
-                    "parentproperty": "http://www.cidoc-crm.org/cidoc-crm/P129_is_about",
-                    "sortorder": 0,
-                    "sourcebranchpublication_id": null
-                },
-                {
-                    "alias": "recommended_by",
-                    "config": {},
-                    "datatype": "semantic",
-                    "description": null,
-                    "exportable": false,
-                    "fieldname": null,
-                    "graph_id": "cef9c510-e3e6-4057-ac08-89ad926180b4",
-                    "hascustomalias": false,
-                    "is_collector": false,
-                    "isrequired": false,
-                    "issearchable": true,
-                    "istopnode": false,
-                    "name": "Recommended By",
-                    "nodegroup_id": "0c533c8e-0d07-11ed-a6f1-5254008afee6",
-                    "nodeid": "0c53436e-0d07-11ed-a6f1-5254008afee6",
-                    "ontologyclass": "http://www.cidoc-crm.org/cidoc-crm/E21_Person",
-                    "parentproperty": "http://www.cidoc-crm.org/cidoc-crm/P67_refers_to",
-                    "sortorder": 0,
-                    "sourcebranchpublication_id": null
-                },
-                {
-                    "alias": "decision_made",
-                    "config": {},
-                    "datatype": "string",
-                    "description": null,
-                    "exportable": false,
-                    "fieldname": null,
-                    "graph_id": "cef9c510-e3e6-4057-ac08-89ad926180b4",
-                    "hascustomalias": false,
-                    "is_collector": false,
-                    "isrequired": false,
-                    "issearchable": true,
-                    "istopnode": false,
-                    "name": "Decision Made",
-                    "nodegroup_id": "0c533c8e-0d07-11ed-a6f1-5254008afee6",
-                    "nodeid": "0c534454-0d07-11ed-a6f1-5254008afee6",
-                    "ontologyclass": "http://www.cidoc-crm.org/cidoc-crm/E13_Attribute_Assignment",
-                    "parentproperty": "http://www.cidoc-crm.org/cidoc-crm/P19i_was_made_for",
-                    "sortorder": 0,
-                    "sourcebranchpublication_id": null
-                },
-                {
-                    "alias": "decision_criteria",
-                    "config": {},
-                    "datatype": "string",
-                    "description": null,
-                    "exportable": false,
-                    "fieldname": null,
-                    "graph_id": "cef9c510-e3e6-4057-ac08-89ad926180b4",
-                    "hascustomalias": false,
-                    "is_collector": false,
-                    "isrequired": false,
-                    "issearchable": true,
-                    "istopnode": false,
-                    "name": "Decision Criteria",
-                    "nodegroup_id": "0c533c8e-0d07-11ed-a6f1-5254008afee6",
-                    "nodeid": "0c534530-0d07-11ed-a6f1-5254008afee6",
-                    "ontologyclass": "http://www.cidoc-crm.org/cidoc-crm/E13_Attribute_Assignment",
-                    "parentproperty": "http://www.cidoc-crm.org/cidoc-crm/P15i_influenced",
-                    "sortorder": 0,
-                    "sourcebranchpublication_id": null
-                },
-                {
-                    "alias": "decided_by_last_name",
-                    "config": {},
-                    "datatype": "string",
-                    "description": null,
-                    "exportable": false,
-                    "fieldname": null,
-                    "graph_id": "cef9c510-e3e6-4057-ac08-89ad926180b4",
-                    "hascustomalias": false,
-                    "is_collector": false,
-                    "isrequired": false,
-                    "issearchable": true,
-                    "istopnode": false,
-                    "name": "Decided By Last Name",
-                    "nodegroup_id": "0c533c8e-0d07-11ed-a6f1-5254008afee6",
-                    "nodeid": "0c53460c-0d07-11ed-a6f1-5254008afee6",
-                    "ontologyclass": "http://www.ics.forth.gr/isl/CRMdig/D21_Person_Name",
-                    "parentproperty": "http://www.cidoc-crm.org/cidoc-crm/P1_is_identified_by",
-                    "sortorder": 0,
-                    "sourcebranchpublication_id": null
-                },
-                {
-                    "alias": "decision_description",
-                    "config": {},
-                    "datatype": "string",
-                    "description": null,
-                    "exportable": false,
-                    "fieldname": null,
-                    "graph_id": "cef9c510-e3e6-4057-ac08-89ad926180b4",
-                    "hascustomalias": false,
-                    "is_collector": false,
-                    "isrequired": false,
-                    "issearchable": true,
-                    "istopnode": false,
-                    "name": "Decision Description",
-                    "nodegroup_id": "0c533c8e-0d07-11ed-a6f1-5254008afee6",
-                    "nodeid": "0c5346e8-0d07-11ed-a6f1-5254008afee6",
-                    "ontologyclass": "http://www.cidoc-crm.org/cidoc-crm/E62_String",
-                    "parentproperty": "http://www.cidoc-crm.org/cidoc-crm/P3_has_note",
-                    "sortorder": 0,
-                    "sourcebranchpublication_id": null
-                },
-                {
-                    "alias": "decision_date",
-                    "config": {
-                        "dateFormat": "YYYY-MM-DD"
-                    },
-                    "datatype": "date",
-                    "description": null,
-                    "exportable": false,
-                    "fieldname": null,
-                    "graph_id": "cef9c510-e3e6-4057-ac08-89ad926180b4",
-                    "hascustomalias": false,
-                    "is_collector": false,
-                    "isrequired": false,
-                    "issearchable": true,
-                    "istopnode": false,
-                    "name": "Decision Date",
-                    "nodegroup_id": "0c533c8e-0d07-11ed-a6f1-5254008afee6",
-                    "nodeid": "0c5347c4-0d07-11ed-a6f1-5254008afee6",
-                    "ontologyclass": "http://www.cidoc-crm.org/cidoc-crm/E50_Date",
-                    "parentproperty": "http://www.cidoc-crm.org/cidoc-crm/P1_is_identified_by",
-                    "sortorder": 0,
-                    "sourcebranchpublication_id": null
-                },
-                {
-                    "alias": "recommended_date",
-                    "config": {
-                        "dateFormat": "YYYY-MM-DD"
-                    },
-                    "datatype": "date",
-                    "description": null,
-                    "exportable": false,
-                    "fieldname": null,
-                    "graph_id": "cef9c510-e3e6-4057-ac08-89ad926180b4",
-                    "hascustomalias": false,
-                    "is_collector": false,
-                    "isrequired": false,
-                    "issearchable": true,
-                    "istopnode": false,
-                    "name": "Recommended Date",
-                    "nodegroup_id": "0c533c8e-0d07-11ed-a6f1-5254008afee6",
-                    "nodeid": "0c5348aa-0d07-11ed-a6f1-5254008afee6",
-                    "ontologyclass": "http://www.cidoc-crm.org/cidoc-crm/E50_Date",
-                    "parentproperty": "http://www.cidoc-crm.org/cidoc-crm/P1_is_identified_by",
-                    "sortorder": 0,
-                    "sourcebranchpublication_id": null
-                },
-                {
-                    "alias": null,
-                    "config": {
-                        "en": ""
-                    },
-                    "datatype": "semantic",
-                    "description": null,
-                    "exportable": false,
-                    "fieldname": null,
-                    "graph_id": "cef9c510-e3e6-4057-ac08-89ad926180b4",
-                    "hascustomalias": false,
-                    "is_collector": false,
-                    "isrequired": false,
-                    "issearchable": true,
-                    "istopnode": false,
-                    "name": "New Node",
-                    "nodegroup_id": "0684fec8-0d07-11ed-8804-5254008afee6",
-                    "nodeid": "1539333a-8f15-11ee-b395-080027b7463b",
-                    "ontologyclass": "http://www.cidoc-crm.org/cidoc-crm/E7_Activity",
-                    "parentproperty": "http://www.cidoc-crm.org/cidoc-crm/P15i_influenced",
                     "sortorder": 0,
                     "sourcebranchpublication_id": null
                 },
@@ -5546,6 +5258,264 @@
                     "sourcebranchpublication_id": null
                 },
                 {
+                    "alias": "decision_history_n1",
+                    "config": {
+                        "en": ""
+                    },
+                    "datatype": "semantic",
+                    "description": "{\"en\": \"\"}",
+                    "exportable": false,
+                    "fieldname": null,
+                    "graph_id": "cef9c510-e3e6-4057-ac08-89ad926180b4",
+                    "hascustomalias": false,
+                    "is_collector": true,
+                    "isrequired": false,
+                    "issearchable": true,
+                    "istopnode": false,
+                    "name": "Decision History",
+                    "nodegroup_id": "a4ea0cfc-9901-11ee-b789-080027b7463b",
+                    "nodeid": "a4ea0cfc-9901-11ee-b789-080027b7463b",
+                    "ontologyclass": "http://www.ics.forth.gr/isl/CRMinf/I3_Inference_Logic",
+                    "parentproperty": "http://www.cidoc-crm.org/cidoc-crm/P140_assigned_attribute_to",
+                    "sortorder": 0,
+                    "sourcebranchpublication_id": "95e41de2-9901-11ee-a8a8-080027b7463b"
+                },
+                {
+                    "alias": "recommended_by_last_name_n1",
+                    "config": {},
+                    "datatype": "string",
+                    "description": null,
+                    "exportable": false,
+                    "fieldname": null,
+                    "graph_id": "cef9c510-e3e6-4057-ac08-89ad926180b4",
+                    "hascustomalias": false,
+                    "is_collector": false,
+                    "isrequired": false,
+                    "issearchable": true,
+                    "istopnode": false,
+                    "name": "Recommended By Last Name",
+                    "nodegroup_id": "a4ea0cfc-9901-11ee-b789-080027b7463b",
+                    "nodeid": "a4ea11ac-9901-11ee-b789-080027b7463b",
+                    "ontologyclass": "http://www.ics.forth.gr/isl/CRMdig/D21_Person_Name",
+                    "parentproperty": "http://www.cidoc-crm.org/cidoc-crm/P131_is_identified_by",
+                    "sortorder": 0,
+                    "sourcebranchpublication_id": "95e41de2-9901-11ee-a8a8-080027b7463b"
+                },
+                {
+                    "alias": "decided_by_first_name_n1",
+                    "config": {},
+                    "datatype": "string",
+                    "description": null,
+                    "exportable": false,
+                    "fieldname": null,
+                    "graph_id": "cef9c510-e3e6-4057-ac08-89ad926180b4",
+                    "hascustomalias": false,
+                    "is_collector": false,
+                    "isrequired": false,
+                    "issearchable": true,
+                    "istopnode": false,
+                    "name": "Decided By First Name",
+                    "nodegroup_id": "a4ea0cfc-9901-11ee-b789-080027b7463b",
+                    "nodeid": "a4ea133c-9901-11ee-b789-080027b7463b",
+                    "ontologyclass": "http://www.ics.forth.gr/isl/CRMdig/D21_Person_Name",
+                    "parentproperty": "http://www.cidoc-crm.org/cidoc-crm/P131_is_identified_by",
+                    "sortorder": 0,
+                    "sourcebranchpublication_id": "95e41de2-9901-11ee-a8a8-080027b7463b"
+                },
+                {
+                    "alias": "recommended_by_first_name_n1",
+                    "config": {},
+                    "datatype": "string",
+                    "description": null,
+                    "exportable": false,
+                    "fieldname": null,
+                    "graph_id": "cef9c510-e3e6-4057-ac08-89ad926180b4",
+                    "hascustomalias": false,
+                    "is_collector": false,
+                    "isrequired": false,
+                    "issearchable": true,
+                    "istopnode": false,
+                    "name": "Recommended By First Name",
+                    "nodegroup_id": "a4ea0cfc-9901-11ee-b789-080027b7463b",
+                    "nodeid": "a4ea149a-9901-11ee-b789-080027b7463b",
+                    "ontologyclass": "http://www.ics.forth.gr/isl/CRMdig/D21_Person_Name",
+                    "parentproperty": "http://www.cidoc-crm.org/cidoc-crm/P131_is_identified_by",
+                    "sortorder": 0,
+                    "sourcebranchpublication_id": "95e41de2-9901-11ee-a8a8-080027b7463b"
+                },
+                {
+                    "alias": "decision_made_by_n1",
+                    "config": {},
+                    "datatype": "semantic",
+                    "description": "",
+                    "exportable": false,
+                    "fieldname": null,
+                    "graph_id": "cef9c510-e3e6-4057-ac08-89ad926180b4",
+                    "hascustomalias": false,
+                    "is_collector": false,
+                    "isrequired": false,
+                    "issearchable": true,
+                    "istopnode": false,
+                    "name": "Decision Made By",
+                    "nodegroup_id": "a4ea0cfc-9901-11ee-b789-080027b7463b",
+                    "nodeid": "a4ea15e4-9901-11ee-b789-080027b7463b",
+                    "ontologyclass": "http://www.cidoc-crm.org/cidoc-crm/E21_Person",
+                    "parentproperty": "http://www.cidoc-crm.org/cidoc-crm/P129_is_about",
+                    "sortorder": 0,
+                    "sourcebranchpublication_id": "95e41de2-9901-11ee-a8a8-080027b7463b"
+                },
+                {
+                    "alias": "recommended_by_n1",
+                    "config": {},
+                    "datatype": "semantic",
+                    "description": null,
+                    "exportable": false,
+                    "fieldname": null,
+                    "graph_id": "cef9c510-e3e6-4057-ac08-89ad926180b4",
+                    "hascustomalias": false,
+                    "is_collector": false,
+                    "isrequired": false,
+                    "issearchable": true,
+                    "istopnode": false,
+                    "name": "Recommended By",
+                    "nodegroup_id": "a4ea0cfc-9901-11ee-b789-080027b7463b",
+                    "nodeid": "a4ea172e-9901-11ee-b789-080027b7463b",
+                    "ontologyclass": "http://www.cidoc-crm.org/cidoc-crm/E21_Person",
+                    "parentproperty": "http://www.cidoc-crm.org/cidoc-crm/P67_refers_to",
+                    "sortorder": 0,
+                    "sourcebranchpublication_id": "95e41de2-9901-11ee-a8a8-080027b7463b"
+                },
+                {
+                    "alias": "decision_made_n1",
+                    "config": {},
+                    "datatype": "string",
+                    "description": null,
+                    "exportable": false,
+                    "fieldname": null,
+                    "graph_id": "cef9c510-e3e6-4057-ac08-89ad926180b4",
+                    "hascustomalias": false,
+                    "is_collector": false,
+                    "isrequired": false,
+                    "issearchable": true,
+                    "istopnode": false,
+                    "name": "Decision Made",
+                    "nodegroup_id": "a4ea0cfc-9901-11ee-b789-080027b7463b",
+                    "nodeid": "a4ea1864-9901-11ee-b789-080027b7463b",
+                    "ontologyclass": "http://www.cidoc-crm.org/cidoc-crm/E13_Attribute_Assignment",
+                    "parentproperty": "http://www.cidoc-crm.org/cidoc-crm/P19i_was_made_for",
+                    "sortorder": 0,
+                    "sourcebranchpublication_id": "95e41de2-9901-11ee-a8a8-080027b7463b"
+                },
+                {
+                    "alias": "decision_criteria_n1",
+                    "config": {},
+                    "datatype": "string",
+                    "description": null,
+                    "exportable": false,
+                    "fieldname": null,
+                    "graph_id": "cef9c510-e3e6-4057-ac08-89ad926180b4",
+                    "hascustomalias": false,
+                    "is_collector": false,
+                    "isrequired": false,
+                    "issearchable": true,
+                    "istopnode": false,
+                    "name": "Decision Criteria",
+                    "nodegroup_id": "a4ea0cfc-9901-11ee-b789-080027b7463b",
+                    "nodeid": "a4ea199a-9901-11ee-b789-080027b7463b",
+                    "ontologyclass": "http://www.cidoc-crm.org/cidoc-crm/E13_Attribute_Assignment",
+                    "parentproperty": "http://www.cidoc-crm.org/cidoc-crm/P15i_influenced",
+                    "sortorder": 0,
+                    "sourcebranchpublication_id": "95e41de2-9901-11ee-a8a8-080027b7463b"
+                },
+                {
+                    "alias": "decided_by_last_name_n1",
+                    "config": {},
+                    "datatype": "string",
+                    "description": null,
+                    "exportable": false,
+                    "fieldname": null,
+                    "graph_id": "cef9c510-e3e6-4057-ac08-89ad926180b4",
+                    "hascustomalias": false,
+                    "is_collector": false,
+                    "isrequired": false,
+                    "issearchable": true,
+                    "istopnode": false,
+                    "name": "Decided By Last Name",
+                    "nodegroup_id": "a4ea0cfc-9901-11ee-b789-080027b7463b",
+                    "nodeid": "a4ea1ac6-9901-11ee-b789-080027b7463b",
+                    "ontologyclass": "http://www.ics.forth.gr/isl/CRMdig/D21_Person_Name",
+                    "parentproperty": "http://www.cidoc-crm.org/cidoc-crm/P1_is_identified_by",
+                    "sortorder": 0,
+                    "sourcebranchpublication_id": "95e41de2-9901-11ee-a8a8-080027b7463b"
+                },
+                {
+                    "alias": "decision_description_n1",
+                    "config": {},
+                    "datatype": "string",
+                    "description": null,
+                    "exportable": false,
+                    "fieldname": null,
+                    "graph_id": "cef9c510-e3e6-4057-ac08-89ad926180b4",
+                    "hascustomalias": false,
+                    "is_collector": false,
+                    "isrequired": false,
+                    "issearchable": true,
+                    "istopnode": false,
+                    "name": "Decision Description",
+                    "nodegroup_id": "a4ea0cfc-9901-11ee-b789-080027b7463b",
+                    "nodeid": "a4ea1cc4-9901-11ee-b789-080027b7463b",
+                    "ontologyclass": "http://www.cidoc-crm.org/cidoc-crm/E62_String",
+                    "parentproperty": "http://www.cidoc-crm.org/cidoc-crm/P3_has_note",
+                    "sortorder": 0,
+                    "sourcebranchpublication_id": "95e41de2-9901-11ee-a8a8-080027b7463b"
+                },
+                {
+                    "alias": "decision_date_n1",
+                    "config": {
+                        "dateFormat": "YYYY-MM-DD"
+                    },
+                    "datatype": "date",
+                    "description": null,
+                    "exportable": false,
+                    "fieldname": null,
+                    "graph_id": "cef9c510-e3e6-4057-ac08-89ad926180b4",
+                    "hascustomalias": false,
+                    "is_collector": false,
+                    "isrequired": false,
+                    "issearchable": true,
+                    "istopnode": false,
+                    "name": "Decision Date",
+                    "nodegroup_id": "a4ea0cfc-9901-11ee-b789-080027b7463b",
+                    "nodeid": "a4ea1e36-9901-11ee-b789-080027b7463b",
+                    "ontologyclass": "http://www.cidoc-crm.org/cidoc-crm/E50_Date",
+                    "parentproperty": "http://www.cidoc-crm.org/cidoc-crm/P1_is_identified_by",
+                    "sortorder": 0,
+                    "sourcebranchpublication_id": "95e41de2-9901-11ee-a8a8-080027b7463b"
+                },
+                {
+                    "alias": "recommended_date_n1",
+                    "config": {
+                        "dateFormat": "YYYY-MM-DD"
+                    },
+                    "datatype": "date",
+                    "description": null,
+                    "exportable": false,
+                    "fieldname": null,
+                    "graph_id": "cef9c510-e3e6-4057-ac08-89ad926180b4",
+                    "hascustomalias": false,
+                    "is_collector": false,
+                    "isrequired": false,
+                    "issearchable": true,
+                    "istopnode": false,
+                    "name": "Recommended Date",
+                    "nodegroup_id": "a4ea0cfc-9901-11ee-b789-080027b7463b",
+                    "nodeid": "a4ea1f94-9901-11ee-b789-080027b7463b",
+                    "ontologyclass": "http://www.cidoc-crm.org/cidoc-crm/E50_Date",
+                    "parentproperty": "http://www.cidoc-crm.org/cidoc-crm/P1_is_identified_by",
+                    "sortorder": 0,
+                    "sourcebranchpublication_id": "95e41de2-9901-11ee-a8a8-080027b7463b"
+                },
+                {
                     "alias": "remark_date",
                     "config": {
                         "dateFormat": "YYYY-MM-DD"
@@ -5927,8 +5897,8 @@
             "publication": {
                 "graph_id": "cef9c510-e3e6-4057-ac08-89ad926180b4",
                 "notes": null,
-                "publicationid": "226002f4-98fd-11ee-b8f8-080027b7463b",
-                "published_time": "2023-12-12T08:45:46.593"
+                "publicationid": "354f5388-99de-11ee-a9fc-080027b7463b",
+                "published_time": "2023-12-13T11:36:55.124"
             },
             "relatable_resource_model_ids": [],
             "resource_2_resource_constraints": [],
