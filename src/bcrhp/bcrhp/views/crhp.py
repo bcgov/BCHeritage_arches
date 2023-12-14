@@ -35,9 +35,9 @@ class CRHPXmlExport(APIBase):
 
     def format_event_type(self, se):
         if se["event_type"] == "Construction":
-            se["event_type"] = "Construction Date" + (" (circa)" if se["dates_approximate"] else "")
+            se["event_type"] = "Construction" + (" (circa)" if se["dates_approximate"] else "")
         else:
-            se["event_type"] = "Significant Dates"
+            se["event_type"] = "Significant"
 
     def get_context_data(self, resourceinstanceid):
         context = {}
@@ -51,7 +51,7 @@ class CRHPXmlExport(APIBase):
                 context["data"].sos.sort(key=lambda x: 0 if x["significance_type"] == "Provincial" else 1)
                 context["data"].heritage_value = self.text_converter.handle(context["data"].sos[0]["heritage_value"]).strip()
                 context["data"].defining_elements = self.text_converter.handle(context["data"].sos[0]["defining_elements"]).strip()
-                context["data"].pysical_description = self.text_converter.handle(context["data"].sos[0]["physical_description"]).strip()
+                context["data"].physical_description = self.text_converter.handle(context["data"].sos[0]["physical_description"]).strip()
                 context["data"].document_location = self.text_converter.handle(context["data"].sos[0]["document_location"]).strip()
 
             print("Protection events %s" % str(context["data"].protection_events))

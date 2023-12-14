@@ -6,7 +6,7 @@
             <Name>BC</Name>
         </Jurisdiction>
         <CommonName Language="ENGLISH">{{ data.common_names.0.name|safe }}</CommonName>
-        <PlaceDescription Language="ENGLISH">{{ data.location_description|safe }}</PlaceDescription>
+        <PlaceDescription Language="ENGLISH">{{ data.physical_description|safe }}</PlaceDescription>
         <HeritageValue Language="ENGLISH">{{ data.heritage_value|safe }}</HeritageValue>
         <CharacterDefiningElements Language="ENGLISH">{{ data.defining_elements|safe }}</CharacterDefiningElements>
         {% if data.common_names|length > 1 or data.other_names|length > 0 %}
@@ -32,7 +32,7 @@
             <RecognitionBoundary Language="ENGLISH">Refer to BC Spatial Data</RecognitionBoundary>
         </Location>
         <Classification>
-            <Ownership>{{ heritage_categories.0.ownership }}</Ownership>
+            <Ownership>{{ data.heritage_categories.0.ownership }}</Ownership>
             <ContributingResources>
                 {% for heritage_category in data.heritage_categories %}
                 <ContributingResource Type="{{ heritage_category.category }}">
