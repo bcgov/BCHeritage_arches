@@ -105,7 +105,7 @@
                     "instructions": {
                         "en": ""
                     },
-                    "is_editable": false,
+                    "is_editable": true,
                     "name": {
                         "en": "Location"
                     },
@@ -134,7 +134,7 @@
                     "instructions": {
                         "en": "Define the spatial location."
                     },
-                    "is_editable": false,
+                    "is_editable": true,
                     "name": {
                         "en": "Spatial Location"
                     },
@@ -331,7 +331,7 @@
                     "instructions": {
                         "en": ""
                     },
-                    "is_editable": false,
+                    "is_editable": true,
                     "name": {
                         "en": "Site Name"
                     },
@@ -830,7 +830,7 @@
                                 "text": "Polygon"
                             }
                         ],
-                        "label": "Spatial Coordinates Geometry",
+                        "label": "Area Boundary",
                         "maxZoom": 20,
                         "minZoom": 0,
                         "overlayConfigs": [],
@@ -841,10 +841,10 @@
                     },
                     "id": "dd1a363e-0202-11ed-a511-0050568377a0",
                     "label": {
-                        "en": "Spatial Coordinates Geometry"
+                        "en": "Area Boundary"
                     },
                     "node_id": "dd19c7c6-0202-11ed-a511-0050568377a0",
-                    "sortorder": null,
+                    "sortorder": 0,
                     "visible": true,
                     "widget_id": "10000000-0000-0000-0000-000000000007"
                 },
@@ -866,7 +866,7 @@
                         "en": "Geometry Qualifier"
                     },
                     "node_id": "dd1a1b90-0202-11ed-a511-0050568377a0",
-                    "sortorder": null,
+                    "sortorder": 1,
                     "visible": true,
                     "widget_id": "10000000-0000-0000-0000-000000000002"
                 },
@@ -1483,12 +1483,12 @@
                     },
                     "function_id": "60000000-0000-0000-0000-000000000001",
                     "graph_id": "dd19a93a-0202-11ed-a511-0050568377a0",
-                    "id": "44d12f51-7c02-442e-863c-163e090e1994"
+                    "id": "3e0b50b6-7ef6-44a8-8698-3dc73988e945"
                 }
             ],
             "graphid": "dd19a93a-0202-11ed-a511-0050568377a0",
             "iconclass": "fa fa-crosshairs",
-            "is_editable": false,
+            "is_editable": true,
             "isresource": true,
             "jsonldcontext": null,
             "name": {
@@ -2117,7 +2117,7 @@
                     "sourcebranchpublication_id": null
                 },
                 {
-                    "alias": "spatial_coordinates_geometry",
+                    "alias": "area_boundary",
                     "config": {
                         "addToMap": true,
                         "advancedStyle": "[\n\t{\n\t\t\"id\": \"resources-fill-dd19c7c6-0202-11ed-a511-0050568377a0\",\n\t\t\"type\": \"fill\",\n\t\t\"source\": \"resources-dd19c7c6-0202-11ed-a511-0050568377a0\",\n\t\t\"source-layer\": \"dd19c7c6-0202-11ed-a511-0050568377a0\",\n\t\t\"layout\": {\n\t\t\t\"visibility\": \"visible\"\n\t\t},\n\t\t\"filter\": [\n\t\t\t\"all\",\n\t\t\t[\n\t\t\t\t\"==\",\n\t\t\t\t\"$type\",\n\t\t\t\t\"Polygon\"\n\t\t\t],\n\t\t\t[\n\t\t\t\t\"==\",\n\t\t\t\t\"total\",\n\t\t\t\t1\n\t\t\t]\n\t\t],\n\t\t\"paint\": {\n\t\t\t\"fill-color\": \"rgba(255,0,0,0.5)\"\n\t\t}\n\t},\n\t{\n\t\t\"id\": \"resources-fill-dd19c7c6-0202-11ed-a511-0050568377a0-click\",\n\t\t\"type\": \"fill\",\n\t\t\"source\": \"resources-dd19c7c6-0202-11ed-a511-0050568377a0\",\n\t\t\"source-layer\": \"dd19c7c6-0202-11ed-a511-0050568377a0\",\n\t\t\"layout\": {\n\t\t\t\"visibility\": \"visible\"\n\t\t},\n\t\t\"filter\": [\n\t\t\t\"all\",\n\t\t\t[\n\t\t\t\t\"==\",\n\t\t\t\t\"$type\",\n\t\t\t\t\"Polygon\"\n\t\t\t],\n\t\t\t[\n\t\t\t\t\"==\",\n\t\t\t\t\"total\",\n\t\t\t\t1\n\t\t\t],\n\t\t\t[\n\t\t\t\t\"==\",\n\t\t\t\t\"resourceinstanceid\",\n\t\t\t\t\"\"\n\t\t\t]\n\t\t],\n\t\t\"paint\": {\n\t\t\t\"fill-color\": \"rgba(130, 130, 130, 0.5)\"\n\t\t}\n\t},\n\t{\n\t\t\"id\": \"resources-fill-dd19c7c6-0202-11ed-a511-0050568377a0-hover\",\n\t\t\"type\": \"fill\",\n\t\t\"source\": \"resources-dd19c7c6-0202-11ed-a511-0050568377a0\",\n\t\t\"source-layer\": \"dd19c7c6-0202-11ed-a511-0050568377a0\",\n\t\t\"layout\": {\n\t\t\t\"visibility\": \"visible\"\n\t\t},\n\t\t\"filter\": [\n\t\t\t\"all\",\n\t\t\t[\n\t\t\t\t\"==\",\n\t\t\t\t\"$type\",\n\t\t\t\t\"Polygon\"\n\t\t\t],\n\t\t\t[\n\t\t\t\t\"==\",\n\t\t\t\t\"total\",\n\t\t\t\t1\n\t\t\t],\n\t\t\t[\n\t\t\t\t\"==\",\n\t\t\t\t\"resourceinstanceid\",\n\t\t\t\t\"\"\n\t\t\t]\n\t\t],\n\t\t\"paint\": {\n\t\t\t\"fill-color\": \"rgba(130, 130, 130, 0.5)\"\n\t\t}\n\t},\n\t{\n\t\t\"id\": \"resources-poly-outline-dd19c7c6-0202-11ed-a511-0050568377a0\",\n\t\t\"type\": \"line\",\n\t\t\"source\": \"resources-dd19c7c6-0202-11ed-a511-0050568377a0\",\n\t\t\"source-layer\": \"dd19c7c6-0202-11ed-a511-0050568377a0\",\n\t\t\"layout\": {\n\t\t\t\"visibility\": \"visible\"\n\t\t},\n\t\t\"filter\": [\n\t\t\t\"all\",\n\t\t\t[\n\t\t\t\t\"==\",\n\t\t\t\t\"$type\",\n\t\t\t\t\"Polygon\"\n\t\t\t],\n\t\t\t[\n\t\t\t\t\"==\",\n\t\t\t\t\"total\",\n\t\t\t\t1\n\t\t\t]\n\t\t],\n\t\t\"paint\": {\n\t\t\t\"line-width\": 2,\n\t\t\t\"line-color\": \"rgba(200,0,0,0.7)\"\n\t\t}\n\t},\n\t{\n\t\t\"id\": \"resources-poly-outline-dd19c7c6-0202-11ed-a511-0050568377a0-hover\",\n\t\t\"type\": \"line\",\n\t\t\"source\": \"resources-dd19c7c6-0202-11ed-a511-0050568377a0\",\n\t\t\"source-layer\": \"dd19c7c6-0202-11ed-a511-0050568377a0\",\n\t\t\"layout\": {\n\t\t\t\"visibility\": \"visible\"\n\t\t},\n\t\t\"filter\": [\n\t\t\t\"all\",\n\t\t\t[\n\t\t\t\t\"==\",\n\t\t\t\t\"$type\",\n\t\t\t\t\"Polygon\"\n\t\t\t],\n\t\t\t[\n\t\t\t\t\"==\",\n\t\t\t\t\"total\",\n\t\t\t\t1\n\t\t\t],\n\t\t\t[\n\t\t\t\t\"==\",\n\t\t\t\t\"resourceinstanceid\",\n\t\t\t\t\"\"\n\t\t\t]\n\t\t],\n\t\t\"paint\": {\n\t\t\t\"line-width\": 4,\n\t\t\t\"line-color\": \"rgba(200, 200, 200, 0.7)\"\n\t\t}\n\t},\n\t{\n\t\t\"id\": \"resources-poly-outline-dd19c7c6-0202-11ed-a511-0050568377a0-click\",\n\t\t\"type\": \"line\",\n\t\t\"source\": \"resources-dd19c7c6-0202-11ed-a511-0050568377a0\",\n\t\t\"source-layer\": \"dd19c7c6-0202-11ed-a511-0050568377a0\",\n\t\t\"layout\": {\n\t\t\t\"visibility\": \"visible\"\n\t\t},\n\t\t\"filter\": [\n\t\t\t\"all\",\n\t\t\t[\n\t\t\t\t\"==\",\n\t\t\t\t\"$type\",\n\t\t\t\t\"Polygon\"\n\t\t\t],\n\t\t\t[\n\t\t\t\t\"==\",\n\t\t\t\t\"total\",\n\t\t\t\t1\n\t\t\t],\n\t\t\t[\n\t\t\t\t\"==\",\n\t\t\t\t\"resourceinstanceid\",\n\t\t\t\t\"\"\n\t\t\t]\n\t\t],\n\t\t\"paint\": {\n\t\t\t\"line-width\": 4,\n\t\t\t\"line-color\": \"rgba(200, 200, 200, 0.7)\"\n\t\t}\n\t},\n\t{\n\t\t\"id\": \"resources-line-halo-dd19c7c6-0202-11ed-a511-0050568377a0\",\n\t\t\"type\": \"line\",\n\t\t\"source\": \"resources-dd19c7c6-0202-11ed-a511-0050568377a0\",\n\t\t\"source-layer\": \"dd19c7c6-0202-11ed-a511-0050568377a0\",\n\t\t\"layout\": {\n\t\t\t\"visibility\": \"visible\"\n\t\t},\n\t\t\"filter\": [\n\t\t\t\"all\",\n\t\t\t[\n\t\t\t\t\"==\",\n\t\t\t\t\"$type\",\n\t\t\t\t\"LineString\"\n\t\t\t],\n\t\t\t[\n\t\t\t\t\"==\",\n\t\t\t\t\"total\",\n\t\t\t\t1\n\t\t\t]\n\t\t],\n\t\t\"paint\": {\n\t\t\t\"line-width\": 4,\n\t\t\t\"line-color\": \"rgba(200, 200, 200, 0.5)\"\n\t\t}\n\t},\n\t{\n\t\t\"id\": \"resources-line-dd19c7c6-0202-11ed-a511-0050568377a0\",\n\t\t\"type\": \"line\",\n\t\t\"source\": \"resources-dd19c7c6-0202-11ed-a511-0050568377a0\",\n\t\t\"source-layer\": \"dd19c7c6-0202-11ed-a511-0050568377a0\",\n\t\t\"layout\": {\n\t\t\t\"visibility\": \"visible\"\n\t\t},\n\t\t\"filter\": [\n\t\t\t\"all\",\n\t\t\t[\n\t\t\t\t\"==\",\n\t\t\t\t\"$type\",\n\t\t\t\t\"LineString\"\n\t\t\t],\n\t\t\t[\n\t\t\t\t\"==\",\n\t\t\t\t\"total\",\n\t\t\t\t1\n\t\t\t]\n\t\t],\n\t\t\"paint\": {\n\t\t\t\"line-width\": 2,\n\t\t\t\"line-color\": \"rgba(255,0,0,0.7)\"\n\t\t}\n\t},\n\t{\n\t\t\"id\": \"resources-line-halo-dd19c7c6-0202-11ed-a511-0050568377a0-hover\",\n\t\t\"type\": \"line\",\n\t\t\"source\": \"resources-dd19c7c6-0202-11ed-a511-0050568377a0\",\n\t\t\"source-layer\": \"dd19c7c6-0202-11ed-a511-0050568377a0\",\n\t\t\"layout\": {\n\t\t\t\"visibility\": \"visible\"\n\t\t},\n\t\t\"filter\": [\n\t\t\t\"all\",\n\t\t\t[\n\t\t\t\t\"==\",\n\t\t\t\t\"$type\",\n\t\t\t\t\"LineString\"\n\t\t\t],\n\t\t\t[\n\t\t\t\t\"==\",\n\t\t\t\t\"total\",\n\t\t\t\t1\n\t\t\t],\n\t\t\t[\n\t\t\t\t\"==\",\n\t\t\t\t\"resourceinstanceid\",\n\t\t\t\t\"\"\n\t\t\t]\n\t\t],\n\t\t\"paint\": {\n\t\t\t\"line-width\": 8,\n\t\t\t\"line-color\": \"rgba(200, 200, 200, 0.5)\"\n\t\t}\n\t},\n\t{\n\t\t\"id\": \"resources-line-dd19c7c6-0202-11ed-a511-0050568377a0-hover\",\n\t\t\"type\": \"line\",\n\t\t\"source\": \"resources-dd19c7c6-0202-11ed-a511-0050568377a0\",\n\t\t\"source-layer\": \"dd19c7c6-0202-11ed-a511-0050568377a0\",\n\t\t\"layout\": {\n\t\t\t\"visibility\": \"visible\"\n\t\t},\n\t\t\"filter\": [\n\t\t\t\"all\",\n\t\t\t[\n\t\t\t\t\"==\",\n\t\t\t\t\"$type\",\n\t\t\t\t\"LineString\"\n\t\t\t],\n\t\t\t[\n\t\t\t\t\"==\",\n\t\t\t\t\"total\",\n\t\t\t\t1\n\t\t\t],\n\t\t\t[\n\t\t\t\t\"==\",\n\t\t\t\t\"resourceinstanceid\",\n\t\t\t\t\"\"\n\t\t\t]\n\t\t],\n\t\t\"paint\": {\n\t\t\t\"line-width\": 4,\n\t\t\t\"line-color\": \"rgba(130, 130, 130, 0.7)\"\n\t\t}\n\t},\n\t{\n\t\t\"id\": \"resources-line-halo-dd19c7c6-0202-11ed-a511-0050568377a0-click\",\n\t\t\"type\": \"line\",\n\t\t\"source\": \"resources-dd19c7c6-0202-11ed-a511-0050568377a0\",\n\t\t\"source-layer\": \"dd19c7c6-0202-11ed-a511-0050568377a0\",\n\t\t\"layout\": {\n\t\t\t\"visibility\": \"visible\"\n\t\t},\n\t\t\"filter\": [\n\t\t\t\"all\",\n\t\t\t[\n\t\t\t\t\"==\",\n\t\t\t\t\"$type\",\n\t\t\t\t\"LineString\"\n\t\t\t],\n\t\t\t[\n\t\t\t\t\"==\",\n\t\t\t\t\"total\",\n\t\t\t\t1\n\t\t\t],\n\t\t\t[\n\t\t\t\t\"==\",\n\t\t\t\t\"resourceinstanceid\",\n\t\t\t\t\"\"\n\t\t\t]\n\t\t],\n\t\t\"paint\": {\n\t\t\t\"line-width\": 8,\n\t\t\t\"line-color\": \"rgba(200, 200, 200, 0.5)\"\n\t\t}\n\t},\n\t{\n\t\t\"id\": \"resources-line-dd19c7c6-0202-11ed-a511-0050568377a0-click\",\n\t\t\"type\": \"line\",\n\t\t\"source\": \"resources-dd19c7c6-0202-11ed-a511-0050568377a0\",\n\t\t\"source-layer\": \"dd19c7c6-0202-11ed-a511-0050568377a0\",\n\t\t\"layout\": {\n\t\t\t\"visibility\": \"visible\"\n\t\t},\n\t\t\"filter\": [\n\t\t\t\"all\",\n\t\t\t[\n\t\t\t\t\"==\",\n\t\t\t\t\"$type\",\n\t\t\t\t\"LineString\"\n\t\t\t],\n\t\t\t[\n\t\t\t\t\"==\",\n\t\t\t\t\"total\",\n\t\t\t\t1\n\t\t\t],\n\t\t\t[\n\t\t\t\t\"==\",\n\t\t\t\t\"resourceinstanceid\",\n\t\t\t\t\"\"\n\t\t\t]\n\t\t],\n\t\t\"paint\": {\n\t\t\t\"line-width\": 4,\n\t\t\t\"line-color\": \"rgba(130, 130, 130, 0.7)\"\n\t\t}\n\t},\n\t{\n\t\t\"id\": \"resources-point-halo-dd19c7c6-0202-11ed-a511-0050568377a0-hover\",\n\t\t\"type\": \"circle\",\n\t\t\"source\": \"resources-dd19c7c6-0202-11ed-a511-0050568377a0\",\n\t\t\"source-layer\": \"dd19c7c6-0202-11ed-a511-0050568377a0\",\n\t\t\"layout\": {\n\t\t\t\"visibility\": \"visible\"\n\t\t},\n\t\t\"filter\": [\n\t\t\t\"all\",\n\t\t\t[\n\t\t\t\t\"==\",\n\t\t\t\t\"$type\",\n\t\t\t\t\"Point\"\n\t\t\t],\n\t\t\t[\n\t\t\t\t\"==\",\n\t\t\t\t\"total\",\n\t\t\t\t1\n\t\t\t],\n\t\t\t[\n\t\t\t\t\"==\",\n\t\t\t\t\"resourceinstanceid\",\n\t\t\t\t\"\"\n\t\t\t]\n\t\t],\n\t\t\"paint\": {\n\t\t\t\"circle-radius\": 8,\n\t\t\t\"circle-color\": \"rgba(200, 200, 200, 0.5)\"\n\t\t}\n\t},\n\t{\n\t\t\"id\": \"resources-point-dd19c7c6-0202-11ed-a511-0050568377a0-hover\",\n\t\t\"type\": \"circle\",\n\t\t\"source\": \"resources-dd19c7c6-0202-11ed-a511-0050568377a0\",\n\t\t\"source-layer\": \"dd19c7c6-0202-11ed-a511-0050568377a0\",\n\t\t\"layout\": {\n\t\t\t\"visibility\": \"visible\"\n\t\t},\n\t\t\"filter\": [\n\t\t\t\"all\",\n\t\t\t[\n\t\t\t\t\"==\",\n\t\t\t\t\"$type\",\n\t\t\t\t\"Point\"\n\t\t\t],\n\t\t\t[\n\t\t\t\t\"==\",\n\t\t\t\t\"total\",\n\t\t\t\t1\n\t\t\t],\n\t\t\t[\n\t\t\t\t\"==\",\n\t\t\t\t\"resourceinstanceid\",\n\t\t\t\t\"\"\n\t\t\t]\n\t\t],\n\t\t\"paint\": {\n\t\t\t\"circle-radius\": 4,\n\t\t\t\"circle-color\": \"rgba(130, 130, 130, 0.7)\"\n\t\t}\n\t},\n\t{\n\t\t\"id\": \"resources-point-halo-dd19c7c6-0202-11ed-a511-0050568377a0\",\n\t\t\"type\": \"circle\",\n\t\t\"source\": \"resources-dd19c7c6-0202-11ed-a511-0050568377a0\",\n\t\t\"source-layer\": \"dd19c7c6-0202-11ed-a511-0050568377a0\",\n\t\t\"layout\": {\n\t\t\t\"visibility\": \"visible\"\n\t\t},\n\t\t\"filter\": [\n\t\t\t\"all\",\n\t\t\t[\n\t\t\t\t\"==\",\n\t\t\t\t\"$type\",\n\t\t\t\t\"Point\"\n\t\t\t],\n\t\t\t[\n\t\t\t\t\"==\",\n\t\t\t\t\"total\",\n\t\t\t\t1\n\t\t\t]\n\t\t],\n\t\t\"paint\": {\n\t\t\t\"circle-radius\": 4,\n\t\t\t\"circle-color\": \"rgba(200, 200, 200, 0.5)\"\n\t\t}\n\t},\n\t{\n\t\t\"id\": \"resources-point-dd19c7c6-0202-11ed-a511-0050568377a0\",\n\t\t\"type\": \"circle\",\n\t\t\"source\": \"resources-dd19c7c6-0202-11ed-a511-0050568377a0\",\n\t\t\"source-layer\": \"dd19c7c6-0202-11ed-a511-0050568377a0\",\n\t\t\"layout\": {\n\t\t\t\"visibility\": \"visible\"\n\t\t},\n\t\t\"filter\": [\n\t\t\t\"all\",\n\t\t\t[\n\t\t\t\t\"==\",\n\t\t\t\t\"$type\",\n\t\t\t\t\"Point\"\n\t\t\t],\n\t\t\t[\n\t\t\t\t\"==\",\n\t\t\t\t\"total\",\n\t\t\t\t1\n\t\t\t]\n\t\t],\n\t\t\"paint\": {\n\t\t\t\"circle-radius\": 2,\n\t\t\t\"circle-color\": \"rgba(130, 130, 130, 0.7)\"\n\t\t}\n\t},\n\t{\n\t\t\"id\": \"resources-point-halo-dd19c7c6-0202-11ed-a511-0050568377a0-click\",\n\t\t\"type\": \"circle\",\n\t\t\"source\": \"resources-dd19c7c6-0202-11ed-a511-0050568377a0\",\n\t\t\"source-layer\": \"dd19c7c6-0202-11ed-a511-0050568377a0\",\n\t\t\"layout\": {\n\t\t\t\"visibility\": \"visible\"\n\t\t},\n\t\t\"filter\": [\n\t\t\t\"all\",\n\t\t\t[\n\t\t\t\t\"==\",\n\t\t\t\t\"$type\",\n\t\t\t\t\"Point\"\n\t\t\t],\n\t\t\t[\n\t\t\t\t\"==\",\n\t\t\t\t\"total\",\n\t\t\t\t1\n\t\t\t],\n\t\t\t[\n\t\t\t\t\"==\",\n\t\t\t\t\"resourceinstanceid\",\n\t\t\t\t\"\"\n\t\t\t]\n\t\t],\n\t\t\"paint\": {\n\t\t\t\"circle-radius\": 8,\n\t\t\t\"circle-color\": \"rgba(200, 200, 200, 0.5)\"\n\t\t}\n\t},\n\t{\n\t\t\"id\": \"resources-point-dd19c7c6-0202-11ed-a511-0050568377a0-click\",\n\t\t\"type\": \"circle\",\n\t\t\"source\": \"resources-dd19c7c6-0202-11ed-a511-0050568377a0\",\n\t\t\"source-layer\": \"dd19c7c6-0202-11ed-a511-0050568377a0\",\n\t\t\"layout\": {\n\t\t\t\"visibility\": \"visible\"\n\t\t},\n\t\t\"filter\": [\n\t\t\t\"all\",\n\t\t\t[\n\t\t\t\t\"==\",\n\t\t\t\t\"$type\",\n\t\t\t\t\"Point\"\n\t\t\t],\n\t\t\t[\n\t\t\t\t\"==\",\n\t\t\t\t\"total\",\n\t\t\t\t1\n\t\t\t],\n\t\t\t[\n\t\t\t\t\"==\",\n\t\t\t\t\"resourceinstanceid\",\n\t\t\t\t\"\"\n\t\t\t]\n\t\t],\n\t\t\"paint\": {\n\t\t\t\"circle-radius\": 4,\n\t\t\t\"circle-color\": \"rgba(130, 130, 130, 0.7)\"\n\t\t}\n\t},\n\t{\n\t\t\"id\": \"resources-cluster-point-halo-dd19c7c6-0202-11ed-a511-0050568377a0\",\n\t\t\"type\": \"circle\",\n\t\t\"source\": \"resources-dd19c7c6-0202-11ed-a511-0050568377a0\",\n\t\t\"source-layer\": \"dd19c7c6-0202-11ed-a511-0050568377a0\",\n\t\t\"layout\": {\n\t\t\t\"visibility\": \"visible\"\n\t\t},\n\t\t\"filter\": [\n\t\t\t\"all\",\n\t\t\t[\n\t\t\t\t\"==\",\n\t\t\t\t\"$type\",\n\t\t\t\t\"Point\"\n\t\t\t],\n\t\t\t[\n\t\t\t\t\">\",\n\t\t\t\t\"total\",\n\t\t\t\t1\n\t\t\t]\n\t\t],\n\t\t\"paint\": {\n\t\t\t\"circle-radius\": {\n\t\t\t\t\"property\": \"total\",\n\t\t\t\t\"stops\": [\n\t\t\t\t\t[\n\t\t\t\t\t\t0,\n\t\t\t\t\t\t22\n\t\t\t\t\t],\n\t\t\t\t\t[\n\t\t\t\t\t\t50,\n\t\t\t\t\t\t24\n\t\t\t\t\t],\n\t\t\t\t\t[\n\t\t\t\t\t\t100,\n\t\t\t\t\t\t26\n\t\t\t\t\t],\n\t\t\t\t\t[\n\t\t\t\t\t\t200,\n\t\t\t\t\t\t28\n\t\t\t\t\t],\n\t\t\t\t\t[\n\t\t\t\t\t\t400,\n\t\t\t\t\t\t30\n\t\t\t\t\t],\n\t\t\t\t\t[\n\t\t\t\t\t\t800,\n\t\t\t\t\t\t32\n\t\t\t\t\t],\n\t\t\t\t\t[\n\t\t\t\t\t\t1200,\n\t\t\t\t\t\t34\n\t\t\t\t\t],\n\t\t\t\t\t[\n\t\t\t\t\t\t1600,\n\t\t\t\t\t\t36\n\t\t\t\t\t],\n\t\t\t\t\t[\n\t\t\t\t\t\t2000,\n\t\t\t\t\t\t38\n\t\t\t\t\t],\n\t\t\t\t\t[\n\t\t\t\t\t\t2500,\n\t\t\t\t\t\t40\n\t\t\t\t\t],\n\t\t\t\t\t[\n\t\t\t\t\t\t3000,\n\t\t\t\t\t\t42\n\t\t\t\t\t],\n\t\t\t\t\t[\n\t\t\t\t\t\t4000,\n\t\t\t\t\t\t44\n\t\t\t\t\t],\n\t\t\t\t\t[\n\t\t\t\t\t\t5000,\n\t\t\t\t\t\t46\n\t\t\t\t\t]\n\t\t\t\t]\n\t\t\t},\n\t\t\t\"circle-color\": \"rgba(200, 200, 200, 0.5)\"\n\t\t}\n\t},\n\t{\n\t\t\"id\": \"resources-cluster-point-dd19c7c6-0202-11ed-a511-0050568377a0\",\n\t\t\"type\": \"circle\",\n\t\t\"source\": \"resources-dd19c7c6-0202-11ed-a511-0050568377a0\",\n\t\t\"source-layer\": \"dd19c7c6-0202-11ed-a511-0050568377a0\",\n\t\t\"layout\": {\n\t\t\t\"visibility\": \"visible\"\n\t\t},\n\t\t\"filter\": [\n\t\t\t\"all\",\n\t\t\t[\n\t\t\t\t\"==\",\n\t\t\t\t\"$type\",\n\t\t\t\t\"Point\"\n\t\t\t],\n\t\t\t[\n\t\t\t\t\">\",\n\t\t\t\t\"total\",\n\t\t\t\t1\n\t\t\t]\n\t\t],\n\t\t\"paint\": {\n\t\t\t\"circle-radius\": {\n\t\t\t\t\"property\": \"total\",\n\t\t\t\t\"type\": \"exponential\",\n\t\t\t\t\"stops\": [\n\t\t\t\t\t[\n\t\t\t\t\t\t0,\n\t\t\t\t\t\t12\n\t\t\t\t\t],\n\t\t\t\t\t[\n\t\t\t\t\t\t50,\n\t\t\t\t\t\t14\n\t\t\t\t\t],\n\t\t\t\t\t[\n\t\t\t\t\t\t100,\n\t\t\t\t\t\t16\n\t\t\t\t\t],\n\t\t\t\t\t[\n\t\t\t\t\t\t200,\n\t\t\t\t\t\t18\n\t\t\t\t\t],\n\t\t\t\t\t[\n\t\t\t\t\t\t400,\n\t\t\t\t\t\t20\n\t\t\t\t\t],\n\t\t\t\t\t[\n\t\t\t\t\t\t800,\n\t\t\t\t\t\t22\n\t\t\t\t\t],\n\t\t\t\t\t[\n\t\t\t\t\t\t1200,\n\t\t\t\t\t\t24\n\t\t\t\t\t],\n\t\t\t\t\t[\n\t\t\t\t\t\t1600,\n\t\t\t\t\t\t26\n\t\t\t\t\t],\n\t\t\t\t\t[\n\t\t\t\t\t\t2000,\n\t\t\t\t\t\t28\n\t\t\t\t\t],\n\t\t\t\t\t[\n\t\t\t\t\t\t2500,\n\t\t\t\t\t\t30\n\t\t\t\t\t],\n\t\t\t\t\t[\n\t\t\t\t\t\t3000,\n\t\t\t\t\t\t32\n\t\t\t\t\t],\n\t\t\t\t\t[\n\t\t\t\t\t\t4000,\n\t\t\t\t\t\t34\n\t\t\t\t\t],\n\t\t\t\t\t[\n\t\t\t\t\t\t5000,\n\t\t\t\t\t\t36\n\t\t\t\t\t]\n\t\t\t\t]\n\t\t\t},\n\t\t\t\"circle-color\": \"rgba(255,0,0,0.7)\"\n\t\t}\n\t},\n\t{\n\t\t\"id\": \"resources-cluster-count-dd19c7c6-0202-11ed-a511-0050568377a0\",\n\t\t\"type\": \"symbol\",\n\t\t\"source\": \"resources-dd19c7c6-0202-11ed-a511-0050568377a0\",\n\t\t\"source-layer\": \"dd19c7c6-0202-11ed-a511-0050568377a0\",\n\t\t\"layout\": {\n\t\t\t\"text-field\": \"{total}\",\n\t\t\t\"text-size\": 10\n\t\t},\n\t\t\"paint\": {\n\t\t\t\"text-color\": \"#fff\"\n\t\t},\n\t\t\"filter\": [\n\t\t\t\"all\",\n\t\t\t[\n\t\t\t\t\">\",\n\t\t\t\t\"total\",\n\t\t\t\t1\n\t\t\t]\n\t\t]\n\t},\n\t{\n\t\t\"id\": \"resources-name-dd19c7c6-0202-11ed-a511-0050568377a0\",\n\t\t\"type\": \"symbol\",\n\t\t\"source\": \"resources-dd19c7c6-0202-11ed-a511-0050568377a0\",\n\t\t\"source-layer\": \"dd19c7c6-0202-11ed-a511-0050568377a0\",\n\t\t\"layout\": {\n\t\t\t\"text-field\": \"{name}\",\n\t\t\t\"text-size\": 12\n\t\t},\n\t\t\"paint\": {\n\t\t\t\"text-color\": \"#000\"\n\t\t}\n\t}\n]",
@@ -2152,7 +2152,7 @@
                     "isrequired": false,
                     "issearchable": true,
                     "istopnode": false,
-                    "name": "Spatial Coordinates Geometry",
+                    "name": "Area Boundary",
                     "nodegroup_id": "dd19c7c6-0202-11ed-a511-0050568377a0",
                     "nodeid": "dd19c7c6-0202-11ed-a511-0050568377a0",
                     "ontologyclass": "http://www.cidoc-crm.org/cidoc-crm/E47_Spatial_Coordinates",
@@ -2609,8 +2609,8 @@
             "publication": {
                 "graph_id": "dd19a93a-0202-11ed-a511-0050568377a0",
                 "notes": null,
-                "publicationid": "de4eed46-93a7-11ee-96d0-005056a3bc47",
-                "published_time": "2023-12-05T13:52:49.360"
+                "publicationid": "35560fe4-9a19-11ee-8984-080027b7463b",
+                "published_time": "2023-12-13T18:39:15.475"
             },
             "relatable_resource_model_ids": [],
             "resource_2_resource_constraints": [],
@@ -2643,9 +2643,9 @@
         }
     ],
     "metadata": {
-        "db": "PostgreSQL 16.1 on x86_64-pc-linux-gnu, compiled by gcc (GCC) 11.4.1 20230605 (Red Hat 11.4.1-2), 64-bit",
-        "git hash": "fatal: not a git repository (or any parent up to mount point /fs)",
+        "db": "PostgreSQL 16.0 on x86_64-pc-linux-gnu, compiled by gcc (GCC) 11.3.1 20221121 (Red Hat 11.3.1-4), 64-bit",
+        "git hash": "e10813e38 2023-12-11 05:06:58 -0800",
         "os": "Linux",
-        "os version": "5.14.0-284.30.1.el9_2.x86_64"
+        "os version": "5.14.0-333.el9.x86_64"
     }
 }

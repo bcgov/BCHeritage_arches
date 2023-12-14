@@ -49,7 +49,7 @@
                     "instructions": {
                         "en": ""
                     },
-                    "is_editable": false,
+                    "is_editable": true,
                     "name": {
                         "en": "Samples Collected"
                     },
@@ -76,7 +76,7 @@
                     "instructions": {
                         "en": ""
                     },
-                    "is_editable": false,
+                    "is_editable": true,
                     "name": {
                         "en": "Collection Event Location"
                     },
@@ -103,7 +103,7 @@
                     "instructions": {
                         "en": "If needed, add additional information about the fossil collection event."
                     },
-                    "is_editable": false,
+                    "is_editable": true,
                     "name": {
                         "en": "Collection Notes"
                     },
@@ -130,7 +130,7 @@
                     "instructions": {
                         "en": ""
                     },
-                    "is_editable": false,
+                    "is_editable": true,
                     "name": {
                         "en": "Collectors"
                     },
@@ -159,7 +159,7 @@
                     "instructions": {
                         "en": ""
                     },
-                    "is_editable": false,
+                    "is_editable": true,
                     "name": {
                         "en": "Historical Data"
                     },
@@ -188,7 +188,7 @@
                     "instructions": {
                         "en": ""
                     },
-                    "is_editable": false,
+                    "is_editable": true,
                     "name": {
                         "en": "Collection Year"
                     },
@@ -1203,12 +1203,12 @@
                     },
                     "function_id": "60000000-0000-0000-0000-000000001001",
                     "graph_id": "df3ee1ae-9c1c-11ec-964d-5254008afee6",
-                    "id": "dcb5bae3-a62f-48c4-957e-abc82cd61cc0"
+                    "id": "9bd69461-483a-4d7a-a525-6e5dddee990e"
                 }
             ],
             "graphid": "df3ee1ae-9c1c-11ec-964d-5254008afee6",
             "iconclass": "fa fa-suitcase",
-            "is_editable": false,
+            "is_editable": true,
             "isresource": true,
             "jsonldcontext": null,
             "name": {
@@ -1493,7 +1493,7 @@
                     "sourcebranchpublication_id": null
                 },
                 {
-                    "alias": "spatial_coordinates_geometry",
+                    "alias": "collection_location",
                     "config": {
                         "addToMap": false,
                         "advancedStyle": "[\n  {\n    \"id\": \"resources-fill-692d8938-9c1d-11ec-a5e5-5254008afee6\",\n    \"type\": \"fill\",\n    \"source\": \"resources-692d8938-9c1d-11ec-a5e5-5254008afee6\",\n    \"source-layer\": \"692d8938-9c1d-11ec-a5e5-5254008afee6\",\n    \"layout\": {\n      \"visibility\": \"visible\"\n    },\n    \"filter\": [\n      \"all\",\n      [\n        \"==\",\n        \"$type\",\n        \"Polygon\"\n      ],\n      [\n        \"==\",\n        \"total\",\n        1\n      ]\n    ],\n    \"paint\": {\n      \"fill-color\": \"rgba(244,109,67, 0.5)\"\n    }\n  },\n  {\n    \"id\": \"resources-fill-692d8938-9c1d-11ec-a5e5-5254008afee6-click\",\n    \"type\": \"fill\",\n    \"source\": \"resources-692d8938-9c1d-11ec-a5e5-5254008afee6\",\n    \"source-layer\": \"692d8938-9c1d-11ec-a5e5-5254008afee6\",\n    \"layout\": {\n      \"visibility\": \"visible\"\n    },\n    \"filter\": [\n      \"all\",\n      [\n        \"==\",\n        \"$type\",\n        \"Polygon\"\n      ],\n      [\n        \"==\",\n        \"total\",\n        1\n      ],\n      [\n        \"==\",\n        \"resourceinstanceid\",\n        \"\"\n      ]\n    ],\n    \"paint\": {\n      \"fill-color\": \"rgba(244,109,67, 0.5)\"\n    }\n  },\n  {\n    \"id\": \"resources-fill-692d8938-9c1d-11ec-a5e5-5254008afee6-hover\",\n    \"type\": \"fill\",\n    \"source\": \"resources-692d8938-9c1d-11ec-a5e5-5254008afee6\",\n    \"source-layer\": \"692d8938-9c1d-11ec-a5e5-5254008afee6\",\n    \"layout\": {\n      \"visibility\": \"visible\"\n    },\n    \"filter\": [\n      \"all\",\n      [\n        \"==\",\n        \"$type\",\n        \"Polygon\"\n      ],\n      [\n        \"==\",\n        \"total\",\n        1\n      ],\n      [\n        \"==\",\n        \"resourceinstanceid\",\n        \"\"\n      ]\n    ],\n    \"paint\": {\n      \"fill-color\": \"rgba(244,109,67, 0.5)\"\n    }\n  },\n  {\n    \"id\": \"resources-poly-outline-692d8938-9c1d-11ec-a5e5-5254008afee6\",\n    \"type\": \"line\",\n    \"source\": \"resources-692d8938-9c1d-11ec-a5e5-5254008afee6\",\n    \"source-layer\": \"692d8938-9c1d-11ec-a5e5-5254008afee6\",\n    \"layout\": {\n      \"visibility\": \"visible\"\n    },\n    \"filter\": [\n      \"all\",\n      [\n        \"==\",\n        \"$type\",\n        \"Polygon\"\n      ],\n      [\n        \"==\",\n        \"total\",\n        1\n      ]\n    ],\n    \"paint\": {\n      \"line-width\": 2,\n      \"line-color\": \"rgba(244,109,67, 0.7)\"\n    }\n  },\n  {\n    \"id\": \"resources-poly-outline-692d8938-9c1d-11ec-a5e5-5254008afee6-hover\",\n    \"type\": \"line\",\n    \"source\": \"resources-692d8938-9c1d-11ec-a5e5-5254008afee6\",\n    \"source-layer\": \"692d8938-9c1d-11ec-a5e5-5254008afee6\",\n    \"layout\": {\n      \"visibility\": \"visible\"\n    },\n    \"filter\": [\n      \"all\",\n      [\n        \"==\",\n        \"$type\",\n        \"Polygon\"\n      ],\n      [\n        \"==\",\n        \"total\",\n        1\n      ],\n      [\n        \"==\",\n        \"resourceinstanceid\",\n        \"\"\n      ]\n    ],\n    \"paint\": {\n      \"line-width\": 4,\n      \"line-color\": \"rgba(244,109,67, 0.7)\"\n    }\n  },\n  {\n    \"id\": \"resources-poly-outline-692d8938-9c1d-11ec-a5e5-5254008afee6-click\",\n    \"type\": \"line\",\n    \"source\": \"resources-692d8938-9c1d-11ec-a5e5-5254008afee6\",\n    \"source-layer\": \"692d8938-9c1d-11ec-a5e5-5254008afee6\",\n    \"layout\": {\n      \"visibility\": \"visible\"\n    },\n    \"filter\": [\n      \"all\",\n      [\n        \"==\",\n        \"$type\",\n        \"Polygon\"\n      ],\n      [\n        \"==\",\n        \"total\",\n        1\n      ],\n      [\n        \"==\",\n        \"resourceinstanceid\",\n        \"\"\n      ]\n    ],\n    \"paint\": {\n      \"line-width\": 4,\n      \"line-color\": \"rgba(244,109,67, 0.7)\"\n    }\n  },\n  {\n    \"id\": \"resources-line-halo-692d8938-9c1d-11ec-a5e5-5254008afee6\",\n    \"type\": \"line\",\n    \"source\": \"resources-692d8938-9c1d-11ec-a5e5-5254008afee6\",\n    \"source-layer\": \"692d8938-9c1d-11ec-a5e5-5254008afee6\",\n    \"layout\": {\n      \"visibility\": \"visible\"\n    },\n    \"filter\": [\n      \"all\",\n      [\n        \"==\",\n        \"$type\",\n        \"LineString\"\n      ],\n      [\n        \"==\",\n        \"total\",\n        1\n      ]\n    ],\n    \"paint\": {\n      \"line-width\": 4,\n      \"line-color\": \"rgba(244,109,67, 0.5)\"\n    }\n  },\n  {\n    \"id\": \"resources-line-692d8938-9c1d-11ec-a5e5-5254008afee6\",\n    \"type\": \"line\",\n    \"source\": \"resources-692d8938-9c1d-11ec-a5e5-5254008afee6\",\n    \"source-layer\": \"692d8938-9c1d-11ec-a5e5-5254008afee6\",\n    \"layout\": {\n      \"visibility\": \"visible\"\n    },\n    \"filter\": [\n      \"all\",\n      [\n        \"==\",\n        \"$type\",\n        \"LineString\"\n      ],\n      [\n        \"==\",\n        \"total\",\n        1\n      ]\n    ],\n    \"paint\": {\n      \"line-width\": 2,\n      \"line-color\": \"rgba(244,109,67, 0.7)\"\n    }\n  },\n  {\n    \"id\": \"resources-line-halo-692d8938-9c1d-11ec-a5e5-5254008afee6-hover\",\n    \"type\": \"line\",\n    \"source\": \"resources-692d8938-9c1d-11ec-a5e5-5254008afee6\",\n    \"source-layer\": \"692d8938-9c1d-11ec-a5e5-5254008afee6\",\n    \"layout\": {\n      \"visibility\": \"visible\"\n    },\n    \"filter\": [\n      \"all\",\n      [\n        \"==\",\n        \"$type\",\n        \"LineString\"\n      ],\n      [\n        \"==\",\n        \"total\",\n        1\n      ],\n      [\n        \"==\",\n        \"resourceinstanceid\",\n        \"\"\n      ]\n    ],\n    \"paint\": {\n      \"line-width\": 8,\n      \"line-color\": \"rgba(244,109,67, 0.5)\"\n    }\n  },\n  {\n    \"id\": \"resources-line-692d8938-9c1d-11ec-a5e5-5254008afee6-hover\",\n    \"type\": \"line\",\n    \"source\": \"resources-692d8938-9c1d-11ec-a5e5-5254008afee6\",\n    \"source-layer\": \"692d8938-9c1d-11ec-a5e5-5254008afee6\",\n    \"layout\": {\n      \"visibility\": \"visible\"\n    },\n    \"filter\": [\n      \"all\",\n      [\n        \"==\",\n        \"$type\",\n        \"LineString\"\n      ],\n      [\n        \"==\",\n        \"total\",\n        1\n      ],\n      [\n        \"==\",\n        \"resourceinstanceid\",\n        \"\"\n      ]\n    ],\n    \"paint\": {\n      \"line-width\": 4,\n      \"line-color\": \"rgba(244,109,67, 0.7)\"\n    }\n  },\n  {\n    \"id\": \"resources-line-halo-692d8938-9c1d-11ec-a5e5-5254008afee6-click\",\n    \"type\": \"line\",\n    \"source\": \"resources-692d8938-9c1d-11ec-a5e5-5254008afee6\",\n    \"source-layer\": \"692d8938-9c1d-11ec-a5e5-5254008afee6\",\n    \"layout\": {\n      \"visibility\": \"visible\"\n    },\n    \"filter\": [\n      \"all\",\n      [\n        \"==\",\n        \"$type\",\n        \"LineString\"\n      ],\n      [\n        \"==\",\n        \"total\",\n        1\n      ],\n      [\n        \"==\",\n        \"resourceinstanceid\",\n        \"\"\n      ]\n    ],\n    \"paint\": {\n      \"line-width\": 8,\n      \"line-color\": \"rgba(244,109,67, 0.5)\"\n    }\n  },\n  {\n    \"id\": \"resources-line-692d8938-9c1d-11ec-a5e5-5254008afee6-click\",\n    \"type\": \"line\",\n    \"source\": \"resources-692d8938-9c1d-11ec-a5e5-5254008afee6\",\n    \"source-layer\": \"692d8938-9c1d-11ec-a5e5-5254008afee6\",\n    \"layout\": {\n      \"visibility\": \"visible\"\n    },\n    \"filter\": [\n      \"all\",\n      [\n        \"==\",\n        \"$type\",\n        \"LineString\"\n      ],\n      [\n        \"==\",\n        \"total\",\n        1\n      ],\n      [\n        \"==\",\n        \"resourceinstanceid\",\n        \"\"\n      ]\n    ],\n    \"paint\": {\n      \"line-width\": 4,\n      \"line-color\": \"rgba(244,109,67, 0.7)\"\n    }\n  },\n  {\n    \"id\": \"resources-point-692d8938-9c1d-11ec-a5e5-5254008afee6\",\n    \"type\": \"symbol\",\n    \"source\": \"resources-692d8938-9c1d-11ec-a5e5-5254008afee6\",\n    \"source-layer\": \"692d8938-9c1d-11ec-a5e5-5254008afee6\",\n    \"layout\": {\n      \"visibility\": \"visible\",\n      \"icon-image\": [\"case\",\n                      [\"all\", [\"in\", \"Macrofossil\", [\"get\",\"size_categories\"]],\n                              [\"in\", \"Microfossil\", [\"get\",\"size_categories\"]]\n                      ], \"macromicro-marker\",\n                      [\"in\", \"Macrofossil\", [\"get\",\"size_categories\"]], \"macro-marker\",\n                      [\"in\", \"Microfossil\", [\"get\",\"size_categories\"]], \"micro-marker\",\n                       \"nosize-marker\" ],\n      \"icon-ignore-placement\": true,\n      \"icon-allow-overlap\": true,\n      \"symbol-sort-key\": [\"case\",\n        [\"all\", [\"in\", \"Macrofossil\", [\"get\",\"size_categories\"]],\n          [\"in\", \"Microfossil\", [\"get\",\"size_categories\"]]\n        ], 10,\n        [\"in\", \"Macrofossil\", [\"get\",\"size_categories\"]], 5,\n        [\"in\", \"Microfossil\", [\"get\",\"size_categories\"]], 5,\n        0 ]\n    },\n    \"filter\": [\n      \"all\",\n      [\n        \"==\",\n        \"$type\",\n        \"Point\"\n      ],\n      [\n        \"==\",\n        \"total\",\n        1\n      ]\n    ],\n    \"paint\": {\n    }\n  },\n  {\n    \"id\": \"resources-point-halo-692d8938-9c1d-11ec-a5e5-5254008afee6-click\",\n    \"type\": \"circle\",\n    \"source\": \"resources-692d8938-9c1d-11ec-a5e5-5254008afee6\",\n    \"source-layer\": \"692d8938-9c1d-11ec-a5e5-5254008afee6\",\n    \"layout\": {\n      \"visibility\": \"visible\"\n    },\n    \"filter\": [\n      \"all\",\n      [\n        \"==\",\n        \"$type\",\n        \"Point\"\n      ],\n      [\n        \"==\",\n        \"total\",\n        1\n      ],\n      [\n        \"==\",\n        \"resourceinstanceid\",\n        \"\"\n      ]\n    ],\n    \"paint\": {\n      \"circle-radius\": 12,\n      \"circle-color\": \"rgba(244,109,67,0.4)\"\n    }\n  },\n  {\n    \"id\": \"resources-point-692d8938-9c1d-11ec-a5e5-5254008afee6-click\",\n    \"type\": \"circle\",\n    \"source\": \"resources-692d8938-9c1d-11ec-a5e5-5254008afee6\",\n    \"source-layer\": \"692d8938-9c1d-11ec-a5e5-5254008afee6\",\n    \"layout\": {\n      \"visibility\": \"visible\"\n    },\n    \"filter\": [\n      \"all\",\n      [\n        \"==\",\n        \"$type\",\n        \"Point\"\n      ],\n      [\n        \"==\",\n        \"total\",\n        1\n      ],\n      [\n        \"==\",\n        \"resourceinstanceid\",\n        \"\"\n      ]\n    ],\n    \"paint\": {\n      \"circle-radius\": 6,\n      \"circle-color\": \"rgba(244,109,67,0.7)\"\n    }\n  },\n  {\n    \"id\": \"resources-cluster-point-halo-692d8938-9c1d-11ec-a5e5-5254008afee6\",\n    \"type\": \"circle\",\n    \"source\": \"resources-692d8938-9c1d-11ec-a5e5-5254008afee6\",\n    \"source-layer\": \"692d8938-9c1d-11ec-a5e5-5254008afee6\",\n    \"layout\": {\n      \"visibility\": \"visible\"\n    },\n    \"filter\": [\n      \"all\",\n      [\n        \"==\",\n        \"$type\",\n        \"Point\"\n      ],\n      [\n        \">\",\n        \"total\",\n        1\n      ]\n    ],\n    \"paint\": {\n      \"circle-radius\": {\n        \"property\": \"total\",\n        \"stops\": [\n          [\n            0,\n            22\n          ],\n          [\n            50,\n            24\n          ],\n          [\n            100,\n            26\n          ],\n          [\n            200,\n            28\n          ],\n          [\n            400,\n            30\n          ],\n          [\n            800,\n            32\n          ],\n          [\n            1200,\n            34\n          ],\n          [\n            1600,\n            36\n          ],\n          [\n            2000,\n            38\n          ],\n          [\n            2500,\n            40\n          ],\n          [\n            3000,\n            42\n          ],\n          [\n            4000,\n            44\n          ],\n          [\n            5000,\n            46\n          ]\n        ]\n      },\n      \"circle-color\": \"rgba(244,109,67,0.4)\"\n    }\n  },\n  {\n    \"id\": \"resources-cluster-point-692d8938-9c1d-11ec-a5e5-5254008afee6\",\n    \"type\": \"circle\",\n    \"source\": \"resources-692d8938-9c1d-11ec-a5e5-5254008afee6\",\n    \"source-layer\": \"692d8938-9c1d-11ec-a5e5-5254008afee6\",\n    \"layout\": {\n      \"visibility\": \"visible\"\n    },\n    \"filter\": [\n      \"all\",\n      [\n        \"==\",\n        \"$type\",\n        \"Point\"\n      ],\n      [\n        \">\",\n        \"total\",\n        1\n      ]\n    ],\n    \"paint\": {\n      \"circle-radius\": {\n        \"property\": \"total\",\n        \"type\": \"exponential\",\n        \"stops\": [\n          [\n            0,\n            12\n          ],\n          [\n            50,\n            14\n          ],\n          [\n            100,\n            16\n          ],\n          [\n            200,\n            18\n          ],\n          [\n            400,\n            20\n          ],\n          [\n            800,\n            22\n          ],\n          [\n            1200,\n            24\n          ],\n          [\n            1600,\n            26\n          ],\n          [\n            2000,\n            28\n          ],\n          [\n            2500,\n            30\n          ],\n          [\n            3000,\n            32\n          ],\n          [\n            4000,\n            34\n          ],\n          [\n            5000,\n            36\n          ]\n        ]\n      },\n      \"circle-color\": \"rgba(244,109,67,0.7)\"\n    }\n  },\n  {\n    \"id\": \"resources-cluster-count-692d8938-9c1d-11ec-a5e5-5254008afee6\",\n    \"type\": \"symbol\",\n    \"source\": \"resources-692d8938-9c1d-11ec-a5e5-5254008afee6\",\n    \"source-layer\": \"692d8938-9c1d-11ec-a5e5-5254008afee6\",\n    \"layout\": {\n      \"text-field\": \"{total}\",\n      \"text-size\": 10\n    },\n    \"paint\": {\n      \"text-color\": \"#fff\"\n    },\n    \"filter\": [\n      \"all\",\n      [\n        \">\",\n        \"total\",\n        1\n      ]\n    ]\n  }\n]",
@@ -1528,7 +1528,7 @@
                     "isrequired": true,
                     "issearchable": true,
                     "istopnode": false,
-                    "name": "Spatial Coordinates Geometry",
+                    "name": "Collection Location",
                     "nodegroup_id": "692d9c2a-9c1d-11ec-a5e5-5254008afee6",
                     "nodeid": "692d8938-9c1d-11ec-a5e5-5254008afee6",
                     "ontologyclass": "http://www.cidoc-crm.org/cidoc-crm/E47_Spatial_Coordinates",
@@ -2030,8 +2030,8 @@
             "publication": {
                 "graph_id": "df3ee1ae-9c1c-11ec-964d-5254008afee6",
                 "notes": null,
-                "publicationid": "7456d688-938e-11ee-b288-005056a3bc47",
-                "published_time": "2023-12-05T10:50:54.155"
+                "publicationid": "62d0151a-9a18-11ee-83da-080027b7463b",
+                "published_time": "2023-12-13T18:33:22.276"
             },
             "relatable_resource_model_ids": [],
             "resource_2_resource_constraints": [],
@@ -2064,9 +2064,9 @@
         }
     ],
     "metadata": {
-        "db": "PostgreSQL 16.1 on x86_64-pc-linux-gnu, compiled by gcc (GCC) 11.4.1 20230605 (Red Hat 11.4.1-2), 64-bit",
-        "git hash": "fatal: not a git repository (or any parent up to mount point /fs)",
+        "db": "PostgreSQL 16.0 on x86_64-pc-linux-gnu, compiled by gcc (GCC) 11.3.1 20221121 (Red Hat 11.3.1-4), 64-bit",
+        "git hash": "e10813e38 2023-12-11 05:06:58 -0800",
         "os": "Linux",
-        "os version": "5.14.0-284.30.1.el9_2.x86_64"
+        "os version": "5.14.0-333.el9.x86_64"
     }
 }

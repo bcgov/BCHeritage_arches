@@ -4832,7 +4832,7 @@
                     "sourcebranchpublication_id": null
                 },
                 {
-                    "alias": "spatial_location",
+                    "alias": "project_location",
                     "config": {
                         "addToMap": false,
                         "advancedStyle": "",
@@ -4867,7 +4867,7 @@
                     "isrequired": true,
                     "issearchable": true,
                     "istopnode": false,
-                    "name": "Spatial Location",
+                    "name": "Project Location",
                     "nodegroup_id": "d4d462c2-9e58-11ed-b6d5-5254004d77d3",
                     "nodeid": "2bb08950-a880-11ed-95a4-5254004d77d3",
                     "ontologyclass": "http://www.cidoc-crm.org/cidoc-crm/E47_Spatial_Coordinates",
@@ -8481,8 +8481,8 @@
             "publication": {
                 "graph_id": "2aa724d1-ffd3-4823-8ff1-15a385b9a407",
                 "notes": null,
-                "publicationid": "8c9924fe-93ab-11ee-be82-005056a3bc47",
-                "published_time": "2023-12-05T14:19:10.260"
+                "publicationid": "602486ce-9a19-11ee-9342-080027b7463b",
+                "published_time": "2023-12-13T18:40:27.293"
             },
             "relatable_resource_model_ids": [],
             "resource_2_resource_constraints": [],
@@ -8517,9 +8517,9 @@
         }
     ],
     "metadata": {
-        "db": "PostgreSQL 16.1 on x86_64-pc-linux-gnu, compiled by gcc (GCC) 11.4.1 20230605 (Red Hat 11.4.1-2), 64-bit",
-        "git hash": "fatal: not a git repository (or any parent up to mount point /fs)",
+        "db": "PostgreSQL 16.0 on x86_64-pc-linux-gnu, compiled by gcc (GCC) 11.3.1 20221121 (Red Hat 11.3.1-4), 64-bit",
+        "git hash": "e10813e38 2023-12-11 05:06:58 -0800",
         "os": "Linux",
-        "os version": "5.14.0-284.30.1.el9_2.x86_64"
+        "os version": "5.14.0-333.el9.x86_64"
     }
 }

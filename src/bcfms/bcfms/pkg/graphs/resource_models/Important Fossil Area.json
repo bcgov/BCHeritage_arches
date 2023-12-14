@@ -24,7 +24,7 @@
                     "instructions": {
                         "en": "Enter the resource name and its respective type."
                     },
-                    "is_editable": false,
+                    "is_editable": true,
                     "name": {
                         "en": "Name"
                     },
@@ -51,7 +51,7 @@
                     "instructions": {
                         "en": ""
                     },
-                    "is_editable": false,
+                    "is_editable": true,
                     "name": {
                         "en": "Potential Ranking"
                     },
@@ -80,7 +80,7 @@
                     "instructions": {
                         "en": "Enter a description and description type for the resource."
                     },
-                    "is_editable": false,
+                    "is_editable": true,
                     "name": {
                         "en": "Description"
                     },
@@ -109,45 +109,63 @@
                     "instructions": {
                         "en": ""
                     },
-                    "is_editable": false,
+                    "is_editable": true,
                     "name": {
                         "en": "Area Boundary"
                     },
                     "nodegroup_id": "c6651266-10c6-11ec-adef-5254008afee6",
                     "sortorder": 2,
                     "visible": true
-                },
-                {
-                    "active": true,
-                    "cardid": "c6651bf8-10c6-11ec-adef-5254008afee6",
-                    "component_id": "f05e4d3a-53c1-11e8-b0ea-784f435179ea",
-                    "config": null,
-                    "constraints": [],
-                    "cssclass": "",
-                    "description": {
-                        "en": "Represents a single node in a graph"
-                    },
-                    "graph_id": "4d6c9226-10c6-11ec-9a94-5254008afee6",
-                    "helpenabled": false,
-                    "helptext": {
-                        "en": ""
-                    },
-                    "helptitle": {
-                        "en": ""
-                    },
-                    "instructions": {
-                        "en": "Define the spatial location."
-                    },
-                    "is_editable": false,
-                    "name": {
-                        "en": "Spatial Location"
-                    },
-                    "nodegroup_id": "c66518e2-10c6-11ec-adef-5254008afee6",
-                    "sortorder": 0,
-                    "visible": true
                 }
             ],
             "cards_x_nodes_x_widgets": [
+                {
+                    "card_id": "c6651676-10c6-11ec-adef-5254008afee6",
+                    "config": {
+                        "basemap": "streets",
+                        "bearing": 0,
+                        "centerX": -125.2111215300115,
+                        "centerY": 54.5952920093056,
+                        "defaultValue": "",
+                        "defaultValueType": "",
+                        "featureColor": "#FF0000",
+                        "featureLineWidth": 1,
+                        "featurePointSize": 3,
+                        "geocodePlaceholder": "Search",
+                        "geocodeProvider": "10000000-0000-0000-0000-010000000000",
+                        "geocoderVisible": true,
+                        "geometryTypes": [
+                            {
+                                "id": "Point",
+                                "text": "Point"
+                            },
+                            {
+                                "id": "Line",
+                                "text": "Line"
+                            },
+                            {
+                                "id": "Polygon",
+                                "text": "Polygon"
+                            }
+                        ],
+                        "label": "Area Boundary",
+                        "maxZoom": 20,
+                        "minZoom": 0,
+                        "overlayConfigs": [],
+                        "overlayOpacity": 0,
+                        "pitch": 0,
+                        "rerender": true,
+                        "zoom": 0
+                    },
+                    "id": "0131b96e-aba0-4199-bce8-f6d1c4c4a4c9",
+                    "label": {
+                        "en": "Area Boundary"
+                    },
+                    "node_id": "c6651266-10c6-11ec-adef-5254008afee6",
+                    "sortorder": null,
+                    "visible": true,
+                    "widget_id": "10000000-0000-0000-0000-000000000007"
+                },
                 {
                     "card_id": "49b83ea4-10c7-11ec-81af-5254008afee6",
                     "config": {
@@ -264,24 +282,6 @@
                 },
                 {
                     "description": null,
-                    "domainnode_id": "c66518e2-10c6-11ec-adef-5254008afee6",
-                    "edgeid": "c66565cc-10c6-11ec-adef-5254008afee6",
-                    "graph_id": "4d6c9226-10c6-11ec-9a94-5254008afee6",
-                    "name": null,
-                    "ontologyproperty": "http://www.cidoc-crm.org/cidoc-crm/P2_has_type",
-                    "rangenode_id": "c6654042-10c6-11ec-adef-5254008afee6"
-                },
-                {
-                    "description": null,
-                    "domainnode_id": "c6651266-10c6-11ec-adef-5254008afee6",
-                    "edgeid": "c6656bb2-10c6-11ec-adef-5254008afee6",
-                    "graph_id": "4d6c9226-10c6-11ec-9a94-5254008afee6",
-                    "name": null,
-                    "ontologyproperty": "http://www.cidoc-crm.org/cidoc-crm/P87_is_identified_by",
-                    "rangenode_id": "c66518e2-10c6-11ec-adef-5254008afee6"
-                },
-                {
-                    "description": null,
                     "domainnode_id": "4d6c8e98-10c6-11ec-9a94-5254008afee6",
                     "edgeid": "c6656d60-10c6-11ec-adef-5254008afee6",
                     "graph_id": "4d6c9226-10c6-11ec-9a94-5254008afee6",
@@ -328,12 +328,12 @@
                     },
                     "function_id": "60000000-0000-0000-0000-000000001001",
                     "graph_id": "4d6c9226-10c6-11ec-9a94-5254008afee6",
-                    "id": "5efcb0c0-9a50-472d-9137-1936cfcfbd33"
+                    "id": "ce621ce2-68fb-4f49-aecb-8766102e752f"
                 }
             ],
             "graphid": "4d6c9226-10c6-11ec-9a94-5254008afee6",
             "iconclass": "fa fa-sitemap",
-            "is_editable": false,
+            "is_editable": true,
             "isresource": true,
             "jsonldcontext": null,
             "name": {
@@ -363,12 +363,6 @@
                     "legacygroupid": null,
                     "nodegroupid": "c6651266-10c6-11ec-adef-5254008afee6",
                     "parentnodegroup_id": null
-                },
-                {
-                    "cardinality": "1",
-                    "legacygroupid": null,
-                    "nodegroupid": "c66518e2-10c6-11ec-adef-5254008afee6",
-                    "parentnodegroup_id": "c6651266-10c6-11ec-adef-5254008afee6"
                 }
             ],
             "nodes": [
@@ -527,8 +521,31 @@
                 },
                 {
                     "alias": "area_boundary",
-                    "config": {},
-                    "datatype": "semantic",
+                    "config": {
+                        "addToMap": false,
+                        "advancedStyle": "",
+                        "advancedStyling": false,
+                        "clusterDistance": 20,
+                        "clusterMaxZoom": 5,
+                        "clusterMinPoints": 3,
+                        "fillColor": "rgba(130, 130, 130, 0.5)",
+                        "haloRadius": 4,
+                        "haloWeight": 4,
+                        "layerActivated": true,
+                        "layerIcon": "",
+                        "layerLegend": "",
+                        "layerName": "",
+                        "lineColor": "rgba(130, 130, 130, 0.7)",
+                        "lineHaloColor": "rgba(200, 200, 200, 0.5)",
+                        "outlineColor": "rgba(200, 200, 200, 0.7)",
+                        "outlineWeight": 2,
+                        "pointColor": "rgba(130, 130, 130, 0.7)",
+                        "pointHaloColor": "rgba(200, 200, 200, 0.5)",
+                        "radius": 2,
+                        "simplification": 0.3,
+                        "weight": 2
+                    },
+                    "datatype": "geojson-feature-collection",
                     "description": "Describes the physical location of a heritage resource or heritage resource group.  Includes extra nodes for cadastral information.\n\nRelates to Heritage Resource E18 with P53\nRelates to Heritage Resource Group E27 with P89\n",
                     "exportable": false,
                     "fieldname": "",
@@ -545,81 +562,14 @@
                     "parentproperty": "http://www.cidoc-crm.org/cidoc-crm/P156_occupies",
                     "sortorder": 0,
                     "sourcebranchpublication_id": null
-                },
-                {
-                    "alias": "spatial_coordinates_geometry",
-                    "config": {
-                        "addToMap": true,
-                        "advancedStyle": "[\n  {\n    \"id\": \"resources-fill-c66518e2-10c6-11ec-adef-5254008afee6\",\n    \"type\": \"fill\",\n    \"source\": \"resources-c66518e2-10c6-11ec-adef-5254008afee6\",\n    \"source-layer\": \"c66518e2-10c6-11ec-adef-5254008afee6\",\n    \"layout\": {\n      \"visibility\": \"visible\"\n    },\n    \"filter\": [\n      \"all\",\n      [\n        \"==\",\n        \"$type\",\n        \"Polygon\"\n      ],\n      [\n        \"==\",\n        \"total\",\n        1\n      ]\n    ],\n    \"paint\": {\n      \"fill-color\": \"rgba(215,48,39,0.1)\"\n    }\n  },\n  {\n    \"id\": \"resources-fill-c66518e2-10c6-11ec-adef-5254008afee6-click\",\n    \"type\": \"fill\",\n    \"source\": \"resources-c66518e2-10c6-11ec-adef-5254008afee6\",\n    \"source-layer\": \"c66518e2-10c6-11ec-adef-5254008afee6\",\n    \"layout\": {\n      \"visibility\": \"visible\"\n    },\n    \"filter\": [\n      \"all\",\n      [\n        \"==\",\n        \"$type\",\n        \"Polygon\"\n      ],\n      [\n        \"==\",\n        \"total\",\n        1\n      ],\n      [\n        \"==\",\n        \"resourceinstanceid\",\n        \"\"\n      ]\n    ],\n    \"paint\": {\n      \"fill-color\": \"rgba(215,48,39, 0.5)\"\n    }\n  },\n  {\n    \"id\": \"resources-fill-c66518e2-10c6-11ec-adef-5254008afee6-hover\",\n    \"type\": \"fill\",\n    \"source\": \"resources-c66518e2-10c6-11ec-adef-5254008afee6\",\n    \"source-layer\": \"c66518e2-10c6-11ec-adef-5254008afee6\",\n    \"layout\": {\n      \"visibility\": \"visible\"\n    },\n    \"filter\": [\n      \"all\",\n      [\n        \"==\",\n        \"$type\",\n        \"Polygon\"\n      ],\n      [\n        \"==\",\n        \"total\",\n        1\n      ],\n      [\n        \"==\",\n        \"resourceinstanceid\",\n        \"\"\n      ]\n    ],\n    \"paint\": {\n      \"fill-color\": \"rgba(215,48,39, 0.5)\"\n    }\n  },\n  {\n    \"id\": \"resources-poly-outline-c66518e2-10c6-11ec-adef-5254008afee6\",\n    \"type\": \"line\",\n    \"source\": \"resources-c66518e2-10c6-11ec-adef-5254008afee6\",\n    \"source-layer\": \"c66518e2-10c6-11ec-adef-5254008afee6\",\n    \"layout\": {\n      \"visibility\": \"visible\"\n    },\n    \"filter\": [\n      \"all\",\n      [\n        \"==\",\n        \"$type\",\n        \"Polygon\"\n      ],\n      [\n        \"==\",\n        \"total\",\n        1\n      ]\n    ],\n    \"paint\": {\n      \"line-width\": 0.55,\n      \"line-color\": \"rgb(215,48,39)\"\n    }\n  },\n  {\n    \"id\": \"resources-poly-outline-c66518e2-10c6-11ec-adef-5254008afee6-hover\",\n    \"type\": \"line\",\n    \"source\": \"resources-c66518e2-10c6-11ec-adef-5254008afee6\",\n    \"source-layer\": \"c66518e2-10c6-11ec-adef-5254008afee6\",\n    \"layout\": {\n      \"visibility\": \"visible\"\n    },\n    \"filter\": [\n      \"all\",\n      [\n        \"==\",\n        \"$type\",\n        \"Polygon\"\n      ],\n      [\n        \"==\",\n        \"total\",\n        1\n      ],\n      [\n        \"==\",\n        \"resourceinstanceid\",\n        \"\"\n      ]\n    ],\n    \"paint\": {\n      \"line-width\": 4,\n      \"line-color\": \"rgba(215,48,39, 0.7)\"\n    }\n  },\n  {\n    \"id\": \"resources-poly-outline-c66518e2-10c6-11ec-adef-5254008afee6-click\",\n    \"type\": \"line\",\n    \"source\": \"resources-c66518e2-10c6-11ec-adef-5254008afee6\",\n    \"source-layer\": \"c66518e2-10c6-11ec-adef-5254008afee6\",\n    \"layout\": {\n      \"visibility\": \"visible\"\n    },\n    \"filter\": [\n      \"all\",\n      [\n        \"==\",\n        \"$type\",\n        \"Polygon\"\n      ],\n      [\n        \"==\",\n        \"total\",\n        1\n      ],\n      [\n        \"==\",\n        \"resourceinstanceid\",\n        \"\"\n      ]\n    ],\n    \"paint\": {\n      \"line-width\": 4,\n      \"line-color\": \"rgba(215,48,39, 0.7)\"\n    }\n  },\n  {\n    \"id\": \"resources-line-halo-c66518e2-10c6-11ec-adef-5254008afee6\",\n    \"type\": \"line\",\n    \"source\": \"resources-c66518e2-10c6-11ec-adef-5254008afee6\",\n    \"source-layer\": \"c66518e2-10c6-11ec-adef-5254008afee6\",\n    \"layout\": {\n      \"visibility\": \"visible\"\n    },\n    \"filter\": [\n      \"all\",\n      [\n        \"==\",\n        \"$type\",\n        \"LineString\"\n      ],\n      [\n        \"==\",\n        \"total\",\n        1\n      ]\n    ],\n    \"paint\": {\n      \"line-width\": 4,\n      \"line-color\": \"rgba(215,48,39, 0.5)\"\n    }\n  },\n  {\n    \"id\": \"resources-line-c66518e2-10c6-11ec-adef-5254008afee6\",\n    \"type\": \"line\",\n    \"source\": \"resources-c66518e2-10c6-11ec-adef-5254008afee6\",\n    \"source-layer\": \"c66518e2-10c6-11ec-adef-5254008afee6\",\n    \"layout\": {\n      \"visibility\": \"visible\"\n    },\n    \"filter\": [\n      \"all\",\n      [\n        \"==\",\n        \"$type\",\n        \"LineString\"\n      ],\n      [\n        \"==\",\n        \"total\",\n        1\n      ]\n    ],\n    \"paint\": {\n      \"line-width\": 2,\n      \"line-color\": \"rgba(215,48,39, 0.7)\"\n    }\n  },\n  {\n    \"id\": \"resources-line-halo-c66518e2-10c6-11ec-adef-5254008afee6-hover\",\n    \"type\": \"line\",\n    \"source\": \"resources-c66518e2-10c6-11ec-adef-5254008afee6\",\n    \"source-layer\": \"c66518e2-10c6-11ec-adef-5254008afee6\",\n    \"layout\": {\n      \"visibility\": \"visible\"\n    },\n    \"filter\": [\n      \"all\",\n      [\n        \"==\",\n        \"$type\",\n        \"LineString\"\n      ],\n      [\n        \"==\",\n        \"total\",\n        1\n      ],\n      [\n        \"==\",\n        \"resourceinstanceid\",\n        \"\"\n      ]\n    ],\n    \"paint\": {\n      \"line-width\": 8,\n      \"line-color\": \"rgba(215,48,39, 0.5)\"\n    }\n  },\n  {\n    \"id\": \"resources-line-c66518e2-10c6-11ec-adef-5254008afee6-hover\",\n    \"type\": \"line\",\n    \"source\": \"resources-c66518e2-10c6-11ec-adef-5254008afee6\",\n    \"source-layer\": \"c66518e2-10c6-11ec-adef-5254008afee6\",\n    \"layout\": {\n      \"visibility\": \"visible\"\n    },\n    \"filter\": [\n      \"all\",\n      [\n        \"==\",\n        \"$type\",\n        \"LineString\"\n      ],\n      [\n        \"==\",\n        \"total\",\n        1\n      ],\n      [\n        \"==\",\n        \"resourceinstanceid\",\n        \"\"\n      ]\n    ],\n    \"paint\": {\n      \"line-width\": 4,\n      \"line-color\": \"rgba(215,48,39, 0.7)\"\n    }\n  },\n  {\n    \"id\": \"resources-line-halo-c66518e2-10c6-11ec-adef-5254008afee6-click\",\n    \"type\": \"line\",\n    \"source\": \"resources-c66518e2-10c6-11ec-adef-5254008afee6\",\n    \"source-layer\": \"c66518e2-10c6-11ec-adef-5254008afee6\",\n    \"layout\": {\n      \"visibility\": \"visible\"\n    },\n    \"filter\": [\n      \"all\",\n      [\n        \"==\",\n        \"$type\",\n        \"LineString\"\n      ],\n      [\n        \"==\",\n        \"total\",\n        1\n      ],\n      [\n        \"==\",\n        \"resourceinstanceid\",\n        \"\"\n      ]\n    ],\n    \"paint\": {\n      \"line-width\": 8,\n      \"line-color\": \"rgba(215,48,39, 0.5)\"\n    }\n  },\n  {\n    \"id\": \"resources-line-c66518e2-10c6-11ec-adef-5254008afee6-click\",\n    \"type\": \"line\",\n    \"source\": \"resources-c66518e2-10c6-11ec-adef-5254008afee6\",\n    \"source-layer\": \"c66518e2-10c6-11ec-adef-5254008afee6\",\n    \"layout\": {\n      \"visibility\": \"visible\"\n    },\n    \"filter\": [\n      \"all\",\n      [\n        \"==\",\n        \"$type\",\n        \"LineString\"\n      ],\n      [\n        \"==\",\n        \"total\",\n        1\n      ],\n      [\n        \"==\",\n        \"resourceinstanceid\",\n        \"\"\n      ]\n    ],\n    \"paint\": {\n      \"line-width\": 4,\n      \"line-color\": \"rgba(215,48,39, 0.7)\"\n    }\n  },\n  {\n    \"id\": \"resources-point-halo-c66518e2-10c6-11ec-adef-5254008afee6-hover\",\n    \"type\": \"circle\",\n    \"source\": \"resources-c66518e2-10c6-11ec-adef-5254008afee6\",\n    \"source-layer\": \"c66518e2-10c6-11ec-adef-5254008afee6\",\n    \"layout\": {\n      \"visibility\": \"visible\"\n    },\n    \"filter\": [\n      \"all\",\n      [\n        \"==\",\n        \"$type\",\n        \"Point\"\n      ],\n      [\n        \"==\",\n        \"total\",\n        1\n      ],\n      [\n        \"==\",\n        \"resourceinstanceid\",\n        \"\"\n      ]\n    ],\n    \"paint\": {\n      \"circle-radius\": 8,\n      \"circle-color\": \"rgba(200, 200, 200, 0.5)\"\n    }\n  },\n  {\n    \"id\": \"resources-point-c66518e2-10c6-11ec-adef-5254008afee6-hover\",\n    \"type\": \"circle\",\n    \"source\": \"resources-c66518e2-10c6-11ec-adef-5254008afee6\",\n    \"source-layer\": \"c66518e2-10c6-11ec-adef-5254008afee6\",\n    \"layout\": {\n      \"visibility\": \"visible\"\n    },\n    \"filter\": [\n      \"all\",\n      [\n        \"==\",\n        \"$type\",\n        \"Point\"\n      ],\n      [\n        \"==\",\n        \"total\",\n        1\n      ],\n      [\n        \"==\",\n        \"resourceinstanceid\",\n        \"\"\n      ]\n    ],\n    \"paint\": {\n      \"circle-radius\": 4,\n      \"circle-color\": \"rgba(130, 130, 130, 0.7)\"\n    }\n  },\n  {\n    \"id\": \"resources-point-halo-c66518e2-10c6-11ec-adef-5254008afee6\",\n    \"type\": \"circle\",\n    \"source\": \"resources-c66518e2-10c6-11ec-adef-5254008afee6\",\n    \"source-layer\": \"c66518e2-10c6-11ec-adef-5254008afee6\",\n    \"layout\": {\n      \"visibility\": \"visible\"\n    },\n    \"filter\": [\n      \"all\",\n      [\n        \"==\",\n        \"$type\",\n        \"Point\"\n      ],\n      [\n        \"==\",\n        \"total\",\n        1\n      ]\n    ],\n    \"paint\": {\n      \"circle-radius\": 4,\n      \"circle-color\": \"rgba(197,56,56,0.5)\"\n    }\n  },\n  {\n    \"id\": \"resources-point-c66518e2-10c6-11ec-adef-5254008afee6\",\n    \"type\": \"circle\",\n    \"source\": \"resources-c66518e2-10c6-11ec-adef-5254008afee6\",\n    \"source-layer\": \"c66518e2-10c6-11ec-adef-5254008afee6\",\n    \"layout\": {\n      \"visibility\": \"visible\"\n    },\n    \"filter\": [\n      \"all\",\n      [\n        \"==\",\n        \"$type\",\n        \"Point\"\n      ],\n      [\n        \"==\",\n        \"total\",\n        1\n      ]\n    ],\n    \"paint\": {\n      \"circle-radius\": 2,\n      \"circle-color\": \"rgba(197,56,56,0.7)\"\n    }\n  },\n  {\n    \"id\": \"resources-point-halo-c66518e2-10c6-11ec-adef-5254008afee6-click\",\n    \"type\": \"circle\",\n    \"source\": \"resources-c66518e2-10c6-11ec-adef-5254008afee6\",\n    \"source-layer\": \"c66518e2-10c6-11ec-adef-5254008afee6\",\n    \"layout\": {\n      \"visibility\": \"visible\"\n    },\n    \"filter\": [\n      \"all\",\n      [\n        \"==\",\n        \"$type\",\n        \"Point\"\n      ],\n      [\n        \"==\",\n        \"total\",\n        1\n      ],\n      [\n        \"==\",\n        \"resourceinstanceid\",\n        \"\"\n      ]\n    ],\n    \"paint\": {\n      \"circle-radius\": 8,\n      \"circle-color\": \"rgba(200, 200, 200, 0.5)\"\n    }\n  },\n  {\n    \"id\": \"resources-point-c66518e2-10c6-11ec-adef-5254008afee6-click\",\n    \"type\": \"circle\",\n    \"source\": \"resources-c66518e2-10c6-11ec-adef-5254008afee6\",\n    \"source-layer\": \"c66518e2-10c6-11ec-adef-5254008afee6\",\n    \"layout\": {\n      \"visibility\": \"visible\"\n    },\n    \"filter\": [\n      \"all\",\n      [\n        \"==\",\n        \"$type\",\n        \"Point\"\n      ],\n      [\n        \"==\",\n        \"total\",\n        1\n      ],\n      [\n        \"==\",\n        \"resourceinstanceid\",\n        \"\"\n      ]\n    ],\n    \"paint\": {\n      \"circle-radius\": 4,\n      \"circle-color\": \"rgba(130, 130, 130, 0.7)\"\n    }\n  },\n  {\n    \"id\": \"resources-cluster-point-halo-c66518e2-10c6-11ec-adef-5254008afee6\",\n    \"type\": \"circle\",\n    \"source\": \"resources-c66518e2-10c6-11ec-adef-5254008afee6\",\n    \"source-layer\": \"c66518e2-10c6-11ec-adef-5254008afee6\",\n    \"layout\": {\n      \"visibility\": \"visible\"\n    },\n    \"filter\": [\n      \"all\",\n      [\n        \"==\",\n        \"$type\",\n        \"Point\"\n      ],\n      [\n        \">\",\n        \"total\",\n        1\n      ]\n    ],\n    \"paint\": {\n      \"circle-radius\": {\n        \"property\": \"total\",\n        \"stops\": [\n          [\n            0,\n            22\n          ],\n          [\n            50,\n            24\n          ],\n          [\n            100,\n            26\n          ],\n          [\n            200,\n            28\n          ],\n          [\n            400,\n            30\n          ],\n          [\n            800,\n            32\n          ],\n          [\n            1200,\n            34\n          ],\n          [\n            1600,\n            36\n          ],\n          [\n            2000,\n            38\n          ],\n          [\n            2500,\n            40\n          ],\n          [\n            3000,\n            42\n          ],\n          [\n            4000,\n            44\n          ],\n          [\n            5000,\n            46\n          ]\n        ]\n      },\n      \"circle-color\": \"rgba(197,56,56,0.5)\"\n    }\n  },\n  {\n    \"id\": \"resources-cluster-point-c66518e2-10c6-11ec-adef-5254008afee6\",\n    \"type\": \"circle\",\n    \"source\": \"resources-c66518e2-10c6-11ec-adef-5254008afee6\",\n    \"source-layer\": \"c66518e2-10c6-11ec-adef-5254008afee6\",\n    \"layout\": {\n      \"visibility\": \"visible\"\n    },\n    \"filter\": [\n      \"all\",\n      [\n        \"==\",\n        \"$type\",\n        \"Point\"\n      ],\n      [\n        \">\",\n        \"total\",\n        1\n      ]\n    ],\n    \"paint\": {\n      \"circle-radius\": {\n        \"property\": \"total\",\n        \"type\": \"exponential\",\n        \"stops\": [\n          [\n            0,\n            12\n          ],\n          [\n            50,\n            14\n          ],\n          [\n            100,\n            16\n          ],\n          [\n            200,\n            18\n          ],\n          [\n            400,\n            20\n          ],\n          [\n            800,\n            22\n          ],\n          [\n            1200,\n            24\n          ],\n          [\n            1600,\n            26\n          ],\n          [\n            2000,\n            28\n          ],\n          [\n            2500,\n            30\n          ],\n          [\n            3000,\n            32\n          ],\n          [\n            4000,\n            34\n          ],\n          [\n            5000,\n            36\n          ]\n        ]\n      },\n      \"circle-color\": \"rgba(197,56,56,0.7)\"\n    }\n  },\n  {\n    \"id\": \"resources-cluster-count-c66518e2-10c6-11ec-adef-5254008afee6\",\n    \"type\": \"symbol\",\n    \"source\": \"resources-c66518e2-10c6-11ec-adef-5254008afee6\",\n    \"source-layer\": \"c66518e2-10c6-11ec-adef-5254008afee6\",\n    \"layout\": {\n      \"text-field\": \"{total}\",\n      \"text-size\": 10\n    },\n    \"paint\": {\n      \"text-color\": \"#fff\"\n    },\n    \"filter\": [\n      \"all\",\n      [\n        \">\",\n        \"total\",\n        1\n      ]\n    ]\n  },\n  {\n    \"id\": \"resources-name-c66518e2-10c6-11ec-adef-5254008afee6\",\n    \"type\": \"symbol\",\n    \"source\": \"resources-c66518e2-10c6-11ec-adef-5254008afee6\",\n    \"source-layer\": \"c66518e2-10c6-11ec-adef-5254008afee6\",\n    \"minzoom\": 6,\n    \"layout\": {\n      \"text-field\": \"{name}\",\n      \"text-size\": 12\n    },\n    \"paint\": {\n      \"text-color\": \"rgb(0,0,0)\"\n    }\n  }\n]",
-                        "advancedStyling": true,
-                        "clusterDistance": 20,
-                        "clusterMaxZoom": "1",
-                        "clusterMinPoints": 3,
-                        "fillColor": "rgba(215,48,39,0.2)",
-                        "haloRadius": 4,
-                        "haloWeight": 4,
-                        "layerActivated": true,
-                        "layerIcon": "fa fa-question",
-                        "layerLegend": "<p><img alt=\"\" class=\"important-fossil-area legend-swatch\" src=\"/int/bc-fossil-management/static/img/blank.png\" />Area Boundary</p>",
-                        "layerName": "",
-                        "lineColor": "rgba(215,48,39, 0.7)",
-                        "lineHaloColor": "rgba(215,48,39, 0.5)",
-                        "outlineColor": "rgba(215,48,39,0.7)",
-                        "outlineWeight": 3,
-                        "pointColor": "rgba(215,48,39,0.7)",
-                        "pointHaloColor": "rgba(215,48,39,0.5)",
-                        "radius": 2,
-                        "simplification": 0.3,
-                        "weight": 2
-                    },
-                    "datatype": "geojson-feature-collection",
-                    "description": "Represents a single node in a graph",
-                    "exportable": false,
-                    "fieldname": "",
-                    "graph_id": "4d6c9226-10c6-11ec-9a94-5254008afee6",
-                    "hascustomalias": false,
-                    "is_collector": true,
-                    "isrequired": false,
-                    "issearchable": true,
-                    "istopnode": false,
-                    "name": "Spatial Coordinates Geometry",
-                    "nodegroup_id": "c66518e2-10c6-11ec-adef-5254008afee6",
-                    "nodeid": "c66518e2-10c6-11ec-adef-5254008afee6",
-                    "ontologyclass": "http://www.cidoc-crm.org/cidoc-crm/E47_Spatial_Coordinates",
-                    "parentproperty": "http://www.cidoc-crm.org/cidoc-crm/P87_is_identified_by",
-                    "sortorder": 0,
-                    "sourcebranchpublication_id": null
-                },
-                {
-                    "alias": "geometry_qualifier",
-                    "config": {
-                        "rdmCollection": null
-                    },
-                    "datatype": "concept",
-                    "description": "Represents a single node in a graph",
-                    "exportable": false,
-                    "fieldname": "",
-                    "graph_id": "4d6c9226-10c6-11ec-9a94-5254008afee6",
-                    "hascustomalias": false,
-                    "is_collector": false,
-                    "isrequired": false,
-                    "issearchable": true,
-                    "istopnode": false,
-                    "name": "Geometry Qualifier",
-                    "nodegroup_id": "c66518e2-10c6-11ec-adef-5254008afee6",
-                    "nodeid": "c6654042-10c6-11ec-adef-5254008afee6",
-                    "ontologyclass": "http://www.cidoc-crm.org/cidoc-crm/E55_Type",
-                    "parentproperty": "http://www.cidoc-crm.org/cidoc-crm/P2_has_type",
-                    "sortorder": 0,
-                    "sourcebranchpublication_id": null
                 }
             ],
             "ontology_id": "e6e8db47-2ccf-11e6-927e-b8f6b115d7dd",
             "publication": {
                 "graph_id": "4d6c9226-10c6-11ec-9a94-5254008afee6",
                 "notes": null,
-                "publicationid": "dc57fe0c-93ab-11ee-a22e-005056a3bc47",
-                "published_time": "2023-12-05T14:21:24.050"
+                "publicationid": "fd7e9c44-9a18-11ee-83da-080027b7463b",
+                "published_time": "2023-12-13T18:37:41.789"
             },
             "relatable_resource_model_ids": [],
             "resource_2_resource_constraints": [],
@@ -652,9 +602,9 @@
         }
     ],
     "metadata": {
-        "db": "PostgreSQL 16.1 on x86_64-pc-linux-gnu, compiled by gcc (GCC) 11.4.1 20230605 (Red Hat 11.4.1-2), 64-bit",
-        "git hash": "fatal: not a git repository (or any parent up to mount point /fs)",
+        "db": "PostgreSQL 16.0 on x86_64-pc-linux-gnu, compiled by gcc (GCC) 11.3.1 20221121 (Red Hat 11.3.1-4), 64-bit",
+        "git hash": "e10813e38 2023-12-11 05:06:58 -0800",
         "os": "Linux",
-        "os version": "5.14.0-284.30.1.el9_2.x86_64"
+        "os version": "5.14.0-333.el9.x86_64"
     }
 }
