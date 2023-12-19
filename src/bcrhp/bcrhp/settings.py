@@ -148,7 +148,7 @@ LOGGING = {
         'file': {
             'level': 'INFO',  # DEBUG, INFO, WARNING, ERROR
             'class': 'logging.FileHandler',
-            'filename': os.path.join('apps_data','logs','apps_{{ app_instance }}','bcrhp', 'arches.log'),
+            'filename': os.path.join(APP_ROOT, 'logs', 'arches.log'),
             'formatter': 'console'
         },
         'console': {
