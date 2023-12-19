@@ -148,7 +148,7 @@ LOGGING = {
         'file': {
             'level': 'DEBUG',  # DEBUG, INFO, WARNING, ERROR
             'class': 'logging.FileHandler',
-            'filename': os.path.join(APP_ROOT, 'arches.log'),
+            'filename': os.path.join('apps_data','logs','apps_{{ app_instance }}','bcfms', 'arches.log'),
             'formatter': 'console'
         },
         'console': {
@@ -158,6 +158,11 @@ LOGGING = {
         }
     },
     'loggers': {
+        'bcfms': {
+            'handlers': ['file', 'console'],
+            'level': 'DEBUG',
+            'propagate': True
+        },
         'arches': {
             'handlers': ['file', 'console'],
             'level': 'DEBUG',
@@ -170,7 +175,7 @@ LOGGING = {
 DATA_UPLOAD_MAX_MEMORY_SIZE = 15728640
 
 # Unique session cookie ensures that logins are treated separately for each app
-SESSION_COOKIE_NAME = '{{ arches_project_name }}'
+SESSION_COOKIE_NAME = 'bcfms{{ arches_app_suffix }}'
 
 # For more info on configuring your cache: https://docs.djangoproject.com/en/2.2/topics/cache/
 CACHES = {
