@@ -79,7 +79,7 @@
         </Recognition>
         <Images>
             {% for site_image in data.site_images %}
-            <Image Type="{{ site_image.image_content_type }}">
+            <Image Type="{{ site_image.image_type }}">
                 <Copyright>{{ site_image.copyright|safe }}</Copyright>
                 <Link>{{ site_image.site_images.0.url }}</Link>
                 <Caption Language="ENGLISH">{{ site_image.image_caption|safe }}</Caption>

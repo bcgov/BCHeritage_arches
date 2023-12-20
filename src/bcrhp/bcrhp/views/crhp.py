@@ -77,6 +77,8 @@ class CRHPXmlExport(APIBase):
                 logger.info("Significant event: %s" % se)
 
             logger.info("site_images type %s" % type(context["data"].site_images))
+            for image in context["data"].site_images:
+                image['image_type'] = ('Historic Image' if image['image_type'] == 'Historical' else 'Contemporary Photograph')
             logger.info("heritage_themes type %s" % type(context["data"].heritage_themes))
         except Exception as e:
             logger.error(e)

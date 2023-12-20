@@ -194,6 +194,7 @@ from heritage_site.instances i
                                                    ),
                                                'copyright', copyright->'en'->>'value',
                                                'image_content_type', __arches_get_concept_label(image_view),
+                                               'image_type', __arches_get_concept_label(image_type),
                                                'image_description', regexp_replace( image_description->'en'->>'value','<br>.*',''))
                                        )) site_images
                    from heritage_site.site_images where submit_to_crhp group by resourceinstanceid) si on i.resourceinstanceid = si.resourceinstanceid
