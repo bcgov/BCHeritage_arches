@@ -47,7 +47,7 @@ class CRHPXmlExport(APIBase):
             context["data"].common_names = [ site_name for site_name in context["data"].site_names if site_name["name_type"] == "Common"]
             context["data"].other_names = [ site_name for site_name in context["data"].site_names if site_name["name_type"] != "Common"]
             logger.info("Heritage Categories: %s" % context["data"].heritage_categories)
-            if len(context["data"].sos) > 0:
+            if context["data"].sos and len(context["data"].sos) > 0:
                 context["data"].sos.sort(key=lambda x: 0 if x["significance_type"] == "Provincial" else 1)
                 context["data"].heritage_value = self.text_converter.handle(context["data"].sos[0]["heritage_value"]).strip()
                 context["data"].defining_elements = self.text_converter.handle(context["data"].sos[0]["defining_elements"]).strip()
