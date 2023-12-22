@@ -1,15 +1,14 @@
 import logging
-# from arches.app.models import models
 from arches.app.views.api import APIBase
 from bcrhp.models import CrhpExportData
-from django.http import HttpResponse
-import json
 import html2text
 import datetime
 
 from django.views.decorators.csrf import csrf_exempt
 from django.utils.decorators import method_decorator
 from django.shortcuts import render
+
+from xml.sax.saxutils import escape
 
 logger = logging.getLogger(__name__)
 
@@ -39,6 +38,9 @@ class CRHPXmlExport(APIBase):
         else:
             se["event_type"] = "Significant"
 
+    def convert_string(self, string_val):
+        return escape(self.text_converter.handle(string_val).strip())
+
     def get_context_data(self, resourceinstanceid):
         context = {}
         try:
@@ -49,10 +51,10 @@ class CRHPXmlExport(APIBase):
             logger.info("Heritage Categories: %s" % context["data"].heritage_categories)
             if context["data"].sos and len(context["data"].sos) > 0:
                 context["data"].sos.sort(key=lambda x: 0 if x["significance_type"] == "Provincial" else 1)
-                context["data"].heritage_value = self.text_converter.handle(context["data"].sos[0]["heritage_value"]).strip()
-                context["data"].defining_elements = self.text_converter.handle(context["data"].sos[0]["defining_elements"]).strip()
-                context["data"].physical_description = self.text_converter.handle(context["data"].sos[0]["physical_description"]).strip()
-                context["data"].document_location = self.text_converter.handle(context["data"].sos[0]["document_location"]).strip()
+                context["data"].heritage_value = self.convert_string(context["data"].sos[0]["heritage_value"])
+                context["data"].defining_elements = self.convert_string(context["data"].sos[0]["defining_elements"])
+                context["data"].physical_description = self.convert_string(context["data"].sos[0]["physical_description"])
+                context["data"].document_location = self.convert_string(context["data"].sos[0]["document_location"])
 
             logger.info("Protection events %s" % str(context["data"].protection_events))
             for item in context["data"].protection_events:
