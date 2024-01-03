@@ -146,21 +146,30 @@ LOGGING = {
     },
     'handlers': {
         'file': {
-            'level': 'WARNING',  # DEBUG, INFO, WARNING, ERROR
+            'level': 'INFO',  # DEBUG, INFO, WARNING, ERROR
             'class': 'logging.FileHandler',
-            'filename': os.path.join(APP_ROOT, 'arches.log'),
+            'filename': os.path.join(APP_ROOT, 'logs', 'arches.log'),
             'formatter': 'console'
         },
         'console': {
-            'level': 'WARNING',
+            'level': 'INFO',
             'class': 'logging.StreamHandler',
             'formatter': 'console'
         }
     },
     'loggers': {
+        'django': {
+            'handlers': ['file', 'console'],
+            'level': 'INFO',
+        },
         'arches': {
             'handlers': ['file', 'console'],
-            'level': 'WARNING',
+            'level': 'INFO',
+            'propagate': True
+        },
+        'bcrhp': {
+            'handlers': ['file', 'console'],
+            'level': 'INFO',
             'propagate': True
         }
     }
@@ -170,7 +179,7 @@ LOGGING = {
 DATA_UPLOAD_MAX_MEMORY_SIZE = 15728640
 
 # Unique session cookie ensures that logins are treated separately for each app
-SESSION_COOKIE_NAME = 'bcrhp'
+SESSION_COOKIE_NAME = 'bcrhp-{{ app_instance }}'
 
 # For more info on configuring your cache: https://docs.djangoproject.com/en/2.2/topics/cache/
 CACHES = {

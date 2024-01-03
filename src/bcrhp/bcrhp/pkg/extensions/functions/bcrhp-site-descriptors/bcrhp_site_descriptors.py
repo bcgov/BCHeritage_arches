@@ -53,7 +53,7 @@ class BCRHPSiteDescriptors(AbstractPrimaryDescriptorsFunction):
     _initialized = False
 
     # @todo Change these to aliases
-    _name_nodes = [aliases.NAME_TYPE, aliases.NAME]
+    _name_nodes = [aliases.NAME_TYPE, aliases.NAME, aliases.BORDEN_NUMBER]
     _sig_event_nodes = [aliases.START_YEAR, aliases.EVENT_DATES_APPROXIMATE, aliases.SIGNIFICANT_EVENTS]
     _popup_nodes = [aliases.BORDEN_NUMBER, 'address']
     _card_nodes = [aliases.BORDEN_NUMBER, aliases.CITY,  'construction_date']
@@ -194,6 +194,7 @@ class BCRHPSiteDescriptors(AbstractPrimaryDescriptorsFunction):
     def _get_site_name(self, resource):
         name_datatype = BCRHPSiteDescriptors._datatypes[aliases.NAME]
         name_type_datatype = BCRHPSiteDescriptors._datatypes[aliases.NAME_TYPE]
+        borden_number_datatype = BCRHPSiteDescriptors._datatypes[aliases.BORDEN_NUMBER]
         display_value = ''
 
         for tile in models.TileModel.objects.filter(
@@ -205,5 +206,16 @@ class BCRHPSiteDescriptors(AbstractPrimaryDescriptorsFunction):
                     display_value = display_value + ",<br>"
                 if name:
                     display_value = display_value + name
+
+        if display_value is None:
+            display_value = self._empty_name_value
+
+        borden_number_tile = models.TileModel.objects.filter(
+            nodegroup_id = BCRHPSiteDescriptors._nodes[aliases.BORDEN_NUMBER].nodegroup_id,
+            resourceinstance_id = resource.resourceinstanceid
+        ).first()
+
+        if borden_number_tile:
+            display_value += " - %s" % borden_number_datatype.get_display_value(borden_number_tile, BCRHPSiteDescriptors._nodes[aliases.BORDEN_NUMBER])
 
         return display_value if display_value else self._empty_name_value

@@ -7,7 +7,7 @@ class BCRHPSiteAliases:
 
     EVENT_DATES_APPROXIMATE = 'dates_approximate'
     START_YEAR = 'start_year'
-    SIGNIFICANT_EVENTS = 'significant_events'
+    SIGNIFICANT_EVENTS = 'significant_event'
 
     STREET_NUMBER = 'street_number'
     STREET_NAME = 'street_name'

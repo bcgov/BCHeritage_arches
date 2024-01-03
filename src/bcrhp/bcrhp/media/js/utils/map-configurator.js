@@ -1,4 +1,4 @@
-define([], function(){
+define(['mapbox-gl'], function(MapboxGl){
 
     let mapConfigurator = {
         /* Can tell which context we are in by the following. In each case, we are in that context if the search returns
@@ -14,6 +14,8 @@ define([], function(){
 
         preConfig: function(map) {
             console.log("Custom pre-config");
+            console.log("Adding control");
+            map.addControl(new MapboxGl.ScaleControl({ maxWidth: 200}));
             this.icons.forEach(function(icon) {
                 console.log(`Loading ${icon.name}: ${icon.url}`);
                 map.loadImage(icon.url,
@@ -23,6 +25,7 @@ define([], function(){
                     });
             });
         },
+
         postConfig: function(map) {
             console.log("Custom post-config");
         },

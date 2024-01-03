@@ -194,6 +194,7 @@ from heritage_site.instances i
                                                    ),
                                                'copyright', copyright->'en'->>'value',
                                                'image_content_type', __arches_get_concept_label(image_view),
+                                               'image_type', __arches_get_concept_label(image_type),
                                                'image_description', regexp_replace( image_description->'en'->>'value','<br>.*',''))
                                        )) site_images
                    from heritage_site.site_images where submit_to_crhp group by resourceinstanceid) si on i.resourceinstanceid = si.resourceinstanceid
@@ -201,10 +202,10 @@ from heritage_site.instances i
         left join (select resourceinstanceid, jsonb_agg( jsonb_concat(jsonb_build_object('url_type',__arches_get_concept_label(external_url_type)), external_url)) external_urls from heritage_site.external_url group by resourceinstanceid) eu on i.resourceinstanceid = eu.resourceinstanceid
         left join (select resourceinstanceid,
                    jsonb_agg(jsonb_build_object(
-                   'event_type', __arches_get_concept_label(significant_events),
+                   'event_type', __arches_get_concept_label(significant_event),
                        'start_year', start_year,
                        'end_year', end_year,
                        'dates_approximate', dates_approximate
                    )) significant_events
-                   from heritage_site.significant_events group by resourceinstanceid) se on se.resourceinstanceid = i.resourceinstanceid;
+                   from heritage_site.significant_event group by resourceinstanceid) se on se.resourceinstanceid = i.resourceinstanceid;
 -- where i.resourceinstanceid = 'ab27f75c-4b35-4c60-a4e9-5f4c944493d0';
