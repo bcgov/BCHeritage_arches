@@ -76,7 +76,7 @@
                     "instructions": {
                         "en": ""
                     },
-                    "is_editable": false,
+                    "is_editable": true,
                     "name": {
                         "en": "Stratigraphy"
                     },
@@ -103,7 +103,7 @@
                     "instructions": {
                         "en": ""
                     },
-                    "is_editable": false,
+                    "is_editable": true,
                     "name": {
                         "en": "Repository Information"
                     },
@@ -130,7 +130,7 @@
                     "instructions": {
                         "en": ""
                     },
-                    "is_editable": false,
+                    "is_editable": true,
                     "name": {
                         "en": "Fossil Occurrence Site ID"
                     },
@@ -157,7 +157,7 @@
                     "instructions": {
                         "en": ""
                     },
-                    "is_editable": false,
+                    "is_editable": true,
                     "name": {
                         "en": "Geological Age"
                     },
@@ -184,7 +184,7 @@
                     "instructions": {
                         "en": ""
                     },
-                    "is_editable": false,
+                    "is_editable": true,
                     "name": {
                         "en": "Fossil ID"
                     },
@@ -211,7 +211,7 @@
                     "instructions": {
                         "en": ""
                     },
-                    "is_editable": false,
+                    "is_editable": true,
                     "name": {
                         "en": "BC Fossil Identification"
                     },
@@ -360,6 +360,14 @@
                                 "id": "2424a415-24b1-42ec-977d-10effccf8696",
                                 "sortorder": "",
                                 "text": "Diversity value"
+                            },
+                            {
+                                "children": [],
+                                "collector": "",
+                                "conceptid": "4400c96e-f6ea-4a98-9085-20b56a14f78e",
+                                "id": "11b12777-d45c-4756-ac8e-8b5119abcb50",
+                                "sortorder": "",
+                                "text": "Education Value"
                             },
                             {
                                 "children": [],
@@ -639,7 +647,7 @@
                     "node_id": "711c30ac-6f46-11ed-9e7f-5254004d77d3",
                     "sortorder": 0,
                     "visible": true,
-                    "widget_id": "10000000-0000-0000-0000-000000000002"
+                    "widget_id": "10000000-0000-0000-0000-000000000012"
                 },
                 {
                     "card_id": "711c2e68-6f46-11ed-9e7f-5254004d77d3",
@@ -661,7 +669,7 @@
                     "node_id": "711c38e0-6f46-11ed-9e7f-5254004d77d3",
                     "sortorder": 4,
                     "visible": true,
-                    "widget_id": "10000000-0000-0000-0000-000000000002"
+                    "widget_id": "10000000-0000-0000-0000-000000000012"
                 },
                 {
                     "card_id": "711c2e68-6f46-11ed-9e7f-5254004d77d3",
@@ -698,7 +706,7 @@
                     "node_id": "711c3c0a-6f46-11ed-9e7f-5254004d77d3",
                     "sortorder": 2,
                     "visible": true,
-                    "widget_id": "10000000-0000-0000-0000-000000000002"
+                    "widget_id": "10000000-0000-0000-0000-000000000012"
                 },
                 {
                     "card_id": "711c2e68-6f46-11ed-9e7f-5254004d77d3",
@@ -741,25 +749,17 @@
                             {
                                 "children": [],
                                 "collector": "",
-                                "conceptid": "05e38520-678b-46c5-bbe2-9164d52ec4fe",
-                                "id": "00b29319-f28d-4b50-88e1-ab190fdfbde6",
-                                "sortorder": "00",
-                                "text": "None/Barren"
-                            },
-                            {
-                                "children": [],
-                                "collector": "",
-                                "conceptid": "fdbfc78a-620e-48d7-99b7-ba25cd9ae10b",
-                                "id": "c26c8d58-9dcb-47a0-a869-ecb93c3dce00",
-                                "sortorder": "01",
-                                "text": "Single Fossil (1)"
+                                "conceptid": "f295722a-5605-4a7d-b6d3-fb16f9ccd0b0",
+                                "id": "6956cf66-4a04-429e-933b-181a7bdaa3da",
+                                "sortorder": "",
+                                "text": "Abundant (> 10)"
                             },
                             {
                                 "children": [],
                                 "collector": "",
                                 "conceptid": "5dfc8eff-ff8c-4f76-a645-0d89f697c6d3",
                                 "id": "68785da4-a1bc-47b2-89dc-a3c617a07406",
-                                "sortorder": "02",
+                                "sortorder": "",
                                 "text": "Few (< 5)"
                             },
                             {
@@ -767,16 +767,32 @@
                                 "collector": "",
                                 "conceptid": "b951d714-d3e8-486a-beba-0550ebb58b9d",
                                 "id": "0ade6a3a-170a-4889-af0d-c55b783747c0",
-                                "sortorder": "05",
+                                "sortorder": "",
                                 "text": "Many (5-10)"
                             },
                             {
                                 "children": [],
                                 "collector": "",
-                                "conceptid": "f295722a-5605-4a7d-b6d3-fb16f9ccd0b0",
-                                "id": "6956cf66-4a04-429e-933b-181a7bdaa3da",
-                                "sortorder": "11",
-                                "text": "Abundant (> 10)"
+                                "conceptid": "05e38520-678b-46c5-bbe2-9164d52ec4fe",
+                                "id": "00b29319-f28d-4b50-88e1-ab190fdfbde6",
+                                "sortorder": "",
+                                "text": "None/Barren"
+                            },
+                            {
+                                "children": [],
+                                "collector": "",
+                                "conceptid": "fdbfc78a-620e-48d7-99b7-ba25cd9ae10b",
+                                "id": "c26c8d58-9dcb-47a0-a869-ecb93c3dce00",
+                                "sortorder": "",
+                                "text": "Single Fossil (1)"
+                            },
+                            {
+                                "children": [],
+                                "collector": "",
+                                "conceptid": "9cadaf49-ea1d-4f27-97aa-4b28674bff42",
+                                "id": "49816e09-af11-4d1b-b86f-f5d02811c646",
+                                "sortorder": "",
+                                "text": "Unknown"
                             }
                         ],
                         "placeholder": {
@@ -1097,6 +1113,14 @@
                                 "id": "2424a415-24b1-42ec-977d-10effccf8696",
                                 "sortorder": "",
                                 "text": "Diversity value"
+                            },
+                            {
+                                "children": [],
+                                "collector": "",
+                                "conceptid": "4400c96e-f6ea-4a98-9085-20b56a14f78e",
+                                "id": "11b12777-d45c-4756-ac8e-8b5119abcb50",
+                                "sortorder": "",
+                                "text": "Education Value"
                             },
                             {
                                 "children": [],
@@ -1526,7 +1550,7 @@
                     "node_id": "e2fc6d5c-7740-11ed-adb6-5254004d77d3",
                     "sortorder": 6,
                     "visible": true,
-                    "widget_id": "10000000-0000-0000-0000-000000000002"
+                    "widget_id": "10000000-0000-0000-0000-000000000012"
                 },
                 {
                     "card_id": "7f2c3040-6c51-11ed-9b7d-5254004d77d3",
@@ -2084,7 +2108,7 @@
                     },
                     "function_id": "60000000-0000-0000-0000-000000002001",
                     "graph_id": "7f2c2082-6c51-11ed-9b7d-5254004d77d3",
-                    "id": "b4fded03-b927-4faf-80b5-d419a39e6827"
+                    "id": "48309ac2-a945-4d33-a5d1-c6250f116126"
                 },
                 {
                     "config": {
@@ -2116,12 +2140,12 @@
                     },
                     "function_id": "60000000-0000-0000-0000-000000001004",
                     "graph_id": "7f2c2082-6c51-11ed-9b7d-5254004d77d3",
-                    "id": "c6fd4f25-a527-401b-b9ab-ed15b09678dd"
+                    "id": "d13f7626-c673-44fb-910c-5f587971f442"
                 }
             ],
             "graphid": "7f2c2082-6c51-11ed-9b7d-5254004d77d3",
             "iconclass": "fa fa-tags",
-            "is_editable": false,
+            "is_editable": true,
             "isresource": true,
             "jsonldcontext": null,
             "name": {
@@ -3814,8 +3838,8 @@
             "publication": {
                 "graph_id": "7f2c2082-6c51-11ed-9b7d-5254004d77d3",
                 "notes": null,
-                "publicationid": "393edbcc-93ac-11ee-bf36-005056a3bc47",
-                "published_time": "2023-12-05T14:23:59.914"
+                "publicationid": "a0d6e244-aac6-11ee-be62-080027b7463b",
+                "published_time": "2024-01-04T00:00:57.374"
             },
             "relatable_resource_model_ids": [],
             "resource_2_resource_constraints": [],
@@ -3848,9 +3872,9 @@
         }
     ],
     "metadata": {
-        "db": "PostgreSQL 16.1 on x86_64-pc-linux-gnu, compiled by gcc (GCC) 11.4.1 20230605 (Red Hat 11.4.1-2), 64-bit",
-        "git hash": "fatal: not a git repository (or any parent up to mount point /fs)",
+        "db": "PostgreSQL 15.3 on x86_64-pc-linux-gnu, compiled by gcc (GCC) 11.3.1 20221121 (Red Hat 11.3.1-4), 64-bit",
+        "git hash": "878aec681 2023-11-20 12:09:49 -0800",
         "os": "Linux",
-        "os version": "5.14.0-284.30.1.el9_2.x86_64"
+        "os version": "5.14.0-333.el9.x86_64"
     }
 }

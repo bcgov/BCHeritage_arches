@@ -319,6 +319,14 @@
                             {
                                 "children": [],
                                 "collector": "",
+                                "conceptid": "4400c96e-f6ea-4a98-9085-20b56a14f78e",
+                                "id": "11b12777-d45c-4756-ac8e-8b5119abcb50",
+                                "sortorder": "",
+                                "text": "Education Value"
+                            },
+                            {
+                                "children": [],
+                                "collector": "",
                                 "conceptid": "ee4c9b5e-49bb-4397-970f-b54112218afa",
                                 "id": "5b20e860-5f4e-46c8-9645-8b1db65aae1a",
                                 "sortorder": "",
@@ -862,25 +870,17 @@
                             {
                                 "children": [],
                                 "collector": "",
-                                "conceptid": "05e38520-678b-46c5-bbe2-9164d52ec4fe",
-                                "id": "00b29319-f28d-4b50-88e1-ab190fdfbde6",
-                                "sortorder": "00",
-                                "text": "None/Barren"
-                            },
-                            {
-                                "children": [],
-                                "collector": "",
-                                "conceptid": "fdbfc78a-620e-48d7-99b7-ba25cd9ae10b",
-                                "id": "c26c8d58-9dcb-47a0-a869-ecb93c3dce00",
-                                "sortorder": "01",
-                                "text": "Single Fossil (1)"
+                                "conceptid": "f295722a-5605-4a7d-b6d3-fb16f9ccd0b0",
+                                "id": "6956cf66-4a04-429e-933b-181a7bdaa3da",
+                                "sortorder": "",
+                                "text": "Abundant (> 10)"
                             },
                             {
                                 "children": [],
                                 "collector": "",
                                 "conceptid": "5dfc8eff-ff8c-4f76-a645-0d89f697c6d3",
                                 "id": "68785da4-a1bc-47b2-89dc-a3c617a07406",
-                                "sortorder": "02",
+                                "sortorder": "",
                                 "text": "Few (< 5)"
                             },
                             {
@@ -888,16 +888,32 @@
                                 "collector": "",
                                 "conceptid": "b951d714-d3e8-486a-beba-0550ebb58b9d",
                                 "id": "0ade6a3a-170a-4889-af0d-c55b783747c0",
-                                "sortorder": "05",
+                                "sortorder": "",
                                 "text": "Many (5-10)"
                             },
                             {
                                 "children": [],
                                 "collector": "",
-                                "conceptid": "f295722a-5605-4a7d-b6d3-fb16f9ccd0b0",
-                                "id": "6956cf66-4a04-429e-933b-181a7bdaa3da",
-                                "sortorder": "11",
-                                "text": "Abundant (> 10)"
+                                "conceptid": "05e38520-678b-46c5-bbe2-9164d52ec4fe",
+                                "id": "00b29319-f28d-4b50-88e1-ab190fdfbde6",
+                                "sortorder": "",
+                                "text": "None/Barren"
+                            },
+                            {
+                                "children": [],
+                                "collector": "",
+                                "conceptid": "fdbfc78a-620e-48d7-99b7-ba25cd9ae10b",
+                                "id": "c26c8d58-9dcb-47a0-a869-ecb93c3dce00",
+                                "sortorder": "",
+                                "text": "Single Fossil (1)"
+                            },
+                            {
+                                "children": [],
+                                "collector": "",
+                                "conceptid": "9cadaf49-ea1d-4f27-97aa-4b28674bff42",
+                                "id": "49816e09-af11-4d1b-b86f-f5d02811c646",
+                                "sortorder": "",
+                                "text": "Unknown"
                             }
                         ],
                         "placeholder": {
@@ -1203,7 +1219,7 @@
                     },
                     "function_id": "60000000-0000-0000-0000-000000001001",
                     "graph_id": "df3ee1ae-9c1c-11ec-964d-5254008afee6",
-                    "id": "9bd69461-483a-4d7a-a525-6e5dddee990e"
+                    "id": "0873c9cb-79d1-4c45-97b9-9d19b987eb34"
                 }
             ],
             "graphid": "df3ee1ae-9c1c-11ec-964d-5254008afee6",
@@ -2030,8 +2046,8 @@
             "publication": {
                 "graph_id": "df3ee1ae-9c1c-11ec-964d-5254008afee6",
                 "notes": null,
-                "publicationid": "62d0151a-9a18-11ee-83da-080027b7463b",
-                "published_time": "2023-12-13T18:33:22.276"
+                "publicationid": "caf0abfa-aac6-11ee-845c-080027b7463b",
+                "published_time": "2024-01-04T00:02:08.011"
             },
             "relatable_resource_model_ids": [],
             "resource_2_resource_constraints": [],
@@ -2064,8 +2080,8 @@
         }
     ],
     "metadata": {
-        "db": "PostgreSQL 16.0 on x86_64-pc-linux-gnu, compiled by gcc (GCC) 11.3.1 20221121 (Red Hat 11.3.1-4), 64-bit",
-        "git hash": "e10813e38 2023-12-11 05:06:58 -0800",
+        "db": "PostgreSQL 15.3 on x86_64-pc-linux-gnu, compiled by gcc (GCC) 11.3.1 20221121 (Red Hat 11.3.1-4), 64-bit",
+        "git hash": "878aec681 2023-11-20 12:09:49 -0800",
         "os": "Linux",
         "os version": "5.14.0-333.el9.x86_64"
     }

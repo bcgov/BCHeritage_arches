@@ -1536,8 +1536,8 @@
                     "config": {
                         "basemap": "streets",
                         "bearing": 0,
-                        "centerX": -125.2111215300115,
-                        "centerY": 54.5952920093056,
+                        "centerX": -124.3451257070194,
+                        "centerY": 54.800708521828426,
                         "defaultValue": "",
                         "defaultValueType": "",
                         "featureColor": "#FF0000",
@@ -1567,7 +1567,7 @@
                         "overlayOpacity": 0,
                         "pitch": 0,
                         "rerender": true,
-                        "zoom": 0
+                        "zoom": 4.087407689940523
                     },
                     "id": "6e5fb6d3-7216-45f6-ac4e-c138fa74d441",
                     "label": {
@@ -1650,9 +1650,17 @@
                             {
                                 "children": [],
                                 "collector": "",
+                                "conceptid": "0b9dbd01-32f2-4e26-9c17-f6555f1f0924",
+                                "id": "d6578b0a-a292-4847-a3f5-20187cc5692c",
+                                "sortorder": "",
+                                "text": "High"
+                            },
+                            {
+                                "children": [],
+                                "collector": "",
                                 "conceptid": "0da27ece-bc63-4a40-bd52-bd6b1cfdb8ac",
                                 "id": "b43fe9e6-7741-4fcd-a1ba-767aeefb364c",
-                                "sortorder": "01",
+                                "sortorder": "",
                                 "text": "Low"
                             },
                             {
@@ -1660,16 +1668,8 @@
                                 "collector": "",
                                 "conceptid": "79bb5289-5364-4f46-95c3-d729392a953f",
                                 "id": "823cfc3f-bdcc-4dc8-ac07-a303be33b223",
-                                "sortorder": "05",
+                                "sortorder": "",
                                 "text": "Medium"
-                            },
-                            {
-                                "children": [],
-                                "collector": "",
-                                "conceptid": "0b9dbd01-32f2-4e26-9c17-f6555f1f0924",
-                                "id": "d6578b0a-a292-4847-a3f5-20187cc5692c",
-                                "sortorder": "10",
-                                "text": "High"
                             }
                         ],
                         "placeholder": {
@@ -2552,9 +2552,17 @@
                             {
                                 "children": [],
                                 "collector": "",
+                                "conceptid": "0b9dbd01-32f2-4e26-9c17-f6555f1f0924",
+                                "id": "d6578b0a-a292-4847-a3f5-20187cc5692c",
+                                "sortorder": "",
+                                "text": "High"
+                            },
+                            {
+                                "children": [],
+                                "collector": "",
                                 "conceptid": "0da27ece-bc63-4a40-bd52-bd6b1cfdb8ac",
                                 "id": "b43fe9e6-7741-4fcd-a1ba-767aeefb364c",
-                                "sortorder": "01",
+                                "sortorder": "",
                                 "text": "Low"
                             },
                             {
@@ -2562,16 +2570,8 @@
                                 "collector": "",
                                 "conceptid": "79bb5289-5364-4f46-95c3-d729392a953f",
                                 "id": "823cfc3f-bdcc-4dc8-ac07-a303be33b223",
-                                "sortorder": "05",
+                                "sortorder": "",
                                 "text": "Medium"
-                            },
-                            {
-                                "children": [],
-                                "collector": "",
-                                "conceptid": "0b9dbd01-32f2-4e26-9c17-f6555f1f0924",
-                                "id": "d6578b0a-a292-4847-a3f5-20187cc5692c",
-                                "sortorder": "10",
-                                "text": "High"
                             }
                         ],
                         "placeholder": {
@@ -8481,8 +8481,8 @@
             "publication": {
                 "graph_id": "2aa724d1-ffd3-4823-8ff1-15a385b9a407",
                 "notes": null,
-                "publicationid": "602486ce-9a19-11ee-9342-080027b7463b",
-                "published_time": "2023-12-13T18:40:27.293"
+                "publicationid": "2fe2f112-aac7-11ee-845c-080027b7463b",
+                "published_time": "2024-01-04T00:04:57.368"
             },
             "relatable_resource_model_ids": [],
             "resource_2_resource_constraints": [],
@@ -8517,8 +8517,8 @@
         }
     ],
     "metadata": {
-        "db": "PostgreSQL 16.0 on x86_64-pc-linux-gnu, compiled by gcc (GCC) 11.3.1 20221121 (Red Hat 11.3.1-4), 64-bit",
-        "git hash": "e10813e38 2023-12-11 05:06:58 -0800",
+        "db": "PostgreSQL 15.3 on x86_64-pc-linux-gnu, compiled by gcc (GCC) 11.3.1 20221121 (Red Hat 11.3.1-4), 64-bit",
+        "git hash": "878aec681 2023-11-20 12:09:49 -0800",
         "os": "Linux",
         "os version": "5.14.0-333.el9.x86_64"
     }
