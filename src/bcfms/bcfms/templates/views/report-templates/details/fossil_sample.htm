@@ -1,0 +1,228 @@
+<div class="bc-grid-container">
+    <div class="bc-grid-item grid-col-1 grid-row-1">
+        <dl class="dl-vertical dl-vertical-bc scientific-name" >
+            <dt>Scientific Name</dt>
+            <dd>
+                <div data-bind="visible: nodesHaveData(['scientific_name', 'other_scientific_name'])">
+                    <!-- ko foreach: scientificNames -->
+                    <div>
+                    <div class="bc-inline" data-bind="component: { name: 'resource-instance-select-widget',
+                                                params: { value: scientific_name, state: 'display_value' }},
+                                                visible: !!scientific_name() ">
+                    </div>
+                    <div class="bc-inline" data-bind="component: { name: 'concept-select-widget',
+                                                params: { value: open_nomanclature_term, state: 'display_value' }
+                                                },
+                                                visible: !!open_nomanclature_term()">
+                    </div>
+                    <div class="bc-inline" data-bind="component: { name: 'resource-instance-select-widget',
+                                                params: { value: other_scientific_name, state: 'display_value' }
+                                                },
+                                                visible: !!other_scientific_name()">
+                    </div>
+                    </div>
+                    <!-- /ko -->
+                </div>
+                <div data-bind="visible: !nodesHaveData(['scientific_name', 'other_scientific_name'])">
+                    Sample has no scientific name
+                </div>
+
+            </dd>
+        </dl>
+    </div>
+    <div class="bc-grid-item grid-col-2 grid-row-1">
+        <dl class="dl-vertical dl-vertical-bc" >
+            <dt>Common Name</dt>
+            <dd>
+                <div data-bind="visible: nodesHaveData(['fossil_common_name'])">
+                    <!-- ko foreach: commonNames -->
+                    <div>
+                        <div class="bc-inline" data-bind="component: {
+                            name: 'resource-instance-select-widget',
+                            params: { value: fossil_common_name, state: 'display_value' }
+                            }">
+                        </div>
+                        <div class="bc-inline" data-bind="visible: !!common_name_uncertain()">?</div>
+                    </div>
+                    <!-- /ko -->
+                </div>
+                <div data-bind="visible: commonNames().length === 0">Sample has no common name</div>
+            </dd>
+        </dl>
+    </div>
+    <div class="bc-grid-item grid-col-1 grid-row-2">
+        <dl class="dl-vertical dl-vertical-bc" >
+            <dt>Fossil Size Category</dt>
+            <dd>
+                <div data-bind="component: { name: 'concept-select-widget',
+                                            params: { value: getFirstNodeValue('fossil_size_category_v'), state: 'display_value' }
+                                            }">
+                </div>
+            </dd>
+        </dl>
+    </div>
+
+    <div class="bc-grid-item grid-col-2 grid-row-2" data-bind="visible: nodesHaveData(['repository_name', 'storage_reference'])">
+        <dl class="dl-vertical dl-vertical-bc" >
+            <dt>Repository Information</dt>
+            <dd>
+                <div class="bc-inline" data-bind="component: {
+                    name: 'resource-instance-select-widget',
+                    params: { value: getFirstNodeValue('repository_name'), state: 'display_value' }
+                    }">
+                </div>
+                <div class="bc-inline" data-bind="visible: getFirstNodeValue('repository_uncertain')">?</div>
+                <div data-bind="component: {
+                    name: 'text-widget',
+                    params: { value: getFirstNodeValue('storage_reference'), state: 'display_value' }
+                    }">
+                </div>
+            </dd>
+        </dl>
+    </div>
+
+    <div class="bc-grid-item grid-col-1 grid-row-3" data-bind="visible: nodesHaveData(['age_undetermined', 'minimum_time', 'maximum_time'])">
+        <dl class="dl-vertical dl-vertical-bc geological-age" >
+            <dt class="geological_age">Geological Age</dt>
+            <dd>
+                <div data-bind="visible: getFirstNodeValue('age_undetermined')">Undetermined</div>
+                <!-- ko if: !getFirstNodeValue('age_undetermined')() -->
+                <div data-bind="component: { name: 'concept-select-widget',
+                                            params: { value: getFirstNodeValue('minimum_time'), state: 'display_value' }
+                                            }, visible: nodesHaveData(['minimum_time'])">
+                </div>
+                <div data-bind="visible: getFirstNodeValue('minimum_time_uncertain')">?</div>
+                <div>-</div>
+                <div data-bind="component: { name: 'concept-select-widget',
+                                            params: { value: getFirstNodeValue('maximum_time'), state: 'display_value' }
+                                            }, visible: nodesHaveData(['maximum_time'])">
+                </div>
+                <div data-bind="visible: getFirstNodeValue('maximum_time_uncertain')">?</div>
+                <!-- /ko -->
+            </dd>
+        </dl>
+    </div>
+    <div class="bc-grid-item grid-col-2 grid-row-3" data-bind="visible: nodesHaveData(['geological_group', 'geological_formation', 'geological_member', 'informal_map_unit_or_name'])">
+        <dl class="dl-vertical dl-vertical-bc stratigraphy">
+            <dt class="geological_age">Stratigraphy</dt>
+            <dd>
+                <div class="stratigraphy-level" data-bind="visible: nodesHaveData(['geological_group'])">
+                    <div data-bind="component:
+                        { name: 'concept-multiselect-widget',
+                          params: { value: getFirstNodeValue('geological_group'), state: 'display_value' }
+                    }">
+                    </div>
+                    <div data-bind="visible: getFirstNodeValue('geological_group_uncertain')">?</div>
+                </div>
+                <div class="stratigraphy-level" data-bind="visible: nodesHaveData(['geological_formation'])">
+                    <div data-bind="component: { name: 'concept-multiselect-widget',
+                                            params: { value: getFirstNodeValue('geological_formation'), state: 'display_value' }
+                                            }">
+                    </div>
+
+                    <div data-bind="visible: getFirstNodeValue('geological_formation_uncertain')">?</div>
+                </div>
+                <div class="stratigraphy-level" data-bind="visible: nodesHaveData(['geological_member'])">
+                    <div data-bind="component: { name: 'concept-select-widget',
+                                            params: { value: getFirstNodeValue('geological_member'), state: 'display_value' }
+                                            }">
+                    </div>
+                    <div data-bind="visible: getFirstNodeValue('geological_member_uncertain')">?</div>
+                </div>
+                <div class="stratigraphy-level" data-bind="visible: nodesHaveData(['informal_map_unit_or_name'])">
+                    <div data-bind="component: { name: 'concept-multiselect-widget',
+                                            params: { value: getFirstNodeValue('informal_map_unit_or_name'), state: 'display_value' }
+                                            }">
+                    </div>
+                </div>
+            </dd>
+        </dl>
+    </div>
+    <div class="bc-grid-item grid-col-1 grid-row-4" data-bind="visible: nodesHaveData(['fossil_sample_significant', 'sample_significance_ranking_details'])">
+        <dl class="dl-vertical dl-vertical-bc" >
+            <dt>Sample Significance</dt>
+            <dd>
+                <div data-bind="text: getFirstBooleanValueLabel('fossil_sample_significant')"></div>
+                <div data-bind="component: { name: 'concept-multiselect-widget',
+                                            params: { value: getFirstNodeValue('sample_significance_ranking_details'), state: 'display_value' }
+                                            }">
+                </div>
+            </dd>
+        </dl>
+    </div>
+    <div class="bc-grid-item grid-col-2 grid-row-4" data-bind="visible: nodesHaveData(['fossil_abundance'])">
+        <dl class="dl-vertical dl-vertical-bc" >
+            <dt>Fossil Abundance</dt>
+            <dd>
+                <div data-bind="component: { name: 'concept-select-widget',
+                                            params: { value: getFirstNodeValue('fossil_abundance'), state: 'display_value' }
+                                            }">
+                </div>
+            </dd>
+        </dl>
+    </div>
+    <div class="bc-grid-item grid-col-1 grid-row-5" data-bind="visible: nodesHaveData(['fossil_part', 'fossil_part_details'])">
+        <dl class="dl-vertical dl-vertical-bc" >
+            <dt>Fossil Part</dt>
+            <dd>
+                <div data-bind="visible: nodesHaveData(['fossil_part']),
+                                component: { name: 'concept-select-widget',
+                                            params: { value: getFirstNodeValue('fossil_part'), state: 'display_value' }
+                                            }">
+                </div>
+                <div data-bind="visible: nodesHaveData(['fossil_part_details']),
+                                component: { name: 'text-widget',
+                                            params: { value: getFirstNodeValue('fossil_part_details'), state: 'display_value' }
+                                            }">
+                </div>
+            </dd>
+        </dl>
+    </div>
+    <div class="bc-grid-item grid-col-2 grid-row-5" data-bind="visible: nodesHaveData(['trace_fossil', 'trace_fossil_details'])">
+        <dl class="dl-vertical dl-vertical-bc" >
+            <dt>Trace Fossil</dt>
+            <dd>
+                <div data-bind="component:
+                                { name: 'concept-select-widget',
+                                  params: { value: getFirstNodeValue('trace_fossil'), state: 'display_value' }
+                                  }"></div>
+                <div data-bind="component: { name: 'text-widget',
+                                            params: { value: getFirstNodeValue('trace_fossil_details'), state: 'display_value' }
+                                            }">
+                </div>
+            </dd>
+        </dl>
+    </div>
+    <div class="bc-grid-item grid-col-1 grid-row-6" data-bind="visible: nodesHaveData(['fossil_condition'])">
+        <dl class="dl-vertical dl-vertical-bc" >
+            <dt>Fossil Condition</dt>
+            <dd>
+                <div data-bind="component:
+                                { name: 'concept-select-widget',
+                                  params: { value: getFirstNodeValue('fossil_condition'), state: 'display_value' }
+                                  }"></div>
+            </dd>
+        </dl>
+    </div>
+    <div class="bc-grid-item grid-col-2 grid-row-6" data-bind="visible: nodesHaveData(['fossil_condition'])">
+        <dl class="dl-vertical dl-vertical-bc" >
+            <dt>Fossil Preservation</dt>
+            <dd>
+                <div data-bind="component:
+                                { name: 'concept-select-widget',
+                                  params: { value: getFirstNodeValue('fossil_condition'), state: 'display_value' }
+                                  }"></div>
+            </dd>
+        </dl>
+    </div>
+    <div class="bc-full-width-grid-item grid-row-r7" data-bind="visible: nodesHaveData(['fossil_notes'])">
+        <dl class="dl-vertical dl-vertical-bc" >
+            <dt>Fossil Notes</dt>
+            <dd>
+                <div data-bind="component: { name: 'text-widget',
+                                            params: { value: getFirstNodeValue('fossil_notes'), state: 'display_value' }
+                                            }"></div>
+            </dd>
+        </dl>
+    </div>
+</div>

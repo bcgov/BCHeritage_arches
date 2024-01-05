@@ -1,7 +1,8 @@
 define([
         'knockout',
-        'viewmodels/report',
-        'templates/views/report-templates/default.htm',
+        'reports/bcfms-report',
+        'templates/views/report-templates/bcfms_default.htm',
+        'templates/views/report-templates/details/fossil_sample.htm',
 ], function (ko, ReportViewModel, defaultTemplate) {
     const viewModel = function(params) {
         params.configKeys = [];

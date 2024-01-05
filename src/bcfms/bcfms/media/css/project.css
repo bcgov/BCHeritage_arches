@@ -1,3 +1,10 @@
 @import "project_common.css";
 @import "map_legend.css";
 
+/* Details tab rules */
+dl.geological-age > dd > div,
+dl.stratigraphy > dd > div.stratigraphy-level > div
+{
+   display: inline-block;
+}
+
