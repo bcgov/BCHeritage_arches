@@ -98,7 +98,7 @@ define([
             });
 
             var reverseSubscription = self.config.subscribe(function(val) {
-                if (val[key] !== self[key]()) {
+                if (!(Number.isNaN(val[key]) && Number.isNaN(self[key]())) && val[key] !== self[key]()) {
                     self[key](val[key]);
                 }
             });
@@ -120,12 +120,12 @@ define([
             if (!self.form) {
                 if (ko.isObservable(self.value)) {
                     self.valueSubscription = self.value.subscribe(function(val){
-                        if (self.defaultValue() != val) {
+                        if (!(Number.isNaN(self.defaultValue()) && Number.isNaN(val)) && self.defaultValue() != val) {
                             self.defaultValue(val);
                         }
                     });
                     self.defaultValueSubscription = self.defaultValue.subscribe(function(val){
-                        if (self.value() != val) {
+                        if (!(Number.isNaN(self.value()) && Number.isNaN(val)) && self.value() != val) {
                             self.value(val);
                         }
                     });

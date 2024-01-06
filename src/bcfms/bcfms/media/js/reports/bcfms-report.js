@@ -11,13 +11,17 @@ define([
         MapReportViewModel.apply(this, [params]);
         var self = this;
 
-        var widgets = _.flatten( _.map(params.report.cards, card => {
-            return ko.unwrap(card.tiles).length === 0 ? [] : ko.unwrap(card.widgets)
-        }));
+        var getAllWidgets = function(card) {
+            return _.flatten([ko.unwrap(card.tiles).length === 0 ? [] : ko.unwrap(card.widgets),
+                _.map(card.cards(), subcard => {return getAllWidgets(subcard); })]);
+        }
+        var getAllTiles = function(card) {
+            return _.flatten([ko.unwrap(card.tiles),
+                _.map(card.cards(), subcard => {return getAllTiles(subcard); })]);
+        }
+        var widgets = _.flatten(_.map(params.report.cards, card => {return getAllWidgets(card)}));
 
-        var tiles = _.flatten( _.map(params.report.cards, card => {
-            return ko.unwrap(card.tiles);
-        }));
+        var tiles = _.flatten(_.map(params.report.cards, card => {return getAllTiles(card)}));
 
         var getWidgetForAlias = function(node_alias){
             var widget = _.find(widgets, widget => {
@@ -25,6 +29,11 @@ define([
             })
             return widget;
         };
+
+        // Used by template to get widgets for config
+        this.getWidgetForAlias = function(node_alias) {
+            return getWidgetForAlias(node_alias);
+        }
         
         var getValueFromTile = function(tile, widget)
         {
@@ -62,6 +71,12 @@ define([
         this.getFirstNodeValue = function(alias) {
             return ko.observable(getNodeValues(alias)[0]);
         };
+
+        this.clickUrl = function(data, event) {
+            let url = event.currentTarget.getElementsByTagName('a')[0]['href'];
+            let filename = event.currentTarget.getElementsByTagName('a')[0].text.trim();
+            window.open(url, filename);
+        }
 
         this.getFirstBooleanValueLabel = function(alias) {
             var widget = getWidgetForAlias(alias);

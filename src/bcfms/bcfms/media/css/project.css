@@ -8,3 +8,16 @@ dl.stratigraphy > dd > div.stratigraphy-level > div
    display: inline-block;
 }
 
+.publication-identifier-type::before {
+   content: "(";
+}
+
+.publication-identifier-type::after {
+   content: ")";
+}
+
+.publication-identifier-type {
+   color: rgb(120,120,120);
+   font-style: italic;
+}
+
