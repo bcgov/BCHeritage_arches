@@ -1,4 +1,5 @@
 def get_index_order():
+    # NB - Publication is done twice to handle the recursive relationship for the descriptors
     return [
         "important_area",
         "protected_site",
@@ -12,5 +13,6 @@ def get_index_order():
         "project_sandbox",
         "reported_fossil",
         "project_assessment",
+        "publication",
         "publication"
     ]
