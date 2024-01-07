@@ -6,6 +6,20 @@
     width: 30%;
 }
 
+.card_component.pid, .card_component.pin {
+    display: inline-block;
+    /*max-width: 45%;*/
+    /*min-width: 350px;*/
+    width: 350px;
+}
+
+.card_component.pin::before {
+    content: "or" !important;
+    position: relative;
+    top: 60px;
+    margin-left: -20px
+}
+
 .card_component.dates_approximate {
     vertical-align: bottom;
 }

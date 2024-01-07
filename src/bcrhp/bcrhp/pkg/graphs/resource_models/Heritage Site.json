@@ -799,7 +799,7 @@
                         "i18n_properties": [
                             "placeholder"
                         ],
-                        "label": "PID",
+                        "label": "PID (Parcel Identifier)",
                         "maxLength": null,
                         "placeholder": {
                             "en": "Enter text"
@@ -809,7 +809,7 @@
                     },
                     "id": "1b626058-0d0f-11ed-98c2-5254008afee6",
                     "label": {
-                        "en": "PID"
+                        "en": "PID (Parcel Identifier)"
                     },
                     "node_id": "1b623e20-0d0f-11ed-98c2-5254008afee6",
                     "sortorder": 0,
@@ -1029,7 +1029,7 @@
                         "i18n_properties": [
                             "placeholder"
                         ],
-                        "label": "Parcel Identification Number",
+                        "label": "PIN (Parcel Identification Number)",
                         "maxLength": null,
                         "placeholder": {
                             "en": "Enter text"
@@ -1039,7 +1039,7 @@
                     },
                     "id": "35f6d9b5-0007-4735-b0eb-2898b328993f",
                     "label": {
-                        "en": "Parcel Identification Number"
+                        "en": "PIN (Parcel Identification Number)"
                     },
                     "node_id": "35615148-5a13-11ed-bf59-5254004d77d3",
                     "sortorder": 1,
@@ -3521,7 +3521,7 @@
                     },
                     "function_id": "60000000-0000-0000-0000-000000002001",
                     "graph_id": "cef9c510-e3e6-4057-ac08-89ad926180b4",
-                    "id": "3c88b6e4-aa39-4dac-82ca-3c38f7a4253c"
+                    "id": "dd44cb20-e21e-4a3b-8055-b4cd389e3b31"
                 },
                 {
                     "config": {
@@ -3565,7 +3565,7 @@
                     },
                     "function_id": "60000000-0000-0000-0000-000000001002",
                     "graph_id": "cef9c510-e3e6-4057-ac08-89ad926180b4",
-                    "id": "54909e0f-0db8-423f-ab98-c0d86042ad30"
+                    "id": "f7ca650c-684a-41df-b7cf-86da6791bddf"
                 }
             ],
             "graphid": "cef9c510-e3e6-4057-ac08-89ad926180b4",
@@ -3869,7 +3869,7 @@
                     "nodeid": "15656a28-1a67-11ed-b83c-5254008afee6",
                     "ontologyclass": "http://www.cidoc-crm.org/cidoc-crm/E62_String",
                     "parentproperty": "http://www.cidoc-crm.org/cidoc-crm/P3_has_note",
-                    "sortorder": 0,
+                    "sortorder": 2,
                     "sourcebranchpublication_id": null
                 },
                 {
@@ -4070,11 +4070,11 @@
                     "nodeid": "1b623ccc-0d0f-11ed-98c2-5254008afee6",
                     "ontologyclass": "http://www.cidoc-crm.org/cidoc-crm/E13_Attribute_Assignment",
                     "parentproperty": "http://www.cidoc-crm.org/cidoc-crm/P140i_was_attributed_by",
-                    "sortorder": 0,
+                    "sortorder": 3,
                     "sourcebranchpublication_id": null
                 },
                 {
-                    "alias": "parcel_identifier",
+                    "alias": "pid",
                     "config": {
                         "en": ""
                     },
@@ -4088,7 +4088,7 @@
                     "isrequired": false,
                     "issearchable": true,
                     "istopnode": false,
-                    "name": "Parcel Identifier",
+                    "name": "PID",
                     "nodegroup_id": "1b622ab6-0d0f-11ed-98c2-5254008afee6",
                     "nodeid": "1b623e20-0d0f-11ed-98c2-5254008afee6",
                     "ontologyclass": "http://www.cidoc-crm.org/cidoc-crm/E42_Identifier",
@@ -4389,7 +4389,7 @@
                     "sourcebranchpublication_id": null
                 },
                 {
-                    "alias": "parcel_identification_number",
+                    "alias": "pin",
                     "config": {
                         "en": ""
                     },
@@ -4403,12 +4403,12 @@
                     "isrequired": false,
                     "issearchable": true,
                     "istopnode": false,
-                    "name": "Parcel Identification Number",
+                    "name": "PIN",
                     "nodegroup_id": "1b622ab6-0d0f-11ed-98c2-5254008afee6",
                     "nodeid": "35615148-5a13-11ed-bf59-5254004d77d3",
                     "ontologyclass": "http://www.cidoc-crm.org/cidoc-crm/E42_Identifier",
                     "parentproperty": "http://www.cidoc-crm.org/cidoc-crm/P1_is_identified_by",
-                    "sortorder": 0,
+                    "sortorder": 1,
                     "sourcebranchpublication_id": null
                 },
                 {
@@ -6007,8 +6007,8 @@
             "publication": {
                 "graph_id": "cef9c510-e3e6-4057-ac08-89ad926180b4",
                 "notes": null,
-                "publicationid": "381d2efc-ab8e-11ee-bedd-080027b7463b",
-                "published_time": "2024-01-04T23:49:41.020"
+                "publicationid": "6872696a-acaa-11ee-8e4c-080027b7463b",
+                "published_time": "2024-01-06T09:43:59.181"
             },
             "relatable_resource_model_ids": [],
             "resource_2_resource_constraints": [],
