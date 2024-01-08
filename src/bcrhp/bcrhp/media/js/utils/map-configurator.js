@@ -7,10 +7,13 @@ define(['mapbox-gl'], function(MapboxGl){
             Map Header: map.getCanvasContainer().closest("div.report-map-header-component")
             Map Editor: map.getCanvasContainer().closest("div.map-widget")
         */
+        icons: [],
+        /*
         icons: [{"name":"micro-marker", "url":'/int/bc-fossil-management/files/media/img/markers/micro.png'},
             {"name":"macro-marker", "url":'/int/bc-fossil-management/files/media/img/markers/macro.png'},
             {"name":"macromicro-marker", "url":'/int/bc-fossil-management/files/media/img/markers/macromicro.png'},
         ],
+         */
 
         preConfig: function(map) {
             console.log("Custom pre-config");
