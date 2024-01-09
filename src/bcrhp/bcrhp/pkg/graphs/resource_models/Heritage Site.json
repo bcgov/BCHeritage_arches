@@ -870,7 +870,7 @@
                         "en": "Spatial Accuracy"
                     },
                     "node_id": "1b6258ce-0d0f-11ed-98c2-5254008afee6",
-                    "sortorder": 3,
+                    "sortorder": 1,
                     "visible": true,
                     "widget_id": "10000000-0000-0000-0000-000000000001"
                 },
@@ -921,7 +921,7 @@
                         "en": "Site Boundary"
                     },
                     "node_id": "1b6235b0-0d0f-11ed-98c2-5254008afee6",
-                    "sortorder": 1,
+                    "sortorder": 0,
                     "visible": true,
                     "widget_id": "10000000-0000-0000-0000-000000000007"
                 },
@@ -3521,7 +3521,7 @@
                     },
                     "function_id": "60000000-0000-0000-0000-000000002001",
                     "graph_id": "cef9c510-e3e6-4057-ac08-89ad926180b4",
-                    "id": "dd44cb20-e21e-4a3b-8055-b4cd389e3b31"
+                    "id": "2c526904-e463-400d-85bf-d966622d3af5"
                 },
                 {
                     "config": {
@@ -3565,7 +3565,7 @@
                     },
                     "function_id": "60000000-0000-0000-0000-000000001002",
                     "graph_id": "cef9c510-e3e6-4057-ac08-89ad926180b4",
-                    "id": "f7ca650c-684a-41df-b7cf-86da6791bddf"
+                    "id": "8a16c5f5-498a-4337-b57c-e7c7e859a962"
                 }
             ],
             "graphid": "cef9c510-e3e6-4057-ac08-89ad926180b4",
@@ -3869,7 +3869,7 @@
                     "nodeid": "15656a28-1a67-11ed-b83c-5254008afee6",
                     "ontologyclass": "http://www.cidoc-crm.org/cidoc-crm/E62_String",
                     "parentproperty": "http://www.cidoc-crm.org/cidoc-crm/P3_has_note",
-                    "sortorder": 2,
+                    "sortorder": 0,
                     "sourcebranchpublication_id": null
                 },
                 {
@@ -4070,7 +4070,7 @@
                     "nodeid": "1b623ccc-0d0f-11ed-98c2-5254008afee6",
                     "ontologyclass": "http://www.cidoc-crm.org/cidoc-crm/E13_Attribute_Assignment",
                     "parentproperty": "http://www.cidoc-crm.org/cidoc-crm/P140i_was_attributed_by",
-                    "sortorder": 3,
+                    "sortorder": 0,
                     "sourcebranchpublication_id": null
                 },
                 {
@@ -4408,7 +4408,7 @@
                     "nodeid": "35615148-5a13-11ed-bf59-5254004d77d3",
                     "ontologyclass": "http://www.cidoc-crm.org/cidoc-crm/E42_Identifier",
                     "parentproperty": "http://www.cidoc-crm.org/cidoc-crm/P1_is_identified_by",
-                    "sortorder": 1,
+                    "sortorder": 0,
                     "sourcebranchpublication_id": null
                 },
                 {
@@ -6007,8 +6007,8 @@
             "publication": {
                 "graph_id": "cef9c510-e3e6-4057-ac08-89ad926180b4",
                 "notes": null,
-                "publicationid": "eea2a818-ad6f-11ee-b619-080027b7463b",
-                "published_time": "2024-01-07T09:17:55.167"
+                "publicationid": "3754883c-aea2-11ee-b078-080027b7463b",
+                "published_time": "2024-01-08T21:50:23.128"
             },
             "relatable_resource_model_ids": [],
             "resource_2_resource_constraints": [],
@@ -6041,7 +6041,7 @@
         }
     ],
     "metadata": {
-        "db": "PostgreSQL 15.3 on x86_64-pc-linux-gnu, compiled by gcc (GCC) 11.3.1 20221121 (Red Hat 11.3.1-4), 64-bit",
+        "db": "PostgreSQL 16.0 on x86_64-pc-linux-gnu, compiled by gcc (GCC) 11.3.1 20221121 (Red Hat 11.3.1-4), 64-bit",
         "git hash": "878aec681 2023-11-20 12:09:49 -0800",
         "os": "Linux",
         "os version": "5.14.0-333.el9.x86_64"
