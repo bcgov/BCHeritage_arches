@@ -22,7 +22,7 @@
                     "instructions": {
                         "en": ""
                     },
-                    "is_editable": true,
+                    "is_editable": false,
                     "name": {
                         "en": "Act Status"
                     },
@@ -61,7 +61,7 @@
                     "instructions": {
                         "en": ""
                     },
-                    "is_editable": true,
+                    "is_editable": false,
                     "name": {
                         "en": "Authority"
                     },
@@ -430,28 +430,28 @@
                     "config": {
                         "descriptor_types": {
                             "description": {
-                                "nodegroup_id": "7789d580-3b87-11ee-a701-080027b7463b",
-                                "string_template": "<Act Section> <Recognition Type>"
+                                "nodegroup_id": "d455cfc0-ae8d-11ee-b59f-080027b7463b",
+                                "string_template": "Active: <Active>"
                             },
                             "map_popup": {
-                                "nodegroup_id": "7789d580-3b87-11ee-a701-080027b7463b",
-                                "string_template": "<Act Section> <Recognition Type>"
+                                "nodegroup_id": "d455cfc0-ae8d-11ee-b59f-080027b7463b",
+                                "string_template": "Active: <Active>"
                             },
                             "name": {
                                 "nodegroup_id": "7789d580-3b87-11ee-a701-080027b7463b",
-                                "string_template": "<Authority>, <Legal Instrument>"
+                                "string_template": "<Legal Instrument>, <Authority>, <Act Section>, <Recognition Type>"
                             }
                         },
                         "triggering_nodegroups": []
                     },
                     "function_id": "60000000-0000-0000-0000-000000000001",
                     "graph_id": "52dd40f2-1dee-45d2-b72c-234c8cbb5418",
-                    "id": "ffb6eeef-ad91-4747-9105-7b0bebb62e94"
+                    "id": "610de132-dc44-4c78-9696-d6b03ca2c189"
                 }
             ],
             "graphid": "52dd40f2-1dee-45d2-b72c-234c8cbb5418",
             "iconclass": "fa fa-book",
-            "is_editable": true,
+            "is_editable": false,
             "isresource": true,
             "jsonldcontext": null,
             "name": {
@@ -814,7 +814,7 @@
         }
     ],
     "metadata": {
-        "db": "PostgreSQL 16.0 on x86_64-pc-linux-gnu, compiled by gcc (GCC) 11.3.1 20221121 (Red Hat 11.3.1-4), 64-bit",
+        "db": "PostgreSQL 15.3 on x86_64-pc-linux-gnu, compiled by gcc (GCC) 11.3.1 20221121 (Red Hat 11.3.1-4), 64-bit",
         "git hash": "878aec681 2023-11-20 12:09:49 -0800",
         "os": "Linux",
         "os version": "5.14.0-333.el9.x86_64"
