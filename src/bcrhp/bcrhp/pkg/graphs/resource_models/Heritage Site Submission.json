@@ -853,14 +853,14 @@
                             },
                             "name": {
                                 "nodegroup_id": "e750627a-a326-11ed-a0e3-5254004d77d3",
-                                "string_template": "<Submission Date> - <Submitting Government>"
+                                "string_template": "<Submission Date> > <Submitting Government>"
                             }
                         },
                         "triggering_nodegroups": []
                     },
                     "function_id": "60000000-0000-0000-0000-000000000001",
                     "graph_id": "4e69d0a9-7af2-473f-929f-71d462ea32d1",
-                    "id": "bf6bac7e-6f44-4963-ba9d-017f32edc3e3"
+                    "id": "6bfeda9e-a90e-4ed2-8624-12762bcbcbb3"
                 }
             ],
             "graphid": "4e69d0a9-7af2-473f-929f-71d462ea32d1",
@@ -1218,7 +1218,7 @@
                     "nodeid": "12b4bf14-a323-11ed-8e85-5254004d77d3",
                     "ontologyclass": "http://www.cidoc-crm.org/cidoc-crm/E27_Site",
                     "parentproperty": "http://www.cidoc-crm.org/cidoc-crm/P10i_contains",
-                    "sortorder": 0,
+                    "sortorder": 1,
                     "sourcebranchpublication_id": null
                 },
                 {
@@ -1413,7 +1413,7 @@
                     "nodeid": "84d8005c-a322-11ed-94a9-5254004d77d3",
                     "ontologyclass": "http://www.ics.forth.gr/isl/CRMdig/D29_Annotation_Object",
                     "parentproperty": "http://www.cidoc-crm.org/cidoc-crm/P129i_is_subject_of",
-                    "sortorder": 0,
+                    "sortorder": 2,
                     "sourcebranchpublication_id": null
                 },
                 {

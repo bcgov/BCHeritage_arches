@@ -40,10 +40,10 @@
                             "card_id": "7e71fa57-b986-406b-bde6-3a8996937fe8",
                             "constraintid": "f3445b24-505e-4d78-b03b-36c53d96ae2c",
                             "nodes": [
-                                "9e49c774-3b88-11ee-a701-080027b7463b",
+                                "488c680a-3b88-11ee-a701-080027b7463b",
                                 "7789d580-3b87-11ee-a701-080027b7463b",
                                 "7d3bcc42-3b8a-11ee-a93e-080027b7463b",
-                                "488c680a-3b88-11ee-a701-080027b7463b"
+                                "9e49c774-3b88-11ee-a701-080027b7463b"
                             ],
                             "uniquetoallinstances": true
                         }
@@ -430,23 +430,23 @@
                     "config": {
                         "descriptor_types": {
                             "description": {
-                                "nodegroup_id": "1d670b02-3b89-11ee-a701-080027b7463b",
-                                "string_template": "<Start Date> - <End Date>"
+                                "nodegroup_id": "7789d580-3b87-11ee-a701-080027b7463b",
+                                "string_template": "<Act Section> <Recognition Type>"
                             },
                             "map_popup": {
-                                "nodegroup_id": "",
-                                "string_template": ""
+                                "nodegroup_id": "7789d580-3b87-11ee-a701-080027b7463b",
+                                "string_template": "<Act Section> <Recognition Type>"
                             },
                             "name": {
                                 "nodegroup_id": "7789d580-3b87-11ee-a701-080027b7463b",
-                                "string_template": "<Authority>, <Legal Instrument>, <Act Section>, <Recognition Type>"
+                                "string_template": "<Authority>, <Legal Instrument>"
                             }
                         },
                         "triggering_nodegroups": []
                     },
                     "function_id": "60000000-0000-0000-0000-000000000001",
                     "graph_id": "52dd40f2-1dee-45d2-b72c-234c8cbb5418",
-                    "id": "54cfdf18-5fd3-4f17-bf88-f3bf70dc9ea3"
+                    "id": "ffb6eeef-ad91-4747-9105-7b0bebb62e94"
                 }
             ],
             "graphid": "52dd40f2-1dee-45d2-b72c-234c8cbb5418",
@@ -498,7 +498,7 @@
                     "nodeid": "06903340-ae8e-11ee-a178-080027b7463b",
                     "ontologyclass": "http://www.cidoc-crm.org/cidoc-crm/E63_Beginning_of_Existence",
                     "parentproperty": "http://www.cidoc-crm.org/cidoc-crm/P116_starts",
-                    "sortorder": 1,
+                    "sortorder": 0,
                     "sourcebranchpublication_id": null
                 },
                 {
@@ -639,7 +639,7 @@
                     "nodeid": "a07e0b20-ae8a-11ee-9dec-080027b7463b",
                     "ontologyclass": "http://www.ics.forth.gr/isl/CRMdig/D13_Digital_Information_Carrier",
                     "parentproperty": "http://www.ics.forth.gr/isl/CRMdig/L54_is_same-as",
-                    "sortorder": 2,
+                    "sortorder": 0,
                     "sourcebranchpublication_id": null
                 },
                 {
@@ -708,7 +708,7 @@
                     "nodeid": "d455cfc0-ae8d-11ee-b59f-080027b7463b",
                     "ontologyclass": "http://www.cidoc-crm.org/cidoc-crm/E3_Condition_State",
                     "parentproperty": "http://www.ics.forth.gr/isl/CRMdig/L54_is_same-as",
-                    "sortorder": 1,
+                    "sortorder": 0,
                     "sourcebranchpublication_id": null
                 },
                 {
@@ -770,7 +770,7 @@
                     "nodeid": "f4e5b372-ae8d-11ee-a002-080027b7463b",
                     "ontologyclass": "http://www.cidoc-crm.org/cidoc-crm/E72_Legal_Object",
                     "parentproperty": "http://www.ics.forth.gr/isl/CRMdig/L54_is_same-as",
-                    "sortorder": 3,
+                    "sortorder": 0,
                     "sourcebranchpublication_id": null
                 }
             ],
