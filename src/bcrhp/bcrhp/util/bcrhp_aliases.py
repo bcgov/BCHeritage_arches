@@ -20,6 +20,16 @@ class BCRHPSiteAliases:
     SITE_GEOMETRY = 'site_boundary'
     OFFICIALLY_RECOGNIZED = 'officially_recognized_site'
 
+
+class BCRHPSiteSubmissionAliases:
+    SUBMITTING_GOVERNMENT = 'submitting_government'
+    SUBMISSION_DATE = 'submission_date'
+    SUBMITTED_SITE_COUNT = 'total_number_submitted'
+    HERITAGE_SITE = 'heritage_site'
+    ASSIGNED_TO = 'assigned_to'
+    COMPLETION_DATE = 'completion_date'
+
+
 class BCRHPLocalGovernmentAliases:
     TEST = 'test'
 
