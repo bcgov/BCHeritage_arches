@@ -193,7 +193,7 @@
                     "instructions": {
                         "en": ""
                     },
-                    "is_editable": true,
+                    "is_editable": false,
                     "name": {
                         "en": "Project Details"
                     },
@@ -220,7 +220,7 @@
                     "instructions": {
                         "en": ""
                     },
-                    "is_editable": true,
+                    "is_editable": false,
                     "name": {
                         "en": "Project Site"
                     },
@@ -1502,10 +1502,53 @@
                     "rangenode_id": "10710b7c-fb0c-11ed-a587-5254004d77d3"
                 }
             ],
-            "functions_x_graphs": [],
+            "functions_x_graphs": [
+                {
+                    "config": {
+                        "class_name": "BCFossilsDescriptors",
+                        "descriptor_types": {
+                            "description": {
+                                "delimiter": "<br>",
+                                "first_only": false,
+                                "node_ids": [
+                                    "109f629e-d968-11ed-b8ae-5254004d77d3",
+                                    "109f1640-d968-11ed-b8ae-5254004d77d3",
+                                    "109c9334-d968-11ed-b8ae-5254004d77d3"
+                                ],
+                                "show_name": true,
+                                "type": "description"
+                            },
+                            "map_popup": {
+                                "delimiter": "<br>",
+                                "first_only": false,
+                                "node_ids": [
+                                    "109c9334-d968-11ed-b8ae-5254004d77d3"
+                                ],
+                                "show_name": true,
+                                "type": "map_popup"
+                            },
+                            "name": {
+                                "delimiter": " - ",
+                                "first_only": false,
+                                "node_ids": [
+                                    "bafd3444-d96a-11ed-b2f0-5254004d77d3",
+                                    "56067456-3c48-11ee-b359-080027b7463b"
+                                ],
+                                "show_name": false,
+                                "type": "name"
+                            }
+                        },
+                        "module": "bcfms.functions.bc_fossils_descriptors",
+                        "triggering_nodegroups": []
+                    },
+                    "function_id": "60000000-0000-0000-0000-000000001001",
+                    "graph_id": "109a0272-d968-11ed-b8ae-5254004d77d3",
+                    "id": "51f5f3fe-b4c7-45c1-9dc9-995192c766bc"
+                }
+            ],
             "graphid": "109a0272-d968-11ed-b8ae-5254004d77d3",
             "iconclass": "fa fa-pencil",
-            "is_editable": true,
+            "is_editable": false,
             "isresource": true,
             "jsonldcontext": null,
             "name": {
@@ -3161,8 +3204,8 @@
         }
     ],
     "metadata": {
-        "db": "PostgreSQL 16.0 on x86_64-pc-linux-gnu, compiled by gcc (GCC) 11.3.1 20221121 (Red Hat 11.3.1-4), 64-bit",
-        "git hash": "e10813e38 2023-12-11 05:06:58 -0800",
+        "db": "PostgreSQL 15.3 on x86_64-pc-linux-gnu, compiled by gcc (GCC) 11.3.1 20221121 (Red Hat 11.3.1-4), 64-bit",
+        "git hash": "878aec681 2023-11-20 12:09:49 -0800",
         "os": "Linux",
         "os version": "5.14.0-333.el9.x86_64"
     }
