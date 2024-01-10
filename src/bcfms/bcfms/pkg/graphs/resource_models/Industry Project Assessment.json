@@ -132,7 +132,7 @@
                     "instructions": {
                         "en": ""
                     },
-                    "is_editable": true,
+                    "is_editable": false,
                     "name": {
                         "en": "Assessment Start Date"
                     },
@@ -159,7 +159,7 @@
                     "instructions": {
                         "en": ""
                     },
-                    "is_editable": true,
+                    "is_editable": false,
                     "name": {
                         "en": "Project Site"
                     },
@@ -411,7 +411,7 @@
                     "instructions": {
                         "en": ""
                     },
-                    "is_editable": true,
+                    "is_editable": false,
                     "name": {
                         "en": "Project Details"
                     },
@@ -465,7 +465,7 @@
                     "instructions": {
                         "en": ""
                     },
-                    "is_editable": true,
+                    "is_editable": false,
                     "name": {
                         "en": "Project Type"
                     },
@@ -4072,7 +4072,8 @@
                                 "type": "map_popup"
                             },
                             "name": {
-                                "first_only": true,
+                                "delimiter": " - ",
+                                "first_only": false,
                                 "node_ids": [
                                     "67997a7e-9dc4-11ed-9ef3-5254004d77d3",
                                     "59c1b050-3c49-11ee-9268-080027b7463b"
@@ -4091,7 +4092,7 @@
             ],
             "graphid": "2aa724d1-ffd3-4823-8ff1-15a385b9a407",
             "iconclass": "fa fa-diamond",
-            "is_editable": true,
+            "is_editable": false,
             "isresource": true,
             "jsonldcontext": null,
             "name": {
