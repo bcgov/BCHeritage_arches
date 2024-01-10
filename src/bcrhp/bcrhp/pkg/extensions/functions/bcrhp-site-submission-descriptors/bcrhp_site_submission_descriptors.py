@@ -1,5 +1,5 @@
-from bcrhp.util.bcrhp_aliases import BCRHPSiteSubmissionAliases as aliases
-from bcrhp.util.bc_primary_descriptors_function import BCPrimaryDescriptorsFunction
+from bcrhp.util.bcrhp_aliases import GraphSlugs, BCRHPSiteSubmissionAliases as aliases
+from bcrhp.functions.bc_primary_descriptors_function import BCPrimaryDescriptorsFunction
 from bcrhp.util.graph_lookup import GraphLookup
 
 details = {
@@ -24,10 +24,9 @@ details = {
 
 class BCRHPSiteSubmissionDescriptors(BCPrimaryDescriptorsFunction):
     # For Name part of descriptor
-    _graph_slug = 'site_submission'
+    _graph_slug = GraphSlugs.SITE_SUBMISSION
     _graph_lookup = None
 
-    # @todo Change these to aliases
     _name_nodes = [aliases.SUBMISSION_DATE, aliases.SUBMITTING_GOVERNMENT]
     _card_nodes = [aliases.SUBMITTED_SITE_COUNT, aliases.ASSIGNED_TO, aliases.COMPLETION_DATE]
 
@@ -41,7 +40,6 @@ class BCRHPSiteSubmissionDescriptors(BCPrimaryDescriptorsFunction):
         return_value = ""
 
         try:
-            print(context)
             if descriptor == "name":
                 return self._get_site_submission_name(resource)
 

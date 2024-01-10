@@ -35,3 +35,4 @@ class BCRHPLocalGovernmentAliases:
 
 class GraphSlugs:
     HERITAGE_SITE = "heritage_site"
+    SITE_SUBMISSION = "site_submission"
