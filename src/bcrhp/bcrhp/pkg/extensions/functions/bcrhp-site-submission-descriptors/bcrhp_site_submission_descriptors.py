@@ -1,5 +1,5 @@
 from bcrhp.util.bcrhp_aliases import GraphSlugs, BCRHPSiteSubmissionAliases as aliases
-from bcrhp.functions.bc_primary_descriptors_function import BCPrimaryDescriptorsFunction
+from bcrhp.util.bc_primary_descriptors_function import BCPrimaryDescriptorsFunction
 from bcrhp.util.graph_lookup import GraphLookup
 
 details = {
@@ -60,7 +60,7 @@ class BCRHPSiteSubmissionDescriptors(BCPrimaryDescriptorsFunction):
 
     def _get_site_submission_name(self, resource):
         submitted_date = self.get_value_from_node(self._graph_lookup.get_node(self._name_nodes[0]),
-                                 self._graph_lookup.get_datatype(self._name_nodes[0]), resource)
+                                                  self._graph_lookup.get_datatype(self._name_nodes[0]), resource)
 
         submitting_government = self.get_value_from_node(self._graph_lookup.get_node(self._name_nodes[1]),
                                                          self._graph_lookup.get_datatype(self._name_nodes[1]), resource)

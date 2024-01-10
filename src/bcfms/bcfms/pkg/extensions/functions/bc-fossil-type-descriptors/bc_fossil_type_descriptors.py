@@ -1,5 +1,5 @@
 from arches.app.models import models
-from bcfms.functions.bc_primary_descriptors_function import BCPrimaryDescriptorsFunction
+from bcfms.util.bc_primary_descriptors_function import BCPrimaryDescriptorsFunction
 from bcfms.util.graph_lookup import GraphLookup
 from bcfms.util.bcfms_aliases import GraphSlugs, FossilType as aliases
 
