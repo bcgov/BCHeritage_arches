@@ -24,7 +24,7 @@
                     "instructions": {
                         "en": "Enter the resource name and its respective type."
                     },
-                    "is_editable": true,
+                    "is_editable": false,
                     "name": {
                         "en": "Name"
                     },
@@ -51,7 +51,7 @@
                     "instructions": {
                         "en": ""
                     },
-                    "is_editable": true,
+                    "is_editable": false,
                     "name": {
                         "en": "Potential Ranking"
                     },
@@ -80,7 +80,7 @@
                     "instructions": {
                         "en": "Enter a description and description type for the resource."
                     },
-                    "is_editable": true,
+                    "is_editable": false,
                     "name": {
                         "en": "Description"
                     },
@@ -109,7 +109,7 @@
                     "instructions": {
                         "en": ""
                     },
-                    "is_editable": true,
+                    "is_editable": false,
                     "name": {
                         "en": "Area Boundary"
                     },
@@ -305,11 +305,10 @@
                                 "type": "description"
                             },
                             "map_popup": {
-                                "delimiter": "<br><br>",
+                                "delimiter": "<br>",
                                 "first_only": false,
                                 "node_ids": [
-                                    "7febfbb4-10c7-11ec-bbeb-5254008afee6",
-                                    "69230292-10c7-11ec-8a7a-5254008afee6"
+                                    "7febfbb4-10c7-11ec-bbeb-5254008afee6"
                                 ],
                                 "show_name": true,
                                 "type": "map_popup"
@@ -328,12 +327,12 @@
                     },
                     "function_id": "60000000-0000-0000-0000-000000001001",
                     "graph_id": "4d6c9226-10c6-11ec-9a94-5254008afee6",
-                    "id": "ce621ce2-68fb-4f49-aecb-8766102e752f"
+                    "id": "a1776294-aef7-4590-b2b5-a335ef2311b1"
                 }
             ],
             "graphid": "4d6c9226-10c6-11ec-9a94-5254008afee6",
             "iconclass": "fa fa-sitemap",
-            "is_editable": true,
+            "is_editable": false,
             "isresource": true,
             "jsonldcontext": null,
             "name": {
@@ -602,8 +601,8 @@
         }
     ],
     "metadata": {
-        "db": "PostgreSQL 16.0 on x86_64-pc-linux-gnu, compiled by gcc (GCC) 11.3.1 20221121 (Red Hat 11.3.1-4), 64-bit",
-        "git hash": "e10813e38 2023-12-11 05:06:58 -0800",
+        "db": "PostgreSQL 15.3 on x86_64-pc-linux-gnu, compiled by gcc (GCC) 11.3.1 20221121 (Red Hat 11.3.1-4), 64-bit",
+        "git hash": "878aec681 2023-11-20 12:09:49 -0800",
         "os": "Linux",
         "os version": "5.14.0-333.el9.x86_64"
     }
