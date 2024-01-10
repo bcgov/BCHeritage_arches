@@ -4045,7 +4045,50 @@
                     "rangenode_id": "ff4fb7c8-a361-11ed-b0ab-5254004d77d3"
                 }
             ],
-            "functions_x_graphs": [],
+            "functions_x_graphs": [
+                {
+                    "config": {
+                        "class_name": "BCFossilsDescriptors",
+                        "descriptor_types": {
+                            "description": {
+                                "delimiter": "<br>",
+                                "first_only": false,
+                                "node_ids": [
+                                    "b1ffaf80-9e59-11ed-9252-5254004d77d3",
+                                    "694922ec-9dc0-11ed-8d8e-5254004d77d3",
+                                    "416e539a-a357-11ed-932e-5254004d77d3"
+                                ],
+                                "show_name": true,
+                                "type": "description"
+                            },
+                            "map_popup": {
+                                "delimiter": "<br>",
+                                "first_only": false,
+                                "node_ids": [
+                                    "b1ffaf80-9e59-11ed-9252-5254004d77d3",
+                                    "416e539a-a357-11ed-932e-5254004d77d3"
+                                ],
+                                "show_name": true,
+                                "type": "map_popup"
+                            },
+                            "name": {
+                                "first_only": true,
+                                "node_ids": [
+                                    "67997a7e-9dc4-11ed-9ef3-5254004d77d3",
+                                    "59c1b050-3c49-11ee-9268-080027b7463b"
+                                ],
+                                "show_name": false,
+                                "type": "name"
+                            }
+                        },
+                        "module": "bcfms.functions.bc_fossils_descriptors",
+                        "triggering_nodegroups": []
+                    },
+                    "function_id": "60000000-0000-0000-0000-000000001001",
+                    "graph_id": "2aa724d1-ffd3-4823-8ff1-15a385b9a407",
+                    "id": "81b9bb69-f8f7-49d6-805b-bee5ebac95b9"
+                }
+            ],
             "graphid": "2aa724d1-ffd3-4823-8ff1-15a385b9a407",
             "iconclass": "fa fa-diamond",
             "is_editable": true,
