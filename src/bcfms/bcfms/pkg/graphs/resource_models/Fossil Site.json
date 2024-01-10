@@ -51,7 +51,7 @@
                     "instructions": {
                         "en": ""
                     },
-                    "is_editable": true,
+                    "is_editable": false,
                     "name": {
                         "en": "Location"
                     },
@@ -78,7 +78,7 @@
                     "instructions": {
                         "en": "Provide a brief, unique, descriptive site name."
                     },
-                    "is_editable": true,
+                    "is_editable": false,
                     "name": {
                         "en": "Site Name"
                     },
@@ -105,7 +105,7 @@
                     "instructions": {
                         "en": ""
                     },
-                    "is_editable": true,
+                    "is_editable": false,
                     "name": {
                         "en": "Significance Ranking Code"
                     },
@@ -620,30 +620,48 @@
             "functions_x_graphs": [
                 {
                     "config": {
+                        "class_name": "BCFossilsDescriptors",
                         "descriptor_types": {
                             "description": {
-                                "nodegroup_id": "d08d1b72-70d7-11ed-9c1b-5254004d77d3",
-                                "string_template": "<Significance Ranking Code>, <Significance Ranking Details>"
+                                "delimiter": "<br>",
+                                "first_only": false,
+                                "node_ids": [
+                                    "8063fb90-41ef-11ee-90b5-080027b7463b",
+                                    "d08d1b72-70d7-11ed-9c1b-5254004d77d3"
+                                ],
+                                "show_name": true,
+                                "type": "description"
                             },
                             "map_popup": {
-                                "nodegroup_id": "d08d1b72-70d7-11ed-9c1b-5254004d77d3",
-                                "string_template": "<Significance Ranking Code>, <Significance Ranking Details>"
+                                "delimiter": "<br>",
+                                "first_only": false,
+                                "node_ids": [
+                                    "8063fb90-41ef-11ee-90b5-080027b7463b",
+                                    "d08d1b72-70d7-11ed-9c1b-5254004d77d3"
+                                ],
+                                "show_name": true,
+                                "type": "map_popup"
                             },
                             "name": {
-                                "nodegroup_id": "8d8b71ea-9b47-11ec-b9e6-5254008afee6",
-                                "string_template": "<Fossil Site Name>"
+                                "first_only": true,
+                                "node_ids": [
+                                    "8d8b71ea-9b47-11ec-b9e6-5254008afee6"
+                                ],
+                                "show_name": false,
+                                "type": "name"
                             }
                         },
+                        "module": "bcfms.functions.bc_fossils_descriptors",
                         "triggering_nodegroups": []
                     },
-                    "function_id": "60000000-0000-0000-0000-000000000001",
+                    "function_id": "60000000-0000-0000-0000-000000001001",
                     "graph_id": "fac1b1b4-1034-11ec-8a7a-5254008afee6",
-                    "id": "c9d60859-7111-47a5-a934-df477a42856e"
+                    "id": "aa4cca59-de8a-4b6f-8280-37d622074cae"
                 }
             ],
             "graphid": "fac1b1b4-1034-11ec-8a7a-5254008afee6",
             "iconclass": "fa fa-compass",
-            "is_editable": true,
+            "is_editable": false,
             "isresource": true,
             "jsonldcontext": null,
             "name": {
@@ -996,8 +1014,8 @@
         }
     ],
     "metadata": {
-        "db": "PostgreSQL 16.0 on x86_64-pc-linux-gnu, compiled by gcc (GCC) 11.3.1 20221121 (Red Hat 11.3.1-4), 64-bit",
-        "git hash": "e10813e38 2023-12-11 05:06:58 -0800",
+        "db": "PostgreSQL 15.3 on x86_64-pc-linux-gnu, compiled by gcc (GCC) 11.3.1 20221121 (Red Hat 11.3.1-4), 64-bit",
+        "git hash": "878aec681 2023-11-20 12:09:49 -0800",
         "os": "Linux",
         "os version": "5.14.0-333.el9.x86_64"
     }
