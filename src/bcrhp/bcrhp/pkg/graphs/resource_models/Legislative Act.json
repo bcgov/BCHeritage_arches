@@ -40,10 +40,10 @@
                             "card_id": "7e71fa57-b986-406b-bde6-3a8996937fe8",
                             "constraintid": "f3445b24-505e-4d78-b03b-36c53d96ae2c",
                             "nodes": [
+                                "9e49c774-3b88-11ee-a701-080027b7463b",
                                 "488c680a-3b88-11ee-a701-080027b7463b",
                                 "7789d580-3b87-11ee-a701-080027b7463b",
-                                "7d3bcc42-3b8a-11ee-a93e-080027b7463b",
-                                "9e49c774-3b88-11ee-a701-080027b7463b"
+                                "7d3bcc42-3b8a-11ee-a93e-080027b7463b"
                             ],
                             "uniquetoallinstances": true
                         }
@@ -446,7 +446,7 @@
                     },
                     "function_id": "60000000-0000-0000-0000-000000000001",
                     "graph_id": "52dd40f2-1dee-45d2-b72c-234c8cbb5418",
-                    "id": "610de132-dc44-4c78-9696-d6b03ca2c189"
+                    "id": "2ad84874-c455-48d6-a140-914eed789d36"
                 }
             ],
             "graphid": "52dd40f2-1dee-45d2-b72c-234c8cbb5418",
@@ -485,8 +485,8 @@
                     },
                     "datatype": "date",
                     "description": null,
-                    "exportable": false,
-                    "fieldname": null,
+                    "exportable": true,
+                    "fieldname": "STRT_DT",
                     "graph_id": "52dd40f2-1dee-45d2-b72c-234c8cbb5418",
                     "hascustomalias": false,
                     "is_collector": false,
@@ -508,8 +508,8 @@
                     },
                     "datatype": "date",
                     "description": null,
-                    "exportable": false,
-                    "fieldname": null,
+                    "exportable": true,
+                    "fieldname": "END_DT",
                     "graph_id": "52dd40f2-1dee-45d2-b72c-234c8cbb5418",
                     "hascustomalias": false,
                     "is_collector": false,
@@ -626,8 +626,8 @@
                     },
                     "datatype": "file-list",
                     "description": null,
-                    "exportable": false,
-                    "fieldname": null,
+                    "exportable": true,
+                    "fieldname": "DCMNT",
                     "graph_id": "52dd40f2-1dee-45d2-b72c-234c8cbb5418",
                     "hascustomalias": false,
                     "is_collector": true,
@@ -649,8 +649,8 @@
                     },
                     "datatype": "string",
                     "description": null,
-                    "exportable": false,
-                    "fieldname": null,
+                    "exportable": true,
+                    "fieldname": "CTTN",
                     "graph_id": "52dd40f2-1dee-45d2-b72c-234c8cbb5418",
                     "hascustomalias": false,
                     "is_collector": false,
@@ -727,8 +727,8 @@
                     },
                     "datatype": "boolean",
                     "description": null,
-                    "exportable": false,
-                    "fieldname": null,
+                    "exportable": true,
+                    "fieldname": "ACTV",
                     "graph_id": "52dd40f2-1dee-45d2-b72c-234c8cbb5418",
                     "hascustomalias": false,
                     "is_collector": false,
@@ -749,7 +749,11 @@
                         "graphs": [
                             {
                                 "graphid": "52dd40f2-1dee-45d2-b72c-234c8cbb5418",
-                                "name": "Legislative Act"
+                                "inverseRelationshipConcept": "ac41d9be-79db-4256-b368-2f4559cfbe55",
+                                "name": "Legislative Act",
+                                "relationshipCollection": "00000000-0000-0000-0000-000000000005",
+                                "relationshipConcept": "ac41d9be-79db-4256-b368-2f4559cfbe55",
+                                "useOntologyRelationship": false
                             }
                         ],
                         "searchDsl": "",
@@ -757,8 +761,8 @@
                     },
                     "datatype": "resource-instance",
                     "description": null,
-                    "exportable": false,
-                    "fieldname": null,
+                    "exportable": true,
+                    "fieldname": "RPLCD_BY",
                     "graph_id": "52dd40f2-1dee-45d2-b72c-234c8cbb5418",
                     "hascustomalias": false,
                     "is_collector": false,
@@ -778,8 +782,8 @@
             "publication": {
                 "graph_id": "52dd40f2-1dee-45d2-b72c-234c8cbb5418",
                 "notes": null,
-                "publicationid": "64870604-ae8e-11ee-9f97-080027b7463b",
-                "published_time": "2024-01-08T19:28:29.022"
+                "publicationid": "721ac040-b004-11ee-91b7-005056a3bc47",
+                "published_time": "2024-01-10T16:06:03.577"
             },
             "relatable_resource_model_ids": [],
             "resource_2_resource_constraints": [],
@@ -814,9 +818,9 @@
         }
     ],
     "metadata": {
-        "db": "PostgreSQL 15.3 on x86_64-pc-linux-gnu, compiled by gcc (GCC) 11.3.1 20221121 (Red Hat 11.3.1-4), 64-bit",
-        "git hash": "878aec681 2023-11-20 12:09:49 -0800",
+        "db": "PostgreSQL 16.1 on x86_64-pc-linux-gnu, compiled by gcc (GCC) 11.4.1 20230605 (Red Hat 11.4.1-2), 64-bit",
+        "git hash": "fatal: not a git repository (or any parent up to mount point /fs)",
         "os": "Linux",
-        "os version": "5.14.0-333.el9.x86_64"
+        "os version": "5.14.0-284.30.1.el9_2.x86_64"
     }
 }

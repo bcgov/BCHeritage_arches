@@ -118,7 +118,7 @@
                     "instructions": {
                         "en": ""
                     },
-                    "is_editable": true,
+                    "is_editable": false,
                     "name": {
                         "en": "Government Name"
                     },
@@ -436,12 +436,12 @@
                     },
                     "function_id": "60000000-0000-0000-0000-000000000001",
                     "graph_id": "aacf8bb6-3f6e-46d9-a551-b0749d7efffc",
-                    "id": "b3dbd6d5-cbde-4bfb-83b2-c1a86d1bf7ae"
+                    "id": "bff2db26-8737-4251-81c9-bca025e50af5"
                 }
             ],
             "graphid": "aacf8bb6-3f6e-46d9-a551-b0749d7efffc",
             "iconclass": "fa fa-group",
-            "is_editable": true,
+            "is_editable": false,
             "isresource": true,
             "jsonldcontext": null,
             "name": {
@@ -504,8 +504,8 @@
                     },
                     "datatype": "geojson-feature-collection",
                     "description": "Represents a single node in a graph",
-                    "exportable": false,
-                    "fieldname": "",
+                    "exportable": true,
+                    "fieldname": "GOV_BNDR",
                     "graph_id": "aacf8bb6-3f6e-46d9-a551-b0749d7efffc",
                     "hascustomalias": false,
                     "is_collector": true,
@@ -568,11 +568,13 @@
                 },
                 {
                     "alias": "postal_code",
-                    "config": {},
+                    "config": {
+                        "en": ""
+                    },
                     "datatype": "string",
                     "description": null,
-                    "exportable": false,
-                    "fieldname": null,
+                    "exportable": true,
+                    "fieldname": "PSTL_CD",
                     "graph_id": "aacf8bb6-3f6e-46d9-a551-b0749d7efffc",
                     "hascustomalias": false,
                     "is_collector": false,
@@ -594,8 +596,8 @@
                     },
                     "datatype": "string",
                     "description": null,
-                    "exportable": false,
-                    "fieldname": null,
+                    "exportable": true,
+                    "fieldname": "STRT_ADRS",
                     "graph_id": "aacf8bb6-3f6e-46d9-a551-b0749d7efffc",
                     "hascustomalias": false,
                     "is_collector": false,
@@ -612,11 +614,13 @@
                 },
                 {
                     "alias": "city",
-                    "config": {},
+                    "config": {
+                        "en": ""
+                    },
                     "datatype": "string",
                     "description": null,
-                    "exportable": false,
-                    "fieldname": null,
+                    "exportable": true,
+                    "fieldname": "CTY",
                     "graph_id": "aacf8bb6-3f6e-46d9-a551-b0749d7efffc",
                     "hascustomalias": false,
                     "is_collector": false,
@@ -638,8 +642,8 @@
                     },
                     "datatype": "concept",
                     "description": null,
-                    "exportable": false,
-                    "fieldname": null,
+                    "exportable": true,
+                    "fieldname": "PRVNC",
                     "graph_id": "aacf8bb6-3f6e-46d9-a551-b0749d7efffc",
                     "hascustomalias": false,
                     "is_collector": false,
@@ -728,8 +732,8 @@
             "publication": {
                 "graph_id": "aacf8bb6-3f6e-46d9-a551-b0749d7efffc",
                 "notes": null,
-                "publicationid": "8c555d6e-ae54-11ee-a889-080027b7463b",
-                "published_time": "2024-01-08T12:34:24.996"
+                "publicationid": "cfa86ce0-b003-11ee-820b-005056a3bc47",
+                "published_time": "2024-01-10T16:01:31.037"
             },
             "relatable_resource_model_ids": [],
             "resource_2_resource_constraints": [],
@@ -764,9 +768,9 @@
         }
     ],
     "metadata": {
-        "db": "PostgreSQL 16.0 on x86_64-pc-linux-gnu, compiled by gcc (GCC) 11.3.1 20221121 (Red Hat 11.3.1-4), 64-bit",
-        "git hash": "878aec681 2023-11-20 12:09:49 -0800",
+        "db": "PostgreSQL 16.1 on x86_64-pc-linux-gnu, compiled by gcc (GCC) 11.4.1 20230605 (Red Hat 11.4.1-2), 64-bit",
+        "git hash": "fatal: not a git repository (or any parent up to mount point /fs)",
         "os": "Linux",
-        "os version": "5.14.0-333.el9.x86_64"
+        "os version": "5.14.0-284.30.1.el9_2.x86_64"
     }
 }

@@ -51,7 +51,7 @@
                     "instructions": {
                         "en": ""
                     },
-                    "is_editable": false,
+                    "is_editable": true,
                     "name": {
                         "en": "Submission Details"
                     },
@@ -829,12 +829,12 @@
                     },
                     "function_id": "60000000-0000-0000-0000-000000001005",
                     "graph_id": "4e69d0a9-7af2-473f-929f-71d462ea32d1",
-                    "id": "09e49624-8310-4fb3-ad1b-d80c620a7204"
+                    "id": "f745529d-e985-4ef7-87f0-4a1136f4f819"
                 }
             ],
             "graphid": "4e69d0a9-7af2-473f-929f-71d462ea32d1",
             "iconclass": "fa fa-envelope",
-            "is_editable": false,
+            "is_editable": true,
             "isresource": true,
             "jsonldcontext": null,
             "name": {
@@ -903,14 +903,14 @@
                     "sourcebranchpublication_id": null
                 },
                 {
-                    "alias": "requested_operation_n1",
+                    "alias": "requested_operation",
                     "config": {
                         "rdmCollection": "20752dc2-a0a1-44f6-afed-c5c9023cee97"
                     },
                     "datatype": "concept",
                     "description": "Addition, Removal or Update.\nShould this be assigned at the Site level? Eg - do you want to allow ",
-                    "exportable": false,
-                    "fieldname": null,
+                    "exportable": true,
+                    "fieldname": "RQSTD_OP",
                     "graph_id": "4e69d0a9-7af2-473f-929f-71d462ea32d1",
                     "hascustomalias": false,
                     "is_collector": false,
@@ -926,14 +926,14 @@
                     "sourcebranchpublication_id": null
                 },
                 {
-                    "alias": "operation_details_n1",
+                    "alias": "operation_details",
                     "config": {
                         "en": ""
                     },
                     "datatype": "string",
                     "description": "Rationale for Removal or type of Update.",
-                    "exportable": false,
-                    "fieldname": null,
+                    "exportable": true,
+                    "fieldname": "OP_DTLS",
                     "graph_id": "4e69d0a9-7af2-473f-929f-71d462ea32d1",
                     "hascustomalias": false,
                     "is_collector": false,
@@ -955,8 +955,8 @@
                     },
                     "datatype": "concept-list",
                     "description": null,
-                    "exportable": false,
-                    "fieldname": null,
+                    "exportable": true,
+                    "fieldname": "SUB_TYP",
                     "graph_id": "4e69d0a9-7af2-473f-929f-71d462ea32d1",
                     "hascustomalias": false,
                     "is_collector": false,
@@ -1053,8 +1053,8 @@
                     },
                     "datatype": "resource-instance",
                     "description": null,
-                    "exportable": false,
-                    "fieldname": null,
+                    "exportable": true,
+                    "fieldname": "ALT_ASNG",
                     "graph_id": "4e69d0a9-7af2-473f-929f-71d462ea32d1",
                     "hascustomalias": false,
                     "is_collector": false,
@@ -1151,8 +1151,8 @@
                     },
                     "datatype": "resource-instance",
                     "description": null,
-                    "exportable": false,
-                    "fieldname": null,
+                    "exportable": true,
+                    "fieldname": "ASSNGD_TO",
                     "graph_id": "4e69d0a9-7af2-473f-929f-71d462ea32d1",
                     "hascustomalias": false,
                     "is_collector": false,
@@ -1197,8 +1197,8 @@
                     },
                     "datatype": "date",
                     "description": "Date the submission was received by Heritage Branch",
-                    "exportable": false,
-                    "fieldname": null,
+                    "exportable": true,
+                    "fieldname": "SUB_DT",
                     "graph_id": "4e69d0a9-7af2-473f-929f-71d462ea32d1",
                     "hascustomalias": false,
                     "is_collector": false,
@@ -1270,8 +1270,8 @@
                     },
                     "datatype": "resource-instance",
                     "description": null,
-                    "exportable": false,
-                    "fieldname": null,
+                    "exportable": true,
+                    "fieldname": "HRTG_ST",
                     "graph_id": "4e69d0a9-7af2-473f-929f-71d462ea32d1",
                     "hascustomalias": false,
                     "is_collector": true,
@@ -1293,8 +1293,8 @@
                     },
                     "datatype": "string",
                     "description": "Internal Heritage Branch notes related to the site submitted",
-                    "exportable": false,
-                    "fieldname": null,
+                    "exportable": true,
+                    "fieldname": "ST_SUB_NTS",
                     "graph_id": "4e69d0a9-7af2-473f-929f-71d462ea32d1",
                     "hascustomalias": false,
                     "is_collector": false,
@@ -1316,8 +1316,8 @@
                     },
                     "datatype": "concept",
                     "description": null,
-                    "exportable": false,
-                    "fieldname": null,
+                    "exportable": true,
+                    "fieldname": "INF_PRVD",
                     "graph_id": "4e69d0a9-7af2-473f-929f-71d462ea32d1",
                     "hascustomalias": false,
                     "is_collector": false,
@@ -1342,8 +1342,8 @@
                     },
                     "datatype": "file-list",
                     "description": null,
-                    "exportable": false,
-                    "fieldname": null,
+                    "exportable": true,
+                    "fieldname": "SUB_DOCS",
                     "graph_id": "4e69d0a9-7af2-473f-929f-71d462ea32d1",
                     "hascustomalias": false,
                     "is_collector": true,
@@ -1365,8 +1365,8 @@
                     },
                     "datatype": "date",
                     "description": null,
-                    "exportable": false,
-                    "fieldname": null,
+                    "exportable": true,
+                    "fieldname": "DLVR_DT",
                     "graph_id": "4e69d0a9-7af2-473f-929f-71d462ea32d1",
                     "hascustomalias": false,
                     "is_collector": false,
@@ -1388,8 +1388,8 @@
                     },
                     "datatype": "string",
                     "description": "BCRHP Internal notes about the submission",
-                    "exportable": false,
-                    "fieldname": null,
+                    "exportable": true,
+                    "fieldname": "SUB_INT_NT",
                     "graph_id": "4e69d0a9-7af2-473f-929f-71d462ea32d1",
                     "hascustomalias": false,
                     "is_collector": true,
@@ -1411,8 +1411,8 @@
                     },
                     "datatype": "date",
                     "description": "Date the submission was completed.",
-                    "exportable": false,
-                    "fieldname": null,
+                    "exportable": true,
+                    "fieldname": "CMPLTN_DT",
                     "graph_id": "4e69d0a9-7af2-473f-929f-71d462ea32d1",
                     "hascustomalias": false,
                     "is_collector": false,
@@ -1428,14 +1428,14 @@
                     "sourcebranchpublication_id": null
                 },
                 {
-                    "alias": null,
+                    "alias": "comments_to_lg",
                     "config": {
                         "en": ""
                     },
                     "datatype": "string",
                     "description": "Notes sent to the Local Government regarding the site submission",
-                    "exportable": false,
-                    "fieldname": null,
+                    "exportable": true,
+                    "fieldname": "CMNTS_LG",
                     "graph_id": "4e69d0a9-7af2-473f-929f-71d462ea32d1",
                     "hascustomalias": false,
                     "is_collector": true,
@@ -1548,8 +1548,8 @@
                     },
                     "datatype": "resource-instance-list",
                     "description": null,
-                    "exportable": false,
-                    "fieldname": null,
+                    "exportable": true,
+                    "fieldname": "RCPNTS",
                     "graph_id": "4e69d0a9-7af2-473f-929f-71d462ea32d1",
                     "hascustomalias": false,
                     "is_collector": false,
@@ -1571,8 +1571,8 @@
                     },
                     "datatype": "number",
                     "description": null,
-                    "exportable": false,
-                    "fieldname": null,
+                    "exportable": true,
+                    "fieldname": "TL_NMBR_ST",
                     "graph_id": "4e69d0a9-7af2-473f-929f-71d462ea32d1",
                     "hascustomalias": false,
                     "is_collector": false,
@@ -1672,8 +1672,8 @@
             "publication": {
                 "graph_id": "4e69d0a9-7af2-473f-929f-71d462ea32d1",
                 "notes": null,
-                "publicationid": "335b617c-a0f8-11ee-a579-080027b7463b",
-                "published_time": "2023-12-22T12:30:36.902"
+                "publicationid": "5468bfec-b005-11ee-89d4-005056a3bc47",
+                "published_time": "2024-01-10T16:12:23.254"
             },
             "relatable_resource_model_ids": [],
             "resource_2_resource_constraints": [],
@@ -1708,9 +1708,9 @@
         }
     ],
     "metadata": {
-        "db": "PostgreSQL 15.3 on x86_64-pc-linux-gnu, compiled by gcc (GCC) 11.3.1 20221121 (Red Hat 11.3.1-4), 64-bit",
-        "git hash": "878aec681 2023-11-20 12:09:49 -0800",
+        "db": "PostgreSQL 16.1 on x86_64-pc-linux-gnu, compiled by gcc (GCC) 11.4.1 20230605 (Red Hat 11.4.1-2), 64-bit",
+        "git hash": "fatal: not a git repository (or any parent up to mount point /fs)",
         "os": "Linux",
-        "os version": "5.14.0-333.el9.x86_64"
+        "os version": "5.14.0-284.30.1.el9_2.x86_64"
     }
 }
