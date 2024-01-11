@@ -1,0 +1,16 @@
+{% extends "views/components/widgets/datepicker.htm" %}
+{% load i18n %}
+
+{% block form %}
+{{block.super}}
+<div class="crhp-export-button">
+    <button class="btn btn-shim btn-labeled btn-lg fa fa-download btn-primary" data-bind="attr: {disabled: disableSubmit}, click: function(){getCrhpXml()}">
+        <span>Generate CRHP XML</span>
+    </button>
+    <i class="fa fa-spin fa-spinner" data-bind="visible: xmlDownloadPending() === true"></i>
+</div>
+{% endblock form %}
+
+{% block report %}
+{{block.super}}
+{% endblock report %}

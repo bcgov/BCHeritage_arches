@@ -40,7 +40,7 @@ urlpatterns = [
                   re_path(
                       r"^%scrhp_export/(?P<resourceinstanceid>%s)$" % (settings.BCGOV_PROXY_PREFIX, uuid_regex),
                       CRHPXmlExport.as_view(),
-                      name="borden_number",
+                      name="crhp_export",
                       ),
                   re_path(
                       r"^%smvt/(?P<nodeid>%s)/(?P<zoom>[0-9]+|\{z\})/(?P<x>[0-9]+|\{x\})/(?P<y>[0-9]+|\{y\}).pbf$" % (settings.BCGOV_PROXY_PREFIX, uuid_regex),
