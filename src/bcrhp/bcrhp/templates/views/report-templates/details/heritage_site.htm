@@ -1,0 +1,158 @@
+<div class="bcrhp-grid-container">
+    <div class="bcrhp-grid-item grid-col-1 grid-row-1">
+        <dl class="dl-vertical dl-vertical-bc" >
+            <dt>Site Names</dt>
+            <!-- ko let: {nameWidget: getWidgetForAlias('name')} -->
+            <!-- ko let: {nameTypeWidget: getWidgetForAlias('name_type')} -->
+            <!-- ko foreach: { data: getTilesForAlias('name'), as: 'siteNameTile'} -->
+            <dd>
+                <div data-bind="component: { name: 'site-name-filter-widget',
+                                             params: {
+                                             tile: siteNameTile,
+                                             name_widget: nameWidget,
+                                             name_type_widget: nameTypeWidget,
+                                             visible_name_types: ['Common'],
+                                             state: 'display_value'
+                                            }
+                                        }"></div>
+            </dd>
+            <!-- /ko -->
+            <!-- /ko -->
+            <!-- /ko -->
+        </dl>
+    </div>
+    <div class="bchrp-grid-item grid-col-2 grid-col-2 grid-row-1">
+        <dl class="dl-vertical dl-vertical-bc">
+            <dt>Borden Number</dt>
+            <dd data-bind="component: { name: 'borden-number-widget',
+                                        params: { value: getFirstNodeValue('borden_number'), state: 'display_value'}
+                                        }"></dd>
+        </dl>
+    </div>
+
+    <div class="grid-row-1 grid-col-3 bc-details-images">
+        <!-- ko let: { photocard: getCardWithName('Images') } -->
+        <!-- ko let: { photoWidget: getWidgetForAlias('site_images') } -->
+        <!-- ko let: { titleWidget: getWidgetForAlias('image_features') } -->
+        <!-- ko let: { descriptionWidget: getWidgetForAlias('image_description') } -->
+        <dl class="dl-vertical">
+            <dt data-bind="class: photoWidget.node.alias"></dt>
+            <dd>
+                <!-- ko foreach: { data: photocard.tiles, as: 'phototile' } -->
+                <span data-bind="component: {
+                                            name: 'photo-widget',
+                                            params: {
+                                                tile: phototile,
+                                                node: photoWidget.node,
+                                                config: photoWidget.config,
+                                                value: phototile.data[photoWidget.attributes.node_id()],
+                                                imageTitle: phototile.data[titleWidget.attributes.node_id()],
+                                                imageDescription: phototile.data[descriptionWidget.attributes.node_id()],
+                                                state: 'display_value',
+                                            }
+                                        }, click: function(event){console.log(photocard);}"></span>
+                <!-- /ko -->
+
+            </dd>
+        </dl>
+        <!-- /ko -->
+        <!-- /ko -->
+        <!-- /ko -->
+        <!-- /ko -->
+    </div>
+    <div class="bcrhp-grid-item grid-col-1 grid-row-2">
+        <!-- ko let: { card: getCardWithName(['Heritage Site Location', 'BC Property Address']) } -->
+        <!-- ko foreach: { data: card.tiles, as: 'tile' } -->
+        <dl class="dl-vertical dl-vertical-bc"
+            data-bind="css: {'provisional': ko.unwrap(tile.provisionaledits) !== null && tile.userisreviewer === false}">
+            <!-- ko if: tileIndex() === 0 -->
+            <dt>Property Address(es)</dt>
+            <!-- /ko -->
+            <dd data-bind="component: {
+                                            name: 'civic-address-widget',
+                                            params: {
+                                                tile: tile,
+                                                card: card,
+                                                value: tile.data,
+                                                state: 'display_value',
+                                            }
+                                        }, click: function(){console.log(card);}"></dd>
+        </dl>
+        <!-- /ko -->
+        <!-- /ko -->
+    </div>
+    <div class="bcrhp-grid-item grid-col-2 grid-row-2">
+        <!-- ko let: { card: getCardWithName('Official Recognition Information') } -->
+        <!-- ko let: { widget: getWidgetWithLabel(card, 'Registry Types') } -->
+        <!-- ko foreach: { data: card.tiles, as: 'tile' } -->
+        <dl class="dl-vertical dl-vertical-bc"
+            data-bind="css: {'provisional': ko.unwrap(tile.provisionaledits) !== null && tile.userisreviewer === false}">
+            <!-- ko if: tileIndex() === 0 -->
+            <dt data-bind="text: widget.label(), class: widget.node.alias"></dt>
+            <!-- /ko -->
+            <dd data-bind="component: {
+                                            name: widget.widgetLookup[widget.widget_id()].name,
+                                            params: {
+                                                tile: tile,
+                                                node: widget.node,
+                                                config: widget.config,
+                                                label: widget.label(),
+                                                value: tile.data[widget.attributes.node_id()],
+                                                state: 'display_value'
+                                            }
+                                        }, click: function(){console.log(card);}"></dd>
+        </dl>
+        <!-- /ko -->
+        <!-- /ko -->
+        <!-- /ko -->
+    </div>
+    <div class="bcrhp-grid-item grid-col-1 grid-row-3">
+        <dl class="dl-vertical dl-vertical-bc">
+            <dt>Construction Date(s)</dt>
+            <!-- ko foreach: { data: getTilesForAlias('chronology'), as: 'tile' } -->
+            <dd data-bind="component: {
+                                            name: 'significant-event-widget',
+                                            params: {
+                                                card: $parent.getWidgetForAlias('chronology').card,
+                                                tile: tile,
+                                                value: tile.data,
+                                                state: 'display_value',
+                                                event_types: ['Construction']
+                                            }
+                                        }, click: function(){console.log(card);}"></dd>
+            <!-- /ko -->
+        </dl>
+    </div>
+    <div class="bcrhp-grid-item grid-col-2 grid-row-3">
+        <dl class="dl-vertical dl-vertical-bc">
+            <dt>Legislative Act</dt>
+            <dd>
+                <!-- ko foreach: { data: getResourceInstanceValues('legislative_act'), as: 'legislative_act' } -->
+                <div data-bind="component: {
+                                            name: 'resource-instance-select-widget',
+                                            params: { value: legislative_act, state: 'display_value'}
+                                        }"></div>
+                <!-- /ko -->
+            </dd>
+        </dl>
+    </div>
+
+    <div class="bcrhp-grid-item bcrhp-full-width-grid-item bc-top-offset"
+         data-bind="visible: nodesHaveData(['significance_type','physical_description'])">
+        <dl>
+            <dt>
+            <span style="text-decoration: underline;" data-bind="component: {name: 'concept-select-widget',
+                                            params: {value: getFirstNodeValue('significance_type'),
+                                                     state: 'display_value'}
+                                        }"></span>
+                <span>Statement of Significance</span>
+            </dt>
+            <dd>Description</dd>
+            <dd data-bind="component: {name: 'rich-text-widget',
+                           params: {value: getFirstNodeValue('physical_description'),
+                                    state: 'display_value',
+                                    displayfullvalue: true}
+                           }"></dd>
+        </dl>
+    </div>
+</div>
