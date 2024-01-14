@@ -31,14 +31,13 @@
     </div>
 
     <div class="grid-row-1 grid-col-3 bc-details-images">
-        <!-- ko let: { photocard: getCardWithName('Images') } -->
         <!-- ko let: { photoWidget: getWidgetForAlias('site_images') } -->
         <!-- ko let: { titleWidget: getWidgetForAlias('image_features') } -->
         <!-- ko let: { descriptionWidget: getWidgetForAlias('image_description') } -->
         <dl class="dl-vertical">
             <dt data-bind="class: photoWidget.node.alias"></dt>
             <dd>
-                <!-- ko foreach: { data: photocard.tiles, as: 'phototile' } -->
+                <!-- ko foreach: { data: getTilesForAlias('site_images'), as: 'phototile' } -->
                 <span data-bind="component: {
                                             name: 'photo-widget',
                                             params: {
@@ -52,10 +51,8 @@
                                             }
                                         }, click: function(event){console.log(photocard);}"></span>
                 <!-- /ko -->
-
             </dd>
         </dl>
-        <!-- /ko -->
         <!-- /ko -->
         <!-- /ko -->
         <!-- /ko -->
@@ -82,29 +79,15 @@
         <!-- /ko -->
     </div>
     <div class="bcrhp-grid-item grid-col-2 grid-row-2">
-        <!-- ko let: { card: getCardWithName('Official Recognition Information') } -->
-        <!-- ko let: { widget: getWidgetWithLabel(card, 'Registry Types') } -->
-        <!-- ko foreach: { data: card.tiles, as: 'tile' } -->
-        <dl class="dl-vertical dl-vertical-bc"
-            data-bind="css: {'provisional': ko.unwrap(tile.provisionaledits) !== null && tile.userisreviewer === false}">
-            <!-- ko if: tileIndex() === 0 -->
-            <dt data-bind="text: widget.label(), class: widget.node.alias"></dt>
-            <!-- /ko -->
-            <dd data-bind="component: {
-                                            name: widget.widgetLookup[widget.widget_id()].name,
+        <dl class="dl-vertical dl-vertical-bc">
+            <dt class="registry_types">Registry Types</dt>
+            <dd data-bind="component: { name: 'concept-multiselect-widget',
                                             params: {
-                                                tile: tile,
-                                                node: widget.node,
-                                                config: widget.config,
-                                                label: widget.label(),
-                                                value: tile.data[widget.attributes.node_id()],
+                                                value: getFirstNodeValue('registry_types'),
                                                 state: 'display_value'
                                             }
-                                        }, click: function(){console.log(card);}"></dd>
+                                        }"></dd>
         </dl>
-        <!-- /ko -->
-        <!-- /ko -->
-        <!-- /ko -->
     </div>
     <div class="bcrhp-grid-item grid-col-1 grid-row-3">
         <dl class="dl-vertical dl-vertical-bc">
@@ -140,8 +123,8 @@
     <div class="bcrhp-grid-item bcrhp-full-width-grid-item bc-top-offset"
          data-bind="visible: nodesHaveData(['significance_type','physical_description'])">
         <dl>
-            <dt>
-            <span style="text-decoration: underline;" data-bind="component: {name: 'concept-select-widget',
+            <dt style="text-decoration: underline;">
+            <span data-bind="component: {name: 'concept-select-widget',
                                             params: {value: getFirstNodeValue('significance_type'),
                                                      state: 'display_value'}
                                         }"></span>
