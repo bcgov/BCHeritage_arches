@@ -34,6 +34,7 @@
         <!-- ko let: { photoWidget: getWidgetForAlias('site_images') } -->
         <!-- ko let: { titleWidget: getWidgetForAlias('image_features') } -->
         <!-- ko let: { descriptionWidget: getWidgetForAlias('image_description') } -->
+        <!-- ko if: photoWidget -->
         <dl class="dl-vertical">
             <dt data-bind="class: photoWidget.node.alias"></dt>
             <dd>
@@ -49,10 +50,12 @@
                                                 imageDescription: phototile.data[descriptionWidget.attributes.node_id()],
                                                 state: 'display_value',
                                             }
-                                        }, click: function(event){console.log(photocard);}"></span>
+                                        }, click: function(event){console.log(photocard);},
+                                        css: {'print-hide': $index() > 1}"></span>
                 <!-- /ko -->
             </dd>
         </dl>
+        <!-- /ko -->
         <!-- /ko -->
         <!-- /ko -->
         <!-- /ko -->
@@ -78,7 +81,7 @@
         <!-- /ko -->
         <!-- /ko -->
     </div>
-    <div class="bcrhp-grid-item grid-col-2 grid-row-2">
+    <div class="bcrhp-grid-item grid-col-2 grid-row-2 print-hide">
         <dl class="dl-vertical dl-vertical-bc">
             <dt class="registry_types">Registry Types</dt>
             <dd data-bind="component: { name: 'concept-multiselect-widget',
@@ -120,19 +123,37 @@
         </dl>
     </div>
 
-    <div class="bcrhp-grid-item bcrhp-full-width-grid-item bc-top-offset"
+    <div class="bc-grid-item bc-full-width-grid-item bc-top-offset"
          data-bind="visible: nodesHaveData(['significance_type','physical_description'])">
         <dl>
-            <dt style="text-decoration: underline;">
+            <dt>
             <span data-bind="component: {name: 'concept-select-widget',
                                             params: {value: getFirstNodeValue('significance_type'),
                                                      state: 'display_value'}
                                         }"></span>
                 <span>Statement of Significance</span>
             </dt>
-            <dd>Description</dd>
+            <dd class="bc-subsection-header">Description</dd>
             <dd data-bind="component: {name: 'rich-text-widget',
                            params: {value: getFirstNodeValue('physical_description'),
+                                    state: 'display_value',
+                                    displayfullvalue: true}
+                           }"></dd>
+            <dd class="bc-subsection-header print-only">Heritage Value</dd>
+            <dd class="print-only" data-bind="component: {name: 'rich-text-widget',
+                           params: {value: getFirstNodeValue('heritage_value'),
+                                    state: 'display_value',
+                                    displayfullvalue: true}
+                           }"></dd>
+            <dd class="bc-subsection-header print-only">Character Defining Elements</dd>
+            <dd class="print-only" data-bind="component: {name: 'rich-text-widget',
+                           params: {value: getFirstNodeValue('defining_elements'),
+                                    state: 'display_value',
+                                    displayfullvalue: true}
+                           }"></dd>
+            <dd class="bc-subsection-header print-only">Document Location</dd>
+            <dd class="print-only" data-bind="component: {name: 'text-widget',
+                           params: {value: getFirstNodeValue('document_location'),
                                     state: 'display_value',
                                     displayfullvalue: true}
                            }"></dd>

@@ -169,6 +169,11 @@ hr {
     width: auto !important;
 }
 
+.bc-subsection-header {
+    margin-top: 10px;
+    text-decoration: underline;
+}
+
 
 
 @media (min-width: 1366px)
@@ -288,6 +293,9 @@ img.bc-details-image
 }
 
 @media only screen and (min-width: 600px) {
+    .print-only {
+        display: none;
+    }
 }
 
 @media only screen and (min-width: 768px) {
@@ -322,4 +330,30 @@ img.bc-details-image
         display: none;
     }
 
+    @page {
+        size: letter;
+    }
+
+    .new-page {
+        page-break-before: always;
+        break-before: page;
+    }
+    
+    #main-content, .resource-report-abstract-container, .resource-component-abstract, .card-form-preview-container {
+        overflow: visible !important;
+        /*height: unset !important;*/
+    }
+
+    div {
+        break-before: auto;
+    }
+
+    #map-widget-container > .map-widget-container, .mapboxgl-map {
+        display: block !important;
+    }
+
+    .bc-full-width-grid-item
+    {
+        grid-column: 1 / span 3;
+    }
 }
