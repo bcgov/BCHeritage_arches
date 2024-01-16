@@ -6,6 +6,7 @@ from django.contrib.gis.geos import Point
 from arches.app.utils import geo_utils
 import json
 from bcrhp.util.bcrhp_aliases import BCRHPSiteAliases as site_aliases, GraphSlugs as slugs
+from bcrhp.util.hria_db import HriaDao
 
 import urllib
 import ssl
@@ -71,21 +72,12 @@ class BordenNumberApi:
     def get_next_borden_number(self, resourceinstanceid):
         self._initialize_models()
         borden_grid = self._get_borden_grid(resourceinstanceid)
-        with connection.cursor() as cursor:
-            cursor.execute("SELECT get_next_borden_number(%s)", [borden_grid])
-            row = cursor.fetchone()
-            print("Got borden number: %s" % row[0])
-            return row[0]
+        dao = HriaDao()
+        return dao.get_next_borden_sequence(borden_grid)
 
     @staticmethod
     def borden_number_exists(borden_number):
-        with connection.cursor() as cursor:
-            cursor.execute("SET client_min_messages = debug2")
-            cursor.execute("select count(*) from imp_hriatst1.tfm_site where bordennumber = %s",[borden_number])
-            # cursor.execute("SELECT borden_number_exists(%s)", [borden_number])
-            row = cursor.fetchone()
-            print("Borden number exists: %s" % row[0])
-            return row[0]
+        return HriaDao().borden_number_exists(borden_number)
 
     def reserve_borden_number(self, borden_number, resourceinstanceid):
         self._initialize_models()
@@ -97,8 +89,6 @@ class BordenNumberApi:
         if tile and tile.data:
             is_heritage_site = "Y" if tile.data[str(self.officially_recognized_node.nodeid)] else "N"
 
-        with connection.cursor() as cursor:
-            cursor.execute("SELECT reserve_borden_number(%s, %s, %s)", [borden_number, is_heritage_site, resourceinstanceid])
-            row = cursor.fetchone()
-            print("Reserve borden number: %s" % row[0])
-            return row[0]
+        HriaDao().reserve_borden_number(borden_number=borden_number,
+                                        is_heritage_site=is_heritage_site,
+                                        resourceinstanceid=resourceinstanceid)

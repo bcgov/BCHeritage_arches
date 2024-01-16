@@ -170,12 +170,12 @@ define([
             });
 
             self.getBordenNumber = function() {
-                let url = self.urls.borden_number;
+                let url = `${self.urls.root}borden_number/${self.tile.resourceinstance_id}`;
                 console.log(`Get borden number from ${url}...`)
                 self.form.loading(true);
                 $.ajax({
                     // type: "PUT",
-                    url: `/int/bcrhp/borden_number/${self.tile.resourceinstance_id}`
+                    url: url
                 }).done(function(data){
                     console.log(`Data: ${JSON.stringify(data)}`);
                     console.log(data);
