@@ -1,3 +1,6 @@
+import json
+import logging
+
 from arches.app.datatypes.datatypes import StringDataType
 from arches.app.models import models
 import re
@@ -18,6 +21,8 @@ details = {
     "issearchable": True,
 }
 
+logger = logging.getLogger(__name__)
+
 
 class BordenNumberDataType(StringDataType):
     borden_number_format = re.compile('^[A-Z][a-z][A-Z][a-z]-\d{1,4}$')
@@ -25,7 +30,14 @@ class BordenNumberDataType(StringDataType):
 
     def validate(self, value, row_number=None, source=None, node=None, nodeid=None, strict=False, **kwargs):
         errors = super(BordenNumberDataType, self).validate(value, row_number, source, node, nodeid, strict, **kwargs)
-        # print(source)
+        resource_id = None
+
+        if kwargs["request"] and kwargs["request"].POST and kwargs["request"].POST.get("data"):
+            dict = json.JSONDecoder().decode(kwargs["request"].POST.get("data"))
+            if dict is not None:
+                resource_id = dict["resourceinstance_id"]
+
+        logger.debug("Validating for resource instance id %s" % resource_id)
         try:
             if value is not None:
                 result = self.borden_number_format.match(value['en']['value'])
@@ -40,16 +52,24 @@ class BordenNumberDataType(StringDataType):
                             ),
                         }
                     )
-                else:
-                    if self.bn_api.borden_number_exists(value['en']['value']):
+                elif resource_id:
+                    try:
+                        logger.debug("Values: %s, %s" % (value, resource_id))
+                        logger.debug("Validating BN existence in validate()")
+                        if self.bn_api.validate_borden_number(value['en']['value'], resource_id):
+                            errors.append(
+                                {
+                                    "type": "ERROR",
+                                    "message": "Borden Number already exists."
+                                }
+                            )
+                    except Exception as e:
                         errors.append(
                             {
                                 "type": "ERROR",
-                                "message": "Borden Number already exists."
+                                "message": str(e)
                             }
                         )
-
-
         except Exception as e:
             print(e)
             errors.append(
@@ -77,10 +97,14 @@ class BordenNumberDataType(StringDataType):
         if borden_number is not None and len(borden_number) >= 6:
             tile.data[nodeid]['en']['value'] = re.sub(r"(.{2})(.{2})", r"\1 \2", borden_number, 1).title().replace(" ","")
 
-    def pre_tile_save(self, tile, nodeid):
-        # print("Tile: %s" % tile.data[nodeid])
+    def post_tile_save(self, tile, nodeid, request):
+        # This needs to happen after the save as we can't rollback the HRIA transaction after it is done.
+        # @todo - Should look into whether we can actually create the record in HRIA before the save and commit after
+
+        logger.debug("Tile: %s" % tile.data)
         value = tile.data[nodeid]['en']['value']
         # print("Saving %s:%s" % (tile.resourceinstance_id, value))
+        logger.debug("Trying to reserve borden number %s for %s" % (value, tile.resourceinstance_id))
         self.bn_api.reserve_borden_number(value, tile.resourceinstance_id)
 
     # def transform_export_values(self, value, *args, **kwargs):

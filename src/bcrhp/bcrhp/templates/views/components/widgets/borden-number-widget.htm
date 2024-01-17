@@ -55,10 +55,13 @@
             <div class="col-xs-12" style="display:flex;flex-wrap: wrap;flex-direction: row;">
                 <input type="text" style="flex:1; max-width: 200px" class="form-control input-lg widget-input"
                        data-bind="textInput: currentText,
-                        attr: {placeholder: placeholder, maxlength: maxLength, disabled: false, 'aria-label': label, dir: currentDirection},
+                        attr: {placeholder: placeholder, maxlength: maxLength, disabled: true, 'aria-label': label, dir: currentDirection},
                 ">
                 <div class="install-buttons" style="max-height: 36px; margin-left: 5px;">
-                    <button class="btn btn-shim btn-labeled btn-lg fa fa-plus btn-primary" data-bind="attr: {disabled: disable}, click: function(){getBordenNumber()}">
+                    <button class="btn btn-shim btn-labeled btn-lg fa fa-plus btn-primary"
+                            data-bind="attr: {disabled: disable},
+                                        visible: !disable(),
+                                        click: function(){getBordenNumber()}">
                         <span>Generate Borden Number</span>
                     </button>
                 </div>

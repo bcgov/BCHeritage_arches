@@ -1,5 +1,3 @@
-from django.db import connection
-
 from arches.app.models import models
 from arches.app.datatypes.datatypes import DataTypeFactory
 from django.contrib.gis.geos import Point
@@ -38,31 +36,31 @@ class BordenNumberApi:
     def _get_borden_grid(self, resourceinstanceid):
         tile = models.TileModel.objects.filter(resourceinstance_id=resourceinstanceid,
                                                nodegroup_id=self.geom_node.nodegroup_id).first()
-        print("Got tile: %s" % tile)
+        # print("Got tile: %s" % tile)
         datatype = self._datatype_factory.get_instance(self.geom_node.datatype)
         # geometry = datatype.get_display_value(tile, self.node)
-        print("Tile data: %s" % tile.data)
+        # print("Tile data: %s" % tile.data)
         geometry = tile.data[str(self.geom_node.nodeid)]
         
 
-        print('Geometry: %s %s' % (geometry, type(geometry)))
+        # print('Geometry: %s %s' % (geometry, type(geometry)))
         utils = geo_utils.GeoUtils()
         centroid = utils.get_centroid(geometry)
-        print('Centroid: %s %s' % (centroid, type(centroid)))
+        # print('Centroid: %s %s' % (centroid, type(centroid)))
 
         pnt = Point(centroid['coordinates'][0], centroid['coordinates'][1], srid=4326)
         desired_srid = 3005
         pnt.transform(desired_srid)
-        print("Translated: %s" % pnt.ewkt)
-        print("Points: %s, %s" % (pnt.x, pnt.y))
+        # print("Translated: %s" % pnt.ewkt)
+        # print("Points: %s, %s" % (pnt.x, pnt.y))
 
         url = BordenNumberApi._url % (pnt.x, pnt.y)
-        print(url)
+        # print(url)
 
         borden_grid = None
         with urllib.request.urlopen(url, context=BordenNumberApi.ctx) as response:
             body = json.loads(response.read().decode())
-            print("Got body: %s" % body)
+            # print("Got body: %s" % body)
             borden_grid = body["features"][0]["properties"]["BORDGRID"]
 
 
@@ -76,8 +74,8 @@ class BordenNumberApi:
         return dao.get_next_borden_sequence(borden_grid)
 
     @staticmethod
-    def borden_number_exists(borden_number):
-        return HriaDao().borden_number_exists(borden_number)
+    def validate_borden_number(borden_number, resourceinstanceid):
+        return HriaDao().validate_borden_number(borden_number, resourceinstanceid)
 
     def reserve_borden_number(self, borden_number, resourceinstanceid):
         self._initialize_models()
