@@ -8,6 +8,28 @@ dl.stratigraphy > dd > div.stratigraphy-level > div
    display: inline-block;
 }
 
+.card_component.scientific_name, .card_component.fossil_common_name  {
+   display: inline-block;
+   max-width: 70%;
+   min-width: 650px;
+}
+
+.card_component.new_species, .card_component.common_name_uncertain {
+   display: inline-block;
+   max-width: 29%;
+   vertical-align: bottom;
+   padding-bottom: 17px;
+}
+
+.card_component.journal_or_volume_name, .card_component.other_journal_or_volume_name {
+   display: inline-block;
+   width: 49%;
+}
+
+.row.journal_or_volume_name span.control-label {
+   margin-bottom: 10px;
+}
+
 .publication-identifier-type::before {
    content: "(";
 }
@@ -20,4 +42,3 @@ dl.stratigraphy > dd > div.stratigraphy-level > div
    color: rgb(120,120,120);
    font-style: italic;
 }
-
