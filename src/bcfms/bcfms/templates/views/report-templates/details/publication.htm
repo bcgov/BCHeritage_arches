@@ -48,14 +48,14 @@
             <dt>Journal or Publication Name</dt>
             <dd>
                 <div data-bind="component: { name: 'resource-instance-select-widget',
-                                            params: { value: getFirstNodeValue('journal_or_publication_name'), state: 'display_value' }
-                                            }, visible: nodesHaveData(['journal_or_publication_name'])">
+                                            params: { value: getFirstNodeValue('journal_or_volume_name'), state: 'display_value' }
+                                            }, visible: nodesHaveData(['journal_or_volume_name'])">
                 </div>
                 <div data-bind="component: { name: 'text-widget',
-                                            params: { value: getFirstNodeValue('other_journal_or_publication_name'), state: 'display_value' }
-                                            }, visible: nodesHaveData(['other_journal_or_publication_name'])">
+                                            params: { value: getFirstNodeValue('other_journal_or_volume_name'), state: 'display_value' }
+                                            }, visible: nodesHaveData(['other_journal_or_volume_name'])">
                 </div>
-                <div data-bind="visible: !nodesHaveData(['journal_or_publication_name', 'other_journal_or_publication_name'])">This publication does not exist within a Journal or Publication</div>
+                <div data-bind="visible: !nodesHaveData(['journal_or_volume_name', 'other_journal_or_volume_name'])">This publication does not exist within a Journal or Publication</div>
             </dd>
         </dl>
     </div>

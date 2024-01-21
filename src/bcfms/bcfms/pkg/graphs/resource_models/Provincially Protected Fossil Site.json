@@ -277,7 +277,7 @@
                     "instructions": {
                         "en": ""
                     },
-                    "is_editable": true,
+                    "is_editable": false,
                     "name": {
                         "en": "Geographical Name"
                     },
@@ -360,7 +360,7 @@
                     "instructions": {
                         "en": ""
                     },
-                    "is_editable": true,
+                    "is_editable": false,
                     "name": {
                         "en": "Protection Status"
                     },
@@ -1463,27 +1463,44 @@
             "functions_x_graphs": [
                 {
                     "config": {
-                        "class_name": "PrimaryDescriptorsFunction",
+                        "class_name": "BCFossilsDescriptors",
                         "descriptor_types": {
                             "description": {
-                                "nodegroup_id": "dd19eecc-0202-11ed-a511-0050568377a0",
-                                "string_template": "<Geographical Name>"
+                                "delimiter": "<br>",
+                                "first_only": false,
+                                "node_ids": [
+                                    "3397fe30-46b1-11ee-8ea1-080027b7463b",
+                                    "dd19eecc-0202-11ed-a511-0050568377a0",
+                                    "dd1a05b0-0202-11ed-a511-0050568377a0"
+                                ],
+                                "show_name": true,
+                                "type": "description"
                             },
                             "map_popup": {
-                                "nodegroup_id": "",
-                                "string_template": ""
+                                "delimiter": "<br>",
+                                "first_only": false,
+                                "node_ids": [
+                                    "3397fe30-46b1-11ee-8ea1-080027b7463b",
+                                    "dd1a05b0-0202-11ed-a511-0050568377a0"
+                                ],
+                                "show_name": true,
+                                "type": "map_popup"
                             },
                             "name": {
-                                "nodegroup_id": "dd19fa84-0202-11ed-a511-0050568377a0",
-                                "string_template": "<Site Name>"
+                                "first_only": true,
+                                "node_ids": [
+                                    "dd19fa84-0202-11ed-a511-0050568377a0"
+                                ],
+                                "show_name": false,
+                                "type": "name"
                             }
                         },
-                        "module": "arches.app.functions.primary_descriptors",
+                        "module": "bcfms.functions.bc_fossils_descriptors",
                         "triggering_nodegroups": []
                     },
-                    "function_id": "60000000-0000-0000-0000-000000000001",
+                    "function_id": "60000000-0000-0000-0000-000000001001",
                     "graph_id": "dd19a93a-0202-11ed-a511-0050568377a0",
-                    "id": "848f9d70-930c-44a3-8b3f-d5243e91fafc"
+                    "id": "d5fe69c3-1299-497d-a377-83cff0478c24"
                 }
             ],
             "graphid": "dd19a93a-0202-11ed-a511-0050568377a0",
