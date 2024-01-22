@@ -25,6 +25,8 @@ class BCPrimaryDescriptorsFunction(AbstractPrimaryDescriptorsFunction):
             value = set(value)
             if "" in value:
                 value.remove("")
+            if None in value:
+                value.remove(None)
             value = ", ".join(sorted(value))
 
         if value is None:
@@ -33,7 +35,7 @@ class BCPrimaryDescriptorsFunction(AbstractPrimaryDescriptorsFunction):
             return self.display_pattern % (name, value)
         return value
 
-    def get_value_from_node(self, node, datatype, resourceinstanceid=None, data_tile=None, context=None):
+    def get_value_from_node(self, node, datatype, resourceinstanceid=None, data_tile=None, context=None, use_boolean_label=True):
         """
         get the display value from the resource tile(s) for the node with the given name
 
@@ -43,6 +45,8 @@ class BCPrimaryDescriptorsFunction(AbstractPrimaryDescriptorsFunction):
         datatype -- datatype that can be used to extract the data from the tile
         resourceinstanceid -- id of resource instance used to fetch the tile(s) if data_tile not specified
         data_tile -- if specified, the tile to extract the value from
+        context -- if specified, context with the target language
+        use_boolean_label -- If true, for boolean datatypes, returns the associated label, otherwise use raw value
         """
 
         if node is None or datatype is None:
@@ -62,7 +66,7 @@ class BCPrimaryDescriptorsFunction(AbstractPrimaryDescriptorsFunction):
 
         for tile in tiles:
             if tile:
-                if node.datatype == "boolean" and 'trueLabel' in node.config:
+                if node.datatype == "boolean" and use_boolean_label and 'trueLabel' in node.config:
                     value = (datatype.get_tile_data(tile))[str(node.nodeid)]
                     if value is None:
                         return None
@@ -73,5 +77,4 @@ class BCPrimaryDescriptorsFunction(AbstractPrimaryDescriptorsFunction):
                     display_values.append(
                         datatype.get_display_value(tile, node, language=language))
         # print("%s -> %s" % (node.name, display_values))
-
         return None if len(display_values) == 0 else (display_values[0] if len(display_values) == 1 else display_values)
