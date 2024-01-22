@@ -20,20 +20,17 @@ class BCPrimaryDescriptorsFunction(AbstractPrimaryDescriptorsFunction):
 
         return return_value
 
-    def format_value(self, name, value, show_name=True):
+    def format_value(self, name, value, show_name=True, value_connector=", ", unique_list=True):
         if type(value) is list:
-            value = set(value)
-            if "" in value:
-                value.remove("")
-            if None in value:
-                value.remove(None)
-            value = ", ".join(sorted(value))
+            value = [val for val in value if val is not None and val != ""]
+            if unique_list:
+                value = list(set(value))
 
-        if value is None:
+        if value is None or value == "" or type(value) is list and len(value) == 0:
             return ""
         elif show_name:
-            return self.display_pattern % (name, value)
-        return value
+            return self.display_pattern % (name, value_connector.join(value) if type(value) is list else value)
+        return value_connector.join(value) if type(value) is list else value
 
     def get_value_from_node(self, node, datatype, resourceinstanceid=None, data_tile=None, context=None, use_boolean_label=True):
         """

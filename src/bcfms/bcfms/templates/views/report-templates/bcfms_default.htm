@@ -31,6 +31,10 @@
                 <!--div>Publication</div-->
                 {% include 'views/report-templates/details/publication.htm' %}
                 <!-- /ko -->
+                <!-- ko if: report.get('name') == "Fossil Collection Event" -->
+                <!--div>Publication</div-->
+                {% include 'views/report-templates/details/collection_event.htm' %}
+                <!-- /ko -->
             </div>
         </div>
     </div>
