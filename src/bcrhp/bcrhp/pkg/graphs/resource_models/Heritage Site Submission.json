@@ -191,7 +191,7 @@
                         "en": "Requested Operation"
                     },
                     "node_id": "02c57cd4-a985-11ed-9f00-5254004d77d3",
-                    "sortorder": 0,
+                    "sortorder": 1,
                     "visible": true,
                     "widget_id": "10000000-0000-0000-0000-000000000002"
                 },
@@ -228,6 +228,14 @@
                             {
                                 "children": [],
                                 "collector": "",
+                                "conceptid": "dbc4020b-2dc0-4b65-afb0-6c84228bc22a",
+                                "id": "d3cee5a2-3acb-42c1-9b2d-4642504aa981",
+                                "sortorder": "",
+                                "text": "Amendment"
+                            },
+                            {
+                                "children": [],
+                                "collector": "",
                                 "conceptid": "b68c613a-30a5-404c-a376-a6d5cc6f451c",
                                 "id": "0a32f5c4-682b-46db-b48c-f40a045e47f2",
                                 "sortorder": "",
@@ -260,6 +268,22 @@
                             {
                                 "children": [],
                                 "collector": "",
+                                "conceptid": "49c8e6a4-a84e-4c03-8864-0aecc5b516cb",
+                                "id": "65815e61-cb09-4585-a806-a117ae8130ef",
+                                "sortorder": "",
+                                "text": "Other"
+                            },
+                            {
+                                "children": [],
+                                "collector": "",
+                                "conceptid": "c69fcfe3-83a0-41d5-89a2-542b6161888c",
+                                "id": "546f5d90-9ef8-453b-a102-f08528bdab5c",
+                                "sortorder": "",
+                                "text": "Removal"
+                            },
+                            {
+                                "children": [],
+                                "collector": "",
                                 "conceptid": "5c0af7aa-1693-458f-a63c-136b6f18e816",
                                 "id": "c45a595e-d6ad-4616-be10-adf1684d8872",
                                 "sortorder": "",
@@ -276,7 +300,7 @@
                         "en": "Submission Type"
                     },
                     "node_id": "02c580a8-a985-11ed-9f00-5254004d77d3",
-                    "sortorder": 2,
+                    "sortorder": 3,
                     "visible": true,
                     "widget_id": "10000000-0000-0000-0000-000000000013"
                 },
@@ -383,7 +407,7 @@
                         "en": "Operation Details"
                     },
                     "node_id": "02c57ef0-a985-11ed-9f00-5254004d77d3",
-                    "sortorder": 1,
+                    "sortorder": 2,
                     "visible": true,
                     "widget_id": "10000000-0000-0000-0000-000000000001"
                 },
@@ -440,7 +464,7 @@
                         "en": "Alternate BCRHP Asignee"
                     },
                     "node_id": "02c58238-a985-11ed-9f00-5254004d77d3",
-                    "sortorder": 4,
+                    "sortorder": 5,
                     "visible": true,
                     "widget_id": "31f3728c-7613-11e7-a139-784f435179ea"
                 },
@@ -502,7 +526,7 @@
                         "en": "Heritage Site"
                     },
                     "node_id": "4506b49e-a324-11ed-bbb0-5254004d77d3",
-                    "sortorder": 5,
+                    "sortorder": 0,
                     "visible": true,
                     "widget_id": "31f3728c-7613-11e7-a139-784f435179ea"
                 },
@@ -542,7 +566,7 @@
                         "en": "Information Provided"
                     },
                     "node_id": "59066780-5c0d-11ee-b28c-080027b7463b",
-                    "sortorder": 3,
+                    "sortorder": 4,
                     "visible": true,
                     "widget_id": "10000000-0000-0000-0000-000000000009"
                 },
@@ -829,7 +853,7 @@
                     },
                     "function_id": "60000000-0000-0000-0000-000000001005",
                     "graph_id": "4e69d0a9-7af2-473f-929f-71d462ea32d1",
-                    "id": "f745529d-e985-4ef7-87f0-4a1136f4f819"
+                    "id": "3eb00f14-1846-438b-bd03-9b6c31a46957"
                 }
             ],
             "graphid": "4e69d0a9-7af2-473f-929f-71d462ea32d1",
@@ -1672,8 +1696,8 @@
             "publication": {
                 "graph_id": "4e69d0a9-7af2-473f-929f-71d462ea32d1",
                 "notes": null,
-                "publicationid": "5468bfec-b005-11ee-89d4-005056a3bc47",
-                "published_time": "2024-01-10T16:12:23.254"
+                "publicationid": "898dec8a-ba49-11ee-94e1-080027b7463b",
+                "published_time": "2024-01-23T17:45:49.822"
             },
             "relatable_resource_model_ids": [],
             "resource_2_resource_constraints": [],
@@ -1708,9 +1732,9 @@
         }
     ],
     "metadata": {
-        "db": "PostgreSQL 16.1 on x86_64-pc-linux-gnu, compiled by gcc (GCC) 11.4.1 20230605 (Red Hat 11.4.1-2), 64-bit",
-        "git hash": "fatal: not a git repository (or any parent up to mount point /fs)",
+        "db": "PostgreSQL 15.3 on x86_64-pc-linux-gnu, compiled by gcc (GCC) 11.3.1 20221121 (Red Hat 11.3.1-4), 64-bit",
+        "git hash": "6f4433a6f 2024-01-22 23:28:45 -0800",
         "os": "Linux",
-        "os version": "5.14.0-284.30.1.el9_2.x86_64"
+        "os version": "5.14.0-333.el9.x86_64"
     }
 }
