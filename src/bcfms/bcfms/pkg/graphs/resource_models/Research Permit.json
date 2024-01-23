@@ -193,7 +193,7 @@
                     "instructions": {
                         "en": ""
                     },
-                    "is_editable": false,
+                    "is_editable": true,
                     "name": {
                         "en": "Project Details"
                     },
@@ -220,7 +220,7 @@
                     "instructions": {
                         "en": ""
                     },
-                    "is_editable": false,
+                    "is_editable": true,
                     "name": {
                         "en": "Project Site"
                     },
@@ -667,7 +667,7 @@
                                 "text": "Polygon"
                             }
                         ],
-                        "label": "Spatial Location",
+                        "label": "Research Location",
                         "maxZoom": 20,
                         "minZoom": 0,
                         "overlayConfigs": [],
@@ -678,7 +678,7 @@
                     },
                     "id": "10a392f6-d968-11ed-b8ae-5254004d77d3",
                     "label": {
-                        "en": "Spatial Location"
+                        "en": "Research Location"
                     },
                     "node_id": "109f6640-d968-11ed-b8ae-5254004d77d3",
                     "sortorder": 1,
@@ -1543,12 +1543,12 @@
                     },
                     "function_id": "60000000-0000-0000-0000-000000001001",
                     "graph_id": "109a0272-d968-11ed-b8ae-5254004d77d3",
-                    "id": "51f5f3fe-b4c7-45c1-9dc9-995192c766bc"
+                    "id": "f54be9b0-85c9-42e1-b5c3-359739b9f4bb"
                 }
             ],
             "graphid": "109a0272-d968-11ed-b8ae-5254004d77d3",
             "iconclass": "fa fa-pencil",
-            "is_editable": false,
+            "is_editable": true,
             "isresource": true,
             "jsonldcontext": null,
             "name": {
@@ -3168,8 +3168,8 @@
             "publication": {
                 "graph_id": "109a0272-d968-11ed-b8ae-5254004d77d3",
                 "notes": null,
-                "publicationid": "7dc98328-9a19-11ee-a201-080027b7463b",
-                "published_time": "2023-12-13T18:41:17.028"
+                "publicationid": "f3ae6326-ba33-11ee-8bba-080027b7463b",
+                "published_time": "2024-01-23T15:11:18.945"
             },
             "relatable_resource_model_ids": [],
             "resource_2_resource_constraints": [],
@@ -3205,7 +3205,7 @@
     ],
     "metadata": {
         "db": "PostgreSQL 15.3 on x86_64-pc-linux-gnu, compiled by gcc (GCC) 11.3.1 20221121 (Red Hat 11.3.1-4), 64-bit",
-        "git hash": "878aec681 2023-11-20 12:09:49 -0800",
+        "git hash": "6f4433a6f 2024-01-22 23:28:45 -0800",
         "os": "Linux",
         "os version": "5.14.0-333.el9.x86_64"
     }
