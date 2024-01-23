@@ -1,10 +1,10 @@
 -- Materialized views to support the Data BC export
-drop materialized view mv_borden_number;
+drop materialized view if exists mv_borden_number;
 create materialized view mv_borden_number as
 select resourceinstanceid, borden_number->'en'->>'value' borden_number from heritage_site.borden_number;
 create index bn_idx on mv_borden_number (resourceinstanceid);
 
-drop materialized view mv_site_names;
+drop materialized view if exists mv_site_names;
 create materialized view mv_site_names as
 select resourceinstanceid, __arches_get_concept_label(name_type) name_type,
        name->'en'->>'value' name
@@ -12,8 +12,8 @@ from heritage_site.site_names;
 create index sn_idx on mv_site_names (resourceinstanceid);
 
 
-select * from mv_property_address;
-drop materialized view mv_property_address cascade;
+-- select * from mv_property_address;
+drop materialized view if exists mv_property_address cascade;
 create materialized view mv_property_address as
 select resourceinstanceid,
        tileid property_address_id,
@@ -27,8 +27,8 @@ from heritage_site.bc_property_address pa;
 create index pa_ri_idx1 on mv_property_address(resourceinstanceid);
 create index pa_ri_idx2 on mv_property_address(resourceinstanceid, property_address_id);
 
-select * from mv_legal_description;
-drop materialized view mv_legal_description cascade;
+-- select * from mv_legal_description;
+drop materialized view if exists mv_legal_description cascade;
 create materialized view mv_legal_description as
 select resourceinstanceid,
        bc_property_address,
@@ -39,6 +39,7 @@ from heritage_site.bc_property_legal_description ld;
 create index ld_ri_idx on mv_legal_description(resourceinstanceid, bc_property_address);
 
 
+drop materialized view if exists mv_bc_right;
 create materialized view mv_bc_right as
 with unnested as (
 select resourceinstanceid,
@@ -58,19 +59,14 @@ group by resourceinstanceid,
         registration_status;
 create index br_ri_idx on mv_bc_right(resourceinstanceid, bc_right_id);
 
+drop materialized view if exists mv_government;
 create materialized view mv_government as
 select resourceinstanceid, government_name->'en'->>'value' government_name,
        __arches_get_concept_label(government_type) government_type
 from government.government_name;
 -- left join government.government_name gn on (pe.responsible_government[0]->>'resourceId')::uuid = gn.resourceinstanceid;
 
-select pe.* from mv_protection_event pe join (
-select resourceinstanceid, count(*) from mv_protection_event
-where authority = 'Provincial'
-group by resourceinstanceid having count(*) > 1) dups on dups.resourceinstanceid = pe.resourceinstanceid
-order by pe.resourceinstanceid;
-
-drop materialized view mv_protection_event;
+drop materialized view if exists mv_protection_event;
 create materialized view mv_protection_event as
 select pe.resourceinstanceid,
        bc_right bc_right_id,
@@ -91,8 +87,7 @@ from heritage_site.protection_event pe
 ;
 create index mv_pe_idx on mv_protection_event(resourceinstanceid, bc_right_id);
 
-select * from mv_chronology;
-drop materialized view mv_chronology;
+drop materialized view if exists mv_chronology;
 create materialized view mv_chronology as
 select resourceinstanceid,
        start_year,
@@ -104,8 +99,7 @@ select resourceinstanceid,
 from heritage_site.chronology;
 create index mv_chron_idx on mv_protection_event(resourceinstanceid);
 
-select * from mv_site_record_admin;
-drop materialized view mv_site_record_admin cascade;
+drop materialized view if exists mv_site_record_admin cascade;
 create materialized view mv_site_record_admin as
 select resourceinstanceid,
        restricted,
@@ -117,8 +111,7 @@ from heritage_site.site_record_admin;
 create index mv_sra_idx on mv_site_record_admin(resourceinstanceid);
 create index mv_sra_idx on mv_site_record_admin(bcrhp_submission_status);
 
-select * from mv_heritage_function;
-drop materialized view mv_heritage_function cascade;
+drop materialized view if exists mv_heritage_function cascade;
 create materialized view mv_heritage_function as
     select resourceinstanceid,
            __arches_get_concept_label(unnest(functional_state)) state_period,
@@ -127,8 +120,7 @@ create materialized view mv_heritage_function as
                                                   __arches_get_concept_label(unnest(functional_state));
 create index mv_hf_idx on mv_heritage_function(resourceinstanceid);
 
-select * from mv_construction_actors;
-drop materialized view mv_construction_actors cascade;
+drop materialized view if exists mv_construction_actors cascade;
 create materialized view mv_construction_actors as
 select resourceinstanceid,
        __arches_get_concept_label(construction_actor_type) actor_type,
@@ -137,7 +129,7 @@ select resourceinstanceid,
 group by resourceinstanceid, __arches_get_concept_label(construction_actor_type);
 create index mv_ca_idx on mv_construction_actors(resourceinstanceid);
 
-drop materialized view mv_site_boundary cascade;
+drop materialized view if exists mv_site_boundary cascade;
 create materialized view mv_site_boundary as
 select b.resourceinstanceid,
        site_boundary,
@@ -152,7 +144,7 @@ create index mv_sb_idx on mv_site_boundary(resourceinstanceid);
 
 create schema if not exists databc;
 
-drop function get_first_address cascade;
+drop function if exists databc.get_first_address cascade;
 create or replace function databc.get_first_address(p_resourceinstanceid uuid) returns
     TABLE(resourceinstanceid uuid,
           property_address_id uuid,
@@ -195,7 +187,7 @@ ALTER FUNCTION databc.get_first_address(p_resourceinstanceid uuid) SECURITY DEFI
 -- refresh materialized view MV_HISTORIC_ENVIRO_ONEROW_SITE;
 
 
-drop view if exists V_HISTORIC_ENVIRO_ONEROW_SITE;
+drop view if exists databc.V_HISTORIC_ENVIRO_ONEROW_SITE;
 -- create materialized view MV_HISTORIC_ENVIRO_ONEROW_SITE as
 create or replace view databc.V_HISTORIC_ENVIRO_ONEROW_SITE as
 select distinct bn.resourceinstanceid,
