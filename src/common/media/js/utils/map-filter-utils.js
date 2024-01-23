@@ -4,7 +4,7 @@ define([
     'arches',
 ], function ($, ko , arches) {
     var mapFilterUtils = {
-        WFS_URL: "/int/arches-bchp/bctileserver/geo/ows?service=WFS&version=1.0.0&request=GetFeature&typeNames={layer}"+
+        WFS_URL: arches.urls.root+"bctileserver/geo/ows?service=WFS&version=1.0.0&request=GetFeature&typeNames={layer}"+
             "&maxFeatures=100&outputFormat=application%2Fjson&srsName=EPSG%3A4326&cql_filter=OBJECTID%3D{object_id}",
         isArchesGeometry: function(feature)
         {
