@@ -4,6 +4,7 @@ where isresource = true
   and publicationid is not null
   and name->>'en' != 'Arches System Settings';
 
+-- Can these go in as migrations? When does that run WRT model creation?
 create or replace function get_uuid_lookup_table(parent_name text, language_code text[] default array['en', 'en-US'])
     returns table(parent_label text, parent_concept_uuid uuid, parent_value_uuid uuid, child_label text, child_concept_uuid uuid, child_value_uuid uuid) as
 $$

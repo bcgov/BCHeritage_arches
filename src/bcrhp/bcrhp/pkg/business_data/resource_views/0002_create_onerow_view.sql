@@ -28,13 +28,13 @@ create index pa_ri_idx1 on mv_property_address(resourceinstanceid);
 create index pa_ri_idx2 on mv_property_address(resourceinstanceid, property_address_id);
 
 select * from mv_legal_description;
-drop materialized view mv_legal_description;
+drop materialized view mv_legal_description cascade;
 create materialized view mv_legal_description as
 select resourceinstanceid,
        bc_property_address,
-       pid,
-       pin,
-       legal_description
+       pid->'en'->>'value' pid,
+       pin->'en'->>'value' pin,
+       legal_description->'en'->>'value' legal_description
 from heritage_site.bc_property_legal_description ld;
 create index ld_ri_idx on mv_legal_description(resourceinstanceid, bc_property_address);
 
@@ -115,6 +115,7 @@ select resourceinstanceid,
        federal_id_number
 from heritage_site.site_record_admin;
 create index mv_sra_idx on mv_site_record_admin(resourceinstanceid);
+create index mv_sra_idx on mv_site_record_admin(bcrhp_submission_status);
 
 select * from mv_heritage_function;
 drop materialized view mv_heritage_function cascade;
@@ -149,6 +150,42 @@ select b.resourceinstanceid,
        from heritage_site.site_boundary b join heritage_site.borden_number bn on b.resourceinstanceid = bn.resourceinstanceid;
 create index mv_sb_idx on mv_site_boundary(resourceinstanceid);
 
+create schema if not exists databc;
+
+drop function get_first_address cascade;
+create or replace function databc.get_first_address(p_resourceinstanceid uuid) returns
+    TABLE(resourceinstanceid uuid,
+          property_address_id uuid,
+          street_address text,
+          city text,
+          province text,
+          postal_code text,
+          locality text,
+          location_description text,
+          pid text,
+          pin text,
+          legal_description text) as
+$$
+BEGIN
+    return query select mpa.resourceinstanceid,
+                        mpa.property_address_id,
+                        mpa.street_address,
+                        mpa.city,
+                        mpa.province,
+                        mpa.postal_code,
+                        mpa.locality,
+                        mpa.location_description,
+                        mld.pid,
+                        mld.pin,
+                        mld.legal_description
+                 from mv_property_address mpa
+                          left join mv_legal_description mld
+                                    on mpa.property_address_id = mld.bc_property_address
+                 where mpa.resourceinstanceid = p_resourceinstanceid
+                 limit 1;
+end
+$$ language plpgsql;
+ALTER FUNCTION databc.get_first_address(p_resourceinstanceid uuid) SECURITY DEFINER SET search_path = public;
 
 -- select * from MV_HISTORIC_ENVIRO_ONEROW_SITE order by borden_number;
 -- select * from MV_HISTORIC_ENVIRO_ONEROW_SITE where borden_number in ('DcRu-235', 'DcRu-234');
@@ -157,60 +194,52 @@ create index mv_sb_idx on mv_site_boundary(resourceinstanceid);
 -- drop materialized view if exists MV_HISTORIC_ENVIRO_ONEROW_SITE;
 -- refresh materialized view MV_HISTORIC_ENVIRO_ONEROW_SITE;
 
+
 drop view if exists V_HISTORIC_ENVIRO_ONEROW_SITE;
 -- create materialized view MV_HISTORIC_ENVIRO_ONEROW_SITE as
-create or replace view V_HISTORIC_ENVIRO_ONEROW_SITE as
+create or replace view databc.V_HISTORIC_ENVIRO_ONEROW_SITE as
 select distinct bn.resourceinstanceid,
                 bn.borden_number,
-                case when br.officially_recognized_site then 'Y' else 'N' end ishistoricsite,
-                br.registration_status registrationstatus,
+                case when br.officially_recognized_site then 'Y' else 'N' end is_officially_recognised,
+                br.registration_status,
                 cn.name                                 common_name,
                 array_to_string(other_name.names, '; ') other_name,
-                array_to_string(prop.pid, '; ')         parcelid,
+                prop.pid         parcel_id,
                 prop.street_address,
                 prop.city,
                 prop.locality,
                 prop.province,
                 br.authorities->>'government_name' government_name,
-                br.authorities->>'authority' governmentlevel,
-                br.authorities->>'recognition_type' protectiontype,
-                to_char(to_date(br.authorities->>'start_date', 'YYYY-MM-DD'), 'YYYY')::int startdate,
+                br.authorities->>'authority' government_level,
+                br.authorities->>'recognition_type' protection_type,
+                to_char(to_date(br.authorities->>'start_date', 'YYYY-MM-DD'), 'YYYY')::int start_date,
                 case when mc.chronology is null then null else to_char(to_date(chronology[0]->>'start_year', 'YYYY-MM-DD'), 'YYYY') end date_fromdate,
-                case when mc.chronology is not null and (chronology[0]->>'dates_approximate')::boolean then 'Circa' end date_fromqualifier,
-                case when mc.chronology is null then null else chronology[0]->>'event' end date_histdatetype,
+                case when mc.chronology is not null and (chronology[0]->>'dates_approximate')::boolean then 'Circa' end date_from_qualifier,
+                case when mc.chronology is null then null else chronology[0]->>'event' end date_hist_date_type,
 --                 case when msra.crhp_submission_status = 'Approved' then 'Y' else 'N' end is_accepted_by_feds,
                 ca.actors->>'Architect / Designer' architect_name,
                 ca.actors->>'Builder' builder_name,
                 hf.functional_states->>'Current' current_function,
                 hf.functional_states->>'Historic' historic_function,
                 msb.area_sqm dimensions_area,
-                msb.site_centroid_latitude gislatitude,
-                msb.site_centroid_longitude gislongitude,
-                msb.utmzone,
-                msb.utmnorthing,
-                msb.utmeasting,
+                msb.site_centroid_latitude gis_latitude,
+                msb.site_centroid_longitude gis_longitude,
+                msb.utmzone utm_zone,
+                msb.utmnorthing utm_northing,
+                msb.utmeasting utm_easting,
                 'https://apps.nrs.gov.bc.ca/int/bcrhp/report/'||bn.resourceinstanceid site_url
 --                 prop.location_description,
 --                 prop.pin,
 --                 prop.legal_description,
 --                 msra.restricted,
---                 msra.bcrhp_submission_status,
+--                ,msra.bcrhp_submission_status
 --                 msra.date_submitted_to_crhp,
 --                 msra.federal_id_number
 from mv_borden_number bn
          left join (select resourceinstanceid, name from mv_site_names where name_type = 'Common') cn on cn.resourceinstanceid = bn.resourceinstanceid
          left join (select resourceinstanceid, array_agg(name) names from mv_site_names where name_type = 'Other' group by resourceinstanceid) other_name on other_name.resourceinstanceid = bn.resourceinstanceid
          left join mv_site_names sn on sn.resourceinstanceid = bn.resourceinstanceid
-         left join (select pa.resourceinstanceid, pa.property_address_id, pa.street_address, pa.city, pa.province,
-                           pa.postal_code, pa.locality, pa.location_description,
-                           array_remove(array_agg(distinct mld.pin->'en'->>'value'), '') pin,
-                           array_remove(array_agg(distinct mld.pid->'en'->>'value'), '') pid,
-                           array_remove(array_agg(distinct mld.legal_description->'en'->>'value'), null) legal_description
-                    from mv_property_address pa left join mv_legal_description mld
-                                                          on pa.resourceinstanceid = mld.resourceinstanceid and pa.property_address_id = mld.bc_property_address
-                    group by pa.resourceinstanceid, pa.property_address_id, pa.street_address, pa.city, pa.province,
-                             pa.postal_code, pa.locality, pa.location_description) prop on bn.resourceinstanceid = prop.resourceinstanceid
-         left join (select distinct r.resourceinstanceid,
+         join (select distinct r.resourceinstanceid,
                                     r.officially_recognized_site,
                                     r.registration_status,
                                     jsonb_agg(
@@ -230,14 +259,14 @@ from mv_borden_number bn
                    on bn.resourceinstanceid = br.resourceinstanceid
          join mv_site_record_admin msra on bn.resourceinstanceid = msra.resourceinstanceid
          left join (select resourceinstanceid, jsonb_agg(
-        jsonb_build_object(
+            jsonb_build_object(
                 'start_year', start_year,
                 'end_year', end_year,
                 'dates_approximate', dates_approximate,
                 'event', event,
                 'source', source,
-                'event_notes', event_notes)
-    ) chronology from mv_chronology where event = 'Construction' group by resourceinstanceid) mc on bn.resourceinstanceid = mc.resourceinstanceid
+                'event_notes', event_notes) order by start_year
+    ) chronology from mv_chronology where event = 'Construction' group by resourceinstanceid ) mc on bn.resourceinstanceid = mc.resourceinstanceid
          left join (select resourceinstanceid,
                            jsonb_object_agg(state_period, array_to_string(functional_states, '; ') ) functional_states
                     from mv_heritage_function
@@ -246,5 +275,7 @@ from mv_borden_number bn
                            jsonb_object_agg(actor_type, array_to_string(actors, '; ')) actors
                     from mv_construction_actors
                     group by resourceinstanceid) ca on bn.resourceinstanceid = ca.resourceinstanceid
-         left join mv_site_boundary msb on bn.resourceinstanceid = msb.resourceinstanceid
-;
+         left join mv_site_boundary msb on bn.resourceinstanceid = msb.resourceinstanceid,
+    databc.get_first_address(bn.resourceinstanceid) prop
+where msra.bcrhp_submission_status in ('Approved - Basic Record','Approved - Full Record')
+and registration_status in ('Federal Jurisdiction', 'Legacy', 'Registered');
