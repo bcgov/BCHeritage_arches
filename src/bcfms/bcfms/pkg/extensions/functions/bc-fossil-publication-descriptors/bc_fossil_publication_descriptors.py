@@ -31,9 +31,8 @@ class BCFossilPublicationDescriptors(BCPrimaryDescriptorsFunction):
     _graph_slug = GraphSlugs.PUBLICATION
     _graph_lookup = None
 
-    # @todo Change these to aliases
     _name_nodes = [aliases.TITLE, aliases.JOURNAL_OR_PUBLICATION_NAME]
-    _card_nodes = [aliases.AUTHORS, aliases.PUBLICATION_YEAR, aliases.PUBLICATION_TYPE]
+    _card_nodes = [aliases.AUTHORS, aliases.PUBLICATION_TYPE]
 
     def __init__(self):
         super(BCFossilPublicationDescriptors).__init__()

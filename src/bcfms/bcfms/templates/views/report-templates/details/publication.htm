@@ -14,11 +14,11 @@
 <div class="bc-grid-container">
     <div class="bc-grid-item grid-col-1 grid-row-1">
         <dl class="dl-vertical dl-vertical-bc scientific-name" >
-            <dt>Publication or Report Year</dt>
+            <dt>Publication Year and Type</dt>
             <dd>
                 <div>
                     <!-- ko let: {widget: getWidgetForAlias('year_of_publication')}-->
-                    <div data-bind="component: { name: 'datepicker-widget',
+                    <div class="bc-inline" data-bind="component: { name: 'datepicker-widget',
                                             params: { value: getFirstNodeValue('year_of_publication'),
                                             node: widget.node,
                                             state: 'display_value' }
@@ -26,6 +26,10 @@
                         
                     </div>
                     <!-- /ko -->
+                    <div class="bc-inline">-</div>
+                    <div class="bc-inline publication_type" data-bind="component: { name: 'concept-select-widget',
+                                            params: { value: getFirstNodeValue('publication_type'), state: 'display_value' }}">
+                    </div>
                 </div>
             </dd>
         </dl>
@@ -45,7 +49,7 @@
     </div>
     <div class="bc-grid-item grid-col-1 grid-row-2">
         <dl class="dl-vertical dl-vertical-bc" >
-            <dt>Journal or Publication Name</dt>
+            <dt>Journal or Volume Published In</dt>
             <dd>
                 <div data-bind="component: { name: 'resource-instance-select-widget',
                                             params: { value: getFirstNodeValue('journal_or_volume_name'), state: 'display_value' }
@@ -55,11 +59,10 @@
                                             params: { value: getFirstNodeValue('other_journal_or_volume_name'), state: 'display_value' }
                                             }, visible: nodesHaveData(['other_journal_or_volume_name'])">
                 </div>
-                <div data-bind="visible: !nodesHaveData(['journal_or_volume_name', 'other_journal_or_volume_name'])">This publication does not exist within a Journal or Publication</div>
+                <div data-bind="visible: !nodesHaveData(['journal_or_volume_name', 'other_journal_or_volume_name'])">This publication does not exist within a Journal or Volume</div>
             </dd>
         </dl>
     </div>
-
     <div class="bc-grid-item grid-col-2 grid-row-2" data-bind="visible: getFirstNodeValue('page_range_start')() > 0 || getFirstNodeValue('page_range_end')() > 0">
         <dl class="dl-vertical dl-vertical-bc" >
             <dt>Pages</dt>

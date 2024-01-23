@@ -64,7 +64,7 @@ define([
                 values.push(getNodeValues(alias));
             });
             return !!_.find(_.flatten(values), value => {
-                return ko.unwrap(value) != null
+                return typeof(value) === "object" && "en" in value ? !!ko.unwrap(value["en"].value) : !!ko.unwrap(value);
             });
         }
 
