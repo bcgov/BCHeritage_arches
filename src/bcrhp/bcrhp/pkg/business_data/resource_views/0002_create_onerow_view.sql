@@ -109,7 +109,7 @@ select resourceinstanceid,
        federal_id_number
 from heritage_site.site_record_admin;
 create index mv_sra_idx on mv_site_record_admin(resourceinstanceid);
-create index mv_sra_idx on mv_site_record_admin(bcrhp_submission_status);
+create index mv_sra_idx2 on mv_site_record_admin(bcrhp_submission_status);
 
 drop materialized view if exists mv_heritage_function cascade;
 create materialized view mv_heritage_function as
