@@ -49,7 +49,7 @@ DEBUG = True
 ROOT_URLCONF = 'bcfms.urls'
 
 # a prefix to append to all elasticsearch indexes, note: must be lower case
-ELASTICSEARCH_PREFIX = 'bcfms{{ arches_app_suffix }}'
+ELASTICSEARCH_PREFIX = 'bcfms-dev'
 
 ELASTICSEARCH_CUSTOM_INDEXES = []
 # [{
@@ -175,7 +175,7 @@ LOGGING = {
 DATA_UPLOAD_MAX_MEMORY_SIZE = 15728640
 
 # Unique session cookie ensures that logins are treated separately for each app
-SESSION_COOKIE_NAME = 'bcfms{{ arches_app_suffix }}'
+SESSION_COOKIE_NAME = 'bcfms-dev'
 
 # For more info on configuring your cache: https://docs.djangoproject.com/en/2.2/topics/cache/
 CACHES = {
