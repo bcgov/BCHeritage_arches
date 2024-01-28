@@ -12,7 +12,7 @@ $$
     END
 $$ language plpgsql;
 
-create role {{ db_databc_user }} password '{{ databc_api_password }}';
+create role {{ db_databc_user }} password '{{ db_databc_password }}';
 alter role {{ db_databc_user }} with login;
 alter role {{ db_databc_user }} set search_path = databc;
 revoke all on schema public from {{ db_databc_user }};
