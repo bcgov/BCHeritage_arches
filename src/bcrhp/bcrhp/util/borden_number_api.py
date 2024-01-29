@@ -1,11 +1,10 @@
-from django.db import connection
-
 from arches.app.models import models
 from arches.app.datatypes.datatypes import DataTypeFactory
 from django.contrib.gis.geos import Point
 from arches.app.utils import geo_utils
 import json
 from bcrhp.util.bcrhp_aliases import BCRHPSiteAliases as site_aliases, GraphSlugs as slugs
+from bcrhp.util.hria_db import HriaDao
 
 import urllib
 import ssl
@@ -37,31 +36,31 @@ class BordenNumberApi:
     def _get_borden_grid(self, resourceinstanceid):
         tile = models.TileModel.objects.filter(resourceinstance_id=resourceinstanceid,
                                                nodegroup_id=self.geom_node.nodegroup_id).first()
-        print("Got tile: %s" % tile)
+        # print("Got tile: %s" % tile)
         datatype = self._datatype_factory.get_instance(self.geom_node.datatype)
         # geometry = datatype.get_display_value(tile, self.node)
-        print("Tile data: %s" % tile.data)
+        # print("Tile data: %s" % tile.data)
         geometry = tile.data[str(self.geom_node.nodeid)]
         
 
-        print('Geometry: %s %s' % (geometry, type(geometry)))
+        # print('Geometry: %s %s' % (geometry, type(geometry)))
         utils = geo_utils.GeoUtils()
         centroid = utils.get_centroid(geometry)
-        print('Centroid: %s %s' % (centroid, type(centroid)))
+        # print('Centroid: %s %s' % (centroid, type(centroid)))
 
         pnt = Point(centroid['coordinates'][0], centroid['coordinates'][1], srid=4326)
         desired_srid = 3005
         pnt.transform(desired_srid)
-        print("Translated: %s" % pnt.ewkt)
-        print("Points: %s, %s" % (pnt.x, pnt.y))
+        # print("Translated: %s" % pnt.ewkt)
+        # print("Points: %s, %s" % (pnt.x, pnt.y))
 
         url = BordenNumberApi._url % (pnt.x, pnt.y)
-        print(url)
+        # print(url)
 
         borden_grid = None
         with urllib.request.urlopen(url, context=BordenNumberApi.ctx) as response:
             body = json.loads(response.read().decode())
-            print("Got body: %s" % body)
+            # print("Got body: %s" % body)
             borden_grid = body["features"][0]["properties"]["BORDGRID"]
 
 
@@ -71,21 +70,12 @@ class BordenNumberApi:
     def get_next_borden_number(self, resourceinstanceid):
         self._initialize_models()
         borden_grid = self._get_borden_grid(resourceinstanceid)
-        with connection.cursor() as cursor:
-            cursor.execute("SELECT get_next_borden_number(%s)", [borden_grid])
-            row = cursor.fetchone()
-            print("Got borden number: %s" % row[0])
-            return row[0]
+        dao = HriaDao()
+        return dao.get_next_borden_sequence(borden_grid)
 
     @staticmethod
-    def borden_number_exists(borden_number):
-        with connection.cursor() as cursor:
-            cursor.execute("SET client_min_messages = debug2")
-            cursor.execute("select count(*) from imp_hriatst1.tfm_site where bordennumber = %s",[borden_number])
-            # cursor.execute("SELECT borden_number_exists(%s)", [borden_number])
-            row = cursor.fetchone()
-            print("Borden number exists: %s" % row[0])
-            return row[0]
+    def validate_borden_number(borden_number, resourceinstanceid):
+        return HriaDao().validate_borden_number(borden_number, resourceinstanceid)
 
     def reserve_borden_number(self, borden_number, resourceinstanceid):
         self._initialize_models()
@@ -97,8 +87,6 @@ class BordenNumberApi:
         if tile and tile.data:
             is_heritage_site = "Y" if tile.data[str(self.officially_recognized_node.nodeid)] else "N"
 
-        with connection.cursor() as cursor:
-            cursor.execute("SELECT reserve_borden_number(%s, %s, %s)", [borden_number, is_heritage_site, resourceinstanceid])
-            row = cursor.fetchone()
-            print("Reserve borden number: %s" % row[0])
-            return row[0]
+        HriaDao().reserve_borden_number(borden_number=borden_number,
+                                        is_heritage_site=is_heritage_site,
+                                        resourceinstanceid=resourceinstanceid)

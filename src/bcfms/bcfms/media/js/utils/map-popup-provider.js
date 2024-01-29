@@ -11,7 +11,7 @@ define([
                             {"key": "STRATIGRAPHIC_AGE_NAME", "title": "Strat Name:"},
                             {"key": "ROCK_TYPE_DESCRIPTION", "title": "Rock Type:"}
                         ]},
-                "WHSE_CADASTRE.PMBC_PARCEL_FABRIC_POLY_FA_SVW":
+                "WHSE_CADASTRE.PMBC_PARCEL_FABRIC_POLY_SVW":
                     {displayname: [{"key": "PID", title:""}],
                         "map_popup": [{key: "OWNER_TYPE", title: "Owner Type: "},
                             {key: "PLAN_NUMBER", title: "Plan #: "},
@@ -83,7 +83,7 @@ define([
                 "WHSE_ADMIN_BOUNDARIES.CLAB_NATIONAL_PARKS",
                 "map_data.fiss_frpc_br",
                 "map_data.fiss_frpc_ovb",
-                "c66518e2-10c6-11ec-adef-5254008afee6", /* Important Areas Resource layer */
+                "c6651266-10c6-11ec-adef-5254008afee6", /* Important Areas Resource layer */
                 "2336968c-1035-11ec-a3aa-5254008afee6", /* Fossil Site layer */
             ],
 

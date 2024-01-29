@@ -25,7 +25,6 @@ define([
         viewModel: BaseFilter.extend({
             initialize: function(options) {
                 var self = this;
-                console.log("HI from arches_fossils");
 
                 this.dependenciesLoaded = ko.observable(false)
 

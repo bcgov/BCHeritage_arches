@@ -1,0 +1,43 @@
+{% extends "views/report-templates/default.htm" %}
+{% load i18n %}
+
+{% block summary %}
+<div class="relative report-title-bar">
+
+    <!-- Title Block -->
+    <div class="report-toolbar-preview ep-form-toolbar">
+        <h4 class="report-toolbar-title"><span class="bc-report-title" data-bind="text: report.get('name')"></span> -
+            <span class="bc-report-title" data-bind="html: report.get('displayname') "></span></h4>
+
+        <!-- Tools -->
+        <div class="ep-form-toolbar-tools mar-no flex">
+            <p class="report-print-date">
+                <span data-bind="text: reportDate"></span>
+                <span data-bind="text: reportDate"></span>
+            </p>
+        </div>
+    </div>
+</div>
+
+<div class="rp-report-container-preview">
+    <div class="rp-report-section relative rp-report-section-root">
+        <div class="rp-report-section-title">
+            <div class="rp-card-section">
+                <!-- ko if: report.get('name') == "Fossil Sample" -->
+                <!-- div>Fossil Sample</div -->
+                {% include 'views/report-templates/details/fossil_sample.htm' %}
+                <!-- /ko -->
+                <!-- ko if: report.get('name') == "Publication" -->
+                <!--div>Publication</div-->
+                {% include 'views/report-templates/details/publication.htm' %}
+                <!-- /ko -->
+                <!-- ko if: report.get('name') == "Fossil Collection Event" -->
+                <!--div>Publication</div-->
+                {% include 'views/report-templates/details/collection_event.htm' %}
+                <!-- /ko -->
+            </div>
+        </div>
+    </div>
+</div>
+
+{% endblock summary %}

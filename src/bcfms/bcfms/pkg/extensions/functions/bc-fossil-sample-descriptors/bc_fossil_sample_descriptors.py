@@ -117,6 +117,7 @@ class BCFossilSampleDescriptors(AbstractPrimaryDescriptorsFunction):
         tiles = models.TileModel.objects.filter(
             nodegroup_id=BCFossilSampleDescriptors._nodes["fossil_common_name"].nodegroup_id
         ).filter(resourceinstance_id=resourceinstanceid).all()
+
         common_names = []
         common_name_node = BCFossilSampleDescriptors._nodes["fossil_common_name"]
         common_name_dt = self._get_datatype_factory().get_instance(common_name_node.datatype)
@@ -136,6 +137,9 @@ class BCFossilSampleDescriptors(AbstractPrimaryDescriptorsFunction):
         tile = models.TileModel.objects.filter(
             nodegroup_id=BCFossilSampleDescriptors._nodes["minimum_time"].nodegroup_id
         ).filter(resourceinstance_id=resourceinstanceid).first()
+
+        if not tile:
+            return ""
 
         min_time_node = BCFossilSampleDescriptors._nodes["minimum_time"]
         min_time_dt = self._get_datatype_factory().get_instance(min_time_node.datatype)
@@ -172,7 +176,9 @@ class BCFossilSampleDescriptors(AbstractPrimaryDescriptorsFunction):
             {"title": "Other Stratigraphic Name", "node_name": "other_stratigraphic_name"}
         ]
 
-        if tile:
+        if not tile:
+            return return_value
+        else:
             for node_config in formal_nodes:
                 node = BCFossilSampleDescriptors._nodes[node_config["node_name"]]
                 value = self._get_datatype_factory().get_instance(node.datatype).get_display_value(tile, node)

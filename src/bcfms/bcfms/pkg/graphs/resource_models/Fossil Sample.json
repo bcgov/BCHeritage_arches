@@ -59,6 +59,35 @@
                 },
                 {
                     "active": true,
+                    "cardid": "435dbe58-4e31-4f7d-88ac-6398bb11af7d",
+                    "component_id": "f05e4d3a-53c1-11e8-b0ea-784f435179ea",
+                    "config": null,
+                    "constraints": [],
+                    "cssclass": null,
+                    "description": {
+                        "en": "Historic data that is an artifact of the normalization of the spreadsheet data and spreadsheet attributes that will not be used in the future."
+                    },
+                    "graph_id": "7f2c2082-6c51-11ed-9b7d-5254004d77d3",
+                    "helpenabled": false,
+                    "helptext": {
+                        "en": ""
+                    },
+                    "helptitle": {
+                        "en": ""
+                    },
+                    "instructions": {
+                        "en": ""
+                    },
+                    "is_editable": true,
+                    "name": {
+                        "en": "Historical Data"
+                    },
+                    "nodegroup_id": "48d5b2e6-bc73-11ee-b691-080027b7463b",
+                    "sortorder": 8,
+                    "visible": true
+                },
+                {
+                    "active": true,
                     "cardid": "711c2e68-6f46-11ed-9e7f-5254004d77d3",
                     "component_id": "f05e4d3a-53c1-11e8-b0ea-784f435179ea",
                     "config": null,
@@ -108,34 +137,7 @@
                         "en": "Repository Information"
                     },
                     "nodegroup_id": "7f2c2dde-6c51-11ed-9b7d-5254004d77d3",
-                    "sortorder": 8,
-                    "visible": true
-                },
-                {
-                    "active": true,
-                    "cardid": "7f2c355e-6c51-11ed-9b7d-5254004d77d3",
-                    "component_id": "f05e4d3a-53c1-11e8-b0ea-784f435179ea",
-                    "config": null,
-                    "constraints": [],
-                    "cssclass": null,
-                    "description": null,
-                    "graph_id": "7f2c2082-6c51-11ed-9b7d-5254004d77d3",
-                    "helpenabled": false,
-                    "helptext": {
-                        "en": ""
-                    },
-                    "helptitle": {
-                        "en": ""
-                    },
-                    "instructions": {
-                        "en": ""
-                    },
-                    "is_editable": false,
-                    "name": {
-                        "en": "Fossil Occurrence Site ID"
-                    },
-                    "nodegroup_id": "7f2c32ca-6c51-11ed-9b7d-5254004d77d3",
-                    "sortorder": 1,
+                    "sortorder": 0,
                     "visible": true
                 },
                 {
@@ -163,33 +165,6 @@
                     },
                     "nodegroup_id": "7f2c3798-6c51-11ed-9b7d-5254004d77d3",
                     "sortorder": 6,
-                    "visible": true
-                },
-                {
-                    "active": true,
-                    "cardid": "7f2c521e-6c51-11ed-9b7d-5254004d77d3",
-                    "component_id": "f05e4d3a-53c1-11e8-b0ea-784f435179ea",
-                    "config": null,
-                    "constraints": [],
-                    "cssclass": null,
-                    "description": null,
-                    "graph_id": "7f2c2082-6c51-11ed-9b7d-5254004d77d3",
-                    "helpenabled": false,
-                    "helptext": {
-                        "en": ""
-                    },
-                    "helptitle": {
-                        "en": ""
-                    },
-                    "instructions": {
-                        "en": ""
-                    },
-                    "is_editable": false,
-                    "name": {
-                        "en": "Fossil ID"
-                    },
-                    "nodegroup_id": "7f2c4f30-6c51-11ed-9b7d-5254004d77d3",
-                    "sortorder": 0,
                     "visible": true
                 },
                 {
@@ -248,6 +223,64 @@
                 }
             ],
             "cards_x_nodes_x_widgets": [
+                {
+                    "card_id": "435dbe58-4e31-4f7d-88ac-6398bb11af7d",
+                    "config": {
+                        "defaultValue": {
+                            "en": {
+                                "direction": "ltr",
+                                "value": ""
+                            }
+                        },
+                        "i18n_properties": [
+                            "placeholder"
+                        ],
+                        "label": "Fossil ID",
+                        "maxLength": null,
+                        "placeholder": {
+                            "en": "Enter text"
+                        },
+                        "uneditable": true,
+                        "width": "100%%"
+                    },
+                    "id": "025b91bd-3119-482f-9d1b-576fbc54612e",
+                    "label": {
+                        "en": "Fossil ID"
+                    },
+                    "node_id": "d0c1d76e-bc75-11ee-b691-080027b7463b",
+                    "sortorder": null,
+                    "visible": true,
+                    "widget_id": "10000000-0000-0000-0000-000000000001"
+                },
+                {
+                    "card_id": "435dbe58-4e31-4f7d-88ac-6398bb11af7d",
+                    "config": {
+                        "defaultValue": {
+                            "en": {
+                                "direction": "ltr",
+                                "value": ""
+                            }
+                        },
+                        "i18n_properties": [
+                            "placeholder"
+                        ],
+                        "label": "Fossil Occurrence Site ID",
+                        "maxLength": null,
+                        "placeholder": {
+                            "en": "Enter text"
+                        },
+                        "uneditable": true,
+                        "width": "100%%"
+                    },
+                    "id": "0ab605ba-a036-456b-9952-b0d04c11976c",
+                    "label": {
+                        "en": "Fossil Occurrence Site ID"
+                    },
+                    "node_id": "e9134ba4-bc75-11ee-b691-080027b7463b",
+                    "sortorder": null,
+                    "visible": true,
+                    "widget_id": "10000000-0000-0000-0000-000000000001"
+                },
                 {
                     "card_id": "7f2c39f0-6c51-11ed-9b7d-5254004d77d3",
                     "config": {
@@ -360,6 +393,14 @@
                                 "id": "2424a415-24b1-42ec-977d-10effccf8696",
                                 "sortorder": "",
                                 "text": "Diversity value"
+                            },
+                            {
+                                "children": [],
+                                "collector": "",
+                                "conceptid": "4400c96e-f6ea-4a98-9085-20b56a14f78e",
+                                "id": "11b12777-d45c-4756-ac8e-8b5119abcb50",
+                                "sortorder": "",
+                                "text": "Education Value"
                             },
                             {
                                 "children": [],
@@ -491,7 +532,7 @@
                         "i18n_properties": [
                             "placeholder"
                         ],
-                        "label": "Unlisted Scientific Name",
+                        "label": "Unnamed or Unlisted Scientific Name",
                         "maxLength": "80",
                         "placeholder": {
                             "en": "Enter a name if not in the list under Scientific Names"
@@ -501,10 +542,10 @@
                     },
                     "id": "385f7bf6-43df-4884-b968-ab7ebee69ee3",
                     "label": {
-                        "en": "Unlisted Scientific Name"
+                        "en": "Unnamed or Unlisted Scientific Name"
                     },
                     "node_id": "9b87dc3e-781e-11ed-8d5f-5254004d77d3",
-                    "sortorder": 6,
+                    "sortorder": 7,
                     "visible": true,
                     "widget_id": "10000000-0000-0000-0000-000000000001"
                 },
@@ -536,7 +577,7 @@
                             "placeholder"
                         ],
                         "label": "Fossil Notes",
-                        "maxLength": "40",
+                        "maxLength": "150",
                         "placeholder": {
                             "en": "Enter relevant information to help classify the fossil"
                         },
@@ -548,9 +589,30 @@
                         "en": "Fossil Notes"
                     },
                     "node_id": "4990ec52-71a4-11ed-a6a5-5254004d77d3",
-                    "sortorder": 17,
+                    "sortorder": 18,
                     "visible": true,
                     "widget_id": "10000000-0000-0000-0000-000000000001"
+                },
+                {
+                    "card_id": "435dbe58-4e31-4f7d-88ac-6398bb11af7d",
+                    "config": {
+                        "defaultResourceInstance": [],
+                        "i18n_properties": [
+                            "placeholder"
+                        ],
+                        "label": "Unrsolved Collection Events",
+                        "placeholder": {
+                            "en": ""
+                        }
+                    },
+                    "id": "5942134e-6956-4004-bd8e-a74f0b4b3564",
+                    "label": {
+                        "en": "Unrsolved Collection Events"
+                    },
+                    "node_id": "58e19e18-bc76-11ee-b691-080027b7463b",
+                    "sortorder": null,
+                    "visible": true,
+                    "widget_id": "ff3c400a-76ec-11e7-a793-784f435179ea"
                 },
                 {
                     "card_id": "7f2c39f0-6c51-11ed-9b7d-5254004d77d3",
@@ -563,6 +625,21 @@
                         "en": "Minimum Time Uncertain"
                     },
                     "node_id": "ad5cc3ca-7b20-11ed-9775-5254004d77d3",
+                    "sortorder": 3,
+                    "visible": true,
+                    "widget_id": "0346bc9c-d235-4313-adc8-d0e210b2ef25"
+                },
+                {
+                    "card_id": "80f6864e-6f3c-11ed-92e2-5254004d77d3",
+                    "config": {
+                        "defaultValue": null,
+                        "label": "New Species"
+                    },
+                    "id": "60d31272-dbfb-459b-a2d1-7154ac5ef2c9",
+                    "label": {
+                        "en": "New Species"
+                    },
+                    "node_id": "1dd3679c-b65f-11ee-8f77-080027b7463b",
                     "sortorder": 3,
                     "visible": true,
                     "widget_id": "0346bc9c-d235-4313-adc8-d0e210b2ef25"
@@ -639,7 +716,7 @@
                     "node_id": "711c30ac-6f46-11ed-9e7f-5254004d77d3",
                     "sortorder": 0,
                     "visible": true,
-                    "widget_id": "10000000-0000-0000-0000-000000000002"
+                    "widget_id": "10000000-0000-0000-0000-000000000012"
                 },
                 {
                     "card_id": "711c2e68-6f46-11ed-9e7f-5254004d77d3",
@@ -661,7 +738,7 @@
                     "node_id": "711c38e0-6f46-11ed-9e7f-5254004d77d3",
                     "sortorder": 4,
                     "visible": true,
-                    "widget_id": "10000000-0000-0000-0000-000000000002"
+                    "widget_id": "10000000-0000-0000-0000-000000000012"
                 },
                 {
                     "card_id": "711c2e68-6f46-11ed-9e7f-5254004d77d3",
@@ -698,7 +775,7 @@
                     "node_id": "711c3c0a-6f46-11ed-9e7f-5254004d77d3",
                     "sortorder": 2,
                     "visible": true,
-                    "widget_id": "10000000-0000-0000-0000-000000000002"
+                    "widget_id": "10000000-0000-0000-0000-000000000012"
                 },
                 {
                     "card_id": "711c2e68-6f46-11ed-9e7f-5254004d77d3",
@@ -741,25 +818,17 @@
                             {
                                 "children": [],
                                 "collector": "",
-                                "conceptid": "05e38520-678b-46c5-bbe2-9164d52ec4fe",
-                                "id": "00b29319-f28d-4b50-88e1-ab190fdfbde6",
-                                "sortorder": "00",
-                                "text": "None/Barren"
-                            },
-                            {
-                                "children": [],
-                                "collector": "",
-                                "conceptid": "fdbfc78a-620e-48d7-99b7-ba25cd9ae10b",
-                                "id": "c26c8d58-9dcb-47a0-a869-ecb93c3dce00",
-                                "sortorder": "01",
-                                "text": "Single Fossil (1)"
+                                "conceptid": "f295722a-5605-4a7d-b6d3-fb16f9ccd0b0",
+                                "id": "6956cf66-4a04-429e-933b-181a7bdaa3da",
+                                "sortorder": "",
+                                "text": "Abundant (> 10)"
                             },
                             {
                                 "children": [],
                                 "collector": "",
                                 "conceptid": "5dfc8eff-ff8c-4f76-a645-0d89f697c6d3",
                                 "id": "68785da4-a1bc-47b2-89dc-a3c617a07406",
-                                "sortorder": "02",
+                                "sortorder": "",
                                 "text": "Few (< 5)"
                             },
                             {
@@ -767,16 +836,32 @@
                                 "collector": "",
                                 "conceptid": "b951d714-d3e8-486a-beba-0550ebb58b9d",
                                 "id": "0ade6a3a-170a-4889-af0d-c55b783747c0",
-                                "sortorder": "05",
+                                "sortorder": "",
                                 "text": "Many (5-10)"
                             },
                             {
                                 "children": [],
                                 "collector": "",
-                                "conceptid": "f295722a-5605-4a7d-b6d3-fb16f9ccd0b0",
-                                "id": "6956cf66-4a04-429e-933b-181a7bdaa3da",
-                                "sortorder": "11",
-                                "text": "Abundant (> 10)"
+                                "conceptid": "05e38520-678b-46c5-bbe2-9164d52ec4fe",
+                                "id": "00b29319-f28d-4b50-88e1-ab190fdfbde6",
+                                "sortorder": "",
+                                "text": "None/Barren"
+                            },
+                            {
+                                "children": [],
+                                "collector": "",
+                                "conceptid": "fdbfc78a-620e-48d7-99b7-ba25cd9ae10b",
+                                "id": "c26c8d58-9dcb-47a0-a869-ecb93c3dce00",
+                                "sortorder": "",
+                                "text": "Single Fossil (1)"
+                            },
+                            {
+                                "children": [],
+                                "collector": "",
+                                "conceptid": "9cadaf49-ea1d-4f27-97aa-4b28674bff42",
+                                "id": "49816e09-af11-4d1b-b86f-f5d02811c646",
+                                "sortorder": "",
+                                "text": "Unknown"
                             }
                         ],
                         "placeholder": {
@@ -869,66 +954,6 @@
                     "widget_id": "10000000-0000-0000-0000-000000000001"
                 },
                 {
-                    "card_id": "7f2c355e-6c51-11ed-9b7d-5254004d77d3",
-                    "config": {
-                        "defaultValue": "",
-                        "format": "",
-                        "i18n_properties": [
-                            "placeholder",
-                            "prefix",
-                            "suffix"
-                        ],
-                        "label": "Fossil Occurrence Site ID",
-                        "max": "",
-                        "min": "",
-                        "placeholder": {
-                            "en": "Enter number"
-                        },
-                        "precision": "",
-                        "prefix": {
-                            "en": ""
-                        },
-                        "step": "",
-                        "suffix": {
-                            "en": ""
-                        },
-                        "uneditable": true,
-                        "width": "100%"
-                    },
-                    "id": "7f2ca566-6c51-11ed-9b7d-5254004d77d3",
-                    "label": {
-                        "en": "Fossil Occurrence Site ID"
-                    },
-                    "node_id": "7f2c32ca-6c51-11ed-9b7d-5254004d77d3",
-                    "sortorder": 0,
-                    "visible": true,
-                    "widget_id": "10000000-0000-0000-0000-000000000008"
-                },
-                {
-                    "card_id": "7f2c521e-6c51-11ed-9b7d-5254004d77d3",
-                    "config": {
-                        "defaultValue": "",
-                        "i18n_properties": [
-                            "placeholder"
-                        ],
-                        "label": "Fossil ID",
-                        "maxLength": null,
-                        "placeholder": {
-                            "en": "Enter text"
-                        },
-                        "uneditable": true,
-                        "width": "100%"
-                    },
-                    "id": "7f2cb79a-6c51-11ed-9b7d-5254004d77d3",
-                    "label": {
-                        "en": "Fossil ID"
-                    },
-                    "node_id": "7f2c4f30-6c51-11ed-9b7d-5254004d77d3",
-                    "sortorder": 0,
-                    "visible": true,
-                    "widget_id": "10000000-0000-0000-0000-000000000001"
-                },
-                {
                     "card_id": "80f6864e-6f3c-11ed-92e2-5254004d77d3",
                     "config": {
                         "defaultValue": "",
@@ -964,7 +989,7 @@
                         "en": "Fossil Size Category"
                     },
                     "node_id": "80f69f30-6f3c-11ed-92e2-5254004d77d3",
-                    "sortorder": 7,
+                    "sortorder": 8,
                     "visible": true,
                     "widget_id": "10000000-0000-0000-0000-000000000009"
                 },
@@ -1003,7 +1028,7 @@
                         "en": "Fossil Condition"
                     },
                     "node_id": "80f6922e-6f3c-11ed-92e2-5254004d77d3",
-                    "sortorder": 15,
+                    "sortorder": 16,
                     "visible": true,
                     "widget_id": "10000000-0000-0000-0000-000000000002"
                 },
@@ -1061,7 +1086,7 @@
                         "en": "Fossil Part"
                     },
                     "node_id": "80f68d7e-6f3c-11ed-92e2-5254004d77d3",
-                    "sortorder": 11,
+                    "sortorder": 12,
                     "visible": true,
                     "widget_id": "10000000-0000-0000-0000-000000000002"
                 },
@@ -1097,6 +1122,14 @@
                                 "id": "2424a415-24b1-42ec-977d-10effccf8696",
                                 "sortorder": "",
                                 "text": "Diversity value"
+                            },
+                            {
+                                "children": [],
+                                "collector": "",
+                                "conceptid": "4400c96e-f6ea-4a98-9085-20b56a14f78e",
+                                "id": "11b12777-d45c-4756-ac8e-8b5119abcb50",
+                                "sortorder": "",
+                                "text": "Education Value"
                             },
                             {
                                 "children": [],
@@ -1197,7 +1230,7 @@
                         "en": "Significance Ranking Details"
                     },
                     "node_id": "80f68be4-6f3c-11ed-92e2-5254004d77d3",
-                    "sortorder": 9,
+                    "sortorder": 10,
                     "visible": true,
                     "widget_id": "10000000-0000-0000-0000-000000000013"
                 },
@@ -1239,7 +1272,7 @@
                         "en": "Related Species Name"
                     },
                     "node_id": "80f68a40-6f3c-11ed-92e2-5254004d77d3",
-                    "sortorder": 4,
+                    "sortorder": 5,
                     "visible": true,
                     "widget_id": "31f3728c-7613-11e7-a139-784f435179ea"
                 },
@@ -1289,7 +1322,7 @@
                         "en": "Additional Taxonomic Information"
                     },
                     "node_id": "80f69a62-6f3c-11ed-92e2-5254004d77d3",
-                    "sortorder": 8,
+                    "sortorder": 9,
                     "visible": true,
                     "widget_id": "10000000-0000-0000-0000-000000000001"
                 },
@@ -1311,7 +1344,7 @@
                         "en": "Open Nomenclature Term"
                     },
                     "node_id": "80f69c1a-6f3c-11ed-92e2-5254004d77d3",
-                    "sortorder": 3,
+                    "sortorder": 4,
                     "visible": true,
                     "widget_id": "10000000-0000-0000-0000-000000000002"
                 },
@@ -1333,7 +1366,7 @@
                         "en": "Fossil Preservation"
                     },
                     "node_id": "80f6a0ca-6f3c-11ed-92e2-5254004d77d3",
-                    "sortorder": 16,
+                    "sortorder": 17,
                     "visible": true,
                     "widget_id": "10000000-0000-0000-0000-000000000002"
                 },
@@ -1348,7 +1381,7 @@
                         "en": "Fossil Significant"
                     },
                     "node_id": "80f69daa-6f3c-11ed-92e2-5254004d77d3",
-                    "sortorder": 10,
+                    "sortorder": 11,
                     "visible": true,
                     "widget_id": "0346bc9c-d235-4313-adc8-d0e210b2ef25"
                 },
@@ -1378,6 +1411,21 @@
                     "card_id": "80f6864e-6f3c-11ed-92e2-5254004d77d3",
                     "config": {
                         "defaultValue": null,
+                        "label": "New Species"
+                    },
+                    "id": "8758a156-7b13-487b-80c6-33266d7bfcdf",
+                    "label": {
+                        "en": "New Species"
+                    },
+                    "node_id": "1dd3679c-b65f-11ee-8f77-080027b7463b",
+                    "sortorder": 3,
+                    "visible": true,
+                    "widget_id": "10000000-0000-0000-0000-000000000006"
+                },
+                {
+                    "card_id": "80f6864e-6f3c-11ed-92e2-5254004d77d3",
+                    "config": {
+                        "defaultValue": null,
                         "label": "Fossil Identification Uncertain"
                     },
                     "id": "94b245c8-0aca-4090-b655-8e3032e36878",
@@ -1385,7 +1433,7 @@
                         "en": "Fossil Identification Uncertain"
                     },
                     "node_id": "05921fc2-6f41-11ed-9ed7-5254004d77d3",
-                    "sortorder": 5,
+                    "sortorder": 6,
                     "visible": true,
                     "widget_id": "0346bc9c-d235-4313-adc8-d0e210b2ef25"
                 },
@@ -1414,7 +1462,7 @@
                         "en": "Other Fossil Part or Fossil Part Details"
                     },
                     "node_id": "98434562-71a3-11ed-a266-5254004d77d3",
-                    "sortorder": 12,
+                    "sortorder": 13,
                     "visible": true,
                     "widget_id": "10000000-0000-0000-0000-000000000001"
                 },
@@ -1502,7 +1550,7 @@
                         "en": "Trace Fossil"
                     },
                     "node_id": "80d0a452-6f40-11ed-82a5-5254004d77d3",
-                    "sortorder": 13,
+                    "sortorder": 14,
                     "visible": true,
                     "widget_id": "10000000-0000-0000-0000-000000000002"
                 },
@@ -1526,7 +1574,7 @@
                     "node_id": "e2fc6d5c-7740-11ed-adb6-5254004d77d3",
                     "sortorder": 6,
                     "visible": true,
-                    "widget_id": "10000000-0000-0000-0000-000000000002"
+                    "widget_id": "10000000-0000-0000-0000-000000000012"
                 },
                 {
                     "card_id": "7f2c3040-6c51-11ed-9b7d-5254004d77d3",
@@ -1582,7 +1630,7 @@
                         "en": "Other Trace Fossil or Trace Fossil Details"
                     },
                     "node_id": "2f45022a-71a4-11ed-afc4-5254004d77d3",
-                    "sortorder": 14,
+                    "sortorder": 15,
                     "visible": true,
                     "widget_id": "10000000-0000-0000-0000-000000000001"
                 }
@@ -1630,6 +1678,15 @@
                     "name": null,
                     "ontologyproperty": "http://www.cidoc-crm.org/cidoc-crm/P15i_influenced",
                     "rangenode_id": "30455582-6c52-11ed-9e1a-5254004d77d3"
+                },
+                {
+                    "description": null,
+                    "domainnode_id": "80f68860-6f3c-11ed-92e2-5254004d77d3",
+                    "edgeid": "38a4b897-c1ce-42e2-bd5c-6eff33d9fb57",
+                    "graph_id": "7f2c2082-6c51-11ed-9b7d-5254004d77d3",
+                    "name": null,
+                    "ontologyproperty": "http://www.cidoc-crm.org/cidoc-crm/P19i_was_made_for",
+                    "rangenode_id": "1dd3679c-b65f-11ee-8f77-080027b7463b"
                 },
                 {
                     "description": null,
@@ -1684,6 +1741,15 @@
                     "name": null,
                     "ontologyproperty": "http://www.ics.forth.gr/isl/CRMdig/L54i_is_same-as",
                     "rangenode_id": "80f68310-6f3c-11ed-92e2-5254004d77d3"
+                },
+                {
+                    "description": null,
+                    "domainnode_id": "48d5b2e6-bc73-11ee-b691-080027b7463b",
+                    "edgeid": "61e3d4ff-be4b-4c54-a1d1-64a3815e45c1",
+                    "graph_id": "7f2c2082-6c51-11ed-9b7d-5254004d77d3",
+                    "name": null,
+                    "ontologyproperty": "http://www.cidoc-crm.org/cidoc-crm/P1_is_identified_by",
+                    "rangenode_id": "d0c1d76e-bc75-11ee-b691-080027b7463b"
                 },
                 {
                     "description": null,
@@ -1778,15 +1844,6 @@
                 {
                     "description": null,
                     "domainnode_id": "7f2c7f50-6c51-11ed-9b7d-5254004d77d3",
-                    "edgeid": "7f2de07a-6c51-11ed-9b7d-5254004d77d3",
-                    "graph_id": "7f2c2082-6c51-11ed-9b7d-5254004d77d3",
-                    "name": null,
-                    "ontologyproperty": "http://www.cidoc-crm.org/cidoc-crm/P1_is_identified_by",
-                    "rangenode_id": "7f2c4f30-6c51-11ed-9b7d-5254004d77d3"
-                },
-                {
-                    "description": null,
-                    "domainnode_id": "7f2c7f50-6c51-11ed-9b7d-5254004d77d3",
                     "edgeid": "7f2deb9c-6c51-11ed-9b7d-5254004d77d3",
                     "graph_id": "7f2c2082-6c51-11ed-9b7d-5254004d77d3",
                     "name": null,
@@ -1819,15 +1876,6 @@
                     "name": null,
                     "ontologyproperty": "http://www.cidoc-crm.org/cidoc-crm/P67i_is_referred_to_by",
                     "rangenode_id": "7f2c3c48-6c51-11ed-9b7d-5254004d77d3"
-                },
-                {
-                    "description": null,
-                    "domainnode_id": "7f2c7f50-6c51-11ed-9b7d-5254004d77d3",
-                    "edgeid": "7f2e25bc-6c51-11ed-9b7d-5254004d77d3",
-                    "graph_id": "7f2c2082-6c51-11ed-9b7d-5254004d77d3",
-                    "name": null,
-                    "ontologyproperty": "http://www.cidoc-crm.org/cidoc-crm/P1_is_identified_by",
-                    "rangenode_id": "7f2c32ca-6c51-11ed-9b7d-5254004d77d3"
                 },
                 {
                     "description": null,
@@ -2011,6 +2059,15 @@
                 },
                 {
                     "description": null,
+                    "domainnode_id": "48d5b2e6-bc73-11ee-b691-080027b7463b",
+                    "edgeid": "b580d505-f608-48cf-8654-418bcb60dc57",
+                    "graph_id": "7f2c2082-6c51-11ed-9b7d-5254004d77d3",
+                    "name": null,
+                    "ontologyproperty": "http://www.cidoc-crm.org/cidoc-crm/P1_is_identified_by",
+                    "rangenode_id": "e9134ba4-bc75-11ee-b691-080027b7463b"
+                },
+                {
+                    "description": null,
                     "domainnode_id": "7f2c6380-6c51-11ed-9b7d-5254004d77d3",
                     "edgeid": "c08d7cb3-c8f7-44bc-af2a-ee81242b650a",
                     "graph_id": "7f2c2082-6c51-11ed-9b7d-5254004d77d3",
@@ -2026,6 +2083,15 @@
                     "name": null,
                     "ontologyproperty": "http://www.ics.forth.gr/isl/CRMdig/L54_is_same-as",
                     "rangenode_id": "b551b8d6-6f3d-11ed-ba23-5254004d77d3"
+                },
+                {
+                    "description": null,
+                    "domainnode_id": "7f2c7f50-6c51-11ed-9b7d-5254004d77d3",
+                    "edgeid": "da4c872b-c00d-4656-8e51-5d73a84aa876",
+                    "graph_id": "7f2c2082-6c51-11ed-9b7d-5254004d77d3",
+                    "name": null,
+                    "ontologyproperty": "http://www.cidoc-crm.org/cidoc-crm/P1_is_identified_by",
+                    "rangenode_id": "48d5b2e6-bc73-11ee-b691-080027b7463b"
                 },
                 {
                     "description": null,
@@ -2065,6 +2131,15 @@
                 },
                 {
                     "description": null,
+                    "domainnode_id": "48d5b2e6-bc73-11ee-b691-080027b7463b",
+                    "edgeid": "fd86f789-6f3d-48c8-8318-59b1ac7b5b2f",
+                    "graph_id": "7f2c2082-6c51-11ed-9b7d-5254004d77d3",
+                    "name": null,
+                    "ontologyproperty": "http://www.cidoc-crm.org/cidoc-crm/P16i_was_used_for",
+                    "rangenode_id": "58e19e18-bc76-11ee-b691-080027b7463b"
+                },
+                {
+                    "description": null,
                     "domainnode_id": "80d0a452-6f40-11ed-82a5-5254004d77d3",
                     "edgeid": "fed8cf52-23e3-4502-a435-bf8012cecb9b",
                     "graph_id": "7f2c2082-6c51-11ed-9b7d-5254004d77d3",
@@ -2074,18 +2149,6 @@
                 }
             ],
             "functions_x_graphs": [
-                {
-                    "config": {
-                        "node_id": "7f2c823e-6c51-11ed-9b7d-5254004d77d3",
-                        "triggering_nodegroups": [
-                            "7f2c2dde-6c51-11ed-9b7d-5254004d77d3"
-                        ],
-                        "unique_value": true
-                    },
-                    "function_id": "60000000-0000-0000-0000-000000002001",
-                    "graph_id": "7f2c2082-6c51-11ed-9b7d-5254004d77d3",
-                    "id": "b4fded03-b927-4faf-80b5-d419a39e6827"
-                },
                 {
                     "config": {
                         "class_name": "BCFossilSampleDescriptors",
@@ -2116,7 +2179,19 @@
                     },
                     "function_id": "60000000-0000-0000-0000-000000001004",
                     "graph_id": "7f2c2082-6c51-11ed-9b7d-5254004d77d3",
-                    "id": "c6fd4f25-a527-401b-b9ab-ed15b09678dd"
+                    "id": "8731ea74-6002-46b8-bf8e-ee66285ff23c"
+                },
+                {
+                    "config": {
+                        "node_id": "7f2c823e-6c51-11ed-9b7d-5254004d77d3",
+                        "triggering_nodegroups": [
+                            "7f2c2dde-6c51-11ed-9b7d-5254004d77d3"
+                        ],
+                        "unique_value": true
+                    },
+                    "function_id": "60000000-0000-0000-0000-000000002001",
+                    "graph_id": "7f2c2082-6c51-11ed-9b7d-5254004d77d3",
+                    "id": "fec34977-642a-4812-8f6b-a07fe929f69d"
                 }
             ],
             "graphid": "7f2c2082-6c51-11ed-9b7d-5254004d77d3",
@@ -2137,6 +2212,12 @@
                 {
                     "cardinality": "1",
                     "legacygroupid": null,
+                    "nodegroupid": "48d5b2e6-bc73-11ee-b691-080027b7463b",
+                    "parentnodegroup_id": null
+                },
+                {
+                    "cardinality": "1",
+                    "legacygroupid": null,
                     "nodegroupid": "711c2864-6f46-11ed-9e7f-5254004d77d3",
                     "parentnodegroup_id": null
                 },
@@ -2149,19 +2230,7 @@
                 {
                     "cardinality": "1",
                     "legacygroupid": null,
-                    "nodegroupid": "7f2c32ca-6c51-11ed-9b7d-5254004d77d3",
-                    "parentnodegroup_id": null
-                },
-                {
-                    "cardinality": "1",
-                    "legacygroupid": null,
                     "nodegroupid": "7f2c3798-6c51-11ed-9b7d-5254004d77d3",
-                    "parentnodegroup_id": null
-                },
-                {
-                    "cardinality": "1",
-                    "legacygroupid": null,
-                    "nodegroupid": "7f2c4f30-6c51-11ed-9b7d-5254004d77d3",
                     "parentnodegroup_id": null
                 },
                 {
@@ -2236,6 +2305,38 @@
                     "nodeid": "05921fc2-6f41-11ed-9ed7-5254004d77d3",
                     "ontologyclass": "http://www.ics.forth.gr/isl/CRMinf/I3_Inference_Logic",
                     "parentproperty": "http://www.cidoc-crm.org/cidoc-crm/P129i_is_subject_of",
+                    "sortorder": 0,
+                    "sourcebranchpublication_id": null
+                },
+                {
+                    "alias": "new_species",
+                    "config": {
+                        "falseLabel": {
+                            "en": "Existing or Unknown Species"
+                        },
+                        "i18n_properties": [
+                            "trueLabel",
+                            "falseLabel"
+                        ],
+                        "trueLabel": {
+                            "en": "New Species"
+                        }
+                    },
+                    "datatype": "boolean",
+                    "description": null,
+                    "exportable": false,
+                    "fieldname": null,
+                    "graph_id": "7f2c2082-6c51-11ed-9b7d-5254004d77d3",
+                    "hascustomalias": false,
+                    "is_collector": false,
+                    "isrequired": false,
+                    "issearchable": true,
+                    "istopnode": false,
+                    "name": "New Species",
+                    "nodegroup_id": "80f68310-6f3c-11ed-92e2-5254004d77d3",
+                    "nodeid": "1dd3679c-b65f-11ee-8f77-080027b7463b",
+                    "ontologyclass": "http://www.cidoc-crm.org/cidoc-crm/E83_Type_Creation",
+                    "parentproperty": "http://www.cidoc-crm.org/cidoc-crm/P19i_was_made_for",
                     "sortorder": 0,
                     "sourcebranchpublication_id": null
                 },
@@ -2374,6 +2475,29 @@
                     "sourcebranchpublication_id": null
                 },
                 {
+                    "alias": "historical_data",
+                    "config": {
+                        "en": ""
+                    },
+                    "datatype": "semantic",
+                    "description": "Historic data that is an artifact of the normalization of the spreadsheet data and spreadsheet attributes that will not be used in the future.",
+                    "exportable": false,
+                    "fieldname": null,
+                    "graph_id": "7f2c2082-6c51-11ed-9b7d-5254004d77d3",
+                    "hascustomalias": false,
+                    "is_collector": true,
+                    "isrequired": false,
+                    "issearchable": true,
+                    "istopnode": false,
+                    "name": "Historical Data",
+                    "nodegroup_id": "48d5b2e6-bc73-11ee-b691-080027b7463b",
+                    "nodeid": "48d5b2e6-bc73-11ee-b691-080027b7463b",
+                    "ontologyclass": "http://www.cidoc-crm.org/cidoc-crm/E42_Identifier",
+                    "parentproperty": "http://www.cidoc-crm.org/cidoc-crm/P1_is_identified_by",
+                    "sortorder": 0,
+                    "sourcebranchpublication_id": null
+                },
+                {
                     "alias": "fossil_notes",
                     "config": {
                         "en": ""
@@ -2393,6 +2517,31 @@
                     "nodeid": "4990ec52-71a4-11ed-a6a5-5254004d77d3",
                     "ontologyclass": "http://www.ics.forth.gr/isl/CRMdig/D29_Annotation_Object",
                     "parentproperty": "http://www.ics.forth.gr/isl/CRMdig/L43i_is_annotated_by",
+                    "sortorder": 0,
+                    "sourcebranchpublication_id": null
+                },
+                {
+                    "alias": "unresolved_collection_events",
+                    "config": {
+                        "graphs": [],
+                        "searchDsl": "",
+                        "searchString": ""
+                    },
+                    "datatype": "resource-instance-list",
+                    "description": "Collection Events that are artifacts of the denormalized spreadsheet data. These are likely invalid, duplicated collection events that should be consolidated into a single collection event as defined by the Collection Event -> Fossil Sample relationship.",
+                    "exportable": false,
+                    "fieldname": null,
+                    "graph_id": "7f2c2082-6c51-11ed-9b7d-5254004d77d3",
+                    "hascustomalias": false,
+                    "is_collector": false,
+                    "isrequired": false,
+                    "issearchable": true,
+                    "istopnode": false,
+                    "name": "Unresolved Collection Events",
+                    "nodegroup_id": "48d5b2e6-bc73-11ee-b691-080027b7463b",
+                    "nodeid": "58e19e18-bc76-11ee-b691-080027b7463b",
+                    "ontologyclass": "http://www.ics.forth.gr/isl/CRMarchaeo/A9_Archaeological_Excavation",
+                    "parentproperty": "http://www.cidoc-crm.org/cidoc-crm/P16i_was_used_for",
                     "sortorder": 0,
                     "sourcebranchpublication_id": null
                 },
@@ -2654,27 +2803,6 @@
                     "sourcebranchpublication_id": null
                 },
                 {
-                    "alias": "fossil_occurrence_site_id",
-                    "config": {},
-                    "datatype": "number",
-                    "description": null,
-                    "exportable": false,
-                    "fieldname": null,
-                    "graph_id": "7f2c2082-6c51-11ed-9b7d-5254004d77d3",
-                    "hascustomalias": false,
-                    "is_collector": true,
-                    "isrequired": false,
-                    "issearchable": true,
-                    "istopnode": false,
-                    "name": "Fossil Occurrence Site ID",
-                    "nodegroup_id": "7f2c32ca-6c51-11ed-9b7d-5254004d77d3",
-                    "nodeid": "7f2c32ca-6c51-11ed-9b7d-5254004d77d3",
-                    "ontologyclass": "http://www.cidoc-crm.org/cidoc-crm/E42_Identifier",
-                    "parentproperty": "http://www.cidoc-crm.org/cidoc-crm/P1_is_identified_by",
-                    "sortorder": 0,
-                    "sourcebranchpublication_id": null
-                },
-                {
                     "alias": "geological_age",
                     "config": {
                         "en": ""
@@ -2717,27 +2845,6 @@
                     "nodeid": "7f2c3c48-6c51-11ed-9b7d-5254004d77d3",
                     "ontologyclass": "http://www.cidoc-crm.org/cidoc-crm/E33_Linguistic_Object",
                     "parentproperty": "http://www.cidoc-crm.org/cidoc-crm/P67i_is_referred_to_by",
-                    "sortorder": 0,
-                    "sourcebranchpublication_id": null
-                },
-                {
-                    "alias": "fossil_id",
-                    "config": {},
-                    "datatype": "string",
-                    "description": null,
-                    "exportable": false,
-                    "fieldname": null,
-                    "graph_id": "7f2c2082-6c51-11ed-9b7d-5254004d77d3",
-                    "hascustomalias": false,
-                    "is_collector": true,
-                    "isrequired": false,
-                    "issearchable": true,
-                    "istopnode": false,
-                    "name": "Fossil ID",
-                    "nodegroup_id": "7f2c4f30-6c51-11ed-9b7d-5254004d77d3",
-                    "nodeid": "7f2c4f30-6c51-11ed-9b7d-5254004d77d3",
-                    "ontologyclass": "http://www.cidoc-crm.org/cidoc-crm/E42_Identifier",
-                    "parentproperty": "http://www.cidoc-crm.org/cidoc-crm/P1_is_identified_by",
                     "sortorder": 0,
                     "sourcebranchpublication_id": null
                 },
@@ -3709,6 +3816,29 @@
                     "sourcebranchpublication_id": null
                 },
                 {
+                    "alias": "fossil_id",
+                    "config": {
+                        "en": ""
+                    },
+                    "datatype": "string",
+                    "description": null,
+                    "exportable": false,
+                    "fieldname": null,
+                    "graph_id": "7f2c2082-6c51-11ed-9b7d-5254004d77d3",
+                    "hascustomalias": false,
+                    "is_collector": false,
+                    "isrequired": false,
+                    "issearchable": true,
+                    "istopnode": false,
+                    "name": "Fossil ID",
+                    "nodegroup_id": "48d5b2e6-bc73-11ee-b691-080027b7463b",
+                    "nodeid": "d0c1d76e-bc75-11ee-b691-080027b7463b",
+                    "ontologyclass": "http://www.cidoc-crm.org/cidoc-crm/E42_Identifier",
+                    "parentproperty": "http://www.cidoc-crm.org/cidoc-crm/P1_is_identified_by",
+                    "sortorder": 0,
+                    "sourcebranchpublication_id": null
+                },
+                {
                     "alias": "sample_left_in_situ",
                     "config": {
                         "falseLabel": {
@@ -3764,6 +3894,29 @@
                     "sourcebranchpublication_id": null
                 },
                 {
+                    "alias": "fossil_occurrence_site_id",
+                    "config": {
+                        "en": ""
+                    },
+                    "datatype": "string",
+                    "description": null,
+                    "exportable": false,
+                    "fieldname": null,
+                    "graph_id": "7f2c2082-6c51-11ed-9b7d-5254004d77d3",
+                    "hascustomalias": false,
+                    "is_collector": false,
+                    "isrequired": false,
+                    "issearchable": true,
+                    "istopnode": false,
+                    "name": "Fossil Occurrence Site ID",
+                    "nodegroup_id": "48d5b2e6-bc73-11ee-b691-080027b7463b",
+                    "nodeid": "e9134ba4-bc75-11ee-b691-080027b7463b",
+                    "ontologyclass": "http://www.cidoc-crm.org/cidoc-crm/E42_Identifier",
+                    "parentproperty": "http://www.cidoc-crm.org/cidoc-crm/P1_is_identified_by",
+                    "sortorder": 0,
+                    "sourcebranchpublication_id": null
+                },
+                {
                     "alias": "geologic_timescale_division",
                     "config": {
                         "rdmCollection": "3a7977fa-3acd-4c9e-802d-2c436f196c08"
@@ -3814,8 +3967,8 @@
             "publication": {
                 "graph_id": "7f2c2082-6c51-11ed-9b7d-5254004d77d3",
                 "notes": null,
-                "publicationid": "393edbcc-93ac-11ee-bf36-005056a3bc47",
-                "published_time": "2023-12-05T14:23:59.914"
+                "publicationid": "11e5182c-bc86-11ee-9111-080027b7463b",
+                "published_time": "2024-01-26T14:04:10.693"
             },
             "relatable_resource_model_ids": [],
             "resource_2_resource_constraints": [],
@@ -3848,9 +4001,9 @@
         }
     ],
     "metadata": {
-        "db": "PostgreSQL 16.1 on x86_64-pc-linux-gnu, compiled by gcc (GCC) 11.4.1 20230605 (Red Hat 11.4.1-2), 64-bit",
-        "git hash": "fatal: not a git repository (or any parent up to mount point /fs)",
+        "db": "PostgreSQL 15.3 on x86_64-pc-linux-gnu, compiled by gcc (GCC) 11.3.1 20221121 (Red Hat 11.3.1-4), 64-bit",
+        "git hash": "6f4433a6f 2024-01-22 23:28:45 -0800",
         "os": "Linux",
-        "os version": "5.14.0-284.30.1.el9_2.x86_64"
+        "os version": "5.14.0-333.el9.x86_64"
     }
 }

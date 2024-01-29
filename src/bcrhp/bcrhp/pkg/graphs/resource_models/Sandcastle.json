@@ -347,7 +347,7 @@
                     },
                     "function_id": "60000000-0000-0000-0000-000000000001",
                     "graph_id": "c3923080-d21e-42d7-b8f1-637b9d0ab63c",
-                    "id": "697c80f7-f0af-409a-a1bf-825c57b6c409"
+                    "id": "b74c5add-173d-45b8-8071-1d888c879598"
                 }
             ],
             "graphid": "c3923080-d21e-42d7-b8f1-637b9d0ab63c",
@@ -380,8 +380,8 @@
                     },
                     "datatype": "date",
                     "description": null,
-                    "exportable": false,
-                    "fieldname": null,
+                    "exportable": true,
+                    "fieldname": "StartDate",
                     "graph_id": "c3923080-d21e-42d7-b8f1-637b9d0ab63c",
                     "hascustomalias": false,
                     "is_collector": false,
@@ -403,8 +403,8 @@
                     },
                     "datatype": "string",
                     "description": null,
-                    "exportable": false,
-                    "fieldname": null,
+                    "exportable": true,
+                    "fieldname": "ProjectDes",
                     "graph_id": "c3923080-d21e-42d7-b8f1-637b9d0ab63c",
                     "hascustomalias": false,
                     "is_collector": false,
@@ -470,8 +470,8 @@
                     },
                     "datatype": "geojson-feature-collection",
                     "description": "Represents a single node in a graph",
-                    "exportable": false,
-                    "fieldname": "",
+                    "exportable": true,
+                    "fieldname": "Pro_Bound",
                     "graph_id": "c3923080-d21e-42d7-b8f1-637b9d0ab63c",
                     "hascustomalias": false,
                     "is_collector": true,
@@ -539,8 +539,8 @@
                     },
                     "datatype": "string",
                     "description": null,
-                    "exportable": false,
-                    "fieldname": null,
+                    "exportable": true,
+                    "fieldname": "Pro_Name",
                     "graph_id": "c3923080-d21e-42d7-b8f1-637b9d0ab63c",
                     "hascustomalias": false,
                     "is_collector": false,
@@ -585,8 +585,8 @@
                     },
                     "datatype": "string",
                     "description": null,
-                    "exportable": false,
-                    "fieldname": null,
+                    "exportable": true,
+                    "fieldname": "Geo_Desc",
                     "graph_id": "c3923080-d21e-42d7-b8f1-637b9d0ab63c",
                     "hascustomalias": false,
                     "is_collector": false,
@@ -608,8 +608,8 @@
                     },
                     "datatype": "date",
                     "description": null,
-                    "exportable": false,
-                    "fieldname": null,
+                    "exportable": true,
+                    "fieldname": "EndDate",
                     "graph_id": "c3923080-d21e-42d7-b8f1-637b9d0ab63c",
                     "hascustomalias": false,
                     "is_collector": false,
@@ -629,8 +629,8 @@
             "publication": {
                 "graph_id": "c3923080-d21e-42d7-b8f1-637b9d0ab63c",
                 "notes": null,
-                "publicationid": "8306f272-a0ee-11ee-832c-080027b7463b",
-                "published_time": "2023-12-22T11:21:15.599"
+                "publicationid": "44639570-b002-11ee-a5c5-005056a3bc47",
+                "published_time": "2024-01-10T15:50:27.886"
             },
             "relatable_resource_model_ids": [],
             "resource_2_resource_constraints": [],
@@ -665,9 +665,9 @@
         }
     ],
     "metadata": {
-        "db": "PostgreSQL 15.3 on x86_64-pc-linux-gnu, compiled by gcc (GCC) 11.3.1 20221121 (Red Hat 11.3.1-4), 64-bit",
-        "git hash": "e10813e38 2023-12-11 05:06:58 -0800",
+        "db": "PostgreSQL 16.1 on x86_64-pc-linux-gnu, compiled by gcc (GCC) 11.4.1 20230605 (Red Hat 11.4.1-2), 64-bit",
+        "git hash": "fatal: not a git repository (or any parent up to mount point /fs)",
         "os": "Linux",
-        "os version": "5.14.0-333.el9.x86_64"
+        "os version": "5.14.0-284.30.1.el9_2.x86_64"
     }
 }

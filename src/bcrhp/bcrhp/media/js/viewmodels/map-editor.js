@@ -1,9 +1,9 @@
 define([
-    'arches',
     'jquery',
     'underscore',
     'knockout',
     'knockout-mapping',
+    'arches',
     'uuid',
     'geojson-extent',
     'geojsonhint',
@@ -11,9 +11,12 @@ define([
     'proj4',
     'views/components/map',
     'views/components/cards/select-feature-layers',
+    'views/components/datatypes/geojson-feature-collection',
     'utils/map-filter-utils'
-], function(arches, $, _, ko, koMapping, uuid, geojsonExtent, geojsonhint, toGeoJSON, proj4, MapComponentViewModel, selectFeatureLayersFactory, externalUtils) {
+], function($, _, ko, koMapping, arches, uuid, geojsonExtent, geojsonhint, toGeoJSON, proj4, MapComponentViewModel, selectFeatureLayersFactory, geojsonDatatype, externalUtils) {
     var viewModel = function(params) {
+
+
         var self = this;
         var padding = 40;
         var drawFeatures;
@@ -60,7 +63,7 @@ define([
 
         var sources = [];
         for (var sourceName in arches.mapSources) {
-            if (arches.mapSources.hasOwnProperty(sourceName)) {
+            if (Object.prototype.hasOwnProperty.call(arches.mapSources, sourceName)) {
                 sources.push(sourceName);
             }
         }
@@ -508,22 +511,22 @@ define([
                         ko.unwrap(widget.config.geometryTypes).map(function(type) {
                             var option = {};
                             switch (ko.unwrap(type.id)) {
-                            case 'Point':
-                                option.value = 'draw_point';
-                                option.text = arches.translations.mapAddPoint;
-                                break;
-                            case 'Line':
-                                option.value = 'draw_line_string';
-                                option.text = arches.translations.mapAddLine;
-                                break;
-                            case 'Polygon':
-                                option.value = 'draw_polygon';
-                                option.text = arches.translations.mapAddPolygon;
-                                break;
-                            case 'Feature':
-                                option.value = 'select_feature';
-                                option.text = 'Select Cadastral Feature';
-                                break;
+                                case 'Point':
+                                    option.value = 'draw_point';
+                                    option.text = arches.translations.mapAddPoint;
+                                    break;
+                                case 'Line':
+                                    option.value = 'draw_line_string';
+                                    option.text = arches.translations.mapAddLine;
+                                    break;
+                                case 'Polygon':
+                                    option.value = 'draw_polygon';
+                                    option.text = arches.translations.mapAddPolygon;
+                                    break;
+                                case 'Feature':
+                                    option.value = 'select_feature';
+                                    option.text = 'Select Cadastral Feature';
+                                    break;
                             }
                             return option;
                         })
@@ -576,10 +579,11 @@ define([
 
         self.selectFeature = function(feature) {
             try {
+                let geometry = feature.toJSON().geometry
                 var newFeature = {
                     "type": "Feature",
                     "properties": {},
-                    "geometry": feature.geometry
+                    "geometry": geometry
                 };
                 addSelectFeatures([newFeature]);
             } catch(e) {
@@ -599,7 +603,7 @@ define([
         self.selectFeatureAsSource = function(feature)
         {
             console.log(feature);
-            var myfeature  = externalUtils.getFeatureFromWFS(feature, 'WHSE_CADASTRE.PMBC_PARCEL_FABRIC_POLY_FA_SVW');
+            var myfeature  = externalUtils.getFeatureFromWFS(feature, 'WHSE_CADASTRE.PMBC_PARCEL_FABRIC_POLY_SVW');
             addSelectFeatures([myfeature]);
         };
 
@@ -695,7 +699,7 @@ define([
         };
 
         self.dropZoneClickHandler = function(data, e) {
-            var fileInput = e.target.parentNode.querySelector('.hidden-file-input input');
+            var fileInput = e.target.parentNode.parentNode.querySelector('.hidden-file-input input');
             var event = window.document.createEvent("MouseEvents");
             event.initEvent("click", true, false);
             fileInput.dispatchEvent(event);
@@ -747,16 +751,16 @@ define([
                     var coordinates = [];
                     var geomType = self.coordinateGeomType();
                     switch (geomType) {
-                    case 'Polygon':
-                        rawCoordinates.push(rawCoordinates[0]);
-                        coordinates = [rawCoordinates];
-                        break;
-                    case 'Point':
-                        coordinates = rawCoordinates[0];
-                        break;
-                    default:
-                        coordinates = rawCoordinates;
-                        break;
+                        case 'Polygon':
+                            rawCoordinates.push(rawCoordinates[0]);
+                            coordinates = [rawCoordinates];
+                            break;
+                        case 'Point':
+                            coordinates = rawCoordinates[0];
+                            break;
+                        default:
+                            coordinates = rawCoordinates;
+                            break;
                     }
                     addSelectFeatures([{
                         type: "Feature",
@@ -844,17 +848,17 @@ define([
             self.coordinateGeomType(null);
             var selectedTool = self.selectedTool();
             switch (selectedTool) {
-            case 'draw_point':
-                self.coordinateGeomType('Point');
-                break;
-            case 'draw_line_string':
-                self.coordinateGeomType('LineString');
-                break;
-            case 'draw_polygon':
-                self.coordinateGeomType('Polygon');
-                break;
-            default:
-                break;
+                case 'draw_point':
+                    self.coordinateGeomType('Point');
+                    break;
+                case 'draw_line_string':
+                    self.coordinateGeomType('LineString');
+                    break;
+                case 'draw_polygon':
+                    self.coordinateGeomType('Polygon');
+                    break;
+                default:
+                    break;
             }
             var selectedFeatureIds = self.selectedFeatureIds();
             var featureId = selectedFeatureIds[0];
@@ -891,17 +895,17 @@ define([
             var geomType = self.coordinateGeomType();
             var minCoordinates;
             switch (geomType) {
-            case 'Point':
-                minCoordinates = 1;
-                break;
-            case 'LineString':
-                minCoordinates = 2;
-                break;
-            case 'Polygon':
-                minCoordinates = 3;
-                break;
-            default:
-                break;
+                case 'Point':
+                    minCoordinates = 1;
+                    break;
+                case 'LineString':
+                    minCoordinates = 2;
+                    break;
+                case 'Polygon':
+                    minCoordinates = 3;
+                    break;
+                default:
+                    break;
             }
             return minCoordinates;
         });

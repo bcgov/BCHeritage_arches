@@ -1,0 +1,112 @@
+<style>
+    /* To allow for the large report titles*/
+    .report-toolbar-title{
+        width: unset !important;
+        min-width: 500px !important;
+        max-width: 750px !important;
+    }
+
+    .report-toolbar-preview {
+        height: unset !important;
+        min-height: 50px;
+    }
+</style>
+<div class="bc-grid-container">
+    <div class="bc-grid-item grid-col-1 grid-row-1">
+        <dl class="dl-vertical dl-vertical-bc scientific-name" >
+            <dt>Publication Year and Type</dt>
+            <dd>
+                <div>
+                    <!-- ko let: {widget: getWidgetForAlias('year_of_publication')}-->
+                    <div class="bc-inline" data-bind="component: { name: 'datepicker-widget',
+                                            params: { value: getFirstNodeValue('year_of_publication'),
+                                            node: widget.node,
+                                            state: 'display_value' }
+                                            }">
+                        
+                    </div>
+                    <!-- /ko -->
+                    <div class="bc-inline">-</div>
+                    <div class="bc-inline publication_type" data-bind="component: { name: 'concept-select-widget',
+                                            params: { value: getFirstNodeValue('publication_type'), state: 'display_value' }}">
+                    </div>
+                </div>
+            </dd>
+        </dl>
+    </div>
+    <div class="bc-grid-item grid-col-2 grid-row-1" data-bind="visible: nodesHaveData(['authors'])">
+        <dl class="dl-vertical dl-vertical-bc" >
+            <dt>Authors</dt>
+            <dd>
+                <div data-bind="component: { name: 'resource-instance-multiselect-widget',
+                                            params: { value: getFirstNodeValue('authors'), state: 'display_value' }
+                                            }">
+
+                </div>
+                <div data-bind="visible: !!getFirstNodeValue('other_authors_unlisted')()">Other authors unlisted</div>
+            </dd>
+        </dl>
+    </div>
+    <div class="bc-grid-item grid-col-1 grid-row-2">
+        <dl class="dl-vertical dl-vertical-bc" >
+            <dt>Journal or Volume Published In</dt>
+            <dd>
+                <div data-bind="component: { name: 'resource-instance-select-widget',
+                                            params: { value: getFirstNodeValue('journal_or_volume_name'), state: 'display_value' }
+                                            }, visible: nodesHaveData(['journal_or_volume_name'])">
+                </div>
+                <div data-bind="component: { name: 'text-widget',
+                                            params: { value: getFirstNodeValue('other_journal_or_volume_name'), state: 'display_value' }
+                                            }, visible: nodesHaveData(['other_journal_or_volume_name'])">
+                </div>
+                <div data-bind="visible: !nodesHaveData(['journal_or_volume_name', 'other_journal_or_volume_name'])">This publication does not exist within a Journal or Volume</div>
+            </dd>
+        </dl>
+    </div>
+    <div class="bc-grid-item grid-col-2 grid-row-2" data-bind="visible: getFirstNodeValue('page_range_start')() > 0 || getFirstNodeValue('page_range_end')() > 0">
+        <dl class="dl-vertical dl-vertical-bc" >
+            <dt>Pages</dt>
+            <dd>
+                <div class="bc-inline" data-bind="component: {
+                    name: 'number-widget',
+                    params: { value: getFirstNodeValue('page_range_start'), state: 'display_value' }
+                    }">
+                </div>
+                <div class="bc-inline">-</div>
+                <div class="bc-inline" data-bind="component: {
+                    name: 'number-widget',
+                    params: { value: getFirstNodeValue('page_range_end'), state: 'display_value' }
+                    }">
+                </div>
+            </dd>
+        </dl>
+    </div>
+
+    <div class="bc-grid-item grid-col-1 grid-row-3" data-bind="visible: nodesHaveData(['publication_identifier'])">
+        <dl class="dl-vertical dl-vertical-bc" >
+            <dt>Publication Identifier</dt>
+            <dd>
+                <div class="bc-inline" data-bind="component: { name: 'text-widget',
+                                            params: { value: getFirstNodeValue('publication_identifier'), state: 'display_value' }
+                                            }, visible: nodesHaveData(['publication_identifier'])">
+                </div>
+                <div class="bc-inline publication-identifier-type" data-bind="component: { name: 'concept-select-widget',
+                                            params: { value: getFirstNodeValue('publication_identifier_type'), state: 'display_value' }
+                                            }, visible: nodesHaveData(['publication_identifier_type'])">
+                </div>
+            </dd>
+        </dl>
+    </div>
+    <div class="bc-grid-item grid-col-2 grid-row-3" data-bind="visible: nodesHaveData(['information_carrier'])">
+        <dl class="dl-vertical dl-vertical-bc">
+            <dt>Document</dt>
+            <dd>
+                <div data-bind="component:
+                    { name: 'file-widget',
+                      params: { value: getFirstNodeValue('information_carrier'), state: 'report' }
+                }, click: clickUrl">
+                </div>
+            </dd>
+        </dl>
+    </div>
+</div>

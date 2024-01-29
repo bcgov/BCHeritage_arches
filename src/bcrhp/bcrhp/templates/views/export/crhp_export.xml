@@ -87,6 +87,7 @@
             </Image>
             {% endfor %}
         </Images>
+        {% if data.external_urls|length > 0 %}
         <Links>
             {% for external_url in data.external_urls %}
             <Link Type="{{external_url.url_type}}">
@@ -95,6 +96,7 @@
             </Link>
             {% endfor %}
         </Links>
+        {% endif %}
         <Management>
             <OwnerNotificationSent>N</OwnerNotificationSent>
             <OwnersResponse>NA</OwnersResponse>

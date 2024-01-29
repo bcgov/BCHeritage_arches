@@ -207,7 +207,7 @@ class BCRHPSiteDescriptors(AbstractPrimaryDescriptorsFunction):
                 if name:
                     display_value = display_value + name
 
-        if display_value is None:
+        if not display_value:
             display_value = self._empty_name_value
 
         borden_number_tile = models.TileModel.objects.filter(

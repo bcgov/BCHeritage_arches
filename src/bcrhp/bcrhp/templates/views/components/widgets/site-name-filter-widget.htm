@@ -1,0 +1,13 @@
+{% extends "views/components/widgets/base.htm" %}
+{% load i18n %}
+
+{% block display_value %}
+<div data-bind="visible: showName">
+    <span data-bind="component: { name: 'text-widget',
+                                  params: { value: siteName,
+                                            state: 'display_value'
+                                          }
+                                }">
+    </span>
+</div>
+{% endblock display_value %}

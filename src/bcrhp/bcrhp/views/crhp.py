@@ -45,9 +45,11 @@ class CRHPXmlExport(APIBase):
         context = {}
         try:
             context["data"] = CrhpExportData.objects.get(resourceinstanceid=resourceinstanceid)
+            for site_name in context["data"].site_names:
+                site_name["name"] = self.convert_string(site_name["name"])
             logger.info("Site names: %s" % str(context["data"].site_names))
-            context["data"].common_names = [ site_name for site_name in context["data"].site_names if site_name["name_type"] == "Common"]
-            context["data"].other_names = [ site_name for site_name in context["data"].site_names if site_name["name_type"] != "Common"]
+            context["data"].common_names = [site_name for site_name in context["data"].site_names if site_name["name_type"] == "Common"]
+            context["data"].other_names = [site_name for site_name in context["data"].site_names if site_name["name_type"] != "Common"]
             logger.info("Heritage Categories: %s" % context["data"].heritage_categories)
             if context["data"].sos and len(context["data"].sos) > 0:
                 context["data"].sos.sort(key=lambda x: 0 if x["significance_type"] == "Provincial" else 1)
@@ -81,6 +83,8 @@ class CRHPXmlExport(APIBase):
             logger.info("site_images type %s" % type(context["data"].site_images))
             for image in context["data"].site_images:
                 image['image_type'] = ('Historic Image' if image['image_type'] == 'Historical' else 'Contemporary Photograph')
+                for key in ['copyright', 'image_caption', 'image_description', 'image_content_type']:
+                    image[key] = self.convert_string(image[key])
             logger.info("heritage_themes type %s" % type(context["data"].heritage_themes))
         except Exception as e:
             logger.error(e)

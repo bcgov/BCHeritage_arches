@@ -76,11 +76,15 @@ table.bc-summary-table td {
     vertical-align: top;
 }
 
-.bcrhp-grid-container {
+.bcrhp-grid-container, .bc-grid-container {
     display: grid;
     /*width: 75%;*/
     grid-template-columns: 33% 33% 33%;
     vertical-align: top;
+}
+
+.bc-inline {
+    display: inline-block;
 }
 
 .grid-col-1 {
@@ -115,7 +119,9 @@ table.bc-summary-table td {
     max-width: unset;
 }
 
-.bcrhp-full-width-grid-item {
+.bcrhp-full-width-grid-item,
+.bc-full-width-grid-item
+{
     grid-column: 1 / span 2;
 }
 
@@ -163,6 +169,11 @@ hr {
     width: auto !important;
 }
 
+.bc-subsection-header {
+    margin-top: 10px;
+    text-decoration: underline;
+}
+
 
 
 @media (min-width: 1366px)
@@ -170,15 +181,19 @@ hr {
     .dl-horizontal {
     }
 
-    .bcrhp-full-width-grid-item dd {
+    .bcrhp-full-width-grid-item dd,
+    .bc-full-width-grid-item dd {
         width: 80%
     }
 
-    div.bcrhp-grid-item .dl-horizontal dt {
+    div.bcrhp-grid-item .dl-horizontal dt,
+    div.bc-grid-item .dl-horizontal dt {
         /*width: 170px !important;*/
     }
 
-    div.bcrhp-grid-item .dl-horizontal dd {
+    div.bcrhp-grid-item .dl-horizontal dd,
+    div.bc-grid-item .dl-horizontal dd
+    {
         width: 70%;
     }
 
@@ -192,11 +207,16 @@ hr {
     .dl-horizontal {
     }
 
-    div.bcrhp-grid-item .dl-horizontal dd {
+    div.bcrhp-grid-item .dl-horizontal dd,
+    div.bc-grid-item .dl-horizontal dd
+    {
         /*margin-left: 170px !important;*/
         width: 70%;
     }
-    div.bcrhp-grid-item .dl-horizontal dt {
+
+    div.bcrhp-grid-item .dl-horizontal dt,
+    div.bc-grid-item .dl-horizontal dt
+    {
         /*width: 130px !important;*/
     }
     .bc-details-images {
@@ -273,6 +293,9 @@ img.bc-details-image
 }
 
 @media only screen and (min-width: 600px) {
+    .print-only {
+        display: none;
+    }
 }
 
 @media only screen and (min-width: 768px) {
@@ -307,4 +330,30 @@ img.bc-details-image
         display: none;
     }
 
+    @page {
+        size: letter;
+    }
+
+    .new-page {
+        page-break-before: always;
+        break-before: page;
+    }
+    
+    #main-content, .resource-report-abstract-container, .resource-component-abstract, .card-form-preview-container {
+        overflow: visible !important;
+        /*height: unset !important;*/
+    }
+
+    div {
+        break-before: auto;
+    }
+
+    #map-widget-container > .map-widget-container, .mapboxgl-map {
+        display: block !important;
+    }
+
+    .bc-full-width-grid-item
+    {
+        grid-column: 1 / span 3;
+    }
 }

@@ -42,7 +42,7 @@ define(['knockout', 'underscore', 'arches', 'viewmodels/widget', 'templates/view
 
             this.significantEvent = ko.computed(function()
             {
-                let widget = self.getWidgetWithLabel(self.card(), "significant_events");
+                let widget = self.getWidgetWithLabel(self.card(), "chronology");
                 self.setEventVisible(widget);
                 return widget;
             });

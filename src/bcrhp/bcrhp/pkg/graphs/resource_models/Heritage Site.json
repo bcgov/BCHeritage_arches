@@ -556,7 +556,7 @@
                     },
                     "is_editable": false,
                     "name": {
-                        "en": "Significant Event"
+                        "en": "Chronology"
                     },
                     "nodegroup_id": "98347640-cd88-11ed-bda2-5254004d77d3",
                     "sortorder": 8,
@@ -618,7 +618,7 @@
                     "node_id": "8e26b0a4-9ae3-11ee-a366-080027b7463b",
                     "sortorder": 1,
                     "visible": true,
-                    "widget_id": "10000000-0000-0000-0000-000000000001"
+                    "widget_id": "10000000-0000-0000-0000-000000000005"
                 },
                 {
                     "card_id": "1b623006-0d0f-11ed-98c2-5254008afee6",
@@ -799,7 +799,7 @@
                         "i18n_properties": [
                             "placeholder"
                         ],
-                        "label": "PID",
+                        "label": "PID (Parcel Identifier)",
                         "maxLength": null,
                         "placeholder": {
                             "en": "Enter text"
@@ -809,7 +809,7 @@
                     },
                     "id": "1b626058-0d0f-11ed-98c2-5254008afee6",
                     "label": {
-                        "en": "PID"
+                        "en": "PID (Parcel Identifier)"
                     },
                     "node_id": "1b623e20-0d0f-11ed-98c2-5254008afee6",
                     "sortorder": 0,
@@ -862,7 +862,7 @@
                         "placeholder": {
                             "en": "Enter text"
                         },
-                        "uneditable": false,
+                        "uneditable": true,
                         "width": "100%"
                     },
                     "id": "1b6261a2-0d0f-11ed-98c2-5254008afee6",
@@ -870,7 +870,7 @@
                         "en": "Spatial Accuracy"
                     },
                     "node_id": "1b6258ce-0d0f-11ed-98c2-5254008afee6",
-                    "sortorder": 3,
+                    "sortorder": 1,
                     "visible": true,
                     "widget_id": "10000000-0000-0000-0000-000000000001"
                 },
@@ -921,7 +921,7 @@
                         "en": "Site Boundary"
                     },
                     "node_id": "1b6235b0-0d0f-11ed-98c2-5254008afee6",
-                    "sortorder": 1,
+                    "sortorder": 0,
                     "visible": true,
                     "widget_id": "10000000-0000-0000-0000-000000000007"
                 },
@@ -943,7 +943,7 @@
                     "node_id": "bb294f88-8f14-11ee-aaf0-080027b7463b",
                     "sortorder": 3,
                     "visible": true,
-                    "widget_id": "10000000-0000-0000-0000-000000000004"
+                    "widget_id": "10000000-0000-0000-0000-000000000104"
                 },
                 {
                     "card_id": "e6286387-d046-4d80-aa72-0f6cf7ad5413",
@@ -1029,7 +1029,7 @@
                         "i18n_properties": [
                             "placeholder"
                         ],
-                        "label": "Parcel Identification Number",
+                        "label": "PIN (Parcel Identification Number)",
                         "maxLength": null,
                         "placeholder": {
                             "en": "Enter text"
@@ -1039,7 +1039,7 @@
                     },
                     "id": "35f6d9b5-0007-4735-b0eb-2898b328993f",
                     "label": {
-                        "en": "Parcel Identification Number"
+                        "en": "PIN (Parcel Identification Number)"
                     },
                     "node_id": "35615148-5a13-11ed-bf59-5254004d77d3",
                     "sortorder": 1,
@@ -1049,7 +1049,7 @@
                 {
                     "card_id": "068500bc-0d07-11ed-8804-5254008afee6",
                     "config": {
-                        "defaultValue": "",
+                        "defaultValue": "421e4821-8af4-492f-9f9e-faea7905f00c",
                         "i18n_properties": [
                             "placeholder"
                         ],
@@ -1917,7 +1917,7 @@
                         "i18n_properties": [
                             "placeholder"
                         ],
-                        "label": "Functional Category",
+                        "label": "Function Category",
                         "options": [],
                         "placeholder": {
                             "en": "Select an option"
@@ -1925,10 +1925,10 @@
                     },
                     "id": "89588d74-0d07-11ed-a4d8-5254008afee6",
                     "label": {
-                        "en": "Functional Category"
+                        "en": "Function Category"
                     },
                     "node_id": "89588b58-0d07-11ed-a4d8-5254008afee6",
-                    "sortorder": 1,
+                    "sortorder": 0,
                     "visible": true,
                     "widget_id": "10000000-0000-0000-0000-000000000002"
                 },
@@ -2592,7 +2592,7 @@
                         "i18n_properties": [
                             "placeholder"
                         ],
-                        "label": "Functional Period",
+                        "label": "Function Period",
                         "options": [
                             {
                                 "children": [],
@@ -2618,10 +2618,10 @@
                     },
                     "id": "fa3e7214-9899-4716-893d-8598157e4674",
                     "label": {
-                        "en": "Functional Period"
+                        "en": "Function Period"
                     },
                     "node_id": "89588ca2-0d07-11ed-a4d8-5254008afee6",
-                    "sortorder": 0,
+                    "sortorder": 1,
                     "visible": true,
                     "widget_id": "10000000-0000-0000-0000-000000000013"
                 },
@@ -3553,7 +3553,7 @@
                     },
                     "function_id": "60000000-0000-0000-0000-000000001002",
                     "graph_id": "cef9c510-e3e6-4057-ac08-89ad926180b4",
-                    "id": "46409c86-352b-4e7f-94e9-e46bb11c4ffd"
+                    "id": "03abbf5d-f5b8-4776-9fef-0b85911df10f"
                 },
                 {
                     "config": {
@@ -3565,7 +3565,7 @@
                     },
                     "function_id": "60000000-0000-0000-0000-000000002001",
                     "graph_id": "cef9c510-e3e6-4057-ac08-89ad926180b4",
-                    "id": "be0f5943-225e-4190-9507-a85518158b17"
+                    "id": "d9c8709a-4069-41ac-8d71-f788b9202dff"
                 }
             ],
             "graphid": "cef9c510-e3e6-4057-ac08-89ad926180b4",
@@ -3712,8 +3712,8 @@
                     },
                     "datatype": "concept",
                     "description": null,
-                    "exportable": false,
-                    "fieldname": null,
+                    "exportable": true,
+                    "fieldname": "image_view",
                     "graph_id": "cef9c510-e3e6-4057-ac08-89ad926180b4",
                     "hascustomalias": false,
                     "is_collector": false,
@@ -3758,8 +3758,8 @@
                     },
                     "datatype": "concept-list",
                     "description": null,
-                    "exportable": false,
-                    "fieldname": null,
+                    "exportable": true,
+                    "fieldname": "heritheme",
                     "graph_id": "cef9c510-e3e6-4057-ac08-89ad926180b4",
                     "hascustomalias": false,
                     "is_collector": true,
@@ -3808,7 +3808,7 @@
                     "datatype": "resource-instance-list",
                     "description": null,
                     "exportable": true,
-                    "fieldname": null,
+                    "fieldname": "childsite",
                     "graph_id": "cef9c510-e3e6-4057-ac08-89ad926180b4",
                     "hascustomalias": false,
                     "is_collector": true,
@@ -3833,8 +3833,8 @@
                     },
                     "datatype": "file-list",
                     "description": null,
-                    "exportable": false,
-                    "fieldname": null,
+                    "exportable": true,
+                    "fieldname": "ST_IMGS",
                     "graph_id": "cef9c510-e3e6-4057-ac08-89ad926180b4",
                     "hascustomalias": false,
                     "is_collector": true,
@@ -3874,11 +3874,13 @@
                 },
                 {
                     "alias": "photographer",
-                    "config": {},
+                    "config": {
+                        "en": ""
+                    },
                     "datatype": "string",
                     "description": null,
-                    "exportable": false,
-                    "fieldname": null,
+                    "exportable": true,
+                    "fieldname": "photograph",
                     "graph_id": "cef9c510-e3e6-4057-ac08-89ad926180b4",
                     "hascustomalias": false,
                     "is_collector": false,
@@ -3900,8 +3902,8 @@
                     },
                     "datatype": "concept",
                     "description": null,
-                    "exportable": false,
-                    "fieldname": null,
+                    "exportable": true,
+                    "fieldname": "bcrstatus",
                     "graph_id": "cef9c510-e3e6-4057-ac08-89ad926180b4",
                     "hascustomalias": false,
                     "is_collector": false,
@@ -4011,8 +4013,8 @@
                     },
                     "datatype": "geojson-feature-collection",
                     "description": "Represents a single node in a graph",
-                    "exportable": false,
-                    "fieldname": "",
+                    "exportable": true,
+                    "fieldname": "boundary",
                     "graph_id": "cef9c510-e3e6-4057-ac08-89ad926180b4",
                     "hascustomalias": false,
                     "is_collector": true,
@@ -4057,8 +4059,8 @@
                     },
                     "datatype": "string",
                     "description": null,
-                    "exportable": false,
-                    "fieldname": null,
+                    "exportable": true,
+                    "fieldname": "legaldesc",
                     "graph_id": "cef9c510-e3e6-4057-ac08-89ad926180b4",
                     "hascustomalias": false,
                     "is_collector": false,
@@ -4074,7 +4076,7 @@
                     "sourcebranchpublication_id": null
                 },
                 {
-                    "alias": "parcel_identifier",
+                    "alias": "pid",
                     "config": {
                         "en": ""
                     },
@@ -4088,7 +4090,7 @@
                     "isrequired": false,
                     "issearchable": true,
                     "istopnode": false,
-                    "name": "Parcel Identifier",
+                    "name": "PID",
                     "nodegroup_id": "1b622ab6-0d0f-11ed-98c2-5254008afee6",
                     "nodeid": "1b623e20-0d0f-11ed-98c2-5254008afee6",
                     "ontologyclass": "http://www.cidoc-crm.org/cidoc-crm/E42_Identifier",
@@ -4126,8 +4128,8 @@
                     },
                     "datatype": "concept",
                     "description": null,
-                    "exportable": false,
-                    "fieldname": null,
+                    "exportable": true,
+                    "fieldname": "province",
                     "graph_id": "cef9c510-e3e6-4057-ac08-89ad926180b4",
                     "hascustomalias": false,
                     "is_collector": false,
@@ -4167,11 +4169,13 @@
                 },
                 {
                     "alias": "postal_code",
-                    "config": {},
+                    "config": {
+                        "en": ""
+                    },
                     "datatype": "string",
                     "description": null,
-                    "exportable": false,
-                    "fieldname": null,
+                    "exportable": true,
+                    "fieldname": "postalcode",
                     "graph_id": "cef9c510-e3e6-4057-ac08-89ad926180b4",
                     "hascustomalias": false,
                     "is_collector": false,
@@ -4188,11 +4192,13 @@
                 },
                 {
                     "alias": "spatial_accuracy",
-                    "config": {},
+                    "config": {
+                        "en": ""
+                    },
                     "datatype": "string",
                     "description": null,
-                    "exportable": false,
-                    "fieldname": null,
+                    "exportable": true,
+                    "fieldname": "spatialacc",
                     "graph_id": "cef9c510-e3e6-4057-ac08-89ad926180b4",
                     "hascustomalias": false,
                     "is_collector": false,
@@ -4209,11 +4215,13 @@
                 },
                 {
                     "alias": "accuracy_remarks",
-                    "config": {},
+                    "config": {
+                        "en": ""
+                    },
                     "datatype": "string",
                     "description": null,
-                    "exportable": false,
-                    "fieldname": null,
+                    "exportable": true,
+                    "fieldname": "accuracyrm",
                     "graph_id": "cef9c510-e3e6-4057-ac08-89ad926180b4",
                     "hascustomalias": false,
                     "is_collector": false,
@@ -4235,8 +4243,8 @@
                     },
                     "datatype": "number",
                     "description": null,
-                    "exportable": false,
-                    "fieldname": null,
+                    "exportable": true,
+                    "fieldname": "fedid",
                     "graph_id": "cef9c510-e3e6-4057-ac08-89ad926180b4",
                     "hascustomalias": false,
                     "is_collector": false,
@@ -4307,8 +4315,8 @@
                     },
                     "datatype": "concept",
                     "description": null,
-                    "exportable": false,
-                    "fieldname": null,
+                    "exportable": true,
+                    "fieldname": "urltype",
                     "graph_id": "cef9c510-e3e6-4057-ac08-89ad926180b4",
                     "hascustomalias": false,
                     "is_collector": false,
@@ -4325,11 +4333,13 @@
                 },
                 {
                     "alias": "copyright",
-                    "config": {},
+                    "config": {
+                        "en": ""
+                    },
                     "datatype": "string",
                     "description": null,
-                    "exportable": false,
-                    "fieldname": null,
+                    "exportable": true,
+                    "fieldname": "copyright",
                     "graph_id": "cef9c510-e3e6-4057-ac08-89ad926180b4",
                     "hascustomalias": false,
                     "is_collector": false,
@@ -4351,8 +4361,8 @@
                     },
                     "datatype": "string",
                     "description": null,
-                    "exportable": false,
-                    "fieldname": null,
+                    "exportable": true,
+                    "fieldname": "Builder",
                     "graph_id": "cef9c510-e3e6-4057-ac08-89ad926180b4",
                     "hascustomalias": false,
                     "is_collector": false,
@@ -4389,7 +4399,7 @@
                     "sourcebranchpublication_id": null
                 },
                 {
-                    "alias": "parcel_identification_number",
+                    "alias": "pin",
                     "config": {
                         "en": ""
                     },
@@ -4403,7 +4413,7 @@
                     "isrequired": false,
                     "issearchable": true,
                     "istopnode": false,
-                    "name": "Parcel Identification Number",
+                    "name": "PIN",
                     "nodegroup_id": "1b622ab6-0d0f-11ed-98c2-5254008afee6",
                     "nodeid": "35615148-5a13-11ed-bf59-5254004d77d3",
                     "ontologyclass": "http://www.cidoc-crm.org/cidoc-crm/E42_Identifier",
@@ -4418,8 +4428,8 @@
                     },
                     "datatype": "url",
                     "description": null,
-                    "exportable": false,
-                    "fieldname": null,
+                    "exportable": true,
+                    "fieldname": "url",
                     "graph_id": "cef9c510-e3e6-4057-ac08-89ad926180b4",
                     "hascustomalias": false,
                     "is_collector": true,
@@ -4441,8 +4451,8 @@
                     },
                     "datatype": "date",
                     "description": null,
-                    "exportable": false,
-                    "fieldname": null,
+                    "exportable": true,
+                    "fieldname": "chendyear",
                     "graph_id": "cef9c510-e3e6-4057-ac08-89ad926180b4",
                     "hascustomalias": false,
                     "is_collector": false,
@@ -4473,8 +4483,8 @@
                     },
                     "datatype": "boolean",
                     "description": null,
-                    "exportable": false,
-                    "fieldname": null,
+                    "exportable": true,
+                    "fieldname": "dateapprox",
                     "graph_id": "cef9c510-e3e6-4057-ac08-89ad926180b4",
                     "hascustomalias": false,
                     "is_collector": false,
@@ -4496,8 +4506,8 @@
                     },
                     "datatype": "string",
                     "description": "The locality which the property lies within",
-                    "exportable": false,
-                    "fieldname": null,
+                    "exportable": true,
+                    "fieldname": "locality",
                     "graph_id": "cef9c510-e3e6-4057-ac08-89ad926180b4",
                     "hascustomalias": false,
                     "is_collector": false,
@@ -4599,8 +4609,8 @@
                     },
                     "datatype": "concept",
                     "description": null,
-                    "exportable": false,
-                    "fieldname": null,
+                    "exportable": true,
+                    "fieldname": "buildtype",
                     "graph_id": "cef9c510-e3e6-4057-ac08-89ad926180b4",
                     "hascustomalias": false,
                     "is_collector": false,
@@ -4710,8 +4720,8 @@
                     },
                     "datatype": "string",
                     "description": null,
-                    "exportable": false,
-                    "fieldname": null,
+                    "exportable": true,
+                    "fieldname": "desig_note",
                     "graph_id": "cef9c510-e3e6-4057-ac08-89ad926180b4",
                     "hascustomalias": false,
                     "is_collector": false,
@@ -4809,8 +4819,8 @@
                     },
                     "datatype": "boolean",
                     "description": null,
-                    "exportable": false,
-                    "fieldname": null,
+                    "exportable": true,
+                    "fieldname": "prim_image",
                     "graph_id": "cef9c510-e3e6-4057-ac08-89ad926180b4",
                     "hascustomalias": false,
                     "is_collector": false,
@@ -4871,11 +4881,13 @@
                 },
                 {
                     "alias": "contributing_resource_count",
-                    "config": {},
+                    "config": {
+                        "en": ""
+                    },
                     "datatype": "number",
                     "description": null,
-                    "exportable": false,
-                    "fieldname": null,
+                    "exportable": true,
+                    "fieldname": "class_reso",
                     "graph_id": "cef9c510-e3e6-4057-ac08-89ad926180b4",
                     "hascustomalias": false,
                     "is_collector": false,
@@ -4897,8 +4909,8 @@
                     },
                     "datatype": "concept",
                     "description": null,
-                    "exportable": false,
-                    "fieldname": null,
+                    "exportable": true,
+                    "fieldname": "ownership",
                     "graph_id": "cef9c510-e3e6-4057-ac08-89ad926180b4",
                     "hascustomalias": false,
                     "is_collector": false,
@@ -4920,8 +4932,8 @@
                     },
                     "datatype": "concept",
                     "description": null,
-                    "exportable": false,
-                    "fieldname": null,
+                    "exportable": true,
+                    "fieldname": "category",
                     "graph_id": "cef9c510-e3e6-4057-ac08-89ad926180b4",
                     "hascustomalias": false,
                     "is_collector": false,
@@ -4961,11 +4973,13 @@
                 },
                 {
                     "alias": "defining_elements",
-                    "config": {},
+                    "config": {
+                        "en": ""
+                    },
                     "datatype": "string",
                     "description": null,
-                    "exportable": false,
-                    "fieldname": null,
+                    "exportable": true,
+                    "fieldname": "soscdf",
                     "graph_id": "cef9c510-e3e6-4057-ac08-89ad926180b4",
                     "hascustomalias": false,
                     "is_collector": false,
@@ -5005,11 +5019,13 @@
                 },
                 {
                     "alias": "document_location",
-                    "config": {},
+                    "config": {
+                        "en": ""
+                    },
                     "datatype": "string",
                     "description": "Location of the original document",
-                    "exportable": false,
-                    "fieldname": null,
+                    "exportable": true,
+                    "fieldname": "sosdocloc",
                     "graph_id": "cef9c510-e3e6-4057-ac08-89ad926180b4",
                     "hascustomalias": false,
                     "is_collector": false,
@@ -5049,11 +5065,13 @@
                 },
                 {
                     "alias": "heritage_value",
-                    "config": {},
+                    "config": {
+                        "en": ""
+                    },
                     "datatype": "string",
                     "description": null,
-                    "exportable": false,
-                    "fieldname": null,
+                    "exportable": true,
+                    "fieldname": "soshv",
                     "graph_id": "cef9c510-e3e6-4057-ac08-89ad926180b4",
                     "hascustomalias": false,
                     "is_collector": false,
@@ -5075,8 +5093,8 @@
                     },
                     "datatype": "string",
                     "description": null,
-                    "exportable": false,
-                    "fieldname": null,
+                    "exportable": true,
+                    "fieldname": "Buildnotes",
                     "graph_id": "cef9c510-e3e6-4057-ac08-89ad926180b4",
                     "hascustomalias": false,
                     "is_collector": false,
@@ -5121,8 +5139,8 @@
                     },
                     "datatype": "concept",
                     "description": "This needs to be a hierarchical concept",
-                    "exportable": false,
-                    "fieldname": null,
+                    "exportable": true,
+                    "fieldname": "funct_cat",
                     "graph_id": "cef9c510-e3e6-4057-ac08-89ad926180b4",
                     "hascustomalias": false,
                     "is_collector": false,
@@ -5144,8 +5162,8 @@
                     },
                     "datatype": "concept-list",
                     "description": null,
-                    "exportable": false,
-                    "fieldname": null,
+                    "exportable": true,
+                    "fieldname": "func_state",
                     "graph_id": "cef9c510-e3e6-4057-ac08-89ad926180b4",
                     "hascustomalias": false,
                     "is_collector": false,
@@ -5167,8 +5185,8 @@
                     },
                     "datatype": "string",
                     "description": "{\"en\": \"\"}",
-                    "exportable": false,
-                    "fieldname": "",
+                    "exportable": true,
+                    "fieldname": "remark",
                     "graph_id": "cef9c510-e3e6-4057-ac08-89ad926180b4",
                     "hascustomalias": false,
                     "is_collector": true,
@@ -5190,8 +5208,8 @@
                     },
                     "datatype": "date",
                     "description": null,
-                    "exportable": false,
-                    "fieldname": null,
+                    "exportable": true,
+                    "fieldname": "remarkdate",
                     "graph_id": "cef9c510-e3e6-4057-ac08-89ad926180b4",
                     "hascustomalias": false,
                     "is_collector": false,
@@ -5213,8 +5231,8 @@
                     },
                     "datatype": "concept",
                     "description": null,
-                    "exportable": false,
-                    "fieldname": null,
+                    "exportable": true,
+                    "fieldname": "remarktype",
                     "graph_id": "cef9c510-e3e6-4057-ac08-89ad926180b4",
                     "hascustomalias": false,
                     "is_collector": false,
@@ -5259,8 +5277,8 @@
                     },
                     "datatype": "string",
                     "description": null,
-                    "exportable": false,
-                    "fieldname": null,
+                    "exportable": true,
+                    "fieldname": "datesource",
                     "graph_id": "cef9c510-e3e6-4057-ac08-89ad926180b4",
                     "hascustomalias": false,
                     "is_collector": false,
@@ -5282,8 +5300,8 @@
                     },
                     "datatype": "date",
                     "description": null,
-                    "exportable": false,
-                    "fieldname": null,
+                    "exportable": true,
+                    "fieldname": "image_date",
                     "graph_id": "cef9c510-e3e6-4057-ac08-89ad926180b4",
                     "hascustomalias": false,
                     "is_collector": false,
@@ -5299,7 +5317,7 @@
                     "sourcebranchpublication_id": null
                 },
                 {
-                    "alias": "significant_event",
+                    "alias": "chronology",
                     "config": {
                         "rdmCollection": "98168ecf-c243-45c6-8fa2-e07039469153"
                     },
@@ -5313,7 +5331,7 @@
                     "isrequired": false,
                     "issearchable": true,
                     "istopnode": false,
-                    "name": "Significant Event",
+                    "name": "Chronology",
                     "nodegroup_id": "98347640-cd88-11ed-bda2-5254004d77d3",
                     "nodeid": "98347640-cd88-11ed-bda2-5254004d77d3",
                     "ontologyclass": "http://www.cidoc-crm.org/cidoc-crm/E11_Modification",
@@ -5328,8 +5346,8 @@
                     },
                     "datatype": "string",
                     "description": null,
-                    "exportable": false,
-                    "fieldname": null,
+                    "exportable": true,
+                    "fieldname": "docdesc",
                     "graph_id": "cef9c510-e3e6-4057-ac08-89ad926180b4",
                     "hascustomalias": false,
                     "is_collector": false,
@@ -5351,8 +5369,8 @@
                     },
                     "datatype": "string",
                     "description": null,
-                    "exportable": false,
-                    "fieldname": null,
+                    "exportable": true,
+                    "fieldname": "image_desc",
                     "graph_id": "cef9c510-e3e6-4057-ac08-89ad926180b4",
                     "hascustomalias": false,
                     "is_collector": false,
@@ -5374,8 +5392,8 @@
                     },
                     "datatype": "string",
                     "description": null,
-                    "exportable": false,
-                    "fieldname": null,
+                    "exportable": true,
+                    "fieldname": "locdesc",
                     "graph_id": "cef9c510-e3e6-4057-ac08-89ad926180b4",
                     "hascustomalias": false,
                     "is_collector": false,
@@ -5655,8 +5673,8 @@
                     },
                     "datatype": "concept",
                     "description": null,
-                    "exportable": false,
-                    "fieldname": null,
+                    "exportable": true,
+                    "fieldname": "crsubstat",
                     "graph_id": "cef9c510-e3e6-4057-ac08-89ad926180b4",
                     "hascustomalias": false,
                     "is_collector": false,
@@ -5701,8 +5719,8 @@
                     },
                     "datatype": "date",
                     "description": null,
-                    "exportable": false,
-                    "fieldname": null,
+                    "exportable": true,
+                    "fieldname": "datesubmit",
                     "graph_id": "cef9c510-e3e6-4057-ac08-89ad926180b4",
                     "hascustomalias": false,
                     "is_collector": false,
@@ -5733,8 +5751,8 @@
                     },
                     "datatype": "boolean",
                     "description": "When checked the image will be included in the CRHP submission",
-                    "exportable": false,
-                    "fieldname": null,
+                    "exportable": true,
+                    "fieldname": "crhp_image",
                     "graph_id": "cef9c510-e3e6-4057-ac08-89ad926180b4",
                     "hascustomalias": false,
                     "is_collector": false,
@@ -5791,8 +5809,8 @@
                     },
                     "datatype": "file-list",
                     "description": "",
-                    "exportable": false,
-                    "fieldname": "",
+                    "exportable": true,
+                    "fieldname": "sitedoc",
                     "graph_id": "cef9c510-e3e6-4057-ac08-89ad926180b4",
                     "hascustomalias": false,
                     "is_collector": true,
@@ -5823,8 +5841,8 @@
                     },
                     "datatype": "boolean",
                     "description": null,
-                    "exportable": false,
-                    "fieldname": null,
+                    "exportable": true,
+                    "fieldname": "restricted",
                     "graph_id": "cef9c510-e3e6-4057-ac08-89ad926180b4",
                     "hascustomalias": false,
                     "is_collector": false,
@@ -5846,8 +5864,8 @@
                     },
                     "datatype": "string",
                     "description": null,
-                    "exportable": false,
-                    "fieldname": null,
+                    "exportable": true,
+                    "fieldname": "image_feat",
                     "graph_id": "cef9c510-e3e6-4057-ac08-89ad926180b4",
                     "hascustomalias": false,
                     "is_collector": false,
@@ -5869,8 +5887,8 @@
                     },
                     "datatype": "string",
                     "description": null,
-                    "exportable": false,
-                    "fieldname": null,
+                    "exportable": true,
+                    "fieldname": "datenotes",
                     "graph_id": "cef9c510-e3e6-4057-ac08-89ad926180b4",
                     "hascustomalias": false,
                     "is_collector": false,
@@ -5917,8 +5935,8 @@
                     },
                     "datatype": "concept",
                     "description": null,
-                    "exportable": false,
-                    "fieldname": null,
+                    "exportable": true,
+                    "fieldname": "imagetype",
                     "graph_id": "cef9c510-e3e6-4057-ac08-89ad926180b4",
                     "hascustomalias": false,
                     "is_collector": false,
@@ -5940,8 +5958,8 @@
                     },
                     "datatype": "concept",
                     "description": null,
-                    "exportable": false,
-                    "fieldname": null,
+                    "exportable": true,
+                    "fieldname": "doctype",
                     "graph_id": "cef9c510-e3e6-4057-ac08-89ad926180b4",
                     "hascustomalias": false,
                     "is_collector": false,
@@ -6007,8 +6025,8 @@
             "publication": {
                 "graph_id": "cef9c510-e3e6-4057-ac08-89ad926180b4",
                 "notes": null,
-                "publicationid": "5a582742-a0f8-11ee-90b6-080027b7463b",
-                "published_time": "2023-12-22T12:31:42.312"
+                "publicationid": "f59d189e-bca4-11ee-a60d-080027b7463b",
+                "published_time": "2024-01-26T17:45:17.643"
             },
             "relatable_resource_model_ids": [],
             "resource_2_resource_constraints": [],
@@ -6042,7 +6060,7 @@
     ],
     "metadata": {
         "db": "PostgreSQL 15.3 on x86_64-pc-linux-gnu, compiled by gcc (GCC) 11.3.1 20221121 (Red Hat 11.3.1-4), 64-bit",
-        "git hash": "e10813e38 2023-12-11 05:06:58 -0800",
+        "git hash": "6f4433a6f 2024-01-22 23:28:45 -0800",
         "os": "Linux",
         "os version": "5.14.0-333.el9.x86_64"
     }

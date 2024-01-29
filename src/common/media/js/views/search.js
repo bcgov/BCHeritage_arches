@@ -139,13 +139,14 @@ define([
         },
 
         doQuery: function() {
+            var maxUrlLength = 35000;
             var queryString = JSON.parse(this.queryString());
 
             if (this.updateRequest) {
                 this.updateRequest.abort();
             }
 
-            var request_type = (arches.urls.search_results.length + $.param(queryString).split('+').join('%20').length) < 2048 ? "GET": "POST";
+            var request_type = (arches.urls.search_results.length + $.param(queryString).split('+').join('%20').length) < maxUrlLength ? "GET": "POST";
             var map_filter;
             var url_data = '';
             if (request_type === 'POST' && !!queryString['map-filter'])
@@ -179,8 +180,9 @@ define([
                     this.viewModel.alert(false);
                 },
                 error: function(response, status, error) {
+                    const alert = new AlertViewModel('ep-alert-red', arches.translations.requestFailed.title, response.responseJSON?.message);
                     if(this.updateRequest.statusText !== 'abort'){
-                        this.viewModel.alert(new AlertViewModel('ep-alert-red', arches.translations.requestFailed.title, response.responseText));
+                        this.viewModel.alert(alert);
                     }
                 },
                 complete: function(request, status) {

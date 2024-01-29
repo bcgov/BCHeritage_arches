@@ -4,6 +4,7 @@ where isresource = true
   and publicationid is not null
   and name->>'en' != 'Arches System Settings';
 
+-- Can these go in as migrations? When does that run WRT model creation?
 create or replace function get_uuid_lookup_table(parent_name text, language_code text[] default array['en', 'en-US'])
     returns table(parent_label text, parent_concept_uuid uuid, parent_value_uuid uuid, child_label text, child_concept_uuid uuid, child_value_uuid uuid) as
 $$
@@ -202,10 +203,10 @@ from heritage_site.instances i
         left join (select resourceinstanceid, jsonb_agg( jsonb_concat(jsonb_build_object('url_type',__arches_get_concept_label(external_url_type)), external_url)) external_urls from heritage_site.external_url group by resourceinstanceid) eu on i.resourceinstanceid = eu.resourceinstanceid
         left join (select resourceinstanceid,
                    jsonb_agg(jsonb_build_object(
-                   'event_type', __arches_get_concept_label(significant_event),
+                   'event_type', __arches_get_concept_label(chronology),
                        'start_year', start_year,
                        'end_year', end_year,
                        'dates_approximate', dates_approximate
                    )) significant_events
-                   from heritage_site.significant_event group by resourceinstanceid) se on se.resourceinstanceid = i.resourceinstanceid;
+                   from heritage_site.chronology group by resourceinstanceid) se on se.resourceinstanceid = i.resourceinstanceid;
 -- where i.resourceinstanceid = 'ab27f75c-4b35-4c60-a4e9-5f4c944493d0';

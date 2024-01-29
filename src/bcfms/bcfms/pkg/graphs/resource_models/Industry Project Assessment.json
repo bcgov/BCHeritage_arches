@@ -1536,8 +1536,8 @@
                     "config": {
                         "basemap": "streets",
                         "bearing": 0,
-                        "centerX": -125.2111215300115,
-                        "centerY": 54.5952920093056,
+                        "centerX": -124.3451257070194,
+                        "centerY": 54.800708521828426,
                         "defaultValue": "",
                         "defaultValueType": "",
                         "featureColor": "#FF0000",
@@ -1560,18 +1560,18 @@
                                 "text": "Polygon"
                             }
                         ],
-                        "label": "Spatial Location",
+                        "label": "Project Location",
                         "maxZoom": 20,
                         "minZoom": 0,
                         "overlayConfigs": [],
                         "overlayOpacity": 0,
                         "pitch": 0,
                         "rerender": true,
-                        "zoom": 0
+                        "zoom": 4.087407689940523
                     },
                     "id": "6e5fb6d3-7216-45f6-ac4e-c138fa74d441",
                     "label": {
-                        "en": "Spatial Location"
+                        "en": "Project Location"
                     },
                     "node_id": "2bb08950-a880-11ed-95a4-5254004d77d3",
                     "sortorder": 1,
@@ -1650,9 +1650,17 @@
                             {
                                 "children": [],
                                 "collector": "",
+                                "conceptid": "0b9dbd01-32f2-4e26-9c17-f6555f1f0924",
+                                "id": "d6578b0a-a292-4847-a3f5-20187cc5692c",
+                                "sortorder": "",
+                                "text": "High"
+                            },
+                            {
+                                "children": [],
+                                "collector": "",
                                 "conceptid": "0da27ece-bc63-4a40-bd52-bd6b1cfdb8ac",
                                 "id": "b43fe9e6-7741-4fcd-a1ba-767aeefb364c",
-                                "sortorder": "01",
+                                "sortorder": "",
                                 "text": "Low"
                             },
                             {
@@ -1660,16 +1668,8 @@
                                 "collector": "",
                                 "conceptid": "79bb5289-5364-4f46-95c3-d729392a953f",
                                 "id": "823cfc3f-bdcc-4dc8-ac07-a303be33b223",
-                                "sortorder": "05",
+                                "sortorder": "",
                                 "text": "Medium"
-                            },
-                            {
-                                "children": [],
-                                "collector": "",
-                                "conceptid": "0b9dbd01-32f2-4e26-9c17-f6555f1f0924",
-                                "id": "d6578b0a-a292-4847-a3f5-20187cc5692c",
-                                "sortorder": "10",
-                                "text": "High"
                             }
                         ],
                         "placeholder": {
@@ -2552,9 +2552,17 @@
                             {
                                 "children": [],
                                 "collector": "",
+                                "conceptid": "0b9dbd01-32f2-4e26-9c17-f6555f1f0924",
+                                "id": "d6578b0a-a292-4847-a3f5-20187cc5692c",
+                                "sortorder": "",
+                                "text": "High"
+                            },
+                            {
+                                "children": [],
+                                "collector": "",
                                 "conceptid": "0da27ece-bc63-4a40-bd52-bd6b1cfdb8ac",
                                 "id": "b43fe9e6-7741-4fcd-a1ba-767aeefb364c",
-                                "sortorder": "01",
+                                "sortorder": "",
                                 "text": "Low"
                             },
                             {
@@ -2562,16 +2570,8 @@
                                 "collector": "",
                                 "conceptid": "79bb5289-5364-4f46-95c3-d729392a953f",
                                 "id": "823cfc3f-bdcc-4dc8-ac07-a303be33b223",
-                                "sortorder": "05",
+                                "sortorder": "",
                                 "text": "Medium"
-                            },
-                            {
-                                "children": [],
-                                "collector": "",
-                                "conceptid": "0b9dbd01-32f2-4e26-9c17-f6555f1f0924",
-                                "id": "d6578b0a-a292-4847-a3f5-20187cc5692c",
-                                "sortorder": "10",
-                                "text": "High"
                             }
                         ],
                         "placeholder": {
@@ -4045,7 +4045,51 @@
                     "rangenode_id": "ff4fb7c8-a361-11ed-b0ab-5254004d77d3"
                 }
             ],
-            "functions_x_graphs": [],
+            "functions_x_graphs": [
+                {
+                    "config": {
+                        "class_name": "BCFossilsDescriptors",
+                        "descriptor_types": {
+                            "description": {
+                                "delimiter": "<br>",
+                                "first_only": false,
+                                "node_ids": [
+                                    "b1ffaf80-9e59-11ed-9252-5254004d77d3",
+                                    "694922ec-9dc0-11ed-8d8e-5254004d77d3",
+                                    "416e539a-a357-11ed-932e-5254004d77d3"
+                                ],
+                                "show_name": true,
+                                "type": "description"
+                            },
+                            "map_popup": {
+                                "delimiter": "<br>",
+                                "first_only": false,
+                                "node_ids": [
+                                    "b1ffaf80-9e59-11ed-9252-5254004d77d3",
+                                    "416e539a-a357-11ed-932e-5254004d77d3"
+                                ],
+                                "show_name": true,
+                                "type": "map_popup"
+                            },
+                            "name": {
+                                "delimiter": " - ",
+                                "first_only": false,
+                                "node_ids": [
+                                    "67997a7e-9dc4-11ed-9ef3-5254004d77d3",
+                                    "59c1b050-3c49-11ee-9268-080027b7463b"
+                                ],
+                                "show_name": false,
+                                "type": "name"
+                            }
+                        },
+                        "module": "bcfms.functions.bc_fossils_descriptors",
+                        "triggering_nodegroups": []
+                    },
+                    "function_id": "60000000-0000-0000-0000-000000001001",
+                    "graph_id": "2aa724d1-ffd3-4823-8ff1-15a385b9a407",
+                    "id": "7db540a4-52f5-43b9-adf0-3f7a5165fe81"
+                }
+            ],
             "graphid": "2aa724d1-ffd3-4823-8ff1-15a385b9a407",
             "iconclass": "fa fa-diamond",
             "is_editable": true,
@@ -8481,8 +8525,8 @@
             "publication": {
                 "graph_id": "2aa724d1-ffd3-4823-8ff1-15a385b9a407",
                 "notes": null,
-                "publicationid": "602486ce-9a19-11ee-9342-080027b7463b",
-                "published_time": "2023-12-13T18:40:27.293"
+                "publicationid": "48516fe6-ba33-11ee-bfc8-080027b7463b",
+                "published_time": "2024-01-23T15:06:31.445"
             },
             "relatable_resource_model_ids": [],
             "resource_2_resource_constraints": [],
@@ -8517,8 +8561,8 @@
         }
     ],
     "metadata": {
-        "db": "PostgreSQL 16.0 on x86_64-pc-linux-gnu, compiled by gcc (GCC) 11.3.1 20221121 (Red Hat 11.3.1-4), 64-bit",
-        "git hash": "e10813e38 2023-12-11 05:06:58 -0800",
+        "db": "PostgreSQL 15.3 on x86_64-pc-linux-gnu, compiled by gcc (GCC) 11.3.1 20221121 (Red Hat 11.3.1-4), 64-bit",
+        "git hash": "6f4433a6f 2024-01-22 23:28:45 -0800",
         "os": "Linux",
         "os version": "5.14.0-333.el9.x86_64"
     }
