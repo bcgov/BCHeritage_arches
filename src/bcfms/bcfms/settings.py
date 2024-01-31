@@ -44,7 +44,7 @@ UPLOADED_FILES_DIR = "uploadedfiles"
 # SECRET_KEY = ''
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True
+DEBUG = {{ django_debug_mode }}
 
 ROOT_URLCONF = 'bcfms.urls'
 
