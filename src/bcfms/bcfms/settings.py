@@ -129,7 +129,7 @@ MEDIA_ROOT = os.path.join(APP_ROOT)
 STATIC_ROOT = os.path.join(APP_ROOT, "staticfiles")
 
 # when hosting Arches under a sub path set this value to the sub path eg : "/{sub_path}/"
-FORCE_SCRIPT_NAME = None
+FORCE_SCRIPT_NAME = '/int/bc-fossil-management'
 
 OVERRIDE_RESOURCE_MODEL_LOCK = False
 
