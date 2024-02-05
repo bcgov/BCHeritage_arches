@@ -1,5 +1,5 @@
 -- Materialized views to support the Data BC export
-drop materialized view if exists mv_borden_number;
+drop materialized view if exists mv_borden_number cascade;
 create materialized view mv_borden_number as
 select resourceinstanceid, borden_number->'en'->>'value' borden_number from heritage_site.borden_number;
 create index bn_idx on mv_borden_number (resourceinstanceid);
@@ -11,6 +11,16 @@ select resourceinstanceid, __arches_get_concept_label(name_type) name_type,
 from heritage_site.site_names;
 create index sn_idx on mv_site_names (resourceinstanceid);
 
+drop materialized view if exists mv_bc_statement_of_significance cascade;
+create materialized view mv_bc_statement_of_significance as
+select resourceinstanceid,
+       defining_elements->'en'->>'value' defining_elements,
+       physical_description->'en'->>'value' physical_description,
+       document_location->'en'->>'value' document_location,
+       __arches_get_concept_label(significance_type) significance_type,
+       heritage_value->'en'->>'value' heritage_value
+from heritage_site.bc_statement_of_significance sos;
+create index sos_ri_idx1 on mv_bc_statement_of_significance(resourceinstanceid);
 
 -- select * from mv_property_address;
 drop materialized view if exists mv_property_address cascade;
@@ -59,7 +69,7 @@ group by resourceinstanceid,
         registration_status;
 create index br_ri_idx on mv_bc_right(resourceinstanceid, bc_right_id);
 
-drop materialized view if exists mv_government;
+drop materialized view if exists mv_government cascade;
 create materialized view mv_government as
 select resourceinstanceid, government_name->'en'->>'value' government_name,
        __arches_get_concept_label(government_type) government_type
@@ -179,6 +189,40 @@ end
 $$ language plpgsql;
 ALTER FUNCTION databc.get_first_address(p_resourceinstanceid uuid) SECURITY DEFINER SET search_path = public;
 
+drop function if exists databc.html_to_plain_string cascade;
+create or replace function databc.html_to_plain_string(string_to_clean text) returns text as
+$$
+declare
+begin
+    return
+        trim(
+                regexp_replace(
+                        regexp_replace( -- <li> -> -
+                                regexp_replace( -- UL/LI to \n
+                                        regexp_replace(string_to_clean, '<[/]{0,1}p>', '', 'gi')
+                                    , '<ul><li>', E'\n- ', 'gi'),
+                                '<li>', '- ', 'gi'
+                            ),
+                        '(</ul>|</li>)', '', 'gi'
+                    ));
+end
+$$ language plpgsql;
+ALTER FUNCTION databc.html_to_plain_string(string_to_clean text) SECURITY DEFINER SET search_path = public;
+
+drop function if exists databc.authority_priority cascade;
+create or replace function databc.authority_priority(authority_level text) returns numeric as
+$$
+begin
+    return
+        case when authority_level = 'Provincial' then 2
+            when authority_level = 'Municipal' then 1
+            else 0 end;
+end
+$$ language plpgsql;
+
+ALTER FUNCTION databc.authority_priority(authority_level text) SECURITY DEFINER SET search_path = public;
+
+
 -- select * from MV_HISTORIC_ENVIRO_ONEROW_SITE order by borden_number;
 -- select * from MV_HISTORIC_ENVIRO_ONEROW_SITE where borden_number in ('DcRu-235', 'DcRu-234');
 -- select * from V_HISTORIC_ENVIRO_ONEROW_SITE where borden_number in ('DcRu-235', 'DcRu-234');
@@ -186,39 +230,45 @@ ALTER FUNCTION databc.get_first_address(p_resourceinstanceid uuid) SECURITY DEFI
 -- drop materialized view if exists MV_HISTORIC_ENVIRO_ONEROW_SITE;
 -- refresh materialized view MV_HISTORIC_ENVIRO_ONEROW_SITE;
 
-
 drop view if exists databc.V_HISTORIC_ENVIRO_ONEROW_SITE;
 -- create materialized view MV_HISTORIC_ENVIRO_ONEROW_SITE as
 create or replace view databc.V_HISTORIC_ENVIRO_ONEROW_SITE as
 select distinct bn.resourceinstanceid,
-                bn.borden_number,
-                case when br.officially_recognized_site then 'Y' else 'N' end is_officially_recognised,
-                br.registration_status,
+                bn.borden_number BORDENNUMBER,
+                case when br.officially_recognized_site then 'Y' else 'N' end ISHERITAGESITE,
+                br.registration_status REGISTRATIONSTATUS,
                 cn.name                                 common_name,
                 array_to_string(other_name.names, '; ') other_name,
-                prop.pid         parcel_id,
-                prop.street_address,
+                prop.pid         parcelid,
+                prop.street_address streeetaddress,
                 prop.city,
-                prop.locality,
                 prop.province,
+                prop.locality,
+                prop.location_description,
                 br.authorities->>'government_name' government_name,
-                br.authorities->>'authority' government_level,
-                br.authorities->>'recognition_type' protection_type,
-                to_char(to_date(br.authorities->>'start_date', 'YYYY-MM-DD'), 'YYYY')::int start_date,
+                br.authorities->>'authority' governmentlevel,
+                br.authorities->>'recognition_type' protectiontype,
+                to_char(to_date(br.authorities->>'start_date', 'YYYY-MM-DD'), 'YYYY')::int startdate,
+                br.authorities->>'reference_number' reference_number,
                 case when mc.chronology is null then null else to_char(to_date(chronology[0]->>'start_year', 'YYYY-MM-DD'), 'YYYY') end date_fromdate,
-                case when mc.chronology is not null and (chronology[0]->>'dates_approximate')::boolean then 'Circa' end date_from_qualifier,
-                case when mc.chronology is null then null else chronology[0]->>'event' end date_hist_date_type,
+                case when mc.chronology is not null and (chronology[0]->>'dates_approximate')::boolean then 'Circa' end date_fromqualifier,
+                case when mc.chronology is null then null else chronology[0]->>'event' end date_histdatetype,
 --                 case when msra.crhp_submission_status = 'Approved' then 'Y' else 'N' end is_accepted_by_feds,
+                case when significance_statement is null then null else (significance_statement->>'significance_type') end significance_type,
+                case when significance_statement is null then null else (significance_statement->>'physical_description') end physical_description,
+                case when significance_statement is null then null else (significance_statement->>'heritage_value') end heritage_value,
+                case when significance_statement is null then null else (significance_statement->>'defining_elements') end defining_elements,
+                case when significance_statement is null then null else (significance_statement->>'document_location') end document_location,
                 ca.actors->>'Architect / Designer' architect_name,
                 ca.actors->>'Builder' builder_name,
                 hf.functional_states->>'Current' current_function,
                 hf.functional_states->>'Historic' historic_function,
                 msb.area_sqm dimensions_area,
-                msb.site_centroid_latitude gis_latitude,
-                msb.site_centroid_longitude gis_longitude,
-                msb.utmzone utm_zone,
-                msb.utmnorthing utm_northing,
-                msb.utmeasting utm_easting,
+                msb.site_centroid_latitude gislatitude,
+                msb.site_centroid_longitude gislongitude,
+                msb.utmzone utmzone,
+                msb.utmnorthing utmnorthing,
+                msb.utmeasting utmeasting,
                 'https://apps.nrs.gov.bc.ca/int/bcrhp/report/'||bn.resourceinstanceid site_url
 --                 prop.location_description,
 --                 prop.pin,
@@ -230,7 +280,6 @@ select distinct bn.resourceinstanceid,
 from mv_borden_number bn
          left join (select resourceinstanceid, name from mv_site_names where name_type = 'Common') cn on cn.resourceinstanceid = bn.resourceinstanceid
          left join (select resourceinstanceid, array_agg(name) names from mv_site_names where name_type = 'Other' group by resourceinstanceid) other_name on other_name.resourceinstanceid = bn.resourceinstanceid
-         left join mv_site_names sn on sn.resourceinstanceid = bn.resourceinstanceid
          join (select distinct r.resourceinstanceid,
                                     r.officially_recognized_site,
                                     r.registration_status,
@@ -238,11 +287,12 @@ from mv_borden_number bn
                                             case when pe.authority is null then null else
                                                 jsonb_build_object(
                                                         'authority', pe.authority,
-                                                        'auth_order', case when pe.authority = 'Provincial' then 0 when pe.authority = 'Municipal' then 1 else 2 end,
+                                                        'auth_order', databc.authority_priority(pe.authority),
                                                         'start_date', pe.designation_or_protection_start_date,
                                                         'government_name', pe.government_name,
-                                                        'recognition_type', pe.recognition_type
-                                                    ) end order by case when pe.authority = 'Provincial' then 0 when pe.authority = 'Municipal' then 1 else 2 end,
+                                                        'recognition_type', pe.recognition_type,
+                                                        'reference_number', pe.reference_number
+                                                    ) end order by databc.authority_priority(pe.authority) desc,
                                                 designation_or_protection_start_date desc )->0 authorities
 --                        pe.designation_or_protection_end_date, registry_types, pe.reference_number, pe.protection_notes, pe.legal_instrument, pe.act_section, pe.recognition_type, pe.government_type
                     from mv_bc_right r
@@ -267,7 +317,20 @@ from mv_borden_number bn
                            jsonb_object_agg(actor_type, array_to_string(actors, '; ')) actors
                     from mv_construction_actors
                     group by resourceinstanceid) ca on bn.resourceinstanceid = ca.resourceinstanceid
-         left join mv_site_boundary msb on bn.resourceinstanceid = msb.resourceinstanceid,
+         left join mv_site_boundary msb on bn.resourceinstanceid = msb.resourceinstanceid
+         left join (select resourceinstanceid,
+                           jsonb_agg(
+                                   jsonb_build_object(
+                                           'significance_type', databc.html_to_plain_string(significance_type),
+                                           'significance_level', databc.authority_priority(significance_type),
+                                           'physical_description', databc.html_to_plain_string(physical_description),
+                                           'defining_elements', databc.html_to_plain_string(defining_elements),
+                                           'heritage_value', databc.html_to_plain_string(heritage_value),
+                                           'document_location', databc.html_to_plain_string(document_location)
+                                       )
+                                    order by databc.authority_priority(significance_type) desc
+                               )->0 significance_statement
+                    from mv_bc_statement_of_significance group by resourceinstanceid) sos on bn.resourceinstanceid = sos.resourceinstanceid,
     databc.get_first_address(bn.resourceinstanceid) prop
 where msra.bcrhp_submission_status in ('Approved - Basic Record','Approved - Full Record')
 and registration_status in ('Federal Jurisdiction', 'Legacy', 'Registered');
