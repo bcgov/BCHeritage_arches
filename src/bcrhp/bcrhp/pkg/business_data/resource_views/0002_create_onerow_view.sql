@@ -74,16 +74,30 @@ create materialized view mv_government as
 select resourceinstanceid, government_name->'en'->>'value' government_name,
        __arches_get_concept_label(government_type) government_type
 from government.government_name;
+create index gn_ri_idx on mv_government(resourceinstanceid);
 -- left join government.government_name gn on (pe.responsible_government[0]->>'resourceId')::uuid = gn.resourceinstanceid;
 
-drop materialized view if exists mv_protection_event;
+drop materialized view if exists mv_protection_event cascade;
 create materialized view mv_protection_event as
 select pe.resourceinstanceid,
        bc_right bc_right_id,
+       (pe.legislative_act[0]->>'resourceId')::uuid legislative_act_id,
+       (pe.responsible_government[0]->>'resourceId')::uuid government_id,
        designation_or_protection_start_date,
        designation_or_protection_end_date,
        reference_number->'en'->>'value' reference_number,
-       protection_notes->'en'->>'value' protection_notes,
+       protection_notes->'en'->>'value' protection_notes
+from heritage_site.protection_event pe;
+create index pe_ri_fk_idx on mv_protection_event(resourceinstanceid, legislative_act_id, government_id);
+
+drop materialized view if exists mv_site_protection_event cascade;
+create materialized view mv_site_protection_event as
+select pe.resourceinstanceid,
+       bc_right_id,
+       designation_or_protection_start_date,
+       designation_or_protection_end_date,
+       reference_number,
+       protection_notes,
        __arches_get_concept_label(la.authority) authority,
        __arches_get_concept_label(la.legal_instrument) legal_instrument,
        la.act_section->'en'->>'value' act_section,
@@ -91,11 +105,10 @@ select pe.resourceinstanceid,
        gn.government_name,
        gn.government_type
 --        gn.government_type->'en'->>'value' government_type
-from heritage_site.protection_event pe
-    join legislative_act.authority la on (pe.legislative_act[0]->>'resourceId')::uuid = la.resourceinstanceid
-    left join mv_government gn on (pe.responsible_government[0]->>'resourceId')::uuid = gn.resourceinstanceid;
-;
-create index mv_pe_idx on mv_protection_event(resourceinstanceid, bc_right_id);
+from mv_protection_event pe
+    join legislative_act.authority la on legislative_act_id = la.resourceinstanceid
+    left join mv_government gn on pe.government_id = gn.resourceinstanceid;
+create index mv_pe_idx on mv_site_protection_event(resourceinstanceid, bc_right_id);
 
 drop materialized view if exists mv_chronology;
 create materialized view mv_chronology as
@@ -194,17 +207,17 @@ create or replace function databc.html_to_plain_string(string_to_clean text) ret
 $$
 declare
 begin
-    return
-        trim(
-                regexp_replace(
-                        regexp_replace( -- <li> -> -
-                                regexp_replace( -- UL/LI to \n
-                                        regexp_replace(string_to_clean, '<[/]{0,1}p>', '', 'gi')
-                                    , '<ul><li>', E'\n- ', 'gi'),
-                                '<li>', '- ', 'gi'
-                            ),
-                        '(</ul>|</li>)', '', 'gi'
-                    ));
+    return left(
+            trim(
+                    regexp_replace(
+                            regexp_replace( -- <li> -> -
+                                    regexp_replace( -- UL/LI to \n
+                                            regexp_replace(string_to_clean, '<[/]{0,1}p>', '', 'gi')
+                                        , '<ul><li>', E'\n- ', 'gi'),
+                                    '<li>', '- ', 'gi'
+                                ),
+                            '(</ul>|</li>)', '', 'gi'
+                        )), 4000);
 end
 $$ language plpgsql;
 ALTER FUNCTION databc.html_to_plain_string(string_to_clean text) SECURITY DEFINER SET search_path = public;
@@ -233,26 +246,26 @@ ALTER FUNCTION databc.authority_priority(authority_level text) SECURITY DEFINER 
 drop view if exists databc.V_HISTORIC_ENVIRO_ONEROW_SITE;
 -- create materialized view MV_HISTORIC_ENVIRO_ONEROW_SITE as
 create or replace view databc.V_HISTORIC_ENVIRO_ONEROW_SITE as
-select distinct bn.resourceinstanceid,
-                bn.borden_number BORDENNUMBER,
-                case when br.officially_recognized_site then 'Y' else 'N' end ISHERITAGESITE,
-                br.registration_status REGISTRATIONSTATUS,
+select distinct bn.resourceinstanceid site_id,
+                bn.borden_number borden_number,
+                case when br.officially_recognized_site then 'Y' else 'N' end is_officially_recognized,
+                br.registration_status registration_status,
                 cn.name                                 common_name,
                 array_to_string(other_name.names, '; ') other_name,
-                prop.pid         parcelid,
-                prop.street_address streeetaddress,
+                prop.pid         parcel_id,
+                prop.street_address street_address,
                 prop.city,
                 prop.province,
                 prop.locality,
                 prop.location_description,
                 br.authorities->>'government_name' government_name,
-                br.authorities->>'authority' governmentlevel,
-                br.authorities->>'recognition_type' protectiontype,
-                to_char(to_date(br.authorities->>'start_date', 'YYYY-MM-DD'), 'YYYY')::int startdate,
+                br.authorities->>'authority' government_level,
+                br.authorities->>'recognition_type' protection_type,
+                to_char(to_date(br.authorities->>'start_date', 'YYYY-MM-DD'), 'YYYY')::int protection_start_date,
                 br.authorities->>'reference_number' reference_number,
-                case when mc.chronology is null then null else to_char(to_date(chronology[0]->>'start_year', 'YYYY-MM-DD'), 'YYYY') end date_fromdate,
-                case when mc.chronology is not null and (chronology[0]->>'dates_approximate')::boolean then 'Circa' end date_fromqualifier,
-                case when mc.chronology is null then null else chronology[0]->>'event' end date_histdatetype,
+                case when mc.chronology is null then null else to_char(to_date(chronology[0]->>'start_year', 'YYYY-MM-DD'), 'YYYY') end construction_date,
+                case when mc.chronology is not null and (chronology[0]->>'dates_approximate')::boolean then 'Circa' end construction_date_qualifier,
+--                 case when mc.chronology is null then null else chronology[0]->>'event' end event_type,
 --                 case when msra.crhp_submission_status = 'Approved' then 'Y' else 'N' end is_accepted_by_feds,
                 case when significance_statement is null then null else (significance_statement->>'significance_type') end significance_type,
                 case when significance_statement is null then null else (significance_statement->>'physical_description') end physical_description,
@@ -263,13 +276,14 @@ select distinct bn.resourceinstanceid,
                 ca.actors->>'Builder' builder_name,
                 hf.functional_states->>'Current' current_function,
                 hf.functional_states->>'Historic' historic_function,
-                msb.area_sqm dimensions_area,
-                msb.site_centroid_latitude gislatitude,
-                msb.site_centroid_longitude gislongitude,
-                msb.utmzone utmzone,
-                msb.utmnorthing utmnorthing,
-                msb.utmeasting utmeasting,
-                'https://apps.nrs.gov.bc.ca/int/bcrhp/report/'||bn.resourceinstanceid site_url
+                msb.area_sqm dimensions_area_sqm,
+                msb.site_centroid_latitude gis_latitude,
+                msb.site_centroid_longitude gis_longitude,
+                msb.utmzone utm_zone,
+                msb.utmnorthing utm_northing,
+                msb.utmeasting utm_easting,
+                'https://apps.nrs.gov.bc.ca/int/bcrhp/report/'||bn.resourceinstanceid site_url,
+                msb.site_boundary
 --                 prop.location_description,
 --                 prop.pin,
 --                 prop.legal_description,
@@ -296,7 +310,7 @@ from mv_borden_number bn
                                                 designation_or_protection_start_date desc )->0 authorities
 --                        pe.designation_or_protection_end_date, registry_types, pe.reference_number, pe.protection_notes, pe.legal_instrument, pe.act_section, pe.recognition_type, pe.government_type
                     from mv_bc_right r
-                             left join mv_protection_event pe on r.bc_right_id = pe.bc_right_id
+                             left join mv_site_protection_event pe on r.bc_right_id = pe.bc_right_id
                     group by r.resourceinstanceid, r.officially_recognized_site, r.registration_status) br
                    on bn.resourceinstanceid = br.resourceinstanceid
          join mv_site_record_admin msra on bn.resourceinstanceid = msra.resourceinstanceid
@@ -333,4 +347,5 @@ from mv_borden_number bn
                     from mv_bc_statement_of_significance group by resourceinstanceid) sos on bn.resourceinstanceid = sos.resourceinstanceid,
     databc.get_first_address(bn.resourceinstanceid) prop
 where msra.bcrhp_submission_status in ('Approved - Basic Record','Approved - Full Record')
-and registration_status in ('Federal Jurisdiction', 'Legacy', 'Registered');
+and registration_status in ('Federal Jurisdiction', 'Recorded/Unprotected', 'Registered');
+
