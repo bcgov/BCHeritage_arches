@@ -79,7 +79,7 @@ define([
                 url = ko.unwrap(url);
                 var httpRegex = /^https?:\/\//;
                 // test whether the url is external (starts with http(s), if it is just return it)
-                if (httpRegex.test(url)){
+                if (httpRegex.test(url) || url.startsWith(arches.urls.url_subpath)) {
                     return url;
                 }else{
                     return (arches.urls.url_subpath + url).replace('//', '/');
