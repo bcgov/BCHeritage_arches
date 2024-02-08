@@ -22,7 +22,7 @@
                     "instructions": {
                         "en": ""
                     },
-                    "is_editable": true,
+                    "is_editable": false,
                     "name": {
                         "en": "Site Record Admin"
                     },
@@ -49,7 +49,7 @@
                     "instructions": {
                         "en": ""
                     },
-                    "is_editable": true,
+                    "is_editable": false,
                     "name": {
                         "en": "Heritage Theme"
                     },
@@ -78,7 +78,7 @@
                     "instructions": {
                         "en": ""
                     },
-                    "is_editable": true,
+                    "is_editable": false,
                     "name": {
                         "en": "BC Property Legal Description"
                     },
@@ -116,7 +116,7 @@
                     "instructions": {
                         "en": ""
                     },
-                    "is_editable": true,
+                    "is_editable": false,
                     "name": {
                         "en": "BC Property Address"
                     },
@@ -145,7 +145,7 @@
                     "instructions": {
                         "en": ""
                     },
-                    "is_editable": true,
+                    "is_editable": false,
                     "name": {
                         "en": "Spatial Location"
                     },
@@ -199,7 +199,7 @@
                     "instructions": {
                         "en": ""
                     },
-                    "is_editable": true,
+                    "is_editable": false,
                     "name": {
                         "en": "Borden Number"
                     },
@@ -226,7 +226,7 @@
                     "instructions": {
                         "en": ""
                     },
-                    "is_editable": true,
+                    "is_editable": false,
                     "name": {
                         "en": "Child Sites"
                     },
@@ -253,7 +253,7 @@
                     "instructions": {
                         "en": ""
                     },
-                    "is_editable": true,
+                    "is_editable": false,
                     "name": {
                         "en": "Official Recognition Details"
                     },
@@ -282,7 +282,7 @@
                     "instructions": {
                         "en": ""
                     },
-                    "is_editable": true,
+                    "is_editable": false,
                     "name": {
                         "en": "Official Recognition Information"
                     },
@@ -309,7 +309,7 @@
                     "instructions": {
                         "en": ""
                     },
-                    "is_editable": true,
+                    "is_editable": false,
                     "name": {
                         "en": "Heritage Class"
                     },
@@ -336,7 +336,7 @@
                     "instructions": {
                         "en": ""
                     },
-                    "is_editable": true,
+                    "is_editable": false,
                     "name": {
                         "en": "Statement of Significance"
                     },
@@ -363,7 +363,7 @@
                     "instructions": {
                         "en": ""
                     },
-                    "is_editable": true,
+                    "is_editable": false,
                     "name": {
                         "en": "Heritage Function"
                     },
@@ -390,7 +390,7 @@
                     "instructions": {
                         "en": ""
                     },
-                    "is_editable": true,
+                    "is_editable": false,
                     "name": {
                         "en": "Internal Remarks"
                     },
@@ -417,7 +417,7 @@
                     "instructions": {
                         "en": ""
                     },
-                    "is_editable": true,
+                    "is_editable": false,
                     "name": {
                         "en": "Decision History"
                     },
@@ -444,7 +444,7 @@
                     "instructions": {
                         "en": ""
                     },
-                    "is_editable": true,
+                    "is_editable": false,
                     "name": {
                         "en": "Architects / Builders"
                     },
@@ -471,7 +471,7 @@
                     "instructions": {
                         "en": "Enter any external URLs associated with this Historic Place"
                     },
-                    "is_editable": true,
+                    "is_editable": false,
                     "name": {
                         "en": "External URLs"
                     },
@@ -498,7 +498,7 @@
                     "instructions": {
                         "en": ""
                     },
-                    "is_editable": true,
+                    "is_editable": false,
                     "name": {
                         "en": "Documents"
                     },
@@ -527,7 +527,7 @@
                     "instructions": {
                         "en": ""
                     },
-                    "is_editable": true,
+                    "is_editable": false,
                     "name": {
                         "en": "Images"
                     },
@@ -554,7 +554,7 @@
                     "instructions": {
                         "en": ""
                     },
-                    "is_editable": true,
+                    "is_editable": false,
                     "name": {
                         "en": "Chronology"
                     },
@@ -581,7 +581,7 @@
                     "instructions": {
                         "en": ""
                     },
-                    "is_editable": true,
+                    "is_editable": false,
                     "name": {
                         "en": "Site Names"
                     },
@@ -1377,7 +1377,7 @@
                         "i18n_properties": [
                             "placeholder"
                         ],
-                        "label": "Legal Address Internal Notes",
+                        "label": "Legal Description Internal Notes",
                         "maxLength": null,
                         "placeholder": {
                             "en": ""
@@ -1387,7 +1387,7 @@
                     },
                     "id": "6304429a-260a-4ee0-a295-3b6c060cb7c1",
                     "label": {
-                        "en": "Legal Address Internal Notes"
+                        "en": "Legal Description Internal Notes"
                     },
                     "node_id": "15656a28-1a67-11ed-b83c-5254008afee6",
                     "sortorder": 3,
@@ -1836,7 +1836,7 @@
                             "placeholder"
                         ],
                         "label": "Document Location",
-                        "maxLength": "250",
+                        "maxLength": null,
                         "placeholder": {
                             "en": "Enter text"
                         },
@@ -3535,18 +3535,6 @@
             "functions_x_graphs": [
                 {
                     "config": {
-                        "node_id": "703bbe62-3d24-11ee-93bd-080027b7463b",
-                        "triggering_nodegroups": [
-                            "0a883b80-2fb6-11ed-be5f-5254008afee6"
-                        ],
-                        "unique_value": true
-                    },
-                    "function_id": "60000000-0000-0000-0000-000000002001",
-                    "graph_id": "cef9c510-e3e6-4057-ac08-89ad926180b4",
-                    "id": "8f7ce868-96bf-4a33-84d1-a57420fbdf7f"
-                },
-                {
-                    "config": {
                         "class_name": "BCRHPSiteDescriptors",
                         "descriptor_types": {
                             "description": {
@@ -3587,7 +3575,19 @@
                     },
                     "function_id": "60000000-0000-0000-0000-000000001002",
                     "graph_id": "cef9c510-e3e6-4057-ac08-89ad926180b4",
-                    "id": "b1e3027c-ffc8-40d0-8fd4-a85455219175"
+                    "id": "2fd49670-e7a8-4655-9b4c-173a2a1b3d00"
+                },
+                {
+                    "config": {
+                        "node_id": "703bbe62-3d24-11ee-93bd-080027b7463b",
+                        "triggering_nodegroups": [
+                            "0a883b80-2fb6-11ed-be5f-5254008afee6"
+                        ],
+                        "unique_value": true
+                    },
+                    "function_id": "60000000-0000-0000-0000-000000002001",
+                    "graph_id": "cef9c510-e3e6-4057-ac08-89ad926180b4",
+                    "id": "70d3618c-135f-4021-bdd4-b3cefeb44570"
                 }
             ],
             "graphid": "cef9c510-e3e6-4057-ac08-89ad926180b4",
@@ -6047,8 +6047,8 @@
             "publication": {
                 "graph_id": "cef9c510-e3e6-4057-ac08-89ad926180b4",
                 "notes": null,
-                "publicationid": "fd0f5e3e-c488-11ee-badf-005056a3bc47",
-                "published_time": "2024-02-05T18:45:13.530"
+                "publicationid": "b25b7f62-c618-11ee-a951-080027b7463b",
+                "published_time": "2024-02-07T18:26:26.892"
             },
             "relatable_resource_model_ids": [],
             "resource_2_resource_constraints": [],
@@ -6081,9 +6081,9 @@
         }
     ],
     "metadata": {
-        "db": "PostgreSQL 16.1 on x86_64-pc-linux-gnu, compiled by gcc (GCC) 11.4.1 20230605 (Red Hat 11.4.1-2), 64-bit",
-        "git hash": "fatal: not a git repository (or any parent up to mount point /fs)",
+        "db": "PostgreSQL 16.0 on x86_64-pc-linux-gnu, compiled by gcc (GCC) 11.3.1 20221121 (Red Hat 11.3.1-4), 64-bit",
+        "git hash": "9975977532 2024-02-07 12:28:09 -0800",
         "os": "Linux",
-        "os version": "5.14.0-362.13.1.el9_3.x86_64"
+        "os version": "5.14.0-333.el9.x86_64"
     }
 }
