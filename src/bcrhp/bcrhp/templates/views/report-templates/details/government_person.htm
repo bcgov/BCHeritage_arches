@@ -1,0 +1,77 @@
+<div class="bcrhp-grid-container">
+
+    <div class="bcrhp-grid-item grid-col-1 grid-row-1">
+        <dl class="dl-vertical dl-vertical-bc">
+            <dt class="person_name">Name</dt>
+            <dd>
+                <div class="bc-inline" data-bind="component: { name: 'text-widget',
+                                            params: {
+                                                value: getFirstNodeValue('last_name'),
+                                                state: 'display_value'
+                                            }
+                                        }"></div>
+                <div class="bc-inline">,</div>
+                <div class="bc-inline" data-bind="component: { name: 'text-widget',
+                                            params: {
+                                                value: getFirstNodeValue('first_name'),
+                                                state: 'display_value'
+                                            }
+                                        }"></div>
+            </dd>
+        </dl>
+    </div>
+    <div class="bcrhp-grid-item grid-col-1 grid-row-2">
+        <dl class="dl-vertical dl-vertical-bc">
+            <dt class="person_username">Username</dt>
+            <dd>
+            <div class="bc-inline" data-bind="component: { name: 'text-widget',
+                                            params: {
+                                                value: getFirstNodeValue('username'),
+                                                state: 'display_value'
+                                            }
+                                        }"></div>
+            </dd>
+        </dl>
+    </div>
+    <div class="bcrhp-grid-item grid-col-1 grid-row-3">
+        <dl class="dl-vertical dl-vertical-bc">
+            <dt class="email_address">Email</dt>
+            <dd>
+                <div class="bc-inline" data-bind="component: { name: 'text-widget',
+                                            params: {
+                                                value: getFirstNodeValue('email_address'),
+                                                state: 'display_value'
+                                            }
+                                        }"></div>
+            </dd>
+        </dl>
+    </div>
+    <div class="bcrhp-grid-item grid-col-1 grid-row-4">
+        <dl class="dl-vertical dl-vertical-bc">
+            <dt class="phone_number">Phone Number</dt>
+            <dd>
+                <div class="bc-inline" data-bind="component: { name: 'text-widget',
+                                            params: {
+                                                value: getFirstNodeValue('phone_number'),
+                                                state: 'display_value'
+                                            }
+                                        }"></div>
+            </dd>
+        </dl>
+    </div>
+    <div class="bcrhp-grid-item grid-col-1 grid-row-5">
+        <dl class="dl-vertical dl-vertical-bc">
+            <dt class="government_association">Government Association</dt>
+            <dd>
+                <div data-bind="component: {
+                                            name: 'resource-instance-select-widget',
+                                            params: {
+                                                value: getFirstNodeValue('government_association'),
+                                                state: 'display_value'
+                                            }
+                                        }"></div>
+            </dd>
+        </dl>
+    </div>
+
+</div>
