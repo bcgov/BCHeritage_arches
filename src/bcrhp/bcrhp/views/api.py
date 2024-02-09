@@ -23,7 +23,7 @@ class BordenNumber(APIBase):
 
 
 query_config = {
-    '1b6235b0-0d0f-11ed-98c2-5254008afee6': ['authorities'], # Heritage Site
+    '1b6235b0-0d0f-11ed-98c2-5254008afee6': ['authorities', 'borden_number'], # Heritage Site
 }
 
 mvt_config = MVTConfig(query_config)
