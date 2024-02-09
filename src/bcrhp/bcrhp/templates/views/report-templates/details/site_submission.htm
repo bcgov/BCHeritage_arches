@@ -1,0 +1,99 @@
+<div class="bcrhp-grid-container">
+
+    <div class="bcrhp-grid-item grid-col-1 grid-row-1">
+        <dl class="dl-vertical dl-vertical-bc">
+            <dt class="submitting_government">Submitting Government</dt>
+            <dd>
+                <div data-bind="component: {
+                                            name: 'resource-instance-select-widget',
+                                            params: {
+                                                value: getFirstNodeValue('submitting_government'),
+                                                state: 'display_value'
+                                            }
+                                        }"></div>
+            </dd>
+        </dl>
+    </div>
+    <div class="bcrhp-grid-item grid-col-1 grid-row-2">
+        <dl class="dl-vertical dl-vertical-bc">
+            <dt class="submission_date">Submission Date</dt>
+            <dd>
+                <!-- ko let: {widget: getWidgetForAlias('submission_date')}-->
+                <div class="bc-inline" data-bind="component: { name: 'datepicker-widget',
+                                            params: { value: getFirstNodeValue('submission_date'),
+                                            node: widget.node,
+                                            state: 'display_value' }
+                                            }">
+
+                </div>
+                <!-- /ko -->
+            </dd>
+        </dl>
+    </div>
+    <div class="bcrhp-grid-item grid-col-1 grid-row-3">
+        <dl class="dl-vertical dl-vertical-bc">
+            <dt class="completion_date">Completion Date</dt>
+            <dd>
+                <!-- ko let: {widget: getWidgetForAlias('submission_date')}-->
+                <div class="bc-inline" data-bind="component: { name: 'datepicker-widget',
+                                            params: { value: getFirstNodeValue('completion_date'),
+                                            node: widget.node,
+                                            state: 'display_value' }
+                                            }">
+
+                </div>
+                <!-- /ko -->
+            </dd>
+        </dl>
+    </div>
+
+    <div class="bcrhp-grid-item grid-col-1 grid-row-4">
+        <dl class="dl-vertical dl-vertical-bc">
+            <dt class="person_username"># Sites Submitted</dt>
+            <dd>
+                <div class="bc-inline" data-bind="component: {
+                    name: 'number-widget',
+                    params: { value: getFirstNodeValue('total_number_submitted'), state: 'display_value' }
+                    }">
+                </div>
+            </dd>
+        </dl>
+    </div>
+    <div class="bc-grid-item grid-col-1 grid-row-5">
+        <dl class="dl-vertical dl-vertical-bc submitted_sites" >
+            <dt>Submitted Sites</dt>
+            <dd>
+                <div data-bind="visible: nodesHaveData(['requested_operation', 'information_provided', 'heritage_site'])">
+                    <ol>
+                    <!-- ko foreach: submittedSites -->
+                    <li>
+                        <div class="bc-inline" data-bind="component: { name: 'concept-select-widget',
+                                                params: { value: requested_operation, state: 'display_value' }
+                                                },
+                                                visible: !!requested_operation()">
+                        </div>
+                        <div class="bc-inline">,</div>
+                        <div class="bc-inline" data-bind="component: { name: 'concept-select-widget',
+                                                params: { value: information_provided, state: 'display_value' }
+                                                },
+                                                visible: !!information_provided()">
+                        </div>
+                        <div class="bc-inline">,</div>
+                        <div class="bc-inline" data-bind="component: { name: 'resource-instance-select-widget',
+                                                params: { value: heritage_site, state: 'display_value' }
+                                                },
+                                                visible: !!heritage_site()">
+                        </div>
+                    </li>
+                    <!-- /ko -->
+                    </ol>
+                </div>
+                <div data-bind="visible: !nodesHaveData(['requested_operation', 'information_provided', 'heritage_site'])">
+                    No sites have been added
+                </div>
+
+            </dd>
+        </dl>
+    </div>
+
+</div>

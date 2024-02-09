@@ -84,6 +84,25 @@ define([
 
             return ko.unwrap(!!value ? widget.node.config.trueLabel : widget.node.config.trueLabel);
         };
+
+        this.submittedSites = ko.computed(function() {
+            let opWidget = getWidgetForAlias('requested_operation'),
+                infoWidget = getWidgetForAlias('information_provided'),
+                siteWidget = getWidgetForAlias('heritage_site');
+
+            var values = [];
+            _.each(ko.unwrap(tiles), tile => {
+                var opVal = getValueFromTile(tile, opWidget),
+                    infoVal = getValueFromTile(tile, infoWidget),
+                    siteVal = getValueFromTile(tile, siteWidget);
+                if (!!opVal || !!infoVal || !!siteVal)
+                    values.push({'requested_operation': ko.observable(opVal),
+                        'information_provided': ko.observable(infoVal),
+                        'heritage_site': ko.observable(siteVal)});
+
+            });
+            return values;
+        });
     };
 
     return ko.components.register('default-report', {

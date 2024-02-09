@@ -67,6 +67,9 @@
                 <!-- ko if: report.get('name') == "Government Person" -->
                 {% include 'views/report-templates/details/government_person.htm' %}
                 <!-- /ko -->
+                <!-- ko if: report.get('name') == "Heritage Site Submission" -->
+                {% include 'views/report-templates/details/site_submission.htm' %}
+                <!-- /ko -->
             </div>
         </div>
     </div>
