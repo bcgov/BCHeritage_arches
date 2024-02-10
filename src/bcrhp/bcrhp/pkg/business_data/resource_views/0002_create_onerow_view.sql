@@ -347,5 +347,5 @@ from mv_borden_number bn
                     from mv_bc_statement_of_significance group by resourceinstanceid) sos on bn.resourceinstanceid = sos.resourceinstanceid,
     databc.get_first_address(bn.resourceinstanceid) prop
 where msra.bcrhp_submission_status in ('Approved - Basic Record','Approved - Full Record')
-and registration_status in ('Federal Jurisdiction', 'Recorded/Unprotected', 'Registered');
-
+and registration_status in ('Federal Jurisdiction', 'Recorded/Unprotected', 'Registered', 'Legacy')
+and not coalesce(msra.restricted, false);
