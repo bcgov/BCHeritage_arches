@@ -3,6 +3,7 @@ from arches.app.models import models
 from arches.app.models.resource import Resource
 
 details = {
+    "functionid": "60000000-0000-0000-0000-000000001006",
     "name": "Parent Collection Event Refresh",
     "type": "node",
     "description": "Refreshes the primary descriptors for associated collection events",
