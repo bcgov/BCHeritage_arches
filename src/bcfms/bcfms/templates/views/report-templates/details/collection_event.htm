@@ -55,16 +55,6 @@
                     }">
                 </div>
                 <!-- /ko -->
-                <div class="bc-inline" data-bind="visible: nodesHaveData(['collection_end_year'])">-</div>
-                <!-- ko let: {widget: getWidgetForAlias('collection_end_year')}-->
-                <div class="bc-inline" data-bind="component: {
-                    name: 'datepicker-widget',
-                    params: { value: getFirstNodeValue('collection_end_year'),
-                              node: widget.node,
-                              state: 'display_value' }
-                    }, visible: nodesHaveData(['collection_end_year'])">
-                </div>
-                <!-- /ko -->
             </dd>
         </dl>
     </div>
