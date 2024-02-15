@@ -2,7 +2,7 @@ from django.urls import include, path, re_path
 from django.conf import settings
 from django.conf.urls.static import static
 from django.conf.urls.i18n import i18n_patterns
-from bcfms.views.api import MVT, ScientificNames
+from bcfms.views.api import MVT, CollectionEventFossilNames
 from bcfms.views.map import BCTileserverProxyView, BCTileserverLocalProxyView
 
 uuid_regex = settings.UUID_REGEX
@@ -18,7 +18,7 @@ urlpatterns = [
                       name="mvt",
                       ),
                   re_path(r"^collection_event_fossil_names/(?P<collection_event_id>%s|())$" % uuid_regex,
-                          ScientificNames.as_view(),
+                          CollectionEventFossilNames.as_view(),
                           name="collection_event_fossil_names"),
                   bc_url_resolver,
               ] + static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
