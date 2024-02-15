@@ -3,7 +3,7 @@ from arches.app.datatypes.datatypes import DataTypeFactory
 
 
 class GraphLookup:
-    _datatype_factory = DataTypeFactory()
+    _datatype_factory = None
     _datatypes = {}
     _nodes = {}
     _graph_slug = None
@@ -13,9 +13,9 @@ class GraphLookup:
         self._graph_slug = graph_slug
         self._node_aliases = node_aliases
 
-
     def initialize(self):
         if not self._graph_slug:
+            self._datatype_factory = DataTypeFactory()
             for alias in self._node_aliases:
                 node = models.Node.objects.filter(
                     alias=alias,
