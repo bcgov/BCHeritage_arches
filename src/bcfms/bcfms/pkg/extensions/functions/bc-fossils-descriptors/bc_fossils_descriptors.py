@@ -130,8 +130,8 @@ class BCFossilsDescriptors(BCPrimaryDescriptorsFunction):
                     return_value += self._get_values_from_samples(samples, "Period", sample_aliases.MINIMUM_TIME, sample_aliases.MINIMUM_TIME_UNCERTAIN)
 
                     if descriptor == "description":
-                        scientific_names = self._get_scientific_names_from_samples(samples)
-                        return_value += scientific_names if scientific_names != "" else  self._get_common_names_from_samples(samples)
+                        scientific_names = self.get_scientific_names_from_samples(samples)
+                        return_value += scientific_names if scientific_names != "" else  self.get_common_names_from_samples(samples)
 
                 return return_value
 
@@ -190,7 +190,7 @@ class BCFossilsDescriptors(BCPrimaryDescriptorsFunction):
             nodeid=BCFossilsDescriptors._collected_fossils_node.nodeid
         ).values_list('resourceinstanceidto', flat=True)
 
-    def _get_scientific_names_from_samples(self, samples):
+    def get_scientific_names_from_samples(self, samples, formatted=True):
         values = []
         # sample_ids = list(map(lambda sample: sample.resourceinstanceid, samples))
         sample_ids = samples
@@ -210,13 +210,14 @@ class BCFossilsDescriptors(BCPrimaryDescriptorsFunction):
                         self._fs_graph_lookup.get_datatype(sample_aliases.NAME_CONNECTOR),
                         data_tile=tile),
                     self.get_value_from_node(
-                        self._fs_graph_lookup.get_node(sample_aliases.SCIENTIFIC_NAME),
-                        self._fs_graph_lookup.get_datatype(sample_aliases.SCIENTIFIC_NAME),
+                        self._fs_graph_lookup.get_node(sample_aliases.OTHER_SCIENTIFIC_NAME),
+                        self._fs_graph_lookup.get_datatype(sample_aliases.OTHER_SCIENTIFIC_NAME),
                         data_tile=tile)
                 ))
-        return self.format_value("Scientific Names", values, value_connector="<br>")
+            values.sort()
+        return self.format_value("Scientific Names", values, value_connector="<br>") if formatted else values
 
-    def _get_common_names_from_samples(self, samples):
+    def get_common_names_from_samples(self, samples, formatted=True):
         values = []
         sample_ids = samples
         tiles = models.TileModel.objects.filter(
