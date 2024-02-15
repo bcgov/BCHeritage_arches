@@ -21,7 +21,7 @@ class MVT(MVTCommon):
         return mvt_config
 
 
-class ScientificNames(APIBase):
+class CollectionEventFossilNames(APIBase):
 
     def get(self, request, collection_event_id):
 
