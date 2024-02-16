@@ -11,10 +11,12 @@ class GraphLookup:
 
     def __init__(self, graph_slug, node_aliases):
         self._graph_slug = graph_slug
-        self._node_aliases = node_aliases
+        self._node_aliases = node_aliases.values() if isinstance(node_aliases, dict) else node_aliases
 
     def initialize(self):
-        if not self._graph_slug:
+        # This needs to be deferred to ensure the database is created when being redeployed otherwise the graph
+        # tries to initialize before the database is setup
+        if not self._datatype_factory:
             self._datatype_factory = DataTypeFactory()
             for alias in self._node_aliases:
                 node = models.Node.objects.filter(
