@@ -32,6 +32,6 @@ class CollectionEventFossilNames(APIBase):
         names = fossil_sample_proxy.get_scientific_names_from_samples(sample_ids)
         # print("Scientific Names: %s" % names)
         if len(names) < 1:
-            fossil_sample_proxy.get_common_names_from_samples(sample_ids)
+            names = fossil_sample_proxy.get_common_names_from_samples(sample_ids)
         names = sorted(list(set(names)))
         return JSONResponse(JSONSerializer().serializeToPython(names))

@@ -214,6 +214,7 @@ class BCFossilsDescriptors(BCPrimaryDescriptorsFunction):
                         self._fs_graph_lookup.get_datatype(sample_aliases.OTHER_SCIENTIFIC_NAME),
                         data_tile=tile)
                 ))
+            values = list(filter(lambda val: val is not None, values))
             values.sort()
         return self.format_value("Scientific Names", values, value_connector="<br>") if formatted else values
 

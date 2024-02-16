@@ -78,6 +78,7 @@ class FossilSampleDataProxy(BusinessDataProxy):
         # print("Node alias: %s values: %s" % (node_alias, values))
         # return "" if len(values) == 0 else self.format_value(label, values)
         return values
+
     def get_scientific_names_from_samples(self, samples):
         values = []
         # sample_ids = list(map(lambda sample: sample.resourceinstanceid, samples))
@@ -93,14 +94,15 @@ class FossilSampleDataProxy(BusinessDataProxy):
                     self.get_value_from_node(FossilSampleAliases.NAME_CONNECTOR, data_tile=tile),
                     self.get_value_from_node(FossilSampleAliases.OTHER_SCIENTIFIC_NAME, data_tile=tile)
                 ))
-            values.sort()
+        values = list(filter(lambda val: val is not None, values))
+        values.sort()
         return values
 
     def get_common_names_from_samples(self, samples):
         values = []
         sample_ids = samples
         tiles = models.TileModel.objects.filter(
-            nodegroup_id=self._graph_lookup.get_node(FossilSampleAliases.SCIENTIFIC_NAME).nodegroup_id,
+            nodegroup_id=self._graph_lookup.get_node(FossilSampleAliases.FOSSIL_COMMON_NAME).nodegroup_id,
             resourceinstance_id__in=sample_ids
         ).all()
         for tile in tiles:
@@ -109,6 +111,8 @@ class FossilSampleDataProxy(BusinessDataProxy):
                     self.get_value_from_node(FossilSampleAliases.FOSSIL_COMMON_NAME, data_tile=tile),
                     self.get_value_from_node(FossilSampleAliases.COMMON_NAME_UNCERTAIN, data_tile=tile)
                 ))
+        values = list(filter(lambda val: val is not None, values))
+        values.sort()
         return values
 
 
