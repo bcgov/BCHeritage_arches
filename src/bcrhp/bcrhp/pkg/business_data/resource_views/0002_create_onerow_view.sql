@@ -177,8 +177,8 @@ create or replace function databc.get_first_address(p_resourceinstanceid uuid) r
           postal_code text,
           locality text,
           location_description text,
-          pid numeric,
-          pin numeric,
+          pid text,
+          pin text,
           legal_description text) as
 $$
 BEGIN
@@ -190,8 +190,8 @@ BEGIN
                         mpa.postal_code,
                         mpa.locality,
                         mpa.location_description,
-                        mld.pid,
-                        mld.pin,
+                        case when mld.pid = 0 then null else lpad(mld.pid::text,9,'0') end pid,
+                        case when mld.pin = 0 then null else lpad(mld.pin::text,9,'0') end pin,
                         mld.legal_description
                  from mv_property_address mpa
                           left join mv_legal_description mld
