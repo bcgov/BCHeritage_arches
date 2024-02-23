@@ -4,6 +4,7 @@ from django.conf.urls.static import static
 from django.conf.urls.i18n import i18n_patterns
 from bcrhp.views.api import BordenNumber, MVT
 from bcrhp.views.crhp import CRHPXmlExport
+from bcrhp.views.search import export_results as bcrhp_export_results
 from .views.map import BCTileserverProxyView
 
 uuid_regex = settings.UUID_REGEX
@@ -29,9 +30,10 @@ urlpatterns = [
                       MVT.as_view(),
                       name="mvt",
                       ),
-                  # re_path(r"^search/export_results$", search.export_results, name="export_results"),
+                  # Override base export results
+                  re_path(r"^search/export_results$", bcrhp_export_results, name="export_results"),
                   bc_url_resolver,
+              ] + static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
 
-] + static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
 if settings.SHOW_LANGUAGE_SWITCH is True:
     urlpatterns = i18n_patterns(*urlpatterns)

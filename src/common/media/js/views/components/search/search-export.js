@@ -1,12 +1,14 @@
 define([
     'jquery',
+    'js-cookie',
     'knockout',
     'arches',
+    'moment',
     'templates/views/components/search/search-export.htm',
     'bindings/fadeVisible',
     'bindings/clipboard',
     'views/components/simple-switch',
-], function($, ko, arches, searchExportTemplate) {
+], function($, Cookies, ko, arches, moment, searchExportTemplate) {
     var componentName = 'search-export';
     const viewModel = function(params) {
         var self = this;
@@ -85,13 +87,47 @@ define([
             });
         };
 
+        // POST data only available if it is in FormData format
+        this.objectToFormData = function(obj) {
+            const formData = new FormData();
+            Object.entries(obj).forEach(([key, value]) => {
+                formData.append(key, value);
+            });
+            return formData;
+        }
+
+        this.getResults = function()
+        {
+            var url = arches.urls.export_results;
+            var urlparams = ko.unwrap(self.query);
+            urlparams.format = self.format();
+            urlparams.reportlink = self.reportlink();
+            urlparams.precision = self.precision();
+            urlparams.total = self.total();
+            let xhr = new XMLHttpRequest();
+            xhr.open("POST", url);
+            xhr.responseType = "blob";
+            xhr.setRequestHeader("X-CSRFToken", Cookies.get('csrftoken'));
+            xhr.send(this.objectToFormData(urlparams));
+            xhr.onload = function (event) {
+                const blob = xhr.response;
+                const timestamp = moment().format().slice(0,19).replace("T","_").replaceAll(":","");
+                const fileName = `${timestamp}_BCRHP_Export.zip`;
+                let link=document.createElement('a');
+                link.href=window.URL.createObjectURL(blob);
+                link.download=fileName;
+                link.click();
+            }
+        }
+
         this.executeExport = function(limit){
             if (ko.unwrap(self.format()) === 'geojson' && this.total() <= limit) {
                 window.open(this.geojsonUrl());
-            } else if (this.total() > limit) {
+            } else if (this.total() > limit) { // Celery
                 this.getExportData();
             } else if (this.total() > 0) {
-                window.open(this.url());
+                // window.open(this.url());
+                this.getResults();
             }
         };
 
