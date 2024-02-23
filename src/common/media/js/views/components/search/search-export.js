@@ -126,8 +126,15 @@ define([
             } else if (this.total() > limit) { // Celery
                 this.getExportData();
             } else if (this.total() > 0) {
-                // window.open(this.url());
-                this.getResults();
+                const url = this.url();
+                if (url.length > 8192)
+                {
+                    this.getResults();
+                }
+                else
+                {
+                    window.open(this.url());
+                }
             }
         };
 
