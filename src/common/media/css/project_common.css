@@ -68,20 +68,20 @@ body, h1, h2, h3, h4, h5
     height: 100% !important;
 }
 
-/*******************/
-/* Search card     */
-/*******************/
-.search-listing-body > dt {
+/**********************************/
+/* Search and map popup cards     */
+/**********************************/
+.search-listing-body > dt, .hover-feature > dt {
     padding-top: 5px;
 }
 
 /* Don't pad bottom of rich text fields in search card*/
-.search-listing-body > dd > p {
+.search-listing-body > dd > p, .hover-feature > dd > p {
     margin-bottom: 0;
 }
-/*******************/
-/* End Search card */
-/*******************/
+/**********************************/
+/* End Search and map popup cards */
+/**********************************/
 
 
 
