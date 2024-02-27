@@ -81,7 +81,7 @@
                                             }, visible: nodesHaveData(['samples_collected'])">
                 </div>
             </dd>
-            <dt data-bind="visible: nodesHaveData(['samples_collected'])">Fossils Found</dt>
+            <dt data-bind="visible: !!fossilNamesForCollectionEvent().length > 0 ">Fossils Found</dt>
             <dd data-bind="foreach: {data: fossilNamesForCollectionEvent, as: 'name'}">
                 <div data-bind="text: name"></div>
             </dd>
