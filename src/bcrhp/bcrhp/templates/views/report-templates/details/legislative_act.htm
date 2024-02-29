@@ -1,0 +1,74 @@
+<div class="bcrhp-grid-container">
+    <div class="bcrhp-grid-item grid-col-1 grid-row-1">
+        <dl class="dl-vertical dl-vertical-bc">
+            <dt class="registry_types">Authority</dt>
+            <dd data-bind="component: { name: 'concept-select-widget',
+                                            params: {
+                                                value: getFirstNodeValue('authority'),
+                                                state: 'display_value'
+                                            }
+                                        }"></dd>
+        </dl>
+    </div>
+    <div class="bcrhp-grid-item grid-col-1 grid-row-2">
+        <dl class="dl-vertical dl-vertical-bc">
+            <dt class="registry_types">Legal Instrument</dt>
+            <dd data-bind="component: { name: 'concept-select-widget',
+                                            params: {
+                                                value: getFirstNodeValue('legal_instrument'),
+                                                state: 'display_value'
+                                            }
+                                        }"></dd>
+        </dl>
+    </div>
+    <div class="bcrhp-grid-item grid-col-1 grid-row-3">
+        <dl class="dl-vertical dl-vertical-bc">
+            <dt class="registry_types">Act Section</dt>
+            <dd data-bind="component: { name: 'text-widget',
+                                            params: {
+                                                value: getFirstNodeValue('act_section'),
+                                                state: 'display_value'
+                                            }
+                                        }"></dd>
+        </dl>
+    </div>
+    <div class="bcrhp-grid-item grid-col-1 grid-row-4">
+        <dl class="dl-vertical dl-vertical-bc">
+            <dt class="registry_types">Recognition Type</dt>
+            <dd data-bind="component: { name: 'concept-select-widget',
+                                            params: {
+                                                value: getFirstNodeValue('recognition_type'),
+                                                state: 'display_value'
+                                            }
+                                        }"></dd>
+        </dl>
+    </div>
+
+    <div class="bcrhp-grid-item grid-col-1 grid-row-5"  data-bind="visible: nodesHaveData(['start_date','end_date'])">
+        <dl class="dl-vertical dl-vertical-bc">
+            <dt class="registry_types">Validity Period</dt>
+            <dd>
+                <!-- ko let: {widget: getWidgetForAlias('start_date')}-->
+                <div class="bc-inline" data-bind="component: {
+                    name: 'datepicker-widget',
+                    params: { value: getFirstNodeValue('start_date'),
+                              node: widget.node,
+                              state: 'display_value' }
+                    }">
+                </div>
+                <!-- /ko -->
+                <div class="bc-inline" >-</div>
+                <!-- ko let: {widget: getWidgetForAlias('end_date')}-->
+                <div class="bc-inline" data-bind="component: {
+                    name: 'datepicker-widget',
+                    params: { value: getFirstNodeValue('end_date'),
+                              node: widget.node,
+                              state: 'display_value' }
+                    }">
+                </div>
+                <!-- /ko -->
+            </dd>
+        </dl>
+    </div>
+
+</div>

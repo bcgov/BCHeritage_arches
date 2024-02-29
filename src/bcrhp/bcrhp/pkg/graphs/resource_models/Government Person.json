@@ -22,9 +22,9 @@
                     "instructions": {
                         "en": ""
                     },
-                    "is_editable": false,
+                    "is_editable": true,
                     "name": {
-                        "en": "Resource Name"
+                        "en": "Government Person Name"
                     },
                     "nodegroup_id": "ce3e1286-a31d-11ed-bbb0-5254004d77d3",
                     "sortorder": 0,
@@ -87,7 +87,7 @@
                     "instructions": {
                         "en": ""
                     },
-                    "is_editable": false,
+                    "is_editable": true,
                     "name": {
                         "en": "Government Association"
                     },
@@ -114,7 +114,7 @@
                     "instructions": {
                         "en": ""
                     },
-                    "is_editable": false,
+                    "is_editable": true,
                     "name": {
                         "en": "Contact Information"
                     },
@@ -302,7 +302,7 @@
                         "i18n_properties": [
                             "placeholder"
                         ],
-                        "label": "Resource Position",
+                        "label": "Government Position",
                         "maxLength": null,
                         "placeholder": {
                             "en": "Enter text"
@@ -312,10 +312,10 @@
                     },
                     "id": "d428d3be-5ccf-42a6-ae54-77f1d90e2784",
                     "label": {
-                        "en": "Resource Position"
+                        "en": "Government Position"
                     },
                     "node_id": "9e00e99c-a983-11ed-8958-5254004d77d3",
-                    "sortorder": null,
+                    "sortorder": 1,
                     "visible": true,
                     "widget_id": "10000000-0000-0000-0000-000000000001"
                 }
@@ -431,12 +431,12 @@
                     },
                     "function_id": "60000000-0000-0000-0000-000000000001",
                     "graph_id": "412444dd-b13f-4289-9f04-5c7f1878ad4e",
-                    "id": "9a4f3ab4-8f14-49fa-b1c2-39cc7b2835c6"
+                    "id": "cb5aecc4-3992-40c8-a4b6-af0585375b2b"
                 }
             ],
             "graphid": "412444dd-b13f-4289-9f04-5c7f1878ad4e",
             "iconclass": "fa fa-male",
-            "is_editable": false,
+            "is_editable": true,
             "isresource": true,
             "jsonldcontext": null,
             "name": {
@@ -573,7 +573,7 @@
                     "sourcebranchpublication_id": null
                 },
                 {
-                    "alias": "resource_position",
+                    "alias": "government_position",
                     "config": {
                         "en": ""
                     },
@@ -587,7 +587,7 @@
                     "isrequired": false,
                     "issearchable": true,
                     "istopnode": false,
-                    "name": "Resource Position",
+                    "name": "Government Position",
                     "nodegroup_id": "3892c576-a983-11ed-b7d3-5254004d77d3",
                     "nodeid": "9e00e99c-a983-11ed-8958-5254004d77d3",
                     "ontologyclass": "http://www.cidoc-crm.org/cidoc-crm/E55_Type",
@@ -642,7 +642,7 @@
                     "sourcebranchpublication_id": null
                 },
                 {
-                    "alias": "resource_name",
+                    "alias": "government_person_name",
                     "config": {
                         "en": ""
                     },
@@ -656,7 +656,7 @@
                     "isrequired": true,
                     "issearchable": true,
                     "istopnode": false,
-                    "name": "Resource Name",
+                    "name": "Government Person Name",
                     "nodegroup_id": "ce3e1286-a31d-11ed-bbb0-5254004d77d3",
                     "nodeid": "ce3e1286-a31d-11ed-bbb0-5254004d77d3",
                     "ontologyclass": "http://www.cidoc-crm.org/cidoc-crm/E82_Actor_Appellation",
@@ -715,8 +715,8 @@
             "publication": {
                 "graph_id": "412444dd-b13f-4289-9f04-5c7f1878ad4e",
                 "notes": null,
-                "publicationid": "2d5f97be-b004-11ee-91b7-005056a3bc47",
-                "published_time": "2024-01-10T16:04:08.266"
+                "publicationid": "2c4be848-d019-11ee-8bc9-080027b7463b",
+                "published_time": "2024-02-20T11:55:03.099"
             },
             "relatable_resource_model_ids": [],
             "resource_2_resource_constraints": [],
@@ -751,9 +751,9 @@
         }
     ],
     "metadata": {
-        "db": "PostgreSQL 16.1 on x86_64-pc-linux-gnu, compiled by gcc (GCC) 11.4.1 20230605 (Red Hat 11.4.1-2), 64-bit",
-        "git hash": "fatal: not a git repository (or any parent up to mount point /fs)",
+        "db": "PostgreSQL 15.3 on x86_64-pc-linux-gnu, compiled by gcc (GCC) 11.3.1 20221121 (Red Hat 11.3.1-4), 64-bit",
+        "git hash": "9975977532 2024-02-07 12:28:09 -0800",
         "os": "Linux",
-        "os version": "5.14.0-284.30.1.el9_2.x86_64"
+        "os version": "5.14.0-333.el9.x86_64"
     }
 }

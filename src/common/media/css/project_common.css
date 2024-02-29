@@ -68,6 +68,20 @@ body, h1, h2, h3, h4, h5
     height: 100% !important;
 }
 
+/**********************************/
+/* Search and map popup cards     */
+/**********************************/
+.search-listing-body > dt, .hover-feature > dt {
+    padding-top: 5px;
+}
+
+/* Don't pad bottom of rich text fields in search card*/
+.search-listing-body > dd > p, .hover-feature > dd > p {
+    margin-bottom: 0;
+}
+/**********************************/
+/* End Search and map popup cards */
+/**********************************/
 
 
 
@@ -326,12 +340,71 @@ img.bc-details-image
 }
 
 @media only print {
-    section.search-results-panel {
-        display: none;
-    }
-
     @page {
         size: letter;
+    }
+
+    /*html, body {*/
+    /*    height: 99%;*/
+    /*}*/
+
+    /* Hide unwanted parts of the page */
+    section.search-results-panel, .search-toolbar, #skip-link-holder {
+        display: none !important;
+    }
+
+    /* Align the date on the RHS next to the name of the site*/
+    .ep-form-toolbar-tools {
+        float: right !important;
+    }
+
+    h4.report-toolbar-title {
+        display: inline-block;
+    }
+
+    .report-print-date {
+        padding-top: 14px;
+    }
+
+    /* Force the content to be visible on pages 2++ */
+    #container, #main-content {
+        overflow: visible !important;
+        display: block;
+        height: 100%;
+    }
+
+    .rp-report-section, .rp-report-section-root, .resource-report-abstract-container, .content-panel, .flex, .ep-form-toolbar {
+        display: block !important;
+    }
+
+    .bcrhp-grid-container, .bc-grid-container {
+        display: block;
+        vertical-align: top;
+    }
+
+    .grid-col-1,
+    .grid-col-2,
+    .grid-col-3 {
+        display: inline-block !important;
+        width: 33% !important;
+    }
+
+    .base-manager-grid
+    {
+        display: block !important;
+    }
+
+    .grid-row-1,
+    .grid-row-2,
+    .grid-row-3 {
+        display: inline-block !important;
+    }
+
+    .bcrhp-full-width-grid-item,
+    .bc-full-width-grid-item
+    {
+        width: 100% !important;
+        grid-column: unset !important;
     }
 
     .new-page {
@@ -339,11 +412,6 @@ img.bc-details-image
         break-before: page;
     }
     
-    #main-content, .resource-report-abstract-container, .resource-component-abstract, .card-form-preview-container {
-        overflow: visible !important;
-        /*height: unset !important;*/
-    }
-
     div {
         break-before: auto;
     }
@@ -352,8 +420,4 @@ img.bc-details-image
         display: block !important;
     }
 
-    .bc-full-width-grid-item
-    {
-        grid-column: 1 / span 3;
-    }
 }

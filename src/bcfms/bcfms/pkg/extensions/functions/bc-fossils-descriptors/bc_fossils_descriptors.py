@@ -125,13 +125,15 @@ class BCFossilsDescriptors(BCPrimaryDescriptorsFunction):
                     )
                     samples = self._get_samples(resource)
                     if descriptor == "map_popup":
-                        return_value += self._get_values_from_samples(samples, "Formation", sample_aliases.FORMATION, sample_aliases.FORMATION_UNCERTAIN)
+                        return_value += self._get_values_from_samples(samples, "Formation", sample_aliases.FORMATION,
+                                                                      sample_aliases.FORMATION_UNCERTAIN)
 
-                    return_value += self._get_values_from_samples(samples, "Period", sample_aliases.MINIMUM_TIME, sample_aliases.MINIMUM_TIME_UNCERTAIN)
+                    return_value += self._get_values_from_samples(samples, "Period", sample_aliases.MINIMUM_TIME,
+                                                                  sample_aliases.MINIMUM_TIME_UNCERTAIN)
 
                     if descriptor == "description":
-                        scientific_names = self._get_scientific_names_from_samples(samples)
-                        return_value += scientific_names if scientific_names != "" else  self._get_common_names_from_samples(samples)
+                        scientific_names = self.get_scientific_names_from_samples(samples)
+                        return_value += scientific_names if scientific_names != "" else  self.get_common_names_from_samples(samples)
 
                 return return_value
 
@@ -190,7 +192,7 @@ class BCFossilsDescriptors(BCPrimaryDescriptorsFunction):
             nodeid=BCFossilsDescriptors._collected_fossils_node.nodeid
         ).values_list('resourceinstanceidto', flat=True)
 
-    def _get_scientific_names_from_samples(self, samples):
+    def get_scientific_names_from_samples(self, samples, formatted=True):
         values = []
         # sample_ids = list(map(lambda sample: sample.resourceinstanceid, samples))
         sample_ids = samples
@@ -210,13 +212,15 @@ class BCFossilsDescriptors(BCPrimaryDescriptorsFunction):
                         self._fs_graph_lookup.get_datatype(sample_aliases.NAME_CONNECTOR),
                         data_tile=tile),
                     self.get_value_from_node(
-                        self._fs_graph_lookup.get_node(sample_aliases.SCIENTIFIC_NAME),
-                        self._fs_graph_lookup.get_datatype(sample_aliases.SCIENTIFIC_NAME),
+                        self._fs_graph_lookup.get_node(sample_aliases.OTHER_SCIENTIFIC_NAME),
+                        self._fs_graph_lookup.get_datatype(sample_aliases.OTHER_SCIENTIFIC_NAME),
                         data_tile=tile)
                 ))
-        return self.format_value("Scientific Names", values, value_connector="<br>")
+            values = list(filter(lambda val: val is not None, values))
+            values.sort()
+        return self.format_value("Scientific Names", values, value_connector="<br>") if formatted else values
 
-    def _get_common_names_from_samples(self, samples):
+    def get_common_names_from_samples(self, samples, formatted=True):
         values = []
         sample_ids = samples
         tiles = models.TileModel.objects.filter(
@@ -239,6 +243,7 @@ class BCFossilsDescriptors(BCPrimaryDescriptorsFunction):
 
     def _get_values_from_samples(self, samples, label, node_alias, uncertainty_alias=None):
         values = []
+        print ("Label: %s, alias: %s" % (label, node_alias))
         for sample in samples:
             if uncertainty_alias is None:
                 values.append(self.get_value_from_node(
@@ -263,6 +268,7 @@ class BCFossilsDescriptors(BCPrimaryDescriptorsFunction):
         # values = [val for val in values if val is not None and val != ""]
         # print("Node alias: %s values: %s" % (node_alias, values))
         # return "" if len(values) == 0 else self.format_value(label, values)
+        print("Returning: %s" % self.format_value(label, values))
         return self.format_value(label, values)
 
     def _get_sample_values(self, resource, values_config):

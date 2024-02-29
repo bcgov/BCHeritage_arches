@@ -44,7 +44,7 @@ UPLOADED_FILES_DIR = "uploadedfiles"
 # SECRET_KEY = ''
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True
+DEBUG = {{ django_debug_mode }}
 
 ROOT_URLCONF = 'bcrhp.urls'
 
@@ -129,7 +129,7 @@ STATIC_URL = '/static/'
 STATIC_ROOT = os.path.join(APP_ROOT, "staticfiles")
 
 # when hosting Arches under a sub path set this value to the sub path eg : "/{sub_path}/"
-FORCE_SCRIPT_NAME = None
+FORCE_SCRIPT_NAME = "/int/bcrhp/"
 
 OVERRIDE_RESOURCE_MODEL_LOCK = False
 
@@ -184,7 +184,8 @@ SESSION_COOKIE_NAME = 'bcrhp-{{ app_instance }}'
 # For more info on configuring your cache: https://docs.djangoproject.com/en/2.2/topics/cache/
 CACHES = {
     'default': {
-        'BACKEND': 'django.core.cache.backends.dummy.DummyCache',
+        "BACKEND": "django.core.cache.backends.redis.RedisCache",
+        "LOCATION": "redis://127.0.0.1:6379",
     },
     'user_permission': {
         'BACKEND': 'django.core.cache.backends.db.DatabaseCache',

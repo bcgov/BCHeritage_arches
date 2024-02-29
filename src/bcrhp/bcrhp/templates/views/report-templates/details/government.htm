@@ -1,0 +1,27 @@
+<div class="bcrhp-grid-container">
+
+    <div class="bcrhp-grid-item grid-col-1 grid-row-1">
+        <dl class="dl-vertical dl-vertical-bc">
+            <dt class="registry_types">Government Name</dt>
+            <dd data-bind="component: { name: 'text-widget',
+                                            params: {
+                                                value: getFirstNodeValue('government_name'),
+                                                state: 'display_value'
+                                            }
+                                        }"></dd>
+        </dl>
+    </div>
+
+    <div class="bcrhp-grid-item grid-col-1 grid-row-4">
+        <dl class="dl-vertical dl-vertical-bc">
+            <dt class="registry_types">Government Type</dt>
+            <dd data-bind="component: { name: 'concept-select-widget',
+                                            params: {
+                                                value: getFirstNodeValue('government_type'),
+                                                state: 'display_value'
+                                            }
+                                        }"></dd>
+        </dl>
+    </div>
+
+</div>

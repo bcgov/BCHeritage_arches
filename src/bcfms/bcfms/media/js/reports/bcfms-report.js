@@ -10,6 +10,7 @@ define([
     return function(params) {
         MapReportViewModel.apply(this, [params]);
         var self = this;
+        self.urls = arches.urls;
 
         var getAllWidgets = function(card) {
             return _.flatten([ko.unwrap(card.tiles).length === 0 ? [] : ko.unwrap(card.widgets),
@@ -72,6 +73,21 @@ define([
             return ko.observable(getNodeValues(alias)[0]);
         };
 
+        /**
+         * Returns the first point of the first geometry held in the alias node in a
+         * <Latitude>, <Longitude> format
+         * @param alias Alias of the geometry Node
+         * @returns {null|string} Geometry point text
+         */
+        this.getPoint = function(alias) {
+            let geometries = ko.unwrap(self.getFirstNodeValue(alias))?.features();
+            if (!!geometries && geometries.length > 0)
+            {
+                return `${geometries[0].geometry.coordinates()[1]}\u00BA, ${geometries[0].geometry.coordinates()[0]}\u00BA`;
+            }
+            return null;
+        }
+
         this.clickUrl = function(data, event) {
             let url = event.currentTarget.getElementsByTagName('a')[0]['href'];
             let filename = event.currentTarget.getElementsByTagName('a')[0].text.trim();
@@ -120,8 +136,23 @@ define([
                     'common_name_uncertain': ko.observable(uncertainVal)});
             });
             return values;
-        })
+        });
 
+        this.getFossilNamesForCollectionEvent = ko.computed(function () {
+            let names = ko.observableArray([]);
+            if (self.report.graph.slug === "collection_event" && self.tiles().length > 0) {
+                let url = `${self.urls.root}collection_event_fossil_names/${self.tiles()[0].resourceinstance_id}`;
+                console.log(`Get fossil names from ${url}...`)
+                $.ajax({
+                    url: url
+                }).done(function(data){
+                    // console.log(data);
+                    names(data);
+                });
+            }
+            return names;
+        });
+        this.fossilNamesForCollectionEvent = self.getFossilNamesForCollectionEvent();
     };
 
 });

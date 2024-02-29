@@ -78,7 +78,7 @@
                     "instructions": {
                         "en": ""
                     },
-                    "is_editable": true,
+                    "is_editable": false,
                     "name": {
                         "en": "Historical Data"
                     },
@@ -213,7 +213,7 @@
                     "instructions": {
                         "en": "Note if the sample is barren or note number of specimens present."
                     },
-                    "is_editable": true,
+                    "is_editable": false,
                     "name": {
                         "en": "Fossil Abundance"
                     },
@@ -600,14 +600,14 @@
                         "i18n_properties": [
                             "placeholder"
                         ],
-                        "label": "Unrsolved Collection Events",
+                        "label": "Unresolved Collection Events",
                         "placeholder": {
                             "en": ""
                         }
                     },
                     "id": "5942134e-6956-4004-bd8e-a74f0b4b3564",
                     "label": {
-                        "en": "Unrsolved Collection Events"
+                        "en": "Unresolved Collection Events"
                     },
                     "node_id": "58e19e18-bc76-11ee-b691-080027b7463b",
                     "sortorder": null,
@@ -2151,6 +2151,26 @@
             "functions_x_graphs": [
                 {
                     "config": {
+                        "node_id": "7f2c823e-6c51-11ed-9b7d-5254004d77d3",
+                        "triggering_nodegroups": [
+                            "7f2c2dde-6c51-11ed-9b7d-5254004d77d3"
+                        ],
+                        "unique_value": true
+                    },
+                    "function_id": "60000000-0000-0000-0000-000000002001",
+                    "graph_id": "7f2c2082-6c51-11ed-9b7d-5254004d77d3",
+                    "id": "740b56b8-2cb0-43ee-a62c-a4930e0cdec8"
+                },
+                {
+                    "config": {
+                        "triggering_nodegroups": []
+                    },
+                    "function_id": "60000000-0000-0000-0000-000000001006",
+                    "graph_id": "7f2c2082-6c51-11ed-9b7d-5254004d77d3",
+                    "id": "b7181332-0749-4d75-8e14-fde9e5d70b3c"
+                },
+                {
+                    "config": {
                         "class_name": "BCFossilSampleDescriptors",
                         "descriptor_types": {
                             "description": {
@@ -2179,19 +2199,7 @@
                     },
                     "function_id": "60000000-0000-0000-0000-000000001004",
                     "graph_id": "7f2c2082-6c51-11ed-9b7d-5254004d77d3",
-                    "id": "8731ea74-6002-46b8-bf8e-ee66285ff23c"
-                },
-                {
-                    "config": {
-                        "node_id": "7f2c823e-6c51-11ed-9b7d-5254004d77d3",
-                        "triggering_nodegroups": [
-                            "7f2c2dde-6c51-11ed-9b7d-5254004d77d3"
-                        ],
-                        "unique_value": true
-                    },
-                    "function_id": "60000000-0000-0000-0000-000000002001",
-                    "graph_id": "7f2c2082-6c51-11ed-9b7d-5254004d77d3",
-                    "id": "fec34977-642a-4812-8f6b-a07fe929f69d"
+                    "id": "e2e0a865-f43d-4cf1-8bbe-240f9deb78d0"
                 }
             ],
             "graphid": "7f2c2082-6c51-11ed-9b7d-5254004d77d3",
@@ -4002,7 +4010,7 @@
     ],
     "metadata": {
         "db": "PostgreSQL 15.3 on x86_64-pc-linux-gnu, compiled by gcc (GCC) 11.3.1 20221121 (Red Hat 11.3.1-4), 64-bit",
-        "git hash": "6f4433a6f 2024-01-22 23:28:45 -0800",
+        "git hash": "9975977532 2024-02-07 12:28:09 -0800",
         "os": "Linux",
         "os version": "5.14.0-333.el9.x86_64"
     }

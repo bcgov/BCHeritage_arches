@@ -139,14 +139,16 @@ define([
         },
 
         doQuery: function() {
-            var maxUrlLength = 35000;
+            var maxUrlLength = 8192;
             var queryString = JSON.parse(this.queryString());
 
             if (this.updateRequest) {
                 this.updateRequest.abort();
             }
 
-            var request_type = (arches.urls.search_results.length + $.param(queryString).split('+').join('%20').length) < maxUrlLength ? "GET": "POST";
+            var request_type = (arches.urls.search_results.length +
+                                       $.param(queryString).split('+').join('%20').length)
+                                            < maxUrlLength ? "GET" : "POST";
             var map_filter;
             var url_data = '';
             if (request_type === 'POST' && !!queryString['map-filter'])

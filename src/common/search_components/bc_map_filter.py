@@ -68,7 +68,7 @@ class BCMapFilter(BaseSearchFilter):
                         else:
                             spatial_query.filter(geoshape)
 
-                    print("Spatial Filter %s"%str(spatial_filter))
+                    # print("Spatial Filter %s"%str(spatial_filter))
                     # get the nodegroup_ids that the user has permission to search
                     spatial_query.filter(Terms(field="geometries.nodegroup_id", terms=permitted_nodegroups))
 
