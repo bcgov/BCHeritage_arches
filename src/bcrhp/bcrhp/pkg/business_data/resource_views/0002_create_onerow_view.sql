@@ -152,6 +152,41 @@ select resourceinstanceid,
 group by resourceinstanceid, __arches_get_concept_label(construction_actor_type);
 create index mv_ca_idx on mv_construction_actors(resourceinstanceid);
 
+create or replace function bc_get_utm_zone(point geometry) returns int as
+$$
+DECLARE
+BEGIN
+    return int4(ceil((st_x(st_centroid(point)) + 180.0) / 6));
+end;$$ language plpgsql;
+
+create or replace function bc_get_utm_srid(point geometry) returns int as
+$$
+DECLARE
+BEGIN
+    return 26900 + bc_get_utm_zone(point);
+end;$$ language plpgsql;
+
+create or replace function bc_get_utm_northing(point geometry) returns int as
+$$
+DECLARE
+BEGIN
+    return trunc(st_y(st_transform(point, bc_get_utm_srid(point))));
+EXCEPTION when others then
+    raise notice 'Unable to get northing for srid %', bc_get_utm_srid(point);
+    return null;
+end;$$ language plpgsql;
+
+create or replace function bc_get_utm_easting(point geometry) returns int as
+$$
+DECLARE
+BEGIN
+    return trunc(st_x(st_transform(point, bc_get_utm_srid(point))));
+EXCEPTION when others then
+    raise notice 'Unable to get easting for srid %', bc_get_utm_srid(point);
+    return null;
+end;$$ language plpgsql;
+
+
 drop materialized view if exists mv_site_boundary cascade;
 create materialized view mv_site_boundary as
 select b.resourceinstanceid,
@@ -159,10 +194,11 @@ select b.resourceinstanceid,
        st_area(site_boundary::geography) area_sqm,
        st_y(st_centroid(site_boundary)) site_centroid_latitude,
        st_x(st_centroid(site_boundary)) site_centroid_longitude,
-       int4(ceil((st_x(st_centroid(site_boundary)) + 180.0)/6)) utmzone,
-       trunc(st_y(st_transform(st_centroid(site_boundary), 26910))) utmnorthing,
-       trunc(st_x(st_transform(st_centroid(site_boundary), 26910))) utmeasting
+       bc_get_utm_zone(st_centroid(site_boundary)) utmzone,
+       bc_get_utm_northing(st_centroid(site_boundary)) utmnorthing,
+       bc_get_utm_easting(st_centroid(site_boundary)) utmeasting
        from heritage_site.site_boundary b join heritage_site.borden_number bn on b.resourceinstanceid = bn.resourceinstanceid;
+
 create index mv_sb_idx on mv_site_boundary(resourceinstanceid);
 
 create or replace procedure refresh_materialized_views() as
@@ -263,7 +299,6 @@ ALTER FUNCTION databc.authority_priority(authority_level text) SECURITY DEFINER 
 
 -- drop materialized view if exists MV_HISTORIC_ENVIRO_ONEROW_SITE;
 -- refresh materialized view MV_HISTORIC_ENVIRO_ONEROW_SITE;
-
 drop view if exists databc.V_HISTORIC_ENVIRO_ONEROW_SITE;
 -- create materialized view MV_HISTORIC_ENVIRO_ONEROW_SITE as
 create or replace view databc.V_HISTORIC_ENVIRO_ONEROW_SITE as
