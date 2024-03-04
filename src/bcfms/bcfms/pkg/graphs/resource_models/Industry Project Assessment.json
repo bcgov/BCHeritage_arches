@@ -1033,7 +1033,7 @@
                         "en": "Communication Date"
                     },
                     "node_id": "e2b5df44-9dc5-11ed-9ef3-5254004d77d3",
-                    "sortorder": 3,
+                    "sortorder": 4,
                     "visible": true,
                     "widget_id": "10000000-0000-0000-0000-000000000004"
                 },
@@ -2235,6 +2235,35 @@
                     "widget_id": "10000000-0000-0000-0000-000000000005"
                 },
                 {
+                    "card_id": "01071c17-58bb-4718-a62e-1eb9a2418dcd",
+                    "config": {
+                        "defaultValue": {
+                            "en": {
+                                "direction": "ltr",
+                                "value": ""
+                            }
+                        },
+                        "i18n_properties": [
+                            "placeholder"
+                        ],
+                        "label": "External Contact",
+                        "maxLength": null,
+                        "placeholder": {
+                            "en": "Enter text"
+                        },
+                        "uneditable": false,
+                        "width": "100%%"
+                    },
+                    "id": "9f0e4e41-ed81-4a73-823d-8632ea7336e3",
+                    "label": {
+                        "en": "External Contact"
+                    },
+                    "node_id": "baa986d0-d8ad-11ee-a275-080027b7463b",
+                    "sortorder": 3,
+                    "visible": true,
+                    "widget_id": "10000000-0000-0000-0000-000000000001"
+                },
+                {
                     "card_id": "d64614b1-79e7-443b-878a-d885f2e0d4d1",
                     "config": {
                         "defaultValue": {
@@ -2412,30 +2441,9 @@
                         "en": "Communication Content"
                     },
                     "node_id": "f2199142-9dc5-11ed-a03b-5254004d77d3",
-                    "sortorder": 4,
+                    "sortorder": 5,
                     "visible": true,
                     "widget_id": "10000000-0000-0000-0000-000000000005"
-                },
-                {
-                    "card_id": "01071c17-58bb-4718-a62e-1eb9a2418dcd",
-                    "config": {
-                        "defaultResourceInstance": [],
-                        "i18n_properties": [
-                            "placeholder"
-                        ],
-                        "label": "External Contact",
-                        "placeholder": {
-                            "en": ""
-                        }
-                    },
-                    "id": "bffa6cc2-41de-4efd-bc53-2e09f9022e0e",
-                    "label": {
-                        "en": "External Contact"
-                    },
-                    "node_id": "472b2810-a354-11ed-932e-5254004d77d3",
-                    "sortorder": 2,
-                    "visible": true,
-                    "widget_id": "ff3c400a-76ec-11e7-a793-784f435179ea"
                 },
                 {
                     "card_id": "9de5c571-f507-4df0-af17-a90204edd2db",
@@ -3575,6 +3583,15 @@
                 },
                 {
                     "description": null,
+                    "domainnode_id": "d791486a-9dc5-11ed-add1-5254004d77d3",
+                    "edgeid": "5d5d2242-a530-4341-b210-75cad3882e77",
+                    "graph_id": "2aa724d1-ffd3-4823-8ff1-15a385b9a407",
+                    "name": null,
+                    "ontologyproperty": "http://www.cidoc-crm.org/cidoc-crm/P11_had_participant",
+                    "rangenode_id": "baa986d0-d8ad-11ee-a275-080027b7463b"
+                },
+                {
+                    "description": null,
                     "domainnode_id": "10295f6a-9dc0-11ed-82b6-5254004d77d3",
                     "edgeid": "5dfc9597-e5b9-426e-9338-20268cfafa86",
                     "graph_id": "2aa724d1-ffd3-4823-8ff1-15a385b9a407",
@@ -3980,15 +3997,6 @@
                 },
                 {
                     "description": null,
-                    "domainnode_id": "d791486a-9dc5-11ed-add1-5254004d77d3",
-                    "edgeid": "bebacfa0-6181-4c21-b70c-c1b6e2458cd9",
-                    "graph_id": "2aa724d1-ffd3-4823-8ff1-15a385b9a407",
-                    "name": null,
-                    "ontologyproperty": "http://www.cidoc-crm.org/cidoc-crm/P11_had_participant",
-                    "rangenode_id": "472b2810-a354-11ed-932e-5254004d77d3"
-                },
-                {
-                    "description": null,
                     "domainnode_id": "b9781ff0-a3d0-11ed-99ab-5254004d77d3",
                     "edgeid": "c917c700-f4ae-4059-9380-a7a3df24e395",
                     "graph_id": "2aa724d1-ffd3-4823-8ff1-15a385b9a407",
@@ -4345,7 +4353,7 @@
                     },
                     "function_id": "60000000-0000-0000-0000-000000001001",
                     "graph_id": "2aa724d1-ffd3-4823-8ff1-15a385b9a407",
-                    "id": "871a9bff-31f6-4897-b7b2-9fff12013c1e"
+                    "id": "900f34ac-4bf1-4aff-9be2-c5b126f819a6"
                 }
             ],
             "graphid": "2aa724d1-ffd3-4823-8ff1-15a385b9a407",
@@ -4667,7 +4675,7 @@
                     "nodeid": "024132be-c373-11ed-af52-5254004d77d3",
                     "ontologyclass": "http://www.cidoc-crm.org/cidoc-crm/E7_Activity",
                     "parentproperty": "http://www.cidoc-crm.org/cidoc-crm/P20_had_specific_purpose",
-                    "sortorder": 2,
+                    "sortorder": 0,
                     "sourcebranchpublication_id": null
                 },
                 {
@@ -4887,7 +4895,7 @@
                     "nodeid": "072aab9a-a341-11ed-8c6b-5254004d77d3",
                     "ontologyclass": "http://www.cidoc-crm.org/cidoc-crm/E7_Activity",
                     "parentproperty": "http://www.cidoc-crm.org/cidoc-crm/P9_consists_of",
-                    "sortorder": 5,
+                    "sortorder": 4,
                     "sourcebranchpublication_id": null
                 },
                 {
@@ -5203,7 +5211,7 @@
                     "nodeid": "333303da-c372-11ed-9dd3-5254004d77d3",
                     "ontologyclass": "http://www.cidoc-crm.org/cidoc-crm/E7_Activity",
                     "parentproperty": "http://www.cidoc-crm.org/cidoc-crm/P117_occurs_during",
-                    "sortorder": 7,
+                    "sortorder": 3,
                     "sourcebranchpublication_id": null
                 },
                 {
@@ -5390,7 +5398,7 @@
                     "nodeid": "3b0172f4-d785-11ee-b1e5-080027b7463b",
                     "ontologyclass": "http://www.cidoc-crm.org/cidoc-crm/E73_Information_Object",
                     "parentproperty": "http://www.cidoc-crm.org/cidoc-crm/P128_carries",
-                    "sortorder": 4,
+                    "sortorder": 0,
                     "sourcebranchpublication_id": null
                 },
                 {
@@ -5582,250 +5590,6 @@
                     "sourcebranchpublication_id": null
                 },
                 {
-                    "alias": "external_contact",
-                    "config": {
-                        "graphs": [
-                            {
-                                "graphid": "605b0bbc-8661-4cf2-b340-df743a8c5f89",
-                                "inverseRelationshipConcept": "ac41d9be-79db-4256-b368-2f4559cfbe55",
-                                "name": "Contributor",
-                                "relationshipCollection": "00000000-0000-0000-0000-000000000005",
-                                "relationshipConcept": "ac41d9be-79db-4256-b368-2f4559cfbe55",
-                                "useOntologyRelationship": false
-                            }
-                        ],
-                        "searchDsl": {
-                            "bool": {
-                                "filter": [
-                                    {
-                                        "terms": {
-                                            "graph_id": [
-                                                "86700278-117b-11ec-90d4-5254008afee6",
-                                                "c3923080-d21e-42d7-b8f1-637b9d0ab63c",
-                                                "3e6a2880-14d4-11ec-9df0-5254008afee6",
-                                                "3746ffc8-a878-11ec-ab9a-5254008afee6",
-                                                "dd19a93a-0202-11ed-a511-0050568377a0",
-                                                "5b52dcac-9c1b-11ec-964d-5254008afee6",
-                                                "2aa724d1-ffd3-4823-8ff1-15a385b9a407",
-                                                "605b0bbc-8661-4cf2-b340-df743a8c5f89",
-                                                "4d6c9226-10c6-11ec-9a94-5254008afee6",
-                                                "3ffba33a-9c20-11ec-92da-5254008afee6",
-                                                "7f2c2082-6c51-11ed-9b7d-5254004d77d3",
-                                                "3caf329f-b8f7-11e6-84a5-026d961c88e6",
-                                                "3eec83c6-9dd5-11ed-a81c-5254004d77d3",
-                                                "d735935c-3ddb-11ed-814d-5254008afee6",
-                                                "8a209060-9c20-11ec-955e-5254008afee6",
-                                                "ff623370-fa12-11e6-b98b-6c4008b05c4c",
-                                                "67574dc6-9c20-11ec-964d-5254008afee6",
-                                                "df3ee1ae-9c1c-11ec-964d-5254008afee6",
-                                                "3bad9ec8-a35e-11ed-884a-5254004d77d3",
-                                                "82efcd14-82db-11ec-b8e6-5254008afee6",
-                                                "109a0272-d968-11ed-b8ae-5254004d77d3",
-                                                "fac1b1b4-1034-11ec-8a7a-5254008afee6"
-                                            ]
-                                        }
-                                    }
-                                ],
-                                "must": [
-                                    {
-                                        "bool": {
-                                            "filter": [],
-                                            "minimum_should_match": 1,
-                                            "must": [],
-                                            "must_not": [],
-                                            "should": [
-                                                {
-                                                    "bool": {
-                                                        "filter": [],
-                                                        "must": [
-                                                            {
-                                                                "nested": {
-                                                                    "path": "tiles",
-                                                                    "query": {
-                                                                        "bool": {
-                                                                            "filter": [],
-                                                                            "must": [
-                                                                                {
-                                                                                    "term": {
-                                                                                        "tiles.data.99643f1e-9e4e-11ed-b6d5-5254004d77d3": false
-                                                                                    }
-                                                                                }
-                                                                            ],
-                                                                            "must_not": [],
-                                                                            "should": []
-                                                                        }
-                                                                    }
-                                                                }
-                                                            },
-                                                            {
-                                                                "bool": {
-                                                                    "filter": [
-                                                                        {
-                                                                            "terms": {
-                                                                                "graph_id": [
-                                                                                    "605b0bbc-8661-4cf2-b340-df743a8c5f89"
-                                                                                ]
-                                                                            }
-                                                                        }
-                                                                    ],
-                                                                    "minimum_should_match": 1,
-                                                                    "must": [],
-                                                                    "must_not": [],
-                                                                    "should": [
-                                                                        {
-                                                                            "bool": {
-                                                                                "filter": [],
-                                                                                "must": [],
-                                                                                "must_not": [
-                                                                                    {
-                                                                                        "nested": {
-                                                                                            "path": "tiles",
-                                                                                            "query": {
-                                                                                                "exists": {
-                                                                                                    "field": "tiles.data.009ba8da-faf6-11ed-ac37-5254004d77d3"
-                                                                                                }
-                                                                                            }
-                                                                                        }
-                                                                                    }
-                                                                                ],
-                                                                                "should": []
-                                                                            }
-                                                                        },
-                                                                        {
-                                                                            "function_score": {
-                                                                                "boost": 1,
-                                                                                "boost_mode": "replace",
-                                                                                "functions": [
-                                                                                    {
-                                                                                        "script_score": {
-                                                                                            "script": {
-                                                                                                "lang": "painless",
-                                                                                                "params": {
-                                                                                                    "node_id": "009ba8da-faf6-11ed-ac37-5254004d77d3",
-                                                                                                    "nodegroup_id": "c4ec91a4-9dea-11ed-9a7b-5254004d77d3"
-                                                                                                },
-                                                                                                "source": "\n                                    int null_docs = 0;\n                                    for(tile in params._source.tiles){\n                                        if(tile.nodegroup_id == params.nodegroup_id ){\n                                            def val = tile.data.get(params.node_id);\n                                            if (val == null || val == \"\" || (val instanceof List && val.length==0)) {\n                                                null_docs++;\n                                                break;\n                                            }\n                                        }\n                                    }\n                                    return null_docs;\n                                "
-                                                                                            }
-                                                                                        }
-                                                                                    }
-                                                                                ],
-                                                                                "min_score": 1,
-                                                                                "query": {
-                                                                                    "bool": {
-                                                                                        "filter": [],
-                                                                                        "must": [
-                                                                                            {
-                                                                                                "nested": {
-                                                                                                    "path": "tiles",
-                                                                                                    "query": {
-                                                                                                        "exists": {
-                                                                                                            "field": "tiles.data.009ba8da-faf6-11ed-ac37-5254004d77d3"
-                                                                                                        }
-                                                                                                    }
-                                                                                                }
-                                                                                            },
-                                                                                            {
-                                                                                                "terms": {
-                                                                                                    "graph_id": [
-                                                                                                        "605b0bbc-8661-4cf2-b340-df743a8c5f89"
-                                                                                                    ]
-                                                                                                }
-                                                                                            }
-                                                                                        ],
-                                                                                        "must_not": [],
-                                                                                        "should": []
-                                                                                    }
-                                                                                },
-                                                                                "score_mode": "max"
-                                                                            }
-                                                                        }
-                                                                    ]
-                                                                }
-                                                            }
-                                                        ],
-                                                        "must_not": [],
-                                                        "should": []
-                                                    }
-                                                },
-                                                {
-                                                    "bool": {
-                                                        "filter": [],
-                                                        "must": [
-                                                            {
-                                                                "nested": {
-                                                                    "path": "tiles",
-                                                                    "query": {
-                                                                        "bool": {
-                                                                            "filter": [],
-                                                                            "must": [
-                                                                                {
-                                                                                    "match_phrase": {
-                                                                                        "tiles.data.c4eca2de-9dea-11ed-9a7b-5254004d77d3": {
-                                                                                            "query": "706881ba-bda3-4fbc-9d66-c26bf2d92c18"
-                                                                                        }
-                                                                                    }
-                                                                                },
-                                                                                {
-                                                                                    "terms": {
-                                                                                        "tiles.data.009ba8da-faf6-11ed-ac37-5254004d77d3.resourceId.keyword": [
-                                                                                            "2eeedeb1-3a32-4542-966e-f6c688d5d861"
-                                                                                        ]
-                                                                                    }
-                                                                                },
-                                                                                {
-                                                                                    "term": {
-                                                                                        "tiles.data.99643f1e-9e4e-11ed-b6d5-5254004d77d3": false
-                                                                                    }
-                                                                                }
-                                                                            ],
-                                                                            "must_not": [],
-                                                                            "should": []
-                                                                        }
-                                                                    }
-                                                                }
-                                                            },
-                                                            {
-                                                                "bool": {
-                                                                    "filter": [],
-                                                                    "must": [],
-                                                                    "must_not": [],
-                                                                    "should": []
-                                                                }
-                                                            }
-                                                        ],
-                                                        "must_not": [],
-                                                        "should": []
-                                                    }
-                                                }
-                                            ]
-                                        }
-                                    }
-                                ],
-                                "must_not": [],
-                                "should": []
-                            }
-                        },
-                        "searchString": "/int/bc-fossil-management/search?paging-filter=1&tiles=true&advanced-search=%5B%7B%22op%22%3A%22and%22%2C%22c4eca2de-9dea-11ed-9a7b-5254004d77d3%22%3A%7B%22op%22%3A%22eq%22%2C%22val%22%3A%22%22%7D%2C%22e2f1c29a-c500-11ed-9089-5254004d77d3%22%3A%7B%22op%22%3A%22eq%22%2C%22val%22%3A%22%22%7D%2C%22c4ec9b2c-9dea-11ed-9a7b-5254004d77d3%22%3A%7B%22op%22%3A%22~%22%2C%22lang%22%3A%22en%22%2C%22val%22%3A%22%22%7D%2C%22c4eca13a-9dea-11ed-9a7b-5254004d77d3%22%3A%7B%22op%22%3A%22~%22%2C%22lang%22%3A%22en%22%2C%22val%22%3A%22%22%7D%2C%22a5b2cd72-c4f4-11ed-a06d-5254004d77d3%22%3A%7B%22op%22%3A%22~%22%2C%22lang%22%3A%22en%22%2C%22val%22%3A%22%22%7D%2C%22b5ed0072-c4f4-11ed-94de-5254004d77d3%22%3A%7B%22op%22%3A%22~%22%2C%22lang%22%3A%22en%22%2C%22val%22%3A%22%22%7D%2C%22009ba8da-faf6-11ed-ac37-5254004d77d3%22%3A%7B%22op%22%3A%22null%22%2C%22val%22%3A%222eeedeb1-3a32-4542-966e-f6c688d5d861%22%7D%2C%2299643f1e-9e4e-11ed-b6d5-5254004d77d3%22%3A%7B%22val%22%3A%22f%22%7D%7D%2C%7B%22op%22%3A%22or%22%2C%22c4eca2de-9dea-11ed-9a7b-5254004d77d3%22%3A%7B%22op%22%3A%22eq%22%2C%22val%22%3A%22706881ba-bda3-4fbc-9d66-c26bf2d92c18%22%7D%2C%22e2f1c29a-c500-11ed-9089-5254004d77d3%22%3A%7B%22op%22%3A%22eq%22%2C%22val%22%3A%22%22%7D%2C%22c4ec9b2c-9dea-11ed-9a7b-5254004d77d3%22%3A%7B%22op%22%3A%22~%22%2C%22lang%22%3A%22en%22%2C%22val%22%3A%22%22%7D%2C%22c4eca13a-9dea-11ed-9a7b-5254004d77d3%22%3A%7B%22op%22%3A%22~%22%2C%22lang%22%3A%22en%22%2C%22val%22%3A%22%22%7D%2C%22a5b2cd72-c4f4-11ed-a06d-5254004d77d3%22%3A%7B%22op%22%3A%22~%22%2C%22lang%22%3A%22en%22%2C%22val%22%3A%22%22%7D%2C%22b5ed0072-c4f4-11ed-94de-5254004d77d3%22%3A%7B%22op%22%3A%22~%22%2C%22lang%22%3A%22en%22%2C%22val%22%3A%22%22%7D%2C%22009ba8da-faf6-11ed-ac37-5254004d77d3%22%3A%7B%22op%22%3A%22%22%2C%22val%22%3A%222eeedeb1-3a32-4542-966e-f6c688d5d861%22%7D%2C%2299643f1e-9e4e-11ed-b6d5-5254004d77d3%22%3A%7B%22val%22%3A%22f%22%7D%7D%5D&sort-results=asc"
-                    },
-                    "datatype": "resource-instance-list",
-                    "description": null,
-                    "exportable": false,
-                    "fieldname": null,
-                    "graph_id": "2aa724d1-ffd3-4823-8ff1-15a385b9a407",
-                    "hascustomalias": false,
-                    "is_collector": false,
-                    "isrequired": false,
-                    "issearchable": true,
-                    "istopnode": false,
-                    "name": "External Contact",
-                    "nodegroup_id": "d791486a-9dc5-11ed-add1-5254004d77d3",
-                    "nodeid": "472b2810-a354-11ed-932e-5254004d77d3",
-                    "ontologyclass": "http://www.cidoc-crm.org/cidoc-crm/E39_Actor",
-                    "parentproperty": "http://www.cidoc-crm.org/cidoc-crm/P11_had_participant",
-                    "sortorder": 0,
-                    "sourcebranchpublication_id": null
-                },
-                {
                     "alias": "psr_fmo_internal_notes",
                     "config": {
                         "en": ""
@@ -5891,7 +5655,7 @@
                     "nodeid": "4df11356-9dcf-11ed-add1-5254004d77d3",
                     "ontologyclass": "http://www.cidoc-crm.org/cidoc-crm/E7_Activity",
                     "parentproperty": "http://www.cidoc-crm.org/cidoc-crm/P9_consists_of",
-                    "sortorder": 6,
+                    "sortorder": 2,
                     "sourcebranchpublication_id": null
                 },
                 {
@@ -6075,7 +5839,7 @@
                     "nodeid": "67997a7e-9dc4-11ed-9ef3-5254004d77d3",
                     "ontologyclass": "http://www.cidoc-crm.org/cidoc-crm/E11_Modification",
                     "parentproperty": "http://www.cidoc-crm.org/cidoc-crm/P10_falls_within",
-                    "sortorder": 1,
+                    "sortorder": 6,
                     "sourcebranchpublication_id": null
                 },
                 {
@@ -7192,7 +6956,7 @@
                     "nodeid": "91e50dd8-9dca-11ed-9ef3-5254004d77d3",
                     "ontologyclass": "http://www.cidoc-crm.org/cidoc-crm/E7_Activity",
                     "parentproperty": "http://www.cidoc-crm.org/cidoc-crm/P9_consists_of",
-                    "sortorder": 2,
+                    "sortorder": 5,
                     "sourcebranchpublication_id": null
                 },
                 {
@@ -7238,7 +7002,7 @@
                     "nodeid": "9cf8ce58-9dcf-11ed-82b6-5254004d77d3",
                     "ontologyclass": "http://www.cidoc-crm.org/cidoc-crm/E7_Activity",
                     "parentproperty": "http://www.cidoc-crm.org/cidoc-crm/P9_consists_of",
-                    "sortorder": 3,
+                    "sortorder": 7,
                     "sourcebranchpublication_id": null
                 },
                 {
@@ -7284,7 +7048,7 @@
                     "nodeid": "a48e1732-c371-11ed-bb65-5254004d77d3",
                     "ontologyclass": "http://www.cidoc-crm.org/cidoc-crm/E7_Activity",
                     "parentproperty": "http://www.cidoc-crm.org/cidoc-crm/P117i_includes",
-                    "sortorder": 4,
+                    "sortorder": 1,
                     "sourcebranchpublication_id": null
                 },
                 {
@@ -7566,6 +7330,29 @@
                     "nodeid": "b9781ff0-a3d0-11ed-99ab-5254004d77d3",
                     "ontologyclass": "http://www.cidoc-crm.org/cidoc-crm/E7_Activity",
                     "parentproperty": "http://www.cidoc-crm.org/cidoc-crm/P117_occurs_during",
+                    "sortorder": 0,
+                    "sourcebranchpublication_id": null
+                },
+                {
+                    "alias": "external_contact",
+                    "config": {
+                        "en": ""
+                    },
+                    "datatype": "string",
+                    "description": null,
+                    "exportable": false,
+                    "fieldname": null,
+                    "graph_id": "2aa724d1-ffd3-4823-8ff1-15a385b9a407",
+                    "hascustomalias": false,
+                    "is_collector": false,
+                    "isrequired": true,
+                    "issearchable": true,
+                    "istopnode": false,
+                    "name": "External Contact",
+                    "nodegroup_id": "d791486a-9dc5-11ed-add1-5254004d77d3",
+                    "nodeid": "baa986d0-d8ad-11ee-a275-080027b7463b",
+                    "ontologyclass": "http://www.cidoc-crm.org/cidoc-crm/E39_Actor",
+                    "parentproperty": "http://www.cidoc-crm.org/cidoc-crm/P11_had_participant",
                     "sortorder": 0,
                     "sourcebranchpublication_id": null
                 },
@@ -8930,8 +8717,8 @@
             "publication": {
                 "graph_id": "2aa724d1-ffd3-4823-8ff1-15a385b9a407",
                 "notes": null,
-                "publicationid": "ad4f75f4-d785-11ee-bccc-080027b7463b",
-                "published_time": "2024-02-29T22:39:23.335"
+                "publicationid": "eb983e1c-d8ad-11ee-a275-080027b7463b",
+                "published_time": "2024-03-02T09:59:58.862"
             },
             "relatable_resource_model_ids": [],
             "resource_2_resource_constraints": [],

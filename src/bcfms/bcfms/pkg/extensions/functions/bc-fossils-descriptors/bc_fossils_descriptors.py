@@ -243,7 +243,6 @@ class BCFossilsDescriptors(BCPrimaryDescriptorsFunction):
 
     def _get_values_from_samples(self, samples, label, node_alias, uncertainty_alias=None):
         values = []
-        print ("Label: %s, alias: %s" % (label, node_alias))
         for sample in samples:
             if uncertainty_alias is None:
                 values.append(self.get_value_from_node(
@@ -268,7 +267,7 @@ class BCFossilsDescriptors(BCPrimaryDescriptorsFunction):
         # values = [val for val in values if val is not None and val != ""]
         # print("Node alias: %s values: %s" % (node_alias, values))
         # return "" if len(values) == 0 else self.format_value(label, values)
-        print("Returning: %s" % self.format_value(label, values))
+        # print("Returning: %s" % self.format_value(label, values))
         return self.format_value(label, values)
 
     def _get_sample_values(self, resource, values_config):
