@@ -4,6 +4,7 @@ from django.conf.urls.static import static
 from django.conf.urls.i18n import i18n_patterns
 from bcfms.views.api import MVT, CollectionEventFossilNames
 from bcfms.views.map import BCTileserverProxyView, BCTileserverLocalProxyView
+from bcfms.views.search import export_results as bcfms_export_results
 
 uuid_regex = settings.UUID_REGEX
 
@@ -20,6 +21,8 @@ urlpatterns = [
                   re_path(r"^collection_event_fossil_names/(?P<collection_event_id>%s|())$" % uuid_regex,
                           CollectionEventFossilNames.as_view(),
                           name="collection_event_fossil_names"),
+                  # Override base export results
+                  re_path(r"^search/export_results$", bcfms_export_results, name="export_results"),
                   bc_url_resolver,
               ] + static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
 
