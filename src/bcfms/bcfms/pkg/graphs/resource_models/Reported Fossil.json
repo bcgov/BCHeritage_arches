@@ -220,7 +220,7 @@
                 {
                     "card_id": "4dd2da7a-d786-11ee-a7d3-080027b7463b",
                     "config": {
-                        "acceptedFiles": ".jpg, .jpge, .png, gif",
+                        "acceptedFiles": ".jpg, .jpeg, .png, .tiff, .gif",
                         "defaultValue": [],
                         "label": "Photograph",
                         "maxFilesize": "5",
@@ -234,57 +234,6 @@
                     "sortorder": 0,
                     "visible": true,
                     "widget_id": "10000000-0000-0000-0000-000000000019"
-                },
-                {
-                    "card_id": "4dd2da7a-d786-11ee-a7d3-080027b7463b",
-                    "config": {
-                        "defaultValue": {
-                            "en": {
-                                "direction": "ltr",
-                                "value": ""
-                            }
-                        },
-                        "i18n_properties": [
-                            "placeholder"
-                        ],
-                        "label": "Copyright",
-                        "maxLength": "80",
-                        "placeholder": {
-                            "en": "E.g. City of Nelson"
-                        },
-                        "uneditable": false,
-                        "width": "100%"
-                    },
-                    "id": "4dd2e95c-d786-11ee-a7d3-080027b7463b",
-                    "label": {
-                        "en": "Copyright"
-                    },
-                    "node_id": "4dd2e1aa-d786-11ee-a7d3-080027b7463b",
-                    "sortorder": 5,
-                    "visible": true,
-                    "widget_id": "10000000-0000-0000-0000-000000000001"
-                },
-                {
-                    "card_id": "4dd2da7a-d786-11ee-a7d3-080027b7463b",
-                    "config": {
-                        "defaultValue": "",
-                        "i18n_properties": [
-                            "placeholder"
-                        ],
-                        "label": "Photograph View",
-                        "options": [],
-                        "placeholder": {
-                            "en": "Select an option"
-                        }
-                    },
-                    "id": "4dd2eb0a-d786-11ee-a7d3-080027b7463b",
-                    "label": {
-                        "en": "Photograph View"
-                    },
-                    "node_id": "4dd2dd9a-d786-11ee-a7d3-080027b7463b",
-                    "sortorder": 4,
-                    "visible": true,
-                    "widget_id": "10000000-0000-0000-0000-000000000002"
                 },
                 {
                     "card_id": "4dd2da7a-d786-11ee-a7d3-080027b7463b",
@@ -555,29 +504,11 @@
                 {
                     "description": null,
                     "domainnode_id": "4dd2d7f0-d786-11ee-a7d3-080027b7463b",
-                    "edgeid": "4dd344b0-d786-11ee-a7d3-080027b7463b",
-                    "graph_id": "82efcd14-82db-11ec-b8e6-5254008afee6",
-                    "name": null,
-                    "ontologyproperty": "http://www.cidoc-crm.org/cidoc-crm/P128_carries",
-                    "rangenode_id": "4dd2e1aa-d786-11ee-a7d3-080027b7463b"
-                },
-                {
-                    "description": null,
-                    "domainnode_id": "4dd2d7f0-d786-11ee-a7d3-080027b7463b",
                     "edgeid": "4dd345dc-d786-11ee-a7d3-080027b7463b",
                     "graph_id": "82efcd14-82db-11ec-b8e6-5254008afee6",
                     "name": null,
                     "ontologyproperty": "http://www.cidoc-crm.org/cidoc-crm/P140i_was_attributed_by",
                     "rangenode_id": "4dd2df70-d786-11ee-a7d3-080027b7463b"
-                },
-                {
-                    "description": null,
-                    "domainnode_id": "4dd2d7f0-d786-11ee-a7d3-080027b7463b",
-                    "edgeid": "4dd346f4-d786-11ee-a7d3-080027b7463b",
-                    "graph_id": "82efcd14-82db-11ec-b8e6-5254008afee6",
-                    "name": null,
-                    "ontologyproperty": "http://www.cidoc-crm.org/cidoc-crm/P140i_was_attributed_by",
-                    "rangenode_id": "4dd2dd9a-d786-11ee-a7d3-080027b7463b"
                 },
                 {
                     "description": null,
@@ -644,6 +575,15 @@
                 },
                 {
                     "description": null,
+                    "domainnode_id": "4dd2d7f0-d786-11ee-a7d3-080027b7463b",
+                    "edgeid": "d2fd767b-51eb-4976-b716-0c9ae9c40ae1",
+                    "graph_id": "82efcd14-82db-11ec-b8e6-5254008afee6",
+                    "name": null,
+                    "ontologyproperty": "http://www.cidoc-crm.org/cidoc-crm/P140i_was_attributed_by",
+                    "rangenode_id": "2485ee6c-dff8-11ee-938a-080027b7463b"
+                },
+                {
+                    "description": null,
                     "domainnode_id": "82efca4e-82db-11ec-b8e6-5254008afee6",
                     "edgeid": "db9c68e9-8d69-45dc-b6e0-9b7d8ee6541d",
                     "graph_id": "82efcd14-82db-11ec-b8e6-5254008afee6",
@@ -702,7 +642,7 @@
                     },
                     "function_id": "60000000-0000-0000-0000-000000000001",
                     "graph_id": "82efcd14-82db-11ec-b8e6-5254008afee6",
-                    "id": "b8ef0d3d-0c78-4e3c-a743-e2760051c48f"
+                    "id": "18d3f81d-1b66-4403-b3ef-0a04333c7e19"
                 }
             ],
             "graphid": "82efcd14-82db-11ec-b8e6-5254008afee6",
@@ -764,7 +704,30 @@
                     "nodeid": "0d429c06-83d8-11ec-9043-5254008afee6",
                     "ontologyclass": "http://www.cidoc-crm.org/cidoc-crm/E13_Attribute_Assignment",
                     "parentproperty": "http://www.cidoc-crm.org/cidoc-crm/P140i_was_attributed_by",
-                    "sortorder": 4,
+                    "sortorder": 0,
+                    "sourcebranchpublication_id": null
+                },
+                {
+                    "alias": "photograph_view",
+                    "config": {
+                        "en": ""
+                    },
+                    "datatype": "string",
+                    "description": null,
+                    "exportable": true,
+                    "fieldname": "photo_view",
+                    "graph_id": "82efcd14-82db-11ec-b8e6-5254008afee6",
+                    "hascustomalias": false,
+                    "is_collector": false,
+                    "isrequired": false,
+                    "issearchable": true,
+                    "istopnode": false,
+                    "name": "Photograph View",
+                    "nodegroup_id": "4dd2d7f0-d786-11ee-a7d3-080027b7463b",
+                    "nodeid": "2485ee6c-dff8-11ee-938a-080027b7463b",
+                    "ontologyclass": "http://www.cidoc-crm.org/cidoc-crm/E13_Attribute_Assignment",
+                    "parentproperty": "http://www.cidoc-crm.org/cidoc-crm/P140i_was_attributed_by",
+                    "sortorder": 3,
                     "sourcebranchpublication_id": null
                 },
                 {
@@ -817,29 +780,6 @@
                     "sourcebranchpublication_id": null
                 },
                 {
-                    "alias": "photograph_view",
-                    "config": {
-                        "rdmCollection": "de747b76-9047-455c-8696-a469130c9807"
-                    },
-                    "datatype": "concept",
-                    "description": null,
-                    "exportable": true,
-                    "fieldname": "image_view",
-                    "graph_id": "82efcd14-82db-11ec-b8e6-5254008afee6",
-                    "hascustomalias": false,
-                    "is_collector": false,
-                    "isrequired": false,
-                    "issearchable": true,
-                    "istopnode": false,
-                    "name": "Photograph View",
-                    "nodegroup_id": "4dd2d7f0-d786-11ee-a7d3-080027b7463b",
-                    "nodeid": "4dd2dd9a-d786-11ee-a7d3-080027b7463b",
-                    "ontologyclass": "http://www.cidoc-crm.org/cidoc-crm/E13_Attribute_Assignment",
-                    "parentproperty": "http://www.cidoc-crm.org/cidoc-crm/P140i_was_attributed_by",
-                    "sortorder": 0,
-                    "sourcebranchpublication_id": null
-                },
-                {
                     "alias": "photographer",
                     "config": {
                         "en": ""
@@ -859,7 +799,7 @@
                     "nodeid": "4dd2df70-d786-11ee-a7d3-080027b7463b",
                     "ontologyclass": "http://www.cidoc-crm.org/cidoc-crm/E13_Attribute_Assignment",
                     "parentproperty": "http://www.cidoc-crm.org/cidoc-crm/P140i_was_attributed_by",
-                    "sortorder": 0,
+                    "sortorder": 1,
                     "sourcebranchpublication_id": null
                 },
                 {
@@ -882,30 +822,7 @@
                     "nodeid": "4dd2e092-d786-11ee-a7d3-080027b7463b",
                     "ontologyclass": "http://www.cidoc-crm.org/cidoc-crm/E50_Date",
                     "parentproperty": "http://www.cidoc-crm.org/cidoc-crm/P1_is_identified_by",
-                    "sortorder": 0,
-                    "sourcebranchpublication_id": null
-                },
-                {
-                    "alias": "copyright",
-                    "config": {
-                        "en": ""
-                    },
-                    "datatype": "string",
-                    "description": null,
-                    "exportable": true,
-                    "fieldname": "copyright",
-                    "graph_id": "82efcd14-82db-11ec-b8e6-5254008afee6",
-                    "hascustomalias": false,
-                    "is_collector": false,
-                    "isrequired": false,
-                    "issearchable": true,
-                    "istopnode": false,
-                    "name": "Copyright",
-                    "nodegroup_id": "4dd2d7f0-d786-11ee-a7d3-080027b7463b",
-                    "nodeid": "4dd2e1aa-d786-11ee-a7d3-080027b7463b",
-                    "ontologyclass": "http://www.cidoc-crm.org/cidoc-crm/E73_Information_Object",
-                    "parentproperty": "http://www.cidoc-crm.org/cidoc-crm/P128_carries",
-                    "sortorder": 4,
+                    "sortorder": 2,
                     "sourcebranchpublication_id": null
                 },
                 {
@@ -1017,7 +934,7 @@
                     "nodeid": "a7a473b0-83be-11ec-a0d2-5254008afee6",
                     "ontologyclass": "http://www.cidoc-crm.org/cidoc-crm/E84_Information_Carrier",
                     "parentproperty": "http://www.cidoc-crm.org/cidoc-crm/P62i_is_depicted_by",
-                    "sortorder": 3,
+                    "sortorder": 0,
                     "sourcebranchpublication_id": null
                 },
                 {
@@ -1038,7 +955,7 @@
                     "nodeid": "ac37b2f4-82db-11ec-96d0-5254008afee6",
                     "ontologyclass": "http://www.cidoc-crm.org/cidoc-crm/E21_Person",
                     "parentproperty": "http://www.cidoc-crm.org/cidoc-crm/P11_had_participant",
-                    "sortorder": 2,
+                    "sortorder": 0,
                     "sourcebranchpublication_id": null
                 },
                 {
@@ -1155,8 +1072,8 @@
             "publication": {
                 "graph_id": "82efcd14-82db-11ec-b8e6-5254008afee6",
                 "notes": null,
-                "publicationid": "769894e0-d786-11ee-baff-080027b7463b",
-                "published_time": "2024-02-29T22:45:01.036"
+                "publicationid": "4374eda0-dff8-11ee-b6d7-080027b7463b",
+                "published_time": "2024-03-11T17:39:47.168"
             },
             "relatable_resource_model_ids": [],
             "resource_2_resource_constraints": [],
@@ -1189,7 +1106,7 @@
         }
     ],
     "metadata": {
-        "db": "PostgreSQL 15.3 on x86_64-pc-linux-gnu, compiled by gcc (GCC) 11.3.1 20221121 (Red Hat 11.3.1-4), 64-bit",
+        "db": "PostgreSQL 16.0 on x86_64-pc-linux-gnu, compiled by gcc (GCC) 11.3.1 20221121 (Red Hat 11.3.1-4), 64-bit",
         "git hash": "9975977532 2024-02-07 12:28:09 -0800",
         "os": "Linux",
         "os version": "5.14.0-333.el9.x86_64"
