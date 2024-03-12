@@ -27,7 +27,7 @@
                         "en": "Communications Log"
                     },
                     "nodegroup_id": "d791486a-9dc5-11ed-add1-5254004d77d3",
-                    "sortorder": 8,
+                    "sortorder": 7,
                     "visible": true
                 },
                 {
@@ -83,7 +83,7 @@
                         "en": "Fossil Impact Assessment Process"
                     },
                     "nodegroup_id": "072aab9a-a341-11ed-8c6b-5254004d77d3",
-                    "sortorder": 5,
+                    "sortorder": 4,
                     "visible": true
                 },
                 {
@@ -110,7 +110,7 @@
                         "en": "Chance Find Protocol"
                     },
                     "nodegroup_id": "4df11356-9dcf-11ed-add1-5254004d77d3",
-                    "sortorder": 6,
+                    "sortorder": 5,
                     "visible": true
                 },
                 {
@@ -274,7 +274,34 @@
                         "en": "Impact Mitigation Process"
                     },
                     "nodegroup_id": "333303da-c372-11ed-9dd3-5254004d77d3",
-                    "sortorder": 7,
+                    "sortorder": 6,
+                    "visible": true
+                },
+                {
+                    "active": true,
+                    "cardid": "60fe8771-b711-4f1b-8371-47823c778550",
+                    "component_id": "f05e4d3a-53c1-11e8-b0ea-784f435179ea",
+                    "config": null,
+                    "constraints": [],
+                    "cssclass": null,
+                    "description": null,
+                    "graph_id": "2aa724d1-ffd3-4823-8ff1-15a385b9a407",
+                    "helpenabled": false,
+                    "helptext": {
+                        "en": ""
+                    },
+                    "helptitle": {
+                        "en": ""
+                    },
+                    "instructions": {
+                        "en": ""
+                    },
+                    "is_editable": true,
+                    "name": {
+                        "en": "SAP Collection Events"
+                    },
+                    "nodegroup_id": "9713b88a-e07d-11ee-849a-080027b7463b",
+                    "sortorder": null,
                     "visible": true
                 },
                 {
@@ -328,7 +355,7 @@
                         "en": "Site Assessment Process"
                     },
                     "nodegroup_id": "a48e1732-c371-11ed-bb65-5254004d77d3",
-                    "sortorder": 4,
+                    "sortorder": 8,
                     "visible": true
                 },
                 {
@@ -446,6 +473,33 @@
                     },
                     "nodegroup_id": "5dfe07ea-9dc0-11ed-82b6-5254004d77d3",
                     "sortorder": 0,
+                    "visible": true
+                },
+                {
+                    "active": true,
+                    "cardid": "a2c2e72d-daab-4d9a-a3be-e4f57ed769f6",
+                    "component_id": "f05e4d3a-53c1-11e8-b0ea-784f435179ea",
+                    "config": null,
+                    "constraints": [],
+                    "cssclass": null,
+                    "description": null,
+                    "graph_id": "2aa724d1-ffd3-4823-8ff1-15a385b9a407",
+                    "helpenabled": false,
+                    "helptext": {
+                        "en": ""
+                    },
+                    "helptitle": {
+                        "en": ""
+                    },
+                    "instructions": {
+                        "en": ""
+                    },
+                    "is_editable": true,
+                    "name": {
+                        "en": "IMP Collection Events"
+                    },
+                    "nodegroup_id": "01af7486-e07e-11ee-a893-080027b7463b",
+                    "sortorder": null,
                     "visible": true
                 },
                 {
@@ -721,6 +775,27 @@
             ],
             "cards_x_nodes_x_widgets": [
                 {
+                    "card_id": "60fe8771-b711-4f1b-8371-47823c778550",
+                    "config": {
+                        "defaultResourceInstance": [],
+                        "i18n_properties": [
+                            "placeholder"
+                        ],
+                        "label": "Collection Events",
+                        "placeholder": {
+                            "en": ""
+                        }
+                    },
+                    "id": "021be89d-5456-4ad2-a31a-46123bf52813",
+                    "label": {
+                        "en": "Collection Events"
+                    },
+                    "node_id": "9713b88a-e07d-11ee-849a-080027b7463b",
+                    "sortorder": null,
+                    "visible": true,
+                    "widget_id": "ff3c400a-76ec-11e7-a793-784f435179ea"
+                },
+                {
                     "card_id": "0241361a-c373-11ed-af52-5254004d77d3",
                     "config": {
                         "defaultValue": {
@@ -906,6 +981,28 @@
                     },
                     "node_id": "bb88875a-a95f-11ed-ab02-5254004d77d3",
                     "sortorder": 4,
+                    "visible": true,
+                    "widget_id": "10000000-0000-0000-0000-000000000002"
+                },
+                {
+                    "card_id": "dbb0dc26-a360-11ed-ae42-5254004d77d3",
+                    "config": {
+                        "defaultValue": "",
+                        "i18n_properties": [
+                            "placeholder"
+                        ],
+                        "label": "FIA Fossil Repository Agreement",
+                        "options": [],
+                        "placeholder": {
+                            "en": "Select an option"
+                        }
+                    },
+                    "id": "1aaa8c9b-d4c8-4903-87c2-3f4202029caa",
+                    "label": {
+                        "en": "FIA Fossil Repository Agreement"
+                    },
+                    "node_id": "6cf03836-e07c-11ee-8861-080027b7463b",
+                    "sortorder": 2,
                     "visible": true,
                     "widget_id": "10000000-0000-0000-0000-000000000002"
                 },
@@ -1281,6 +1378,53 @@
                     "widget_id": "10000000-0000-0000-0000-000000000005"
                 },
                 {
+                    "card_id": "dbb0dc26-a360-11ed-ae42-5254004d77d3",
+                    "config": {
+                        "defaultValue": "",
+                        "i18n_properties": [
+                            "placeholder"
+                        ],
+                        "label": "FIA Fossil Repository Agreement",
+                        "options": [
+                            {
+                                "children": [],
+                                "collector": "",
+                                "conceptid": "e7b2c21f-315f-4236-8ab0-f93e04bb8bc6",
+                                "id": "c0820db1-30c1-4b0f-9779-756526395899",
+                                "sortorder": "",
+                                "text": "in place"
+                            },
+                            {
+                                "children": [],
+                                "collector": "",
+                                "conceptid": "711415c6-b073-4090-b4e7-6e73d8c970d2",
+                                "id": "247675d1-ef85-4e81-9d7b-30ea4163e3db",
+                                "sortorder": "",
+                                "text": "in progress"
+                            },
+                            {
+                                "children": [],
+                                "collector": "",
+                                "conceptid": "db929206-173b-4aa3-828e-ba46bd994e52",
+                                "id": "639f5a40-cd22-4b36-98b5-2c90a0eee308",
+                                "sortorder": "",
+                                "text": "not required"
+                            }
+                        ],
+                        "placeholder": {
+                            "en": "Select an option"
+                        }
+                    },
+                    "id": "3e75a919-32ab-41ef-894b-b01ca53ab06d",
+                    "label": {
+                        "en": "FIA Fossil Repository Agreement"
+                    },
+                    "node_id": "6cf03836-e07c-11ee-8861-080027b7463b",
+                    "sortorder": 2,
+                    "visible": true,
+                    "widget_id": "10000000-0000-0000-0000-000000000009"
+                },
+                {
                     "card_id": "01071c17-58bb-4718-a62e-1eb9a2418dcd",
                     "config": {
                         "defaultValue": "",
@@ -1476,6 +1620,27 @@
                     "sortorder": 6,
                     "visible": true,
                     "widget_id": "10000000-0000-0000-0000-000000000005"
+                },
+                {
+                    "card_id": "a2c2e72d-daab-4d9a-a3be-e4f57ed769f6",
+                    "config": {
+                        "defaultResourceInstance": [],
+                        "i18n_properties": [
+                            "placeholder"
+                        ],
+                        "label": "Collection Events",
+                        "placeholder": {
+                            "en": ""
+                        }
+                    },
+                    "id": "5d4775b5-eee8-4008-9ef3-6fdbc8ab6ed9",
+                    "label": {
+                        "en": "Collection Events"
+                    },
+                    "node_id": "01af7486-e07e-11ee-a893-080027b7463b",
+                    "sortorder": null,
+                    "visible": true,
+                    "widget_id": "ff3c400a-76ec-11e7-a793-784f435179ea"
                 },
                 {
                     "card_id": "3b016d40-d785-11ee-b1e5-080027b7463b",
@@ -2759,7 +2924,7 @@
                         "en": "FMO Response"
                     },
                     "node_id": "dbb0e91e-a360-11ed-ae42-5254004d77d3",
-                    "sortorder": 3,
+                    "sortorder": 4,
                     "visible": true,
                     "widget_id": "10000000-0000-0000-0000-000000000005"
                 },
@@ -2788,7 +2953,7 @@
                         "en": "Internal Notes"
                     },
                     "node_id": "dbb0eaa4-a360-11ed-ae42-5254004d77d3",
-                    "sortorder": 2,
+                    "sortorder": 3,
                     "visible": true,
                     "widget_id": "10000000-0000-0000-0000-000000000005"
                 },
@@ -3744,6 +3909,15 @@
                 },
                 {
                     "description": null,
+                    "domainnode_id": "dbb0d7bc-a360-11ed-ae42-5254004d77d3",
+                    "edgeid": "6d27fbc3-24db-46b8-923c-7f307a3919c6",
+                    "graph_id": "2aa724d1-ffd3-4823-8ff1-15a385b9a407",
+                    "name": null,
+                    "ontologyproperty": "http://www.cidoc-crm.org/cidoc-crm/P9_consists_of",
+                    "rangenode_id": "6cf03836-e07c-11ee-8861-080027b7463b"
+                },
+                {
+                    "description": null,
                     "domainnode_id": "6d2bb8fc-c372-11ed-aa09-5254004d77d3",
                     "edgeid": "6d2c02ee-c372-11ed-aa09-5254004d77d3",
                     "graph_id": "2aa724d1-ffd3-4823-8ff1-15a385b9a407",
@@ -4059,6 +4233,15 @@
                 },
                 {
                     "description": null,
+                    "domainnode_id": "333303da-c372-11ed-9dd3-5254004d77d3",
+                    "edgeid": "a9e2f877-4d15-423a-b0d8-61074ae8675e",
+                    "graph_id": "2aa724d1-ffd3-4823-8ff1-15a385b9a407",
+                    "name": null,
+                    "ontologyproperty": "http://www.cidoc-crm.org/cidoc-crm/P117i_includes",
+                    "rangenode_id": "01af7486-e07e-11ee-a893-080027b7463b"
+                },
+                {
+                    "description": null,
                     "domainnode_id": "416e539a-a357-11ed-932e-5254004d77d3",
                     "edgeid": "adc07b0d-4533-4c11-8421-6bc49c41313a",
                     "graph_id": "2aa724d1-ffd3-4823-8ff1-15a385b9a407",
@@ -4338,6 +4521,15 @@
                 },
                 {
                     "description": null,
+                    "domainnode_id": "a48e1732-c371-11ed-bb65-5254004d77d3",
+                    "edgeid": "ed16de8f-6184-4d2c-9154-d0c35d2335a4",
+                    "graph_id": "2aa724d1-ffd3-4823-8ff1-15a385b9a407",
+                    "name": null,
+                    "ontologyproperty": "http://www.cidoc-crm.org/cidoc-crm/P117i_includes",
+                    "rangenode_id": "9713b88a-e07d-11ee-849a-080027b7463b"
+                },
+                {
+                    "description": null,
                     "domainnode_id": "5dfe07ea-9dc0-11ed-82b6-5254004d77d3",
                     "edgeid": "fd0b4649-490b-4017-8c21-53718e09fae9",
                     "graph_id": "2aa724d1-ffd3-4823-8ff1-15a385b9a407",
@@ -4478,7 +4670,7 @@
                     },
                     "function_id": "60000000-0000-0000-0000-000000001001",
                     "graph_id": "2aa724d1-ffd3-4823-8ff1-15a385b9a407",
-                    "id": "1bed450a-775c-4e14-bfa8-a53a716fc98c"
+                    "id": "4649ae4a-c852-4b75-8307-10a6c7d1b869"
                 }
             ],
             "graphid": "2aa724d1-ffd3-4823-8ff1-15a385b9a407",
@@ -4490,6 +4682,12 @@
                 "en": "Industry Project Assessment"
             },
             "nodegroups": [
+                {
+                    "cardinality": "1",
+                    "legacygroupid": null,
+                    "nodegroupid": "01af7486-e07e-11ee-a893-080027b7463b",
+                    "parentnodegroup_id": "333303da-c372-11ed-9dd3-5254004d77d3"
+                },
                 {
                     "cardinality": "1",
                     "legacygroupid": null,
@@ -4555,6 +4753,12 @@
                     "legacygroupid": null,
                     "nodegroupid": "91e50dd8-9dca-11ed-9ef3-5254004d77d3",
                     "parentnodegroup_id": null
+                },
+                {
+                    "cardinality": "1",
+                    "legacygroupid": null,
+                    "nodegroupid": "9713b88a-e07d-11ee-849a-080027b7463b",
+                    "parentnodegroup_id": "a48e1732-c371-11ed-bb65-5254004d77d3"
                 },
                 {
                     "cardinality": "1",
@@ -4648,6 +4852,36 @@
                 }
             ],
             "nodes": [
+                {
+                    "alias": "imp_collection_events",
+                    "config": {
+                        "graphs": [
+                            {
+                                "graphid": "df3ee1ae-9c1c-11ec-964d-5254008afee6",
+                                "name": "Fossil Collection Event"
+                            }
+                        ],
+                        "searchDsl": "",
+                        "searchString": ""
+                    },
+                    "datatype": "resource-instance-list",
+                    "description": null,
+                    "exportable": false,
+                    "fieldname": null,
+                    "graph_id": "2aa724d1-ffd3-4823-8ff1-15a385b9a407",
+                    "hascustomalias": false,
+                    "is_collector": true,
+                    "isrequired": false,
+                    "issearchable": true,
+                    "istopnode": false,
+                    "name": "IMP Collection Events",
+                    "nodegroup_id": "01af7486-e07e-11ee-a893-080027b7463b",
+                    "nodeid": "01af7486-e07e-11ee-a893-080027b7463b",
+                    "ontologyclass": "http://www.cidoc-crm.org/cidoc-crm/E5_Event",
+                    "parentproperty": "http://www.cidoc-crm.org/cidoc-crm/P117i_includes",
+                    "sortorder": 0,
+                    "sourcebranchpublication_id": null
+                },
                 {
                     "alias": "psr_paleo_consultant",
                     "config": {
@@ -4800,7 +5034,7 @@
                     "nodeid": "024132be-c373-11ed-af52-5254004d77d3",
                     "ontologyclass": "http://www.cidoc-crm.org/cidoc-crm/E7_Activity",
                     "parentproperty": "http://www.cidoc-crm.org/cidoc-crm/P20_had_specific_purpose",
-                    "sortorder": 0,
+                    "sortorder": 1,
                     "sourcebranchpublication_id": null
                 },
                 {
@@ -5336,7 +5570,7 @@
                     "nodeid": "333303da-c372-11ed-9dd3-5254004d77d3",
                     "ontologyclass": "http://www.cidoc-crm.org/cidoc-crm/E7_Activity",
                     "parentproperty": "http://www.cidoc-crm.org/cidoc-crm/P117_occurs_during",
-                    "sortorder": 0,
+                    "sortorder": 7,
                     "sourcebranchpublication_id": null
                 },
                 {
@@ -5757,7 +5991,7 @@
                     "nodeid": "4df11356-9dcf-11ed-add1-5254004d77d3",
                     "ontologyclass": "http://www.cidoc-crm.org/cidoc-crm/E7_Activity",
                     "parentproperty": "http://www.cidoc-crm.org/cidoc-crm/P9_consists_of",
-                    "sortorder": 0,
+                    "sortorder": 3,
                     "sourcebranchpublication_id": null
                 },
                 {
@@ -5872,7 +6106,7 @@
                     "nodeid": "5dfe07ea-9dc0-11ed-82b6-5254004d77d3",
                     "ontologyclass": "http://www.cidoc-crm.org/cidoc-crm/E13_Attribute_Assignment",
                     "parentproperty": "http://www.cidoc-crm.org/cidoc-crm/P9_consists_of",
-                    "sortorder": 0,
+                    "sortorder": 1,
                     "sourcebranchpublication_id": null
                 },
                 {
@@ -5941,7 +6175,7 @@
                     "nodeid": "67997a7e-9dc4-11ed-9ef3-5254004d77d3",
                     "ontologyclass": "http://www.cidoc-crm.org/cidoc-crm/E11_Modification",
                     "parentproperty": "http://www.cidoc-crm.org/cidoc-crm/P10_falls_within",
-                    "sortorder": 0,
+                    "sortorder": 5,
                     "sourcebranchpublication_id": null
                 },
                 {
@@ -6061,6 +6295,29 @@
                     "nodeid": "694922ec-9dc0-11ed-8d8e-5254004d77d3",
                     "ontologyclass": "http://www.cidoc-crm.org/cidoc-crm/E39_Actor",
                     "parentproperty": "http://www.cidoc-crm.org/cidoc-crm/P11_had_participant",
+                    "sortorder": 0,
+                    "sourcebranchpublication_id": null
+                },
+                {
+                    "alias": "fia_fossil_repository_agreement",
+                    "config": {
+                        "rdmCollection": "37eccecb-dac0-435c-85a3-b1163c4a4cfb"
+                    },
+                    "datatype": "concept",
+                    "description": null,
+                    "exportable": false,
+                    "fieldname": null,
+                    "graph_id": "2aa724d1-ffd3-4823-8ff1-15a385b9a407",
+                    "hascustomalias": false,
+                    "is_collector": false,
+                    "isrequired": false,
+                    "issearchable": true,
+                    "istopnode": false,
+                    "name": "FIA Fossil Repository Agreement",
+                    "nodegroup_id": "dbb0d7bc-a360-11ed-ae42-5254004d77d3",
+                    "nodeid": "6cf03836-e07c-11ee-8861-080027b7463b",
+                    "ontologyclass": "http://www.cidoc-crm.org/cidoc-crm/E14_Condition_Assessment",
+                    "parentproperty": "http://www.cidoc-crm.org/cidoc-crm/P9_consists_of",
                     "sortorder": 0,
                     "sourcebranchpublication_id": null
                 },
@@ -6561,7 +6818,7 @@
                     "nodeid": "7e4cac36-c372-11ed-914a-5254004d77d3",
                     "ontologyclass": "http://www.cidoc-crm.org/cidoc-crm/E89_Propositional_Object",
                     "parentproperty": "http://www.cidoc-crm.org/cidoc-crm/P17_was_motivated_by",
-                    "sortorder": 0,
+                    "sortorder": 2,
                     "sourcebranchpublication_id": null
                 },
                 {
@@ -7081,6 +7338,40 @@
                     "nodeid": "91e50dd8-9dca-11ed-9ef3-5254004d77d3",
                     "ontologyclass": "http://www.cidoc-crm.org/cidoc-crm/E7_Activity",
                     "parentproperty": "http://www.cidoc-crm.org/cidoc-crm/P9_consists_of",
+                    "sortorder": 4,
+                    "sourcebranchpublication_id": null
+                },
+                {
+                    "alias": "sap_collection_events",
+                    "config": {
+                        "graphs": [
+                            {
+                                "graphid": "df3ee1ae-9c1c-11ec-964d-5254008afee6",
+                                "inverseRelationshipConcept": "ac41d9be-79db-4256-b368-2f4559cfbe55",
+                                "name": "Fossil Collection Event",
+                                "relationshipCollection": "00000000-0000-0000-0000-000000000005",
+                                "relationshipConcept": "ac41d9be-79db-4256-b368-2f4559cfbe55",
+                                "useOntologyRelationship": false
+                            }
+                        ],
+                        "searchDsl": "",
+                        "searchString": ""
+                    },
+                    "datatype": "resource-instance-list",
+                    "description": null,
+                    "exportable": false,
+                    "fieldname": null,
+                    "graph_id": "2aa724d1-ffd3-4823-8ff1-15a385b9a407",
+                    "hascustomalias": false,
+                    "is_collector": true,
+                    "isrequired": false,
+                    "issearchable": true,
+                    "istopnode": false,
+                    "name": "SAP Collection Events",
+                    "nodegroup_id": "9713b88a-e07d-11ee-849a-080027b7463b",
+                    "nodeid": "9713b88a-e07d-11ee-849a-080027b7463b",
+                    "ontologyclass": "http://www.cidoc-crm.org/cidoc-crm/E5_Event",
+                    "parentproperty": "http://www.cidoc-crm.org/cidoc-crm/P117i_includes",
                     "sortorder": 0,
                     "sourcebranchpublication_id": null
                 },
@@ -7127,7 +7418,7 @@
                     "nodeid": "9cf8ce58-9dcf-11ed-82b6-5254004d77d3",
                     "ontologyclass": "http://www.cidoc-crm.org/cidoc-crm/E7_Activity",
                     "parentproperty": "http://www.cidoc-crm.org/cidoc-crm/P9_consists_of",
-                    "sortorder": 0,
+                    "sortorder": 6,
                     "sourcebranchpublication_id": null
                 },
                 {
@@ -7173,7 +7464,7 @@
                     "nodeid": "a48e1732-c371-11ed-bb65-5254004d77d3",
                     "ontologyclass": "http://www.cidoc-crm.org/cidoc-crm/E7_Activity",
                     "parentproperty": "http://www.cidoc-crm.org/cidoc-crm/P117i_includes",
-                    "sortorder": 0,
+                    "sortorder": 8,
                     "sourcebranchpublication_id": null
                 },
                 {
@@ -7593,7 +7884,7 @@
                     "nodeid": "d791486a-9dc5-11ed-add1-5254004d77d3",
                     "ontologyclass": "http://www.cidoc-crm.org/cidoc-crm/E5_Event",
                     "parentproperty": "http://www.cidoc-crm.org/cidoc-crm/P117_occurs_during",
-                    "sortorder": 0,
+                    "sortorder": 2,
                     "sourcebranchpublication_id": null
                 },
                 {
@@ -8865,8 +9156,8 @@
             "publication": {
                 "graph_id": "2aa724d1-ffd3-4823-8ff1-15a385b9a407",
                 "notes": null,
-                "publicationid": "304c8718-e004-11ee-bb3e-080027b7463b",
-                "published_time": "2024-03-11T19:05:08.987"
+                "publicationid": "de2e2100-e07e-11ee-b1db-080027b7463b",
+                "published_time": "2024-03-12T09:43:19.313"
             },
             "relatable_resource_model_ids": [],
             "resource_2_resource_constraints": [],
