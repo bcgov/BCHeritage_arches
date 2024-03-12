@@ -22,11 +22,11 @@
                         "en": ""
                     },
                     "instructions": {
-                        "en": "Enter the resource name and its respective type."
+                        "en": "Enter the area name, description and boundary rationale"
                     },
-                    "is_editable": false,
+                    "is_editable": true,
                     "name": {
-                        "en": "Name"
+                        "en": "Area Name and Description"
                     },
                     "nodegroup_id": "49b837b0-10c7-11ec-81af-5254008afee6",
                     "sortorder": 0,
@@ -51,41 +51,12 @@
                     "instructions": {
                         "en": ""
                     },
-                    "is_editable": false,
+                    "is_editable": true,
                     "name": {
                         "en": "Potential Ranking"
                     },
                     "nodegroup_id": "69230292-10c7-11ec-8a7a-5254008afee6",
                     "sortorder": 3,
-                    "visible": true
-                },
-                {
-                    "active": true,
-                    "cardid": "7febf042-10c7-11ec-bbeb-5254008afee6",
-                    "component_id": "f05e4d3a-53c1-11e8-b0ea-784f435179ea",
-                    "config": null,
-                    "constraints": [],
-                    "cssclass": "",
-                    "description": {
-                        "en": "Generic branch for capturing free-form written descriptive information.\nIntended to be evolution from v3 description branch from HIP 3. Created semantic description node with description string and description type hanging off of it. Description (semantic node) becomes a grouping node (type and string).  \n\nThis branch meets technical business rules for CRM compliance but CRM experts have said that this is an inappropriate implementation of E62.\n\nConnects to all resources with P140i"
-                    },
-                    "graph_id": "4d6c9226-10c6-11ec-9a94-5254008afee6",
-                    "helpenabled": false,
-                    "helptext": {
-                        "en": ""
-                    },
-                    "helptitle": {
-                        "en": ""
-                    },
-                    "instructions": {
-                        "en": "Enter a description and description type for the resource."
-                    },
-                    "is_editable": false,
-                    "name": {
-                        "en": "Description"
-                    },
-                    "nodegroup_id": "7febebec-10c7-11ec-bbeb-5254008afee6",
-                    "sortorder": 1,
                     "visible": true
                 },
                 {
@@ -109,7 +80,7 @@
                     "instructions": {
                         "en": ""
                     },
-                    "is_editable": false,
+                    "is_editable": true,
                     "name": {
                         "en": "Area Boundary"
                     },
@@ -124,8 +95,8 @@
                     "config": {
                         "basemap": "streets",
                         "bearing": 0,
-                        "centerX": -125.2111215300115,
-                        "centerY": 54.5952920093056,
+                        "centerX": "-125.8041191652735",
+                        "centerY": "54.53909267900477",
                         "defaultValue": "",
                         "defaultValueType": "",
                         "featureColor": "#FF0000",
@@ -155,38 +126,45 @@
                         "overlayOpacity": 0,
                         "pitch": 0,
                         "rerender": true,
-                        "zoom": 0
+                        "zoom": "4.020978191846662"
                     },
                     "id": "0131b96e-aba0-4199-bce8-f6d1c4c4a4c9",
                     "label": {
                         "en": "Area Boundary"
                     },
                     "node_id": "c6651266-10c6-11ec-adef-5254008afee6",
-                    "sortorder": null,
+                    "sortorder": 0,
                     "visible": true,
                     "widget_id": "10000000-0000-0000-0000-000000000007"
                 },
                 {
                     "card_id": "49b83ea4-10c7-11ec-81af-5254008afee6",
                     "config": {
-                        "defaultValue": "",
+                        "defaultValue": {
+                            "en": {
+                                "direction": "ltr",
+                                "value": ""
+                            }
+                        },
                         "i18n_properties": [
                             "placeholder"
                         ],
-                        "label": "Name Type",
-                        "options": [],
+                        "label": "Notes",
+                        "maxLength": null,
                         "placeholder": {
-                            "en": "Select an option"
-                        }
+                            "en": "Enter text"
+                        },
+                        "uneditable": false,
+                        "width": "100%%"
                     },
-                    "id": "a732010a-10c7-11ec-adef-5254008afee6",
+                    "id": "40aca65e-b54b-4e16-bb74-e5d4bb115017",
                     "label": {
-                        "en": "Name Type"
+                        "en": "Notes"
                     },
-                    "node_id": "49b8408e-10c7-11ec-81af-5254008afee6",
-                    "sortorder": 0,
+                    "node_id": "4aaea5a6-e00d-11ee-a2a0-080027b7463b",
+                    "sortorder": 2,
                     "visible": true,
-                    "widget_id": "10000000-0000-0000-0000-000000000002"
+                    "widget_id": "10000000-0000-0000-0000-000000000005"
                 },
                 {
                     "card_id": "49b83ea4-10c7-11ec-81af-5254008afee6",
@@ -213,9 +191,38 @@
                         "en": "Area Name"
                     },
                     "node_id": "49b837b0-10c7-11ec-81af-5254008afee6",
-                    "sortorder": 1,
+                    "sortorder": 0,
                     "visible": true,
                     "widget_id": "10000000-0000-0000-0000-000000000001"
+                },
+                {
+                    "card_id": "49b83ea4-10c7-11ec-81af-5254008afee6",
+                    "config": {
+                        "defaultValue": {
+                            "en": {
+                                "direction": "ltr",
+                                "value": ""
+                            }
+                        },
+                        "i18n_properties": [
+                            "placeholder"
+                        ],
+                        "label": "Description",
+                        "maxLength": null,
+                        "placeholder": {
+                            "en": ""
+                        },
+                        "uneditable": false,
+                        "width": "100%"
+                    },
+                    "id": "b170f4c5-dd5e-476c-9e03-a5a2710696f7",
+                    "label": {
+                        "en": "Description"
+                    },
+                    "node_id": "c0ee06a4-e00c-11ee-a2a0-080027b7463b",
+                    "sortorder": 1,
+                    "visible": true,
+                    "widget_id": "10000000-0000-0000-0000-000000000005"
                 }
             ],
             "color": "rgba(215,48,39,1)",
@@ -229,11 +236,20 @@
                 {
                     "description": null,
                     "domainnode_id": "49b837b0-10c7-11ec-81af-5254008afee6",
-                    "edgeid": "49b84994-10c7-11ec-81af-5254008afee6",
+                    "edgeid": "302e7b02-83d2-4bec-9b7d-1d9e12bbdfa9",
                     "graph_id": "4d6c9226-10c6-11ec-9a94-5254008afee6",
                     "name": null,
-                    "ontologyproperty": "http://www.cidoc-crm.org/cidoc-crm/P2_has_type",
-                    "rangenode_id": "49b8408e-10c7-11ec-81af-5254008afee6"
+                    "ontologyproperty": "http://www.ics.forth.gr/isl/CRMdig/L54i_is_same-as",
+                    "rangenode_id": "c0ee06a4-e00c-11ee-a2a0-080027b7463b"
+                },
+                {
+                    "description": null,
+                    "domainnode_id": "49b837b0-10c7-11ec-81af-5254008afee6",
+                    "edgeid": "48cfa0b2-e34d-4da6-83e7-277dfb01fd56",
+                    "graph_id": "4d6c9226-10c6-11ec-9a94-5254008afee6",
+                    "name": null,
+                    "ontologyproperty": "http://www.cidoc-crm.org/cidoc-crm/P129i_is_subject_of",
+                    "rangenode_id": "4aaea5a6-e00d-11ee-a2a0-080027b7463b"
                 },
                 {
                     "description": null,
@@ -252,33 +268,6 @@
                     "name": null,
                     "ontologyproperty": "http://www.cidoc-crm.org/cidoc-crm/P140i_was_attributed_by",
                     "rangenode_id": "69230292-10c7-11ec-8a7a-5254008afee6"
-                },
-                {
-                    "description": null,
-                    "domainnode_id": "7febebec-10c7-11ec-bbeb-5254008afee6",
-                    "edgeid": "7fec0276-10c7-11ec-bbeb-5254008afee6",
-                    "graph_id": "4d6c9226-10c6-11ec-9a94-5254008afee6",
-                    "name": null,
-                    "ontologyproperty": "http://www.cidoc-crm.org/cidoc-crm/P2_has_type",
-                    "rangenode_id": "7febfe20-10c7-11ec-bbeb-5254008afee6"
-                },
-                {
-                    "description": null,
-                    "domainnode_id": "7febebec-10c7-11ec-bbeb-5254008afee6",
-                    "edgeid": "7fec03d4-10c7-11ec-bbeb-5254008afee6",
-                    "graph_id": "4d6c9226-10c6-11ec-9a94-5254008afee6",
-                    "name": null,
-                    "ontologyproperty": "http://www.cidoc-crm.org/cidoc-crm/P3_has_note",
-                    "rangenode_id": "7febfbb4-10c7-11ec-bbeb-5254008afee6"
-                },
-                {
-                    "description": null,
-                    "domainnode_id": "4d6c8e98-10c6-11ec-9a94-5254008afee6",
-                    "edgeid": "7fec05aa-10c7-11ec-bbeb-5254008afee6",
-                    "graph_id": "4d6c9226-10c6-11ec-9a94-5254008afee6",
-                    "name": null,
-                    "ontologyproperty": "http://www.cidoc-crm.org/cidoc-crm/P8i_witnessed",
-                    "rangenode_id": "7febebec-10c7-11ec-bbeb-5254008afee6"
                 },
                 {
                     "description": null,
@@ -327,12 +316,12 @@
                     },
                     "function_id": "60000000-0000-0000-0000-000000001001",
                     "graph_id": "4d6c9226-10c6-11ec-9a94-5254008afee6",
-                    "id": "a1776294-aef7-4590-b2b5-a335ef2311b1"
+                    "id": "be440c73-acf6-42f9-ab54-3ef4b27cdb7e"
                 }
             ],
             "graphid": "4d6c9226-10c6-11ec-9a94-5254008afee6",
             "iconclass": "fa fa-sitemap",
-            "is_editable": false,
+            "is_editable": true,
             "isresource": true,
             "jsonldcontext": null,
             "name": {
@@ -349,12 +338,6 @@
                     "cardinality": "1",
                     "legacygroupid": null,
                     "nodegroupid": "69230292-10c7-11ec-8a7a-5254008afee6",
-                    "parentnodegroup_id": null
-                },
-                {
-                    "cardinality": "n",
-                    "legacygroupid": null,
-                    "nodegroupid": "7febebec-10c7-11ec-bbeb-5254008afee6",
                     "parentnodegroup_id": null
                 },
                 {
@@ -387,25 +370,25 @@
                     "sourcebranchpublication_id": null
                 },
                 {
-                    "alias": "name_type",
+                    "alias": "notes",
                     "config": {
-                        "rdmCollection": "051b5950-2c1e-49ff-af0d-dfbaa971d2fa"
+                        "en": ""
                     },
-                    "datatype": "concept",
-                    "description": "Represents a single node in a graph",
+                    "datatype": "string",
+                    "description": null,
                     "exportable": false,
-                    "fieldname": "",
+                    "fieldname": null,
                     "graph_id": "4d6c9226-10c6-11ec-9a94-5254008afee6",
                     "hascustomalias": false,
                     "is_collector": false,
                     "isrequired": false,
                     "issearchable": true,
                     "istopnode": false,
-                    "name": "Name Type",
+                    "name": "Notes",
                     "nodegroup_id": "49b837b0-10c7-11ec-81af-5254008afee6",
-                    "nodeid": "49b8408e-10c7-11ec-81af-5254008afee6",
-                    "ontologyclass": "http://www.cidoc-crm.org/cidoc-crm/E55_Type",
-                    "parentproperty": "http://www.cidoc-crm.org/cidoc-crm/P2_has_type",
+                    "nodeid": "4aaea5a6-e00d-11ee-a2a0-080027b7463b",
+                    "ontologyclass": "http://www.ics.forth.gr/isl/CRMinf/I3_Inference_Logic",
+                    "parentproperty": "http://www.cidoc-crm.org/cidoc-crm/P129i_is_subject_of",
                     "sortorder": 0,
                     "sourcebranchpublication_id": null
                 },
@@ -452,35 +435,14 @@
                     "sourcebranchpublication_id": null
                 },
                 {
-                    "alias": "description_assignment",
-                    "config": {},
-                    "datatype": "semantic",
-                    "description": "Generic branch for capturing free-form written descriptive information.\nIntended to be evolution from v3 description branch from HIP 3. Created semantic description node with description string and description type hanging off of it. Description (semantic node) becomes a grouping node (type and string).  \n\nThis branch meets technical business rules for CRM compliance but CRM experts have said that this is an inappropriate implementation of E62.\n\nConnects to all resources with P140i",
-                    "exportable": false,
-                    "fieldname": "",
-                    "graph_id": "4d6c9226-10c6-11ec-9a94-5254008afee6",
-                    "hascustomalias": false,
-                    "is_collector": true,
-                    "isrequired": false,
-                    "issearchable": true,
-                    "istopnode": false,
-                    "name": "Description Assignment",
-                    "nodegroup_id": "7febebec-10c7-11ec-bbeb-5254008afee6",
-                    "nodeid": "7febebec-10c7-11ec-bbeb-5254008afee6",
-                    "ontologyclass": "http://www.cidoc-crm.org/cidoc-crm/E13_Attribute_Assignment",
-                    "parentproperty": "http://www.cidoc-crm.org/cidoc-crm/P8i_witnessed",
-                    "sortorder": 0,
-                    "sourcebranchpublication_id": null
-                },
-                {
-                    "alias": "description",
+                    "alias": "description_n1",
                     "config": {
                         "en": ""
                     },
                     "datatype": "string",
-                    "description": "Represents a single node in a graph",
+                    "description": null,
                     "exportable": false,
-                    "fieldname": "desc",
+                    "fieldname": null,
                     "graph_id": "4d6c9226-10c6-11ec-9a94-5254008afee6",
                     "hascustomalias": false,
                     "is_collector": false,
@@ -488,33 +450,10 @@
                     "issearchable": true,
                     "istopnode": false,
                     "name": "Description",
-                    "nodegroup_id": "7febebec-10c7-11ec-bbeb-5254008afee6",
-                    "nodeid": "7febfbb4-10c7-11ec-bbeb-5254008afee6",
-                    "ontologyclass": "http://www.cidoc-crm.org/cidoc-crm/E62_String",
-                    "parentproperty": "http://www.cidoc-crm.org/cidoc-crm/P3_has_note",
-                    "sortorder": 0,
-                    "sourcebranchpublication_id": null
-                },
-                {
-                    "alias": "description_type",
-                    "config": {
-                        "rdmCollection": null
-                    },
-                    "datatype": "concept",
-                    "description": "Represents a single node in a graph",
-                    "exportable": false,
-                    "fieldname": "",
-                    "graph_id": "4d6c9226-10c6-11ec-9a94-5254008afee6",
-                    "hascustomalias": false,
-                    "is_collector": false,
-                    "isrequired": false,
-                    "issearchable": true,
-                    "istopnode": false,
-                    "name": "Description Type",
-                    "nodegroup_id": "7febebec-10c7-11ec-bbeb-5254008afee6",
-                    "nodeid": "7febfe20-10c7-11ec-bbeb-5254008afee6",
-                    "ontologyclass": "http://www.cidoc-crm.org/cidoc-crm/E55_Type",
-                    "parentproperty": "http://www.cidoc-crm.org/cidoc-crm/P2_has_type",
+                    "nodegroup_id": "49b837b0-10c7-11ec-81af-5254008afee6",
+                    "nodeid": "c0ee06a4-e00c-11ee-a2a0-080027b7463b",
+                    "ontologyclass": "http://www.cidoc-crm.org/cidoc-crm/E53_Place",
+                    "parentproperty": "http://www.ics.forth.gr/isl/CRMdig/L54i_is_same-as",
                     "sortorder": 0,
                     "sourcebranchpublication_id": null
                 },
@@ -567,8 +506,8 @@
             "publication": {
                 "graph_id": "4d6c9226-10c6-11ec-9a94-5254008afee6",
                 "notes": null,
-                "publicationid": "fd7e9c44-9a18-11ee-83da-080027b7463b",
-                "published_time": "2023-12-13T18:37:41.789"
+                "publicationid": "498f7d66-e00e-11ee-9bb4-080027b7463b",
+                "published_time": "2024-03-11T20:17:26.336"
             },
             "relatable_resource_model_ids": [],
             "resource_2_resource_constraints": [],
@@ -601,8 +540,8 @@
         }
     ],
     "metadata": {
-        "db": "PostgreSQL 15.3 on x86_64-pc-linux-gnu, compiled by gcc (GCC) 11.3.1 20221121 (Red Hat 11.3.1-4), 64-bit",
-        "git hash": "878aec681 2023-11-20 12:09:49 -0800",
+        "db": "PostgreSQL 16.0 on x86_64-pc-linux-gnu, compiled by gcc (GCC) 11.3.1 20221121 (Red Hat 11.3.1-4), 64-bit",
+        "git hash": "9975977532 2024-02-07 12:28:09 -0800",
         "os": "Linux",
         "os version": "5.14.0-333.el9.x86_64"
     }
