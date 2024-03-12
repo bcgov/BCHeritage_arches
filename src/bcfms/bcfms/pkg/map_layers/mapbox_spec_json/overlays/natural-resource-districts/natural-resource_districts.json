@@ -1,0 +1,55 @@
+{
+  "name": "Natural Resource Districts",
+  "sources": {
+    "natural-resource-districts-source": {
+      "type": "vector",
+      "tiles": [
+        "/{ url_context_root }/bctileserver/geo/pub/WHSE_ADMIN_BOUNDARIES.ADM_NR_DISTRICTS_SPG/ows?service=WMS&request=GetMap&layers=pub:WHSE_ADMIN_BOUNDARIES.ADM_NR_DISTRICTS_SPG&styles=&format=pbf&transparent=true&version=1.1.1&height=512&width=512&srs=EPSG:3857&bbox={bbox-epsg-3857}"
+      ],
+      "tileSize": 512
+    }
+  },
+  "arches-metadata": {
+    "ispublic": false,
+    "addtomap": false,
+    "centerx": null,
+    "centery": null,
+    "icon": "fa fa-globe",
+    "isoverlay": true,
+    "legend": "<p><img alt=\"\" class=\"natural-resource-districts legend-line\" src=\"/{ url_context_root }/static/img/blank.png\" />Regional District Boundary</p>",
+    "searchonly": false,
+    "sortorder": 0,
+    "zoom": null
+  },
+  "layers": [
+    {
+      "id": "natural-resource-districts",
+      "type": "line",
+      "source": "natural-resource-districts-source",
+      "source-layer": "WHSE_ADMIN_BOUNDARIES.ADM_NR_DISTRICTS_SPG",
+      "minzoom": 0,
+      "maxzoom": 20,
+      "paint": {
+        "line-color": "rgba(0,0,0, 1)",
+        "line-width": 1.5,
+        "line-dasharray": [6,6,6,6]
+      }
+    },
+    {
+      "id": "natural-resource-districts-symbol",
+      "type": "symbol",
+      "source": "natural-resource-districts-source",
+      "source-layer": "WHSE_ADMIN_BOUNDARIES.ADM_NR_DISTRICTS_SPG",
+      "minzoom": 0,
+      "maxzoom": 20,
+      "layout": {
+        "text-field": "{DISTRICT_NAME}",
+        "text-size": 14,
+        "text-font": ["Open Sans Bold","Arial Unicode MS Bold"]
+      },
+      "paint": {
+        "text-color": "rgb(0, 0, 0)"
+      }
+    }
+  ]
+}
