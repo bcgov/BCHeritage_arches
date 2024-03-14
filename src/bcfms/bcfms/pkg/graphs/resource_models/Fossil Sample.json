@@ -22,7 +22,7 @@
                     "instructions": {
                         "en": ""
                     },
-                    "is_editable": false,
+                    "is_editable": true,
                     "name": {
                         "en": "Fossil Sample Notes"
                     },
@@ -78,7 +78,7 @@
                     "instructions": {
                         "en": ""
                     },
-                    "is_editable": false,
+                    "is_editable": true,
                     "name": {
                         "en": "Historical Data"
                     },
@@ -95,11 +95,11 @@
                     },
                     "constraints": [],
                     "cssclass": null,
-                    "description": "{\"en\": \"\"}",
+                    "description": "",
                     "graph_id": "7f2c2082-6c51-11ed-9b7d-5254004d77d3",
-                    "helpenabled": true,
+                    "helpenabled": false,
                     "helptext": {
-                        "en": "<p>Enter information relevant to each individual image. Select an image from the image list to edit.</p>\n\n<p><u>Primary Image</u></p>\n\n<p>Select one primary image from the image list for the site.</p>\n\n<p><u>Submit to CRHP</u></p>\n\n<p>Select up to three images from the image list to submit to the Canadian Register of Historic Places (CRHP).</p>\n\n<p><u>Image Type</u></p>\n\n<p>Select one of the following:</p>\n\n<p><strong>Historical - </strong>&nbsp;Historical images are images that were created in the contextual past and usually for a purpose other than documenting the historic place.</p>\n\n<p><strong>Contemporary - </strong>Contemporary images are images that have been created recently and generally for</p>\n\n<p><u>Image View</u></p>\n\n<p>Select the view that best describes the image. Either scroll through the options or start typing.</p>\n\n<p>You can select one of the high-level general descriptors (below) or a more specific view option.</p>\n\n<p><strong>Interior - </strong>Refers to an image that depicts the inside of a building, structure, or object that has interior and exterior spaces.</p>\n\n<p><strong>Exterior</strong> - Refers to an image that depicts the exterior of a building, structure, or object that has interior and exterior spaces.</p>\n\n<p><strong>Landscape</strong> - Refers to an image that depicts the visible features of an area and can include natural and/or built components.</p>\n\n<p>To further describe the image, you may select a sub-view option.</p>\n\n<p><strong>Aerial view - </strong>Refers to views achieved by creating the image from a high location such as a drone or aircraft.</p>\n\n<p><strong>Back view</strong> &ndash; Refers to depiction of the back of a subject such as the back fa&ccedil;ade of a building.</p>\n\n<p><strong>Close view</strong> &ndash; Refers to view where the emphasis is on the proximity of the subject as a whole.</p>\n\n<p><strong>Corner view</strong> &ndash; Refers to a view of a subject from (roughly) a &frac34; angle or directly out from a corner.</p>\n\n<p><strong>Detail view</strong> &ndash; Refers to an image containing a partial view that focuses on a particular piece of the whole.</p>\n\n<p><strong>Distant view</strong> &ndash; Refers to an image created at a distance, typically showing the overall layout, design, or plan.</p>\n\n<p><strong>Front view</strong> &ndash; Refers to an image depicting the front of a subject.</p>\n\n<p><strong>Left side view</strong> &ndash; Refers to an image depicting the left side of a subject, from the perspective of the subject.</p>\n\n<p><strong>Overhead view</strong> &ndash; Refers to depictions with a vantage point above the subject.</p>\n\n<p><strong>Right side view</strong> &ndash; Refers to an image depicting the right side of a subject, from the perspective of the subject.</p>\n\n<p><u>Image Feature(s)</u></p>\n\n<p>Enter any additional information that would help describe the central subject(s) of the image such as the object of interest for details or room name for interior, etc. This field is optional.</p>\n\n<p><u>Image Date</u></p>\n\n<p>Enter the year that the image was created.</p>\n\n<p><u>Image Description</u></p>\n\n<p>Enter the full description of the content of the image including site name and/or street address.</p>\n\n<p>Example: View of the front entrance of Point Ellice House and gardens in summer.</p>\n\n<p><u>Photographer</u></p>\n\n<p>Enter the first and last name of the photographer.</p>\n\n<p><u>Copyright</u></p>\n\n<p>Enter the name of the copyright holder or the name of the owning institution (often government name). Optional information (if known) can include: the name of the photographer, the year the original image was created, and the item number assigned by the holding institution.</p>\nExample: Heritage Branch, Ministry of Tourism, Arts &amp; Culture, 2018"
+                        "en": ""
                     },
                     "helptitle": {
                         "en": "Images Help"
@@ -134,7 +134,7 @@
                     "instructions": {
                         "en": ""
                     },
-                    "is_editable": false,
+                    "is_editable": true,
                     "name": {
                         "en": "Stratigraphy"
                     },
@@ -161,7 +161,7 @@
                     "instructions": {
                         "en": ""
                     },
-                    "is_editable": false,
+                    "is_editable": true,
                     "name": {
                         "en": "Repository Information"
                     },
@@ -188,7 +188,7 @@
                     "instructions": {
                         "en": ""
                     },
-                    "is_editable": false,
+                    "is_editable": true,
                     "name": {
                         "en": "Geological Age"
                     },
@@ -215,7 +215,7 @@
                     "instructions": {
                         "en": ""
                     },
-                    "is_editable": false,
+                    "is_editable": true,
                     "name": {
                         "en": "BC Fossil Identification"
                     },
@@ -668,7 +668,7 @@
                         "en": "Photographer"
                     },
                     "node_id": "5cfe0148-d789-11ee-aa4b-080027b7463b",
-                    "sortorder": 1,
+                    "sortorder": 2,
                     "visible": true,
                     "widget_id": "10000000-0000-0000-0000-000000000001"
                 },
@@ -697,7 +697,7 @@
                         "en": "Photograph Description"
                     },
                     "node_id": "5cfdff40-d789-11ee-aa4b-080027b7463b",
-                    "sortorder": 3,
+                    "sortorder": 4,
                     "visible": true,
                     "widget_id": "10000000-0000-0000-0000-000000000005"
                 },
@@ -717,7 +717,7 @@
                         "en": "Photograph Date"
                     },
                     "node_id": "5cfdfe32-d789-11ee-aa4b-080027b7463b",
-                    "sortorder": 2,
+                    "sortorder": 3,
                     "visible": true,
                     "widget_id": "10000000-0000-0000-0000-000000000004"
                 },
@@ -1548,6 +1548,35 @@
                     "widget_id": "10000000-0000-0000-0000-000000000006"
                 },
                 {
+                    "card_id": "5cfdfb8a-d789-11ee-aa4b-080027b7463b",
+                    "config": {
+                        "defaultValue": {
+                            "en": {
+                                "direction": "ltr",
+                                "value": ""
+                            }
+                        },
+                        "i18n_properties": [
+                            "placeholder"
+                        ],
+                        "label": "Photograph View",
+                        "maxLength": null,
+                        "placeholder": {
+                            "en": "Enter text"
+                        },
+                        "uneditable": false,
+                        "width": "100%"
+                    },
+                    "id": "904a18ac-2481-4a59-a33b-6d44afaed609",
+                    "label": {
+                        "en": "Photograph View"
+                    },
+                    "node_id": "8d7dfe42-dff7-11ee-938a-080027b7463b",
+                    "sortorder": 1,
+                    "visible": true,
+                    "widget_id": "10000000-0000-0000-0000-000000000001"
+                },
+                {
                     "card_id": "80f6864e-6f3c-11ed-92e2-5254004d77d3",
                     "config": {
                         "defaultValue": null,
@@ -2321,11 +2350,23 @@
             "functions_x_graphs": [
                 {
                     "config": {
+                        "node_id": "7f2c823e-6c51-11ed-9b7d-5254004d77d3",
+                        "triggering_nodegroups": [
+                            "7f2c2dde-6c51-11ed-9b7d-5254004d77d3"
+                        ],
+                        "unique_value": true
+                    },
+                    "function_id": "60000000-0000-0000-0000-000000002001",
+                    "graph_id": "7f2c2082-6c51-11ed-9b7d-5254004d77d3",
+                    "id": "1abd9324-558e-4910-a1ed-37230e3456e6"
+                },
+                {
+                    "config": {
                         "triggering_nodegroups": []
                     },
                     "function_id": "60000000-0000-0000-0000-000000001006",
                     "graph_id": "7f2c2082-6c51-11ed-9b7d-5254004d77d3",
-                    "id": "0f46d8ac-32f4-40d9-97ba-149cb926f1aa"
+                    "id": "b4540583-28ce-4c7a-92a5-2309af63f9ff"
                 },
                 {
                     "config": {
@@ -2357,24 +2398,12 @@
                     },
                     "function_id": "60000000-0000-0000-0000-000000001004",
                     "graph_id": "7f2c2082-6c51-11ed-9b7d-5254004d77d3",
-                    "id": "a8cfb6b4-bedd-4090-abb4-2fac560dcdf8"
-                },
-                {
-                    "config": {
-                        "node_id": "7f2c823e-6c51-11ed-9b7d-5254004d77d3",
-                        "triggering_nodegroups": [
-                            "7f2c2dde-6c51-11ed-9b7d-5254004d77d3"
-                        ],
-                        "unique_value": true
-                    },
-                    "function_id": "60000000-0000-0000-0000-000000002001",
-                    "graph_id": "7f2c2082-6c51-11ed-9b7d-5254004d77d3",
-                    "id": "c5efac83-d746-491f-9c8f-d106d4400b89"
+                    "id": "d0456eb8-5b7a-4644-8745-ac247afd1c74"
                 }
             ],
             "graphid": "7f2c2082-6c51-11ed-9b7d-5254004d77d3",
             "iconclass": "fa fa-tags",
-            "is_editable": false,
+            "is_editable": true,
             "isresource": true,
             "jsonldcontext": null,
             "name": {
@@ -2394,7 +2423,7 @@
                     "parentnodegroup_id": null
                 },
                 {
-                    "cardinality": "1",
+                    "cardinality": "n",
                     "legacygroupid": null,
                     "nodegroupid": "5cfdf93c-d789-11ee-aa4b-080027b7463b",
                     "parentnodegroup_id": null
@@ -2738,7 +2767,7 @@
                         "maxFiles": 3
                     },
                     "datatype": "file-list",
-                    "description": "{\"en\": \"\"}",
+                    "description": "",
                     "exportable": true,
                     "fieldname": "ST_IMGS",
                     "graph_id": "7f2c2082-6c51-11ed-9b7d-5254004d77d3",
@@ -4269,8 +4298,8 @@
             "publication": {
                 "graph_id": "7f2c2082-6c51-11ed-9b7d-5254004d77d3",
                 "notes": null,
-                "publicationid": "1024ca78-e026-11ee-bd18-080027b7463b",
-                "published_time": "2024-03-11T23:07:37.929"
+                "publicationid": "9ca004ba-e218-11ee-b286-080027b7463b",
+                "published_time": "2024-03-14T10:36:22.989"
             },
             "relatable_resource_model_ids": [],
             "resource_2_resource_constraints": [],
@@ -4304,7 +4333,7 @@
     ],
     "metadata": {
         "db": "PostgreSQL 16.0 on x86_64-pc-linux-gnu, compiled by gcc (GCC) 11.3.1 20221121 (Red Hat 11.3.1-4), 64-bit",
-        "git hash": "9975977532 2024-02-07 12:28:09 -0800",
+        "git hash": "6f4433a6fb 2024-01-22 23:28:45 -0800",
         "os": "Linux",
         "os version": "5.14.0-333.el9.x86_64"
     }

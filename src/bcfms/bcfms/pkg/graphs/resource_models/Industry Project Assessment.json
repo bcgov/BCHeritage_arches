@@ -205,9 +205,9 @@
                     "cssclass": null,
                     "description": "",
                     "graph_id": "2aa724d1-ffd3-4823-8ff1-15a385b9a407",
-                    "helpenabled": true,
+                    "helpenabled": false,
                     "helptext": {
-                        "en": "<p>Enter information relevant to each individual image. Select an image from the image list to edit.</p>\n\n<p><u>Primary Image</u></p>\n\n<p>Select one primary image from the image list for the site.</p>\n\n<p><u>Submit to CRHP</u></p>\n\n<p>Select up to three images from the image list to submit to the Canadian Register of Historic Places (CRHP).</p>\n\n<p><u>Image Type</u></p>\n\n<p>Select one of the following:</p>\n\n<p><strong>Historical - </strong>&nbsp;Historical images are images that were created in the contextual past and usually for a purpose other than documenting the historic place.</p>\n\n<p><strong>Contemporary - </strong>Contemporary images are images that have been created recently and generally for</p>\n\n<p><u>Image View</u></p>\n\n<p>Select the view that best describes the image. Either scroll through the options or start typing.</p>\n\n<p>You can select one of the high-level general descriptors (below) or a more specific view option.</p>\n\n<p><strong>Interior - </strong>Refers to an image that depicts the inside of a building, structure, or object that has interior and exterior spaces.</p>\n\n<p><strong>Exterior</strong> - Refers to an image that depicts the exterior of a building, structure, or object that has interior and exterior spaces.</p>\n\n<p><strong>Landscape</strong> - Refers to an image that depicts the visible features of an area and can include natural and/or built components.</p>\n\n<p>To further describe the image, you may select a sub-view option.</p>\n\n<p><strong>Aerial view - </strong>Refers to views achieved by creating the image from a high location such as a drone or aircraft.</p>\n\n<p><strong>Back view</strong> &ndash; Refers to depiction of the back of a subject such as the back fa&ccedil;ade of a building.</p>\n\n<p><strong>Close view</strong> &ndash; Refers to view where the emphasis is on the proximity of the subject as a whole.</p>\n\n<p><strong>Corner view</strong> &ndash; Refers to a view of a subject from (roughly) a &frac34; angle or directly out from a corner.</p>\n\n<p><strong>Detail view</strong> &ndash; Refers to an image containing a partial view that focuses on a particular piece of the whole.</p>\n\n<p><strong>Distant view</strong> &ndash; Refers to an image created at a distance, typically showing the overall layout, design, or plan.</p>\n\n<p><strong>Front view</strong> &ndash; Refers to an image depicting the front of a subject.</p>\n\n<p><strong>Left side view</strong> &ndash; Refers to an image depicting the left side of a subject, from the perspective of the subject.</p>\n\n<p><strong>Overhead view</strong> &ndash; Refers to depictions with a vantage point above the subject.</p>\n\n<p><strong>Right side view</strong> &ndash; Refers to an image depicting the right side of a subject, from the perspective of the subject.</p>\n\n<p><u>Image Feature(s)</u></p>\n\n<p>Enter any additional information that would help describe the central subject(s) of the image such as the object of interest for details or room name for interior, etc. This field is optional.</p>\n\n<p><u>Image Date</u></p>\n\n<p>Enter the year that the image was created.</p>\n\n<p><u>Image Description</u></p>\n\n<p>Enter the full description of the content of the image including site name and/or street address.</p>\n\n<p>Example: View of the front entrance of Point Ellice House and gardens in summer.</p>\n\n<p><u>Photographer</u></p>\n\n<p>Enter the first and last name of the photographer.</p>\n\n<p><u>Copyright</u></p>\n\n<p>Enter the name of the copyright holder or the name of the owning institution (often government name). Optional information (if known) can include: the name of the photographer, the year the original image was created, and the item number assigned by the holding institution.</p>\nExample: Heritage Branch, Ministry of Tourism, Arts &amp; Culture, 2018"
+                        "en": ""
                     },
                     "helptitle": {
                         "en": "Images Help"
@@ -1122,6 +1122,35 @@
                     "widget_id": "10000000-0000-0000-0000-000000000002"
                 },
                 {
+                    "card_id": "3b016d40-d785-11ee-b1e5-080027b7463b",
+                    "config": {
+                        "defaultValue": {
+                            "en": {
+                                "direction": "ltr",
+                                "value": ""
+                            }
+                        },
+                        "i18n_properties": [
+                            "placeholder"
+                        ],
+                        "label": "Photograph View",
+                        "maxLength": null,
+                        "placeholder": {
+                            "en": "Enter text"
+                        },
+                        "uneditable": false,
+                        "width": "100%"
+                    },
+                    "id": "341b010a-5f2d-43e3-82ef-fc9b9f9cd45e",
+                    "label": {
+                        "en": "Photograph View"
+                    },
+                    "node_id": "7eab0c44-dff6-11ee-beaf-080027b7463b",
+                    "sortorder": null,
+                    "visible": true,
+                    "widget_id": "10000000-0000-0000-0000-000000000001"
+                },
+                {
                     "card_id": "e9394b8a-c372-11ed-b586-5254004d77d3",
                     "config": {
                         "defaultValue": {
@@ -1146,6 +1175,64 @@
                         "en": "IMP FMO Response"
                     },
                     "node_id": "e9395120-c372-11ed-b586-5254004d77d3",
+                    "sortorder": null,
+                    "visible": true,
+                    "widget_id": "10000000-0000-0000-0000-000000000001"
+                },
+                {
+                    "card_id": "3b016d40-d785-11ee-b1e5-080027b7463b",
+                    "config": {
+                        "defaultValue": {
+                            "en": {
+                                "direction": "ltr",
+                                "value": ""
+                            }
+                        },
+                        "i18n_properties": [
+                            "placeholder"
+                        ],
+                        "label": "Photographer",
+                        "maxLength": null,
+                        "placeholder": {
+                            "en": "Enter text"
+                        },
+                        "uneditable": false,
+                        "width": "100%"
+                    },
+                    "id": "5463d3e3-3c6e-4fb6-bd1f-40b5f96e9cbd",
+                    "label": {
+                        "en": "Photographer"
+                    },
+                    "node_id": "3b017100-d785-11ee-b1e5-080027b7463b",
+                    "sortorder": null,
+                    "visible": true,
+                    "widget_id": "10000000-0000-0000-0000-000000000001"
+                },
+                {
+                    "card_id": "3b016d40-d785-11ee-b1e5-080027b7463b",
+                    "config": {
+                        "defaultValue": {
+                            "en": {
+                                "direction": "ltr",
+                                "value": ""
+                            }
+                        },
+                        "i18n_properties": [
+                            "placeholder"
+                        ],
+                        "label": "Photograph Description",
+                        "maxLength": null,
+                        "placeholder": {
+                            "en": "Enter text"
+                        },
+                        "uneditable": false,
+                        "width": "100%"
+                    },
+                    "id": "74cc27ab-d4e6-4a07-8814-79cee6538e4a",
+                    "label": {
+                        "en": "Photograph Description"
+                    },
+                    "node_id": "3b016eb2-d785-11ee-b1e5-080027b7463b",
                     "sortorder": null,
                     "visible": true,
                     "widget_id": "10000000-0000-0000-0000-000000000001"
@@ -1178,6 +1265,24 @@
                     "sortorder": null,
                     "visible": true,
                     "widget_id": "10000000-0000-0000-0000-000000000001"
+                },
+                {
+                    "card_id": "3b016d40-d785-11ee-b1e5-080027b7463b",
+                    "config": {
+                        "acceptedFiles": ".jpg, .png, .jpeg, .gif, .tiff",
+                        "defaultValue": [],
+                        "label": "Site Assessment Photographs",
+                        "maxFilesize": "5",
+                        "rerender": true
+                    },
+                    "id": "94752c9d-fb22-4eca-baa8-4a8275982911",
+                    "label": {
+                        "en": "Site Assessment Photographs"
+                    },
+                    "node_id": "3b016ade-d785-11ee-b1e5-080027b7463b",
+                    "sortorder": null,
+                    "visible": true,
+                    "widget_id": "10000000-0000-0000-0000-000000000019"
                 },
                 {
                     "card_id": "dbb0dc26-a360-11ed-ae42-5254004d77d3",
@@ -1320,6 +1425,25 @@
                     "sortorder": null,
                     "visible": true,
                     "widget_id": "10000000-0000-0000-0000-000000000002"
+                },
+                {
+                    "card_id": "3b016d40-d785-11ee-b1e5-080027b7463b",
+                    "config": {
+                        "defaultValue": "",
+                        "label": "Photograph Date",
+                        "maxDate": false,
+                        "minDate": false,
+                        "placeholder": "Enter date",
+                        "viewMode": "days"
+                    },
+                    "id": "eade8b91-cf9c-4a8f-8c60-ce4f93e3eaf7",
+                    "label": {
+                        "en": "Photograph Date"
+                    },
+                    "node_id": "3b0171fa-d785-11ee-b1e5-080027b7463b",
+                    "sortorder": null,
+                    "visible": true,
+                    "widget_id": "10000000-0000-0000-0000-000000000004"
                 }
             ],
             "color": "rgba(53,151,143,1)",
@@ -2522,7 +2646,7 @@
                     },
                     "function_id": "60000000-0000-0000-0000-000000001001",
                     "graph_id": "2aa724d1-ffd3-4823-8ff1-15a385b9a407",
-                    "id": "8abfa17c-eba1-4419-bf2f-883dc31d683c"
+                    "id": "602c85af-daeb-474e-beb2-b127cef7d035"
                 }
             ],
             "graphid": "2aa724d1-ffd3-4823-8ff1-15a385b9a407",
@@ -2553,7 +2677,7 @@
                     "parentnodegroup_id": null
                 },
                 {
-                    "cardinality": "1",
+                    "cardinality": "n",
                     "legacygroupid": null,
                     "nodegroupid": "3b016ade-d785-11ee-b1e5-080027b7463b",
                     "parentnodegroup_id": "a48e1732-c371-11ed-bb65-5254004d77d3"
@@ -7009,8 +7133,8 @@
             "publication": {
                 "graph_id": "2aa724d1-ffd3-4823-8ff1-15a385b9a407",
                 "notes": null,
-                "publicationid": "37323fbc-e14b-11ee-9cae-080027b7463b",
-                "published_time": "2024-03-13T10:06:05.990"
+                "publicationid": "57090e9a-e21a-11ee-b286-080027b7463b",
+                "published_time": "2024-03-14T10:48:45.230"
             },
             "relatable_resource_model_ids": [],
             "resource_2_resource_constraints": [],
@@ -7046,7 +7170,7 @@
     ],
     "metadata": {
         "db": "PostgreSQL 16.0 on x86_64-pc-linux-gnu, compiled by gcc (GCC) 11.3.1 20221121 (Red Hat 11.3.1-4), 64-bit",
-        "git hash": "9975977532 2024-02-07 12:28:09 -0800",
+        "git hash": "6f4433a6fb 2024-01-22 23:28:45 -0800",
         "os": "Linux",
         "os version": "5.14.0-333.el9.x86_64"
     }

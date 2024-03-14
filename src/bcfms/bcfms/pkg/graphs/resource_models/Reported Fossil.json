@@ -66,11 +66,11 @@
                     },
                     "constraints": [],
                     "cssclass": null,
-                    "description": "{\"en\": \"\"}",
+                    "description": "",
                     "graph_id": "82efcd14-82db-11ec-b8e6-5254008afee6",
-                    "helpenabled": true,
+                    "helpenabled": false,
                     "helptext": {
-                        "en": "<p>Enter information relevant to each individual image. Select an image from the image list to edit.</p>\n\n<p><u>Primary Image</u></p>\n\n<p>Select one primary image from the image list for the site.</p>\n\n<p><u>Submit to CRHP</u></p>\n\n<p>Select up to three images from the image list to submit to the Canadian Register of Historic Places (CRHP).</p>\n\n<p><u>Image Type</u></p>\n\n<p>Select one of the following:</p>\n\n<p><strong>Historical - </strong>&nbsp;Historical images are images that were created in the contextual past and usually for a purpose other than documenting the historic place.</p>\n\n<p><strong>Contemporary - </strong>Contemporary images are images that have been created recently and generally for</p>\n\n<p><u>Image View</u></p>\n\n<p>Select the view that best describes the image. Either scroll through the options or start typing.</p>\n\n<p>You can select one of the high-level general descriptors (below) or a more specific view option.</p>\n\n<p><strong>Interior - </strong>Refers to an image that depicts the inside of a building, structure, or object that has interior and exterior spaces.</p>\n\n<p><strong>Exterior</strong> - Refers to an image that depicts the exterior of a building, structure, or object that has interior and exterior spaces.</p>\n\n<p><strong>Landscape</strong> - Refers to an image that depicts the visible features of an area and can include natural and/or built components.</p>\n\n<p>To further describe the image, you may select a sub-view option.</p>\n\n<p><strong>Aerial view - </strong>Refers to views achieved by creating the image from a high location such as a drone or aircraft.</p>\n\n<p><strong>Back view</strong> &ndash; Refers to depiction of the back of a subject such as the back fa&ccedil;ade of a building.</p>\n\n<p><strong>Close view</strong> &ndash; Refers to view where the emphasis is on the proximity of the subject as a whole.</p>\n\n<p><strong>Corner view</strong> &ndash; Refers to a view of a subject from (roughly) a &frac34; angle or directly out from a corner.</p>\n\n<p><strong>Detail view</strong> &ndash; Refers to an image containing a partial view that focuses on a particular piece of the whole.</p>\n\n<p><strong>Distant view</strong> &ndash; Refers to an image created at a distance, typically showing the overall layout, design, or plan.</p>\n\n<p><strong>Front view</strong> &ndash; Refers to an image depicting the front of a subject.</p>\n\n<p><strong>Left side view</strong> &ndash; Refers to an image depicting the left side of a subject, from the perspective of the subject.</p>\n\n<p><strong>Overhead view</strong> &ndash; Refers to depictions with a vantage point above the subject.</p>\n\n<p><strong>Right side view</strong> &ndash; Refers to an image depicting the right side of a subject, from the perspective of the subject.</p>\n\n<p><u>Image Feature(s)</u></p>\n\n<p>Enter any additional information that would help describe the central subject(s) of the image such as the object of interest for details or room name for interior, etc. This field is optional.</p>\n\n<p><u>Image Date</u></p>\n\n<p>Enter the year that the image was created.</p>\n\n<p><u>Image Description</u></p>\n\n<p>Enter the full description of the content of the image including site name and/or street address.</p>\n\n<p>Example: View of the front entrance of Point Ellice House and gardens in summer.</p>\n\n<p><u>Photographer</u></p>\n\n<p>Enter the first and last name of the photographer.</p>\n\n<p><u>Copyright</u></p>\n\n<p>Enter the name of the copyright holder or the name of the owning institution (often government name). Optional information (if known) can include: the name of the photographer, the year the original image was created, and the item number assigned by the holding institution.</p>\nExample: Heritage Branch, Ministry of Tourism, Arts &amp; Culture, 2018"
+                        "en": ""
                     },
                     "helptitle": {
                         "en": "Images Help"
@@ -172,6 +172,24 @@
             ],
             "cards_x_nodes_x_widgets": [
                 {
+                    "card_id": "a7a49bec-83be-11ec-a0d2-5254008afee6",
+                    "config": {
+                        "acceptedFiles": ".pdf, .png, .jpg, .gif, .tiff",
+                        "defaultValue": [],
+                        "label": "Location Map File",
+                        "maxFilesize": "20",
+                        "rerender": true
+                    },
+                    "id": "14993365-f97d-42c3-82d5-0bdca7b49cee",
+                    "label": {
+                        "en": "Location Map File"
+                    },
+                    "node_id": "a7a473b0-83be-11ec-a0d2-5254008afee6",
+                    "sortorder": null,
+                    "visible": true,
+                    "widget_id": "10000000-0000-0000-0000-000000000019"
+                },
+                {
                     "card_id": "08fd546f-a7b9-4d5e-9a88-3c2717faff24",
                     "config": {
                         "defaultValue": {
@@ -255,7 +273,7 @@
                         "en": "Photograph Date"
                     },
                     "node_id": "4dd2e092-d786-11ee-a7d3-080027b7463b",
-                    "sortorder": 2,
+                    "sortorder": 3,
                     "visible": true,
                     "widget_id": "10000000-0000-0000-0000-000000000004"
                 },
@@ -284,14 +302,14 @@
                         "en": "Photographer"
                     },
                     "node_id": "4dd2df70-d786-11ee-a7d3-080027b7463b",
-                    "sortorder": 1,
+                    "sortorder": 2,
                     "visible": true,
                     "widget_id": "10000000-0000-0000-0000-000000000001"
                 },
                 {
                     "card_id": "4dd2da7a-d786-11ee-a7d3-080027b7463b",
                     "config": {
-                        "acceptedFiles": ".jpg, .jpeg, .png, .tiff, .gif",
+                        "acceptedFiles": "",
                         "defaultValue": [],
                         "label": "Photograph",
                         "maxFilesize": "5",
@@ -331,7 +349,7 @@
                         "en": "Photograph Description"
                     },
                     "node_id": "4dd2dc1e-d786-11ee-a7d3-080027b7463b",
-                    "sortorder": 3,
+                    "sortorder": 4,
                     "visible": true,
                     "widget_id": "10000000-0000-0000-0000-000000000005"
                 },
@@ -544,6 +562,35 @@
                     "sortorder": 0,
                     "visible": true,
                     "widget_id": "10000000-0000-0000-0000-000000000007"
+                },
+                {
+                    "card_id": "4dd2da7a-d786-11ee-a7d3-080027b7463b",
+                    "config": {
+                        "defaultValue": {
+                            "en": {
+                                "direction": "ltr",
+                                "value": ""
+                            }
+                        },
+                        "i18n_properties": [
+                            "placeholder"
+                        ],
+                        "label": "Photograph View",
+                        "maxLength": null,
+                        "placeholder": {
+                            "en": "Enter text"
+                        },
+                        "uneditable": false,
+                        "width": "100%"
+                    },
+                    "id": "ce95b921-c638-402a-b906-751ee6725ae1",
+                    "label": {
+                        "en": "Photograph View"
+                    },
+                    "node_id": "2485ee6c-dff8-11ee-938a-080027b7463b",
+                    "sortorder": 1,
+                    "visible": true,
+                    "widget_id": "10000000-0000-0000-0000-000000000001"
                 },
                 {
                     "card_id": "08fd546f-a7b9-4d5e-9a88-3c2717faff24",
@@ -761,7 +808,7 @@
                     },
                     "function_id": "60000000-0000-0000-0000-000000000001",
                     "graph_id": "82efcd14-82db-11ec-b8e6-5254008afee6",
-                    "id": "18d3f81d-1b66-4403-b3ef-0a04333c7e19"
+                    "id": "e54d0657-1d96-4f75-9d47-ce27399b9a18"
                 }
             ],
             "graphid": "82efcd14-82db-11ec-b8e6-5254008afee6",
@@ -780,7 +827,7 @@
                     "parentnodegroup_id": null
                 },
                 {
-                    "cardinality": "1",
+                    "cardinality": "n",
                     "legacygroupid": null,
                     "nodegroupid": "4dd2d7f0-d786-11ee-a7d3-080027b7463b",
                     "parentnodegroup_id": null
@@ -829,7 +876,7 @@
                     "nodeid": "0d429c06-83d8-11ec-9043-5254008afee6",
                     "ontologyclass": "http://www.cidoc-crm.org/cidoc-crm/E13_Attribute_Assignment",
                     "parentproperty": "http://www.cidoc-crm.org/cidoc-crm/P140i_was_attributed_by",
-                    "sortorder": 4,
+                    "sortorder": 0,
                     "sourcebranchpublication_id": null
                 },
                 {
@@ -875,7 +922,7 @@
                     "nodeid": "2485ee6c-dff8-11ee-938a-080027b7463b",
                     "ontologyclass": "http://www.cidoc-crm.org/cidoc-crm/E13_Attribute_Assignment",
                     "parentproperty": "http://www.cidoc-crm.org/cidoc-crm/P140i_was_attributed_by",
-                    "sortorder": 3,
+                    "sortorder": 0,
                     "sourcebranchpublication_id": null
                 },
                 {
@@ -887,7 +934,7 @@
                         "maxFiles": 3
                     },
                     "datatype": "file-list",
-                    "description": "{\"en\": \"\"}",
+                    "description": "",
                     "exportable": true,
                     "fieldname": "ST_IMGS",
                     "graph_id": "82efcd14-82db-11ec-b8e6-5254008afee6",
@@ -901,7 +948,7 @@
                     "nodeid": "4dd2d7f0-d786-11ee-a7d3-080027b7463b",
                     "ontologyclass": "http://www.ics.forth.gr/isl/CRMdig/D13_Digital_Information_Carrier",
                     "parentproperty": "http://www.cidoc-crm.org/cidoc-crm/P17_was_motivated_by",
-                    "sortorder": 1,
+                    "sortorder": 0,
                     "sourcebranchpublication_id": null
                 },
                 {
@@ -947,7 +994,7 @@
                     "nodeid": "4dd2df70-d786-11ee-a7d3-080027b7463b",
                     "ontologyclass": "http://www.cidoc-crm.org/cidoc-crm/E13_Attribute_Assignment",
                     "parentproperty": "http://www.cidoc-crm.org/cidoc-crm/P140i_was_attributed_by",
-                    "sortorder": 1,
+                    "sortorder": 0,
                     "sourcebranchpublication_id": null
                 },
                 {
@@ -970,7 +1017,7 @@
                     "nodeid": "4dd2e092-d786-11ee-a7d3-080027b7463b",
                     "ontologyclass": "http://www.cidoc-crm.org/cidoc-crm/E50_Date",
                     "parentproperty": "http://www.cidoc-crm.org/cidoc-crm/P1_is_identified_by",
-                    "sortorder": 2,
+                    "sortorder": 0,
                     "sourcebranchpublication_id": null
                 },
                 {
@@ -1114,7 +1161,7 @@
                     "nodeid": "a7a473b0-83be-11ec-a0d2-5254008afee6",
                     "ontologyclass": "http://www.cidoc-crm.org/cidoc-crm/E84_Information_Carrier",
                     "parentproperty": "http://www.cidoc-crm.org/cidoc-crm/P62i_is_depicted_by",
-                    "sortorder": 3,
+                    "sortorder": 0,
                     "sourcebranchpublication_id": null
                 },
                 {
@@ -1179,7 +1226,7 @@
                     "nodeid": "cbe9284c-83be-11ec-805f-5254008afee6",
                     "ontologyclass": "http://www.cidoc-crm.org/cidoc-crm/E47_Spatial_Coordinates",
                     "parentproperty": "http://www.cidoc-crm.org/cidoc-crm/P1_is_identified_by",
-                    "sortorder": 2,
+                    "sortorder": 0,
                     "sourcebranchpublication_id": null
                 },
                 {
@@ -1350,8 +1397,8 @@
             "publication": {
                 "graph_id": "82efcd14-82db-11ec-b8e6-5254008afee6",
                 "notes": null,
-                "publicationid": "5294def4-e01a-11ee-a2df-080027b7463b",
-                "published_time": "2024-03-11T21:43:35.432"
+                "publicationid": "35034c5a-e217-11ee-b611-080027b7463b",
+                "published_time": "2024-03-14T10:26:19.659"
             },
             "relatable_resource_model_ids": [],
             "resource_2_resource_constraints": [],
@@ -1385,7 +1432,7 @@
     ],
     "metadata": {
         "db": "PostgreSQL 16.0 on x86_64-pc-linux-gnu, compiled by gcc (GCC) 11.3.1 20221121 (Red Hat 11.3.1-4), 64-bit",
-        "git hash": "9975977532 2024-02-07 12:28:09 -0800",
+        "git hash": "6f4433a6fb 2024-01-22 23:28:45 -0800",
         "os": "Linux",
         "os version": "5.14.0-333.el9.x86_64"
     }
