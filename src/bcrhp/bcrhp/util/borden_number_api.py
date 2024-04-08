@@ -5,18 +5,15 @@ from arches.app.utils import geo_utils
 import json
 from bcrhp.util.bcrhp_aliases import BCRHPSiteAliases as site_aliases, GraphSlugs as slugs
 from bcrhp.util.hria_db import HriaDao
+from django.conf import settings
 
-import urllib
-import ssl
+import urllib3
 
 # API to get next borden number sequence, check if a borden number already exists and
 # reserve a borden number in HRIA
 class BordenNumberApi:
     _datatype_factory = None
     _url = "https://openmaps.gov.bc.ca/geo/pub/WHSE_ARCHAEOLOGY.RAAD_BORDENGRID/ows?service=WFS&request=GetFeature&outputFormat=json&version=2.3.0&typeNames=WHSE_ARCHAEOLOGY.RAAD_BORDENGRID&cql_filter=DWITHIN(GEOMETRY,POINT(%s%%20%s),1,meters)"
-    ctx = ssl.create_default_context()
-    ctx.check_hostname = False
-    ctx.verify_mode = ssl.CERT_NONE
 
     geom_node = None
     officially_recognized_node = None
@@ -56,15 +53,15 @@ class BordenNumberApi:
 
         url = BordenNumberApi._url % (pnt.x, pnt.y)
         # print(url)
+        if hasattr(settings, 'TILESERVER_OUTBOUND_PROXY')  and settings.TILESERVER_OUTBOUND_PROXY:
+            req = urllib3.ProxyManager(settings.TILESERVER_OUTBOUND_PROXY)
+        else:
+            req = urllib3.PoolManager()
 
-        borden_grid = None
-        with urllib.request.urlopen(url, context=BordenNumberApi.ctx) as response:
-            body = json.loads(response.read().decode())
-            # print("Got body: %s" % body)
-            borden_grid = body["features"][0]["properties"]["BORDGRID"]
+        response = req.request("GET", url)
+        body = json.loads(response.data.decode())
+        borden_grid = body["features"][0]["properties"]["BORDGRID"]
 
-
-        # print("Mpt %s" % mpnt)
         return borden_grid
 
     def get_next_borden_number(self, resourceinstanceid):

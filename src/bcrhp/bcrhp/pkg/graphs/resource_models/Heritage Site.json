@@ -12,17 +12,17 @@
                     "cssclass": "",
                     "description": "",
                     "graph_id": "cef9c510-e3e6-4057-ac08-89ad926180b4",
-                    "helpenabled": false,
+                    "helpenabled": true,
                     "helptext": {
-                        "en": ""
+                        "en": "<p>Enter the status of the record to indicate its completeness.</p>\n\n<p><u>BCRHP Submission Status</u></p>\n\n<p>Select the appropriate option from the drop-down menu.</p>\n\n<p>In Progress &ndash; record is in the process of being entered.</p>\n\n<p>Submitted &ndash; record is complete and awaiting review.</p>\n\n<p>Update Requested &ndash; existing record was edited and requires review.</p>\n\n<p>Approved Basic Record &ndash; record reviewed and approved. Basic records only include enough information to have them on the BC Register and are ineligible for the Canadian Register.</p>\n\n<p>Approved Full Record &ndash; record reviewed and approved. Full records include all the information required to be eligible for the Canadian Register.</p>\n\n<p><u>Restricted/Unrestricted</u></p>\n\n<p>Select the appropriate option. Restricted records do not appear to the public and are ineligible for the Canadian Register.</p>\n\n<p><u>CRHP Submission Status</u></p>\n\n<p>Select the appropriate option from the drop-down menu:</p>\n\n<p>Ineligible &ndash; record is not eligible for the CRHP because it is restricted or does not have enough required information to be submitted to the CRHP.</p>\n\n<p>Submitted &ndash; record is submitted to the CRHP and awaiting feedback or approval.</p>\n\n<p>Update Required &ndash; record has been updated and needs to be resubmitted to CRHP.</p>\n\n<p>Approved &ndash; record has been approved and is available on the Historic Places website.</p>\n\n<p>Removed &ndash; record was previously listed on the CRHP but was removed.</p>\n\n<p><u>Date Submitted to CRHP</u></p>\n\n<p>Enter the most recent date the record was submitted to the CRHP.</p>\n\n<p><u>Generate CRHP XML</u></p>\n\n<p>Click to generate the xml to submit to the CRHP. Ensure all information is reviewed for accuracy and typos before generating, especially the SoS and Images info.</p>\n\n<p><u>CRHP ID Number</u></p>\nEnter the federal ID number assigned upon record submission to the CRHP."
                     },
                     "helptitle": {
-                        "en": ""
+                        "en": "Site Record Admin Help"
                     },
                     "instructions": {
-                        "en": "Enter a description and description type for the resource."
+                        "en": ""
                     },
-                    "is_editable": false,
+                    "is_editable": true,
                     "name": {
                         "en": "Site Record Admin"
                     },
@@ -39,17 +39,17 @@
                     "cssclass": null,
                     "description": null,
                     "graph_id": "cef9c510-e3e6-4057-ac08-89ad926180b4",
-                    "helpenabled": false,
+                    "helpenabled": true,
                     "helptext": {
-                        "en": ""
+                        "en": "<p>Define the Heritage Theme(s).</p>\n\n<p>Select the most relevant heritage theme(s) that directly relate to the heritage value of the heritage site. Theme categories are based on the National Historic Sites of Canada Thematic Framework.</p>\nAdd multiple entries as applicable."
                     },
                     "helptitle": {
-                        "en": ""
+                        "en": "Heritage Theme Help"
                     },
                     "instructions": {
                         "en": ""
                     },
-                    "is_editable": false,
+                    "is_editable": true,
                     "name": {
                         "en": "Heritage Theme"
                     },
@@ -68,17 +68,17 @@
                         "en": "The legal description of a property in BC. (Is this the same across Canada?)"
                     },
                     "graph_id": "cef9c510-e3e6-4057-ac08-89ad926180b4",
-                    "helpenabled": false,
+                    "helpenabled": true,
                     "helptext": {
-                        "en": ""
+                        "en": "<p>Enter the legal property description information.</p>\n\n<p><u>PID (Parcel Identifier) or PIN (Parcel Identification Number)</u></p>\n\n<p>Enter the nine-digit Parcel Identifier (PID) or Parcel Number (PIN) that uniquely identifies a parcel in the land title register of BC.</p>\n\n<p><u>Legal Description</u></p>\n\n<p>Enter the full legal description of the property. The legal description usually consists of a lot number, various other descriptive numbers, and a plan number.</p>\n\n<p>Example: LOT 1, BLOCK B, PLAN VIP16, SECTION 4, VICTORIA LAND DISTRICT</p>\n\n<p>If the legal description has not been provided by a local government, copy it directly from one of these sources by searching civic address or PID number:</p>\n\n<ul>\n\t<li>Cadastral Parcel Map Overlay</li>\n\t<li><a href=\"https://www.bcassessment.ca\" style=\"color:blue; text-decoration:underline\">BC Assessment</a></li>\n\t<li><a href=\"https://parcelmapbc.ltsa.ca/pmsspub/\" style=\"color:blue; text-decoration:underline\">Parcel Map BC</a></li>\n</ul>\n\n<p><u>Legal Address Internal Notes</u></p>\n\n<p>Add remarks specific to the legal address.</p>\nAdd multiple entries as applicable."
                     },
                     "helptitle": {
-                        "en": ""
+                        "en": "Legal Description Help"
                     },
                     "instructions": {
                         "en": ""
                     },
-                    "is_editable": false,
+                    "is_editable": true,
                     "name": {
                         "en": "BC Property Legal Description"
                     },
@@ -106,17 +106,17 @@
                     "cssclass": "",
                     "description": "",
                     "graph_id": "cef9c510-e3e6-4057-ac08-89ad926180b4",
-                    "helpenabled": false,
+                    "helpenabled": true,
                     "helptext": {
-                        "en": ""
+                        "en": "<p>Enter the civic address of the property or complete the &ldquo;Location Description&rdquo; if the site has no civic address.</p>\n\n<p><u>Street Address</u></p>\n\n<p>Use <a href=\"https://bcgov.github.io/ols-devkit/ols-demo/index.html\" style=\"color:blue; text-decoration:underline\">BC Address Geocoder</a> to validate and standardize the address into a consistent format. Enter the address into the search box of the website and it will automatically suggest the correct address and abbreviate the street suffix. Copy and paste into the Street Address and City fields.</p>\n\n<p>If the site occupies more than one street number, enter a range (e.g. 515-521 Hawkes Ave). If the site consists of multiple addresses that cannot be represented by a range, add separate address entries. If there is no number associated with the heritage site, enter the street name only (e.g. Fairfield Rd).</p>\n\n<p><u>City</u></p>\n\n<p>Enter the city of the heritage site.</p>\n\n<p><u>Locality</u></p>\n\n<p>Enter the established area or neighbourhood the site is located in, if identified by the Local Government.</p>\n\n<p><u>Province</u></p>\n\n<p>Default province is set to British Columbia.</p>\n\n<p><u>Postal Code</u></p>\n\n<p>Enter the postal code if known.</p>\n\n<p><u>Location Description</u></p>\n\n<p>Describe the location and extent of the site as concisely as possible for heritage sites that have no civic address (e.g. trails).</p>\n\n<p>Examples:</p>\n\n<p>Located at 800-block Wain Road, North Saanich</p>\n\n<p>Located in central BC, 90 km east of Quesnel</p>\n\n<p>Located in the east corner of park boundary</p>\n\n<p>Located in Burrard Inlet, approximately 10 meters from shore southwest of First Narrows</p>\n\n<p>&nbsp;</p>\nAdd multiple entries as applicable."
                     },
                     "helptitle": {
-                        "en": ""
+                        "en": "Property Address Help"
                     },
                     "instructions": {
-                        "en": "Enter the address of the location."
+                        "en": ""
                     },
-                    "is_editable": false,
+                    "is_editable": true,
                     "name": {
                         "en": "BC Property Address"
                     },
@@ -135,17 +135,17 @@
                         "en": "Represents a single node in a graph"
                     },
                     "graph_id": "cef9c510-e3e6-4057-ac08-89ad926180b4",
-                    "helpenabled": false,
+                    "helpenabled": true,
                     "helptext": {
-                        "en": ""
+                        "en": "<p>Define the spatial location of the site following the process below.</p>\n\n<p><u>Spatial Location</u></p>\n\n<p><strong>Step 1:</strong> Confirm there is no existing record for the site located on the map before making a new site.</p>\n\n<p><strong>Step 2:</strong> Navigate to the site on the map box. Enter street address or city in the map search bar. Click &ldquo;Edit&rdquo; on the right-side panel.</p>\n\n<p><strong>Step 3</strong>: Define the Site Boundary using one of the following options:</p>\n\n<ul>\n\t<li><strong>Draw:&nbsp;</strong>Add a new feature for the Site Boundary whether that&rsquo;s a point, line, or polygon and begin drawing the site boundaries in the map box using satellite imagery or other georeferences as a guide. Double click on the second last point to close a polygon.</li>\n\t<li><strong>Select Cadastral Feature:</strong>&nbsp;For &ldquo;Select Cadastral Feature&rdquo; turn on the Cadastral ParcelMap layer in the Overlays tab. Select the cadastral feature on the map and click &ldquo;Copy Geometry.&rdquo;</li>\n\t<li><strong>Upload Spatial Data</strong>: Upload a GeoJSON or KML file</li>\n</ul>\n\n<p><strong>Step 4:</strong> Saved geometry/geometries will appear as listed feature(s) that can be edited or deleted as necessary.</p>\n\n<p>&nbsp;</p>\n\n<p><u>Accuracy Remarks</u></p>\n\n<p>Describe how the site was digitized.</p>\n\n<p>Examples:</p>\n\n<p>Site digitized using shapefile; Site digitized using cadastral lot boundaries; Site digitized using satellite imagery</p>\n\n<p>&nbsp;</p>\n\n<p><u>Source Notes</u></p>\n\n<p>Describe the source of the spatial data.</p>\n\n<p>Example: Submitted by Local Government</p>\n"
                     },
                     "helptitle": {
-                        "en": ""
+                        "en": "Spatial Location Help"
                     },
                     "instructions": {
-                        "en": "Define the spatial location."
+                        "en": ""
                     },
-                    "is_editable": false,
+                    "is_editable": true,
                     "name": {
                         "en": "Spatial Location"
                     },
@@ -164,15 +164,15 @@
                     "graph_id": "cef9c510-e3e6-4057-ac08-89ad926180b4",
                     "helpenabled": false,
                     "helptext": {
-                        "en": ""
+                        "en": "<p>Define the spatial location of the site following the process below.</p>\n\n<p><u>Spatial Location</u></p>\n\n<p><strong>Step 1:</strong> Confirm there is no existing record for the site located on the map before making a new site.</p>\n\n<p><strong>Step 2:</strong> Navigate to the site on the map box. Enter street address or city in the map search bar. Click &ldquo;Edit&rdquo; on the right-side panel.</p>\n\n<p><strong>Step 3</strong>: Define the Site Boundary using one of the following options:</p>\n\n<ul>\n\t<li><strong>Draw:&nbsp;</strong>Add a new feature for the Site Boundary whether that&rsquo;s a point, line, or polygon and begin drawing the site boundaries in the map box using satellite imagery or other georeferences as a guide. Double click on the second last point to close a polygon.</li>\n\t<li><strong>Select Cadastral Feature:</strong>&nbsp;For &ldquo;Select Cadastral Feature&rdquo; turn on the Cadastral ParcelMap layer in the Overlays tab. Select the cadastral feature on the map and click &ldquo;Copy Geometry.&rdquo;</li>\n\t<li><strong>Upload Spatial Data</strong>: Upload a GeoJSON or KML file</li>\n</ul>\n\n<p><strong>Step 4:</strong> Saved geometry/geometries will appear as listed feature(s) that can be edited or deleted as necessary.</p>\n\n<p>&nbsp;</p>\n\n<p><u>Accuracy Remarks</u></p>\n\n<p>Describe how the site was digitized.</p>\n\n<p>Examples:</p>\n\n<p>Site digitized using shapefile; Site digitized using cadastral lot boundaries; Site digitized using satellite imagery</p>\n\n<p>&nbsp;</p>\n\n<p><u>Source Notes</u></p>\n\n<p>Describe the source of the spatial data.</p>\n\n<p>Example: Submitted by Local Government</p>\n"
                     },
                     "helptitle": {
-                        "en": ""
+                        "en": "Spatial Location Help"
                     },
                     "instructions": {
                         "en": ""
                     },
-                    "is_editable": false,
+                    "is_editable": true,
                     "name": {
                         "en": "Heritage Site Location"
                     },
@@ -189,17 +189,17 @@
                     "cssclass": null,
                     "description": null,
                     "graph_id": "cef9c510-e3e6-4057-ac08-89ad926180b4",
-                    "helpenabled": false,
+                    "helpenabled": true,
                     "helptext": {
-                        "en": ""
+                        "en": "<p>Assign a Borden number for site identification. Ensure the record is authoritative before assigning a Borden number. <strong>BORDEN NUMBERS CANNOT BE DELETED</strong>.&nbsp;</p>\n\n<p>The Borden System is used to provide an archaeological or heritage site in Canada with a unique identifier. It is based on a grid map with coordinating letters and numbers.</p>\n\n<p><u>Borden Number</u></p>\n\n<p>Click &ldquo;+ Generate Borden Number&rdquo; to automatically assign the next available Borden number.</p>\nThe next sequential Borden number is generated from outside of Arches, interacting with Archaeology Branch&rsquo;s Heritage Resource Inventory Application and creating a blank historic site record in their system to reserve the number. For this reason, Borden numbers are unable to be deleted in Arches as they exist in two systems."
                     },
                     "helptitle": {
-                        "en": ""
+                        "en": "Borden Number Help"
                     },
                     "instructions": {
                         "en": ""
                     },
-                    "is_editable": false,
+                    "is_editable": true,
                     "name": {
                         "en": "Borden Number"
                     },
@@ -216,17 +216,17 @@
                     "cssclass": null,
                     "description": null,
                     "graph_id": "cef9c510-e3e6-4057-ac08-89ad926180b4",
-                    "helpenabled": false,
+                    "helpenabled": true,
                     "helptext": {
-                        "en": ""
+                        "en": "<p>Child sites are sites that link to a parent record, such as segments of a trail. Child sites can also be smaller sites located within a larger site, but has its own distinct information.</p>\nEnter the site name, address, or borden number of the child site and select from the drop down list of existing sites to link it to the parent record."
                     },
                     "helptitle": {
-                        "en": ""
+                        "en": "Child Sites Help"
                     },
                     "instructions": {
                         "en": ""
                     },
-                    "is_editable": false,
+                    "is_editable": true,
                     "name": {
                         "en": "Child Sites"
                     },
@@ -245,15 +245,15 @@
                     "graph_id": "cef9c510-e3e6-4057-ac08-89ad926180b4",
                     "helpenabled": true,
                     "helptext": {
-                        "en": ""
+                        "en": "<p>Define the designation or protection status.</p>\n\n<p><u>Designation or Protection Start Date</u></p>\n\n<p>Enter the date the site was formally recognized by Bylaw, Council Resolution, Order in Council, etc.</p>\n\n<p><u>Designation or Protection End Date</u></p>\n\n<p>Enter the date the site was no longer formally recognized or protected and add a note to explain the expiry. The end date is the date that the decision was enacted through any of the following:</p>\n\n<ul>\n\t<li>De-designation or revocation</li>\n\t<li>Cancellation of a Heritage Tax Exemption</li>\n\t<li>Cancellation of a Heritage Revitalization Agreement</li>\n\t<li>De-listing from a Community Heritage Register</li>\n\t<li>Exclusion of Heritage Property from a Heritage Conservation Area</li>\n\t<li>Etc.</li>\n</ul>\n\n<p><u>Legislative Act</u></p>\n\n<p>Select the relevant legislation that the site is formally recognized under. Either scroll through the options or start typing:</p>\n\n<ul>\n\t<li>the authority (e.g. Provincial)</li>\n\t<li>name of the act (e.g. Heritage Conservation Act)</li>\n\t<li>the recognition type (e.g. Designation)</li>\n</ul>\n\n<p><u>Government Name</u></p>\n\n<p>Select the appropriate government authority that administered the recognition.</p>\n\n<p><u>Reference Number</u></p>\n\n<p>Enter how the decision was enacted and the corresponding reference number if applicable.</p>\n\n<p>Examples: Bylaw 12-983;&nbsp;OIC 1946; Council Resolution (for Municipalities); Board Resolution (for Regional Districts)</p>\n\n<p><u>Official Recognition Internal Notes</u></p>\n\n<p>Add remarks related to the official recognition and specifically to explain an expiry date.</p>\n\n<p>Example: Removed from Local Government Community Heritage Register 18 October 2012 due to fire that destroyed the building.</p>\nAdd multiple entries as applicable."
                     },
                     "helptitle": {
-                        "en": ""
+                        "en": "Official Recognition Details Help"
                     },
                     "instructions": {
-                        "en": "Define the resource's designation or protection status."
+                        "en": ""
                     },
-                    "is_editable": false,
+                    "is_editable": true,
                     "name": {
                         "en": "Official Recognition Details"
                     },
@@ -272,17 +272,17 @@
                         "en": "Captures information about special status, protection, or privileges afforded under law.\n\nApplies to: Heritage Resource, Heritage Resource Model"
                     },
                     "graph_id": "cef9c510-e3e6-4057-ac08-89ad926180b4",
-                    "helpenabled": false,
+                    "helpenabled": true,
                     "helptext": {
-                        "en": ""
+                        "en": "<p>Enter the official recognition status.</p>\n\n<p>&nbsp;</p>\n\n<p><u>Registration Status</u></p>\n\n<p>Select the appropriation status information based on the following definitions.</p>\n\n<p>Registered &ndash; the heritage site is officially recognized by a legislative enactment from the province, municipality, or regional district.</p>\n\n<p>Federal Jurisdiction &ndash; The authority for the site is the federal government and is included for information purposes. It is not subject to provincial or local government legislation.</p>\n\n<p>Recorded/Unprotected &ndash; a heritage site that has never been recognized or protected but is recorded for information purposes only.</p>\n\n<p>Legacy &ndash; Use when the official recognition of the site was removed due to de-designation, destruction, removal from a Community Heritage Register, or otherwise no longer has reason to be on the official Register. Register type should be Non-Designated.</p>\n\n<p>Cancelled Record &ndash; The record is cancelled when it&rsquo;s determined to be obsolete, such as when the record is erroneous or when information has been moved to another record but the Borden number is retained for any associated files. This status is preferred over deleting records if it has been in existence for a while.</p>\n\n<p>&nbsp;</p>\n\n<p><u>Officially Recognized</u></p>\n\n<p>Yes &ndash; The heritage site is officially recognized and eligible for inclusion on the BC Register of Historic Places because its heritage value has been recognized or protected through a legislative enactment by the Province, municipality, or regional district. This selection also includes federally designated national heritage sites in BC for information purposes.</p>\n\n<p>No &ndash; The heritage site is currently not officially recognized or protected. This includes de-designated heritage sites, revocations, and destroyed heritage sites. This selection also includes reported, non-designated heritage sites and structures, including sites in federal jurisdiction for information purposes.</p>\n\n<p>&nbsp;</p>\n\n<p><u>Registry Types</u></p>\n\n<p>Select the appropriate Registry type(s):</p>\n\n<p>Agreement with First Nations - Heritage sites and objects protected by Sec 4, HCA</p>\n\n<p>Archaeological Site - Sites automatically protected under Sec 12.1, HCA including: burial sites; Indigenous rock paintings; Indigenous rock carvings; Pre-1846 sites; heritage wrecks over 2 years old; and other archaeological sites as defined by regulation</p>\n\n<p>CMT - Culturally Modified Trees</p>\n\n<p>Heritage Wreck - Plane wrecks or shipwrecks over two years old as defined by Sec 12.1, HCA</p>\n\n<p>Non-Designated Historic Site - Heritage sites recorded but not protected or recognized by any legislation</p>\n\n<p>Palaeontological Site &ndash; Fossil sites</p>\n\n<p>Prescribed Heritage Property - Heritage sites prescribed by regulation under Sec 3(1)(f), HCA.&nbsp;This includes Sec 18 sites.</p>\n\n<p>Provincial Heritage Object - Objects protected under Sec 9, HCA</p>\n\n<p>Provincial Heritage Site - Sites protected under Sec 9, HCA</p>\n\n<p>Provincial Heritage Property - Heritage sites protected under Sec 11.1, HCA</p>\n\n<p>Traditional Use Site &ndash; Non-archaeological, non-protected Indigenous sites such as berry picking areas, spiritual areas, etc.</p>\n\n<p>Trail - Heritage trails</p>\nSelect multiple registry types as applicable."
                     },
                     "helptitle": {
-                        "en": ""
+                        "en": "Official Recognition Information Help"
                     },
                     "instructions": {
                         "en": ""
                     },
-                    "is_editable": false,
+                    "is_editable": true,
                     "name": {
                         "en": "Official Recognition Information"
                     },
@@ -299,17 +299,17 @@
                     "cssclass": null,
                     "description": "",
                     "graph_id": "cef9c510-e3e6-4057-ac08-89ad926180b4",
-                    "helpenabled": false,
+                    "helpenabled": true,
                     "helptext": {
-                        "en": ""
+                        "en": "<p>Define the number and type of resources included in the heritage site and their ownership class.</p>\n\n<p><u>Number of Contributing Resources</u></p>\n\n<p>Contributing resources are located within the boundaries of the heritage site and significantly contribute to its heritage value and are identified in the Statement of Significance. In the case of districts, include approximate number of all buildings.</p>\n\n<p><u>Heritage Category</u></p>\n\n<p>Archaeological Site/Remains - a resource that includes evidence of past human occupation located below, on or above ground or underwater, such as remains of a temporary shelter or structure, traces of trails and other transportation corridors, archaeological resources, etc.</p>\n\n<p>Building - a construction with a roof and walls, used for shelter.</p>\n\n<p>Collection- a moveable resource, located within the heritage site boundaries that contributes to the heritage value and understanding of the place, such as archaeological artifacts, furnishings within buildings, a collection of paintings, etc.</p>\n\n<p>Landscape(s) or Landscape Feature(s) - a resource either man-made or natural within a heritage site that contributes to its heritage value, such as a park, a garden or trees.</p>\n\n<p>Structure - a human-made construction that is not a building (e.g. fence). Some structures may be relatively small and/or exist as accessories to other buildings or structures.</p>\n\n<p><u>Ownership</u></p>\n\n<p>Not-for-profit - owned by a not-for-profit entity. Such a corporation is without share capital and normally has no transferable ownership interests. This can include entities such as religious organizations, community groups, fraternal organizations, foundations, etc.</p>\n\n<p>Private - owned by a private entity and is under private control. It may be owned by an individual, group of individuals or company, but not by a government body.</p>\n\n<p>Public (federal) - owned by a public (federal) entity and is under federal government control.</p>\n\n<p>Public (local) - owned by a public (local) entity and is under local or municipal government control.</p>\n\n<p>Public (provincial) - owned by a public (provincial) entity and is under provincial government control.</p>\n\n<p>Add multiple entries as applicable.</p>\n"
                     },
                     "helptitle": {
-                        "en": ""
+                        "en": "Heritage Class Help"
                     },
                     "instructions": {
                         "en": ""
                     },
-                    "is_editable": false,
+                    "is_editable": true,
                     "name": {
                         "en": "Heritage Class"
                     },
@@ -326,17 +326,17 @@
                     "cssclass": null,
                     "description": "",
                     "graph_id": "cef9c510-e3e6-4057-ac08-89ad926180b4",
-                    "helpenabled": false,
+                    "helpenabled": true,
                     "helptext": {
-                        "en": ""
+                        "en": "<p>Enter the Statement of Significance for the heritage site. The Statement of Significance explains what the formal recognition applies to, what is valued about the place, and which principal features must be retained to preserve the identified values.</p>\n\n<p>For resources, see the <a href=\"https://www.historicplaces.ca/media/21054/sos_guide_final_e_new_design.pdf\" style=\"color:blue; text-decoration:underline\">Canadian Register of Historic Places Writing Statements of Significance</a></p>\n\n<p><u>Significance Type</u></p>\n\n<p>Select the authority type responsible for the Statement of Significance</p>\n\n<p><u>Description</u></p>\n\n<p>Enter the short description of the physical elements of the property, where it is located (including province), and its physical situation or context.</p>\n\n<p><u>Heritage Value</u></p>\n\n<p>Describe why the place is valued by the community, province, or territory and identify which heritage values the formal recognition is based on. Heritage values are the aesthetic, historic, scientific, cultural, social, or spiritual importance or significance for past, present or future generations.</p>\n\n<p><u>Character-Defining Elements</u></p>\n\n<p>List the key features of the heritage site that contribute to its heritage value.</p>\n\n<p><u>Document Location</u></p>\nEnter the government or agency name where the original document was created.<br />\n&nbsp;"
                     },
                     "helptitle": {
-                        "en": ""
+                        "en": "Statement of Significance Help"
                     },
                     "instructions": {
                         "en": ""
                     },
-                    "is_editable": false,
+                    "is_editable": true,
                     "name": {
                         "en": "Statement of Significance"
                     },
@@ -353,17 +353,17 @@
                     "cssclass": "",
                     "description": "",
                     "graph_id": "cef9c510-e3e6-4057-ac08-89ad926180b4",
-                    "helpenabled": false,
+                    "helpenabled": true,
                     "helptext": {
-                        "en": ""
+                        "en": "<p>Define the Heritage Function(s).</p>\n\n<p><u>Functional Category</u></p>\n\n<p>Select the most relevant functional category or categories. Definitions of Functional Category Types and Subtypes are available <a href=\"https://www.historicplaces.ca/media/5428/doc-standards-en.pdf\" style=\"color:blue; text-decoration:underline\">here</a></p>\n\n<p><u>Functional Period</u></p>\n\n<p>Select one or both check boxes to indicate whether the functional use of the heritage site is Current and/or Historic.</p>\nAdd multiple entries as applicable."
                     },
                     "helptitle": {
-                        "en": ""
+                        "en": "Heritage Function Help"
                     },
                     "instructions": {
                         "en": ""
                     },
-                    "is_editable": false,
+                    "is_editable": true,
                     "name": {
                         "en": "Heritage Function"
                     },
@@ -380,49 +380,22 @@
                     "cssclass": null,
                     "description": "{\"en\": \"\"}",
                     "graph_id": "cef9c510-e3e6-4057-ac08-89ad926180b4",
-                    "helpenabled": false,
+                    "helpenabled": true,
                     "helptext": {
-                        "en": ""
+                        "en": "<p>Enter any internal-only remarks.</p>\n\n<p><u>Remark Type</u></p>\n\n<p>Select an option from the drop-down menu.</p>\n\n<p>General &ndash; Select for general remarks about record.</p>\n\n<p>Duplicate Record &ndash; Select if the record is a duplicate and needs reconciling.</p>\n\n<p>Incomplete Data &ndash; Select if there is incomplete data that needs resolving.</p>\n\n<p>Restriction Reason &ndash; Select if the record is restricted and document the reason, such as owner requested removal.</p>\n\n<p><u>Internal Remark</u></p>\n\n<p>Enter the internal remark.</p>\n\n<p><u>Remark Date</u></p>\nEnter the date the remark was made."
                     },
                     "helptitle": {
-                        "en": ""
+                        "en": "Internal Remarks Help"
                     },
                     "instructions": {
                         "en": ""
                     },
-                    "is_editable": false,
+                    "is_editable": true,
                     "name": {
                         "en": "Internal Remarks"
                     },
                     "nodegroup_id": "8e26b0a4-9ae3-11ee-a366-080027b7463b",
                     "sortorder": 15,
-                    "visible": true
-                },
-                {
-                    "active": true,
-                    "cardid": "a4ea0fe0-9901-11ee-b789-080027b7463b",
-                    "component_id": "f05e4d3a-53c1-11e8-b0ea-784f435179ea",
-                    "config": null,
-                    "constraints": [],
-                    "cssclass": null,
-                    "description": "{\"en\": \"\"}",
-                    "graph_id": "cef9c510-e3e6-4057-ac08-89ad926180b4",
-                    "helpenabled": false,
-                    "helptext": {
-                        "en": ""
-                    },
-                    "helptitle": {
-                        "en": ""
-                    },
-                    "instructions": {
-                        "en": ""
-                    },
-                    "is_editable": false,
-                    "name": {
-                        "en": "Decision History"
-                    },
-                    "nodegroup_id": "a4ea0cfc-9901-11ee-b789-080027b7463b",
-                    "sortorder": 14,
                     "visible": true
                 },
                 {
@@ -434,17 +407,17 @@
                     "cssclass": null,
                     "description": null,
                     "graph_id": "cef9c510-e3e6-4057-ac08-89ad926180b4",
-                    "helpenabled": false,
+                    "helpenabled": true,
                     "helptext": {
-                        "en": ""
+                        "en": "<p>Enter the Architects/Builders associated with the heritage site.</p>\n\n<p><u>Name</u></p>\n\n<p>Enter the first and last name of an architect or builder.</p>\n\n<p><u>Type</u></p>\n\n<p>Select the appropriate type from the drop-down menu.</p>\n\n<p>Architect / Designer &nbsp;- Refers to an architect, architectural firm, engineer, or designer. The architect/designer is the person or firm responsible for the design and/or production of plans for any buildings or other contributing resources of the site.</p>\n\n<p>Builder - Refers to the individual(s) or firm(s) that contributed to the construction of a building or other contributing resources of the site, including elements created by craftspeople or artisans (e.g. stained glass work).</p>\n\n<p><u>Architects/Builders Notes</u></p>\n\n<p>Provide any additional comments about the architect/builder.</p>\nAdd multiple entries as applicable."
                     },
                     "helptitle": {
-                        "en": ""
+                        "en": "Architects/Builders Help"
                     },
                     "instructions": {
                         "en": ""
                     },
-                    "is_editable": false,
+                    "is_editable": true,
                     "name": {
                         "en": "Architects / Builders"
                     },
@@ -461,17 +434,17 @@
                     "cssclass": null,
                     "description": null,
                     "graph_id": "cef9c510-e3e6-4057-ac08-89ad926180b4",
-                    "helpenabled": false,
+                    "helpenabled": true,
                     "helptext": {
-                        "en": ""
+                        "en": "<p>Enter any external URLs associated with the heritage site.</p>\n\n<p>Only include links that directly relate to the heritage site&rsquo;s history and value and not commercial links. It is strongly recommended that only long-term stable URLs are provided to avoid inactive links.</p>\n\n<p><u>External URL Type</u></p>\n\n<p>Select URL type from the drop-down menu.</p>\n\n<p><u>Link Text (Optional)</u></p>\n\n<p>Type the text that will be visible to the reader from the record view page. Clicking the link text will send the reader to the specified URL Address.</p>\n\n<p>Example: Chinese Gardens, Rossland Heritage Commission</p>\n\n<p><u>URL for link</u></p>\n\n<p>Enter the URL Address.</p>\n"
                     },
                     "helptitle": {
-                        "en": ""
+                        "en": "External URLs Help"
                     },
                     "instructions": {
                         "en": "Enter any external URLs associated with this Historic Place"
                     },
-                    "is_editable": false,
+                    "is_editable": true,
                     "name": {
                         "en": "External URLs"
                     },
@@ -488,17 +461,17 @@
                     "cssclass": "",
                     "description": "",
                     "graph_id": "cef9c510-e3e6-4057-ac08-89ad926180b4",
-                    "helpenabled": false,
+                    "helpenabled": true,
                     "helptext": {
-                        "en": ""
+                        "en": "<p>Attach digital documents with information relating to the site.</p>\n\n<p><u>Document Type</u></p>\n\n<p>Select the appropriate document type.</p>\n\n<p><u>Document Description</u></p>\nProvide a short description of the document content (e.g. Bylaw)"
                     },
                     "helptitle": {
-                        "en": ""
+                        "en": "Documents Help"
                     },
                     "instructions": {
-                        "en": "Attach digital documents with information regarding the Site."
+                        "en": ""
                     },
-                    "is_editable": false,
+                    "is_editable": true,
                     "name": {
                         "en": "Documents"
                     },
@@ -517,17 +490,17 @@
                     "cssclass": null,
                     "description": null,
                     "graph_id": "cef9c510-e3e6-4057-ac08-89ad926180b4",
-                    "helpenabled": false,
+                    "helpenabled": true,
                     "helptext": {
-                        "en": ""
+                        "en": "<p>Enter information relevant to each individual image. Select an image from the image list to edit.</p>\n\n<p><u>Primary Image</u></p>\n\n<p>Select one primary image from the image list for the site.</p>\n\n<p><u>Submit to CRHP</u></p>\n\n<p>Select up to three images from the image list to submit to the Canadian Register of Historic Places (CRHP).</p>\n\n<p><u>Image Type</u></p>\n\n<p>Select one of the following:</p>\n\n<p><strong>Historical - </strong>&nbsp;Historical images are images that were created in the contextual past and usually for a purpose other than documenting the historic place.</p>\n\n<p><strong>Contemporary - </strong>Contemporary images are images that have been created recently and generally for</p>\n\n<p><u>Image View</u></p>\n\n<p>Select the view that best describes the image. Either scroll through the options or start typing.</p>\n\n<p>You can select one of the high-level general descriptors (below) or a more specific view option.</p>\n\n<p><strong>Interior - </strong>Refers to an image that depicts the inside of a building, structure, or object that has interior and exterior spaces.</p>\n\n<p><strong>Exterior</strong> - Refers to an image that depicts the exterior of a building, structure, or object that has interior and exterior spaces.</p>\n\n<p><strong>Landscape</strong> - Refers to an image that depicts the visible features of an area and can include natural and/or built components.</p>\n\n<p>To further describe the image, you may select a sub-view option.</p>\n\n<p><strong>Aerial view - </strong>Refers to views achieved by creating the image from a high location such as a drone or aircraft.</p>\n\n<p><strong>Back view</strong> &ndash; Refers to depiction of the back of a subject such as the back fa&ccedil;ade of a building.</p>\n\n<p><strong>Close view</strong> &ndash; Refers to view where the emphasis is on the proximity of the subject as a whole.</p>\n\n<p><strong>Corner view</strong> &ndash; Refers to a view of a subject from (roughly) a &frac34; angle or directly out from a corner.</p>\n\n<p><strong>Detail view</strong> &ndash; Refers to an image containing a partial view that focuses on a particular piece of the whole.</p>\n\n<p><strong>Distant view</strong> &ndash; Refers to an image created at a distance, typically showing the overall layout, design, or plan.</p>\n\n<p><strong>Front view</strong> &ndash; Refers to an image depicting the front of a subject.</p>\n\n<p><strong>Left side view</strong> &ndash; Refers to an image depicting the left side of a subject, from the perspective of the subject.</p>\n\n<p><strong>Overhead view</strong> &ndash; Refers to depictions with a vantage point above the subject.</p>\n\n<p><strong>Right side view</strong> &ndash; Refers to an image depicting the right side of a subject, from the perspective of the subject.</p>\n\n<p><u>Image Feature(s)</u></p>\n\n<p>Enter any additional information that would help describe the central subject(s) of the image such as the object of interest for details or room name for interior, etc. This field is optional.</p>\n\n<p><u>Image Date</u></p>\n\n<p>Enter the year that the image was created.</p>\n\n<p><u>Image Description</u></p>\n\n<p>Enter the full description of the content of the image including site name and/or street address.</p>\n\n<p>Example: View of the front entrance of Point Ellice House and gardens in summer.</p>\n\n<p><u>Photographer</u></p>\n\n<p>Enter the first and last name of the photographer.</p>\n\n<p><u>Copyright</u></p>\n\n<p>Enter the name of the copyright holder or the name of the owning institution (often government name). Optional information (if known) can include: the name of the photographer, the year the original image was created, and the item number assigned by the holding institution.</p>\nExample: Heritage Branch, Ministry of Tourism, Arts &amp; Culture, 2018"
                     },
                     "helptitle": {
-                        "en": ""
+                        "en": "Images Help"
                     },
                     "instructions": {
                         "en": ""
                     },
-                    "is_editable": false,
+                    "is_editable": true,
                     "name": {
                         "en": "Images"
                     },
@@ -544,17 +517,17 @@
                     "cssclass": null,
                     "description": null,
                     "graph_id": "cef9c510-e3e6-4057-ac08-89ad926180b4",
-                    "helpenabled": false,
+                    "helpenabled": true,
                     "helptext": {
-                        "en": ""
+                        "en": "<p>Enter the construction and/or significant dates associated with the heritage site. All dates in these fields are Common Era dates. Before Common Era dates can be included in the Statement of Significance.</p>\n\n<p><u>Event</u></p>\n\n<p>Select the appropriate event type.</p>\n\n<p><u>Start Year and End Year</u></p>\n\n<p>Enter the year in Start Year for a singular date and enter the year in End Year for a date range.</p>\n\n<p><u>Circa</u></p>\n\n<p>Mark the check box &ldquo;Circa&rdquo; to indicate whether the dates are approximate.</p>\n\n<p><u>Source of Dates</u></p>\n\n<p>Enter the source of the data, usually the government or agency name that submitted the date.</p>\n\n<p><u>Chronology Notes</u></p>\n\n<p>Enter additional remarks related to the events. When entering a &ldquo;significant&rdquo; date include a brief explanation, such as &ldquo;Date Addition was constructed&rdquo;.</p>\nAdd multiple entries as applicable.<br />\n&nbsp;"
                     },
                     "helptitle": {
-                        "en": ""
+                        "en": "Chronology Help"
                     },
                     "instructions": {
                         "en": ""
                     },
-                    "is_editable": false,
+                    "is_editable": true,
                     "name": {
                         "en": "Chronology"
                     },
@@ -571,17 +544,17 @@
                     "cssclass": null,
                     "description": null,
                     "graph_id": "cef9c510-e3e6-4057-ac08-89ad926180b4",
-                    "helpenabled": false,
+                    "helpenabled": true,
                     "helptext": {
-                        "en": ""
+                        "en": "<p>Enter the site name to be the &ldquo;Common&rdquo; name. This is mandatory for all sites.</p>\n\n<p>Make additional entries for all &ldquo;Other&rdquo; names. This is optional for all sites.</p>\n\n<p>&nbsp;</p>\n\n<p><u>Site Name</u></p>\n\n<p>The heritage site name should be concise and well known to the public to facilitate its searchability on the register. Site names can reference an address, location, current or historic use, event, person, or organization. Local Governments are responsible for providing names of municipal sites. If a name is not provided, use the address.</p>\n\n<p>&nbsp;</p>\n\n<p><u>Name Type</u></p>\n\n<p>Select the appropriate name type from the drop-down menu.</p>\n\n<p>Common &ndash; This is the most recognizable site name to the public and will be the primary name that appears in the register.</p>\nOther &ndash; These are other recognizable or historic names for the site."
                     },
                     "helptitle": {
-                        "en": ""
+                        "en": "Site Name Help"
                     },
                     "instructions": {
                         "en": ""
                     },
-                    "is_editable": false,
+                    "is_editable": true,
                     "name": {
                         "en": "Site Names"
                     },
@@ -606,7 +579,7 @@
                         "label": "Internal Remark",
                         "maxLength": null,
                         "placeholder": {
-                            "en": "Enter text"
+                            "en": ""
                         },
                         "uneditable": false,
                         "width": "100%"
@@ -633,9 +606,9 @@
                             "placeholder"
                         ],
                         "label": "Locality",
-                        "maxLength": null,
+                        "maxLength": "50",
                         "placeholder": {
-                            "en": "Enter the locatlity which the property lies within"
+                            "en": ""
                         },
                         "uneditable": false,
                         "width": "100%"
@@ -662,9 +635,9 @@
                             "placeholder"
                         ],
                         "label": "City",
-                        "maxLength": null,
+                        "maxLength": "80",
                         "placeholder": {
-                            "en": "Enter text"
+                            "en": ""
                         },
                         "uneditable": false,
                         "width": "100%"
@@ -693,7 +666,7 @@
                         "label": "Street Address",
                         "maxLength": "80",
                         "placeholder": {
-                            "en": "Enter text"
+                            "en": ""
                         },
                         "uneditable": false,
                         "width": "100%"
@@ -742,9 +715,9 @@
                             "placeholder"
                         ],
                         "label": "Postal Code",
-                        "maxLength": null,
+                        "maxLength": "7",
                         "placeholder": {
-                            "en": "Property postal code"
+                            "en": "E.g. V8V 1X4"
                         },
                         "uneditable": false,
                         "width": "100%"
@@ -771,9 +744,9 @@
                             "placeholder"
                         ],
                         "label": "Legal Description",
-                        "maxLength": null,
+                        "maxLength": "250",
                         "placeholder": {
-                            "en": "Enter text"
+                            "en": ""
                         },
                         "uneditable": false,
                         "width": "100%"
@@ -784,35 +757,6 @@
                     },
                     "node_id": "1b623ccc-0d0f-11ed-98c2-5254008afee6",
                     "sortorder": 2,
-                    "visible": true,
-                    "widget_id": "10000000-0000-0000-0000-000000000001"
-                },
-                {
-                    "card_id": "1b622c8c-0d0f-11ed-98c2-5254008afee6",
-                    "config": {
-                        "defaultValue": {
-                            "en": {
-                                "direction": "ltr",
-                                "value": ""
-                            }
-                        },
-                        "i18n_properties": [
-                            "placeholder"
-                        ],
-                        "label": "PID (Parcel Identifier)",
-                        "maxLength": null,
-                        "placeholder": {
-                            "en": "Enter text"
-                        },
-                        "uneditable": false,
-                        "width": "100%"
-                    },
-                    "id": "1b626058-0d0f-11ed-98c2-5254008afee6",
-                    "label": {
-                        "en": "PID (Parcel Identifier)"
-                    },
-                    "node_id": "1b623e20-0d0f-11ed-98c2-5254008afee6",
-                    "sortorder": 0,
                     "visible": true,
                     "widget_id": "10000000-0000-0000-0000-000000000001"
                 },
@@ -829,9 +773,9 @@
                             "placeholder"
                         ],
                         "label": "Accuracy Remarks",
-                        "maxLength": null,
+                        "maxLength": "500",
                         "placeholder": {
-                            "en": "Enter text"
+                            "en": "E.g. Site digitized using..."
                         },
                         "uneditable": false,
                         "width": "100%"
@@ -841,36 +785,7 @@
                         "en": "Accuracy Remarks"
                     },
                     "node_id": "1b6259fa-0d0f-11ed-98c2-5254008afee6",
-                    "sortorder": 2,
-                    "visible": true,
-                    "widget_id": "10000000-0000-0000-0000-000000000001"
-                },
-                {
-                    "card_id": "1b623786-0d0f-11ed-98c2-5254008afee6",
-                    "config": {
-                        "defaultValue": {
-                            "en": {
-                                "direction": "ltr",
-                                "value": ""
-                            }
-                        },
-                        "i18n_properties": [
-                            "placeholder"
-                        ],
-                        "label": "Spatial Accuracy",
-                        "maxLength": null,
-                        "placeholder": {
-                            "en": "Enter text"
-                        },
-                        "uneditable": true,
-                        "width": "100%"
-                    },
-                    "id": "1b6261a2-0d0f-11ed-98c2-5254008afee6",
-                    "label": {
-                        "en": "Spatial Accuracy"
-                    },
-                    "node_id": "1b6258ce-0d0f-11ed-98c2-5254008afee6",
-                    "sortorder": 1,
+                    "sortorder": 3,
                     "visible": true,
                     "widget_id": "10000000-0000-0000-0000-000000000001"
                 },
@@ -981,6 +896,42 @@
                     "widget_id": "10000000-0000-0000-0000-000000000004"
                 },
                 {
+                    "card_id": "1b622c8c-0d0f-11ed-98c2-5254008afee6",
+                    "config": {
+                        "defaultValue": "",
+                        "format": "",
+                        "i18n_properties": [
+                            "placeholder",
+                            "prefix",
+                            "suffix"
+                        ],
+                        "label": "PIN",
+                        "max": "",
+                        "min": "",
+                        "placeholder": {
+                            "en": "Enter number"
+                        },
+                        "precision": "",
+                        "prefix": {
+                            "en": ""
+                        },
+                        "step": "",
+                        "suffix": {
+                            "en": ""
+                        },
+                        "uneditable": false,
+                        "width": "100%"
+                    },
+                    "id": "2e7d3670-47dd-438d-bb19-1e580a6af769",
+                    "label": {
+                        "en": "PIN"
+                    },
+                    "node_id": "e1f9e6b6-d048-11ee-8370-080027b7463b",
+                    "sortorder": 1,
+                    "visible": true,
+                    "widget_id": "10000000-0000-0000-0000-000000000008"
+                },
+                {
                     "card_id": "3f985893-79c0-40e4-9d81-6ecfccbe60a3",
                     "config": {
                         "defaultValue": "",
@@ -1000,6 +951,71 @@
                     "widget_id": "10000000-0000-0000-0000-000000000101"
                 },
                 {
+                    "card_id": "1b623786-0d0f-11ed-98c2-5254008afee6",
+                    "config": {
+                        "defaultValue": {
+                            "en": {
+                                "direction": "ltr",
+                                "value": ""
+                            }
+                        },
+                        "i18n_properties": [
+                            "placeholder"
+                        ],
+                        "label": "Source Notes",
+                        "maxLength": null,
+                        "placeholder": {
+                            "en": "Enter text"
+                        },
+                        "uneditable": false,
+                        "width": "100%%"
+                    },
+                    "id": "3179bcd7-345b-4ba5-99db-60cb8be04068",
+                    "label": {
+                        "en": "Source Notes"
+                    },
+                    "node_id": "05831728-c6d6-11ee-a8fd-080027b7463b",
+                    "sortorder": 2,
+                    "visible": true,
+                    "widget_id": "10000000-0000-0000-0000-000000000001"
+                },
+                {
+                    "card_id": "1b622c8c-0d0f-11ed-98c2-5254008afee6",
+                    "config": {
+                        "defaultValue": "",
+                        "format": "",
+                        "i18n_properties": [
+                            "placeholder",
+                            "prefix",
+                            "suffix"
+                        ],
+                        "label": "PID",
+                        "max": "",
+                        "min": "",
+                        "placeholder": {
+                            "en": "Enter number"
+                        },
+                        "precision": "",
+                        "prefix": {
+                            "en": ""
+                        },
+                        "step": "",
+                        "suffix": {
+                            "en": ""
+                        },
+                        "uneditable": false,
+                        "width": "100%"
+                    },
+                    "id": "32a349f5-d86c-4aff-b7f1-b09fcfa4e624",
+                    "label": {
+                        "en": "PID"
+                    },
+                    "node_id": "ab6cb89e-d048-11ee-8370-080027b7463b",
+                    "sortorder": 0,
+                    "visible": true,
+                    "widget_id": "10000000-0000-0000-0000-000000000008"
+                },
+                {
                     "card_id": "068500bc-0d07-11ed-8804-5254008afee6",
                     "config": {
                         "defaultValue": null,
@@ -1015,36 +1031,7 @@
                     "node_id": "dc974e68-8f0f-11ee-85a0-080027b7463b",
                     "sortorder": 1,
                     "visible": true,
-                    "widget_id": "10000000-0000-0000-0000-000000000003"
-                },
-                {
-                    "card_id": "1b622c8c-0d0f-11ed-98c2-5254008afee6",
-                    "config": {
-                        "defaultValue": {
-                            "en": {
-                                "direction": "ltr",
-                                "value": ""
-                            }
-                        },
-                        "i18n_properties": [
-                            "placeholder"
-                        ],
-                        "label": "PIN (Parcel Identification Number)",
-                        "maxLength": null,
-                        "placeholder": {
-                            "en": "Enter text"
-                        },
-                        "uneditable": false,
-                        "width": "100%"
-                    },
-                    "id": "35f6d9b5-0007-4735-b0eb-2898b328993f",
-                    "label": {
-                        "en": "PIN (Parcel Identification Number)"
-                    },
-                    "node_id": "35615148-5a13-11ed-bf59-5254004d77d3",
-                    "sortorder": 1,
-                    "visible": true,
-                    "widget_id": "10000000-0000-0000-0000-000000000001"
+                    "widget_id": "0346bc9c-d235-4313-adc8-d0e210b2ef25"
                 },
                 {
                     "card_id": "068500bc-0d07-11ed-8804-5254008afee6",
@@ -1081,9 +1068,9 @@
                             "placeholder"
                         ],
                         "label": "Photographer",
-                        "maxLength": null,
+                        "maxLength": "80",
                         "placeholder": {
-                            "en": "Enter text"
+                            "en": ""
                         },
                         "uneditable": false,
                         "width": "100%"
@@ -1112,7 +1099,7 @@
                         "label": "Image Description",
                         "maxLength": null,
                         "placeholder": {
-                            "en": "Enter any extra information about the image."
+                            "en": ""
                         },
                         "uneditable": false,
                         "width": "100%"
@@ -1139,9 +1126,9 @@
                             "placeholder"
                         ],
                         "label": "Chronology Notes",
-                        "maxLength": null,
+                        "maxLength": "250",
                         "placeholder": {
-                            "en": "Enter clarification or remarks here"
+                            "en": "Provide explanation of significant date types."
                         },
                         "uneditable": false,
                         "width": "100%"
@@ -1270,7 +1257,7 @@
                         "label": "Registry Types",
                         "options": [],
                         "placeholder": {
-                            "en": "Select an option"
+                            "en": "Select all applicable options"
                         }
                     },
                     "id": "5bbae878-76b4-449e-8f00-a6afb8ca61b1",
@@ -1278,7 +1265,7 @@
                         "en": "Registry Types"
                     },
                     "node_id": "8e61e1bc-2495-11ed-8f55-5254008afee6",
-                    "sortorder": 1,
+                    "sortorder": 2,
                     "visible": true,
                     "widget_id": "10000000-0000-0000-0000-000000000012"
                 },
@@ -1310,9 +1297,9 @@
                             "placeholder"
                         ],
                         "label": "Document Description",
-                        "maxLength": null,
+                        "maxLength": "250",
                         "placeholder": {
-                            "en": "Provide short description of the document content (eg Bylaw, etc)"
+                            "en": ""
                         },
                         "uneditable": false,
                         "width": "100%"
@@ -1377,17 +1364,17 @@
                         "i18n_properties": [
                             "placeholder"
                         ],
-                        "label": "Legal Address Internal Notes",
+                        "label": "Legal Description Internal Notes",
                         "maxLength": null,
                         "placeholder": {
-                            "en": "Enter text"
+                            "en": ""
                         },
                         "uneditable": false,
                         "width": "100%"
                     },
                     "id": "6304429a-260a-4ee0-a295-3b6c060cb7c1",
                     "label": {
-                        "en": "Legal Address Internal Notes"
+                        "en": "Legal Description Internal Notes"
                     },
                     "node_id": "15656a28-1a67-11ed-b83c-5254008afee6",
                     "sortorder": 3,
@@ -1447,9 +1434,9 @@
                             "placeholder"
                         ],
                         "label": "Reference Number",
-                        "maxLength": null,
+                        "maxLength": "80",
                         "placeholder": {
-                            "en": "Enter text"
+                            "en": "E.g. Bylaw 123"
                         },
                         "uneditable": false,
                         "width": "100%"
@@ -1478,7 +1465,7 @@
                         "label": "Official Recognition Internal Notes",
                         "maxLength": null,
                         "placeholder": {
-                            "en": "Enter text"
+                            "en": ""
                         },
                         "uneditable": false,
                         "width": "100%"
@@ -1490,7 +1477,7 @@
                     "node_id": "6cc30c44-0d06-11ed-8804-5254008afee6",
                     "sortorder": 5,
                     "visible": true,
-                    "widget_id": "10000000-0000-0000-0000-000000000001"
+                    "widget_id": "10000000-0000-0000-0000-000000000005"
                 },
                 {
                     "card_id": "fa2ceef3-2feb-4884-89f2-263f6f315440",
@@ -1505,9 +1492,9 @@
                             "placeholder"
                         ],
                         "label": "Source of Dates",
-                        "maxLength": null,
+                        "maxLength": "250",
                         "placeholder": {
-                            "en": "Enter text"
+                            "en": "E.g. City of Surrey"
                         },
                         "uneditable": false,
                         "width": "100%"
@@ -1596,8 +1583,8 @@
                             "suffix"
                         ],
                         "label": "Number of Contributing Resources",
-                        "max": "",
-                        "min": "",
+                        "max": "1000",
+                        "min": "0",
                         "placeholder": {
                             "en": "Enter number"
                         },
@@ -1698,9 +1685,9 @@
                             "placeholder"
                         ],
                         "label": "Copyright",
-                        "maxLength": null,
+                        "maxLength": "80",
                         "placeholder": {
-                            "en": "Enter text"
+                            "en": "E.g. City of Nelson"
                         },
                         "uneditable": false,
                         "width": "100%"
@@ -1729,7 +1716,7 @@
                         "label": "Heritage Value",
                         "maxLength": null,
                         "placeholder": {
-                            "en": "Enter text"
+                            "en": ""
                         },
                         "uneditable": false,
                         "width": "100%"
@@ -1758,7 +1745,7 @@
                         "label": "Character-Defining Elements",
                         "maxLength": null,
                         "placeholder": {
-                            "en": "Enter text"
+                            "en": ""
                         },
                         "uneditable": false,
                         "width": "100%"
@@ -1787,7 +1774,7 @@
                         "label": "Description",
                         "maxLength": null,
                         "placeholder": {
-                            "en": "Enter text"
+                            "en": ""
                         },
                         "uneditable": false,
                         "width": "100%"
@@ -1836,7 +1823,7 @@
                             "placeholder"
                         ],
                         "label": "Document Location",
-                        "maxLength": null,
+                        "maxLength": "350",
                         "placeholder": {
                             "en": "Enter text"
                         },
@@ -1865,9 +1852,9 @@
                             "placeholder"
                         ],
                         "label": "Architects/Builders Notes",
-                        "maxLength": null,
+                        "maxLength": "250",
                         "placeholder": {
-                            "en": "Provide any additional comments or notes about the Architect / Builder"
+                            "en": ""
                         },
                         "uneditable": false,
                         "width": "100%"
@@ -1894,9 +1881,9 @@
                             "placeholder"
                         ],
                         "label": "Name",
-                        "maxLength": null,
+                        "maxLength": "250",
                         "placeholder": {
-                            "en": "Enter text"
+                            "en": ""
                         },
                         "uneditable": false,
                         "width": "100%"
@@ -1906,7 +1893,7 @@
                         "en": "Name"
                     },
                     "node_id": "b5cdfd32-0d05-11ed-8804-5254008afee6",
-                    "sortorder": null,
+                    "sortorder": 0,
                     "visible": true,
                     "widget_id": "10000000-0000-0000-0000-000000000001"
                 },
@@ -1977,7 +1964,7 @@
                 {
                     "card_id": "e6286387-d046-4d80-aa72-0f6cf7ad5413",
                     "config": {
-                        "defaultValue": "",
+                        "defaultValue": "679bb0b2-770a-4197-b34f-971589683f31",
                         "i18n_properties": [
                             "placeholder"
                         ],
@@ -2018,6 +2005,28 @@
                     "widget_id": "ff3c400a-76ec-11e7-a793-784f435179ea"
                 },
                 {
+                    "card_id": "6cc30640-0d06-11ed-8804-5254008afee6",
+                    "config": {
+                        "defaultValue": "",
+                        "i18n_properties": [
+                            "placeholder"
+                        ],
+                        "label": "Registration Status",
+                        "options": [],
+                        "placeholder": {
+                            "en": "Select an option"
+                        }
+                    },
+                    "id": "9ec96e8a-6b13-4521-82de-98e602581b90",
+                    "label": {
+                        "en": "Registration Status"
+                    },
+                    "node_id": "44d59d3a-3d1d-11ee-9c2a-080027b7463b",
+                    "sortorder": 0,
+                    "visible": true,
+                    "widget_id": "10000000-0000-0000-0000-000000000002"
+                },
+                {
                     "card_id": "e6286387-d046-4d80-aa72-0f6cf7ad5413",
                     "config": {
                         "dateFormat": "YYYY",
@@ -2036,249 +2045,6 @@
                     "sortorder": 6,
                     "visible": true,
                     "widget_id": "10000000-0000-0000-0000-000000000004"
-                },
-                {
-                    "card_id": "a4ea0fe0-9901-11ee-b789-080027b7463b",
-                    "config": {
-                        "defaultValue": {
-                            "en": {
-                                "direction": "ltr",
-                                "value": ""
-                            }
-                        },
-                        "i18n_properties": [
-                            "placeholder"
-                        ],
-                        "label": "Decided By First Name",
-                        "maxLength": null,
-                        "placeholder": {
-                            "en": "Enter text"
-                        },
-                        "uneditable": true,
-                        "width": "100%"
-                    },
-                    "id": "a4ea2070-9901-11ee-b789-080027b7463b",
-                    "label": {
-                        "en": "Decided By First Name"
-                    },
-                    "node_id": "a4ea133c-9901-11ee-b789-080027b7463b",
-                    "sortorder": 0,
-                    "visible": true,
-                    "widget_id": "10000000-0000-0000-0000-000000000001"
-                },
-                {
-                    "card_id": "a4ea0fe0-9901-11ee-b789-080027b7463b",
-                    "config": {
-                        "dateFormat": "YYYY-MM-DD",
-                        "defaultValue": "",
-                        "label": "Recommended Date",
-                        "maxDate": false,
-                        "minDate": false,
-                        "placeholder": "Enter date",
-                        "viewMode": "days"
-                    },
-                    "id": "a4ea2142-9901-11ee-b789-080027b7463b",
-                    "label": {
-                        "en": "Recommended Date"
-                    },
-                    "node_id": "a4ea1f94-9901-11ee-b789-080027b7463b",
-                    "sortorder": 4,
-                    "visible": true,
-                    "widget_id": "10000000-0000-0000-0000-000000000004"
-                },
-                {
-                    "card_id": "a4ea0fe0-9901-11ee-b789-080027b7463b",
-                    "config": {
-                        "dateFormat": "YYYY-MM-DD",
-                        "defaultValue": "",
-                        "label": "Decision Date",
-                        "maxDate": false,
-                        "minDate": false,
-                        "placeholder": "Enter date",
-                        "viewMode": "days"
-                    },
-                    "id": "a4ea2200-9901-11ee-b789-080027b7463b",
-                    "label": {
-                        "en": "Decision Date"
-                    },
-                    "node_id": "a4ea1e36-9901-11ee-b789-080027b7463b",
-                    "sortorder": 8,
-                    "visible": true,
-                    "widget_id": "10000000-0000-0000-0000-000000000004"
-                },
-                {
-                    "card_id": "a4ea0fe0-9901-11ee-b789-080027b7463b",
-                    "config": {
-                        "defaultValue": {
-                            "en": {
-                                "direction": "ltr",
-                                "value": ""
-                            }
-                        },
-                        "i18n_properties": [
-                            "placeholder"
-                        ],
-                        "label": "Recommended By Last Name",
-                        "maxLength": null,
-                        "placeholder": {
-                            "en": "Enter text"
-                        },
-                        "uneditable": true,
-                        "width": "100%"
-                    },
-                    "id": "a4ea22b4-9901-11ee-b789-080027b7463b",
-                    "label": {
-                        "en": "Recommended By Last Name"
-                    },
-                    "node_id": "a4ea11ac-9901-11ee-b789-080027b7463b",
-                    "sortorder": 2,
-                    "visible": true,
-                    "widget_id": "10000000-0000-0000-0000-000000000001"
-                },
-                {
-                    "card_id": "a4ea0fe0-9901-11ee-b789-080027b7463b",
-                    "config": {
-                        "defaultValue": {
-                            "en": {
-                                "direction": "ltr",
-                                "value": ""
-                            }
-                        },
-                        "i18n_properties": [
-                            "placeholder"
-                        ],
-                        "label": "Recommended By First Name",
-                        "maxLength": null,
-                        "placeholder": {
-                            "en": "Enter text"
-                        },
-                        "uneditable": true,
-                        "width": "100%"
-                    },
-                    "id": "a4ea235e-9901-11ee-b789-080027b7463b",
-                    "label": {
-                        "en": "Recommended By First Name"
-                    },
-                    "node_id": "a4ea149a-9901-11ee-b789-080027b7463b",
-                    "sortorder": 3,
-                    "visible": true,
-                    "widget_id": "10000000-0000-0000-0000-000000000001"
-                },
-                {
-                    "card_id": "a4ea0fe0-9901-11ee-b789-080027b7463b",
-                    "config": {
-                        "defaultValue": {
-                            "en": {
-                                "direction": "ltr",
-                                "value": ""
-                            }
-                        },
-                        "i18n_properties": [
-                            "placeholder"
-                        ],
-                        "label": "Decision Criteria",
-                        "maxLength": null,
-                        "placeholder": {
-                            "en": "Enter text"
-                        },
-                        "uneditable": true,
-                        "width": "100%"
-                    },
-                    "id": "a4ea2408-9901-11ee-b789-080027b7463b",
-                    "label": {
-                        "en": "Decision Criteria"
-                    },
-                    "node_id": "a4ea199a-9901-11ee-b789-080027b7463b",
-                    "sortorder": 5,
-                    "visible": true,
-                    "widget_id": "10000000-0000-0000-0000-000000000001"
-                },
-                {
-                    "card_id": "a4ea0fe0-9901-11ee-b789-080027b7463b",
-                    "config": {
-                        "defaultValue": {
-                            "en": {
-                                "direction": "ltr",
-                                "value": ""
-                            }
-                        },
-                        "i18n_properties": [
-                            "placeholder"
-                        ],
-                        "label": "Decision Description",
-                        "maxLength": null,
-                        "placeholder": {
-                            "en": "Enter text"
-                        },
-                        "uneditable": true,
-                        "width": "100%"
-                    },
-                    "id": "a4ea24b2-9901-11ee-b789-080027b7463b",
-                    "label": {
-                        "en": "Decision Description"
-                    },
-                    "node_id": "a4ea1cc4-9901-11ee-b789-080027b7463b",
-                    "sortorder": 6,
-                    "visible": true,
-                    "widget_id": "10000000-0000-0000-0000-000000000001"
-                },
-                {
-                    "card_id": "a4ea0fe0-9901-11ee-b789-080027b7463b",
-                    "config": {
-                        "defaultValue": {
-                            "en": {
-                                "direction": "ltr",
-                                "value": ""
-                            }
-                        },
-                        "i18n_properties": [
-                            "placeholder"
-                        ],
-                        "label": "Decision",
-                        "maxLength": null,
-                        "placeholder": {
-                            "en": "Enter text"
-                        },
-                        "uneditable": true,
-                        "width": "100%"
-                    },
-                    "id": "a4ea255c-9901-11ee-b789-080027b7463b",
-                    "label": {
-                        "en": "Decision"
-                    },
-                    "node_id": "a4ea1864-9901-11ee-b789-080027b7463b",
-                    "sortorder": 7,
-                    "visible": true,
-                    "widget_id": "10000000-0000-0000-0000-000000000001"
-                },
-                {
-                    "card_id": "a4ea0fe0-9901-11ee-b789-080027b7463b",
-                    "config": {
-                        "defaultValue": {
-                            "en": {
-                                "direction": "ltr",
-                                "value": ""
-                            }
-                        },
-                        "i18n_properties": [
-                            "placeholder"
-                        ],
-                        "label": "Decided By Last Name",
-                        "maxLength": null,
-                        "placeholder": {
-                            "en": "Enter text"
-                        },
-                        "uneditable": true,
-                        "width": "100%"
-                    },
-                    "id": "a4ea2606-9901-11ee-b789-080027b7463b",
-                    "label": {
-                        "en": "Decided By Last Name"
-                    },
-                    "node_id": "a4ea1ac6-9901-11ee-b789-080027b7463b",
-                    "sortorder": 1,
-                    "visible": true,
-                    "widget_id": "10000000-0000-0000-0000-000000000001"
                 },
                 {
                     "card_id": "6cc302c6-0d06-11ed-8804-5254008afee6",
@@ -2331,7 +2097,7 @@
                         "label": "Location Description",
                         "maxLength": null,
                         "placeholder": {
-                            "en": "Enter text"
+                            "en": "Describe the location of sites with no civic address."
                         },
                         "uneditable": false,
                         "width": "100%"
@@ -2508,7 +2274,7 @@
                         "en": "Name Type"
                     },
                     "node_id": "fa3a8094-0d05-11ed-8804-5254008afee6",
-                    "sortorder": null,
+                    "sortorder": 1,
                     "visible": true,
                     "widget_id": "10000000-0000-0000-0000-000000000002"
                 },
@@ -2525,9 +2291,9 @@
                             "placeholder"
                         ],
                         "label": "Image Feature(s)",
-                        "maxLength": null,
+                        "maxLength": "250",
                         "placeholder": {
-                            "en": "Enter text"
+                            "en": "E.g. Entrance"
                         },
                         "uneditable": false,
                         "width": "100%"
@@ -2554,9 +2320,9 @@
                             "placeholder"
                         ],
                         "label": "Name",
-                        "maxLength": null,
+                        "maxLength": "250",
                         "placeholder": {
-                            "en": "Name of the Architect / Builder"
+                            "en": ""
                         },
                         "uneditable": false,
                         "width": "100%"
@@ -2581,7 +2347,7 @@
                         "en": "Officially Recognized"
                     },
                     "node_id": "d2d91b6a-dfb3-11ed-b47a-5254004d77d3",
-                    "sortorder": 0,
+                    "sortorder": 1,
                     "visible": true,
                     "widget_id": "10000000-0000-0000-0000-000000000006"
                 },
@@ -2683,6 +2449,15 @@
                 },
                 {
                     "description": null,
+                    "domainnode_id": "1b622ab6-0d0f-11ed-98c2-5254008afee6",
+                    "edgeid": "0f9376c4-595e-42f8-87d2-5d9e89778a3d",
+                    "graph_id": "cef9c510-e3e6-4057-ac08-89ad926180b4",
+                    "name": null,
+                    "ontologyproperty": "http://www.cidoc-crm.org/cidoc-crm/P1_is_identified_by",
+                    "rangenode_id": "ab6cb89e-d048-11ee-8370-080027b7463b"
+                },
+                {
+                    "description": null,
                     "domainnode_id": "19d560d2-0d05-11ed-a4d8-5254008afee6",
                     "edgeid": "15fa1069-ea96-4e08-b78c-f2c70d3fd10d",
                     "graph_id": "cef9c510-e3e6-4057-ac08-89ad926180b4",
@@ -2698,15 +2473,6 @@
                     "name": null,
                     "ontologyproperty": "http://www.cidoc-crm.org/cidoc-crm/P129i_is_subject_of",
                     "rangenode_id": "e0f66da2-dfb2-11ed-b3d0-5254004d77d3"
-                },
-                {
-                    "description": null,
-                    "domainnode_id": "1b6235b0-0d0f-11ed-98c2-5254008afee6",
-                    "edgeid": "1b62a202-0d0f-11ed-98c2-5254008afee6",
-                    "graph_id": "cef9c510-e3e6-4057-ac08-89ad926180b4",
-                    "name": null,
-                    "ontologyproperty": "http://www.cidoc-crm.org/cidoc-crm/P41i_was_classified_by",
-                    "rangenode_id": "1b6258ce-0d0f-11ed-98c2-5254008afee6"
                 },
                 {
                     "description": null,
@@ -2773,15 +2539,6 @@
                 },
                 {
                     "description": null,
-                    "domainnode_id": "1b622ab6-0d0f-11ed-98c2-5254008afee6",
-                    "edgeid": "1b62b756-0d0f-11ed-98c2-5254008afee6",
-                    "graph_id": "cef9c510-e3e6-4057-ac08-89ad926180b4",
-                    "name": null,
-                    "ontologyproperty": "http://www.cidoc-crm.org/cidoc-crm/P1_is_identified_by",
-                    "rangenode_id": "1b623e20-0d0f-11ed-98c2-5254008afee6"
-                },
-                {
-                    "description": null,
                     "domainnode_id": "1b622e58-0d0f-11ed-98c2-5254008afee6",
                     "edgeid": "1b62b85a-0d0f-11ed-98c2-5254008afee6",
                     "graph_id": "cef9c510-e3e6-4057-ac08-89ad926180b4",
@@ -2797,6 +2554,15 @@
                     "name": null,
                     "ontologyproperty": "http://www.cidoc-crm.org/cidoc-crm/P3_has_note",
                     "rangenode_id": "1b6259fa-0d0f-11ed-98c2-5254008afee6"
+                },
+                {
+                    "description": null,
+                    "domainnode_id": "1b622ab6-0d0f-11ed-98c2-5254008afee6",
+                    "edgeid": "1bd7e670-7c18-4320-877b-c4129d818728",
+                    "graph_id": "cef9c510-e3e6-4057-ac08-89ad926180b4",
+                    "name": null,
+                    "ontologyproperty": "http://www.cidoc-crm.org/cidoc-crm/P1_is_identified_by",
+                    "rangenode_id": "e1f9e6b6-d048-11ee-8370-080027b7463b"
                 },
                 {
                     "description": null,
@@ -3250,105 +3016,6 @@
                 },
                 {
                     "description": null,
-                    "domainnode_id": "a4ea0cfc-9901-11ee-b789-080027b7463b",
-                    "edgeid": "a4ea75fc-9901-11ee-b789-080027b7463b",
-                    "graph_id": "cef9c510-e3e6-4057-ac08-89ad926180b4",
-                    "name": null,
-                    "ontologyproperty": "http://www.cidoc-crm.org/cidoc-crm/P1_is_identified_by",
-                    "rangenode_id": "a4ea1f94-9901-11ee-b789-080027b7463b"
-                },
-                {
-                    "description": null,
-                    "domainnode_id": "a4ea0cfc-9901-11ee-b789-080027b7463b",
-                    "edgeid": "a4ea7818-9901-11ee-b789-080027b7463b",
-                    "graph_id": "cef9c510-e3e6-4057-ac08-89ad926180b4",
-                    "name": null,
-                    "ontologyproperty": "http://www.cidoc-crm.org/cidoc-crm/P19i_was_made_for",
-                    "rangenode_id": "a4ea1864-9901-11ee-b789-080027b7463b"
-                },
-                {
-                    "description": null,
-                    "domainnode_id": "a4ea15e4-9901-11ee-b789-080027b7463b",
-                    "edgeid": "a4ea7976-9901-11ee-b789-080027b7463b",
-                    "graph_id": "cef9c510-e3e6-4057-ac08-89ad926180b4",
-                    "name": null,
-                    "ontologyproperty": "http://www.cidoc-crm.org/cidoc-crm/P131_is_identified_by",
-                    "rangenode_id": "a4ea133c-9901-11ee-b789-080027b7463b"
-                },
-                {
-                    "description": null,
-                    "domainnode_id": "a4ea15e4-9901-11ee-b789-080027b7463b",
-                    "edgeid": "a4ea7ab6-9901-11ee-b789-080027b7463b",
-                    "graph_id": "cef9c510-e3e6-4057-ac08-89ad926180b4",
-                    "name": null,
-                    "ontologyproperty": "http://www.cidoc-crm.org/cidoc-crm/P1_is_identified_by",
-                    "rangenode_id": "a4ea1ac6-9901-11ee-b789-080027b7463b"
-                },
-                {
-                    "description": null,
-                    "domainnode_id": "a4ea0cfc-9901-11ee-b789-080027b7463b",
-                    "edgeid": "a4ea7be2-9901-11ee-b789-080027b7463b",
-                    "graph_id": "cef9c510-e3e6-4057-ac08-89ad926180b4",
-                    "name": null,
-                    "ontologyproperty": "http://www.cidoc-crm.org/cidoc-crm/P129_is_about",
-                    "rangenode_id": "a4ea15e4-9901-11ee-b789-080027b7463b"
-                },
-                {
-                    "description": null,
-                    "domainnode_id": "a4ea0cfc-9901-11ee-b789-080027b7463b",
-                    "edgeid": "a4ea7d18-9901-11ee-b789-080027b7463b",
-                    "graph_id": "cef9c510-e3e6-4057-ac08-89ad926180b4",
-                    "name": null,
-                    "ontologyproperty": "http://www.cidoc-crm.org/cidoc-crm/P67_refers_to",
-                    "rangenode_id": "a4ea172e-9901-11ee-b789-080027b7463b"
-                },
-                {
-                    "description": null,
-                    "domainnode_id": "a4ea0cfc-9901-11ee-b789-080027b7463b",
-                    "edgeid": "a4ea7e44-9901-11ee-b789-080027b7463b",
-                    "graph_id": "cef9c510-e3e6-4057-ac08-89ad926180b4",
-                    "name": null,
-                    "ontologyproperty": "http://www.cidoc-crm.org/cidoc-crm/P3_has_note",
-                    "rangenode_id": "a4ea1cc4-9901-11ee-b789-080027b7463b"
-                },
-                {
-                    "description": null,
-                    "domainnode_id": "a4ea172e-9901-11ee-b789-080027b7463b",
-                    "edgeid": "a4ea7f5c-9901-11ee-b789-080027b7463b",
-                    "graph_id": "cef9c510-e3e6-4057-ac08-89ad926180b4",
-                    "name": null,
-                    "ontologyproperty": "http://www.cidoc-crm.org/cidoc-crm/P131_is_identified_by",
-                    "rangenode_id": "a4ea149a-9901-11ee-b789-080027b7463b"
-                },
-                {
-                    "description": null,
-                    "domainnode_id": "a4ea0cfc-9901-11ee-b789-080027b7463b",
-                    "edgeid": "a4ea8074-9901-11ee-b789-080027b7463b",
-                    "graph_id": "cef9c510-e3e6-4057-ac08-89ad926180b4",
-                    "name": null,
-                    "ontologyproperty": "http://www.cidoc-crm.org/cidoc-crm/P1_is_identified_by",
-                    "rangenode_id": "a4ea1e36-9901-11ee-b789-080027b7463b"
-                },
-                {
-                    "description": null,
-                    "domainnode_id": "a4ea0cfc-9901-11ee-b789-080027b7463b",
-                    "edgeid": "a4ea8196-9901-11ee-b789-080027b7463b",
-                    "graph_id": "cef9c510-e3e6-4057-ac08-89ad926180b4",
-                    "name": null,
-                    "ontologyproperty": "http://www.cidoc-crm.org/cidoc-crm/P15i_influenced",
-                    "rangenode_id": "a4ea199a-9901-11ee-b789-080027b7463b"
-                },
-                {
-                    "description": null,
-                    "domainnode_id": "a4ea172e-9901-11ee-b789-080027b7463b",
-                    "edgeid": "a4ea82b8-9901-11ee-b789-080027b7463b",
-                    "graph_id": "cef9c510-e3e6-4057-ac08-89ad926180b4",
-                    "name": null,
-                    "ontologyproperty": "http://www.cidoc-crm.org/cidoc-crm/P131_is_identified_by",
-                    "rangenode_id": "a4ea11ac-9901-11ee-b789-080027b7463b"
-                },
-                {
-                    "description": null,
                     "domainnode_id": "19d560d2-0d05-11ed-a4d8-5254008afee6",
                     "edgeid": "a6951746-01b6-4930-8926-0972515b4568",
                     "graph_id": "cef9c510-e3e6-4057-ac08-89ad926180b4",
@@ -3364,6 +3031,15 @@
                     "name": null,
                     "ontologyproperty": "http://www.cidoc-crm.org/cidoc-crm/P140i_was_attributed_by",
                     "rangenode_id": "0684fec8-0d07-11ed-8804-5254008afee6"
+                },
+                {
+                    "description": null,
+                    "domainnode_id": "1b6235b0-0d0f-11ed-98c2-5254008afee6",
+                    "edgeid": "b2fdf03a-c5e2-4080-92ac-fe7cdf484cfd",
+                    "graph_id": "cef9c510-e3e6-4057-ac08-89ad926180b4",
+                    "name": null,
+                    "ontologyproperty": "http://www.cidoc-crm.org/cidoc-crm/P3_has_note",
+                    "rangenode_id": "05831728-c6d6-11ee-a8fd-080027b7463b"
                 },
                 {
                     "description": null,
@@ -3385,30 +3061,12 @@
                 },
                 {
                     "description": null,
-                    "domainnode_id": "1b622ab6-0d0f-11ed-98c2-5254008afee6",
-                    "edgeid": "c748f3d5-de1c-40e4-aee1-3b32b5f643c4",
-                    "graph_id": "cef9c510-e3e6-4057-ac08-89ad926180b4",
-                    "name": null,
-                    "ontologyproperty": "http://www.cidoc-crm.org/cidoc-crm/P1_is_identified_by",
-                    "rangenode_id": "35615148-5a13-11ed-bf59-5254004d77d3"
-                },
-                {
-                    "description": null,
                     "domainnode_id": "6cc30064-0d06-11ed-8804-5254008afee6",
                     "edgeid": "cb0380eb-1a48-493a-8d5c-ac50f2bbebbb",
                     "graph_id": "cef9c510-e3e6-4057-ac08-89ad926180b4",
                     "name": null,
                     "ontologyproperty": "http://www.cidoc-crm.org/cidoc-crm/P14_carried_out_by",
                     "rangenode_id": "50c26f28-3b93-11ee-ac05-080027b7463b"
-                },
-                {
-                    "description": null,
-                    "domainnode_id": "0684fec8-0d07-11ed-8804-5254008afee6",
-                    "edgeid": "d29c891d-c63a-4603-a2a1-47c10d270ed5",
-                    "graph_id": "cef9c510-e3e6-4057-ac08-89ad926180b4",
-                    "name": null,
-                    "ontologyproperty": "http://www.cidoc-crm.org/cidoc-crm/P140_assigned_attribute_to",
-                    "rangenode_id": "a4ea0cfc-9901-11ee-b789-080027b7463b"
                 },
                 {
                     "description": null,
@@ -3513,6 +3171,18 @@
             "functions_x_graphs": [
                 {
                     "config": {
+                        "node_id": "703bbe62-3d24-11ee-93bd-080027b7463b",
+                        "triggering_nodegroups": [
+                            "0a883b80-2fb6-11ed-be5f-5254008afee6"
+                        ],
+                        "unique_value": true
+                    },
+                    "function_id": "60000000-0000-0000-0000-000000002001",
+                    "graph_id": "cef9c510-e3e6-4057-ac08-89ad926180b4",
+                    "id": "5710e849-e1b8-4720-b98c-659a75c70902"
+                },
+                {
+                    "config": {
                         "class_name": "BCRHPSiteDescriptors",
                         "descriptor_types": {
                             "description": {
@@ -3553,24 +3223,12 @@
                     },
                     "function_id": "60000000-0000-0000-0000-000000001002",
                     "graph_id": "cef9c510-e3e6-4057-ac08-89ad926180b4",
-                    "id": "03abbf5d-f5b8-4776-9fef-0b85911df10f"
-                },
-                {
-                    "config": {
-                        "node_id": "703bbe62-3d24-11ee-93bd-080027b7463b",
-                        "triggering_nodegroups": [
-                            "0a883b80-2fb6-11ed-be5f-5254008afee6"
-                        ],
-                        "unique_value": true
-                    },
-                    "function_id": "60000000-0000-0000-0000-000000002001",
-                    "graph_id": "cef9c510-e3e6-4057-ac08-89ad926180b4",
-                    "id": "d9c8709a-4069-41ac-8d71-f788b9202dff"
+                    "id": "d735b1a4-4c55-49c9-8db2-7b40c71559c5"
                 }
             ],
             "graphid": "cef9c510-e3e6-4057-ac08-89ad926180b4",
             "iconclass": "fa fa-bank",
-            "is_editable": false,
+            "is_editable": true,
             "isresource": true,
             "jsonldcontext": null,
             "name": {
@@ -3682,12 +3340,6 @@
                 {
                     "cardinality": "n",
                     "legacygroupid": null,
-                    "nodegroupid": "a4ea0cfc-9901-11ee-b789-080027b7463b",
-                    "parentnodegroup_id": "0684fec8-0d07-11ed-8804-5254008afee6"
-                },
-                {
-                    "cardinality": "n",
-                    "legacygroupid": null,
                     "nodegroupid": "dc12f414-0d07-11ed-8804-5254008afee6",
                     "parentnodegroup_id": null
                 },
@@ -3725,6 +3377,29 @@
                     "nodeid": "020c98ae-4427-11ed-8c76-5254008afee6",
                     "ontologyclass": "http://www.cidoc-crm.org/cidoc-crm/E13_Attribute_Assignment",
                     "parentproperty": "http://www.cidoc-crm.org/cidoc-crm/P140i_was_attributed_by",
+                    "sortorder": 0,
+                    "sourcebranchpublication_id": null
+                },
+                {
+                    "alias": "source_notes",
+                    "config": {
+                        "en": ""
+                    },
+                    "datatype": "string",
+                    "description": null,
+                    "exportable": true,
+                    "fieldname": "srcnts",
+                    "graph_id": "cef9c510-e3e6-4057-ac08-89ad926180b4",
+                    "hascustomalias": false,
+                    "is_collector": false,
+                    "isrequired": false,
+                    "issearchable": true,
+                    "istopnode": false,
+                    "name": "Source Notes",
+                    "nodegroup_id": "1b6235b0-0d0f-11ed-98c2-5254008afee6",
+                    "nodeid": "05831728-c6d6-11ee-a8fd-080027b7463b",
+                    "ontologyclass": "http://www.cidoc-crm.org/cidoc-crm/E62_String",
+                    "parentproperty": "http://www.cidoc-crm.org/cidoc-crm/P3_has_note",
                     "sortorder": 0,
                     "sourcebranchpublication_id": null
                 },
@@ -3869,7 +3544,7 @@
                     "nodeid": "15656a28-1a67-11ed-b83c-5254008afee6",
                     "ontologyclass": "http://www.cidoc-crm.org/cidoc-crm/E62_String",
                     "parentproperty": "http://www.cidoc-crm.org/cidoc-crm/P3_has_note",
-                    "sortorder": 0,
+                    "sortorder": 3,
                     "sourcebranchpublication_id": null
                 },
                 {
@@ -3987,7 +3662,7 @@
                     "alias": "site_boundary",
                     "config": {
                         "addToMap": true,
-                        "advancedStyle": "[\n  {\n    \"id\": \"resources-fill-1b6235b0-0d0f-11ed-98c2-5254008afee6\",\n    \"type\": \"fill\",\n    \"source\": \"resources-1b6235b0-0d0f-11ed-98c2-5254008afee6\",\n    \"source-layer\": \"1b6235b0-0d0f-11ed-98c2-5254008afee6\",\n    \"layout\": {\n      \"visibility\": \"visible\"\n    },\n    \"filter\": [ \"all\", [ \"==\", \"$type\", \"Polygon\" ], [ \"==\", \"total\", 1 ] ],\n    \"paint\": {\n      \"fill-color\": [ \"case\",\n\t\t\t\t    [\"in\", \"Provincial\", [\"get\",\"authorities\"]], \"rgba(165,0,38,.5)\",\n                    [\"in\", \"Federal\", [\"get\",\"authorities\"]], \"rgba(244,109,67,.5)\",\n      \t\t\t\t[\"in\", \"Municipal\", [\"get\",\"authorities\"]], \"rgba(254,224,144,.5)\",\n      \t\t\t\t  \"rgba(0,0,0,.3)\" ] }\n  },\n  {\n    \"id\": \"resources-fill-1b6235b0-0d0f-11ed-98c2-5254008afee6-click\",\n    \"type\": \"fill\",\n    \"source\": \"resources-1b6235b0-0d0f-11ed-98c2-5254008afee6\",\n    \"source-layer\": \"1b6235b0-0d0f-11ed-98c2-5254008afee6\",\n    \"layout\": {\n      \"visibility\": \"visible\"\n    },\n    \"filter\": [ \"all\", [ \"==\", \"$type\", \"Polygon\" ], [ \"==\", \"total\", 1 ], [ \"==\", \"resourceinstanceid\", \"\" ] ],\n    \"paint\": {\n      \"fill-color\": [ \"case\",\n\t\t\t         [\"in\", \"Provincial\", [\"get\",\"authorities\"]], \"rgba(165,0,38,1)\",\n                     [\"in\", \"Federal\", [\"get\",\"authorities\"]], \"rgba(244,109,67,1)\",\n\t\t\t         [\"in\", \"Municipal\", [\"get\",\"authorities\"]], \"rgba(254,224,144,1)\",\n        \t\t\t\t\"rgba(0,0,0,0.3)\" ]\n    }\n  },\n  {\n    \"id\": \"resources-fill-1b6235b0-0d0f-11ed-98c2-5254008afee6-hover\",\n    \"type\": \"fill\",\n    \"source\": \"resources-1b6235b0-0d0f-11ed-98c2-5254008afee6\",\n    \"source-layer\": \"1b6235b0-0d0f-11ed-98c2-5254008afee6\",\n    \"layout\": {\n      \"visibility\": \"visible\"\n    },\n    \"filter\": [ \"all\", [ \"==\", \"$type\", \"Polygon\" ], [ \"==\", \"total\", 1 ], [ \"==\", \"resourceinstanceid\", \"\" ] ],\n    \"paint\": {\n      \"fill-color\": \"rgba(255,122,0,0.73)\"\n    }\n  },\n  {\n    \"id\": \"resources-poly-outline-1b6235b0-0d0f-11ed-98c2-5254008afee6\",\n    \"type\": \"line\",\n    \"source\": \"resources-1b6235b0-0d0f-11ed-98c2-5254008afee6\",\n    \"source-layer\": \"1b6235b0-0d0f-11ed-98c2-5254008afee6\",\n    \"layout\": {\n      \"visibility\": \"visible\"\n    },\n    \"filter\": [ \"all\", [ \"==\", \"$type\", \"Polygon\" ], [ \"==\", \"total\", 1 ] ],\n    \"paint\": {\n      \"line-width\": 2,\n      \"line-color\": [ \"case\",\n\t\t\t         [\"in\", \"Provincial\", [\"get\",\"authorities\"]], \"rgba(165,0,38,1)\",\n                     [\"in\", \"Federal\", [\"get\",\"authorities\"]], \"rgba(244,109,67,1)\",\n\t\t\t         [\"in\", \"Municipal\", [\"get\",\"authorities\"]], \"rgba(254,224,144,1)\",\n        \t\t\t  \"rgba(0,0,0,1)\" ]\n    }\n  },\n  {\n    \"id\": \"resources-poly-outline-1b6235b0-0d0f-11ed-98c2-5254008afee6-hover\",\n    \"type\": \"line\",\n    \"source\": \"resources-1b6235b0-0d0f-11ed-98c2-5254008afee6\",\n    \"source-layer\": \"1b6235b0-0d0f-11ed-98c2-5254008afee6\",\n    \"layout\": {\n      \"visibility\": \"visible\"\n    },\n    \"filter\": [ \"all\", [ \"==\", \"$type\", \"Polygon\" ], [ \"==\", \"total\", 1 ], [ \"==\", \"resourceinstanceid\", \"\" ] ],\n    \"paint\": {\n      \"line-width\": 4,\n      \"line-color\": \"rgba(255,122,0,0.3)\"\n    }\n  },\n  {\n    \"id\": \"resources-poly-outline-1b6235b0-0d0f-11ed-98c2-5254008afee6-click\",\n    \"type\": \"line\",\n    \"source\": \"resources-1b6235b0-0d0f-11ed-98c2-5254008afee6\",\n    \"source-layer\": \"1b6235b0-0d0f-11ed-98c2-5254008afee6\",\n    \"layout\": {\n      \"visibility\": \"visible\"\n    },\n    \"filter\": [ \"all\", [ \"==\", \"$type\", \"Polygon\" ], [ \"==\", \"total\", 1 ], [ \"==\", \"resourceinstanceid\", \"\" ]\n    ],\n    \"paint\": {\n      \"line-width\": 4,\n      \"line-color\": \"rgba(255,122,0,0.3)\"\n    }\n  },\n  {\n    \"id\": \"resources-line-halo-1b6235b0-0d0f-11ed-98c2-5254008afee6\",\n    \"type\": \"line\",\n    \"source\": \"resources-1b6235b0-0d0f-11ed-98c2-5254008afee6\",\n    \"source-layer\": \"1b6235b0-0d0f-11ed-98c2-5254008afee6\",\n    \"layout\": {\n      \"visibility\": \"visible\"\n    },\n    \"filter\": [\n      \"all\",\n      [\n        \"==\",\n        \"$type\",\n        \"LineString\"\n      ],\n      [\n        \"==\",\n        \"total\",\n        1\n      ]\n    ],\n    \"paint\": {\n      \"line-width\": 4,\n      \"line-color\": \"rgba(255,122,0,0.3)\"\n    }\n  },\n  {\n    \"id\": \"resources-line-1b6235b0-0d0f-11ed-98c2-5254008afee6\",\n    \"type\": \"line\",\n    \"source\": \"resources-1b6235b0-0d0f-11ed-98c2-5254008afee6\",\n    \"source-layer\": \"1b6235b0-0d0f-11ed-98c2-5254008afee6\",\n    \"layout\": {\n      \"visibility\": \"visible\"\n    },\n    \"filter\": [\n      \"all\",\n      [\n        \"==\",\n        \"$type\",\n        \"LineString\"\n      ],\n      [\n        \"==\",\n        \"total\",\n        1\n      ]\n    ],\n    \"paint\": {\n      \"line-width\": 2,\n      \"line-color\": \"rgba(255,122,0,0.73)\"\n    }\n  },\n  {\n    \"id\": \"resources-line-halo-1b6235b0-0d0f-11ed-98c2-5254008afee6-hover\",\n    \"type\": \"line\",\n    \"source\": \"resources-1b6235b0-0d0f-11ed-98c2-5254008afee6\",\n    \"source-layer\": \"1b6235b0-0d0f-11ed-98c2-5254008afee6\",\n    \"layout\": {\n      \"visibility\": \"visible\"\n    },\n    \"filter\": [\n      \"all\",\n      [\n        \"==\",\n        \"$type\",\n        \"LineString\"\n      ],\n      [\n        \"==\",\n        \"total\",\n        1\n      ],\n      [\n        \"==\",\n        \"resourceinstanceid\",\n        \"\"\n      ]\n    ],\n    \"paint\": {\n      \"line-width\": 8,\n      \"line-color\": \"rgba(255,122,0,0.3)\"\n    }\n  },\n  {\n    \"id\": \"resources-line-1b6235b0-0d0f-11ed-98c2-5254008afee6-hover\",\n    \"type\": \"line\",\n    \"source\": \"resources-1b6235b0-0d0f-11ed-98c2-5254008afee6\",\n    \"source-layer\": \"1b6235b0-0d0f-11ed-98c2-5254008afee6\",\n    \"layout\": {\n      \"visibility\": \"visible\"\n    },\n    \"filter\": [\n      \"all\",\n      [\n        \"==\",\n        \"$type\",\n        \"LineString\"\n      ],\n      [\n        \"==\",\n        \"total\",\n        1\n      ],\n      [\n        \"==\",\n        \"resourceinstanceid\",\n        \"\"\n      ]\n    ],\n    \"paint\": {\n      \"line-width\": 4,\n      \"line-color\": \"rgba(255,122,0,0.73)\"\n    }\n  },\n  {\n    \"id\": \"resources-line-halo-1b6235b0-0d0f-11ed-98c2-5254008afee6-click\",\n    \"type\": \"line\",\n    \"source\": \"resources-1b6235b0-0d0f-11ed-98c2-5254008afee6\",\n    \"source-layer\": \"1b6235b0-0d0f-11ed-98c2-5254008afee6\",\n    \"layout\": {\n      \"visibility\": \"visible\"\n    },\n    \"filter\": [\n      \"all\",\n      [\n        \"==\",\n        \"$type\",\n        \"LineString\"\n      ],\n      [\n        \"==\",\n        \"total\",\n        1\n      ],\n      [\n        \"==\",\n        \"resourceinstanceid\",\n        \"\"\n      ]\n    ],\n    \"paint\": {\n      \"line-width\": 8,\n      \"line-color\": \"rgba(255,122,0,0.3)\"\n    }\n  },\n  {\n    \"id\": \"resources-line-1b6235b0-0d0f-11ed-98c2-5254008afee6-click\",\n    \"type\": \"line\",\n    \"source\": \"resources-1b6235b0-0d0f-11ed-98c2-5254008afee6\",\n    \"source-layer\": \"1b6235b0-0d0f-11ed-98c2-5254008afee6\",\n    \"layout\": {\n      \"visibility\": \"visible\"\n    },\n    \"filter\": [\n      \"all\",\n      [\n        \"==\",\n        \"$type\",\n        \"LineString\"\n      ],\n      [\n        \"==\",\n        \"total\",\n        1\n      ],\n      [\n        \"==\",\n        \"resourceinstanceid\",\n        \"\"\n      ]\n    ],\n    \"paint\": {\n      \"line-width\": 4,\n      \"line-color\": \"rgba(255,122,0,0.73)\"\n    }\n  },\n  {\n    \"id\": \"resources-point-halo-1b6235b0-0d0f-11ed-98c2-5254008afee6-hover\",\n    \"type\": \"circle\",\n    \"source\": \"resources-1b6235b0-0d0f-11ed-98c2-5254008afee6\",\n    \"source-layer\": \"1b6235b0-0d0f-11ed-98c2-5254008afee6\",\n    \"layout\": {\n      \"visibility\": \"visible\"\n    },\n    \"filter\": [\n      \"all\",\n      [\n        \"==\",\n        \"$type\",\n        \"Point\"\n      ],\n      [\n        \"==\",\n        \"total\",\n        1\n      ],\n      [\n        \"==\",\n        \"resourceinstanceid\",\n        \"\"\n      ]\n    ],\n    \"paint\": {\n      \"circle-radius\": 8,\n      \"circle-color\": \"rgba(255,122,0,0.3)\"\n    }\n  },\n  {\n    \"id\": \"resources-point-1b6235b0-0d0f-11ed-98c2-5254008afee6-hover\",\n    \"type\": \"circle\",\n    \"source\": \"resources-1b6235b0-0d0f-11ed-98c2-5254008afee6\",\n    \"source-layer\": \"1b6235b0-0d0f-11ed-98c2-5254008afee6\",\n    \"layout\": {\n      \"visibility\": \"visible\"\n    },\n    \"filter\": [\n      \"all\",\n      [\n        \"==\",\n        \"$type\",\n        \"Point\"\n      ],\n      [\n        \"==\",\n        \"total\",\n        1\n      ],\n      [\n        \"==\",\n        \"resourceinstanceid\",\n        \"\"\n      ]\n    ],\n    \"paint\": {\n      \"circle-radius\": 4,\n      \"circle-color\": \"rgba(255,122,0,0.73)\"\n    }\n  },\n  {\n    \"id\": \"resources-point-halo-1b6235b0-0d0f-11ed-98c2-5254008afee6\",\n    \"type\": \"circle\",\n    \"source\": \"resources-1b6235b0-0d0f-11ed-98c2-5254008afee6\",\n    \"source-layer\": \"1b6235b0-0d0f-11ed-98c2-5254008afee6\",\n    \"layout\": {\n      \"visibility\": \"visible\"\n    },\n    \"filter\": [\n      \"all\",\n      [\n        \"==\",\n        \"$type\",\n        \"Point\"\n      ],\n      [\n        \"==\",\n        \"total\",\n        1\n      ]\n    ],\n    \"paint\": {\n      \"circle-radius\": 4,\n      \"circle-color\": \"rgba(255,122,0,0.3)\"\n    }\n  },\n  {\n    \"id\": \"resources-point-1b6235b0-0d0f-11ed-98c2-5254008afee6\",\n    \"type\": \"circle\",\n    \"source\": \"resources-1b6235b0-0d0f-11ed-98c2-5254008afee6\",\n    \"source-layer\": \"1b6235b0-0d0f-11ed-98c2-5254008afee6\",\n    \"layout\": {\n      \"visibility\": \"visible\"\n    },\n    \"filter\": [\n      \"all\",\n      [\n        \"==\",\n        \"$type\",\n        \"Point\"\n      ],\n      [\n        \"==\",\n        \"total\",\n        1\n      ]\n    ],\n    \"paint\": {\n      \"circle-radius\": 2,\n      \"circle-color\": \"rgba(255,122,0,0.73)\"\n    }\n  },\n  {\n    \"id\": \"resources-point-halo-1b6235b0-0d0f-11ed-98c2-5254008afee6-click\",\n    \"type\": \"circle\",\n    \"source\": \"resources-1b6235b0-0d0f-11ed-98c2-5254008afee6\",\n    \"source-layer\": \"1b6235b0-0d0f-11ed-98c2-5254008afee6\",\n    \"layout\": {\n      \"visibility\": \"visible\"\n    },\n    \"filter\": [\n      \"all\",\n      [\n        \"==\",\n        \"$type\",\n        \"Point\"\n      ],\n      [\n        \"==\",\n        \"total\",\n        1\n      ],\n      [\n        \"==\",\n        \"resourceinstanceid\",\n        \"\"\n      ]\n    ],\n    \"paint\": {\n      \"circle-radius\": 8,\n      \"circle-color\": \"rgba(255,122,0,0.3)\"\n    }\n  },\n  {\n    \"id\": \"resources-point-1b6235b0-0d0f-11ed-98c2-5254008afee6-click\",\n    \"type\": \"circle\",\n    \"source\": \"resources-1b6235b0-0d0f-11ed-98c2-5254008afee6\",\n    \"source-layer\": \"1b6235b0-0d0f-11ed-98c2-5254008afee6\",\n    \"layout\": {\n      \"visibility\": \"visible\"\n    },\n    \"filter\": [\n      \"all\",\n      [\n        \"==\",\n        \"$type\",\n        \"Point\"\n      ],\n      [\n        \"==\",\n        \"total\",\n        1\n      ],\n      [\n        \"==\",\n        \"resourceinstanceid\",\n        \"\"\n      ]\n    ],\n    \"paint\": {\n      \"circle-radius\": 4,\n      \"circle-color\": \"rgba(255,122,0,0.73)\"\n    }\n  },\n  {\n    \"id\": \"resources-cluster-point-halo-1b6235b0-0d0f-11ed-98c2-5254008afee6\",\n    \"type\": \"circle\",\n    \"source\": \"resources-1b6235b0-0d0f-11ed-98c2-5254008afee6\",\n    \"source-layer\": \"1b6235b0-0d0f-11ed-98c2-5254008afee6\",\n    \"layout\": {\n      \"visibility\": \"visible\"\n    },\n    \"filter\": [\n      \"all\",\n      [\n        \"==\",\n        \"$type\",\n        \"Point\"\n      ],\n      [\n        \">\",\n        \"total\",\n        1\n      ]\n    ],\n    \"paint\": {\n      \"circle-radius\": {\n        \"property\": \"total\",\n        \"stops\": [\n          [\n            0,\n            22\n          ],\n          [\n            50,\n            24\n          ],\n          [\n            100,\n            26\n          ],\n          [\n            200,\n            28\n          ],\n          [\n            400,\n            30\n          ],\n          [\n            800,\n            32\n          ],\n          [\n            1200,\n            34\n          ],\n          [\n            1600,\n            36\n          ],\n          [\n            2000,\n            38\n          ],\n          [\n            2500,\n            40\n          ],\n          [\n            3000,\n            42\n          ],\n          [\n            4000,\n            44\n          ],\n          [\n            5000,\n            46\n          ]\n        ]\n      },\n      \"circle-color\": \"rgba(255,122,0,0.3)\"\n    }\n  },\n  {\n    \"id\": \"resources-cluster-point-1b6235b0-0d0f-11ed-98c2-5254008afee6\",\n    \"type\": \"circle\",\n    \"source\": \"resources-1b6235b0-0d0f-11ed-98c2-5254008afee6\",\n    \"source-layer\": \"1b6235b0-0d0f-11ed-98c2-5254008afee6\",\n    \"layout\": {\n      \"visibility\": \"visible\"\n    },\n    \"filter\": [\n      \"all\",\n      [\n        \"==\",\n        \"$type\",\n        \"Point\"\n      ],\n      [\n        \">\",\n        \"total\",\n        1\n      ]\n    ],\n    \"paint\": {\n      \"circle-radius\": {\n        \"property\": \"total\",\n        \"type\": \"exponential\",\n        \"stops\": [\n          [\n            0,\n            12\n          ],\n          [\n            50,\n            14\n          ],\n          [\n            100,\n            16\n          ],\n          [\n            200,\n            18\n          ],\n          [\n            400,\n            20\n          ],\n          [\n            800,\n            22\n          ],\n          [\n            1200,\n            24\n          ],\n          [\n            1600,\n            26\n          ],\n          [\n            2000,\n            28\n          ],\n          [\n            2500,\n            30\n          ],\n          [\n            3000,\n            32\n          ],\n          [\n            4000,\n            34\n          ],\n          [\n            5000,\n            36\n          ]\n        ]\n      },\n      \"circle-color\": \"rgba(255,122,0,0.73)\"\n    }\n  },\n  {\n    \"id\": \"resources-cluster-count-1b6235b0-0d0f-11ed-98c2-5254008afee6\",\n    \"type\": \"symbol\",\n    \"source\": \"resources-1b6235b0-0d0f-11ed-98c2-5254008afee6\",\n    \"source-layer\": \"1b6235b0-0d0f-11ed-98c2-5254008afee6\",\n    \"layout\": {\n      \"text-field\": \"{total}\",\n      \"text-size\": 10\n    },\n    \"paint\": {\n      \"text-color\": \"#fff\"\n    },\n    \"filter\": [\n      \"all\",\n      [\n        \">\",\n        \"total\",\n        1\n      ]\n    ]\n  }\n]",
+                        "advancedStyle": "[\n  {\n    \"id\": \"resources-fill-1b6235b0-0d0f-11ed-98c2-5254008afee6\",\n    \"type\": \"fill\",\n    \"source\": \"resources-1b6235b0-0d0f-11ed-98c2-5254008afee6\",\n    \"source-layer\": \"1b6235b0-0d0f-11ed-98c2-5254008afee6\",\n    \"layout\": {\n      \"visibility\": \"visible\"\n    },\n    \"filter\": [ \"all\", [ \"==\", \"$type\", \"Polygon\" ], [ \"==\", \"total\", 1 ] ],\n    \"paint\": {\n      \"fill-color\": [ \"case\",\n\t\t\t\t    [\"in\", \"Provincial\", [\"get\",\"authorities\"]], \"rgba(165,0,38,.5)\",\n                    [\"in\", \"Federal\", [\"get\",\"authorities\"]], \"rgba(244,109,67,.5)\",\n      \t\t\t\t[\"in\", \"Municipal\", [\"get\",\"authorities\"]], \"rgba(254,224,144,.5)\",\n      \t\t\t\t  \"rgba(0,0,0,.3)\" ] }\n  },\n  {\n    \"id\": \"resources-fill-1b6235b0-0d0f-11ed-98c2-5254008afee6-click\",\n    \"type\": \"fill\",\n    \"source\": \"resources-1b6235b0-0d0f-11ed-98c2-5254008afee6\",\n    \"source-layer\": \"1b6235b0-0d0f-11ed-98c2-5254008afee6\",\n    \"layout\": {\n      \"visibility\": \"visible\"\n    },\n    \"filter\": [ \"all\", [ \"==\", \"$type\", \"Polygon\" ], [ \"==\", \"total\", 1 ], [ \"==\", \"resourceinstanceid\", \"\" ] ],\n    \"paint\": {\n      \"fill-color\": [ \"case\",\n\t\t\t         [\"in\", \"Provincial\", [\"get\",\"authorities\"]], \"rgba(165,0,38,1)\",\n                     [\"in\", \"Federal\", [\"get\",\"authorities\"]], \"rgba(244,109,67,1)\",\n\t\t\t         [\"in\", \"Municipal\", [\"get\",\"authorities\"]], \"rgba(254,224,144,1)\",\n        \t\t\t\t\"rgba(0,0,0,0.3)\" ]\n    }\n  },\n  {\n    \"id\": \"resources-fill-1b6235b0-0d0f-11ed-98c2-5254008afee6-hover\",\n    \"type\": \"fill\",\n    \"source\": \"resources-1b6235b0-0d0f-11ed-98c2-5254008afee6\",\n    \"source-layer\": \"1b6235b0-0d0f-11ed-98c2-5254008afee6\",\n    \"layout\": {\n      \"visibility\": \"visible\"\n    },\n    \"filter\": [ \"all\", [ \"==\", \"$type\", \"Polygon\" ], [ \"==\", \"total\", 1 ], [ \"==\", \"resourceinstanceid\", \"\" ] ],\n    \"paint\": {\n      \"fill-color\": \"rgba(255,122,0,0.73)\"\n    }\n  },\n  {\n    \"id\": \"resources-poly-outline-1b6235b0-0d0f-11ed-98c2-5254008afee6\",\n    \"type\": \"line\",\n    \"source\": \"resources-1b6235b0-0d0f-11ed-98c2-5254008afee6\",\n    \"source-layer\": \"1b6235b0-0d0f-11ed-98c2-5254008afee6\",\n    \"layout\": {\n      \"visibility\": \"visible\"\n    },\n    \"filter\": [ \"all\", [ \"==\", \"$type\", \"Polygon\" ], [ \"==\", \"total\", 1 ] ],\n    \"paint\": {\n      \"line-width\": 2,\n      \"line-color\": [ \"case\",\n\t\t\t         [\"in\", \"Provincial\", [\"get\",\"authorities\"]], \"rgba(165,0,38,1)\",\n                     [\"in\", \"Federal\", [\"get\",\"authorities\"]], \"rgba(244,109,67,1)\",\n\t\t\t         [\"in\", \"Municipal\", [\"get\",\"authorities\"]], \"rgba(254,224,144,1)\",\n        \t\t\t  \"rgba(0,0,0,1)\" ]\n    }\n  },\n  {\n    \"id\": \"resources-poly-outline-1b6235b0-0d0f-11ed-98c2-5254008afee6-hover\",\n    \"type\": \"line\",\n    \"source\": \"resources-1b6235b0-0d0f-11ed-98c2-5254008afee6\",\n    \"source-layer\": \"1b6235b0-0d0f-11ed-98c2-5254008afee6\",\n    \"layout\": {\n      \"visibility\": \"visible\"\n    },\n    \"filter\": [ \"all\", [ \"==\", \"$type\", \"Polygon\" ], [ \"==\", \"total\", 1 ], [ \"==\", \"resourceinstanceid\", \"\" ] ],\n    \"paint\": {\n      \"line-width\": 4,\n      \"line-color\": \"rgba(255,122,0,0.3)\"\n    }\n  },\n  {\n    \"id\": \"resources-poly-outline-1b6235b0-0d0f-11ed-98c2-5254008afee6-click\",\n    \"type\": \"line\",\n    \"source\": \"resources-1b6235b0-0d0f-11ed-98c2-5254008afee6\",\n    \"source-layer\": \"1b6235b0-0d0f-11ed-98c2-5254008afee6\",\n    \"layout\": {\n      \"visibility\": \"visible\"\n    },\n    \"filter\": [ \"all\", [ \"==\", \"$type\", \"Polygon\" ], [ \"==\", \"total\", 1 ], [ \"==\", \"resourceinstanceid\", \"\" ]\n    ],\n    \"paint\": {\n      \"line-width\": 4,\n      \"line-color\": \"rgba(255,122,0,0.3)\"\n    }\n  },\n  {\n    \"id\": \"resources-line-halo-1b6235b0-0d0f-11ed-98c2-5254008afee6\",\n    \"type\": \"line\",\n    \"source\": \"resources-1b6235b0-0d0f-11ed-98c2-5254008afee6\",\n    \"source-layer\": \"1b6235b0-0d0f-11ed-98c2-5254008afee6\",\n    \"layout\": {\n      \"visibility\": \"visible\"\n    },\n    \"filter\": [\n      \"all\",\n      [\n        \"==\",\n        \"$type\",\n        \"LineString\"\n      ],\n      [\n        \"==\",\n        \"total\",\n        1\n      ]\n    ],\n    \"paint\": {\n      \"line-width\": 4,\n      \"line-color\": \"rgba(255,122,0,0.3)\"\n    }\n  },\n  {\n    \"id\": \"resources-line-1b6235b0-0d0f-11ed-98c2-5254008afee6\",\n    \"type\": \"line\",\n    \"source\": \"resources-1b6235b0-0d0f-11ed-98c2-5254008afee6\",\n    \"source-layer\": \"1b6235b0-0d0f-11ed-98c2-5254008afee6\",\n    \"layout\": {\n      \"visibility\": \"visible\"\n    },\n    \"filter\": [\n      \"all\",\n      [\n        \"==\",\n        \"$type\",\n        \"LineString\"\n      ],\n      [\n        \"==\",\n        \"total\",\n        1\n      ]\n    ],\n    \"paint\": {\n      \"line-width\": 2,\n      \"line-color\": \"rgba(255,122,0,0.73)\"\n    }\n  },\n  {\n    \"id\": \"resources-line-halo-1b6235b0-0d0f-11ed-98c2-5254008afee6-hover\",\n    \"type\": \"line\",\n    \"source\": \"resources-1b6235b0-0d0f-11ed-98c2-5254008afee6\",\n    \"source-layer\": \"1b6235b0-0d0f-11ed-98c2-5254008afee6\",\n    \"layout\": {\n      \"visibility\": \"visible\"\n    },\n    \"filter\": [\n      \"all\",\n      [\n        \"==\",\n        \"$type\",\n        \"LineString\"\n      ],\n      [\n        \"==\",\n        \"total\",\n        1\n      ],\n      [\n        \"==\",\n        \"resourceinstanceid\",\n        \"\"\n      ]\n    ],\n    \"paint\": {\n      \"line-width\": 8,\n      \"line-color\": \"rgba(255,122,0,0.3)\"\n    }\n  },\n  {\n    \"id\": \"resources-line-1b6235b0-0d0f-11ed-98c2-5254008afee6-hover\",\n    \"type\": \"line\",\n    \"source\": \"resources-1b6235b0-0d0f-11ed-98c2-5254008afee6\",\n    \"source-layer\": \"1b6235b0-0d0f-11ed-98c2-5254008afee6\",\n    \"layout\": {\n      \"visibility\": \"visible\"\n    },\n    \"filter\": [\n      \"all\",\n      [\n        \"==\",\n        \"$type\",\n        \"LineString\"\n      ],\n      [\n        \"==\",\n        \"total\",\n        1\n      ],\n      [\n        \"==\",\n        \"resourceinstanceid\",\n        \"\"\n      ]\n    ],\n    \"paint\": {\n      \"line-width\": 4,\n      \"line-color\": \"rgba(255,122,0,0.73)\"\n    }\n  },\n  {\n    \"id\": \"resources-line-halo-1b6235b0-0d0f-11ed-98c2-5254008afee6-click\",\n    \"type\": \"line\",\n    \"source\": \"resources-1b6235b0-0d0f-11ed-98c2-5254008afee6\",\n    \"source-layer\": \"1b6235b0-0d0f-11ed-98c2-5254008afee6\",\n    \"layout\": {\n      \"visibility\": \"visible\"\n    },\n    \"filter\": [\n      \"all\",\n      [\n        \"==\",\n        \"$type\",\n        \"LineString\"\n      ],\n      [\n        \"==\",\n        \"total\",\n        1\n      ],\n      [\n        \"==\",\n        \"resourceinstanceid\",\n        \"\"\n      ]\n    ],\n    \"paint\": {\n      \"line-width\": 8,\n      \"line-color\": \"rgba(255,122,0,0.3)\"\n    }\n  },\n  {\n    \"id\": \"resources-line-1b6235b0-0d0f-11ed-98c2-5254008afee6-click\",\n    \"type\": \"line\",\n    \"source\": \"resources-1b6235b0-0d0f-11ed-98c2-5254008afee6\",\n    \"source-layer\": \"1b6235b0-0d0f-11ed-98c2-5254008afee6\",\n    \"layout\": {\n      \"visibility\": \"visible\"\n    },\n    \"filter\": [\n      \"all\",\n      [\n        \"==\",\n        \"$type\",\n        \"LineString\"\n      ],\n      [\n        \"==\",\n        \"total\",\n        1\n      ],\n      [\n        \"==\",\n        \"resourceinstanceid\",\n        \"\"\n      ]\n    ],\n    \"paint\": {\n      \"line-width\": 4,\n      \"line-color\": \"rgba(255,122,0,0.73)\"\n    }\n  },\n  {\n    \"id\": \"resources-point-halo-1b6235b0-0d0f-11ed-98c2-5254008afee6-hover\",\n    \"type\": \"circle\",\n    \"source\": \"resources-1b6235b0-0d0f-11ed-98c2-5254008afee6\",\n    \"source-layer\": \"1b6235b0-0d0f-11ed-98c2-5254008afee6\",\n    \"layout\": {\n      \"visibility\": \"visible\"\n    },\n    \"filter\": [\n      \"all\",\n      [\n        \"==\",\n        \"$type\",\n        \"Point\"\n      ],\n      [\n        \"==\",\n        \"total\",\n        1\n      ],\n      [\n        \"==\",\n        \"resourceinstanceid\",\n        \"\"\n      ]\n    ],\n    \"paint\": {\n      \"circle-radius\": 8,\n      \"circle-color\": \"rgba(255,122,0,0.3)\"\n    }\n  },\n  {\n    \"id\": \"resources-point-1b6235b0-0d0f-11ed-98c2-5254008afee6-hover\",\n    \"type\": \"circle\",\n    \"source\": \"resources-1b6235b0-0d0f-11ed-98c2-5254008afee6\",\n    \"source-layer\": \"1b6235b0-0d0f-11ed-98c2-5254008afee6\",\n    \"layout\": {\n      \"visibility\": \"visible\"\n    },\n    \"filter\": [\n      \"all\",\n      [\n        \"==\",\n        \"$type\",\n        \"Point\"\n      ],\n      [\n        \"==\",\n        \"total\",\n        1\n      ],\n      [\n        \"==\",\n        \"resourceinstanceid\",\n        \"\"\n      ]\n    ],\n    \"paint\": {\n      \"circle-radius\": 4,\n      \"circle-color\": \"rgba(255,122,0,0.73)\"\n    }\n  },\n  {\n    \"id\": \"resources-point-halo-1b6235b0-0d0f-11ed-98c2-5254008afee6\",\n    \"type\": \"circle\",\n    \"source\": \"resources-1b6235b0-0d0f-11ed-98c2-5254008afee6\",\n    \"source-layer\": \"1b6235b0-0d0f-11ed-98c2-5254008afee6\",\n    \"layout\": {\n      \"visibility\": \"visible\"\n    },\n    \"filter\": [\n      \"all\",\n      [\n        \"==\",\n        \"$type\",\n        \"Point\"\n      ],\n      [\n        \"==\",\n        \"total\",\n        1\n      ]\n    ],\n    \"paint\": {\n      \"circle-radius\": 4,\n      \"circle-color\": \"rgba(255,122,0,0.3)\"\n    }\n  },\n  {\n    \"id\": \"resources-point-1b6235b0-0d0f-11ed-98c2-5254008afee6\",\n    \"type\": \"circle\",\n    \"source\": \"resources-1b6235b0-0d0f-11ed-98c2-5254008afee6\",\n    \"source-layer\": \"1b6235b0-0d0f-11ed-98c2-5254008afee6\",\n    \"layout\": {\n      \"visibility\": \"visible\"\n    },\n    \"filter\": [\n      \"all\",\n      [\n        \"==\",\n        \"$type\",\n        \"Point\"\n      ],\n      [\n        \"==\",\n        \"total\",\n        1\n      ]\n    ],\n    \"paint\": {\n      \"circle-radius\": 2,\n      \"circle-color\": \"rgba(255,122,0,0.73)\"\n    }\n  },\n  {\n    \"id\": \"resources-point-halo-1b6235b0-0d0f-11ed-98c2-5254008afee6-click\",\n    \"type\": \"circle\",\n    \"source\": \"resources-1b6235b0-0d0f-11ed-98c2-5254008afee6\",\n    \"source-layer\": \"1b6235b0-0d0f-11ed-98c2-5254008afee6\",\n    \"layout\": {\n      \"visibility\": \"visible\"\n    },\n    \"filter\": [\n      \"all\",\n      [\n        \"==\",\n        \"$type\",\n        \"Point\"\n      ],\n      [\n        \"==\",\n        \"total\",\n        1\n      ],\n      [\n        \"==\",\n        \"resourceinstanceid\",\n        \"\"\n      ]\n    ],\n    \"paint\": {\n      \"circle-radius\": 8,\n      \"circle-color\": \"rgba(255,122,0,0.3)\"\n    }\n  },\n  {\n    \"id\": \"resources-point-1b6235b0-0d0f-11ed-98c2-5254008afee6-click\",\n    \"type\": \"circle\",\n    \"source\": \"resources-1b6235b0-0d0f-11ed-98c2-5254008afee6\",\n    \"source-layer\": \"1b6235b0-0d0f-11ed-98c2-5254008afee6\",\n    \"layout\": {\n      \"visibility\": \"visible\"\n    },\n    \"filter\": [\n      \"all\",\n      [\n        \"==\",\n        \"$type\",\n        \"Point\"\n      ],\n      [\n        \"==\",\n        \"total\",\n        1\n      ],\n      [\n        \"==\",\n        \"resourceinstanceid\",\n        \"\"\n      ]\n    ],\n    \"paint\": {\n      \"circle-radius\": 4,\n      \"circle-color\": \"rgba(255,122,0,0.73)\"\n    }\n  },\n  {\n    \"id\": \"resources-cluster-point-halo-1b6235b0-0d0f-11ed-98c2-5254008afee6\",\n    \"type\": \"circle\",\n    \"source\": \"resources-1b6235b0-0d0f-11ed-98c2-5254008afee6\",\n    \"source-layer\": \"1b6235b0-0d0f-11ed-98c2-5254008afee6\",\n    \"layout\": {\n      \"visibility\": \"visible\"\n    },\n    \"filter\": [\n      \"all\",\n      [\n        \"==\",\n        \"$type\",\n        \"Point\"\n      ],\n      [\n        \">\",\n        \"total\",\n        1\n      ]\n    ],\n    \"paint\": {\n      \"circle-radius\": {\n        \"property\": \"total\",\n        \"stops\": [\n          [\n            0,\n            22\n          ],\n          [\n            50,\n            24\n          ],\n          [\n            100,\n            26\n          ],\n          [\n            200,\n            28\n          ],\n          [\n            400,\n            30\n          ],\n          [\n            800,\n            32\n          ],\n          [\n            1200,\n            34\n          ],\n          [\n            1600,\n            36\n          ],\n          [\n            2000,\n            38\n          ],\n          [\n            2500,\n            40\n          ],\n          [\n            3000,\n            42\n          ],\n          [\n            4000,\n            44\n          ],\n          [\n            5000,\n            46\n          ]\n        ]\n      },\n      \"circle-color\": \"rgba(255,122,0,0.3)\"\n    }\n  },\n  {\n    \"id\": \"resources-cluster-point-1b6235b0-0d0f-11ed-98c2-5254008afee6\",\n    \"type\": \"circle\",\n    \"source\": \"resources-1b6235b0-0d0f-11ed-98c2-5254008afee6\",\n    \"source-layer\": \"1b6235b0-0d0f-11ed-98c2-5254008afee6\",\n    \"layout\": {\n      \"visibility\": \"visible\"\n    },\n    \"filter\": [\n      \"all\",\n      [\n        \"==\",\n        \"$type\",\n        \"Point\"\n      ],\n      [\n        \">\",\n        \"total\",\n        1\n      ]\n    ],\n    \"paint\": {\n      \"circle-radius\": {\n        \"property\": \"total\",\n        \"type\": \"exponential\",\n        \"stops\": [\n          [\n            0,\n            12\n          ],\n          [\n            50,\n            14\n          ],\n          [\n            100,\n            16\n          ],\n          [\n            200,\n            18\n          ],\n          [\n            400,\n            20\n          ],\n          [\n            800,\n            22\n          ],\n          [\n            1200,\n            24\n          ],\n          [\n            1600,\n            26\n          ],\n          [\n            2000,\n            28\n          ],\n          [\n            2500,\n            30\n          ],\n          [\n            3000,\n            32\n          ],\n          [\n            4000,\n            34\n          ],\n          [\n            5000,\n            36\n          ]\n        ]\n      },\n      \"circle-color\": \"rgba(255,122,0,0.73)\"\n    }\n  },\n  {\n    \"id\": \"resources-cluster-count-1b6235b0-0d0f-11ed-98c2-5254008afee6\",\n    \"type\": \"symbol\",\n    \"source\": \"resources-1b6235b0-0d0f-11ed-98c2-5254008afee6\",\n    \"source-layer\": \"1b6235b0-0d0f-11ed-98c2-5254008afee6\",\n    \"layout\": {\n      \"text-field\": \"{total}\",\n      \"text-size\": 10\n    },\n    \"paint\": {\n      \"text-color\": \"#fff\"\n    },\n    \"filter\": [\n      \"all\",\n      [\n        \">\",\n        \"total\",\n        1\n      ]\n    ]\n  }, { \"id\": \"borden_number_label\", \"type\": \"symbol\", \"source\": \"resources-1b6235b0-0d0f-11ed-98c2-5254008afee6\", \"source-layer\": \"1b6235b0-0d0f-11ed-98c2-5254008afee6\", \"layout\": { \"text-field\": \"{borden_number}\", \"text-size\": 10 }, \"paint\": { \"text-color\": \"#000\" } }\n]",
                         "advancedStyling": true,
                         "autoManageCache": false,
                         "cacheTiles": false,
@@ -4018,7 +3693,7 @@
                     "graph_id": "cef9c510-e3e6-4057-ac08-89ad926180b4",
                     "hascustomalias": false,
                     "is_collector": true,
-                    "isrequired": false,
+                    "isrequired": true,
                     "issearchable": true,
                     "istopnode": false,
                     "name": "Site Boundary",
@@ -4072,30 +3747,7 @@
                     "nodeid": "1b623ccc-0d0f-11ed-98c2-5254008afee6",
                     "ontologyclass": "http://www.cidoc-crm.org/cidoc-crm/E13_Attribute_Assignment",
                     "parentproperty": "http://www.cidoc-crm.org/cidoc-crm/P140i_was_attributed_by",
-                    "sortorder": 0,
-                    "sourcebranchpublication_id": null
-                },
-                {
-                    "alias": "pid",
-                    "config": {
-                        "en": ""
-                    },
-                    "datatype": "string",
-                    "description": null,
-                    "exportable": true,
-                    "fieldname": "PID",
-                    "graph_id": "cef9c510-e3e6-4057-ac08-89ad926180b4",
-                    "hascustomalias": false,
-                    "is_collector": false,
-                    "isrequired": false,
-                    "issearchable": true,
-                    "istopnode": false,
-                    "name": "PID",
-                    "nodegroup_id": "1b622ab6-0d0f-11ed-98c2-5254008afee6",
-                    "nodeid": "1b623e20-0d0f-11ed-98c2-5254008afee6",
-                    "ontologyclass": "http://www.cidoc-crm.org/cidoc-crm/E42_Identifier",
-                    "parentproperty": "http://www.cidoc-crm.org/cidoc-crm/P1_is_identified_by",
-                    "sortorder": 0,
+                    "sortorder": 2,
                     "sourcebranchpublication_id": null
                 },
                 {
@@ -4187,29 +3839,6 @@
                     "nodeid": "1b625414-0d0f-11ed-98c2-5254008afee6",
                     "ontologyclass": "http://www.cidoc-crm.org/cidoc-crm/E13_Attribute_Assignment",
                     "parentproperty": "http://www.cidoc-crm.org/cidoc-crm/P140i_was_attributed_by",
-                    "sortorder": 0,
-                    "sourcebranchpublication_id": null
-                },
-                {
-                    "alias": "spatial_accuracy",
-                    "config": {
-                        "en": ""
-                    },
-                    "datatype": "string",
-                    "description": null,
-                    "exportable": true,
-                    "fieldname": "spatialacc",
-                    "graph_id": "cef9c510-e3e6-4057-ac08-89ad926180b4",
-                    "hascustomalias": false,
-                    "is_collector": false,
-                    "isrequired": false,
-                    "issearchable": true,
-                    "istopnode": false,
-                    "name": "Spatial Accuracy",
-                    "nodegroup_id": "1b6235b0-0d0f-11ed-98c2-5254008afee6",
-                    "nodeid": "1b6258ce-0d0f-11ed-98c2-5254008afee6",
-                    "ontologyclass": "http://www.cidoc-crm.org/cidoc-crm/E17_Type_Assignment",
-                    "parentproperty": "http://www.cidoc-crm.org/cidoc-crm/P41i_was_classified_by",
                     "sortorder": 0,
                     "sourcebranchpublication_id": null
                 },
@@ -4399,29 +4028,6 @@
                     "sourcebranchpublication_id": null
                 },
                 {
-                    "alias": "pin",
-                    "config": {
-                        "en": ""
-                    },
-                    "datatype": "string",
-                    "description": null,
-                    "exportable": true,
-                    "fieldname": "PIN",
-                    "graph_id": "cef9c510-e3e6-4057-ac08-89ad926180b4",
-                    "hascustomalias": false,
-                    "is_collector": false,
-                    "isrequired": false,
-                    "issearchable": true,
-                    "istopnode": false,
-                    "name": "PIN",
-                    "nodegroup_id": "1b622ab6-0d0f-11ed-98c2-5254008afee6",
-                    "nodeid": "35615148-5a13-11ed-bf59-5254004d77d3",
-                    "ontologyclass": "http://www.cidoc-crm.org/cidoc-crm/E42_Identifier",
-                    "parentproperty": "http://www.cidoc-crm.org/cidoc-crm/P1_is_identified_by",
-                    "sortorder": 0,
-                    "sourcebranchpublication_id": null
-                },
-                {
                     "alias": "external_url",
                     "config": {
                         "en": ""
@@ -4534,7 +4140,7 @@
                     "graph_id": "cef9c510-e3e6-4057-ac08-89ad926180b4",
                     "hascustomalias": false,
                     "is_collector": false,
-                    "isrequired": false,
+                    "isrequired": true,
                     "issearchable": true,
                     "istopnode": false,
                     "name": "Registration Status",
@@ -4891,7 +4497,7 @@
                     "graph_id": "cef9c510-e3e6-4057-ac08-89ad926180b4",
                     "hascustomalias": false,
                     "is_collector": false,
-                    "isrequired": true,
+                    "isrequired": false,
                     "issearchable": true,
                     "istopnode": false,
                     "name": "Contributing Resource Count",
@@ -4937,7 +4543,7 @@
                     "graph_id": "cef9c510-e3e6-4057-ac08-89ad926180b4",
                     "hascustomalias": false,
                     "is_collector": false,
-                    "isrequired": true,
+                    "isrequired": false,
                     "issearchable": true,
                     "istopnode": false,
                     "name": "Heritage Category",
@@ -5167,7 +4773,7 @@
                     "graph_id": "cef9c510-e3e6-4057-ac08-89ad926180b4",
                     "hascustomalias": false,
                     "is_collector": false,
-                    "isrequired": true,
+                    "isrequired": false,
                     "issearchable": true,
                     "istopnode": false,
                     "name": "Functional State",
@@ -5259,7 +4865,7 @@
                     "graph_id": "cef9c510-e3e6-4057-ac08-89ad926180b4",
                     "hascustomalias": false,
                     "is_collector": false,
-                    "isrequired": false,
+                    "isrequired": true,
                     "issearchable": true,
                     "istopnode": false,
                     "name": "Registry Types",
@@ -5409,259 +5015,24 @@
                     "sourcebranchpublication_id": null
                 },
                 {
-                    "alias": "decision_history_n1",
+                    "alias": "pid",
                     "config": {
                         "en": ""
                     },
-                    "datatype": "semantic",
-                    "description": "{\"en\": \"\"}",
-                    "exportable": false,
-                    "fieldname": null,
-                    "graph_id": "cef9c510-e3e6-4057-ac08-89ad926180b4",
-                    "hascustomalias": false,
-                    "is_collector": true,
-                    "isrequired": false,
-                    "issearchable": true,
-                    "istopnode": false,
-                    "name": "Decision History",
-                    "nodegroup_id": "a4ea0cfc-9901-11ee-b789-080027b7463b",
-                    "nodeid": "a4ea0cfc-9901-11ee-b789-080027b7463b",
-                    "ontologyclass": "http://www.ics.forth.gr/isl/CRMinf/I3_Inference_Logic",
-                    "parentproperty": "http://www.cidoc-crm.org/cidoc-crm/P140_assigned_attribute_to",
-                    "sortorder": 0,
-                    "sourcebranchpublication_id": null
-                },
-                {
-                    "alias": "recommended_by_last_name_n1",
-                    "config": {},
-                    "datatype": "string",
+                    "datatype": "number",
                     "description": null,
-                    "exportable": false,
-                    "fieldname": null,
+                    "exportable": true,
+                    "fieldname": "PID",
                     "graph_id": "cef9c510-e3e6-4057-ac08-89ad926180b4",
                     "hascustomalias": false,
                     "is_collector": false,
                     "isrequired": false,
                     "issearchable": true,
                     "istopnode": false,
-                    "name": "Recommended By Last Name",
-                    "nodegroup_id": "a4ea0cfc-9901-11ee-b789-080027b7463b",
-                    "nodeid": "a4ea11ac-9901-11ee-b789-080027b7463b",
-                    "ontologyclass": "http://www.ics.forth.gr/isl/CRMdig/D21_Person_Name",
-                    "parentproperty": "http://www.cidoc-crm.org/cidoc-crm/P131_is_identified_by",
-                    "sortorder": 0,
-                    "sourcebranchpublication_id": null
-                },
-                {
-                    "alias": "decided_by_first_name_n1",
-                    "config": {},
-                    "datatype": "string",
-                    "description": null,
-                    "exportable": false,
-                    "fieldname": null,
-                    "graph_id": "cef9c510-e3e6-4057-ac08-89ad926180b4",
-                    "hascustomalias": false,
-                    "is_collector": false,
-                    "isrequired": false,
-                    "issearchable": true,
-                    "istopnode": false,
-                    "name": "Decided By First Name",
-                    "nodegroup_id": "a4ea0cfc-9901-11ee-b789-080027b7463b",
-                    "nodeid": "a4ea133c-9901-11ee-b789-080027b7463b",
-                    "ontologyclass": "http://www.ics.forth.gr/isl/CRMdig/D21_Person_Name",
-                    "parentproperty": "http://www.cidoc-crm.org/cidoc-crm/P131_is_identified_by",
-                    "sortorder": 0,
-                    "sourcebranchpublication_id": null
-                },
-                {
-                    "alias": "recommended_by_first_name_n1",
-                    "config": {},
-                    "datatype": "string",
-                    "description": null,
-                    "exportable": false,
-                    "fieldname": null,
-                    "graph_id": "cef9c510-e3e6-4057-ac08-89ad926180b4",
-                    "hascustomalias": false,
-                    "is_collector": false,
-                    "isrequired": false,
-                    "issearchable": true,
-                    "istopnode": false,
-                    "name": "Recommended By First Name",
-                    "nodegroup_id": "a4ea0cfc-9901-11ee-b789-080027b7463b",
-                    "nodeid": "a4ea149a-9901-11ee-b789-080027b7463b",
-                    "ontologyclass": "http://www.ics.forth.gr/isl/CRMdig/D21_Person_Name",
-                    "parentproperty": "http://www.cidoc-crm.org/cidoc-crm/P131_is_identified_by",
-                    "sortorder": 0,
-                    "sourcebranchpublication_id": null
-                },
-                {
-                    "alias": "decision_made_by_n1",
-                    "config": {},
-                    "datatype": "semantic",
-                    "description": "",
-                    "exportable": false,
-                    "fieldname": null,
-                    "graph_id": "cef9c510-e3e6-4057-ac08-89ad926180b4",
-                    "hascustomalias": false,
-                    "is_collector": false,
-                    "isrequired": false,
-                    "issearchable": true,
-                    "istopnode": false,
-                    "name": "Decision Made By",
-                    "nodegroup_id": "a4ea0cfc-9901-11ee-b789-080027b7463b",
-                    "nodeid": "a4ea15e4-9901-11ee-b789-080027b7463b",
-                    "ontologyclass": "http://www.cidoc-crm.org/cidoc-crm/E21_Person",
-                    "parentproperty": "http://www.cidoc-crm.org/cidoc-crm/P129_is_about",
-                    "sortorder": 0,
-                    "sourcebranchpublication_id": null
-                },
-                {
-                    "alias": "recommended_by_n1",
-                    "config": {},
-                    "datatype": "semantic",
-                    "description": null,
-                    "exportable": false,
-                    "fieldname": null,
-                    "graph_id": "cef9c510-e3e6-4057-ac08-89ad926180b4",
-                    "hascustomalias": false,
-                    "is_collector": false,
-                    "isrequired": false,
-                    "issearchable": true,
-                    "istopnode": false,
-                    "name": "Recommended By",
-                    "nodegroup_id": "a4ea0cfc-9901-11ee-b789-080027b7463b",
-                    "nodeid": "a4ea172e-9901-11ee-b789-080027b7463b",
-                    "ontologyclass": "http://www.cidoc-crm.org/cidoc-crm/E21_Person",
-                    "parentproperty": "http://www.cidoc-crm.org/cidoc-crm/P67_refers_to",
-                    "sortorder": 0,
-                    "sourcebranchpublication_id": null
-                },
-                {
-                    "alias": "decision_made_n1",
-                    "config": {},
-                    "datatype": "string",
-                    "description": null,
-                    "exportable": false,
-                    "fieldname": null,
-                    "graph_id": "cef9c510-e3e6-4057-ac08-89ad926180b4",
-                    "hascustomalias": false,
-                    "is_collector": false,
-                    "isrequired": false,
-                    "issearchable": true,
-                    "istopnode": false,
-                    "name": "Decision Made",
-                    "nodegroup_id": "a4ea0cfc-9901-11ee-b789-080027b7463b",
-                    "nodeid": "a4ea1864-9901-11ee-b789-080027b7463b",
-                    "ontologyclass": "http://www.cidoc-crm.org/cidoc-crm/E13_Attribute_Assignment",
-                    "parentproperty": "http://www.cidoc-crm.org/cidoc-crm/P19i_was_made_for",
-                    "sortorder": 0,
-                    "sourcebranchpublication_id": null
-                },
-                {
-                    "alias": "decision_criteria_n1",
-                    "config": {},
-                    "datatype": "string",
-                    "description": null,
-                    "exportable": false,
-                    "fieldname": null,
-                    "graph_id": "cef9c510-e3e6-4057-ac08-89ad926180b4",
-                    "hascustomalias": false,
-                    "is_collector": false,
-                    "isrequired": false,
-                    "issearchable": true,
-                    "istopnode": false,
-                    "name": "Decision Criteria",
-                    "nodegroup_id": "a4ea0cfc-9901-11ee-b789-080027b7463b",
-                    "nodeid": "a4ea199a-9901-11ee-b789-080027b7463b",
-                    "ontologyclass": "http://www.cidoc-crm.org/cidoc-crm/E13_Attribute_Assignment",
-                    "parentproperty": "http://www.cidoc-crm.org/cidoc-crm/P15i_influenced",
-                    "sortorder": 0,
-                    "sourcebranchpublication_id": null
-                },
-                {
-                    "alias": "decided_by_last_name_n1",
-                    "config": {},
-                    "datatype": "string",
-                    "description": null,
-                    "exportable": false,
-                    "fieldname": null,
-                    "graph_id": "cef9c510-e3e6-4057-ac08-89ad926180b4",
-                    "hascustomalias": false,
-                    "is_collector": false,
-                    "isrequired": false,
-                    "issearchable": true,
-                    "istopnode": false,
-                    "name": "Decided By Last Name",
-                    "nodegroup_id": "a4ea0cfc-9901-11ee-b789-080027b7463b",
-                    "nodeid": "a4ea1ac6-9901-11ee-b789-080027b7463b",
-                    "ontologyclass": "http://www.ics.forth.gr/isl/CRMdig/D21_Person_Name",
-                    "parentproperty": "http://www.cidoc-crm.org/cidoc-crm/P1_is_identified_by",
-                    "sortorder": 0,
-                    "sourcebranchpublication_id": null
-                },
-                {
-                    "alias": "decision_description_n1",
-                    "config": {},
-                    "datatype": "string",
-                    "description": null,
-                    "exportable": false,
-                    "fieldname": null,
-                    "graph_id": "cef9c510-e3e6-4057-ac08-89ad926180b4",
-                    "hascustomalias": false,
-                    "is_collector": false,
-                    "isrequired": false,
-                    "issearchable": true,
-                    "istopnode": false,
-                    "name": "Decision Description",
-                    "nodegroup_id": "a4ea0cfc-9901-11ee-b789-080027b7463b",
-                    "nodeid": "a4ea1cc4-9901-11ee-b789-080027b7463b",
-                    "ontologyclass": "http://www.cidoc-crm.org/cidoc-crm/E62_String",
-                    "parentproperty": "http://www.cidoc-crm.org/cidoc-crm/P3_has_note",
-                    "sortorder": 0,
-                    "sourcebranchpublication_id": null
-                },
-                {
-                    "alias": "decision_date_n1",
-                    "config": {
-                        "dateFormat": "YYYY-MM-DD"
-                    },
-                    "datatype": "date",
-                    "description": null,
-                    "exportable": false,
-                    "fieldname": null,
-                    "graph_id": "cef9c510-e3e6-4057-ac08-89ad926180b4",
-                    "hascustomalias": false,
-                    "is_collector": false,
-                    "isrequired": false,
-                    "issearchable": true,
-                    "istopnode": false,
-                    "name": "Decision Date",
-                    "nodegroup_id": "a4ea0cfc-9901-11ee-b789-080027b7463b",
-                    "nodeid": "a4ea1e36-9901-11ee-b789-080027b7463b",
-                    "ontologyclass": "http://www.cidoc-crm.org/cidoc-crm/E50_Date",
-                    "parentproperty": "http://www.cidoc-crm.org/cidoc-crm/P1_is_identified_by",
-                    "sortorder": 0,
-                    "sourcebranchpublication_id": null
-                },
-                {
-                    "alias": "recommended_date_n1",
-                    "config": {
-                        "dateFormat": "YYYY-MM-DD"
-                    },
-                    "datatype": "date",
-                    "description": null,
-                    "exportable": false,
-                    "fieldname": null,
-                    "graph_id": "cef9c510-e3e6-4057-ac08-89ad926180b4",
-                    "hascustomalias": false,
-                    "is_collector": false,
-                    "isrequired": false,
-                    "issearchable": true,
-                    "istopnode": false,
-                    "name": "Recommended Date",
-                    "nodegroup_id": "a4ea0cfc-9901-11ee-b789-080027b7463b",
-                    "nodeid": "a4ea1f94-9901-11ee-b789-080027b7463b",
-                    "ontologyclass": "http://www.cidoc-crm.org/cidoc-crm/E50_Date",
+                    "name": "PID",
+                    "nodegroup_id": "1b622ab6-0d0f-11ed-98c2-5254008afee6",
+                    "nodeid": "ab6cb89e-d048-11ee-8370-080027b7463b",
+                    "ontologyclass": "http://www.cidoc-crm.org/cidoc-crm/E42_Identifier",
                     "parentproperty": "http://www.cidoc-crm.org/cidoc-crm/P1_is_identified_by",
                     "sortorder": 0,
                     "sourcebranchpublication_id": null
@@ -5701,7 +5072,7 @@
                     "graph_id": "cef9c510-e3e6-4057-ac08-89ad926180b4",
                     "hascustomalias": false,
                     "is_collector": false,
-                    "isrequired": false,
+                    "isrequired": true,
                     "issearchable": true,
                     "istopnode": false,
                     "name": "Name",
@@ -5788,7 +5159,7 @@
                     "graph_id": "cef9c510-e3e6-4057-ac08-89ad926180b4",
                     "hascustomalias": false,
                     "is_collector": false,
-                    "isrequired": false,
+                    "isrequired": true,
                     "issearchable": true,
                     "istopnode": false,
                     "name": "Officially Recognized Site",
@@ -5881,6 +5252,29 @@
                     "sourcebranchpublication_id": null
                 },
                 {
+                    "alias": "pin",
+                    "config": {
+                        "en": ""
+                    },
+                    "datatype": "number",
+                    "description": null,
+                    "exportable": true,
+                    "fieldname": "PIN",
+                    "graph_id": "cef9c510-e3e6-4057-ac08-89ad926180b4",
+                    "hascustomalias": false,
+                    "is_collector": false,
+                    "isrequired": false,
+                    "issearchable": true,
+                    "istopnode": false,
+                    "name": "PIN",
+                    "nodegroup_id": "1b622ab6-0d0f-11ed-98c2-5254008afee6",
+                    "nodeid": "e1f9e6b6-d048-11ee-8370-080027b7463b",
+                    "ontologyclass": "http://www.cidoc-crm.org/cidoc-crm/E42_Identifier",
+                    "parentproperty": "http://www.cidoc-crm.org/cidoc-crm/P1_is_identified_by",
+                    "sortorder": 1,
+                    "sourcebranchpublication_id": null
+                },
+                {
                     "alias": "chronology_notes",
                     "config": {
                         "en": ""
@@ -5917,7 +5311,7 @@
                     "graph_id": "cef9c510-e3e6-4057-ac08-89ad926180b4",
                     "hascustomalias": false,
                     "is_collector": true,
-                    "isrequired": false,
+                    "isrequired": true,
                     "issearchable": true,
                     "istopnode": false,
                     "name": "Borden Number",
@@ -6025,8 +5419,8 @@
             "publication": {
                 "graph_id": "cef9c510-e3e6-4057-ac08-89ad926180b4",
                 "notes": null,
-                "publicationid": "f59d189e-bca4-11ee-a60d-080027b7463b",
-                "published_time": "2024-01-26T17:45:17.643"
+                "publicationid": "11c6bbda-d049-11ee-ba02-080027b7463b",
+                "published_time": "2024-02-20T17:37:54.449"
             },
             "relatable_resource_model_ids": [],
             "resource_2_resource_constraints": [],
@@ -6060,7 +5454,7 @@
     ],
     "metadata": {
         "db": "PostgreSQL 15.3 on x86_64-pc-linux-gnu, compiled by gcc (GCC) 11.3.1 20221121 (Red Hat 11.3.1-4), 64-bit",
-        "git hash": "6f4433a6f 2024-01-22 23:28:45 -0800",
+        "git hash": "9975977532 2024-02-07 12:28:09 -0800",
         "os": "Linux",
         "os version": "5.14.0-333.el9.x86_64"
     }

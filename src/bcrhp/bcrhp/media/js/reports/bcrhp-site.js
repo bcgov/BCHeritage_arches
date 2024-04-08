@@ -3,7 +3,7 @@ define(['underscore',
     'knockout-mapping',
     'viewmodels/bcrhp-site',
     'reports/map-header',
-    'templates/views/report-templates/bcrhp_default.htm',
+    'templates/views/report-templates/map.htm',
     'templates/views/report-templates/details/heritage_site.htm'
 ], function(_, ko, koMapping, MapReportViewModel, MapHeader, defaultSiteTemplate) {
     var siteViewModel = MapReportViewModel;

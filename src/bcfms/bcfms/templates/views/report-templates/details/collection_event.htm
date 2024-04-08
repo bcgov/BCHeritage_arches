@@ -10,6 +10,7 @@
                                                          displayfullvalue: true}
                                             }">
                     </div>
+                    <div data-bind="text: getPoint('collection_location')"></div>
                 </div>
             </dd>
         </dl>
@@ -55,16 +56,6 @@
                     }">
                 </div>
                 <!-- /ko -->
-                <div class="bc-inline" data-bind="visible: nodesHaveData(['collection_end_year'])">-</div>
-                <!-- ko let: {widget: getWidgetForAlias('collection_end_year')}-->
-                <div class="bc-inline" data-bind="component: {
-                    name: 'datepicker-widget',
-                    params: { value: getFirstNodeValue('collection_end_year'),
-                              node: widget.node,
-                              state: 'display_value' }
-                    }, visible: nodesHaveData(['collection_end_year'])">
-                </div>
-                <!-- /ko -->
             </dd>
         </dl>
     </div>
@@ -81,10 +72,21 @@
             </dd>
         </dl>
     </div>
-    <div class="bc-grid-item grid-col-2 grid-row-3" data-bind="visible: nodesHaveData(['fossil_abundance'])">
+    <div class="bc-grid-item grid-col-2 grid-row-3" data-bind="visible: nodesHaveData(['fossil_abundance', 'samples_collected'])">
         <dl class="dl-vertical dl-vertical-bc">
-            <dt>Fossil Abundance</dt>
+            <dt data-bind="visible: nodesHaveData(['samples_collected'])">Samples Collected</dt>
             <dd>
+                <div class="bc-inline" data-bind="component: { name: 'resource-instance-multiselect-widget',
+                                            params: { value: getFirstNodeValue('samples_collected'), state: 'display_value' }
+                                            }, visible: nodesHaveData(['samples_collected'])">
+                </div>
+            </dd>
+            <dt data-bind="visible: !!fossilNamesForCollectionEvent().length > 0 ">Fossils Found</dt>
+            <dd data-bind="foreach: {data: fossilNamesForCollectionEvent, as: 'name'}">
+                <div data-bind="text: name"></div>
+            </dd>
+            <dt data-bind="visible: nodesHaveData(['fossil_abundance'])">Fossil Abundance</dt>
+            <dd data-bind="visible: nodesHaveData(['fossil_abundance'])">
                 <div data-bind="component:
                     { name: 'concept-select-widget',
                       params: { value: getFirstNodeValue('fossil_abundance'), state: 'display_value' }

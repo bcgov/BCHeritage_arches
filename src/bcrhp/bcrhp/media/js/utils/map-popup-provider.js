@@ -78,7 +78,10 @@ define([
                 }
                 const selectedFeatureIds = ko.unwrap(map.selectedFeatureIds);
                 const selectedTool = ko.unwrap(map.selectedTool);
-                if ((typeof selectedTool !== 'undefined' && selectedTool !== null) || selectedFeatureIds && selectedFeatureIds.length)
+                // If the selected tool isn't empty (we're doing a select) and isn't select-by-feature, not it a mode
+                // to select anything
+                if ((typeof selectedTool !== 'undefined' && selectedTool !== null && selectedTool !== 'filter_by_feature')
+                    || selectedFeatureIds && selectedFeatureIds.length)
                     return false;
                 if (feature.sourceLayer in popupDataProvider.layerConfigs)
                     return true;

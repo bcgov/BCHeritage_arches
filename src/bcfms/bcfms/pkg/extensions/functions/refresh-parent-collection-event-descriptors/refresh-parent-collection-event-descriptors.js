@@ -2,9 +2,9 @@ define(['jquery',
     'knockout',
     'viewmodels/function',
     'bindings/chosen',
-    'templates/views/components/functions/sample-function.htm'],
-function($, ko, FunctionViewModel, chosen, sampleFunctionTemplate) {
-    return ko.components.register('views/components/functions/sample-function', {
+    'templates/views/components/functions/refresh-parent-collection-event-descriptors.htm'],
+function($, ko, FunctionViewModel, chosen, refreshTemplate) {
+    return ko.components.register('views/components/functions/refresh-parent-collection-event-descriptors', {
         viewModel: function(params) {
             FunctionViewModel.apply(this, arguments);
             var nodegroups = {};
@@ -17,6 +17,6 @@ function($, ko, FunctionViewModel, chosen, sampleFunctionTemplate) {
 
             window.setTimeout(function(){$("select[data-bind^=chosen]").trigger("chosen:updated");}, 300);
         },
-        template: sampleFunctionTemplate
+        template: refreshTemplate
     });
 });

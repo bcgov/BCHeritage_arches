@@ -87,6 +87,7 @@ define([
                 "2336968c-1035-11ec-a3aa-5254008afee6", /* Fossil Site layer */
             ],
 
+            // @todo - Need to align this with BCRHP, centralize functionality
             isFeatureClickable: function(feature, map){
                 // console.log("fossils_popup_provider.isFeatureClickable()")
                 const selectedFeatureIds = ko.unwrap(map.selectedFeatureIds);

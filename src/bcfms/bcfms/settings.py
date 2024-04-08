@@ -44,12 +44,12 @@ UPLOADED_FILES_DIR = "uploadedfiles"
 # SECRET_KEY = ''
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True
+DEBUG = {{ django_debug_mode }}
 
 ROOT_URLCONF = 'bcfms.urls'
 
 # a prefix to append to all elasticsearch indexes, note: must be lower case
-ELASTICSEARCH_PREFIX = 'bcfms-dev'
+ELASTICSEARCH_PREFIX = 'bcfms{{ arches_app_suffix }}'
 
 ELASTICSEARCH_CUSTOM_INDEXES = []
 # [{
@@ -129,7 +129,7 @@ MEDIA_ROOT = os.path.join(APP_ROOT)
 STATIC_ROOT = os.path.join(APP_ROOT, "staticfiles")
 
 # when hosting Arches under a sub path set this value to the sub path eg : "/{sub_path}/"
-FORCE_SCRIPT_NAME = None
+FORCE_SCRIPT_NAME = '/int/bc-fossil-management'
 
 OVERRIDE_RESOURCE_MODEL_LOCK = False
 
@@ -175,12 +175,14 @@ LOGGING = {
 DATA_UPLOAD_MAX_MEMORY_SIZE = 15728640
 
 # Unique session cookie ensures that logins are treated separately for each app
-SESSION_COOKIE_NAME = 'bcfms-dev'
+SESSION_COOKIE_NAME = 'bcfms{{ arches_app_suffix }}'
 
 # For more info on configuring your cache: https://docs.djangoproject.com/en/2.2/topics/cache/
 CACHES = {
     'default': {
-        'BACKEND': 'django.core.cache.backends.dummy.DummyCache',
+        "BACKEND": "django.core.cache.backends.redis.RedisCache",
+        "LOCATION": "redis://127.0.0.1:6379",
+        # 'BACKEND': 'django.core.cache.backends.dummy.DummyCache',
     },
     'user_permission': {
         'BACKEND': 'django.core.cache.backends.db.DatabaseCache',
@@ -198,7 +200,7 @@ DATE_IMPORT_EXPORT_FORMAT = "%Y-%m-%d" # Custom date format for dates imported f
 
 # This is used to indicate whether the data in the CSV and SHP exports should be
 # ordered as seen in the resource cards or not.
-EXPORT_DATA_FIELDS_IN_CARD_ORDER = False
+EXPORT_DATA_FIELDS_IN_CARD_ORDER = True
 
 #Identify the usernames and duration (seconds) for which you want to cache the time wheel
 CACHE_BY_USER = {'anonymous': 3600 * 24}
