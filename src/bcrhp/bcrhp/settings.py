@@ -16,7 +16,7 @@ except ImportError:
     pass
 
 APP_NAME = 'bcrhp'
-APP_VERSION = semantic_version.Version(major=0, minor=0, patch=0)
+APP_VERSION = semantic_version.Version(major=1, minor=1, patch=0)
 APP_ROOT = os.path.dirname(os.path.abspath(inspect.getfile(inspect.currentframe())))
 MIN_ARCHES_VERSION = arches.__version__
 MAX_ARCHES_VERSION = arches.__version__
