@@ -24,6 +24,17 @@ define([
 
         var tiles = _.flatten(_.map(params.report.cards, card => {return getAllTiles(card)}));
 
+        this.siteNamesVisible = ko.observable(true);
+        this.siteLocationVisible = ko.observable(true);
+        this.bordenNumberVisible = ko.observable(true);
+        this.recognitionInformationVisible = ko.observable(true);
+        this.recognitionDetailsVisible = ko.observable(true);
+        this.chronologyVisible = ko.observable(true);
+        this.sosVisible = ko.observable(true);
+        this.heritageClassVisible = ko.observable(true);
+        this.heritageFunctionVisible = ko.observable(true);
+        this.heritageThemeVisible = ko.observable(true);
+
         var getWidgetForAlias = function(node_alias){
             var widget = _.find(widgets, widget => {
                 return ko.unwrap(widget.node.alias) === node_alias;
@@ -161,7 +172,5 @@ define([
             }
             return null;
         };
-        /* Old config ... to remove */
-
     };
 });

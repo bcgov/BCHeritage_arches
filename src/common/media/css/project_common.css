@@ -159,12 +159,25 @@ table.bc-summary-table td {
     margin-right: 25px;
 }
 
+.dl-horizontal {
+    width: 100%;
+}
+
 .dl-horizontal dt, .dl-horizontal dd {
     vertical-align: top;
     display: inline-block;
     padding: 2px 5px 2px 20px;
     align-items: start;
     justify-content: left;
+}
+
+.dl-horizontal dt {
+    width: 200px;
+    overflow: visible !important;
+}
+
+.dl-horizontal dd {
+    width: calc(100% - 210px);
 }
 
 .rp-card-section .rp-report-tile .dl-horizontal dd {
