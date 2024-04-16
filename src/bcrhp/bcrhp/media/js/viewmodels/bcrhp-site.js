@@ -1,12 +1,16 @@
 define([
     'jquery',
     'underscore',
+    'slick',
     'knockout',
     'knockout-mapping',
     'arches',
     'viewmodels/map-report',
-    'bindings/chosen'
-], function($, _, ko, koMapping, arches, MapReportViewModel) {
+    'bindings/chosen',
+], function($, _, slick, ko, koMapping, arches, MapReportViewModel) {
+    $.ready(function() {
+        $(".data-carousel").slick({});
+    });
     return function(params) {
         var self = this;
 
@@ -85,6 +89,27 @@ define([
             });
             return values;
         }
+
+        this.getValuesFromTiles = function(node_aliases) {
+            let widgets = {};
+            node_aliases.map(alias => {
+                widgets[alias] = getWidgetForAlias(alias);
+            });
+
+            var values_list = [];
+            _.each(ko.unwrap(tiles), tile => {
+                let tileValues = {};
+                _.keys(widgets).map( key => {
+                    tileValues[key] = getValueFromTile(tile, widgets[key]);
+                });
+                if (_.some(_.values(tileValues)))
+                {
+                    _.each(_.keys(tileValues), k => { tileValues[k] = ko.observable(tileValues[k])});
+                    values_list.push(tileValues);
+                }
+            });
+            return values_list;
+        };
 
         this.getNodeValues = function(node_alias)
         {
@@ -172,5 +197,21 @@ define([
             }
             return null;
         };
+        this.initCarousel = function(parent)
+        {
+            // $(parent).slick();
+            $(parent).slick({
+                accessibility: true,
+                slidesToShow: 2,
+                arrowsPlacement: 'split',
+                dots: true,
+                variableWidth: true,
+                infinite: false,
+                // autoplay: true,
+                // autoplaySpeed: 6000,
+                prevArrow:"<button type='button' class='slick-prev pull-left'><i class='fa fa-chevron-left' aria-hidden='false'></i></button>",
+                nextArrow:"<button type='button' class='slick-next pull-right'><i class='fa fa-chevron-right' aria-hidden='false'></i></button>"
+            });
+        }
     };
 });

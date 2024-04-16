@@ -42,13 +42,20 @@ along with this program. If not, see <http://www.gnu.org/licenses/>.
     <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.2/css/bootstrap.min.css">
 
     <link href="{% webpack_static 'css/unify.css' %}" rel="stylesheet">
-    <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/font-awesome/4.2.0/css/font-awesome.min.css">
+<!--    <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/font-awesome/4.2.0/css/font-awesome.min.css">-->
+
+    <link href="{% webpack_static 'css/fontawesome/css/fontawesome.min.css' %}" rel="stylesheet">
+    <link href="{% webpack_static 'css/fontawesome/css/solid.min.css' %}" rel="stylesheet">
     <link href="{% webpack_static 'css/index.css' %}" rel="stylesheet">
     <link href="{% webpack_static 'css/project.css' %}" rel="stylesheet">
     <link href="{% webpack_static 'css/bc_index.css' %}" rel="stylesheet">
     {% if app_settings.ACCESSIBILITY_MODE %}
     <link href="{% webpack_static 'css/accessibility.css' %}" rel="stylesheet">
     {% endif %}
+    <link rel="stylesheet" type="text/css" href="{% webpack_static 'plugins/slick/slick.min.css' %}">
+    <link rel="stylesheet" type="text/css" href="{% webpack_static 'plugins/slick/accessible-slick-theme.min.css' %}">
+    <link rel="stylesheet" type="text/css" href="{% webpack_static 'css/index.css' %}">
+    <link rel="stylesheet" type="text/css" href="{% webpack_static 'css/index-slider.css' %}">
 </head>
 
 <body>
@@ -56,7 +63,6 @@ along with this program. If not, see <http://www.gnu.org/licenses/>.
     <!--=== Header ===-->
     <header>
         <nav class="v5-splash-navbar navbar" role="navigation">
-            <div class="feedback-bar">{% blocktrans %}Welcome to the new BC Register of Historic Places System{% endblocktrans %}</div>
             <div class="container-fluid">
                 <div class="navbar-header">
                     <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#myNavbar" aria-expanded="false" aria-controls="myNavbar">
@@ -83,10 +89,10 @@ along with this program. If not, see <http://www.gnu.org/licenses/>.
                         <li>
                             <a href="#info-block-1">{% trans "About" %}</a>
                         </li>
-                        {% if user|can_create_resource_instance and user.username != 'anonymous' %}
                         <li>
                             <a href="{% url 'search_home' %}">{% trans "Search Sites" %}</a>
                         </li>
+                        {% if user|can_create_resource_instance and user.username != 'anonymous' %}
                             <li>
                                 <a href="{% url 'resource' %}" target="_blank">{% trans "Manage" %}</a>
                             </li>
@@ -160,40 +166,47 @@ along with this program. If not, see <http://www.gnu.org/licenses/>.
                     </ul>
                 </div>
 
-                <!-- Splash Screen -->
-                <div class="fullscreenbanner-container">
-                    <div class="fullscreenbanner">
-                        <ul>
-                            <!-- SLIDE 1 -->
-                            <li data-transition="fade" data-slotamount="9" data-masterspeed="0" data-title="Slide 1">
-                                <!-- MAIN IMAGE -->
-                                <img src="{% webpack_static 'img/front/GM4-INtheMILL5x6.png' %}" alt="slidebg1" data-bgfit="cover" data-bgposition="top center" data-bgrepeat="no-repeat">
-                                <!-- LAYERS -->
-                                <!-- NEW LAYER -->
-                                <div class="tp-caption sft start text-bold bc-splash-caption" delay="4500" data-hoffset="0" data-y="400" data-speed="800" data-start="100" data-easing="Back.easeInOut" data-endspeed="300" data-x="0">
-                                    <h2>{% blocktrans %}BC Register of Historic Places{% endblocktrans %}</h2>
-                                    <h3>{% trans "Official Register of historic places for British Columbia" %}</h3>
-                                    <!-- this is a workaround for a layout issue causing the section to not be limited -->
-                                    <h4 class="area-description"><span>{% blocktrans %}BC Register of Historic Places records historic places that have been officially
+                <!-- Slider -->
+                <div class="home-slider">
+                    <div class="slide-img-container">
+                        <img src="{% webpack_static 'img/front/ColeIsland.jpg' %}" alt="null">
+                        <div class="slide-caption bc-splash-caption">
+                            <h2>{% blocktrans %}BC Register of Historic Places{% endblocktrans %}</h2>
+                            <h3>{% trans "Official Register of historic places for British Columbia" %}</h3>
+                            <!-- this is a workaround for a layout issue causing the section to not be limited -->
+                            <h4 class="area-description"><span>{% blocktrans %}BC Register of Historic Places records historic places that have been officially
                                         recognized by the provincial, federal or local / regional governments for their heritage value.{% endblocktrans %}</span></h4>
-<!--                                    <h4 class="area-description">{% trans "BC Register of Historic Places records historic places that have been officially recognized by the provincial, federal or local " %}</h4>-->
-                                </div>
-
-                                <!-- Gradient -->
-                                <div class="image-gradient"></div>
-
-                                <!-- Attribution -->
-                                <div class="image-attribution">
-                                    <span>{% trans "Grist Mill at Keremeos" %}</span>
-                                </div>
-                            </li>
-                        </ul>
-                        <div class="tp-bannertimer tp-bottom"></div>
+                        </div>
+                        <div class="slide-img-attribution">{% trans "Cole Island at Colwood" %}</div>
                     </div>
-
-                    <!-- Down button -->
-                    <a href="#info-block-1" class="down-button" aria-label="Go to content"><i class="fa fa-angle-down down-button-icon"></i></a>
+                    <div class="slide-img-container">
+                        <img src="{% webpack_static 'img/front/Chinatown_Crowd_2023_Mia_Cirotto.jpg' %}" alt="null">
+                        <div class="slide-caption bc-splash-caption">
+                            <h2>{% blocktrans %}BC Register of Historic Places{% endblocktrans %}</h2>
+                            <h3>{% trans "Official Register of historic places for British Columbia" %}</h3>
+                            <!-- this is a workaround for a layout issue causing the section to not be limited -->
+                            <h4 class="area-description"><span>{% blocktrans %}BC Register of Historic Places records historic places that have been officially
+                                        recognized by the provincial, federal or local / regional governments for their heritage value.{% endblocktrans %}</span></h4>
+                            <!--                                    <h4 class="area-description">{% trans "BC Register of Historic Places records historic places that have been officially recognized by the provincial, federal or local " %}</h4>-->
+                        </div>
+                        <div class="slide-img-attribution">{% trans "Barkerville Historic Town and Park" %}</div>
+                    </div>
+                    <div class="slide-img-container">
+                        <img src="{% webpack_static 'img/front/McAbeeFossilBeds.jpg' %}" alt="McAbee Fossil Beds">
+                        <div class="slide-caption bc-splash-caption">
+                            <h2>{% blocktrans %}BC Register of Historic Places{% endblocktrans %}</h2>
+                            <h3>{% trans "Official Register of historic places for British Columbia" %}</h3>
+                            <!-- this is a workaround for a layout issue causing the section to not be limited -->
+                            <h4 class="area-description"><span>{% blocktrans %}BC Register of Historic Places records historic places that have been officially
+                                        recognized by the provincial, federal or local / regional governments for their heritage value.{% endblocktrans %}</span></h4>
+                        </div>
+                        <div class="slide-img-attribution">{% trans "McAbee Fossil Beds" %}</div>
+                    </div>
                 </div>
+
+                <!-- Down button -->
+                <a href="#info-block-1" class="down-button"><i class="fa fa-angle-down down-button-icon"></i></a>
+
             </section>
             <!-- End Intro Section -->
 
@@ -391,6 +404,7 @@ along with this program. If not, see <http://www.gnu.org/licenses/>.
             'themepunch-revolution': '{{ STATIC_URL }}plugins/revolution-slider/rs-plugin/js/jquery.themepunch.revolution',
             'revolution-slider': '{{ STATIC_URL }}plugins/revolution-slider',
             'one-app': '{{ STATIC_URL }}plugins/one.app',
+            'slick': "{% webpack_static 'plugins/slick/slick.min' %}",
         },
         shim: {
             'jquery': {
@@ -403,16 +417,10 @@ along with this program. If not, see <http://www.gnu.org/licenses/>.
             'chosen': {
                 deps: ['jquery'],
             },
-            'themepunch-tools': {
-                deps: ['jquery'],
-            },
-            'themepunch-revolution': {
-                deps: ['jquery'],
-            },
-            'revolution-slider': {
-                deps: ['jquery'],
-            },
             'one-app': {
+                deps: ['jquery'],
+            },
+            'slick': {
                 deps: ['jquery'],
             }
         }
@@ -421,16 +429,14 @@ along with this program. If not, see <http://www.gnu.org/licenses/>.
         ['jquery',
             'knockout',
             'bootstrap',
-            'themepunch-tools',
-            'themepunch-revolution',
-            'revolution-slider',
             'one-app',
+            'slick',
             'bindings/chosen',
             'views/components/language-switcher'
         ], function ($, ko) {
             $(document).ready(function () {
                 App.init();
-                RevolutionSlider.initRSfullScreen();
+                // RevolutionSlider.initRSfullScreen();
 
                 var contentSections = $('.app-info-block'),
                     navigationItems = $('#cd-vertical-nav a');
@@ -477,6 +483,17 @@ along with this program. If not, see <http://www.gnu.org/licenses/>.
                         600
                     );
                 }
+
+                //slider
+                $('.home-slider').slick({
+                    accessibility: true,
+                    arrowsPlacement: 'split',
+                    dots: true,
+                    autoplay: true,
+                    autoplaySpeed: 8000,
+                    prevArrow:"<button type='button' class='slick-prev pull-left'><i class='fa fa-chevron-left' aria-hidden='true'></i></button>",
+                    nextArrow:"<button type='button' class='slick-next pull-right'><i class='fa fa-chevron-right' aria-hidden='true'></i></button>"
+                });
 
                 var ViewModel = function () {
                      // place observables here

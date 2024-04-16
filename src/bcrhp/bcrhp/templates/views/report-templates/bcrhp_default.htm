@@ -1,4 +1,6 @@
 {% extends "views/report-templates/default.htm" %}
+{% load static %}
+{% load template_tags %}
 {% load i18n %}
 
 {% block report_title_bar %}
@@ -56,6 +58,7 @@
             <div class="rp-card-section">
                 <!--div data-bind="text: report.get('name')"></div-->
                 <!-- ko if: report.get('name') == "Heritage Site" -->
+                <!--div>User: {{ user.username }}</div-->
                 {% if user.username != 'anonymous' %}
                 {% include 'views/report-templates/details/heritage_site.htm' %}
                 {% else %}

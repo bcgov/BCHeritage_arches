@@ -3,11 +3,12 @@
 
 {% block display_value %}
 <div data-bind="visible: showName">
-    <span data-bind="component: { name: 'text-widget',
+    <dt data-bind="text: siteNameLabel"> </dt>
+    <dd data-bind="component: { name: 'text-widget',
                                   params: { value: siteName,
                                             state: 'display_value'
                                           }
                                 }">
-    </span>
+    </dd>
 </div>
 {% endblock display_value %}

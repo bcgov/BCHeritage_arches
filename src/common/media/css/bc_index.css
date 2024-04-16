@@ -3,7 +3,7 @@
 .bc-splash-caption {
     background: rgba(0, 0, 0, 0.6);
     padding: 5px !important;
-    left: 10vw !important;
+    margin-left: 10vw !important;
     max-width: 50vw !important;
     min-width: max-content !important;
 }
@@ -97,11 +97,7 @@ li.app-info-block-text {
 
 @media only screen and (min-width: 768px) {
     .bc-splash-caption {
-        background: rgba(0, 0, 0, 0.6);
-        padding: 5px !important;
-        left: 10vw !important;
-        max-width: 50vw !important;
-        min-width: max-content !important;
+        margin-left: 10vw !important;
     }
 
     .bc-splash-caption > h4 {
@@ -178,6 +174,43 @@ li.app-info-block-text {
     /*color: #000000;*/
 }
 
+.slide-img-container {
+    top: 100px;
+    max-height: 100vh;
+    width: 100vw;
+    overflow-y: clip;
+}
+.slide-caption {
+    max-width: 70vw;
+    padding-left: 30px;
+}
+
+.slide-img-attribution {
+    font-size: .8rem !important;
+}
+
+.home-slider img {
+    max-height: 125vh !important;
+    width: 100% !important;
+}
+
+.home-slider .slick-autoplay-toggle-button {
+    color: #fff;
+    bottom: 10px;
+}
+
+.home-slider .slick-prev > i, .home-slider .slick-next > i {
+    color: #fff !important;
+}
+
+.home-slider .slick-prev {
+    left: 1.5rem;
+}
+
+.home-slider .slick-next {
+    right: 1.5rem;
+}
+
 h3.app-info-block-title {
     /* What are Historic Places? */
     /* H500
@@ -221,7 +254,7 @@ h4.app-info-block-title {
 }
 
 .navbar-brand-v5-icon {
-    height: 50px;
+    height: 50px !important;
 }
 
 .nav-brand-container h1 {
