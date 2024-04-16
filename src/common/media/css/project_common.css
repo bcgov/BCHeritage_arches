@@ -171,12 +171,12 @@ table.bc-summary-table td {
     justify-content: left;
 }
 
-.dl-horizontal dt {
+.details-card-section .dl-horizontal dt {
     width: 200px;
     overflow: visible !important;
 }
 
-.dl-horizontal dd {
+.details-card-section .dl-horizontal dd {
     width: calc(100% - 210px);
 }
 
@@ -424,7 +424,7 @@ img.bc-details-image
         page-break-before: always;
         break-before: page;
     }
-    
+
     div {
         break-before: auto;
     }
