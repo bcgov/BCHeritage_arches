@@ -2,7 +2,7 @@
 <div class="data-carousel summary-slider" data-bind="descendantsComplete: initCarousel" style="max-width: calc(100vw - 600px);">
     <!-- ko foreach: { data: getValuesFromTiles(['site_images', 'image_features', 'image_description', 'copyright', 'photographer']), as: 'tileValues' } -->
     <div>
-        <img data-bind="attr: {src: ko.unwrap(ko.unwrap(tileValues['site_images'])[0]['url']).replace('/int','')}"/>
+        <img data-bind="attr: {src: ko.unwrap(ko.unwrap(tileValues['site_images'])[0]['url'])}"/>
         <div class="photo_info" style="max-width: 500px;">
         <div>
             <dt>Photographer</dt>

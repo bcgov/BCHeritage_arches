@@ -201,9 +201,10 @@ define([
         {
             // $(parent).slick();
             $(parent).slick({
-                accessibility: true,
-                slidesToShow: 2,
-                arrowsPlacement: 'split',
+                // accessibility: true,
+                // slidesToShow: 2,
+                // slidesToScroll: 1,
+                // arrowsPlacement: 'split',
                 dots: true,
                 variableWidth: true,
                 infinite: false,
