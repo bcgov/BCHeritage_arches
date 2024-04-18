@@ -30,6 +30,8 @@ urlpatterns = [
                       MVT.as_view(),
                       name="mvt",
                       ),
+                  re_path(r"^%sreport/(?P<resourceid>%s)$" % (settings.BCGOV_PROXY_PREFIX, uuid_regex),
+                          ResourceReportView.as_view(), name="resource_report"),
                   # Override base export results
                   re_path(r"^search/export_results$", bcrhp_export_results, name="export_results"),
                   bc_url_resolver,
