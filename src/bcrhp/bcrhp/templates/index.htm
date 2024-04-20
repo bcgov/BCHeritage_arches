@@ -161,7 +161,7 @@ along with this program. If not, see <http://www.gnu.org/licenses/>.
                         </li>
                         <li>
                             <a class="vertical-nav-list-link" href="#info-block-5" data-number="6" aria-label="Go to the contact Heritage Branch section">
-                                <span class="vertical-nav-list-ref">{% trans "Contact the Heritage Branch" %}</span>
+                                <span class="vertical-nav-list-ref">{% trans "Contact" %}</span>
                             </a>
                     </ul>
                 </div>
@@ -174,8 +174,7 @@ along with this program. If not, see <http://www.gnu.org/licenses/>.
                             <h2>{% blocktrans %}BC Register of Historic Places{% endblocktrans %}</h2>
                             <h3>{% trans "Official Register of historic places for British Columbia" %}</h3>
                             <!-- this is a workaround for a layout issue causing the section to not be limited -->
-                            <h4 class="area-description"><span>{% blocktrans %}BC Register of Historic Places records historic places that have been officially
-                                        recognized by the provincial, federal or local / regional governments for their heritage value.{% endblocktrans %}</span></h4>
+                            <h4 class="area-description"><span>{% blocktrans %}BC Register of Historic Places records historic places that have been officially recognized by the provincial, federal or local / regional governments for their heritage value.{% endblocktrans %}</span></h4>
                         </div>
                         <div class="slide-img-attribution">{% trans "Cole Island at Colwood" %}</div>
                     </div>
@@ -185,8 +184,7 @@ along with this program. If not, see <http://www.gnu.org/licenses/>.
                             <h2>{% blocktrans %}BC Register of Historic Places{% endblocktrans %}</h2>
                             <h3>{% trans "Official Register of historic places for British Columbia" %}</h3>
                             <!-- this is a workaround for a layout issue causing the section to not be limited -->
-                            <h4 class="area-description"><span>{% blocktrans %}BC Register of Historic Places records historic places that have been officially
-                                        recognized by the provincial, federal or local / regional governments for their heritage value.{% endblocktrans %}</span></h4>
+                            <h4 class="area-description"><span>{% blocktrans %}BC Register of Historic Places records historic places that have been officially recognized by the provincial, federal or local / regional governments for their heritage value.{% endblocktrans %}</span></h4>
                             <!--                                    <h4 class="area-description">{% trans "BC Register of Historic Places records historic places that have been officially recognized by the provincial, federal or local " %}</h4>-->
                         </div>
                         <div class="slide-img-attribution">{% trans "Barkerville Historic Town and Park" %}</div>
@@ -197,8 +195,7 @@ along with this program. If not, see <http://www.gnu.org/licenses/>.
                             <h2>{% blocktrans %}BC Register of Historic Places{% endblocktrans %}</h2>
                             <h3>{% trans "Official Register of historic places for British Columbia" %}</h3>
                             <!-- this is a workaround for a layout issue causing the section to not be limited -->
-                            <h4 class="area-description"><span>{% blocktrans %}BC Register of Historic Places records historic places that have been officially
-                                        recognized by the provincial, federal or local / regional governments for their heritage value.{% endblocktrans %}</span></h4>
+                            <h4 class="area-description"><span>{% blocktrans %}BC Register of Historic Places records historic places that have been officially recognized by the provincial, federal or local / regional governments for their heritage value.{% endblocktrans %}</span></h4>
                         </div>
                         <div class="slide-img-attribution">{% trans "McAbee Fossil Beds" %}</div>
                     </div>
@@ -207,6 +204,7 @@ along with this program. If not, see <http://www.gnu.org/licenses/>.
                 <!-- Down button -->
                 <a href="#info-block-1" class="down-button"><i class="fa fa-angle-down down-button-icon"></i></a>
 
+                <div id="nav_visibility_control" style="margin-top: -225px">&nbsp;</div>
             </section>
             <!-- End Intro Section -->
 
@@ -434,14 +432,22 @@ along with this program. If not, see <http://www.gnu.org/licenses/>.
             'bindings/chosen',
             'views/components/language-switcher'
         ], function ($, ko) {
+            var contentSections = null,
+                navigationItems = null;
             $(document).ready(function () {
+                jQuery.expr.filters.offscreen = function(el) {
+                    var rect = el.getBoundingClientRect();
+                    return (
+                        (rect.x + rect.width) < 0
+                        || (rect.y + rect.height) < 0
+                        || (rect.x > window.innerWidth || rect.y > window.innerHeight)
+                    );
+                };
                 App.init();
-                // RevolutionSlider.initRSfullScreen();
 
-                var contentSections = $('.app-info-block'),
-                    navigationItems = $('#cd-vertical-nav a');
+                contentSections = $('.app-info-block');
+                navigationItems = $('#cd-vertical-nav a');
 
-                updateNavigation();
                 $(window).on('scroll', function () {
                     updateNavigation();
                 });
@@ -456,33 +462,6 @@ along with this program. If not, see <http://www.gnu.org/licenses/>.
                     event.preventDefault();
                     smoothScroll($("#info-block-1"));
                 });
-
-
-                function updateNavigation() {
-                    contentSections.each(function () {
-                        $this = $(this);
-                        var activeSection = $('#cd-vertical-nav a[href="#' + $this.attr('id') + '"]').data('number') - 1;
-                        if (($this.offset().top - $(window).height() / 2 < $(window).scrollTop()) && ($this.offset().top + $this.height() - $(window).height() / 2 > $(window).scrollTop())) {
-                            if (activeSection === 0)
-                            {
-                                $("#cd-vertical-nav").css("display","none");
-                            }
-                            else {
-                                navigationItems.eq(activeSection).addClass('is-selected');
-                                $("#cd-vertical-nav").css("display","");
-                            }
-                        } else {
-                            navigationItems.eq(activeSection).removeClass('is-selected');
-                        }
-                    });
-                }
-
-                function smoothScroll(target) {
-                    $('body,html').animate(
-                        { 'scrollTop': target.offset().top },
-                        600
-                    );
-                }
 
                 //slider
                 $('.home-slider').slick({
@@ -504,6 +483,25 @@ along with this program. If not, see <http://www.gnu.org/licenses/>.
                     ko.applyBindings(new ViewModel());
                 }, 300);
             });
+            function updateNavigation() {
+                contentSections.each(function () {
+                    $this = $(this);
+                    let offset = 100;
+                    var activeSection = $('#cd-vertical-nav a[href="#' + $this.attr('id') + '"]').data('number') - 1;
+                    $("#cd-vertical-nav").css("display", $("#nav_visibility_control").is(":offscreen") ? "" : "none");
+                    if (($this.offset().top - $(window).height() / 2 < ($(window).scrollTop()-offset)) && ($this.offset().top + $this.height() - $(window).height() / 2 > ($(window).scrollTop())-offset)) {
+                        navigationItems.eq(activeSection).addClass('is-selected');
+                    } else {
+                        navigationItems.eq(activeSection).removeClass('is-selected');
+                    }
+                });
+            }
+            function smoothScroll(target) {
+                $('body,html').animate(
+                    { 'scrollTop': target.offset().top },
+                    600
+                );
+            }
 
         }
     );

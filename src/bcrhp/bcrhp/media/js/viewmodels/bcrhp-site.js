@@ -205,6 +205,7 @@ define([
                 // slidesToShow: 2,
                 // slidesToScroll: 1,
                 // arrowsPlacement: 'split',
+                centerMode: true,
                 dots: true,
                 variableWidth: true,
                 infinite: false,
@@ -213,6 +214,6 @@ define([
                 prevArrow:"<button type='button' class='slick-prev pull-left'><i class='fa fa-chevron-left' aria-hidden='false'></i></button>",
                 nextArrow:"<button type='button' class='slick-next pull-right'><i class='fa fa-chevron-right' aria-hidden='false'></i></button>"
             });
-        }
+        };
     };
 });

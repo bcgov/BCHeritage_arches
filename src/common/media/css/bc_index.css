@@ -14,8 +14,8 @@
     /*margin-right: 20px;*/
     /*line-height: 1.4;*/
     /*padding: 0 5px;*/
-    font-size: unset;
-    font-weight: unset;
+    /*font-size: unset;*/
+    /*font-weight: unset;*/
     color: #003366;
     opacity: 60%;
     float: left !important;
@@ -71,7 +71,7 @@
 .bc-splash-caption > h3 {
     color: white;
     padding: 0 20px;
-    font-size: 30px;
+    font-size: 1.44rem;
 }
 
 .bc-splash-caption > h4 {
@@ -101,7 +101,7 @@ li.app-info-block-text {
     }
 
     .bc-splash-caption > h4 {
-        max-width:90% !important;
+        max-width:90vw !important;
     }
     .app-info-content {
         margin-left: 300px;
@@ -122,8 +122,10 @@ li.app-info-block-text {
 
 @media only screen and (min-width: 992px) {
     .bc-splash-caption > h4 {
-        max-width:75% !important;
+        max-width:75vw !important;
+        padding-left: 25vw;
     }
+
     .app-info-block {
         padding-left: 50px;
         padding-right: 50px;
@@ -190,8 +192,9 @@ li.app-info-block-text {
 }
 
 .home-slider img {
-    max-height: 125vh !important;
-    width: 100% !important;
+    height: 100vh !important;
+    min-width: 100vw !important;
+    overflow: clip;
 }
 
 .home-slider .slick-autoplay-toggle-button {

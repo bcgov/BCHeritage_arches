@@ -1,36 +1,59 @@
 <div class="details-card-section">
 <div class="data-carousel summary-slider" data-bind="descendantsComplete: initCarousel" style="max-width: calc(100vw - 600px);">
-    <!-- ko foreach: { data: getValuesFromTiles(['site_images', 'image_features', 'image_description', 'copyright', 'photographer']), as: 'tileValues' } -->
-    <div>
-        <img data-bind="attr: {src: ko.unwrap(ko.unwrap(tileValues['site_images'])[0]['url'])}"/>
-        <div class="photo_info" style="max-width: 500px;">
-        <div>
-            <dt>Photographer</dt>
-            <dd data-bind="component: {name: 'text-widget',
-                               params: {value: tileValues['photographer'],
-                                        state: 'display_value'
+    <!-- ko let: {widget: getWidgetForAlias('image_date')}-->
+    <!-- ko foreach: { data: getValuesFromTiles(['site_images', 'image_features', 'image_view', 'image_date', 'copyright', 'photographer']), as: 'tileValues' } -->
+    <div class="details-carousel">
+        <img class="details-photo" data-bind="attr: {src: ko.unwrap(ko.unwrap(tileValues['site_images'])[0]['url']).replace('int/','')}"/>
+        <div class="photo-info" style="max-width: 500px;">
+            <div class="image-caption">
+                <span data-bind="component: { name: 'concept-select-widget',
+                                            params: {
+                                                value: tileValues['image_type'],
+                                                state: 'display_value'
+                                            }
+                                        }"></span>
+                <span class="separator" data-bind="visible: !!tileValues['image_type'] && !!tileValues['image_view']">,</span>
+                <span data-bind="component: { name: 'concept-select-widget',
+                                            params: {
+                                                value: tileValues['image_view'],
+                                                state: 'display_value'
+                                            }
+                                        }"></span>
+                <span class="separator" data-bind="visible: !!tileValues['image_features']">,</span>
+                <span data-bind="component: {name: 'text-widget',
+                               params: {value: tileValues['image_features'],
+                                        state: 'display_value',
+                                        displayfullvalue: true
                                         }
-                               }"></dd>
-        </div>
-        <div>
-            <dt>Copyright</dt>
-            <dd data-bind="component: {name: 'text-widget',
+                               }"></span>
+                <span class="separator" data-bind="visible: !!tileValues['image_date']">,</span>
+                <span data-bind="component: { name: 'datepicker-widget',
+                                            params: { value: tileValues['image_date'],
+                                            node: widget.node,
+                                            state: 'display_value' }
+                                            }"></span>
+            </div>
+            <dl class="dl-horizontal">
+            <div data-bind="visible: !!tileValues['copyright']">
+                <dt>Copyright</dt>
+                <dd data-bind="component: {name: 'text-widget',
                                params: {value: tileValues['copyright'],
                                         state: 'display_value'
                                         }
                                }"></dd>
-        </div>
-        <div>
-            <dt>Description</dt>
-            <dd data-bind="component: {name: 'rich-text-widget',
-                               params: {value: tileValues['image_description'],
-                                        state: 'display_value',
-                                        displayfullvalue: true
+            </div>
+            <div data-bind="visible: !!tileValues['photographer']">
+                <dt>Photographer</dt>
+                <dd data-bind="component: {name: 'text-widget',
+                               params: {value: tileValues['photographer'],
+                                        state: 'display_value'
                                         }
                                }"></dd>
-        </div>
+            </div>
+            </dl>
         </div>
     </div>
+    <!-- /ko -->
     <!-- /ko -->
 </div>
 

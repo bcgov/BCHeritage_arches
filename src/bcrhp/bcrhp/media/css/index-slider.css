@@ -27,6 +27,17 @@
     margin-top: 15px;
 }
 
+.home-slider .slick-dots {
+    bottom: 30px;
+}
+
+.home-slider .slick-dots li.slick-active button .slick-dot-icon {
+    color: orange;
+}
+.slick-dots li button .slick-dot-icon {
+    opacity: 0.75;
+}
+
 .slick-slider .slick-track,
 .slick-slider .slick-list {
     -webkit-transform: translate3d(0, 0, 0);
@@ -39,7 +50,7 @@
 
 .slide-caption {
     position: absolute;
-    bottom: 22vh;
+    bottom: 30vh;
     background: rgba(0, 0, 0, 0.5);
     padding: 10px;
 }
@@ -88,22 +99,44 @@
     .slide-caption p {
         font-size: 3.5vw;
     }
+
+    .app-info-block.intro-section h2 {
+        font-size: 2rem;
+    }
+
+    .bc-splash-caption > h3 {
+        font-size: 1.1rem;
+    }
+
+    .bc-splash-caption > h4 {
+        max-width: 50vw !important;
+    }
 }
 
 @media screen and (max-height: 819px) {
-    .down-button,
-    .vertical-nav-container,
-    .slide-caption,
-    .slide-img-attribution {
-        display: none;
-    }
+    /*.down-button,*/
+    /*.vertical-nav-container,*/
+    /*.slide-caption,*/
+    /*.slide-img-attribution {*/
+    /*    display: none;*/
+    /*}*/
     .down-button-icon {
-        font-size: 2.6rem;
-        padding-top: 1vh;
-        padding-left: 2vh;
-        height: 7vh;
-        width: 7vh;
+        font-size: 2.1rem;
+        padding-top: .2vh;
+        /*padding-left: 2vh;*/
+        /*height: 7vh;*/
+        /*width: 7vh;*/
     }
+    .app-info-block.intro-section h2 {
+        font-size: 2rem;
+    }
+    
+    .bc-splash-caption > h3 {
+        font-size: 1.1rem;
+    }
+
+
+
     #info-block-1 {
         padding-top: 0;
     }
