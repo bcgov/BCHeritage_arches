@@ -33,12 +33,8 @@
                                             }
                                         }, click: function(){console.log(card);}"></span>
         <!-- /ko -->
-    </dd>
-</div>
-<div>
-    <dt>Province</dt>
-    <!-- ko let: {addressPart: province()} -->
-    <dd data-bind="component: {
+        <!-- ko let: {addressPart: province()} -->
+    <span data-bind="component: {
                                             name: addressPart.widgetLookup[addressPart.widget_id()].name,
                                             params: {
                                                 tile: tile(),
@@ -49,25 +45,9 @@
                                                 state: 'display_value',
                                             }
                                         }, click: function(){console.log(card);}">
-    </dd>
+    </span>
     <!-- /ko -->
-</div>
-<div>
-    <dt>Postal Code</dt>
-    <!-- ko let: {addressPart: postal_code()} -->
-    <dd data-bind="component: {
-                                            name: addressPart.widgetLookup[addressPart.widget_id()].name,
-                                            params: {
-                                                tile: tile(),
-                                                node: addressPart.node,
-                                                config: addressPart.config,
-                                                label: addressPart.label(),
-                                                value: tile().data[addressPart.attributes.node_id()],
-                                                state: 'display_value',
-                                            }
-                                        }, click: function(){console.log(card);}">
     </dd>
-    <!-- /ko -->
 </div>
 <div>
     <dt>Locality</dt>
