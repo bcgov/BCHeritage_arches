@@ -63,18 +63,19 @@
     opacity: 0;
 }
 
-.photo-info span, .photo-info dl {
+.photo-caption-part > span, .photo-info dl, span.separator {
     font-size: 1.4rem;
 }
 
 .photo-info dt {
-    width: 125px !important;
+    width: 110px !important;
     text-align: left !important;
     padding-left: 0;
 }
 
 .photo-info dd {
     width: unset !important;
+    padding-left: 0;
 }
 
 /*.details-photo {*/

@@ -127,6 +127,13 @@ define([
             });
         }
 
+        this.textHasValue = function(textValue, languages = ['en'])
+        {
+            let textObject = ko.unwrap(textValue);
+            let hasValue = languages.find((language) => !!ko.unwrap(textObject[language].value));
+            return hasValue;
+        }
+
         this.getFirstNodeValue = function(alias) {
             return ko.observable(getNodeValues(alias)[0]);
         };
