@@ -29,6 +29,7 @@ define(['knockout',
 
             this.showName = ko.observable(false);
             this.siteNameLabel = ko.observable("");
+            this.siteName = ko.unwrap(self.tile).data[self.nameWidget.node.nodeid];
 
             this.setNameVisible = function(widget)
             {
@@ -48,10 +49,6 @@ define(['knockout',
                     });
                 }
             }
-
-            this.siteName = ko.computed(function() {
-                return ko.unwrap(self.tile).data[self.nameWidget.node.nodeid];
-            });
 
             this.siteNameWidget = ko.computed(function()
             {
