@@ -3,7 +3,7 @@
     <!-- ko let: {widget: getWidgetForAlias('image_date')}-->
     <!-- ko foreach: { data: getValuesFromTiles(['site_images', 'image_features', 'image_view', 'image_date', 'copyright', 'photographer']), as: 'tileValues' } -->
     <div class="details-carousel">
-        <img class="details-photo" data-bind="attr: {src: ko.unwrap(ko.unwrap(tileValues['site_images'])[0]['url']).replace('int/','')}"/>
+        <img class="details-photo" data-bind="attr: {src: ko.unwrap(ko.unwrap(tileValues['site_images'])[0]['url'])}"/>
         <div class="photo-info" style="max-width: 500px;">
             <div class="image-caption">
                 <span data-bind="component: { name: 'concept-select-widget',
@@ -141,7 +141,7 @@
                 attr: {
                     'aria-expanded': sectionController().toString(),
                     'aria-controls': targetSection,
-                    'aria-label': 'Toggle Site Name section',
+                    'aria-label': 'Toggle Site ID section',
                 }
             "></i>
 
@@ -167,7 +167,7 @@
                 attr: {
                     'aria-expanded': sectionController().toString(),
                     'aria-controls': targetSection,
-                    'aria-label': 'Toggle Site Name section',
+                    'aria-label': 'Toggle Official Recognition section',
                 }
             "></i>
 
@@ -207,7 +207,7 @@
                 attr: {
                     'aria-expanded': sectionController().toString(),
                     'aria-controls': targetSection,
-                    'aria-label': 'Toggle Site Name section',
+                    'aria-label': 'Toggle Recognition Details section',
                 }
             "></i>
 
@@ -269,7 +269,7 @@
                 attr: {
                     'aria-expanded': sectionController().toString(),
                     'aria-controls': targetSection,
-                    'aria-label': 'Toggle Site Name section',
+                    'aria-label': 'Toggle Chronology section',
                 }
             "></i>
 
