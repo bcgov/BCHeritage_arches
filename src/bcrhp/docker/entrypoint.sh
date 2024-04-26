@@ -117,7 +117,7 @@ copy_settings_local() {
 
 start_celery_supervisor() {
 	cd ${APP_FOLDER}
-	supervisord -c docker/project_name-supervisor.conf
+	supervisord -c docker/bcrhp-supervisor.conf
 }
 
 run_migrations() {

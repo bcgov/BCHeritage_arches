@@ -36,7 +36,7 @@ DATABASES = {
     }
 }
 
-PUBLIC_SERVER_ADDRESS = "http://project_name/"
+PUBLIC_SERVER_ADDRESS = "http://bcrhp/"
 CELERY_BROKER_URL = "amqp://{}:{}@arches_rabbitmq".format(
     get_env_variable("RABBITMQ_USER"), get_env_variable("RABBITMQ_PASS")
 )  # RabbitMQ --> "amqp://guest:guest@localhost",  Redis --> "redis://localhost:6379/0"
