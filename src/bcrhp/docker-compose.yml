@@ -1,0 +1,47 @@
+version: '3.8'
+name: project_name7-5
+services:
+  project_name:
+    container_name:  project_name7-5
+    image: group_name/project_name7-5
+    build:
+      context: ..
+      dockerfile: project_name/Dockerfile
+    command: run_arches
+    volumes:
+      - ../arches/:/web_root/arches
+      - ./:/web_root/project_name
+    env_file:
+      - ./docker/env_file.env
+    ports:
+      - 8025:8000
+      - 5688:5678
+    stdin_open: true
+    tty: true
+
+  project_name-webpack:
+    container_name: project_name-webpack-7-5
+    image: group_name/project_name-webpack-7-5
+    build:
+      context: ..
+      dockerfile: project_name/docker/webpack/Dockerfile
+    command: run_webpack
+    volumes:
+      - ../arches/:/web_root/arches
+      - ./:/web_root/project_name
+    env_file:
+      - ./docker/webpack/env_file.env
+    ports:
+      - 8022:8021
+    stdin_open: true
+    tty: true
+
+networks:
+  default:
+    external: true
+    name: arches7-5-dev
+
+
+volumes:
+  arches-log-project_name7-5:
+  arches-static-project_name7-5:
