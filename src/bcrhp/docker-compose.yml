@@ -16,6 +16,8 @@ services:
     ports:
       - 8025:8000
       - 5688:5678
+      - 80:80
+      - 443:443
     stdin_open: true
     tty: true
 

@@ -7,7 +7,7 @@ run_webpack() {
 	echo ""
 	cd ${APP_FOLDER}
     echo "Running Webpack"
-	exec sh -c "cd /web_root/project_name/project_name && yarn install && wait-for-it project_name:80 -t 1200 && yarn start"
+	exec sh -c "cd /web_root/bcrhp/bcrhp && yarn install && wait-for-it bcrhp:80 -t 1200 && yarn start"
 }
 
 run_webpack

@@ -3,7 +3,7 @@ USER root
 
 ## Setting default environment variables
 ENV WEB_ROOT=/web_root
-ENV APP_ROOT=${WEB_ROOT}/project_name
+ENV APP_ROOT=${WEB_ROOT}/bcrhp
 # Root project folder
 ENV WHEELS=/wheels
 ENV PYTHONUNBUFFERED=1
@@ -53,14 +53,14 @@ WORKDIR ${WEB_ROOT}
 # FIXME: ADD from github repository instead?
 
 # From here, run commands from ARCHES_ROOT
-COPY project_name/install/requirements.txt requirements.txt
+COPY bcrhp/install/requirements.txt requirements.txt
 RUN pip install -r requirements.txt && pip install gunicorn
 
 COPY docker/production/entrypoint.sh ${WEB_ROOT}/entrypoint.sh
 RUN chmod -R 700 ${WEB_ROOT}/entrypoint.sh &&\
   dos2unix ${WEB_ROOT}/entrypoint.sh
 
-COPY . ${WEB_ROOT}/project_name
+COPY . ${WEB_ROOT}/bcrhp
 
 RUN mkdir /var/log/supervisor
 RUN mkdir /var/log/celery
