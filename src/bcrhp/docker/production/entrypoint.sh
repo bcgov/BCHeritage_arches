@@ -117,7 +117,7 @@ copy_settings_local() {
 
 start_celery_supervisor() {
 	cd ${APP_FOLDER}
-	supervisord -c docker/project_name-supervisor.conf
+	supervisord -c docker/bcrhp-supervisor.conf
 }
 
 run_migrations() {
@@ -151,7 +151,7 @@ run_django_server() {
 	echo ""
 	cd ${APP_FOLDER}
     echo "Running Django"
-	exec sh -c "gunicorn project_name.wsgi"
+	exec sh -c "gunicorn bcrhp.wsgi"
 }
 
 run_livereload_server() {

@@ -141,7 +141,7 @@ run_load_package() {
 	echo "----- *** LOADING PACKAGE: ${ARCHES_PROJECT} *** -----"
 	echo ""
 	cd ${APP_FOLDER}
-	python3 manage.py packages -o load_package -a arches_for_science -db -dev -y
+	python3 manage.py packages -o load_package -s bcrhp/pkg -db -dev -y
 }
 
 # "exec" means that it will finish building???

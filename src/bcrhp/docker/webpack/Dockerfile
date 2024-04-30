@@ -29,7 +29,7 @@ RUN set -ex \
   && apt-get install -y --no-install-recommends $RUN_DEPS 
 
 RUN curl https://bootstrap.pypa.io/get-pip.py -o get-pip.py && python3 get-pip.py \
-  && pip install setuptools
+  && pip install setuptools python-dotenv django-storages
 
 COPY ./arches ${ARCHES_ROOT}
 #COPY ../arches-for-science ${AFS_ROOT}
