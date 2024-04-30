@@ -3,6 +3,7 @@ Django settings for bcrhp project.
 """
 
 import json
+from dotenv import load_dotenv
 import os
 import sys
 import arches
@@ -10,11 +11,21 @@ import inspect
 import semantic_version
 from django.utils.translation import gettext_lazy as _
 
+def get_env_variable(var_name):
+    msg = "Set the %s environment variable"
+    try:
+        val = os.environ[var_name]
+        return None if val == "None" else val
+    except KeyError:
+        error_msg = msg % var_name
+        raise ImproperlyConfigured(error_msg)
+
 try:
     from arches.settings import *
 except ImportError:
     pass
 
+load_dotenv()
 APP_NAME = 'bcrhp'
 APP_VERSION = semantic_version.Version(major=1, minor=1, patch=0)
 APP_ROOT = os.path.dirname(os.path.abspath(inspect.getfile(inspect.currentframe())))
@@ -44,12 +55,12 @@ UPLOADED_FILES_DIR = "uploadedfiles"
 # SECRET_KEY = ''
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = {{ django_debug_mode }}
+DEBUG = get_env_variable("DJANGO_DEBUG")
 
 ROOT_URLCONF = 'bcrhp.urls'
 
 # a prefix to append to all elasticsearch indexes, note: must be lower case
-ELASTICSEARCH_PREFIX = 'bcrhp{{ arches_app_suffix }}'
+ELASTICSEARCH_PREFIX = "bcrhp"+get_env_variable("APP_SUFFIX")
 
 ELASTICSEARCH_CUSTOM_INDEXES = []
 # [{
@@ -129,7 +140,8 @@ STATIC_URL = '/static/'
 STATIC_ROOT = os.path.join(APP_ROOT, "staticfiles")
 
 # when hosting Arches under a sub path set this value to the sub path eg : "/{sub_path}/"
-FORCE_SCRIPT_NAME = "/int/bcrhp/"
+# FORCE_SCRIPT_NAME = "/bcrhp/"
+FORCE_SCRIPT_NAME = get_env_variable("FORCE_SCRIPT_NAME")
 
 OVERRIDE_RESOURCE_MODEL_LOCK = False
 
@@ -179,13 +191,12 @@ LOGGING = {
 DATA_UPLOAD_MAX_MEMORY_SIZE = 15728640
 
 # Unique session cookie ensures that logins are treated separately for each app
-SESSION_COOKIE_NAME = 'bcrhp-{{ app_instance }}'
+SESSION_COOKIE_NAME = "bcrhp-"+get_env_variable("APP_ENV")
 
 # For more info on configuring your cache: https://docs.djangoproject.com/en/2.2/topics/cache/
 CACHES = {
     'default': {
-        "BACKEND": "django.core.cache.backends.redis.RedisCache",
-        "LOCATION": "redis://127.0.0.1:6379",
+        'BACKEND': 'django.core.cache.backends.dummy.DummyCache',
     },
     'user_permission': {
         'BACKEND': 'django.core.cache.backends.db.DatabaseCache',
@@ -339,11 +350,213 @@ except ImportError:
     except ImportError as e:
         pass
 
+# This is used for bootstrapping ES and PG security configuration
 try:
-    from .settings_local import *
+    from .bcrhp.settings_admin import *
+except ImportError:
+    try:
+        from bcrhp.settings_admin import *
+    except ImportError:
+        pass
+
+###########
+# BCGov specific settings. Should these be externalized into separate file?
+###########
+
+# PROXY prefix used - NB - cannot have leading "/", and must have trailing "/"
+BCGOV_PROXY_PREFIX = get_env_variable('BCGOV_PROXY_PREFIX')
+
+WEBPACK_DEVELOPMENT_SERVER_PORT = 9000
+
+STATIC_URL = '/'+BCGOV_PROXY_PREFIX+'static/'
+MEDIA_URL = '/files/'
+# This should point to the url where you host your site
+# Make sure to use a trailing slash
+PUBLIC_SERVER_ADDRESS = "http://bcrhp/" + BCGOV_PROXY_PREFIX
+
+ARCHES_NAMESPACE_FOR_DATA_EXPORT = PUBLIC_SERVER_ADDRESS
+ADMIN_MEDIA_PREFIX = STATIC_URL+"admin/"
+
+###########
+# End BCGov specific settings.
+###########
+DATABASES = {
+    "default": {
+        "ATOMIC_REQUESTS": False,
+        "AUTOCOMMIT": True,
+        "CONN_MAX_AGE": 0,
+        "ENGINE": "django.contrib.gis.db.backends.postgis",
+        "HOST": get_env_variable("PGHOST"),
+        "NAME": get_env_variable("PGDBNAME"),
+        "OPTIONS": {},
+        "PASSWORD": get_env_variable("PGPASSWORD"),
+        "PORT": "5432",
+        "POSTGIS_TEMPLATE": "template_postgis",
+        "TEST": {
+            "CHARSET": None,
+            "COLLATION": None,
+            "MIRROR": None,
+            "NAME": None
+        },
+        "TIME_ZONE": None,
+        "USER": get_env_variable("PGUSERNAME")
+    }
+}
+
+HRIA_DATABASE = {
+    "USER": get_env_variable("HRIADB_USER"),
+    "PASSWORD": get_env_variable("HRIADB_PASSWORD"),
+    "HOST": get_env_variable("HRIADB_HOST"),
+    "PORT": get_env_variable("HRIADB_PORT"),
+    "SERVICE_NAME": get_env_variable("HRIADB_SERVICE_NAME"),
+    "APPLICATION_USER": get_env_variable("HRIADB_APPLICATION_USER")
+}
+
+STORAGES = {
+    "default": {
+        "BACKEND": "storages.backends.s3boto3.S3Boto3Storage",
+    },
+    "staticfiles": {
+        "BACKEND": "django.contrib.staticfiles.storage.StaticFilesStorage",
+    },
+}
+
+AWS_STORAGE_BUCKET_NAME = get_env_variable("HRIADB_APPLICATION_USER")
+AWS_ACCESS_KEY_ID = get_env_variable("HRIADB_APPLICATION_USER")
+AWS_SECRET_ACCESS_KEY = get_env_variable("HRIADB_APPLICATION_USER")
+AWS_S3_ENDPOINT_URL = "https://nrs.objectstore.gov.bc.ca/"
+S3_URL = AWS_S3_ENDPOINT_URL
+# We want media to be accessed through the arches app not directly from S3
+#MEDIA_URL = AWS_S3_ENDPOINT_URL
+AWS_S3_PROXIES = {"https": get_env_variable("HRIADB_APPLICATION_USER")}
+
+# SECURITY WARNING: keep the secret key used in production secret!
+SECRET_KEY = get_env_variable("DJANGO_SECRET_KEY")
+
+# Modify this line as needed for your project to connect to elasticsearch with a password that you generate
+#ELASTICSEARCH_CONNECTION_OPTIONS = {"timeout": 30, "verify_certs": False, "basic_auth": ("{ es_username }", "{ es_password }")}
+
+# If you need to connect to Elasticsearch via an API key instead of username/password, use the syntax below:
+# ELASTICSEARCH_CONNECTION_OPTIONS = {"timeout": 30, "verify_certs": False, "api_key": "<ENCODED_API_KEY>"}
+# ELASTICSEARCH_CONNECTION_OPTIONS = {"timeout": 30, "verify_certs": False, "api_key": ("<ID>", "<API_KEY>")}
+
+# Your Elasticsearch instance needs to be configured with xpack.security.enabled=true to use API keys - update elasticsearch.yml or .env file and restart.
+
+# Set the ELASTIC_PASSWORD environment variable in either the docker-compose.yml or .env file to the password you set for the elastic user,
+# otherwise a random password will be generated.
+
+# API keys can be generated via the Elasticsearch API: https://www.elastic.co/guide/en/elasticsearch/reference/current/security-api-create-api-key.html
+# Or Kibana: https://www.elastic.co/guide/en/kibana/current/api-keys.html
+
+# ELASTICSEARCH_HTTP_PORT = int(get_env_variable("ESPORT")) # this should be in increments of 200, eg: 9400, 9600, 9800
+# ELASTICSEARCH_HTTP_HOST = get_env_variable("ESHOST")
+# # see http://elasticsearch-py.readthedocs.org/en/master/api.html#elasticsearch.Elasticsearch
+# ELASTICSEARCH_HOSTS = [{"scheme": "https", "host": ELASTICSEARCH_HTTP_HOST, "port": ELASTICSEARCH_HTTP_PORT}]
+#
+# # How do we handle this across environments?
+# # ELASTICSEARCH_CERT_LOCATION="{{ arches_es_cert_file }}"
+# ELASTICSEARCH_API_KEY=get_env_variable("ESAPI_KEY")
+#
+# # ELASTICSEARCH_API_KEY="{ arches_es_api_key }"
+# # If you need to connect to Elasticsearch via an API key instead of username/password, use the syntax below:
+# ELASTICSEARCH_CONNECTION_OPTIONS = {"timeout": 30,
+#                                     "api_key": ELASTICSEARCH_API_KEY,
+#                                     "verify_certs": True,
+#                                     # "ca_certs": ELASTICSEARCH_CERT_LOCATION
+#                                     }
+
+# ALLOWED_HOSTS = [{{ allowed_hosts }}]
+# CSRF_TRUSTED_ORIGINS = ["https://{{ arches_url_hostname }}"]
+
+
+# Tileserver proxy configuration
+# All tileserver requests go through the BCTileserverProxyView to avoid CORS issues
+# There is a local instance of pg_tileserv for overlays that aren't hosted in the BCGW
+
+#This is the default if source isn't set as a parameter in the request
+TILESERVER_URL="https://openmaps.gov.bc.ca/"
+BC_TILESERVER_URLS={"maps":"https://maps.gov.bc.ca/", "openmaps":TILESERVER_URL, "local": "http://localhost:7800/"}
+
+# Need to use an outbound proxy as route to tile servers is blocked by firewall
+# TILESERVER_OUTBOUND_PROXY="{{ proxy_env.https_proxy }}"
+# END Tileserver proxy configuration
+
+AUTHENTICATION_BACKENDS = (
+    # "arches.app.utils.email_auth_backend.EmailAuthenticationBackend", #Comment out for IDIR
+    "oauth2_provider.backends.OAuth2Backend",
+    # "django.contrib.auth.backends.ModelBackend",  # this is default # Comment out for IDIR
+    # "django.contrib.auth.backends.RemoteUserBackend",
+    "bcrhp.util.auth.backends.BCGovRemoteUserBackend",  # For IDIR authentication
+    "guardian.backends.ObjectPermissionBackend",
+    "arches.app.utils.permission_backend.PermissionBackend",
+)
+
+MIDDLEWARE = [
+    # 'debug_toolbar.middleware.DebugToolbarMiddleware',
+    "corsheaders.middleware.CorsMiddleware",
+    "django.middleware.security.SecurityMiddleware",
+    "django.contrib.sessions.middleware.SessionMiddleware",
+    #'arches.app.utils.middleware.TokenMiddleware',
+    "django.middleware.locale.LocaleMiddleware",
+    "django.middleware.common.CommonMiddleware",
+    "django.middleware.csrf.CsrfViewMiddleware",
+    "arches.app.utils.middleware.ModifyAuthorizationHeader",
+    "oauth2_provider.middleware.OAuth2TokenMiddleware",
+    "django.contrib.auth.middleware.AuthenticationMiddleware",
+    "bcrhp.util.auth.middleware.SiteminderMiddleware",
+    "django.contrib.messages.middleware.MessageMiddleware",
+    # "django.middleware.clickjacking.XFrameOptionsMiddleware",
+    "arches.app.utils.middleware.SetAnonymousUser",
+]
+
+DATE_FORMATS = {
+    # Keep index values the same for formats in the python and javascript arrays.
+    "Python": ["%Y-%m-%dT%H:%M:%S.%f%z", "%Y-%m-%dT%H:%M:%S%z", "%Y-%m-%d %H:%M:%S%z", "%Y-%m-%d", "%Y-%m", "%Y",
+               "-%Y"],
+    "JavaScript": ["YYYY-MM-DDTHH:mm:ss.sssZ", "YYYY-MM-DDTHH:mm:ssZ", "YYYY-MM-DD HH:mm:ssZ", "YYYY-MM-DD", "YYYY-MM",
+                   "YYYY", "-YYYY"],
+    "Elasticsearch": [
+        "yyyy-MM-dd'T'HH:mm:ss.SSSZZZZZ",
+        "yyyy-MM-dd'T'HH:mm:ss.SSSZ",
+        "yyyy-MM-dd'T'HH:mm:ssZZZZZ",
+        "yyyy-MM-dd'T'HH:mm:ssZ",
+        "yyyy-MM-dd HH:mm:ssZZZZZ",
+        "yyyy-MM-dd",
+        "yyyy-MM",
+        "yyyy",
+        "-yyyy",
+    ],
+}
+
+TIMEWHEEL_DATE_TIERS = {
+    "name": "Century",
+    "interval": 100,
+    "root": True,
+    "child": {
+        "name": "Half Decade",
+        "interval": 5,
+        "range": {"min": 1980, "max": 2030},
+        # "child": {
+        #     "name": "Half decade",
+        #     "interval": 5,
+        #     "range": {"min": 2010, "max": 2023}
+        # }
+    }
+}
+
+# MAP_POPUP_CONFIG_PROVIDER = "js/utils/map-popup-provider"
+#
+# MAP_POPUP_CONFIG = {
+#     "requires": {
+#         "map-popup-provider": "js/utils/map-popup-provider"
+#     }
+# }
+
+try:
+    from .settings_docker import *
 except ImportError as e:
     try:
-        from settings_local import *
+        from settings_docker import *
     except ImportError as e:
         pass
 
