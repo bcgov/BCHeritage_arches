@@ -5,14 +5,14 @@ const buildTemplateFilePathLookup = function(path, outerAcc, templateDirectoryPa
     if (!fs.existsSync(path)) {
         return;
     }
-    
+
     return fs.readdirSync(path).reduce((acc, name) => {
         const outerPath = templateDirectoryPath || path;   // original `path` arg is persisted through recursion
-        
+
         if (fs.lstatSync(Path.join(path, name)).isDirectory() ) {
             return buildTemplateFilePathLookup(
-                Path.join(path, name), 
-                acc, 
+                Path.join(path, name),
+                acc,
                 outerPath
             );
         }
@@ -23,14 +23,14 @@ const buildTemplateFilePathLookup = function(path, outerAcc, templateDirectoryPa
             const parsedPath = Path.parse(subPath);
             const filename = parsedPath['dir'] ? Path.join(parsedPath['dir'], parsedPath['base']) : parsedPath['base'];
 
-            if (filename.includes('.DS_Store')) {
-                return acc;
-            }
-            else {
-                return { 
-                    ...acc, 
+            if (filename.includes('.htm') || filename.includes('.html')) {
+                return {
+                    ...acc,
                     [Path.join('templates', filename).replace(/\\/g, '/')]: Path.resolve(__dirname, Path.join(outerPath, subPath))
                 };
+            }
+            else {
+                return acc;
             }
         }
     }, outerAcc);

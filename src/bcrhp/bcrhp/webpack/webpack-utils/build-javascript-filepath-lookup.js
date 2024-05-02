@@ -5,15 +5,15 @@ function buildJavascriptFilepathLookup(path, outerAcc, javascriptDirectoryPath) 
     if (!fs.existsSync(path)) {
         return;
     }
-    
+
     return fs.readdirSync(path).reduce((acc, name) => {
         const outerPath = javascriptDirectoryPath || path;   // original `path` arg is persisted through recursion
-        
+
         if (fs.lstatSync(Path.join(path, name)).isDirectory() ) {
             return buildJavascriptFilepathLookup(
-                Path.join(path, name), 
-                acc, 
-                outerPath 
+                Path.join(path, name),
+                acc,
+                outerPath
             );
         }
         else {
@@ -22,7 +22,7 @@ function buildJavascriptFilepathLookup(path, outerAcc, javascriptDirectoryPath) 
             const parsedPath = Path.parse(subPath);
 
             let pathName = parsedPath['name'];
-        
+
             if (parsedPath['dir']) {
                 pathName = Path.join(parsedPath['dir'], parsedPath['name']);
             }
@@ -31,9 +31,9 @@ function buildJavascriptFilepathLookup(path, outerAcc, javascriptDirectoryPath) 
                 return acc;
             }
             else {
-                return { 
-                    ...acc, 
-                    [pathName.replace(/\\/g, '/')]: { 'import': Path.join(outerPath, subPath), 'filename': Path.join('js', '[name].js') } 
+                return {
+                    ...acc,
+                    [pathName.replace(/\\/g, '/')]: { 'import': Path.join(outerPath, subPath), 'filename': Path.join('js', '[name].js') }
                 };
             }
         }
