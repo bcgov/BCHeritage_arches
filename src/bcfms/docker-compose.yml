@@ -1,0 +1,49 @@
+version: '3.8'
+name: bcrhp7-5
+services:
+  bcrhp:
+    container_name:  bcrhp7-5
+    image: bcgov/bcrhp7-5
+    build:
+      context: ..
+      dockerfile: bcrhp/Dockerfile
+    command: run_arches
+    volumes:
+      - ../arches/:/web_root/arches
+      - ./:/web_root/bcrhp
+    env_file:
+      - ./docker/env_file.env
+    ports:
+      - 8025:8000
+      - 5688:5678
+      - 80:80
+      - 443:443
+    stdin_open: true
+    tty: true
+
+  bcrhp-webpack:
+    container_name: bcrhp-webpack-7-5
+    image: bcgov/bcrhp-webpack-7-5
+    build:
+      context: ..
+      dockerfile: bcrhp/docker/webpack/Dockerfile
+    command: run_webpack
+    volumes:
+      - ../arches/:/web_root/arches
+      - ./:/web_root/bcrhp
+    env_file:
+      - ./docker/webpack/env_file.env
+    ports:
+      - 8022:8021
+    stdin_open: true
+    tty: true
+
+networks:
+  default:
+    external: true
+    name: arches7-5-dev
+
+
+volumes:
+  arches-log-bcrhp7-5:
+  arches-static-bcrhp7-5:
