@@ -2,13 +2,33 @@ from django.urls import include, path, re_path
 from django.conf import settings
 from django.conf.urls.static import static
 from django.conf.urls.i18n import i18n_patterns
+from django.urls.resolvers import RegexPattern
 from bcfms.views.api import MVT, CollectionEventFossilNames
 from bcfms.views.map import BCTileserverProxyView, BCTileserverLocalProxyView
 from bcfms.views.search import export_results as bcfms_export_results
+import re
 
 uuid_regex = settings.UUID_REGEX
 
+
+path_prefix_re = re.compile(r'^(\^)(.*)$')
+def bc_path_prefix(path):
+    if not settings.BCGOV_PROXY_PREFIX:
+        return path
+    else:
+        new_path = path_prefix_re.sub(r"\1%s\2",path)
+        return new_path % settings.BCGOV_PROXY_PREFIX
+
+class BCRegexPattern(RegexPattern):
+    def __init__(self, regexpattern):
+        super().__init__(bc_path_prefix(regexpattern.regex.pattern), regexpattern.name, regexpattern._is_endpoint)
+
 bc_url_resolver = re_path(r'^', include('arches.urls'))
+
+for pattern in bc_url_resolver.url_patterns:
+    # print("Before: %s" % pattern.pattern)
+    pattern.pattern = BCRegexPattern(pattern.pattern)
+    # print("After: %s" % pattern.pattern)
 
 urlpatterns = [
                   re_path(r"^bctileserver/(?P<path>.*)$", BCTileserverProxyView.as_view()),
