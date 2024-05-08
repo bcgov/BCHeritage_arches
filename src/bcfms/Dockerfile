@@ -1,6 +1,6 @@
 FROM ubuntu:20.04 as base
 USER root
-ENV PROJECT_NAME=bcrhp
+ENV PROJECT_NAME=bcfms
 ## Setting default environment variables
 ENV WEB_ROOT=/web_root
 ENV APP_ROOT=${WEB_ROOT}/${PROJECT_NAME}
@@ -42,7 +42,7 @@ RUN set -ex \
   && npm install -g yarn
 # Install Yarn components
 RUN mkdir -p ${APP_ROOT}/${PROJECT_NAME}/app/media/packages
-WORKDIR ${APP_ROOT}/bcrhp
+WORKDIR ${APP_ROOT}/bcfms
 RUN yarn install
 WORKDIR ${WEB_ROOT}
 RUN rm -rf /root/.cache/pip/*
@@ -55,7 +55,7 @@ RUN pip install -e . && \
     pip install -r arches/install/requirements.txt && \
     pip install -r arches/install/requirements_dev.txt && \
     pip install python-dotenv boto3==1.26 django-storages==1.13 oracledb html2text
-COPY ./bcrhp/docker/entrypoint.sh ${WEB_ROOT}/entrypoint.sh
+COPY ./bcfms/docker/entrypoint.sh ${WEB_ROOT}/entrypoint.sh
 RUN chmod -R 700 ${WEB_ROOT}/entrypoint.sh &&\
   dos2unix ${WEB_ROOT}/entrypoint.sh
 RUN mkdir /var/log/supervisor
