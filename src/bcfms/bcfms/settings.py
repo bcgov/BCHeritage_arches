@@ -132,6 +132,7 @@ MEDIA_ROOT = os.path.join(APP_ROOT)
 # URL prefix for static files.
 # Example: "http://media.lawrence.com/static/"
 #STATIC_URL = '/media/'
+STATIC_URL = '/static/'
 
 # Absolute path to the directory static files should be collected to.
 # Don't put anything in this directory yourself; store your static files
@@ -170,12 +171,16 @@ LOGGING = {
         }
     },
     'loggers': {
-        'bcfms': {
+        'django': {
+            'handlers': ['file', 'console'],
+            'level': 'INFO',
+        },
+        'arches': {
             'handlers': ['file', 'console'],
             'level': 'DEBUG',
             'propagate': True
         },
-        'arches': {
+        'bcfms': {
             'handlers': ['file', 'console'],
             'level': 'DEBUG',
             'propagate': True
@@ -340,7 +345,6 @@ LANGUAGES = [
 # override this to permenantly display/hide the language switcher
 SHOW_LANGUAGE_SWITCH = len(LANGUAGES) > 1
 
-
 try:
     from .package_settings import *
 except ImportError:
@@ -467,6 +471,9 @@ SECRET_KEY = get_env_variable("DJANGO_SECRET_KEY")
 TILESERVER_URL="https://openmaps.gov.bc.ca/"
 BC_TILESERVER_URLS={"maps":"https://maps.gov.bc.ca/", "openmaps":TILESERVER_URL, "local": "http://localhost:7800/"}
 
+AUTH_BYPASS_HOSTS = ['localhost']
+AUTH_NOACCESS_URL = 'https://www2.gov.bc.ca/gov/content/industry/natural-resource-use/fossil-management/'
+
 # Need to use an outbound proxy as route to tile servers is blocked by firewall
 # TILESERVER_OUTBOUND_PROXY="{{ proxy_env.https_proxy }}"
 # END Tileserver proxy configuration
@@ -494,6 +501,7 @@ MIDDLEWARE = [
     "oauth2_provider.middleware.OAuth2TokenMiddleware",
     "django.contrib.auth.middleware.AuthenticationMiddleware",
     "bcfms.util.auth.middleware.SiteminderMiddleware",
+    "bcfms.util.auth.auth_required_middleware.AuthRequiredMiddleware",
     "django.contrib.messages.middleware.MessageMiddleware",
     # "django.middleware.clickjacking.XFrameOptionsMiddleware",
     "arches.app.utils.middleware.SetAnonymousUser",
@@ -549,6 +557,7 @@ except ImportError as e:
         from settings_docker import *
     except ImportError as e:
         pass
+
 # returns an output that can be read by NODEJS
 if __name__ == "__main__":
     transmit_webpack_django_config(
