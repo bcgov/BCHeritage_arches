@@ -358,7 +358,7 @@ from ce_collection_details ced
                       array_agg(a.author_name) authors
                from publication.publication_details_vw a group by publication_uuid, collection_event,  a.journal_title, a.title, a.publication_type, a.publication_year) ppd on ppd.collection_event = ced.resourceinstanceid
     left join ( select s.fossil_sample_uuid,
-                       __bc_unique_array(array_agg(coalesce(s1.name,'') || coalesce(s.name_connector,'') ||coalesce(s2.name,'') order by 1)) scientific_names,
+                       __bc_unique_array(array_agg(trim(replace(coalesce(s1.name||' ','') || coalesce(s.name_connector||' ','') ||coalesce(s2.name,''), '  ',' ')) order by 1)) scientific_names,
                        __bc_unique_array(array_agg(cn.name)) common_names,
                        __bc_unique_array(array_agg(s.size_category)) size_categories
                 from fossil_sample.fossil_name_mv s
