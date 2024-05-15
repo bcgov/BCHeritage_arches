@@ -368,6 +368,14 @@ from ce_collection_details ced
                                                        group by s.fossil_sample_uuid) c on cesc.samples_collected_uuid::uuid = c.fossil_sample_uuid
 order by "Location Descriptor", "Collection Start Year";
 
+create or replace procedure refresh_export_mvs() as
+$$
+BEGIN
+    refresh materialized view fossil_type.fossil_name_mv;
+    refresh materialized view fossil_sample.fossil_name_mv;
+END
+$$ language plpgsql;
+
 -- select * from fossil_collection_event.collection_event_vw
 -- where collection_event_id = '949fab24-8ab3-4433-8325-2beaef949adf'::uuid;
 
