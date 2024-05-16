@@ -141,6 +141,17 @@ BEGIN
     return uq_array;
 END $$ language plpgsql;
 
+/*
+ * Format the scientific name parts (name, connector other name) into a string
+ */
+drop function if exists __bc_format_scientific_name;
+create or replace function __bc_format_scientific_name(name text, connector text, other_name text) returns text as
+$$
+DECLARE
+BEGIN
+    return trim(replace(coalesce(name||' ','') || coalesce(connector||' ','') ||coalesce(other_name,''), '  ',' '));
+END $$ language plpgsql;
+
 -- with repo_info as (select resourceinstanceid,
 --                           __bc_ref_from_tile(tiledata, fossil_sample.repository_name_nodeid()) repository_uuid,
 --                           __bc_text_from_tile(tiledata, fossil_sample.storage_reference_nodeid()) "Storage Reference"
@@ -220,7 +231,6 @@ from tiles
 where nodegroupid = fossil_sample.geological_age_nodegroupid();
 -- select * from fossil_sample.geological_age_vw;
 
-
 drop view if exists fossil_type.fossil_name_vw;
 create view fossil_type.fossil_name_vw as
 with name_qry as
@@ -248,6 +258,43 @@ order by trim(coalesce(parent.name, '') || ' ' || coalesce(child.name,''));
 create materialized view fossil_type.mv_fossil_name as select * from fossil_type.fossil_name_vw;
 create index ft_fn_mv_idx1 on fossil_type.mv_fossil_name(fossil_name_uuid);
 
+/*
+ * Materialized view that summarizes all the fossil samples associated with a collection event
+ */
+drop materialized view fossil_sample.mv_ce_sample_summary;
+create materialized view fossil_sample.mv_ce_sample_summary as
+with ce_samples_collected as (select resourceinstanceid collection_event_id,
+                                     __bc_ref_from_tile(tiledata,
+                                                        fossil_collection_event.samples_collected_nodeid()) samples_collected_uuid
+                              from tiles
+                              where nodegroupid = fossil_collection_event.samples_collected_nodegroupid())
+select coll.collection_event_id,
+       count(*) samples_collected,
+       array_to_string(array_remove(array_agg(distinct slv.storage_location_name order by storage_location_name), null), '; ') storage_locations,
+       array_to_string(array_remove(array_agg(distinct slv.storage_reference order by storage_reference), null), '; ') storage_references,
+       array_to_string(array_remove(array_agg(distinct __bc_format_scientific_name(s1.name, s.name_connector, s2.name)
+                                              order by __bc_format_scientific_name(s1.name, s.name_connector, s2.name)), ''),'; ') scientific_names,
+       array_to_string(array_remove(array_agg(distinct cn.name order by cn.name),null), '; ') common_names,
+       array_to_string(array_remove(array_agg(distinct s.size_category order by s.size_category), null), '; ') size_categories,
+       array_to_string(array_remove(array_agg(distinct geological_group), ''), '; ') geological_groups,
+       array_to_string(array_remove(array_agg(distinct geological_formation), ''), '; ') geological_formations,
+       array_to_string(array_remove(array_agg(distinct geological_member), ''), '; ') geological_members,
+       array_to_string(array_remove(array_agg(distinct informal_name), ''), '; ') informal_names,
+       array_to_string(array_remove(array_agg(distinct other_name), ''), '; ') other_names,
+       min(time_scale) time_scale,  -- Geological Age is a 1:1 with fossil sample, so just use the min values
+       min(minimum_time) minimum_time,
+       min(maximum_time) maximum_time
+from ce_samples_collected coll
+         left join fossil_sample.geological_age_vw ga on coll.samples_collected_uuid = ga.fossil_sample_uuid
+         left join fossil_sample.stratigraphy_vw strat on coll.samples_collected_uuid = strat.fossil_sample_uuid,
+     fossil_sample.mv_fossil_name s
+         left join fossil_type.mv_fossil_name s1 on s.scientific_name = s1.fossil_name_uuid
+         left join fossil_type.mv_fossil_name s2 on s.other_scientific_name = s2.fossil_name_uuid
+         left join fossil_type.mv_fossil_name cn on s.common_name = cn.fossil_name_uuid
+         left join fossil_sample.storage_location_vw slv on s.fossil_sample_uuid = slv.collected_sample_uuid
+where coll.samples_collected_uuid = s.fossil_sample_uuid
+group by coll.collection_event_id;
+create unique index ce_sample_summary_idx1 on fossil_sample.mv_ce_sample_summary(collection_event_id);
 -- select * from fossil_type.fossil_name_vw;
 
 
@@ -338,40 +385,28 @@ select
 --     st_asgeojson(cel.tiledata->>'collection_location')::jsonb->'coordinates'->0 "Collection Location",
 --     __arches_get_node_display_value(cel.tiledata, fossil_collection_event.collection_location_nodeid()),
 --     cesc.samples_collected_uuid,
-    coalesce(fsri.storage_location_name, '') "Storage Location Name",
-    coalesce(fsri.storage_reference, '') "Storage Reference",
-    coalesce(array_to_string(scientific_names, '; '), '') "Scientific Names",
-    coalesce(array_to_string(common_names, '; '), '') "Common Names",
-    coalesce(array_to_string(size_categories, '; '), '') "Size Categories",
-    coalesce(fssv.geological_group, '') "Geological Group",
-    coalesce(fssv.geological_formation, '') "Geological Formation",
-    coalesce(fssv.geological_member, '') "Geological Member",
-    coalesce(fssv.informal_name, '') "Informal Name",
-    coalesce(fssv.other_name, '') "Other Name",
-    coalesce(time_scale,'') "Time Scale",
-    coalesce(minimum_time,'') "Minumum Time",
-    coalesce(maximum_time,'') "Maximum Time",
+    ce_sample_summary.storage_locations "Storage Locations",
+    ce_sample_summary.storage_references "Storage References",
+    ce_sample_summary.scientific_names "Scientific Names",
+    ce_sample_summary.common_names "Common Names",
+    ce_sample_summary.size_categories "Size Categories",
+    ce_sample_summary.geological_groups "Geological Groups",
+    ce_sample_summary.geological_formations "Geological Formations",
+    ce_sample_summary.geological_members "Geological Members",
+    ce_sample_summary.informal_names "Informal Name",
+    ce_sample_summary.other_names "Other Names",
+    coalesce(ce_sample_summary.time_scale,'') "Time Scale",
+    coalesce(ce_sample_summary.minimum_time,'') "Minumum Time",
+    coalesce(ce_sample_summary.maximum_time,'') "Maximum Time",
     coalesce(pub_summ.publication_count, 0) "Publication Count",
     coalesce(pub_summ.publication_years, '') "Publication Year",
     coalesce(pub_summ.publication_types,'')  "Publication Type",
     coalesce(pub_summ.authors,'')  "Authors"
 --     ,*
 from ce_collection_details ced
-    left join ce_samples_collected cesc on cesc.resourceinstanceid = ced.resourceinstanceid
+    left join fossil_sample.mv_ce_sample_summary ce_sample_summary on ce_sample_summary.collection_event_id = ced.resourceinstanceid
     left join ce_location cel on cel.parenttileid = ced.tileid
-    left join fossil_sample.storage_location_vw fsri on cesc.samples_collected_uuid::uuid = fsri.collected_sample_uuid
-    left join fossil_sample.stratigraphy_vw fssv on cesc.samples_collected_uuid = fssv.fossil_sample_uuid
-    left join fossil_sample.geological_age_vw fsga on cesc.samples_collected_uuid = fsga.fossil_sample_uuid
     left join publication.mv_ce_publication_summary pub_summ on pub_summ.collection_event = ced.resourceinstanceid
-    left join ( select s.fossil_sample_uuid,
-                       __bc_unique_array(array_agg(trim(replace(coalesce(s1.name||' ','') || coalesce(s.name_connector||' ','') ||coalesce(s2.name,''), '  ',' ')) order by 1)) scientific_names,
-                       __bc_unique_array(array_agg(cn.name)) common_names,
-                       __bc_unique_array(array_agg(s.size_category)) size_categories
-                from fossil_sample.mv_fossil_name s
-                left join fossil_type.mv_fossil_name s1 on s.scientific_name = s1.fossil_name_uuid
-                left join fossil_type.mv_fossil_name s2 on s.other_scientific_name = s2.fossil_name_uuid
-                left join fossil_type.mv_fossil_name cn on s.common_name = cn.fossil_name_uuid
-                                                       group by s.fossil_sample_uuid) c on cesc.samples_collected_uuid::uuid = c.fossil_sample_uuid
 order by "Location Descriptor", "Collection Start Year";
 
 create or replace procedure refresh_export_mvs() as
@@ -379,6 +414,7 @@ $$
 BEGIN
     refresh materialized view fossil_type.mv_fossil_name;
     refresh materialized view fossil_sample.mv_fossil_name;
+    refresh materialized view fossil_sample.mv_ce_sample_summary;
     refresh materialized view publication.mv_ce_publication_summary;
 END
 $$ language plpgsql;
