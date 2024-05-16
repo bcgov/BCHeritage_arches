@@ -174,9 +174,9 @@ select
 from tiles where nodegroupid = fossil_sample.bc_fossil_identification_nodegroupid();
 -- select * from fossil_sample.fossil_name_vw;
 
-create materialized view fossil_sample.fossil_name_mv as select * from fossil_sample.fossil_name_vw;
-create index fs_fnmv_idx1 on fossil_sample.fossil_name_mv(fossil_sample_uuid);
-create index fs_fnmv_idx2 on fossil_sample.fossil_name_mv(scientific_name, other_scientific_name, common_name);
+create materialized view fossil_sample.mv_fossil_name as select * from fossil_sample.fossil_name_vw;
+create index fs_fnmv_idx1 on fossil_sample.mv_fossil_name(fossil_sample_uuid);
+create index fs_fnmv_idx2 on fossil_sample.mv_fossil_name(scientific_name, other_scientific_name, common_name);
 
 
 drop view if exists fossil_sample.storage_location_vw cascade;
@@ -244,8 +244,9 @@ select distinct  child.resourceinstanceid fossil_name_uuid,
 from name_qry child
          left join name_qry parent on child.parent_name::uuid = parent.resourceinstanceid
 order by trim(coalesce(parent.name, '') || ' ' || coalesce(child.name,''));
-create materialized view fossil_type.fossil_name_mv as select * from fossil_type.fossil_name_vw;
-create index ft_fn_mv_idx1 on fossil_type.fossil_name_mv(fossil_name_uuid);
+
+create materialized view fossil_type.mv_fossil_name as select * from fossil_type.fossil_name_vw;
+create index ft_fn_mv_idx1 on fossil_type.mv_fossil_name(fossil_name_uuid);
 
 -- select * from fossil_type.fossil_name_vw;
 
@@ -306,9 +307,17 @@ from publication_details pd
         left join publication_details journal on journal.publication_uuid = volume.parent_publication
                         where volume.publication_type = 'Volume / Publication Number'
                         ) pp on pp.publication_uuid = pd.parent_publication;
--- select * from publication.publication_details_vw;
 
-
+create materialized view publication.mv_ce_publication_summary as
+select collection_event,
+       array_to_string(array_agg(distinct publication_year order by publication_year), '; ') publication_years,
+       array_to_string(array_agg(distinct publication_type order by publication_type),'; ') publication_types,
+       array_to_string(array_agg(distinct author_name order by author_name), '; ') authors,
+       count(*) publication_count
+from publication.publication_details_vw
+group by collection_event
+order by collection_event;
+create unique index ce_ps_idx1 on publication.mv_ce_publication_summary(collection_event);
 
 
 drop view if exists fossil_collection_event.collection_event_vw;
@@ -342,11 +351,10 @@ select
     coalesce(time_scale,'') "Time Scale",
     coalesce(minimum_time,'') "Minumum Time",
     coalesce(maximum_time,'') "Maximum Time",
-    coalesce(ppd.publication_year, '') "Publication Year",
-    coalesce(ppd.journal_title,'')  "Journal Title",
-    coalesce(ppd.title,'')  "Publication Title",
-    coalesce(ppd.publication_type,'') "Publication Type",
-    array_to_string(coalesce(ppd.authors, ARRAY[]::text[]), '; ') "Authors"
+    coalesce(pub_summ.publication_count, 0) "Publication Count",
+    coalesce(pub_summ.publication_years, '') "Publication Year",
+    coalesce(pub_summ.publication_types,'')  "Publication Type",
+    coalesce(pub_summ.authors,'')  "Authors"
 --     ,*
 from ce_collection_details ced
     left join ce_samples_collected cesc on cesc.resourceinstanceid = ced.resourceinstanceid
@@ -354,25 +362,24 @@ from ce_collection_details ced
     left join fossil_sample.storage_location_vw fsri on cesc.samples_collected_uuid::uuid = fsri.collected_sample_uuid
     left join fossil_sample.stratigraphy_vw fssv on cesc.samples_collected_uuid = fssv.fossil_sample_uuid
     left join fossil_sample.geological_age_vw fsga on cesc.samples_collected_uuid = fsga.fossil_sample_uuid
-    left join (select publication_uuid, collection_event,  journal_title, title, publication_type, publication_year,
-                      array_agg(a.author_name) authors
-               from publication.publication_details_vw a group by publication_uuid, collection_event,  a.journal_title, a.title, a.publication_type, a.publication_year) ppd on ppd.collection_event = ced.resourceinstanceid
+    left join publication.mv_ce_publication_summary pub_summ on pub_summ.collection_event = ced.resourceinstanceid
     left join ( select s.fossil_sample_uuid,
                        __bc_unique_array(array_agg(trim(replace(coalesce(s1.name||' ','') || coalesce(s.name_connector||' ','') ||coalesce(s2.name,''), '  ',' ')) order by 1)) scientific_names,
                        __bc_unique_array(array_agg(cn.name)) common_names,
                        __bc_unique_array(array_agg(s.size_category)) size_categories
-                from fossil_sample.fossil_name_mv s
-                left join fossil_type.fossil_name_mv s1 on s.scientific_name = s1.fossil_name_uuid
-                left join fossil_type.fossil_name_mv s2 on s.other_scientific_name = s2.fossil_name_uuid
-                left join fossil_type.fossil_name_mv cn on s.common_name = cn.fossil_name_uuid
+                from fossil_sample.mv_fossil_name s
+                left join fossil_type.mv_fossil_name s1 on s.scientific_name = s1.fossil_name_uuid
+                left join fossil_type.mv_fossil_name s2 on s.other_scientific_name = s2.fossil_name_uuid
+                left join fossil_type.mv_fossil_name cn on s.common_name = cn.fossil_name_uuid
                                                        group by s.fossil_sample_uuid) c on cesc.samples_collected_uuid::uuid = c.fossil_sample_uuid
 order by "Location Descriptor", "Collection Start Year";
 
 create or replace procedure refresh_export_mvs() as
 $$
 BEGIN
-    refresh materialized view fossil_type.fossil_name_mv;
-    refresh materialized view fossil_sample.fossil_name_mv;
+    refresh materialized view fossil_type.mv_fossil_name;
+    refresh materialized view fossil_sample.mv_fossil_name;
+    refresh materialized view publication.mv_ce_publication_summary;
 END
 $$ language plpgsql;
 
