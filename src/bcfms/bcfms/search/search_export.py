@@ -9,13 +9,13 @@ class BCFMSSearchResultsExporter(SearchResultsExporter):
         cursor.execute("refresh materialized view fossil_collection_event.samples_collected_mv")
 
     def to_csv(self, instances, headers, name):
-        # print("BCFMSSearchResultsExporter %s" % name)
+        print("BCFMSSearchResultsExporter %s" % name)
         # print("Instance type: %s " % instances[0])
         # print("Instance     : %s " % instances[0])
 
 
         # print("Headers: %s" % headers)
-        if name == "Collection Event":
+        if name == "Fossil Collection Event":
             collection_ids = [o['resourceid'] for o in instances]
             with connection.cursor() as cur:
                 # self.refresh_materialized_views(cur)
