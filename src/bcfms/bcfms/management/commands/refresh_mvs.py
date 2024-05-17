@@ -5,7 +5,7 @@ import logging
 logger = logging.getLogger(__name__)
 class Command(BaseCommand):
     """
-    Command to refresh materialized views that support the one-row view used by DataBC to create the BCGW layer
+    Command to refresh materialized views that support cross-resource model exports
 
     """
 
