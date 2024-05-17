@@ -261,7 +261,7 @@ create index ft_fn_mv_idx1 on fossil_type.mv_fossil_name(fossil_name_uuid);
 /*
  * Materialized view that summarizes all the fossil samples associated with a collection event
  */
-drop materialized view fossil_sample.mv_ce_sample_summary;
+drop materialized view if exists fossil_sample.mv_ce_sample_summary;
 create materialized view fossil_sample.mv_ce_sample_summary as
 with ce_samples_collected as (select resourceinstanceid collection_event_id,
                                      __bc_ref_from_tile(tiledata,
