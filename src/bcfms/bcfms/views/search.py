@@ -9,11 +9,9 @@ import arches.app.utils.zip as zip_utils
 
 @group_required("Resource Exporter")
 def export_results(request):
-    # print("In BCGov specific search results")
     # Merge the GET and POST data. Arches assumes data is in the GET object
     request.GET = request.GET.copy()
     for key, value in request.POST.items():
-        # print("%s -> %s" % (key, value))
         request.GET[key] = value
 
     format = request.GET.get("format", "tilecsv")
