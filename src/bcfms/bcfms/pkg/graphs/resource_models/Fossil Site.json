@@ -27,7 +27,7 @@
                         "en": "Site Notes"
                     },
                     "nodegroup_id": "1224f846-ab96-11ec-8eb6-5254008afee6",
-                    "sortorder": 3,
+                    "sortorder": 4,
                     "visible": true
                 },
                 {
@@ -51,7 +51,7 @@
                     "instructions": {
                         "en": ""
                     },
-                    "is_editable": false,
+                    "is_editable": true,
                     "name": {
                         "en": "Location"
                     },
@@ -78,12 +78,41 @@
                     "instructions": {
                         "en": "Provide a brief, unique, descriptive site name."
                     },
-                    "is_editable": false,
+                    "is_editable": true,
                     "name": {
                         "en": "Site Name"
                     },
                     "nodegroup_id": "8d8b71ea-9b47-11ec-b9e6-5254008afee6",
                     "sortorder": 0,
+                    "visible": true
+                },
+                {
+                    "active": true,
+                    "cardid": "af3add06-d788-11ee-8c24-080027b7463b",
+                    "component_id": "4e40b397-d6bc-4660-a398-4a72c90dba07",
+                    "config": {
+                        "defaultManifest": ""
+                    },
+                    "constraints": [],
+                    "cssclass": null,
+                    "description": "",
+                    "graph_id": "fac1b1b4-1034-11ec-8a7a-5254008afee6",
+                    "helpenabled": false,
+                    "helptext": {
+                        "en": ""
+                    },
+                    "helptitle": {
+                        "en": "Images Help"
+                    },
+                    "instructions": {
+                        "en": ""
+                    },
+                    "is_editable": true,
+                    "name": {
+                        "en": "Fossil Site Photographs"
+                    },
+                    "nodegroup_id": "af3ada54-d788-11ee-8c24-080027b7463b",
+                    "sortorder": 3,
                     "visible": true
                 },
                 {
@@ -110,7 +139,7 @@
                         "en": "Significance Ranking Code"
                     },
                     "nodegroup_id": "d08d1b72-70d7-11ed-9c1b-5254004d77d3",
-                    "sortorder": 4,
+                    "sortorder": 5,
                     "visible": true
                 },
                 {
@@ -342,6 +371,35 @@
                     "widget_id": "10000000-0000-0000-0000-000000000001"
                 },
                 {
+                    "card_id": "af3add06-d788-11ee-8c24-080027b7463b",
+                    "config": {
+                        "defaultValue": {
+                            "en": {
+                                "direction": "ltr",
+                                "value": ""
+                            }
+                        },
+                        "i18n_properties": [
+                            "placeholder"
+                        ],
+                        "label": "Photograph View",
+                        "maxLength": null,
+                        "placeholder": {
+                            "en": "Enter text"
+                        },
+                        "uneditable": false,
+                        "width": "100%%"
+                    },
+                    "id": "9a5cf936-7610-4336-bf8e-f4ade261f4a6",
+                    "label": {
+                        "en": "Photograph View"
+                    },
+                    "node_id": "dcaf6ee2-dff7-11ee-a5f4-080027b7463b",
+                    "sortorder": null,
+                    "visible": true,
+                    "widget_id": "10000000-0000-0000-0000-000000000001"
+                },
+                {
                     "card_id": "d08d1e4c-70d7-11ed-9c1b-5254004d77d3",
                     "config": {
                         "defaultValue": "",
@@ -483,6 +541,102 @@
                     "sortorder": 1,
                     "visible": true,
                     "widget_id": "10000000-0000-0000-0000-000000000013"
+                },
+                {
+                    "card_id": "af3add06-d788-11ee-8c24-080027b7463b",
+                    "config": {
+                        "defaultValue": {
+                            "en": {
+                                "direction": "ltr",
+                                "value": ""
+                            }
+                        },
+                        "i18n_properties": [
+                            "placeholder"
+                        ],
+                        "label": "Photographer",
+                        "maxLength": "80",
+                        "placeholder": {
+                            "en": ""
+                        },
+                        "uneditable": false,
+                        "width": "100%"
+                    },
+                    "id": "af3ae4ae-d788-11ee-8c24-080027b7463b",
+                    "label": {
+                        "en": "Photographer"
+                    },
+                    "node_id": "af3ae328-d788-11ee-8c24-080027b7463b",
+                    "sortorder": 1,
+                    "visible": true,
+                    "widget_id": "10000000-0000-0000-0000-000000000001"
+                },
+                {
+                    "card_id": "af3add06-d788-11ee-8c24-080027b7463b",
+                    "config": {
+                        "defaultValue": {
+                            "en": {
+                                "direction": "ltr",
+                                "value": ""
+                            }
+                        },
+                        "i18n_properties": [
+                            "placeholder"
+                        ],
+                        "label": "Photograph Description",
+                        "maxLength": null,
+                        "placeholder": {
+                            "en": ""
+                        },
+                        "uneditable": false,
+                        "width": "100%"
+                    },
+                    "id": "af3ae54e-d788-11ee-8c24-080027b7463b",
+                    "label": {
+                        "en": "Photograph Description"
+                    },
+                    "node_id": "af3ae10c-d788-11ee-8c24-080027b7463b",
+                    "sortorder": 3,
+                    "visible": true,
+                    "widget_id": "10000000-0000-0000-0000-000000000005"
+                },
+                {
+                    "card_id": "af3add06-d788-11ee-8c24-080027b7463b",
+                    "config": {
+                        "dateFormat": "YYYY",
+                        "defaultValue": "",
+                        "label": "Photograph Date",
+                        "maxDate": false,
+                        "minDate": false,
+                        "placeholder": "Enter date",
+                        "viewMode": "years"
+                    },
+                    "id": "af3ae684-d788-11ee-8c24-080027b7463b",
+                    "label": {
+                        "en": "Photograph Date"
+                    },
+                    "node_id": "af3adfe0-d788-11ee-8c24-080027b7463b",
+                    "sortorder": 2,
+                    "visible": true,
+                    "widget_id": "10000000-0000-0000-0000-000000000004"
+                },
+                {
+                    "card_id": "af3add06-d788-11ee-8c24-080027b7463b",
+                    "config": {
+                        "acceptedFiles": ".jpg, .jpeg, .png, .tiff, .gif",
+                        "defaultValue": [],
+                        "label": "Fossil Site Photograph",
+                        "maxFilesize": "5",
+                        "rerender": true
+                    },
+                    "id": "af3ae71a-d788-11ee-8c24-080027b7463b",
+                    "label": {
+                        "en": "Fossil Site Photograph"
+                    },
+                    "node_id": "af3ada54-d788-11ee-8c24-080027b7463b",
+                    "sortorder": 0,
+                    "visible": true,
+                    "widget_id": "10000000-0000-0000-0000-000000000019"
                 }
             ],
             "color": "rgba(253,174,97,1)",
@@ -526,6 +680,15 @@
                 "en": ""
             },
             "edges": [
+                {
+                    "description": null,
+                    "domainnode_id": "af3ada54-d788-11ee-8c24-080027b7463b",
+                    "edgeid": "0beb3ae6-8ba8-4106-84df-c6307f1dd115",
+                    "graph_id": "fac1b1b4-1034-11ec-8a7a-5254008afee6",
+                    "name": null,
+                    "ontologyproperty": "http://www.cidoc-crm.org/cidoc-crm/P140i_was_attributed_by",
+                    "rangenode_id": "dcaf6ee2-dff7-11ee-a5f4-080027b7463b"
+                },
                 {
                     "description": null,
                     "domainnode_id": "1224f846-ab96-11ec-8eb6-5254008afee6",
@@ -583,11 +746,47 @@
                 {
                     "description": null,
                     "domainnode_id": "fac1a660-1034-11ec-8a7a-5254008afee6",
+                    "edgeid": "576be9ea-d2d9-4b50-959a-883d9aa01edb",
+                    "graph_id": "fac1b1b4-1034-11ec-8a7a-5254008afee6",
+                    "name": null,
+                    "ontologyproperty": "http://www.cidoc-crm.org/cidoc-crm/P130_shows_features_of",
+                    "rangenode_id": "af3ada54-d788-11ee-8c24-080027b7463b"
+                },
+                {
+                    "description": null,
+                    "domainnode_id": "fac1a660-1034-11ec-8a7a-5254008afee6",
                     "edgeid": "8d8bd7b6-9b47-11ec-b9e6-5254008afee6",
                     "graph_id": "fac1b1b4-1034-11ec-8a7a-5254008afee6",
                     "name": null,
                     "ontologyproperty": "http://www.cidoc-crm.org/cidoc-crm/P1_is_identified_by",
                     "rangenode_id": "8d8b71ea-9b47-11ec-b9e6-5254008afee6"
+                },
+                {
+                    "description": null,
+                    "domainnode_id": "af3ada54-d788-11ee-8c24-080027b7463b",
+                    "edgeid": "af3b1c1c-d788-11ee-8c24-080027b7463b",
+                    "graph_id": "fac1b1b4-1034-11ec-8a7a-5254008afee6",
+                    "name": null,
+                    "ontologyproperty": "http://www.cidoc-crm.org/cidoc-crm/P140i_was_attributed_by",
+                    "rangenode_id": "af3ae328-d788-11ee-8c24-080027b7463b"
+                },
+                {
+                    "description": null,
+                    "domainnode_id": "af3ada54-d788-11ee-8c24-080027b7463b",
+                    "edgeid": "af3b1ef6-d788-11ee-8c24-080027b7463b",
+                    "graph_id": "fac1b1b4-1034-11ec-8a7a-5254008afee6",
+                    "name": null,
+                    "ontologyproperty": "http://www.cidoc-crm.org/cidoc-crm/P129i_is_subject_of",
+                    "rangenode_id": "af3ae10c-d788-11ee-8c24-080027b7463b"
+                },
+                {
+                    "description": null,
+                    "domainnode_id": "af3ada54-d788-11ee-8c24-080027b7463b",
+                    "edgeid": "af3b1ffa-d788-11ee-8c24-080027b7463b",
+                    "graph_id": "fac1b1b4-1034-11ec-8a7a-5254008afee6",
+                    "name": null,
+                    "ontologyproperty": "http://www.cidoc-crm.org/cidoc-crm/P1_is_identified_by",
+                    "rangenode_id": "af3adfe0-d788-11ee-8c24-080027b7463b"
                 },
                 {
                     "description": null,
@@ -656,12 +855,12 @@
                     },
                     "function_id": "60000000-0000-0000-0000-000000001001",
                     "graph_id": "fac1b1b4-1034-11ec-8a7a-5254008afee6",
-                    "id": "62c6ce58-4cf0-4029-ad6e-2cd741f9b61f"
+                    "id": "b4dfb7d4-baaf-4ea9-8ce6-4430a8d789eb"
                 }
             ],
             "graphid": "fac1b1b4-1034-11ec-8a7a-5254008afee6",
             "iconclass": "fa fa-compass",
-            "is_editable": false,
+            "is_editable": true,
             "isresource": true,
             "jsonldcontext": null,
             "name": {
@@ -684,6 +883,12 @@
                     "cardinality": "1",
                     "legacygroupid": null,
                     "nodegroupid": "8d8b71ea-9b47-11ec-b9e6-5254008afee6",
+                    "parentnodegroup_id": null
+                },
+                {
+                    "cardinality": "n",
+                    "legacygroupid": null,
+                    "nodegroupid": "af3ada54-d788-11ee-8c24-080027b7463b",
                     "parentnodegroup_id": null
                 },
                 {
@@ -879,6 +1084,101 @@
                     "sourcebranchpublication_id": null
                 },
                 {
+                    "alias": "fossil_site_photographs",
+                    "config": {
+                        "activateMax": false,
+                        "imagesOnly": false,
+                        "maxFileSize": null,
+                        "maxFiles": 3
+                    },
+                    "datatype": "file-list",
+                    "description": "",
+                    "exportable": true,
+                    "fieldname": "ST_IMGS",
+                    "graph_id": "fac1b1b4-1034-11ec-8a7a-5254008afee6",
+                    "hascustomalias": false,
+                    "is_collector": true,
+                    "isrequired": false,
+                    "issearchable": true,
+                    "istopnode": false,
+                    "name": "Fossil Site Photographs",
+                    "nodegroup_id": "af3ada54-d788-11ee-8c24-080027b7463b",
+                    "nodeid": "af3ada54-d788-11ee-8c24-080027b7463b",
+                    "ontologyclass": "http://www.ics.forth.gr/isl/CRMdig/D13_Digital_Information_Carrier",
+                    "parentproperty": "http://www.cidoc-crm.org/cidoc-crm/P130_shows_features_of",
+                    "sortorder": 0,
+                    "sourcebranchpublication_id": null
+                },
+                {
+                    "alias": "photograph_date",
+                    "config": {
+                        "dateFormat": "YYYY"
+                    },
+                    "datatype": "date",
+                    "description": null,
+                    "exportable": true,
+                    "fieldname": "image_date",
+                    "graph_id": "fac1b1b4-1034-11ec-8a7a-5254008afee6",
+                    "hascustomalias": false,
+                    "is_collector": false,
+                    "isrequired": false,
+                    "issearchable": true,
+                    "istopnode": false,
+                    "name": "Photograph Date",
+                    "nodegroup_id": "af3ada54-d788-11ee-8c24-080027b7463b",
+                    "nodeid": "af3adfe0-d788-11ee-8c24-080027b7463b",
+                    "ontologyclass": "http://www.cidoc-crm.org/cidoc-crm/E50_Date",
+                    "parentproperty": "http://www.cidoc-crm.org/cidoc-crm/P1_is_identified_by",
+                    "sortorder": 0,
+                    "sourcebranchpublication_id": null
+                },
+                {
+                    "alias": "photograph_description",
+                    "config": {
+                        "en": ""
+                    },
+                    "datatype": "string",
+                    "description": null,
+                    "exportable": true,
+                    "fieldname": "image_desc",
+                    "graph_id": "fac1b1b4-1034-11ec-8a7a-5254008afee6",
+                    "hascustomalias": false,
+                    "is_collector": false,
+                    "isrequired": false,
+                    "issearchable": true,
+                    "istopnode": false,
+                    "name": "Photograph Description",
+                    "nodegroup_id": "af3ada54-d788-11ee-8c24-080027b7463b",
+                    "nodeid": "af3ae10c-d788-11ee-8c24-080027b7463b",
+                    "ontologyclass": "http://www.ics.forth.gr/isl/CRMdig/D29_Annotation_Object",
+                    "parentproperty": "http://www.cidoc-crm.org/cidoc-crm/P129i_is_subject_of",
+                    "sortorder": 0,
+                    "sourcebranchpublication_id": null
+                },
+                {
+                    "alias": "photographer",
+                    "config": {
+                        "en": ""
+                    },
+                    "datatype": "string",
+                    "description": null,
+                    "exportable": true,
+                    "fieldname": "photograph",
+                    "graph_id": "fac1b1b4-1034-11ec-8a7a-5254008afee6",
+                    "hascustomalias": false,
+                    "is_collector": false,
+                    "isrequired": false,
+                    "issearchable": true,
+                    "istopnode": false,
+                    "name": "Photographer",
+                    "nodegroup_id": "af3ada54-d788-11ee-8c24-080027b7463b",
+                    "nodeid": "af3ae328-d788-11ee-8c24-080027b7463b",
+                    "ontologyclass": "http://www.cidoc-crm.org/cidoc-crm/E13_Attribute_Assignment",
+                    "parentproperty": "http://www.cidoc-crm.org/cidoc-crm/P140i_was_attributed_by",
+                    "sortorder": 0,
+                    "sourcebranchpublication_id": null
+                },
+                {
                     "alias": "significance_ranking_code",
                     "config": {
                         "rdmCollection": "43b6403a-9f4a-4c27-ab31-7dafae0b2980"
@@ -921,6 +1221,29 @@
                     "nodeid": "d08d204a-70d7-11ed-9c1b-5254004d77d3",
                     "ontologyclass": "http://www.ics.forth.gr/isl/CRMsci/S6_Data_Evaluation",
                     "parentproperty": "http://www.cidoc-crm.org/cidoc-crm/P15i_influenced",
+                    "sortorder": 0,
+                    "sourcebranchpublication_id": null
+                },
+                {
+                    "alias": "photograph_view",
+                    "config": {
+                        "en": ""
+                    },
+                    "datatype": "string",
+                    "description": null,
+                    "exportable": true,
+                    "fieldname": "photo_view",
+                    "graph_id": "fac1b1b4-1034-11ec-8a7a-5254008afee6",
+                    "hascustomalias": false,
+                    "is_collector": false,
+                    "isrequired": false,
+                    "issearchable": true,
+                    "istopnode": false,
+                    "name": "Photograph View",
+                    "nodegroup_id": "af3ada54-d788-11ee-8c24-080027b7463b",
+                    "nodeid": "dcaf6ee2-dff7-11ee-a5f4-080027b7463b",
+                    "ontologyclass": "http://www.cidoc-crm.org/cidoc-crm/E13_Attribute_Assignment",
+                    "parentproperty": "http://www.cidoc-crm.org/cidoc-crm/P140i_was_attributed_by",
                     "sortorder": 0,
                     "sourcebranchpublication_id": null
                 },
@@ -980,8 +1303,8 @@
             "publication": {
                 "graph_id": "fac1b1b4-1034-11ec-8a7a-5254008afee6",
                 "notes": null,
-                "publicationid": "e347eb8e-ba32-11ee-b0ae-080027b7463b",
-                "published_time": "2024-01-23T15:03:41.933"
+                "publicationid": "1d596232-e218-11ee-abc6-080027b7463b",
+                "published_time": "2024-03-14T10:32:49.455"
             },
             "relatable_resource_model_ids": [],
             "resource_2_resource_constraints": [],
@@ -1014,8 +1337,8 @@
         }
     ],
     "metadata": {
-        "db": "PostgreSQL 15.3 on x86_64-pc-linux-gnu, compiled by gcc (GCC) 11.3.1 20221121 (Red Hat 11.3.1-4), 64-bit",
-        "git hash": "6f4433a6f 2024-01-22 23:28:45 -0800",
+        "db": "PostgreSQL 16.0 on x86_64-pc-linux-gnu, compiled by gcc (GCC) 11.3.1 20221121 (Red Hat 11.3.1-4), 64-bit",
+        "git hash": "6f4433a6fb 2024-01-22 23:28:45 -0800",
         "os": "Linux",
         "os version": "5.14.0-333.el9.x86_64"
     }
