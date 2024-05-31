@@ -422,7 +422,7 @@
                     },
                     "function_id": "60000000-0000-0000-0000-000000001001",
                     "graph_id": "605b0bbc-8661-4cf2-b340-df743a8c5f89",
-                    "id": "50d7ddec-e315-465e-985a-0cefa4033fbb"
+                    "id": "c263fdd1-9f2f-465a-a699-18b1b544861c"
                 }
             ],
             "graphid": "605b0bbc-8661-4cf2-b340-df743a8c5f89",
@@ -693,7 +693,7 @@
                     },
                     "datatype": "string",
                     "description": "Name of the contributor - Last name if an individual, Organization name for an organization",
-                    "exportable": false,
+                    "exportable": true,
                     "fieldname": null,
                     "graph_id": "605b0bbc-8661-4cf2-b340-df743a8c5f89",
                     "hascustomalias": false,
@@ -815,7 +815,7 @@
                     },
                     "datatype": "concept-list",
                     "description": null,
-                    "exportable": false,
+                    "exportable": true,
                     "fieldname": null,
                     "graph_id": "605b0bbc-8661-4cf2-b340-df743a8c5f89",
                     "hascustomalias": false,
@@ -836,8 +836,8 @@
             "publication": {
                 "graph_id": "605b0bbc-8661-4cf2-b340-df743a8c5f89",
                 "notes": null,
-                "publicationid": "6b1e91da-36f7-11ee-af1c-0050568377a0",
-                "published_time": "2023-08-09T15:57:57.705"
+                "publicationid": "dfd385f6-1f6a-11ef-a174-0242ac120006",
+                "published_time": "2024-05-31T11:28:55.395"
             },
             "relatable_resource_model_ids": [],
             "resource_2_resource_constraints": [],
@@ -872,9 +872,9 @@
         }
     ],
     "metadata": {
-        "db": "PostgreSQL 15.3 on x86_64-pc-linux-gnu, compiled by gcc (GCC) 11.3.1 20221121 (Red Hat 11.3.1-4), 64-bit",
-        "git hash": "878aec681 2023-11-20 12:09:49 -0800",
+        "db": "PostgreSQL 14.5 (Debian 14.5-1.pgdg110+1) on x86_64-pc-linux-gnu, compiled by gcc (Debian 10.2.1-6) 10.2.1 20210110, 64-bit",
+        "git hash": "6321c1b38 2023-12-07 21:11:06 -0800",
         "os": "Linux",
-        "os version": "5.14.0-333.el9.x86_64"
+        "os version": "6.6.22-linuxkit"
     }
 }
