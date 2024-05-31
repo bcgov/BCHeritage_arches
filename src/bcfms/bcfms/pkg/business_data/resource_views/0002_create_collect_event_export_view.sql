@@ -144,12 +144,19 @@ END $$ language plpgsql;
 /*
  * Format the scientific name parts (name, connector other name) into a string
  */
-drop function if exists __bc_format_scientific_name;
-create or replace function __bc_format_scientific_name(name text, connector text, other_name text) returns text as
+drop function if exists __bc_format_scientific_name cascade;
+create or replace function __bc_format_scientific_name(name text, name_rank text, connector text, other_name text, other_name_rank text) returns text as
 $$
 DECLARE
 BEGIN
-    return trim(replace(coalesce(name||' ','') || coalesce(connector||' ','') ||coalesce(other_name,''), '  ',' '));
+    return trim(replace(coalesce(name, '') ||  ' ' ||
+                        case when name_rank = 'Genus' then 'sp. ' else '' end ||
+                        coalesce(connector, '') || ' ' ||
+                        coalesce(other_name, '') ||
+                        case when other_name_rank = 'Genus' then 'sp.' else '' end
+        , '  ', ' ')
+
+        );
 END $$ language plpgsql;
 
 -- with repo_info as (select resourceinstanceid,
@@ -272,8 +279,8 @@ select coll.collection_event_id,
        count(*) samples_collected,
        array_to_string(array_remove(array_agg(distinct slv.storage_location_name order by storage_location_name), null), '; ') storage_locations,
        array_to_string(array_remove(array_agg(distinct slv.storage_reference order by storage_reference), null), '; ') storage_references,
-       array_to_string(array_remove(array_agg(distinct __bc_format_scientific_name(s1.name, s.name_connector, s2.name)
-                                              order by __bc_format_scientific_name(s1.name, s.name_connector, s2.name)), ''),'; ') scientific_names,
+       array_to_string(array_remove(array_agg(distinct __bc_format_scientific_name(s1.name, s1.taxonomic_rank, s.name_connector, s2.name, s2.taxonomic_rank)
+                                              order by __bc_format_scientific_name(s1.name, s1.taxonomic_rank, s.name_connector, s2.name, s2.taxonomic_rank)), ''),'; ') scientific_names,
        array_to_string(array_remove(array_agg(distinct cn.name order by cn.name),null), '; ') common_names,
        array_to_string(array_remove(array_agg(distinct s.size_category order by s.size_category), null), '; ') size_categories,
        array_to_string(array_remove(array_agg(distinct geological_group), ''), '; ') geological_groups,
