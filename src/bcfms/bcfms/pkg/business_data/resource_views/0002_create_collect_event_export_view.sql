@@ -150,10 +150,8 @@ $$
 DECLARE
 BEGIN
     return trim(replace(coalesce(name, '') ||  ' ' ||
-                        case when name_rank = 'Genus' then 'sp. ' else '' end ||
                         coalesce(connector, '') || ' ' ||
-                        coalesce(other_name, '') ||
-                        case when other_name_rank = 'Genus' then 'sp.' else '' end
+                        coalesce(other_name, '')
         , '  ', ' ')
 
         );
@@ -238,7 +236,7 @@ from tiles
 where nodegroupid = fossil_sample.geological_age_nodegroupid();
 -- select * from fossil_sample.geological_age_vw;
 
-drop view if exists fossil_type.fossil_name_vw;
+drop view if exists fossil_type.fossil_name_vw cascade;
 create view fossil_type.fossil_name_vw as
 with name_qry as
          (select
@@ -252,7 +250,7 @@ with name_qry as
 select distinct  child.resourceinstanceid fossil_name_uuid,
 --        parent.tileid parent_tile,
 --        child.tileid child_tile,
-                 trim(coalesce(parent.name, '') || ' ' || coalesce(child.name,'')) name,
+                 trim(coalesce(parent.name, '') || ' ' || coalesce(child.name,'') || case when coalesce(child.taxonomic_rank, parent.taxonomic_rank) = 'Genus' then ' sp.' else '' end) name,
 --        parent.name parent_name,
 --        child.name child_name,
 --        child.parent_name,
@@ -260,7 +258,7 @@ select distinct  child.resourceinstanceid fossil_name_uuid,
                  coalesce(child.taxonomic_rank, parent.taxonomic_rank) taxonomic_rank
 from name_qry child
          left join name_qry parent on child.parent_name::uuid = parent.resourceinstanceid
-order by trim(coalesce(parent.name, '') || ' ' || coalesce(child.name,''));
+order by trim(coalesce(parent.name, '') || ' ' || coalesce(child.name,'') || case when coalesce(child.taxonomic_rank, parent.taxonomic_rank) = 'Genus' then ' sp.' else '' end);
 
 create materialized view fossil_type.mv_fossil_name as select * from fossil_type.fossil_name_vw;
 create index ft_fn_mv_idx1 on fossil_type.mv_fossil_name(fossil_name_uuid);
@@ -362,12 +360,13 @@ from publication_details pd
                         where volume.publication_type = 'Volume / Publication Number'
                         ) pp on pp.publication_uuid = pd.parent_publication;
 
+drop materialized view publication.mv_ce_publication_summary cascade;
 create materialized view publication.mv_ce_publication_summary as
 select collection_event,
        array_to_string(array_agg(distinct publication_year order by publication_year), '; ') publication_years,
        array_to_string(array_agg(distinct publication_type order by publication_type),'; ') publication_types,
        array_to_string(array_agg(distinct author_name order by author_name), '; ') authors,
-       count(*) publication_count
+       count(distinct publication_uuid) publication_count
 from publication.publication_details_vw
 group by collection_event
 order by collection_event;
