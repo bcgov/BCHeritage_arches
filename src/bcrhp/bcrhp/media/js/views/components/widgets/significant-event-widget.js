@@ -19,6 +19,8 @@ define(['knockout', 'underscore', 'arches', 'viewmodels/widget', 'templates/view
             this.eventTypes = params.event_types || ko.observableArray();
             this.showEvent = ko.observable(false);
 
+            this.eventLabel = ko.observable("Event");
+
             this.getWidgetWithLabel = function(card, widgetName) {
                 let namedWidget = _.find(card.widgets(), function(widget) {
                     return widget.node.attributes.source['alias'] === widgetName;
@@ -26,30 +28,34 @@ define(['knockout', 'underscore', 'arches', 'viewmodels/widget', 'templates/view
                 return namedWidget;
             };
 
-            this.setEventVisible = function(widget)
+            ko.computed(function()
             {
-                var valueid = self.value[widget.node.nodeid]()
-                // @todo Is there a better way to do this?
+                const widget = self.getWidgetWithLabel(self.card(), "chronology");
+                const valueid = self.value[widget.node.nodeid]();
                 if (!!valueid)
                 {
                     $.ajax(arches.urls.get_pref_label + '?valueid=' + valueid, {
                         dataType: "json"
                     }).done(function(data) {
-                        self.showEvent(self.eventTypes.includes(data.value))
+                        self.showEvent(self.eventTypes.includes(data.value));
+                        self.eventLabel(`${data.value} Event`);
                     });
                 }
-            }
+            });
 
-            this.significantEvent = ko.computed(function()
+            this.eventNotes = ko.computed(function()
             {
-                let widget = self.getWidgetWithLabel(self.card(), "chronology");
-                self.setEventVisible(widget);
-                return widget;
+                return self.getWidgetWithLabel(self.card(), "chronology_notes");
             });
 
             this.startYear = ko.computed(function()
             {
                 return self.getWidgetWithLabel(self.card(), "start_year");
+            });
+
+            this.endYear = ko.computed(function()
+            {
+                return self.getWidgetWithLabel(self.card(), "end_year");
             });
 
             this.startYearQualifier = ko.computed(function()

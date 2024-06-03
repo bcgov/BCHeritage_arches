@@ -40,12 +40,12 @@
             </div>
             <dl class="dl-horizontal">
             <div data-bind="visible: !!tileValues['copyright']">
-                <dt>Copyright</dt>
-                <dd data-bind="component: {name: 'text-widget',
+                <span>Copyright</span>
+                <span data-bind="component: {name: 'text-widget',
                                params: {value: tileValues['copyright'](),
                                         state: 'display_value'
                                         }
-                               }"></dd>
+                               }"></span>
             </div>
             <div data-bind="visible: !!$parent.textHasValue(tileValues['photographer'])">
                 <dt>Photographer</dt>
@@ -217,7 +217,7 @@
             "></i>
 
     <div class="rp-card-section" data-bind="visible: sectionController, attr: {id: targetSection}">
-        <div style="display: inline-flex; width: 100%; justify-content: space-between;">
+        <div style="display: flex; flex-flow: column; width: 100%; justify-content: space-between;">
 
             <!-- ko let: {widget: getWidgetForAlias('designation_or_protection_start_date')}-->
             <!-- ko foreach: { data: getValuesFromTiles(['legislative_act', 'responsible_government', 'designation_or_protection_start_date', 'reference_number']), as: 'values' } -->
@@ -279,22 +279,20 @@
             "></i>
 
     <div class="rp-card-section" data-bind="visible: sectionController, attr: {id: targetSection}">
-        <div style="display: inline-flex; width: 100%; justify-content: space-between;">
-            <dl class="dl-horizontal">
-                <dt>Construction Date(s)</dt>
-                <!-- ko foreach: { data: getTilesForAlias('chronology'), as: 'tile' } -->
-                <dd data-bind="component: {
-                                            name: 'significant-event-widget',
-                                            params: {
-                                                card: $parent.getWidgetForAlias('chronology').card,
-                                                tile: tile,
-                                                value: tile.data,
-                                                state: 'display_value',
-                                                event_types: ['Construction','Significant']
-                                            }
-                                        }, click: function(){console.log(card);}"></dd>
-                <!-- /ko -->
-            </dl>
+        <div style="display: flex; flex-flow: column; width: 100%; justify-content: space-between;">
+            <!-- ko foreach: { data: getTilesForAlias('chronology'), as: 'tile' } -->
+            <!-- ko component: { name: 'significant-event-widget',
+                                 params: {
+                                     card: $parent.getWidgetForAlias('chronology').card,
+                                     tile: tile,
+                                     value: tile.data,
+                                     state: 'display_value',
+                                     event_types: ['Construction','Significant']
+                                 }
+                               }
+            -->
+            <!-- /ko -->
+            <!-- /ko -->
         </div>
     </div>
     <!-- /ko -->
