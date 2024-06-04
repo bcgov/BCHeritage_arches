@@ -62,11 +62,7 @@
                 <!--div data-bind="text: report.get('name')"></div-->
                 <!-- ko if: report.get('name') == "Heritage Site" -->
                 <!--div>User: {{ user.username }}</div-->
-                {% if user.username != 'anonymous' %}
-                {% include 'views/report-templates/details/heritage_site.htm' %}
-                {% else %}
                 {% include 'views/report-templates/details/heritage_site_public.htm' %}
-                {% endif %}
                 <!-- /ko -->
                 <!-- ko if: report.get('name') == "Legislative Act" -->
                 {% include 'views/report-templates/details/legislative_act.htm' %}
