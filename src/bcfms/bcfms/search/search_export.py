@@ -16,4 +16,5 @@ class BCFMSSearchResultsExporter(SearchResultsExporter):
                 cur.execute("""select * from fossil_collection_event.collection_event_vw where array_position(%s, collection_event_id::text) is not null""", [collection_ids])
                 columns = [desc[0] for desc in cur.description]
                 return super().to_csv([dict(zip(columns, row)) for row in cur.fetchall()], columns, name)
+        print("Headers: %s" % headers)
         return super().to_csv(instances, headers, name)

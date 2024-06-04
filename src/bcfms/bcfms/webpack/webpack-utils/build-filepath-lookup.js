@@ -1,12 +1,14 @@
 const Path = require('path');
 const fs = require('fs');
 
-function buildJavascriptFilepathLookup(path, extension) {
+function buildFilePathLookup(path, staticUrlPrefix) {
     if (!fs.existsSync(path)) {
         return;
     }
 
-    let prefix = path.replace(/\/.*$/,'');
+
+    let prefix = path.match(/[^\/]+$/)
+    let staticUrl = !!staticUrlPrefix ? staticUrlPrefix : ""
 
     let getFileList = function (dirPath) {
         return fs.readdirSync(dirPath, { withFileTypes: true }).reduce((fileList,entries) => {
@@ -22,7 +24,15 @@ function buildJavascriptFilepathLookup(path, extension) {
         };
     // Should we only add files that end in .js?
     return getFileList(path).reduce((lookup, file) => {
-        lookup[file.replace(path,'').replace(/\\/g, '/').replace(/\.js$/,'').replace(/^\//,'')] = {"import": file, "filename": `${prefix}/[name].${extension}`};
+        let extension = file.match(/[^.]+$/).toString();
+        if (extension === 'js') {
+            lookup[file.replace(path,'').replace(/\\/g, '/').replace(/\.js$/,'').replace(/^\//,'')] = {"import": file, "filename": `${prefix}/[name].${extension}`};
+        }
+        else
+        {
+            // staticUrl used for images
+            lookup[`${staticUrl}${prefix}/${file.replace(path,'').replace(/\\/g, '/').replace(/^\//,'')}`] = file;
+        }
         return lookup;
     }, {});
 
@@ -79,4 +89,4 @@ function buildJavascriptFilepathLookup(path, extension) {
     // }, outerAcc);
 }
 
-module.exports = { buildJavascriptFilepathLookup };
+module.exports = { buildFilePathLookup };

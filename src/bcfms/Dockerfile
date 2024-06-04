@@ -6,6 +6,7 @@ ENV WEB_ROOT=/web_root
 ENV APP_ROOT=${WEB_ROOT}/${PROJECT_NAME}
 # Root project folder
 ENV ARCHES_ROOT=${WEB_ROOT}/arches
+ENV PG_TILESERV_ROOT=${WEB_ROOT}/pg_tileserv
 ENV WHEELS=/wheels
 ENV PYTHONUNBUFFERED=1
 RUN apt-get update && apt-get install -y make software-properties-common
@@ -63,6 +64,10 @@ RUN mkdir /var/log/celery
 # Set default workdir
 WORKDIR ${APP_ROOT}
 COPY ../common/* ${PROJECT_NAME}/
+
+# Install PG Tileserv software
+ADD https://postgisftw.s3.amazonaws.com/pg_tileserv_latest_linux.zip ${PG_TILESERV_ROOT}
+
 # # Set entrypoint
 ENTRYPOINT ["../entrypoint.sh"]
 CMD ["run_arches"]

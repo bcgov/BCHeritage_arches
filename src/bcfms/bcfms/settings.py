@@ -49,6 +49,7 @@ DATATYPE_LOCATIONS.append('bcfms.datatypes')
 FUNCTION_LOCATIONS.append('bcfms.functions')
 ETL_MODULE_LOCATIONS.append('bcfms.etl_modules')
 SEARCH_COMPONENT_LOCATIONS.append('bcfms.search_components')
+SEARCH_COMPONENT_LOCATIONS.append('bcfms.search.components')
 
 LOCALE_PATHS.append(os.path.join(APP_ROOT, 'locale'))
 
