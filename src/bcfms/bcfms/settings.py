@@ -29,7 +29,7 @@ try:
 except ImportError:
     pass
 
-load_dotenv()
+load_dotenv(os.path.join(os.path.split(os.path.dirname(os.path.abspath(__file__)))[0], ".env"))
 APP_NAME = 'bcfms'
 APP_VERSION = semantic_version.Version(major=0, minor=9, patch=0)
 APP_ROOT = os.path.dirname(os.path.abspath(inspect.getfile(inspect.currentframe())))
@@ -238,7 +238,10 @@ MEDIA_ROOT = os.path.join(APP_ROOT)
 
 # URL prefix for static files.
 # Example: "http://media.lawrence.com/static/"
-STATIC_URL = '/'+BCGOV_PROXY_PREFIX+'static/'
+if BCGOV_PROXY_PREFIX:
+    STATIC_URL = '/'+BCGOV_PROXY_PREFIX+'static/'
+else:
+    STATIC_URL = '/static/'
 
 # Absolute path to the directory static files should be collected to.
 # Don't put anything in this directory yourself; store your static files
@@ -488,8 +491,6 @@ except ImportError:
 ###########
 
 WEBPACK_DEVELOPMENT_SERVER_PORT = 9000
-
-STATIC_URL = '/'+BCGOV_PROXY_PREFIX+'static/'
 
 ARCHES_NAMESPACE_FOR_DATA_EXPORT = PUBLIC_SERVER_ADDRESS
 ADMIN_MEDIA_PREFIX = STATIC_URL+"admin/"
