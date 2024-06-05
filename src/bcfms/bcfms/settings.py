@@ -1,22 +1,26 @@
 """
 Django settings for bcfms project.
 """
-
 import json
 import os
 from dotenv import load_dotenv
 import sys
+import ast
 import arches
 import inspect
 import semantic_version
+from datetime import datetime, timedelta
 from django.utils.translation import gettext_lazy as _
+from django.core.exceptions import ImproperlyConfigured
 
-def get_env_variable(var_name):
+def get_env_variable(var_name, is_optional=False):
     msg = "Set the %s environment variable"
     try:
         val = os.environ[var_name]
         return None if val == "None" else val
     except KeyError:
+        if is_optional:
+            return None
         error_msg = msg % var_name
         raise ImproperlyConfigured(error_msg)
 
@@ -32,6 +36,8 @@ APP_ROOT = os.path.dirname(os.path.abspath(inspect.getfile(inspect.currentframe(
 MIN_ARCHES_VERSION = arches.__version__
 MAX_ARCHES_VERSION = arches.__version__
 
+# PROXY prefix used - NB - cannot have leading "/", and must have trailing "/"
+BCGOV_PROXY_PREFIX = get_env_variable('BCGOV_PROXY_PREFIX')
 
 WEBPACK_LOADER = {
     "DEFAULT": {
@@ -51,14 +57,55 @@ FILE_TYPES = ["bmp", "gif", "jpg", "jpeg", "pdf", "png", "psd", "rtf", "tif", "t
 FILENAME_GENERATOR = "bcfms.util.storage_filename_generator.generate_filename"
 UPLOADED_FILES_DIR = "uploadedfiles"
 
+# This is a class to add custom search values for cross-resource searching
+CUSTOM_SEARCH_CLASS = "bcfms.util.custom_search_value.CustomSearchValue"
+
 # SECURITY WARNING: keep the secret key used in production secret!
-# SECRET_KEY = ''
+SECRET_KEY = get_env_variable("DJANGO_SECRET_KEY")
+
+# options are either "PROD" or "DEV" (installing with Dev mode set gets you extra dependencies)
+MODE = get_env_variable("DJANGO_MODE")
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = get_env_variable("DJANGO_DEBUG")
+DEBUG = ast.literal_eval(get_env_variable("DJANGO_DEBUG"))
 
 ROOT_URLCONF = 'bcfms.urls'
 
+ELASTICSEARCH_SCHEME = get_env_variable("ES_SCHEME")
+ELASTICSEARCH_HTTP_PORT = int(get_env_variable("ES_PORT"))
+ELASTICSEARCH_HTTP_HOST = get_env_variable("ES_HOST")
+ELASTICSEARCH_HOSTS = [{"scheme": ELASTICSEARCH_SCHEME, "host": ELASTICSEARCH_HTTP_HOST, "port": ELASTICSEARCH_HTTP_PORT}]
+
+# Modify this line as needed for your project to connect to elasticsearch with a password that you generate
+# ELASTICSEARCH_CONNECTION_OPTIONS = {"request_timeout": 30, "verify_certs": False, "basic_auth": ("elastic", "E1asticSearchforArche5")}
+
+# If you need to connect to Elasticsearch via an API key instead of username/password, use the syntax below:
+# ELASTICSEARCH_CONNECTION_OPTIONS = {"timeout": 30, "verify_certs": False, "api_key": "<ENCODED_API_KEY>"}
+# ELASTICSEARCH_CONNECTION_OPTIONS = {"timeout": 30, "verify_certs": False, "api_key": ("<ID>", "<API_KEY>")}
+
+# Your Elasticsearch instance needs to be configured with xpack.security.enabled=true to use API keys - update elasticsearch.yml or .env file and restart.
+
+# Set the ELASTIC_PASSWORD environment variable in either the docker-compose.yml or .env file to the password you set for the elastic user,
+# otherwise a random password will be generated.
+
+# API keys can be generated via the Elasticsearch API: https://www.elastic.co/guide/en/elasticsearch/reference/current/security-api-create-api-key.html
+# Or Kibana: https://www.elastic.co/guide/en/kibana/current/api-keys.html
+
+# ELASTICSEARCH_HTTP_PORT = int(get_env_variable("ESPORT")) # this should be in increments of 200, eg: 9400, 9600, 9800
+# # see http://elasticsearch-py.readthedocs.org/en/master/api.html#elasticsearch.Elasticsearch
+# ELASTICSEARCH_HOSTS = [{"scheme": "https", "host": ELASTICSEARCH_HTTP_HOST, "port": ELASTICSEARCH_HTTP_PORT}]
+#
+# # How do we handle this across environments?
+ELASTICSEARCH_CERT_LOCATION=get_env_variable("ES_CERT_FILE")
+ELASTICSEARCH_API_KEY=get_env_variable("ES_API_KEY")
+#
+# # # If you need to connect to Elasticsearch via an API key instead of username/password, use the syntax below:
+if ELASTICSEARCH_CERT_LOCATION and ELASTICSEARCH_API_KEY:
+    ELASTICSEARCH_CONNECTION_OPTIONS = {"timeout": 30,
+                                        "api_key": ELASTICSEARCH_API_KEY,
+                                        "verify_certs": True,
+                                        "ca_certs": ELASTICSEARCH_CERT_LOCATION
+                                        }
 # a prefix to append to all elasticsearch indexes, note: must be lower case
 ELASTICSEARCH_PREFIX = 'bcfms'+get_env_variable("APP_SUFFIX")
 
@@ -75,6 +122,36 @@ KIBANA_CONFIG_BASEPATH = "kibana"  # must match Kibana config.yml setting (serve
 
 LOAD_DEFAULT_ONTOLOGY = False
 LOAD_PACKAGE_ONTOLOGIES = True
+
+# This is the namespace to use for export of data (for RDF/XML for example)
+# It must point to the url where you host your site
+# Make sure to use a trailing slash
+PUBLIC_SERVER_ADDRESS = get_env_variable("PUBLIC_SERVER_ADDRESS")
+
+ARCHES_NAMESPACE_FOR_DATA_EXPORT = PUBLIC_SERVER_ADDRESS
+
+DATABASES = {
+    "default": {
+        "ATOMIC_REQUESTS": False,
+        "AUTOCOMMIT": True,
+        "CONN_MAX_AGE": 0,
+        "ENGINE": "django.contrib.gis.db.backends.postgis",
+        "HOST": get_env_variable("PGHOST"),
+        "NAME": get_env_variable("PGDBNAME"),
+        "OPTIONS": {},
+        "PASSWORD": get_env_variable("PGPASSWORD"),
+        "PORT": "5432",
+        "POSTGIS_TEMPLATE": "template_postgis",
+        "TEST": {
+            "CHARSET": None,
+            "COLLATION": None,
+            "MIRROR": None,
+            "NAME": None
+        },
+        "TIME_ZONE": None,
+        "USER": get_env_variable("PGUSERNAME")
+    }
+}
 
 SEARCH_THUMBNAILS = False
 
@@ -104,6 +181,36 @@ INSTALLED_APPS = (
 
 ARCHES_APPLICATIONS = ()
 
+AUTHENTICATION_BACKENDS = (
+    # "arches.app.utils.email_auth_backend.EmailAuthenticationBackend", #Comment out for IDIR
+    "oauth2_provider.backends.OAuth2Backend",
+    # "django.contrib.auth.backends.ModelBackend",  # this is default # Comment out for IDIR
+    # "django.contrib.auth.backends.RemoteUserBackend",
+    "bcfms.util.auth.backends.BCGovRemoteUserBackend",  # For IDIR authentication
+    "guardian.backends.ObjectPermissionBackend",
+    "arches.app.utils.permission_backend.PermissionBackend",
+)
+
+MIDDLEWARE = [
+    # 'debug_toolbar.middleware.DebugToolbarMiddleware',
+    "corsheaders.middleware.CorsMiddleware",
+    "django.middleware.security.SecurityMiddleware",
+    "django.contrib.sessions.middleware.SessionMiddleware",
+    #'arches.app.utils.middleware.TokenMiddleware',
+    "django.middleware.locale.LocaleMiddleware",
+    "django.middleware.common.CommonMiddleware",
+    "django.middleware.csrf.CsrfViewMiddleware",
+    "arches.app.utils.middleware.ModifyAuthorizationHeader",
+    "oauth2_provider.middleware.OAuth2TokenMiddleware",
+    "django.contrib.auth.middleware.AuthenticationMiddleware",
+    "bcfms.util.auth.middleware.SiteminderMiddleware",
+    "bcfms.util.auth.auth_required_middleware.AuthRequiredMiddleware",
+    "django.contrib.messages.middleware.MessageMiddleware",
+    # "django.middleware.clickjacking.XFrameOptionsMiddleware",
+    "arches.app.utils.middleware.SetAnonymousUser",
+    # "silk.middleware.SilkyMiddleware",
+]
+
 STATICFILES_DIRS = build_staticfiles_dirs(
     root_dir=ROOT_DIR,
     app_root=APP_ROOT,
@@ -117,7 +224,7 @@ TEMPLATES = build_templates_config(
     arches_applications=ARCHES_APPLICATIONS,
 )
 
-# ALLOWED_HOSTS = []
+ALLOWED_HOSTS = get_env_variable("ALLOWED_HOSTS").split()
 
 SYSTEM_SETTINGS_LOCAL_PATH = os.path.join(APP_ROOT, 'system_settings', 'System_Settings.json')
 WSGI_APPLICATION = 'bcfms.wsgi.application'
@@ -131,8 +238,7 @@ MEDIA_ROOT = os.path.join(APP_ROOT)
 
 # URL prefix for static files.
 # Example: "http://media.lawrence.com/static/"
-#STATIC_URL = '/media/'
-STATIC_URL = '/static/'
+STATIC_URL = '/'+BCGOV_PROXY_PREFIX+'static/'
 
 # Absolute path to the directory static files should be collected to.
 # Don't put anything in this directory yourself; store your static files
@@ -142,7 +248,7 @@ STATIC_ROOT = os.path.join(APP_ROOT, "staticfiles")
 
 # when hosting Arches under a sub path set this value to the sub path eg : "/{sub_path}/"
 #FORCE_SCRIPT_NAME = '/int/bc-fossil-management'
-FORCE_SCRIPT_NAME = None
+FORCE_SCRIPT_NAME = get_env_variable("FORCE_SCRIPT_NAME")
 
 OVERRIDE_RESOURCE_MODEL_LOCK = False
 
@@ -188,18 +294,23 @@ LOGGING = {
     }
 }
 
+# Rate limit for authentication views
+# See options (including None or python callables):
+# https://django-ratelimit.readthedocs.io/en/stable/rates.html#rates-chapter
+RATE_LIMIT = "5/m"
+
 # Sets default max upload size to 15MB
 DATA_UPLOAD_MAX_MEMORY_SIZE = 15728640
 
 # Unique session cookie ensures that logins are treated separately for each app
 SESSION_COOKIE_NAME = 'bcfms'+get_env_variable("APP_SUFFIX")
 
+
 # For more info on configuring your cache: https://docs.djangoproject.com/en/2.2/topics/cache/
 CACHES = {
     'default': {
-        # "BACKEND": "django.core.cache.backends.redis.RedisCache",
-        # "LOCATION": "redis://127.0.0.1:6379",
-        'BACKEND': 'django.core.cache.backends.dummy.DummyCache',
+        "BACKEND": get_env_variable("CACHE_BACKEND"),
+        "LOCATION": get_env_variable("CACHE_BACKEND_LOCATION", is_optional=True),
     },
     'user_permission': {
         'BACKEND': 'django.core.cache.backends.db.DatabaseCache',
@@ -220,7 +331,11 @@ DATE_IMPORT_EXPORT_FORMAT = "%Y-%m-%d" # Custom date format for dates imported f
 EXPORT_DATA_FIELDS_IN_CARD_ORDER = True
 
 #Identify the usernames and duration (seconds) for which you want to cache the time wheel
-CACHE_BY_USER = {'anonymous': 3600 * 24}
+CACHE_BY_USER = {
+    "default": 3600 * 24, #24hrs
+    "anonymous": 3600 * 24 #24hrs
+}
+
 TILE_CACHE_TIMEOUT = 600 #seconds
 CLUSTER_DISTANCE_MAX = 20000 #meters
 GRAPH_MODEL_CACHE_TIMEOUT = None
@@ -250,10 +365,11 @@ EMAIL_HOST_USER = "xxxx@xxx.com"
 
 DEFAULT_FROM_EMAIL = EMAIL_HOST_USER
 
-CELERY_BROKER_URL = ""  # RabbitMQ --> "amqp://guest:guest@localhost",  Redis --> "redis://localhost:6379/0"
+CELERY_BROKER_URL = "" # RabbitMQ --> "amqp://guest:guest@localhost",  Redis --> "redis://localhost:6379/0"
 CELERY_ACCEPT_CONTENT = ['json']
 CELERY_RESULT_BACKEND = 'django-db' # Use 'django-cache' if you want to use your cache as your backend
 CELERY_TASK_SERIALIZER = 'json'
+
 
 CELERY_SEARCH_EXPORT_EXPIRES = 24 * 3600  # seconds
 CELERY_SEARCH_EXPORT_CHECK = 3600  # seconds
@@ -299,7 +415,6 @@ RENDERERS = [
     },
 ]
 
-
 # By setting RESTRICT_MEDIA_ACCESS to True, media file requests outside of Arches will checked against nodegroup permissions.
 RESTRICT_MEDIA_ACCESS = True
 
@@ -307,6 +422,12 @@ RESTRICT_MEDIA_ACCESS = True
 # to export search results above the SEARCH_EXPORT_IMMEDIATE_DOWNLOAD_THRESHOLD
 # value and is not signed in with a user account then the request will not be allowed.
 RESTRICT_CELERY_EXPORT_FOR_ANONYMOUS_USER = False
+
+# Dictionary containing any additional context items for customising email templates
+EXTRA_EMAIL_CONTEXT = {
+    "salutation": _("Hi"),
+    "expiration":(datetime.now() + timedelta(seconds=CELERY_SEARCH_EXPORT_EXPIRES)).strftime("%A, %d %B %Y")
+}
 
 # see https://docs.djangoproject.com/en/1.9/topics/i18n/translation/#how-django-discovers-language-preference
 # to see how LocaleMiddleware tries to determine the user's language preference
@@ -337,7 +458,7 @@ LANGUAGE_CODE = "en"
 # a list of language codes can be found here http://www.i18nguy.com/unicode/language-identifiers.html
 LANGUAGES = [
 #   ('de', _('German')),
-   ('en', _('English')),
+    ('en', _('English')),
 #   ('en-gb', _('British English')),
 #   ('es', _('Spanish')),
 ]
@@ -366,16 +487,9 @@ except ImportError:
 # BCGov specific settings. Should these be externalized into separate file?
 ###########
 
-# PROXY prefix used - NB - cannot have leading "/", and must have trailing "/"
-BCGOV_PROXY_PREFIX = get_env_variable('BCGOV_PROXY_PREFIX')
-
 WEBPACK_DEVELOPMENT_SERVER_PORT = 9000
 
 STATIC_URL = '/'+BCGOV_PROXY_PREFIX+'static/'
-MEDIA_URL = '/files/'
-# This should point to the url where you host your site
-# Make sure to use a trailing slash
-PUBLIC_SERVER_ADDRESS = get_env_variable("PUBLIC_SERVER_ADDRESS")
 
 ARCHES_NAMESPACE_FOR_DATA_EXPORT = PUBLIC_SERVER_ADDRESS
 ADMIN_MEDIA_PREFIX = STATIC_URL+"admin/"
@@ -383,28 +497,7 @@ ADMIN_MEDIA_PREFIX = STATIC_URL+"admin/"
 ###########
 # End BCGov specific settings.
 ###########
-DATABASES = {
-    "default": {
-        "ATOMIC_REQUESTS": False,
-        "AUTOCOMMIT": True,
-        "CONN_MAX_AGE": 0,
-        "ENGINE": "django.contrib.gis.db.backends.postgis",
-        "HOST": get_env_variable("PGHOST"),
-        "NAME": get_env_variable("PGDBNAME"),
-        "OPTIONS": {},
-        "PASSWORD": get_env_variable("PGPASSWORD"),
-        "PORT": "5432",
-        "POSTGIS_TEMPLATE": "template_postgis",
-        "TEST": {
-            "CHARSET": None,
-            "COLLATION": None,
-            "MIRROR": None,
-            "NAME": None
-        },
-        "TIME_ZONE": None,
-        "USER": get_env_variable("PGUSERNAME")
-    }
-}
+
 
 STORAGES = {
     "default": {
@@ -424,44 +517,8 @@ S3_URL = AWS_S3_ENDPOINT_URL
 #MEDIA_URL = AWS_S3_ENDPOINT_URL
 AWS_S3_PROXIES = {"https": get_env_variable("S3_PROXIES")}
 
-# SECURITY WARNING: keep the secret key used in production secret!
-SECRET_KEY = get_env_variable("DJANGO_SECRET_KEY")
-
-# Modify this line as needed for your project to connect to elasticsearch with a password that you generate
-#ELASTICSEARCH_CONNECTION_OPTIONS = {"timeout": 30, "verify_certs": False, "basic_auth": ("{ es_username }", "{ es_password }")}
-
-# If you need to connect to Elasticsearch via an API key instead of username/password, use the syntax below:
-# ELASTICSEARCH_CONNECTION_OPTIONS = {"timeout": 30, "verify_certs": False, "api_key": "<ENCODED_API_KEY>"}
-# ELASTICSEARCH_CONNECTION_OPTIONS = {"timeout": 30, "verify_certs": False, "api_key": ("<ID>", "<API_KEY>")}
-
-# Your Elasticsearch instance needs to be configured with xpack.security.enabled=true to use API keys - update elasticsearch.yml or .env file and restart.
-
-# Set the ELASTIC_PASSWORD environment variable in either the docker-compose.yml or .env file to the password you set for the elastic user,
-# otherwise a random password will be generated.
-
-# API keys can be generated via the Elasticsearch API: https://www.elastic.co/guide/en/elasticsearch/reference/current/security-api-create-api-key.html
-# Or Kibana: https://www.elastic.co/guide/en/kibana/current/api-keys.html
-
-# ELASTICSEARCH_HTTP_PORT = int(get_env_variable("ESPORT")) # this should be in increments of 200, eg: 9400, 9600, 9800
-# ELASTICSEARCH_HTTP_HOST = get_env_variable("ESHOST")
-# # see http://elasticsearch-py.readthedocs.org/en/master/api.html#elasticsearch.Elasticsearch
-# ELASTICSEARCH_HOSTS = [{"scheme": "https", "host": ELASTICSEARCH_HTTP_HOST, "port": ELASTICSEARCH_HTTP_PORT}]
-#
-# # How do we handle this across environments?
-# # ELASTICSEARCH_CERT_LOCATION="{{ arches_es_cert_file }}"
-# ELASTICSEARCH_API_KEY=get_env_variable("ESAPI_KEY")
-#
-# # ELASTICSEARCH_API_KEY="{ arches_es_api_key }"
-# # If you need to connect to Elasticsearch via an API key instead of username/password, use the syntax below:
-# ELASTICSEARCH_CONNECTION_OPTIONS = {"timeout": 30,
-#                                     "api_key": ELASTICSEARCH_API_KEY,
-#                                     "verify_certs": True,
-#                                     # "ca_certs": ELASTICSEARCH_CERT_LOCATION
-#                                     }
-
 # ALLOWED_HOSTS = [{{ allowed_hosts }}]
 # CSRF_TRUSTED_ORIGINS = ["https://{{ arches_url_hostname }}"]
-
 
 # Tileserver proxy configuration
 # All tileserver requests go through the BCTileserverProxyView to avoid CORS issues
@@ -471,41 +528,12 @@ SECRET_KEY = get_env_variable("DJANGO_SECRET_KEY")
 TILESERVER_URL="https://openmaps.gov.bc.ca/"
 BC_TILESERVER_URLS={"maps":"https://maps.gov.bc.ca/", "openmaps":TILESERVER_URL, "local": "http://localhost:7800/"}
 
-AUTH_BYPASS_HOSTS = ['localhost']
+AUTH_BYPASS_HOSTS = get_env_variable("AUTH_BYPASS_HOSTS")
 AUTH_NOACCESS_URL = 'https://www2.gov.bc.ca/gov/content/industry/natural-resource-use/fossil-management/'
 
 # Need to use an outbound proxy as route to tile servers is blocked by firewall
 # TILESERVER_OUTBOUND_PROXY="{{ proxy_env.https_proxy }}"
 # END Tileserver proxy configuration
-
-AUTHENTICATION_BACKENDS = (
-    # "arches.app.utils.email_auth_backend.EmailAuthenticationBackend", #Comment out for IDIR
-    "oauth2_provider.backends.OAuth2Backend",
-    # "django.contrib.auth.backends.ModelBackend",  # this is default # Comment out for IDIR
-    # "django.contrib.auth.backends.RemoteUserBackend",
-    "bcfms.util.auth.backends.BCGovRemoteUserBackend",  # For IDIR authentication
-    "guardian.backends.ObjectPermissionBackend",
-    "arches.app.utils.permission_backend.PermissionBackend",
-)
-
-MIDDLEWARE = [
-    # 'debug_toolbar.middleware.DebugToolbarMiddleware',
-    "corsheaders.middleware.CorsMiddleware",
-    "django.middleware.security.SecurityMiddleware",
-    "django.contrib.sessions.middleware.SessionMiddleware",
-    #'arches.app.utils.middleware.TokenMiddleware',
-    "django.middleware.locale.LocaleMiddleware",
-    "django.middleware.common.CommonMiddleware",
-    "django.middleware.csrf.CsrfViewMiddleware",
-    "arches.app.utils.middleware.ModifyAuthorizationHeader",
-    "oauth2_provider.middleware.OAuth2TokenMiddleware",
-    "django.contrib.auth.middleware.AuthenticationMiddleware",
-    "bcfms.util.auth.middleware.SiteminderMiddleware",
-    "bcfms.util.auth.auth_required_middleware.AuthRequiredMiddleware",
-    "django.contrib.messages.middleware.MessageMiddleware",
-    # "django.middleware.clickjacking.XFrameOptionsMiddleware",
-    "arches.app.utils.middleware.SetAnonymousUser",
-]
 
 DATE_FORMATS = {
     # Keep index values the same for formats in the python and javascript arrays.
@@ -542,19 +570,11 @@ TIMEWHEEL_DATE_TIERS = {
     }
 }
 
-# MAP_POPUP_CONFIG_PROVIDER = "js/utils/map-popup-provider"
-#
-# MAP_POPUP_CONFIG = {
-#     "requires": {
-#         "map-popup-provider": "js/utils/map-popup-provider"
-#     }
-# }
-
 try:
-    from .settings_docker import *
+    from .settings_local import *
 except ImportError as e:
     try:
-        from settings_docker import *
+        from settings_local import *
     except ImportError as e:
         pass
 
