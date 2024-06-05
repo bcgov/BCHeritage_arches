@@ -31,6 +31,8 @@ class FossilSampleAliases(AbstractAliases):
 
     MINIMUM_TIME = 'minimum_time'
     MINIMUM_TIME_UNCERTAIN = 'minimum_time_uncertain'
+    MAXIMUM_TIME = 'maximum_time'
+    MAXIMUM_TIME_UNCERTAIN = 'maximum_time_uncertain'
 
     @staticmethod
     def get_aliases():
