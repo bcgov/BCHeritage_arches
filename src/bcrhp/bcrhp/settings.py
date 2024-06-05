@@ -421,9 +421,9 @@ STORAGES = {
     },
 }
 
-AWS_STORAGE_BUCKET_NAME = get_env_variable("HRIADB_APPLICATION_USER")
-AWS_ACCESS_KEY_ID = get_env_variable("HRIADB_APPLICATION_USER")
-AWS_SECRET_ACCESS_KEY = get_env_variable("HRIADB_APPLICATION_USER")
+AWS_STORAGE_BUCKET_NAME = get_env_variable("S3_BUCKET")
+AWS_ACCESS_KEY_ID = get_env_variable("S3_ACCESS_KEY_ID")
+AWS_SECRET_ACCESS_KEY = get_env_variable("S3_SECRET_ACCESS_KEY")
 AWS_S3_ENDPOINT_URL = "https://nrs.objectstore.gov.bc.ca/"
 S3_URL = AWS_S3_ENDPOINT_URL
 # We want media to be accessed through the arches app not directly from S3
