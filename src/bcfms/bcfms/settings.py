@@ -518,7 +518,6 @@ S3_URL = AWS_S3_ENDPOINT_URL
 #MEDIA_URL = AWS_S3_ENDPOINT_URL
 AWS_S3_PROXIES = {"https": get_env_variable("S3_PROXIES")}
 
-# ALLOWED_HOSTS = [{{ allowed_hosts }}]
 # CSRF_TRUSTED_ORIGINS = ["https://{{ arches_url_hostname }}"]
 
 # Tileserver proxy configuration
