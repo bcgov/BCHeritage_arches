@@ -236,10 +236,15 @@ MEDIA_URL = '/files/'
 # Absolute filesystem path to the directory that will hold user-uploaded files.
 MEDIA_ROOT = os.path.join(APP_ROOT)
 
+# when hosting Arches under a sub path set this value to the sub path eg : "/{sub_path}/"
+FORCE_SCRIPT_NAME = get_env_variable("FORCE_SCRIPT_NAME")
+
 # URL prefix for static files.
 # Example: "http://media.lawrence.com/static/"
 if BCGOV_PROXY_PREFIX:
     STATIC_URL = '/'+BCGOV_PROXY_PREFIX+'static/'
+elif FORCE_SCRIPT_NAME:
+    STATIC_URL = FORCE_SCRIPT_NAME+'static/'
 else:
     STATIC_URL = '/static/'
 
@@ -248,10 +253,6 @@ else:
 # in apps' "static/" subdirectories and in STATICFILES_DIRS.
 # Example: "/home/media/media.lawrence.com/static/"
 STATIC_ROOT = os.path.join(APP_ROOT, "staticfiles")
-
-# when hosting Arches under a sub path set this value to the sub path eg : "/{sub_path}/"
-#FORCE_SCRIPT_NAME = '/int/bc-fossil-management'
-FORCE_SCRIPT_NAME = get_env_variable("FORCE_SCRIPT_NAME")
 
 OVERRIDE_RESOURCE_MODEL_LOCK = False
 
@@ -532,7 +533,7 @@ AUTH_BYPASS_HOSTS = get_env_variable("AUTH_BYPASS_HOSTS")
 AUTH_NOACCESS_URL = 'https://www2.gov.bc.ca/gov/content/industry/natural-resource-use/fossil-management/'
 
 # Need to use an outbound proxy as route to tile servers is blocked by firewall
-# TILESERVER_OUTBOUND_PROXY="{{ proxy_env.https_proxy }}"
+TILESERVER_OUTBOUND_PROXY=get_env_variable("TILESERVER_OUTBOUND_PROXY")
 # END Tileserver proxy configuration
 
 DATE_FORMATS = {
