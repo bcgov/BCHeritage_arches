@@ -31,5 +31,5 @@ class BCTileserverProxyView(BCTileserverLocalProxyView):
         super(BCTileserverProxyView, self).__init__(*args, **kwargs)
         # Setup outbound proxy if it is configured
         if hasattr(settings, 'TILESERVER_OUTBOUND_PROXY')  and settings.TILESERVER_OUTBOUND_PROXY:
-            print("Setting outbound proxy to %s" % settings.TILESERVER_OUTBOUND_PROXY)
+            # print("Setting outbound proxy to %s" % settings.TILESERVER_OUTBOUND_PROXY)
             self.http = urllib3.ProxyManager(settings.TILESERVER_OUTBOUND_PROXY)
