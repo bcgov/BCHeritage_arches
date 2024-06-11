@@ -6,7 +6,7 @@ from bcfms.util.business_data_proxy import FossilSampleDataProxy, CollectionEven
 
 
 query_config = {
-    '692d8938-9c1d-11ec-a5e5-5254008afee6': ['size_categories'],
+    '5bfa1354-b6e1-11ee-9438-080027b7463b': ['size_categories'],
     'c66518e2-10c6-11ec-adef-5254008afee6': ['name','ranking'],
     'dd19c7c6-0202-11ed-a511-0050568377a0': ['name','ranking'],
     '2336968c-1035-11ec-a3aa-5254008afee6': ['name','ranking'],
