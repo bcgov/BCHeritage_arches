@@ -57,8 +57,59 @@
     </div>
 </div>
 
-<div class="rp-report-container-preview">
-    <div class="rp-report-section relative rp-report-section-root">
+<div class="rp-report-container-preview relative">
+    <aside id="card-help-panel" class="card-help-panel" style="display: none;" data-bind="visible: helpenable">
+        <div class="relative">
+            <a id="add-basemap-wizard-help-close" href="#" class="help-close fa fa-times fa-lg" style="" data-bind="click: function () { helpactive(false) }"></a>
+        </div>
+        <div id="add-basemap-wizard-help-content">
+            <div>
+                <div class="panel-heading">
+                    <h3 class="panel-title help-panel-title" style="">
+                        <span>Details Card Help Text</span>
+                    </h3>
+                </div>
+                <div class="panel-body" style="padding: 10px 10px 15px 10px;">
+                    <span style="font-weight:bold">Images:</span> Use the left &lt; and right &gt; arrows to view the images.
+                    <br /><br />
+                    <span style="font-weight:bold">Site Name:</span> Includes names associated with the historic place.
+                    <br /><br />
+                    <span style="font-weight:bold">Heritage Site Location:</span> Provides the civic address(es) or location description for the historic place.
+                    <br /><br />
+                    <span style="font-weight:bold">Site ID Number:</span> The Borden System number assigned when the record was created. The Borden System is a Canada-wide map index system to uniquely identify heritage and archaeological sites.
+                    <br /><br />
+                    <span style="font-weight:bold">Official Recognition Information:</span> Describes the status of the historic place on the Register and its associated Registry types. 
+                    <br /><br />
+                        &emsp;&emsp;<span style="font-weight:bold">Registered</span> – the heritage site is officially recognized by a legislative enactment from the province or a municipality/regional district.
+                    <br /><br />
+                        &emsp;&emsp;<span style="font-weight:bold">Federal Jurisdiction</span> – the authority for the site is the federal government.
+                    <br /><br />
+                    <span style="font-weight:bold">Official Recognition Details:</span> Lists all government enactments of heritage status for the historic place. 
+                    <br /><br />
+                        &emsp;&emsp;<span style="font-weight:bold">Recognition Type:</span> Identifies the level of recognition (municipal, provincial, federal) and its   type. Hover over or click the type for a definition.
+                    <br /><br />
+                        &emsp;&emsp;<span style="font-weight:bold">Recognition Government:</span> The authority responsible for applying the recognition. 
+                    <br /><br />
+                        &emsp;&emsp;<span style="font-weight:bold">Recognition Date:</span> The date the recognition was enacted.
+                    <br /><br />
+                        &emsp;&emsp;<span style="font-weight:bold">Reference Number:</span> The number referencing the Bylaw, Order in Council, Council Resolution, etc. of the heritage enactment.
+                    <br /><br />
+                    <span style="font-weight:bold">Chronology:</span> Lists Construction and other Significant Dates
+                    <br /><br />
+                    <span style="font-weight:bold">Architect/Builders:</span> Lists any architect or builder associated with the historic place.
+                    <br /><br />
+                    <span style="font-weight:bold">Statement of Significance:</span> Explains the heritage value of a historic place and describes what the recognition applies to, why the place is important or significant, and what elements contribute to the heritage value and must be maintained to preserve the value. 
+                    <br /><br />
+                    <span style="font-weight:bold">Heritage Class:</span> Defines the number and type of resources included in the historic place as well as its ownership classification.
+                    <br /><br />
+                    <span style="font-weight:bold">Heritage Function:</span> Identifies the historic or current function or purpose of a historic place.
+                    <br /><br />
+                    <span style="font-weight:bold">Heritage Theme:</span> Classifies places by associated themes based on Parks Canada’s National Historic Sites thematic framework.
+                </div>
+            </div>
+        </div>
+    </aside>
+    <div class="rp-report-section rp-report-section-root">
         <div class="rp-report-section-title">
             <div class="rp-card-section">
                 <!--div data-bind="text: report.get('name')"></div-->

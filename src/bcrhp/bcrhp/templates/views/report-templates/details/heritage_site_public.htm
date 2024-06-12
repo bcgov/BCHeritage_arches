@@ -1,5 +1,11 @@
 <div class="details-card-section">
-<div class="data-carousel summary-slider" data-bind="descendantsComplete: initCarousel" style="max-width: calc(100vw - 600px);">
+<div style="display: flex;justify-content:right;padding:1em 0">
+    <a data-bind="click: function () { helpactive(true) }" style="cursor:pointer;">
+        <span data-bind="text: $root.translations.help"></span>
+        <i class="fa fa-question-circle"></i>
+    </a>
+</div>
+<div class="data-carousel summary-slider" data-bind="descendantsComplete: initCarousel" style="background-color:#f2f2f2;max-width: calc(100vw - 600px);padding:1em">
     <!-- ko let: {widget: getWidgetForAlias('image_date')}-->
     <!-- ko foreach: { data: getValuesFromTiles(['site_images', 'image_type', 'image_features', 'image_view', 'image_date', 'copyright', 'photographer']), as: 'tileValues' } -->
     <div class="details-carousel">
