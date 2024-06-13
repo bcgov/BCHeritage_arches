@@ -171,28 +171,10 @@ define([
             window.open(url, filename);
         }
 
-        /*
-        this.getLegislativeActs = ko.computed(function () {
-            let authorities = ko.observableArray([]);
-            if (self.report.graph.slug === "heritage_site" && self.tiles().length > 0) {
-                let url = `${self.urls.root}site_authorities/${self.tiles()[0].resourceinstance_id}`;
-                console.log(`Get authorities from ${url}...`);
-                $.ajax({
-                    url: url
-                }).done(function (data) {
-                    // console.log(data);
-                    authorities(data);
-                });
-            }
-            return authorities;
-        });
-         */
-
         this.actAuthorities = {};
 
         this.getLegislativeAct = function (relatedActObject) {
             let actId = ko.unwrap(ko.unwrap(relatedActObject)[0].resourceId);
-            console.log(`Getting authority for ID ${actId}`)
             if (!!actId && this.actAuthorities[actId])
             {
                 return this.actAuthorities[actId];
@@ -203,11 +185,9 @@ define([
 
             if (self.report.graph.slug === "heritage_site" && self.tiles().length > 0) {
                 let url = `${self.urls.root}legislative_act/${actId}`;
-                console.log(`Get legislative act from ${url}...`);
                 $.ajax({
                     url: url
                 }).done(function (data) {
-                    // console.log(data);
                     if (!!data && data.length > 0)
                     {
                         authority(`${data[0].authority}, ${data[0].recognition_type}`);
@@ -216,7 +196,6 @@ define([
             }
             return authority;
         };
-        // this.getLegislativeActs = self.getLegislativeActs();
 
 
         /* Old config ... to remove */
