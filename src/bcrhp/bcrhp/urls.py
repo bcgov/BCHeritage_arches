@@ -22,7 +22,7 @@ urlpatterns = [
                       name="borden_number",
                       ),
                   re_path(
-                      bc_path_prefix(r"^legislative_act/(?P<act_id>%s)$" % uuid_regex), LegislativeAct.as_view(),
+                      r"^legislative_act/(?P<act_id>%s)$" % uuid_regex, LegislativeAct.as_view(),
                       name="legislative_act",
                       ),
                   re_path(
