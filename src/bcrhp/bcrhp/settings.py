@@ -530,6 +530,9 @@ AWS_S3_PROXIES = {"https": get_env_variable("S3_PROXIES")}
 TILESERVER_URL="https://openmaps.gov.bc.ca/"
 BC_TILESERVER_URLS={"maps":"https://maps.gov.bc.ca/", "openmaps":TILESERVER_URL, "local": "http://localhost:7800/"}
 
+AUTH_BYPASS_HOSTS = get_env_variable("AUTH_BYPASS_HOSTS")
+AUTH_NOACCESS_URL = 'https://www2.gov.bc.ca/gov/content/governments/celebrating-british-columbia/historic-places/'
+
 # Need to use an outbound proxy as route to tile servers is blocked by firewall
 TILESERVER_OUTBOUND_PROXY=get_env_variable("TILESERVER_OUTBOUND_PROXY")
 # END Tileserver proxy configuration
