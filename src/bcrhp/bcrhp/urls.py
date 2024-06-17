@@ -3,7 +3,7 @@ from django.conf import settings
 from django.conf.urls.static import static
 from django.conf.urls.i18n import i18n_patterns
 from django.urls.resolvers import RegexPattern
-from bcrhp.views.api import BordenNumber, MVT, LegislativeAct
+from bcrhp.views.api import BordenNumber, MVT
 from bcrhp.views.crhp import CRHPXmlExport
 from bcrhp.views.search import export_results as bcrhp_export_results
 from bcrhp.views.resource import ResourceReportView
