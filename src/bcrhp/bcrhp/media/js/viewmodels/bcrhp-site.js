@@ -28,6 +28,7 @@ define([
 
         var tiles = _.flatten(_.map(params.report.cards, card => {return getAllTiles(card)}));
 
+        this.helpenable = ko.observable(false);
         this.siteNamesVisible = ko.observable(true);
         this.siteLocationVisible = ko.observable(true);
         this.bordenNumberVisible = ko.observable(true);
@@ -38,6 +39,8 @@ define([
         this.heritageClassVisible = ko.observable(true);
         this.heritageFunctionVisible = ko.observable(true);
         this.heritageThemeVisible = ko.observable(true);
+
+        this.helpactive = function(state) { this.helpenable(state) };
 
         var getWidgetForAlias = function(node_alias){
             var widget = _.find(widgets, widget => {
