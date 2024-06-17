@@ -159,12 +159,35 @@ table.bc-summary-table td {
     margin-right: 25px;
 }
 
+.card-help-panel dl dt {
+    float: left;
+    margin-right: 5px;
+}
+
+.card-help-panel dl > dl {
+    margin-left: 20px;
+    margin-top: 20px;
+}
+
+.dl-horizontal {
+    width: 100%;
+}
+
 .dl-horizontal dt, .dl-horizontal dd {
     vertical-align: top;
     display: inline-block;
     padding: 2px 5px 2px 20px;
     align-items: start;
     justify-content: left;
+}
+
+.details-card-section .dl-horizontal dt {
+    width: 200px;
+    overflow: visible !important;
+}
+
+.details-card-section .dl-horizontal dd {
+    width: calc(100% - 210px);
 }
 
 .rp-card-section .rp-report-tile .dl-horizontal dd {
@@ -411,7 +434,7 @@ img.bc-details-image
         page-break-before: always;
         break-before: page;
     }
-    
+
     div {
         break-before: auto;
     }
