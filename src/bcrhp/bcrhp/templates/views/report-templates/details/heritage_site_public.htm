@@ -40,12 +40,12 @@
             </div>
             <dl class="dl-horizontal">
             <div data-bind="visible: !!tileValues['copyright']">
-                <span>Copyright</span>
-                <span data-bind="component: {name: 'text-widget',
+                <dt>Copyright</dt>
+                <dd data-bind="component: {name: 'text-widget',
                                params: {value: tileValues['copyright'](),
                                         state: 'display_value'
                                         }
-                               }"></span>
+                               }"></dd>
             </div>
             <div data-bind="visible: !!$parent.textHasValue(tileValues['photographer'])">
                 <dt>Photographer</dt>
