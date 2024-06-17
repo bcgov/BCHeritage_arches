@@ -20,7 +20,6 @@
         <!-- Tools -->
         <div class="ep-form-toolbar-tools mar-no flex">
             <p class="report-print-date">
-                <span data-bind="text: $root.translations.reportDate"></span>
                 <span data-bind="text: reportDate"></span>
             </p>
 
@@ -50,7 +49,6 @@
         <!-- Tools -->
         <div class="ep-form-toolbar-tools mar-no flex">
             <p class="report-print-date">
-                <span data-bind="text: reportDate"></span>
                 <span data-bind="text: reportDate"></span>
             </p>
         </div>
@@ -134,11 +132,7 @@
                 <!--div data-bind="text: report.get('name')"></div-->
                 <!-- ko if: report.get('name') == "Heritage Site" -->
                 <!--div>User: {{ user.username }}</div-->
-                {% if user.username != 'anonymous' %}
-                {% include 'views/report-templates/details/heritage_site.htm' %}
-                {% else %}
                 {% include 'views/report-templates/details/heritage_site_public.htm' %}
-                {% endif %}
                 <!-- /ko -->
                 <!-- ko if: report.get('name') == "Legislative Act" -->
                 {% include 'views/report-templates/details/legislative_act.htm' %}

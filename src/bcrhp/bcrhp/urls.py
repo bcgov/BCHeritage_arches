@@ -2,7 +2,7 @@ from django.urls import include, path, re_path
 from django.conf import settings
 from django.conf.urls.static import static
 from django.conf.urls.i18n import i18n_patterns
-from bcrhp.views.api import BordenNumber, MVT
+from bcrhp.views.api import BordenNumber, MVT, LegislativeAct
 from bcrhp.views.crhp import CRHPXmlExport
 from bcrhp.views.search import export_results as bcrhp_export_results
 from bcrhp.views.resource import ResourceReportView
@@ -20,6 +20,10 @@ urlpatterns = [
                       r"^borden_number/(?P<resourceinstanceid>%s)$" % uuid_regex,
                       BordenNumber.as_view(),
                       name="borden_number",
+                      ),
+                  re_path(
+                      r"^legislative_act/(?P<act_id>%s)$" % uuid_regex, LegislativeAct.as_view(),
+                      name="legislative_act",
                       ),
                   re_path(
                       r"^crhp_export/(?P<resourceinstanceid>%s)$" % uuid_regex,
