@@ -710,7 +710,8 @@ class Migration(migrations.Migration):
              """
             create or replace view heritage_site.csv_export as
             select
-                borden_number as "Borden Number"
+                resourceinstanceid as site_id
+                , borden_number as "Borden Number"
                 , street_address as "Street Address"
                 , city as "City"
                 , locality as "Locality"
