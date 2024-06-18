@@ -1,5 +1,11 @@
 <div class="details-card-section">
-<div class="data-carousel summary-slider" data-bind="descendantsComplete: initCarousel" style="max-width: calc(100vw - 600px);">
+<div style="display: flex;justify-content:right;padding:1em 0">
+    <a data-bind="click: function () { helpactive(true) }" style="cursor:pointer;">
+        <span data-bind="text: $root.translations.help"></span>
+        <i class="fa fa-question-circle"></i>
+    </a>
+</div>
+<div class="data-carousel summary-slider" data-bind="descendantsComplete: initCarousel" style="background-color:#f2f2f2;max-width: calc(100vw - 600px);padding:1em">
     <!-- ko let: {widget: getWidgetForAlias('image_date')}-->
     <!-- ko foreach: { data: getValuesFromTiles(['site_images', 'image_type', 'image_features', 'image_view', 'image_date', 'copyright', 'photographer']), as: 'tileValues' } -->
     <div class="details-carousel">
@@ -211,45 +217,43 @@
             "></i>
 
     <div class="rp-card-section" data-bind="visible: sectionController, attr: {id: targetSection}">
-        <div style="display: inline-flex; width: 100%; justify-content: space-between;">
-
+        <div style="display: flex; flex-flow: column; width: 100%; justify-content: space-between;">
             <!-- ko let: {widget: getWidgetForAlias('designation_or_protection_start_date')}-->
             <!-- ko foreach: { data: getValuesFromTiles(['legislative_act', 'responsible_government', 'designation_or_protection_start_date', 'reference_number']), as: 'values' } -->
             <dl class="dl-horizontal">
-                <div>
-                <dt>Recognition Type (fix)</dt>
-                <dd>
-                    <div data-bind="component: {
-                                            name: 'resource-instance-select-widget',
-                                            params: { value: values['legislative_act'], state: 'display_value'}
-                                        }"></div>
-                </dd>
-                </div>
-                <div>
-                    <dt>Recognition Government</dt>
-                    <dd>
-                        <div data-bind="component: {
+                <div class="details-authority-section">
+                    <div>
+                        <dt>Recognition Type</dt>
+                        <dd>
+                            <div data-bind="text: $parent.getLegislativeAct(values['legislative_act'])"></div>
+                        </dd>
+                    </div>
+                    <div>
+                        <dt>Recognition Government</dt>
+                        <dd>
+                            <div data-bind="component: {
                                             name: 'resource-instance-select-widget',
                                             params: { value: values['responsible_government'], state: 'display_value'}
                                         }"></div>
-                    </dd>
-                </div>
-                <div>
-                    <dt>Recognition Date</dt>
-                    <dd>
-                        <div data-bind="component: { name: 'datepicker-widget',
+                        </dd>
+                    </div>
+                    <div>
+                        <dt>Recognition Date</dt>
+                        <dd>
+                            <div data-bind="component: { name: 'datepicker-widget',
                                             params: { value: values['designation_or_protection_start_date'],
                                             node: widget.node,
                                             state: 'display_value' }
                                             }"></div>
-                    </dd>
-                </div>
-                <div>
-                    <dt>Reference Number</dt>
-                    <dd data-bind="component: {name: 'text-widget',
+                        </dd>
+                    </div>
+                    <div>
+                        <dt>Reference Number</dt>
+                        <dd data-bind="component: {name: 'text-widget',
                            params: {value: values['reference_number'], state: 'display_value'
                                     }
                            }"></dd>
+                    </div>
                 </div>
             </dl>
             <!-- /ko -->
@@ -273,22 +277,20 @@
             "></i>
 
     <div class="rp-card-section" data-bind="visible: sectionController, attr: {id: targetSection}">
-        <div style="display: inline-flex; width: 100%; justify-content: space-between;">
-            <dl class="dl-horizontal">
-                <dt>Construction Date(s)</dt>
-                <!-- ko foreach: { data: getTilesForAlias('chronology'), as: 'tile' } -->
-                <dd data-bind="component: {
-                                            name: 'significant-event-widget',
-                                            params: {
-                                                card: $parent.getWidgetForAlias('chronology').card,
-                                                tile: tile,
-                                                value: tile.data,
-                                                state: 'display_value',
-                                                event_types: ['Construction','Significant']
-                                            }
-                                        }, click: function(){console.log(card);}"></dd>
-                <!-- /ko -->
-            </dl>
+        <div style="display: flex; flex-flow: column; width: 100%; justify-content: space-between;">
+            <!-- ko foreach: { data: getTilesForAlias('chronology'), as: 'tile' } -->
+            <!-- ko component: { name: 'significant-event-widget',
+                                 params: {
+                                     card: $parent.getWidgetForAlias('chronology').card,
+                                     tile: tile,
+                                     value: tile.data,
+                                     state: 'display_value',
+                                     event_types: ['Construction','Significant']
+                                 }
+                               }
+            -->
+            <!-- /ko -->
+            <!-- /ko -->
         </div>
     </div>
     <!-- /ko -->

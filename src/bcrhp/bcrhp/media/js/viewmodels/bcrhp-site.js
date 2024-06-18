@@ -13,6 +13,7 @@ define([
     });
     return function(params) {
         var self = this;
+        self.urls = arches.urls;
 
         MapReportViewModel.apply(this, [params]);
         var getAllWidgets = function(card) {
@@ -28,6 +29,7 @@ define([
 
         var tiles = _.flatten(_.map(params.report.cards, card => {return getAllTiles(card)}));
 
+        this.helpenable = ko.observable(false);
         this.siteNamesVisible = ko.observable(true);
         this.siteLocationVisible = ko.observable(true);
         this.bordenNumberVisible = ko.observable(true);
@@ -38,6 +40,8 @@ define([
         this.heritageClassVisible = ko.observable(true);
         this.heritageFunctionVisible = ko.observable(true);
         this.heritageThemeVisible = ko.observable(true);
+
+        this.helpactive = function(state) { this.helpenable(state) };
 
         var getWidgetForAlias = function(node_alias){
             var widget = _.find(widgets, widget => {
@@ -166,6 +170,32 @@ define([
             let filename = event.currentTarget.getElementsByTagName('a')[0].text.trim();
             window.open(url, filename);
         }
+
+        this.actAuthorities = {};
+
+        this.getLegislativeAct = function (relatedActObject) {
+            let actId = ko.unwrap(ko.unwrap(relatedActObject)[0].resourceId);
+            if (!!actId && this.actAuthorities[actId])
+            {
+                return this.actAuthorities[actId];
+            }
+
+            let authority = ko.observable();
+            this.actAuthorities[actId] = authority;
+
+            if (self.report.graph.slug === "heritage_site" && self.tiles().length > 0) {
+                let url = `${self.urls.root}legislative_act/${actId}`;
+                $.ajax({
+                    url: url
+                }).done(function (data) {
+                    if (!!data && data.length > 0)
+                    {
+                        authority(`${data[0].authority}, ${data[0].recognition_type}`);
+                    }
+                });
+            }
+            return authority;
+        };
 
 
         /* Old config ... to remove */
