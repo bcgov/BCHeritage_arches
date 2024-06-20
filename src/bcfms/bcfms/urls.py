@@ -3,7 +3,7 @@ from django.conf import settings
 from django.conf.urls.static import static
 from django.conf.urls.i18n import i18n_patterns
 from django.urls.resolvers import RegexPattern
-from bcfms.views.api import MVT, CollectionEventFossilNames
+from bcfms.views.api import MVT, CollectionEventFossilNames, ReportNumberGenerator
 from bcfms.views.map import BCTileserverProxyView, BCTileserverLocalProxyView
 from bcfms.views.search import export_results as bcfms_export_results
 import re
@@ -33,6 +33,7 @@ for pattern in bc_url_resolver.url_patterns:
 urlpatterns = [
                   re_path(bc_path_prefix(r"^bctileserver/(?P<path>.*)$"), BCTileserverProxyView.as_view()),
                   re_path(bc_path_prefix(r"^bclocaltileserver/(?P<path>.*)$"), BCTileserverLocalProxyView.as_view()),
+                  re_path(bc_path_prefix(r"^get_next_report_number/(?P<nodeid>%s)/(?P<typeAbbreviation>%s)$" % (uuid_regex, "[A-Z]{3}")), ReportNumberGenerator.as_view()),
                   re_path(
                       bc_path_prefix(r"^mvt/(?P<nodeid>%s)/(?P<zoom>[0-9]+|\{z\})/(?P<x>[0-9]+|\{x\})/(?P<y>[0-9]+|\{y\}).pbf$" % uuid_regex),
                       MVT.as_view(),

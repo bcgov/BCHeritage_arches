@@ -1,8 +1,10 @@
 from arches.app.models import models
-from bcfms.util.bcfms_aliases import GraphSlugs, CollectionEventAliases, FossilSampleAliases
+from bcfms.util.bcfms_aliases import GraphSlugs, CollectionEventAliases, FossilSampleAliases, IPA
 from bcfms.util.scientific_terms_util import ScientificTermsFormatter
 from bcfms.util.graph_lookup import GraphLookup
 from arches.settings import LANGUAGE_CODE
+from datetime import date
+import re
 
 class BusinessDataProxy():
 
@@ -128,4 +130,26 @@ class CollectionEventDataProxy(BusinessDataProxy):
         ).values_list('resourceinstanceidto', flat=True)
 
 
+class IPADataProxy(BusinessDataProxy):
 
+    def __init__(self):
+        super(IPADataProxy, self).__init__(GraphSlugs.PROJECT_ASSESSMENT, IPA.get_aliases().values())
+
+    @staticmethod
+    def get_last_report_id(node_id, report_type_abbreviation):
+        # Gets the next report number in the sequence.
+        # Assumes that there is only one report type abbreviation for any particular node
+        # Report number format is <year>-<abbreviation>-<seq#> eg: 2024-PSR-001
+        current_year = str(date.today().year)
+
+        node = models.Node.objects.get(nodeid=node_id)
+        tiles = models.TileModel.objects.filter(
+            nodegroup_id=node.nodegroup_id
+        ).values_list('data', flat=True).all()
+        values = sorted(list(map(lambda tile: tile[node_id]['en']['value'] if tile[node_id] else None, tiles)), reverse=True)
+
+        if len(values) < 1 or not re.match(r'^%s' % current_year, values[0]):
+            return "%s-%s-001" % (current_year, report_type_abbreviation)
+        else:
+            val = "{:0=3}".format(int(re.split("-", values[0])[2])+1)
+            return re.sub("[^-]{3}$", val, values[0])

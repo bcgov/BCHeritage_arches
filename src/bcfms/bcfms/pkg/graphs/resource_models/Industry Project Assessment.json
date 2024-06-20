@@ -186,7 +186,7 @@
                     "instructions": {
                         "en": ""
                     },
-                    "is_editable": true,
+                    "is_editable": false,
                     "name": {
                         "en": "Preliminary Study Report"
                     },
@@ -494,7 +494,7 @@
                     "instructions": {
                         "en": ""
                     },
-                    "is_editable": true,
+                    "is_editable": false,
                     "name": {
                         "en": "Preliminary Study Process"
                     },
@@ -848,6 +848,77 @@
                     "widget_id": "10000000-0000-0000-0000-000000000006"
                 },
                 {
+                    "card_id": "7e4cb186-c372-11ed-914a-5254004d77d3",
+                    "config": {
+                        "defaultValue": {
+                            "en": {
+                                "direction": "ltr",
+                                "value": ""
+                            }
+                        },
+                        "i18n_properties": [
+                            "placeholder"
+                        ],
+                        "label": "SAP Report Number",
+                        "maxLength": null,
+                        "placeholder": {
+                            "en": "Enter text"
+                        },
+                        "uneditable": false,
+                        "width": "100%%"
+                    },
+                    "id": "078fa5be-a974-44ec-99ab-4d7fcdc6b3f0",
+                    "label": {
+                        "en": "SAP Report Number"
+                    },
+                    "node_id": "7e4cbc26-c372-11ed-914a-5254004d77d3",
+                    "sortorder": 0,
+                    "visible": true,
+                    "widget_id": "10000000-0000-0000-0000-000000000001"
+                },
+                {
+                    "card_id": "7e4cb186-c372-11ed-914a-5254004d77d3",
+                    "config": {
+                        "defaultResourceInstance": [],
+                        "i18n_properties": [
+                            "placeholder"
+                        ],
+                        "label": "SAP Paleo Company",
+                        "placeholder": {
+                            "en": ""
+                        }
+                    },
+                    "id": "09c8bf70-5320-41d2-894b-9898a67bfc63",
+                    "label": {
+                        "en": "SAP Paleo Company"
+                    },
+                    "node_id": "7e4cc0fe-c372-11ed-914a-5254004d77d3",
+                    "sortorder": 6,
+                    "visible": true,
+                    "widget_id": "31f3728c-7613-11e7-a139-784f435179ea"
+                },
+                {
+                    "card_id": "6d2bbce4-c372-11ed-aa09-5254004d77d3",
+                    "config": {
+                        "defaultResourceInstance": [],
+                        "i18n_properties": [
+                            "placeholder"
+                        ],
+                        "label": "IMP Paleo Company",
+                        "placeholder": {
+                            "en": ""
+                        }
+                    },
+                    "id": "0b3eaf3a-e6f3-454c-a075-d73b6bfa4b6c",
+                    "label": {
+                        "en": "IMP Paleo Company"
+                    },
+                    "node_id": "6d2bc784-c372-11ed-aa09-5254004d77d3",
+                    "sortorder": 5,
+                    "visible": true,
+                    "widget_id": "31f3728c-7613-11e7-a139-784f435179ea"
+                },
+                {
                     "card_id": "d024d4e2-a41b-44cd-aad3-d3a851a2b8ca",
                     "config": {
                         "dateFormat": "YYYY-MM-DD",
@@ -897,6 +968,24 @@
                     "widget_id": "10000000-0000-0000-0000-000000000001"
                 },
                 {
+                    "card_id": "6d2bbce4-c372-11ed-aa09-5254004d77d3",
+                    "config": {
+                        "acceptedFiles": "",
+                        "defaultValue": [],
+                        "label": "Mitigation Plan File",
+                        "maxFilesize": "200",
+                        "rerender": true
+                    },
+                    "id": "10b3ba08-aba1-47ce-ad44-b5a4ae197a42",
+                    "label": {
+                        "en": "Mitigation Plan File"
+                    },
+                    "node_id": "6d2bc450-c372-11ed-aa09-5254004d77d3",
+                    "sortorder": 3,
+                    "visible": true,
+                    "widget_id": "10000000-0000-0000-0000-000000000019"
+                },
+                {
                     "card_id": "e9394b8a-c372-11ed-b586-5254004d77d3",
                     "config": {
                         "defaultValue": "",
@@ -942,6 +1031,35 @@
                     "sortorder": 2,
                     "visible": true,
                     "widget_id": "10000000-0000-0000-0000-000000000009"
+                },
+                {
+                    "card_id": "7e4cb186-c372-11ed-914a-5254004d77d3",
+                    "config": {
+                        "defaultValue": {
+                            "en": {
+                                "direction": "ltr",
+                                "value": ""
+                            }
+                        },
+                        "i18n_properties": [
+                            "placeholder"
+                        ],
+                        "label": "SAP Consultant Report Number",
+                        "maxLength": null,
+                        "placeholder": {
+                            "en": "Enter text"
+                        },
+                        "uneditable": false,
+                        "width": "100%%"
+                    },
+                    "id": "13d75875-3246-4d2d-8e3b-1838fc8d2fd0",
+                    "label": {
+                        "en": "SAP Consultant Report Number"
+                    },
+                    "node_id": "7e4cb988-c372-11ed-914a-5254004d77d3",
+                    "sortorder": 3,
+                    "visible": true,
+                    "widget_id": "10000000-0000-0000-0000-000000000001"
                 },
                 {
                     "card_id": "95b5f427-0064-4b75-a17e-838a65b73cc4",
@@ -1122,6 +1240,24 @@
                     "widget_id": "10000000-0000-0000-0000-000000000002"
                 },
                 {
+                    "card_id": "224f7282-cbf6-49de-ab0d-67ba7fe19e93",
+                    "config": {
+                        "acceptedFiles": "",
+                        "defaultValue": [],
+                        "label": "PSR File",
+                        "maxFilesize": "200",
+                        "rerender": true
+                    },
+                    "id": "2757fe40-5a87-4c9c-a2a3-fb93e2ba5d09",
+                    "label": {
+                        "en": "PSR File"
+                    },
+                    "node_id": "78147c0c-a3d0-11ed-afdd-5254004d77d3",
+                    "sortorder": 0,
+                    "visible": true,
+                    "widget_id": "10000000-0000-0000-0000-000000000019"
+                },
+                {
                     "card_id": "9de5c571-f507-4df0-af17-a90204edd2db",
                     "config": {
                         "defaultValue": null,
@@ -1135,6 +1271,66 @@
                     "sortorder": 6,
                     "visible": true,
                     "widget_id": "0346bc9c-d235-4313-adc8-d0e210b2ef25"
+                },
+                {
+                    "card_id": "6d2bbce4-c372-11ed-aa09-5254004d77d3",
+                    "config": {
+                        "defaultResourceInstance": [],
+                        "i18n_properties": [
+                            "placeholder"
+                        ],
+                        "label": "IMP Paleo Consultant",
+                        "placeholder": {
+                            "en": ""
+                        }
+                    },
+                    "id": "29e899da-de7d-4d57-aaa2-15638a3e9782",
+                    "label": {
+                        "en": "IMP Paleo Consultant"
+                    },
+                    "node_id": "6d2bbf1e-c372-11ed-aa09-5254004d77d3",
+                    "sortorder": 1,
+                    "visible": true,
+                    "widget_id": "31f3728c-7613-11e7-a139-784f435179ea"
+                },
+                {
+                    "card_id": "776d6362-f148-49f9-bf57-00a89ae8ad80",
+                    "config": {
+                        "acceptedFiles": "",
+                        "defaultValue": [],
+                        "label": "CFP Document",
+                        "maxFilesize": "200",
+                        "rerender": true
+                    },
+                    "id": "2dd6ba87-4877-4eef-a43c-ce4b6f57be9e",
+                    "label": {
+                        "en": "CFP Document"
+                    },
+                    "node_id": "2d0614bc-e0bc-11ee-bc48-080027b7463b",
+                    "sortorder": 1,
+                    "visible": true,
+                    "widget_id": "10000000-0000-0000-0000-000000000019"
+                },
+                {
+                    "card_id": "7e4cb186-c372-11ed-914a-5254004d77d3",
+                    "config": {
+                        "defaultResourceInstance": [],
+                        "i18n_properties": [
+                            "placeholder"
+                        ],
+                        "label": "SAP Paleo Consultant",
+                        "placeholder": {
+                            "en": ""
+                        }
+                    },
+                    "id": "3363f8ac-852c-4b1c-ae52-aa374b9bfd3e",
+                    "label": {
+                        "en": "SAP Paleo Consultant"
+                    },
+                    "node_id": "7e4cb668-c372-11ed-914a-5254004d77d3",
+                    "sortorder": 2,
+                    "visible": true,
+                    "widget_id": "31f3728c-7613-11e7-a139-784f435179ea"
                 },
                 {
                     "card_id": "3b016d40-d785-11ee-b1e5-080027b7463b",
@@ -1164,6 +1360,74 @@
                     "sortorder": 0,
                     "visible": true,
                     "widget_id": "10000000-0000-0000-0000-000000000001"
+                },
+                {
+                    "card_id": "6d2bbce4-c372-11ed-aa09-5254004d77d3",
+                    "config": {
+                        "defaultValue": {
+                            "en": {
+                                "direction": "ltr",
+                                "value": ""
+                            }
+                        },
+                        "i18n_properties": [
+                            "placeholder"
+                        ],
+                        "label": "IMP Title",
+                        "maxLength": null,
+                        "placeholder": {
+                            "en": "Enter text"
+                        },
+                        "uneditable": false,
+                        "width": "100%%"
+                    },
+                    "id": "3ba79ad5-3605-422d-ba61-d1c7c8cce1ac",
+                    "label": {
+                        "en": "IMP Title"
+                    },
+                    "node_id": "6d2bc5e0-c372-11ed-aa09-5254004d77d3",
+                    "sortorder": 4,
+                    "visible": true,
+                    "widget_id": "10000000-0000-0000-0000-000000000001"
+                },
+                {
+                    "card_id": "776d6362-f148-49f9-bf57-00a89ae8ad80",
+                    "config": {
+                        "defaultResourceInstance": [],
+                        "i18n_properties": [
+                            "placeholder"
+                        ],
+                        "label": "CFP Paleo Company",
+                        "placeholder": {
+                            "en": ""
+                        }
+                    },
+                    "id": "3e7f0353-d087-42be-8c9e-2ce2bb68d30e",
+                    "label": {
+                        "en": "CFP Paleo Company"
+                    },
+                    "node_id": "9e692b92-e0be-11ee-925d-080027b7463b",
+                    "sortorder": 4,
+                    "visible": true,
+                    "widget_id": "31f3728c-7613-11e7-a139-784f435179ea"
+                },
+                {
+                    "card_id": "ff4fa404-a361-11ed-b0ab-5254004d77d3",
+                    "config": {
+                        "acceptedFiles": "",
+                        "defaultValue": [],
+                        "label": "FIAP File",
+                        "maxFilesize": "200",
+                        "rerender": true
+                    },
+                    "id": "407bcb95-35f3-4149-b57a-58f62db9f5d4",
+                    "label": {
+                        "en": "FIAP File"
+                    },
+                    "node_id": "ff4fb944-a361-11ed-b0ab-5254004d77d3",
+                    "sortorder": 5,
+                    "visible": true,
+                    "widget_id": "10000000-0000-0000-0000-000000000019"
                 },
                 {
                     "card_id": "e9394b8a-c372-11ed-b586-5254004d77d3",
@@ -1215,6 +1479,80 @@
                     "widget_id": "10000000-0000-0000-0000-000000000004"
                 },
                 {
+                    "card_id": "224f7282-cbf6-49de-ab0d-67ba7fe19e93",
+                    "config": {
+                        "defaultValue": "",
+                        "i18n_properties": [
+                            "placeholder"
+                        ],
+                        "label": "PSR Recommendation",
+                        "maxLength": null,
+                        "placeholder": {
+                            "en": "Enter text"
+                        },
+                        "uneditable": false,
+                        "width": "100%%"
+                    },
+                    "id": "482f4abe-febc-42eb-aef9-b0e08f4aca49",
+                    "label": {
+                        "en": "PSR Recommendation"
+                    },
+                    "node_id": "9a01982c-a3d0-11ed-8ef6-5254004d77d3",
+                    "sortorder": 0,
+                    "visible": true,
+                    "widget_id": "10000000-0000-0000-0000-000000000001"
+                },
+                {
+                    "card_id": "776d6362-f148-49f9-bf57-00a89ae8ad80",
+                    "config": {
+                        "defaultValue": {
+                            "en": {
+                                "direction": "ltr",
+                                "value": ""
+                            }
+                        },
+                        "i18n_properties": [
+                            "placeholder"
+                        ],
+                        "label": "CFP Title",
+                        "maxLength": null,
+                        "placeholder": {
+                            "en": "Enter text"
+                        },
+                        "uneditable": false,
+                        "width": "100%%"
+                    },
+                    "id": "4fa0c1a8-3075-4746-9c6f-4d5a961c9d31",
+                    "label": {
+                        "en": "CFP Title"
+                    },
+                    "node_id": "8e95c04c-e0bc-11ee-9140-080027b7463b",
+                    "sortorder": 3,
+                    "visible": true,
+                    "widget_id": "10000000-0000-0000-0000-000000000001"
+                },
+                {
+                    "card_id": "224f7282-cbf6-49de-ab0d-67ba7fe19e93",
+                    "config": {
+                        "defaultResourceInstance": [],
+                        "i18n_properties": [
+                            "placeholder"
+                        ],
+                        "label": "PSR Paleo Company",
+                        "placeholder": {
+                            "en": ""
+                        }
+                    },
+                    "id": "503f3a07-63dc-4057-a1b8-05bc220672b4",
+                    "label": {
+                        "en": "PSR Paleo Company"
+                    },
+                    "node_id": "3c248dc8-a884-11ed-9606-5254004d77d3",
+                    "sortorder": 0,
+                    "visible": true,
+                    "widget_id": "31f3728c-7613-11e7-a139-784f435179ea"
+                },
+                {
                     "card_id": "3b016d40-d785-11ee-b1e5-080027b7463b",
                     "config": {
                         "defaultValue": {
@@ -1239,6 +1577,260 @@
                         "en": "Photographer"
                     },
                     "node_id": "3b017100-d785-11ee-b1e5-080027b7463b",
+                    "sortorder": 0,
+                    "visible": true,
+                    "widget_id": "10000000-0000-0000-0000-000000000001"
+                },
+                {
+                    "card_id": "224f7282-cbf6-49de-ab0d-67ba7fe19e93",
+                    "config": {
+                        "defaultValue": "",
+                        "i18n_properties": [
+                            "placeholder"
+                        ],
+                        "label": "PSR Consultant Report Number",
+                        "maxLength": null,
+                        "placeholder": {
+                            "en": "Enter text"
+                        },
+                        "uneditable": false,
+                        "width": "100%%"
+                    },
+                    "id": "563ba9f0-95b0-417f-89dd-1c4ab7e9ceb8",
+                    "label": {
+                        "en": "PSR Consultant Report Number"
+                    },
+                    "node_id": "5b6b2740-a3d0-11ed-99ab-5254004d77d3",
+                    "sortorder": 0,
+                    "visible": true,
+                    "widget_id": "10000000-0000-0000-0000-000000000001"
+                },
+                {
+                    "card_id": "ff4fa404-a361-11ed-b0ab-5254004d77d3",
+                    "config": {
+                        "defaultValue": "",
+                        "i18n_properties": [
+                            "placeholder"
+                        ],
+                        "label": "FIAP Report Title",
+                        "maxLength": null,
+                        "placeholder": {
+                            "en": "Enter text"
+                        },
+                        "uneditable": false,
+                        "width": "100%%"
+                    },
+                    "id": "59a819ce-7f74-4a5d-8a6b-461adc0ffd20",
+                    "label": {
+                        "en": "FIAP Report Title"
+                    },
+                    "node_id": "ff4fbaca-a361-11ed-b0ab-5254004d77d3",
+                    "sortorder": 6,
+                    "visible": true,
+                    "widget_id": "10000000-0000-0000-0000-000000000001"
+                },
+                {
+                    "card_id": "dbb0d366-a360-11ed-ae42-5254004d77d3",
+                    "config": {
+                        "defaultValue": {
+                            "en": {
+                                "direction": "ltr",
+                                "value": ""
+                            }
+                        },
+                        "i18n_properties": [
+                            "placeholder"
+                        ],
+                        "label": "FIA Report Recommendations",
+                        "maxLength": null,
+                        "placeholder": {
+                            "en": "Enter text"
+                        },
+                        "uneditable": false,
+                        "width": "100%%"
+                    },
+                    "id": "5bcdb258-85d7-43cb-a89a-82351267252a",
+                    "label": {
+                        "en": "FIA Report Recommendations"
+                    },
+                    "node_id": "4cbd87a4-a3cd-11ed-a29e-5254004d77d3",
+                    "sortorder": 1,
+                    "visible": true,
+                    "widget_id": "10000000-0000-0000-0000-000000000001"
+                },
+                {
+                    "card_id": "6d2bbce4-c372-11ed-aa09-5254004d77d3",
+                    "config": {
+                        "defaultValue": {
+                            "en": {
+                                "direction": "ltr",
+                                "value": ""
+                            }
+                        },
+                        "i18n_properties": [
+                            "placeholder"
+                        ],
+                        "label": "IMP Report Number",
+                        "maxLength": null,
+                        "placeholder": {
+                            "en": "Enter text"
+                        },
+                        "uneditable": false,
+                        "width": "100%%"
+                    },
+                    "id": "5bfcacc2-9889-4eab-a287-50a13e2f4794",
+                    "label": {
+                        "en": "IMP Report Number"
+                    },
+                    "node_id": "6d2bc2b6-c372-11ed-aa09-5254004d77d3",
+                    "sortorder": 0,
+                    "visible": true,
+                    "widget_id": "10000000-0000-0000-0000-000000000001"
+                },
+                {
+                    "card_id": "6d2bbce4-c372-11ed-aa09-5254004d77d3",
+                    "config": {
+                        "defaultValue": {
+                            "en": {
+                                "direction": "ltr",
+                                "value": ""
+                            }
+                        },
+                        "i18n_properties": [
+                            "placeholder"
+                        ],
+                        "label": "IMP Consultant Report Number",
+                        "maxLength": null,
+                        "placeholder": {
+                            "en": "Enter text"
+                        },
+                        "uneditable": false,
+                        "width": "100%%"
+                    },
+                    "id": "5c8b86cc-c682-4c9f-9a92-20b5b97418ae",
+                    "label": {
+                        "en": "IMP Consultant Report Number"
+                    },
+                    "node_id": "6d2bc108-c372-11ed-aa09-5254004d77d3",
+                    "sortorder": 2,
+                    "visible": true,
+                    "widget_id": "10000000-0000-0000-0000-000000000001"
+                },
+                {
+                    "card_id": "6d2bbce4-c372-11ed-aa09-5254004d77d3",
+                    "config": {
+                        "defaultValue": {
+                            "en": {
+                                "direction": "ltr",
+                                "value": ""
+                            }
+                        },
+                        "i18n_properties": [
+                            "placeholder"
+                        ],
+                        "label": "IMP Recommendations",
+                        "maxLength": null,
+                        "placeholder": {
+                            "en": "Enter text"
+                        },
+                        "uneditable": false,
+                        "width": "100%%"
+                    },
+                    "id": "5e0154d5-c7d0-49a8-b843-467f30c6d3dd",
+                    "label": {
+                        "en": "IMP Recommendations"
+                    },
+                    "node_id": "6d2bc91e-c372-11ed-aa09-5254004d77d3",
+                    "sortorder": 6,
+                    "visible": true,
+                    "widget_id": "10000000-0000-0000-0000-000000000001"
+                },
+                {
+                    "card_id": "ff4fa404-a361-11ed-b0ab-5254004d77d3",
+                    "config": {
+                        "defaultValue": "",
+                        "i18n_properties": [
+                            "placeholder"
+                        ],
+                        "label": "FIAP Report Number",
+                        "maxLength": null,
+                        "placeholder": {
+                            "en": "Enter text"
+                        },
+                        "uneditable": false,
+                        "width": "100%%"
+                    },
+                    "id": "6a3b0611-29fb-4362-bca8-c4e06a38210e",
+                    "label": {
+                        "en": "FIAP Report Number"
+                    },
+                    "node_id": "ff4fb7c8-a361-11ed-b0ab-5254004d77d3",
+                    "sortorder": 0,
+                    "visible": true,
+                    "widget_id": "10000000-0000-0000-0000-000000000001"
+                },
+                {
+                    "card_id": "dbb0d366-a360-11ed-ae42-5254004d77d3",
+                    "config": {
+                        "defaultResourceInstance": [],
+                        "i18n_properties": [
+                            "placeholder"
+                        ],
+                        "label": "FIA Paleo Consultant",
+                        "placeholder": {
+                            "en": ""
+                        }
+                    },
+                    "id": "6dc82495-8fed-49e6-aad2-9ba5ff048047",
+                    "label": {
+                        "en": "FIA Paleo Consultant"
+                    },
+                    "node_id": "dbb0e608-a360-11ed-ae42-5254004d77d3",
+                    "sortorder": 5,
+                    "visible": true,
+                    "widget_id": "31f3728c-7613-11e7-a139-784f435179ea"
+                },
+                {
+                    "card_id": "776d6362-f148-49f9-bf57-00a89ae8ad80",
+                    "config": {
+                        "defaultResourceInstance": [],
+                        "i18n_properties": [
+                            "placeholder"
+                        ],
+                        "label": "CFP Paleo Consultant",
+                        "placeholder": {
+                            "en": ""
+                        }
+                    },
+                    "id": "706fba66-5441-4d4e-a661-d49379563c01",
+                    "label": {
+                        "en": "CFP Paleo Consultant"
+                    },
+                    "node_id": "89108ce0-e0be-11ee-925d-080027b7463b",
+                    "sortorder": 2,
+                    "visible": true,
+                    "widget_id": "31f3728c-7613-11e7-a139-784f435179ea"
+                },
+                {
+                    "card_id": "224f7282-cbf6-49de-ab0d-67ba7fe19e93",
+                    "config": {
+                        "defaultValue": "",
+                        "i18n_properties": [
+                            "placeholder"
+                        ],
+                        "label": "PSR Title",
+                        "maxLength": null,
+                        "placeholder": {
+                            "en": "Enter text"
+                        },
+                        "uneditable": false,
+                        "width": "100%%"
+                    },
+                    "id": "71ede630-9f97-41ad-a9ca-f3d3a32943a7",
+                    "label": {
+                        "en": "PSR Title"
+                    },
+                    "node_id": "e1e38138-a3cf-11ed-8a3d-5254004d77d3",
                     "sortorder": 0,
                     "visible": true,
                     "widget_id": "10000000-0000-0000-0000-000000000001"
@@ -1292,9 +1884,30 @@
                         "en": "Project Name"
                     },
                     "node_id": "59c1b050-3c49-11ee-9268-080027b7463b",
-                    "sortorder": 1,
+                    "sortorder": 0,
                     "visible": true,
                     "widget_id": "10000000-0000-0000-0000-000000000001"
+                },
+                {
+                    "card_id": "ff4fa404-a361-11ed-b0ab-5254004d77d3",
+                    "config": {
+                        "defaultResourceInstance": [],
+                        "i18n_properties": [
+                            "placeholder"
+                        ],
+                        "label": "FIAP Paleo Company",
+                        "placeholder": {
+                            "en": ""
+                        }
+                    },
+                    "id": "7c682380-2a5f-413b-a266-674dec1a92ec",
+                    "label": {
+                        "en": "FIAP Paleo Company"
+                    },
+                    "node_id": "e8c139e6-a884-11ed-ad8e-5254004d77d3",
+                    "sortorder": 2,
+                    "visible": true,
+                    "widget_id": "31f3728c-7613-11e7-a139-784f435179ea"
                 },
                 {
                     "card_id": "dbb0dc26-a360-11ed-ae42-5254004d77d3",
@@ -1326,6 +1939,24 @@
                     "widget_id": "10000000-0000-0000-0000-000000000001"
                 },
                 {
+                    "card_id": "dbb0d366-a360-11ed-ae42-5254004d77d3",
+                    "config": {
+                        "acceptedFiles": "",
+                        "defaultValue": [],
+                        "label": "FIA File",
+                        "maxFilesize": "200",
+                        "rerender": true
+                    },
+                    "id": "85daf206-1ef1-4b71-b7c7-4a718db6af15",
+                    "label": {
+                        "en": "FIA File"
+                    },
+                    "node_id": "dbb0e176-a360-11ed-ae42-5254004d77d3",
+                    "sortorder": 4,
+                    "visible": true,
+                    "widget_id": "10000000-0000-0000-0000-000000000019"
+                },
+                {
                     "card_id": "3b016d40-d785-11ee-b1e5-080027b7463b",
                     "config": {
                         "acceptedFiles": ".jpg, .png, .jpeg, .gif, .tiff",
@@ -1342,6 +1973,88 @@
                     "sortorder": 0,
                     "visible": true,
                     "widget_id": "10000000-0000-0000-0000-000000000019"
+                },
+                {
+                    "card_id": "776d6362-f148-49f9-bf57-00a89ae8ad80",
+                    "config": {
+                        "defaultValue": {
+                            "en": {
+                                "direction": "ltr",
+                                "value": ""
+                            }
+                        },
+                        "i18n_properties": [
+                            "placeholder"
+                        ],
+                        "label": "CFP Number",
+                        "maxLength": null,
+                        "placeholder": {
+                            "en": "Enter text"
+                        },
+                        "uneditable": false,
+                        "width": "100%%"
+                    },
+                    "id": "98c723f0-6f24-437d-b7a1-5c0aac1474fa",
+                    "label": {
+                        "en": "CFP Number"
+                    },
+                    "node_id": "604a9338-e0bd-11ee-ba58-080027b7463b",
+                    "sortorder": 0,
+                    "visible": true,
+                    "widget_id": "10000000-0000-0000-0000-000000000001"
+                },
+                {
+                    "card_id": "dbb0d366-a360-11ed-ae42-5254004d77d3",
+                    "config": {
+                        "defaultValue": {
+                            "en": {
+                                "direction": "ltr",
+                                "value": ""
+                            }
+                        },
+                        "i18n_properties": [
+                            "placeholder"
+                        ],
+                        "label": "FIA Report Title",
+                        "maxLength": null,
+                        "placeholder": {
+                            "en": "Enter text"
+                        },
+                        "uneditable": false,
+                        "width": "100%%"
+                    },
+                    "id": "9f65bb36-8b93-4dc4-865c-93c55aea5917",
+                    "label": {
+                        "en": "FIA Report Title"
+                    },
+                    "node_id": "dbb0dfbe-a360-11ed-ae42-5254004d77d3",
+                    "sortorder": 3,
+                    "visible": true,
+                    "widget_id": "10000000-0000-0000-0000-000000000001"
+                },
+                {
+                    "card_id": "ff4fa404-a361-11ed-b0ab-5254004d77d3",
+                    "config": {
+                        "defaultValue": "",
+                        "i18n_properties": [
+                            "placeholder"
+                        ],
+                        "label": "FIAP Report Recommendation",
+                        "maxLength": null,
+                        "placeholder": {
+                            "en": "Enter text"
+                        },
+                        "uneditable": false,
+                        "width": "100%%"
+                    },
+                    "id": "a3dd5803-6320-41f9-94f9-b59c4051e2a8",
+                    "label": {
+                        "en": "FIAP Report Recommendation"
+                    },
+                    "node_id": "3767acaa-a3cc-11ed-ac97-5254004d77d3",
+                    "sortorder": 1,
+                    "visible": true,
+                    "widget_id": "10000000-0000-0000-0000-000000000001"
                 },
                 {
                     "card_id": "9de5c571-f507-4df0-af17-a90204edd2db",
@@ -1363,7 +2076,7 @@
                         "en": "Land Act File Number"
                     },
                     "node_id": "22631346-9e5c-11ed-9f51-5254004d77d3",
-                    "sortorder": 0,
+                    "sortorder": 1,
                     "visible": true,
                     "widget_id": "10000000-0000-0000-0000-000000000001"
                 },
@@ -1426,6 +2139,35 @@
                     "widget_id": "31f3728c-7613-11e7-a139-784f435179ea"
                 },
                 {
+                    "card_id": "dbb0d366-a360-11ed-ae42-5254004d77d3",
+                    "config": {
+                        "defaultValue": {
+                            "en": {
+                                "direction": "ltr",
+                                "value": ""
+                            }
+                        },
+                        "i18n_properties": [
+                            "placeholder"
+                        ],
+                        "label": "FIA Report Number",
+                        "maxLength": null,
+                        "placeholder": {
+                            "en": "Enter text"
+                        },
+                        "uneditable": false,
+                        "width": "100%%"
+                    },
+                    "id": "bf8e8f06-76d8-4697-92cb-468e01113a43",
+                    "label": {
+                        "en": "FIA Report Number"
+                    },
+                    "node_id": "dbb0e450-a360-11ed-ae42-5254004d77d3",
+                    "sortorder": 0,
+                    "visible": true,
+                    "widget_id": "10000000-0000-0000-0000-000000000001"
+                },
+                {
                     "card_id": "9de5c571-f507-4df0-af17-a90204edd2db",
                     "config": {
                         "dateFormat": "YYYY-MM-DD",
@@ -1475,6 +2217,72 @@
                     "widget_id": "10000000-0000-0000-0000-000000000001"
                 },
                 {
+                    "card_id": "ff4fa404-a361-11ed-b0ab-5254004d77d3",
+                    "config": {
+                        "defaultValue": "",
+                        "i18n_properties": [
+                            "placeholder"
+                        ],
+                        "label": "FIAP Consultant Report Number",
+                        "maxLength": null,
+                        "placeholder": {
+                            "en": "Enter text"
+                        },
+                        "uneditable": false,
+                        "width": "100%%"
+                    },
+                    "id": "c9e5486c-362f-438b-8bf4-252804ad2449",
+                    "label": {
+                        "en": "FIAP Consultant Report Number"
+                    },
+                    "node_id": "ff4fb642-a361-11ed-b0ab-5254004d77d3",
+                    "sortorder": 4,
+                    "visible": true,
+                    "widget_id": "10000000-0000-0000-0000-000000000001"
+                },
+                {
+                    "card_id": "ff4fa404-a361-11ed-b0ab-5254004d77d3",
+                    "config": {
+                        "defaultResourceInstance": [],
+                        "i18n_properties": [
+                            "placeholder"
+                        ],
+                        "label": "FIAP Paleo Consultant",
+                        "placeholder": {
+                            "en": ""
+                        }
+                    },
+                    "id": "caf78506-b59d-4c2e-8c7f-b8da1c852a8b",
+                    "label": {
+                        "en": "FIAP Paleo Consultant"
+                    },
+                    "node_id": "ff4fae72-a361-11ed-b0ab-5254004d77d3",
+                    "sortorder": 3,
+                    "visible": true,
+                    "widget_id": "31f3728c-7613-11e7-a139-784f435179ea"
+                },
+                {
+                    "card_id": "dbb0d366-a360-11ed-ae42-5254004d77d3",
+                    "config": {
+                        "defaultResourceInstance": [],
+                        "i18n_properties": [
+                            "placeholder"
+                        ],
+                        "label": "FIA Paleo Company",
+                        "placeholder": {
+                            "en": ""
+                        }
+                    },
+                    "id": "d0c64258-a074-4d4d-bc68-05b978122e1d",
+                    "label": {
+                        "en": "FIA Paleo Company"
+                    },
+                    "node_id": "aca03412-a884-11ed-9ea8-5254004d77d3",
+                    "sortorder": 2,
+                    "visible": true,
+                    "widget_id": "31f3728c-7613-11e7-a139-784f435179ea"
+                },
+                {
                     "card_id": "e9394b8a-c372-11ed-b586-5254004d77d3",
                     "config": {
                         "defaultValue": {
@@ -1502,6 +2310,83 @@
                     "sortorder": 0,
                     "visible": true,
                     "widget_id": "10000000-0000-0000-0000-000000000001"
+                },
+                {
+                    "card_id": "224f7282-cbf6-49de-ab0d-67ba7fe19e93",
+                    "config": {
+                        "defaultValue": {
+                            "en": {
+                                "direction": "ltr",
+                                "value": ""
+                            }
+                        },
+                        "i18n_properties": [
+                            "placeholder"
+                        ],
+                        "label": "PSR Number",
+                        "maxLength": null,
+                        "placeholder": {
+                            "en": "Enter text"
+                        },
+                        "reportTypeAbbreviation": "PSR",
+                        "uneditable": false,
+                        "width": "100%%"
+                    },
+                    "id": "d2ead648-afc0-454a-9878-57ff89a9f897",
+                    "label": {
+                        "en": "PSR Number"
+                    },
+                    "node_id": "2745085a-a3d0-11ed-8ef6-5254004d77d3",
+                    "sortorder": 0,
+                    "visible": true,
+                    "widget_id": "10000000-0000-0000-0000-000000000106"
+                },
+                {
+                    "card_id": "7e4cb186-c372-11ed-914a-5254004d77d3",
+                    "config": {
+                        "defaultValue": {
+                            "en": {
+                                "direction": "ltr",
+                                "value": ""
+                            }
+                        },
+                        "i18n_properties": [
+                            "placeholder"
+                        ],
+                        "label": "SAP Recommendations",
+                        "maxLength": null,
+                        "placeholder": {
+                            "en": "Enter text"
+                        },
+                        "uneditable": false,
+                        "width": "100%%"
+                    },
+                    "id": "d3543c1b-4b41-4fa8-8e3d-e9448f481cce",
+                    "label": {
+                        "en": "SAP Recommendations"
+                    },
+                    "node_id": "7e4cc28e-c372-11ed-914a-5254004d77d3",
+                    "sortorder": 1,
+                    "visible": true,
+                    "widget_id": "10000000-0000-0000-0000-000000000001"
+                },
+                {
+                    "card_id": "7e4cb186-c372-11ed-914a-5254004d77d3",
+                    "config": {
+                        "acceptedFiles": "",
+                        "defaultValue": [],
+                        "label": "Site Assessment Plan File",
+                        "maxFilesize": "200",
+                        "rerender": true
+                    },
+                    "id": "da471360-1c2c-4a24-9cc2-305fd3ca397e",
+                    "label": {
+                        "en": "Site Assessment Plan File"
+                    },
+                    "node_id": "7e4cbdca-c372-11ed-914a-5254004d77d3",
+                    "sortorder": 4,
+                    "visible": true,
+                    "widget_id": "10000000-0000-0000-0000-000000000019"
                 },
                 {
                     "card_id": "0241361a-c373-11ed-af52-5254004d77d3",
@@ -1590,6 +2475,64 @@
                     "sortorder": 0,
                     "visible": true,
                     "widget_id": "10000000-0000-0000-0000-000000000004"
+                },
+                {
+                    "card_id": "dbb0d366-a360-11ed-ae42-5254004d77d3",
+                    "config": {
+                        "defaultValue": {
+                            "en": {
+                                "direction": "ltr",
+                                "value": ""
+                            }
+                        },
+                        "i18n_properties": [
+                            "placeholder"
+                        ],
+                        "label": "FIA Consultant Report Number",
+                        "maxLength": null,
+                        "placeholder": {
+                            "en": "Enter text"
+                        },
+                        "uneditable": false,
+                        "width": "100%%"
+                    },
+                    "id": "ed6aca9e-ca44-4e96-a1f2-fae676e4c291",
+                    "label": {
+                        "en": "FIA Consultant Report Number"
+                    },
+                    "node_id": "dbb0e78e-a360-11ed-ae42-5254004d77d3",
+                    "sortorder": 6,
+                    "visible": true,
+                    "widget_id": "10000000-0000-0000-0000-000000000001"
+                },
+                {
+                    "card_id": "7e4cb186-c372-11ed-914a-5254004d77d3",
+                    "config": {
+                        "defaultValue": {
+                            "en": {
+                                "direction": "ltr",
+                                "value": ""
+                            }
+                        },
+                        "i18n_properties": [
+                            "placeholder"
+                        ],
+                        "label": "SAP Title",
+                        "maxLength": null,
+                        "placeholder": {
+                            "en": "Enter text"
+                        },
+                        "uneditable": false,
+                        "width": "100%%"
+                    },
+                    "id": "fffdd159-d3d6-4acb-b149-2519e17f45b8",
+                    "label": {
+                        "en": "SAP Title"
+                    },
+                    "node_id": "7e4cbf64-c372-11ed-914a-5254004d77d3",
+                    "sortorder": 5,
+                    "visible": true,
+                    "widget_id": "10000000-0000-0000-0000-000000000001"
                 }
             ],
             "color": "rgba(53,151,143,1)",
@@ -2837,12 +3780,12 @@
                     },
                     "function_id": "60000000-0000-0000-0000-000000001001",
                     "graph_id": "2aa724d1-ffd3-4823-8ff1-15a385b9a407",
-                    "id": "6e91faad-de8f-4620-af74-909fe8e626fc"
+                    "id": "5af63f14-f737-4664-a9b7-c7e99757795b"
                 }
             ],
             "graphid": "2aa724d1-ffd3-4823-8ff1-15a385b9a407",
             "iconclass": "fa fa-diamond",
-            "is_editable": true,
+            "is_editable": false,
             "isresource": true,
             "jsonldcontext": null,
             "name": {
@@ -3026,7 +3969,7 @@
                             {
                                 "graphid": "605b0bbc-8661-4cf2-b340-df743a8c5f89",
                                 "inverseRelationshipConcept": "ac41d9be-79db-4256-b368-2f4559cfbe55",
-                                "name": "BC Fossil Contributor",
+                                "name": "Contributor",
                                 "relationshipCollection": "00000000-0000-0000-0000-000000000005",
                                 "relationshipConcept": "ac41d9be-79db-4256-b368-2f4559cfbe55",
                                 "useOntologyRelationship": false
@@ -3038,29 +3981,20 @@
                                     {
                                         "terms": {
                                             "graph_id": [
-                                                "df3ee1ae-9c1c-11ec-964d-5254008afee6",
-                                                "8a209060-9c20-11ec-955e-5254008afee6",
-                                                "109a0272-d968-11ed-b8ae-5254004d77d3",
-                                                "c3923080-d21e-42d7-b8f1-637b9d0ab63c",
-                                                "0ad40a02-0b01-11ee-b317-5254004d77d3",
-                                                "fac1b1b4-1034-11ec-8a7a-5254008afee6",
-                                                "3746ffc8-a878-11ec-ab9a-5254008afee6",
                                                 "605b0bbc-8661-4cf2-b340-df743a8c5f89",
-                                                "82efcd14-82db-11ec-b8e6-5254008afee6",
-                                                "dd19a93a-0202-11ed-a511-0050568377a0",
-                                                "5b52dcac-9c1b-11ec-964d-5254008afee6",
-                                                "d735935c-3ddb-11ed-814d-5254008afee6",
-                                                "3eec83c6-9dd5-11ed-a81c-5254004d77d3",
-                                                "2aa724d1-ffd3-4823-8ff1-15a385b9a407",
-                                                "4d6c9226-10c6-11ec-9a94-5254008afee6",
-                                                "7f2c2082-6c51-11ed-9b7d-5254004d77d3",
-                                                "86700278-117b-11ec-90d4-5254008afee6",
                                                 "3e6a2880-14d4-11ec-9df0-5254008afee6",
                                                 "3caf329f-b8f7-11e6-84a5-026d961c88e6",
-                                                "3bad9ec8-a35e-11ed-884a-5254004d77d3",
                                                 "ff623370-fa12-11e6-b98b-6c4008b05c4c",
-                                                "67574dc6-9c20-11ec-964d-5254008afee6",
-                                                "3ffba33a-9c20-11ec-92da-5254008afee6"
+                                                "4d6c9226-10c6-11ec-9a94-5254008afee6",
+                                                "c3923080-d21e-42d7-b8f1-637b9d0ab63c",
+                                                "dd19a93a-0202-11ed-a511-0050568377a0",
+                                                "2aa724d1-ffd3-4823-8ff1-15a385b9a407",
+                                                "fac1b1b4-1034-11ec-8a7a-5254008afee6",
+                                                "82efcd14-82db-11ec-b8e6-5254008afee6",
+                                                "7f2c2082-6c51-11ed-9b7d-5254004d77d3",
+                                                "86700278-117b-11ec-90d4-5254008afee6",
+                                                "109a0272-d968-11ed-b8ae-5254004d77d3",
+                                                "df3ee1ae-9c1c-11ec-964d-5254008afee6"
                                             ]
                                         }
                                     }
@@ -3097,11 +4031,6 @@
                                                                                             "query": "3489e41e-0168-4a8f-80f1-75fde26e2130"
                                                                                         }
                                                                                     }
-                                                                                },
-                                                                                {
-                                                                                    "term": {
-                                                                                        "tiles.data.99643f1e-9e4e-11ed-b6d5-5254004d77d3": false
-                                                                                    }
                                                                                 }
                                                                             ],
                                                                             "must_not": [],
@@ -3112,10 +4041,87 @@
                                                             },
                                                             {
                                                                 "bool": {
-                                                                    "filter": [],
+                                                                    "filter": [
+                                                                        {
+                                                                            "terms": {
+                                                                                "graph_id": [
+                                                                                    "605b0bbc-8661-4cf2-b340-df743a8c5f89"
+                                                                                ]
+                                                                            }
+                                                                        }
+                                                                    ],
+                                                                    "minimum_should_match": 1,
                                                                     "must": [],
                                                                     "must_not": [],
-                                                                    "should": []
+                                                                    "should": [
+                                                                        {
+                                                                            "bool": {
+                                                                                "filter": [],
+                                                                                "must": [],
+                                                                                "must_not": [
+                                                                                    {
+                                                                                        "nested": {
+                                                                                            "path": "tiles",
+                                                                                            "query": {
+                                                                                                "exists": {
+                                                                                                    "field": "tiles.data.99643f1e-9e4e-11ed-b6d5-5254004d77d3"
+                                                                                                }
+                                                                                            }
+                                                                                        }
+                                                                                    }
+                                                                                ],
+                                                                                "should": []
+                                                                            }
+                                                                        },
+                                                                        {
+                                                                            "function_score": {
+                                                                                "boost": 1,
+                                                                                "boost_mode": "replace",
+                                                                                "functions": [
+                                                                                    {
+                                                                                        "script_score": {
+                                                                                            "script": {
+                                                                                                "lang": "painless",
+                                                                                                "params": {
+                                                                                                    "node_id": "99643f1e-9e4e-11ed-b6d5-5254004d77d3",
+                                                                                                    "nodegroup_id": "c4ec91a4-9dea-11ed-9a7b-5254004d77d3"
+                                                                                                },
+                                                                                                "source": "\n                                    int null_docs = 0;\n                                    for(tile in params._source.tiles){\n                                        if(tile.nodegroup_id == params.nodegroup_id ){\n                                            def val = tile.data.get(params.node_id);\n                                            if (val == null || val == \"\" || (val instanceof List && val.length==0)) {\n                                                null_docs++;\n                                                break;\n                                            }\n                                        }\n                                    }\n                                    return null_docs;\n                                "
+                                                                                            }
+                                                                                        }
+                                                                                    }
+                                                                                ],
+                                                                                "min_score": 1,
+                                                                                "query": {
+                                                                                    "bool": {
+                                                                                        "filter": [],
+                                                                                        "must": [
+                                                                                            {
+                                                                                                "nested": {
+                                                                                                    "path": "tiles",
+                                                                                                    "query": {
+                                                                                                        "exists": {
+                                                                                                            "field": "tiles.data.99643f1e-9e4e-11ed-b6d5-5254004d77d3"
+                                                                                                        }
+                                                                                                    }
+                                                                                                }
+                                                                                            },
+                                                                                            {
+                                                                                                "terms": {
+                                                                                                    "graph_id": [
+                                                                                                        "605b0bbc-8661-4cf2-b340-df743a8c5f89"
+                                                                                                    ]
+                                                                                                }
+                                                                                            }
+                                                                                        ],
+                                                                                        "must_not": [],
+                                                                                        "should": []
+                                                                                    }
+                                                                                },
+                                                                                "score_mode": "max"
+                                                                            }
+                                                                        }
+                                                                    ]
                                                                 }
                                                             }
                                                         ],
@@ -3131,7 +4137,7 @@
                                 "should": []
                             }
                         },
-                        "searchString": "/int/bc-fossil-management/search?paging-filter=1&tiles=true&format=tilecsv&reportlink=false&precision=6&total=0&advanced-search=%5B%7B%22op%22%3A%22and%22%2C%22c4eca2de-9dea-11ed-9a7b-5254004d77d3%22%3A%7B%22op%22%3A%22eq%22%2C%22val%22%3A%22706881ba-bda3-4fbc-9d66-c26bf2d92c18%22%7D%2C%22e2f1c29a-c500-11ed-9089-5254004d77d3%22%3A%7B%22op%22%3A%22eq%22%2C%22val%22%3A%223489e41e-0168-4a8f-80f1-75fde26e2130%22%7D%2C%22c4ec9b2c-9dea-11ed-9a7b-5254004d77d3%22%3A%7B%22op%22%3A%22~%22%2C%22lang%22%3A%22en%22%2C%22val%22%3A%22%22%7D%2C%22c4eca13a-9dea-11ed-9a7b-5254004d77d3%22%3A%7B%22op%22%3A%22~%22%2C%22lang%22%3A%22en%22%2C%22val%22%3A%22%22%7D%2C%22a5b2cd72-c4f4-11ed-a06d-5254004d77d3%22%3A%7B%22op%22%3A%22~%22%2C%22lang%22%3A%22en%22%2C%22val%22%3A%22%22%7D%2C%22b5ed0072-c4f4-11ed-94de-5254004d77d3%22%3A%7B%22op%22%3A%22~%22%2C%22lang%22%3A%22en%22%2C%22val%22%3A%22%22%7D%2C%22009ba8da-faf6-11ed-ac37-5254004d77d3%22%3A%7B%22op%22%3A%22%22%2C%22val%22%3A%22%22%7D%2C%2299643f1e-9e4e-11ed-b6d5-5254004d77d3%22%3A%7B%22val%22%3A%22f%22%7D%7D%5D&sort-results=asc"
+                        "searchString": "http://localhost:81/int/bc-fossil-management/search?paging-filter=1&tiles=true&format=tilecsv&reportlink=false&precision=6&total=1&sort-results=asc&advanced-search=%5B%7B%22op%22%3A%22and%22%2C%22c4eca2de-9dea-11ed-9a7b-5254004d77d3%22%3A%7B%22op%22%3A%22eq%22%2C%22val%22%3A%22706881ba-bda3-4fbc-9d66-c26bf2d92c18%22%7D%2C%22e2f1c29a-c500-11ed-9089-5254004d77d3%22%3A%7B%22op%22%3A%22eq%22%2C%22val%22%3A%223489e41e-0168-4a8f-80f1-75fde26e2130%22%7D%2C%22c4ec9b2c-9dea-11ed-9a7b-5254004d77d3%22%3A%7B%22op%22%3A%22~%22%2C%22lang%22%3A%22en%22%2C%22val%22%3A%22%22%7D%2C%22c4eca13a-9dea-11ed-9a7b-5254004d77d3%22%3A%7B%22op%22%3A%22~%22%2C%22lang%22%3A%22en%22%2C%22val%22%3A%22%22%7D%2C%22a5b2cd72-c4f4-11ed-a06d-5254004d77d3%22%3A%7B%22op%22%3A%22~%22%2C%22lang%22%3A%22en%22%2C%22val%22%3A%22%22%7D%2C%22b5ed0072-c4f4-11ed-94de-5254004d77d3%22%3A%7B%22op%22%3A%22~%22%2C%22lang%22%3A%22en%22%2C%22val%22%3A%22%22%7D%2C%22009ba8da-faf6-11ed-ac37-5254004d77d3%22%3A%7B%22op%22%3A%22%22%2C%22val%22%3A%22%22%7D%2C%2299643f1e-9e4e-11ed-b6d5-5254004d77d3%22%3A%7B%22val%22%3A%22null%22%7D%7D%5D"
                     },
                     "datatype": "resource-instance",
                     "description": null,
@@ -7448,8 +8454,8 @@
             "publication": {
                 "graph_id": "2aa724d1-ffd3-4823-8ff1-15a385b9a407",
                 "notes": null,
-                "publicationid": "ad3350b6-2809-11ef-9fe7-0242ac120007",
-                "published_time": "2024-06-11T10:45:49.741"
+                "publicationid": "70b2406c-2f2e-11ef-9329-0242ac170007",
+                "published_time": "2024-06-20T12:56:37.750"
             },
             "relatable_resource_model_ids": [],
             "resource_2_resource_constraints": [],
@@ -7484,8 +8490,8 @@
         }
     ],
     "metadata": {
-        "db": "PostgreSQL 14.5 (Debian 14.5-1.pgdg110+1) on x86_64-pc-linux-gnu, compiled by gcc (Debian 10.2.1-6) 10.2.1 20210110, 64-bit",
-        "git hash": "8b2e9f680 2024-06-05 11:58:40 -0700",
+        "db": "PostgreSQL 16.3 (Debian 16.3-1.pgdg110+1) on x86_64-pc-linux-gnu, compiled by gcc (Debian 10.2.1-6) 10.2.1 20210110, 64-bit",
+        "git hash": "5d0d8577d 2024-06-20 08:45:57 -0700",
         "os": "Linux",
         "os version": "6.6.22-linuxkit"
     }

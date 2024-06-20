@@ -35,3 +35,9 @@ class CollectionEventFossilNames(APIBase):
             names = fossil_sample_proxy.get_common_names_from_samples(sample_ids)
         names = sorted(list(set(names)))
         return JSONResponse(JSONSerializer().serializeToPython(names))
+
+
+class ReportNumberGenerator(APIBase):
+    def get(self, request, nodeid, typeAbbreviation):
+        report_number = {"status": "success", "report_number": IPADataProxy().get_last_report_id(nodeid, typeAbbreviation)}
+        return JSONResponse(JSONSerializer().serializeToPython(report_number))
