@@ -225,7 +225,20 @@
                     <div>
                         <dt>Recognition Type</dt>
                         <dd>
-                            <div data-bind="text: $parent.getLegislativeAct(values['legislative_act'])"></div>
+                            <div style="display: inline-block;" data-placement="auto" data-toggle="tooltip"
+                                 data-bind="attr: {'data-original-title': $parent.getLegislativeAct(values['legislative_act']).definition,
+                                                   'title': $parent.getLegislativeAct(values['legislative_act']).definition},
+                                            text: $parent.getLegislativeAct(values['legislative_act']).display_value">
+                            </div>
+                            <button class="btn info-button tooltips tooltips-toggle" data-placement="top" data-toggle="tooltip"
+                                    data-template='<div class="tooltip" role="tooltip"><div class="tooltip-arrow"></div><div class="tooltip-inner" style="background: red !important;"></div></div>'
+                                    data-bind="attr: {'data-original-title': $parent.getLegislativeAct(values['legislative_act']).definition,
+                                                   'title': $parent.getLegislativeAct(values['legislative_act']).definition}"
+                            >
+                                <i class="fa fa-info-circle"
+                                   data-bind="attr: {'aria-label': $parent.getLegislativeAct(values['legislative_act']).definition},
+                                          visible: $parent.getLegislativeAct(values['legislative_act']).definition"></i>
+                            </button>
                         </dd>
                     </div>
                     <div>

@@ -180,7 +180,10 @@ define([
                 return this.actAuthorities[actId];
             }
 
-            let authority = ko.observable();
+            let authority = {
+                display_value: ko.observable(""),
+                definition: ko.observable("")
+            };
             this.actAuthorities[actId] = authority;
 
             if (self.report.graph.slug === "heritage_site" && self.tiles().length > 0) {
@@ -190,7 +193,11 @@ define([
                 }).done(function (data) {
                     if (!!data && data.length > 0)
                     {
-                        authority(`${data[0].authority}, ${data[0].recognition_type}`);
+                        authority.display_value(`${data[0].authority}, ${data[0].recognition_type}`);
+                        if (data[0].recognition_type_definition)
+                        {
+                            authority.definition(data[0].recognition_type_definition.value);
+                        }
                     }
                 });
             }
