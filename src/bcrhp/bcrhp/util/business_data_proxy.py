@@ -69,6 +69,8 @@ class LegislativeActDataProxy(BusinessDataProxy):
             nodegroup_id=self._graph_lookup.get_node(LegislativeActAliases.AUTHORITY).nodegroup_id,
             resourceinstance_id__in=act_ids
         ).all()
+        # Need to convert to string to get it from the tile data map
+        recognition_type_nodeid = str(self._graph_lookup.get_node(LegislativeActAliases.RECOGNITION_TYPE).nodeid)
         for tile in tiles:
             values.append(
                 {
@@ -80,8 +82,19 @@ class LegislativeActDataProxy(BusinessDataProxy):
                                                                                 data_tile=tile),
                     LegislativeActAliases.RECOGNITION_TYPE: self.get_value_from_node(
                         LegislativeActAliases.RECOGNITION_TYPE, data_tile=tile),
+                    ("%s_definition" % LegislativeActAliases.RECOGNITION_TYPE):
+                        LegislativeActDataProxy.get_recognition_definition(tile.data[recognition_type_nodeid])
+
                 }
             )
         # print("values: %s" % values)
         values = list(filter(lambda val: val is not None, values))
         return values
+
+    @staticmethod
+    def get_recognition_definition(valueid):
+        if valueid:
+            value = models.Value.objects.get(valueid=valueid)
+            definition_value = models.Value.objects.filter(concept_id=value.concept_id, valuetype='definition').first()
+            if definition_value:
+                return definition_value
