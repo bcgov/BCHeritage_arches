@@ -85,6 +85,7 @@ define([
                 "map_data.fiss_frpc_ovb",
                 "c6651266-10c6-11ec-adef-5254008afee6", /* Important Areas Resource layer */
                 "2336968c-1035-11ec-a3aa-5254008afee6", /* Fossil Site layer */
+                "9f2c9e28-dedb-11ed-ac5a-5254004d77d3", /* BC Fossil Project Sandbox */
             ],
 
             // @todo - Need to align this with BCRHP, centralize functionality
