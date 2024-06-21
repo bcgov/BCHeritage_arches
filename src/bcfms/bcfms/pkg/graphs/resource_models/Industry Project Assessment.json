@@ -225,6 +225,33 @@
                 },
                 {
                     "active": true,
+                    "cardid": "3ed0fa37-95e4-4f59-90cc-74db40a41010",
+                    "component_id": "f05e4d3a-53c1-11e8-b0ea-784f435179ea",
+                    "config": null,
+                    "constraints": [],
+                    "cssclass": null,
+                    "description": null,
+                    "graph_id": "2aa724d1-ffd3-4823-8ff1-15a385b9a407",
+                    "helpenabled": false,
+                    "helptext": {
+                        "en": ""
+                    },
+                    "helptitle": {
+                        "en": ""
+                    },
+                    "instructions": {
+                        "en": ""
+                    },
+                    "is_editable": true,
+                    "name": {
+                        "en": "Site Assessment Final Report"
+                    },
+                    "nodegroup_id": "1570c3ca-2f80-11ef-9e9f-0242ac170006",
+                    "sortorder": 3,
+                    "visible": true
+                },
+                {
+                    "active": true,
                     "cardid": "476778c5-196d-43f3-9801-09d36909fffb",
                     "component_id": "f05e4d3a-53c1-11e8-b0ea-784f435179ea",
                     "config": null,
@@ -526,7 +553,7 @@
                         "en": "FMO Assessment"
                     },
                     "nodegroup_id": "afc9b782-e0bc-11ee-ba58-080027b7463b",
-                    "sortorder": 0,
+                    "sortorder": 1,
                     "visible": true
                 },
                 {
@@ -635,6 +662,33 @@
                     },
                     "nodegroup_id": "dbb0d7bc-a360-11ed-ae42-5254004d77d3",
                     "sortorder": 1,
+                    "visible": true
+                },
+                {
+                    "active": true,
+                    "cardid": "dc10018f-670c-43c3-9b4c-d001f392dedd",
+                    "component_id": "f05e4d3a-53c1-11e8-b0ea-784f435179ea",
+                    "config": null,
+                    "constraints": [],
+                    "cssclass": null,
+                    "description": null,
+                    "graph_id": "2aa724d1-ffd3-4823-8ff1-15a385b9a407",
+                    "helpenabled": false,
+                    "helptext": {
+                        "en": ""
+                    },
+                    "helptitle": {
+                        "en": ""
+                    },
+                    "instructions": {
+                        "en": ""
+                    },
+                    "is_editable": true,
+                    "name": {
+                        "en": "Impact Mitigation Final Report"
+                    },
+                    "nodegroup_id": "3a654236-2f7c-11ef-93ea-0242ac170006",
+                    "sortorder": 0,
                     "visible": true
                 },
                 {
@@ -836,16 +890,40 @@
                     "card_id": "0241361a-c373-11ed-af52-5254004d77d3",
                     "config": {
                         "defaultValue": null,
-                        "label": "Approval Status"
+                        "label": "SAP FMO Approval Status"
                     },
                     "id": "02413ebc-c373-11ed-af52-5254004d77d3",
                     "label": {
-                        "en": "Approval Status"
+                        "en": "SAP FMO Approval Status"
                     },
                     "node_id": "0241382c-c373-11ed-af52-5254004d77d3",
                     "sortorder": 1,
                     "visible": true,
                     "widget_id": "10000000-0000-0000-0000-000000000006"
+                },
+                {
+                    "card_id": "dc10018f-670c-43c3-9b4c-d001f392dedd",
+                    "config": {
+                        "defaultValue": "",
+                        "i18n_properties": [
+                            "placeholder"
+                        ],
+                        "label": "FMO IMFR Comments",
+                        "maxLength": null,
+                        "placeholder": {
+                            "en": "Enter text"
+                        },
+                        "uneditable": false,
+                        "width": "100%"
+                    },
+                    "id": "050d39f3-e31a-45dd-b7d6-abd3160360c4",
+                    "label": {
+                        "en": "FMO IMFR Comments"
+                    },
+                    "node_id": "98d9db1e-2f7d-11ef-a029-0242ac170006",
+                    "sortorder": 0,
+                    "visible": true,
+                    "widget_id": "10000000-0000-0000-0000-000000000001"
                 },
                 {
                     "card_id": "7e4cb186-c372-11ed-914a-5254004d77d3",
@@ -1167,6 +1245,24 @@
                     "widget_id": "10000000-0000-0000-0000-000000000002"
                 },
                 {
+                    "card_id": "dc10018f-670c-43c3-9b4c-d001f392dedd",
+                    "config": {
+                        "acceptedFiles": ".pdf",
+                        "defaultValue": [],
+                        "label": "Impact Mitigation Final Report",
+                        "maxFilesize": "50",
+                        "rerender": true
+                    },
+                    "id": "19be9c8a-8e93-40fb-b91f-1a3796c6abab",
+                    "label": {
+                        "en": "Impact Mitigation Final Report"
+                    },
+                    "node_id": "a861d380-2f7c-11ef-93ea-0242ac170006",
+                    "sortorder": 0,
+                    "visible": true,
+                    "widget_id": "10000000-0000-0000-0000-000000000019"
+                },
+                {
                     "card_id": "dbb0dc26-a360-11ed-ae42-5254004d77d3",
                     "config": {
                         "defaultValue": "",
@@ -1264,7 +1360,7 @@
                         "en": "Project Completed"
                     },
                     "node_id": "dd7f60ec-2800-11ef-97eb-0242ac120007",
-                    "sortorder": 6,
+                    "sortorder": 7,
                     "visible": true,
                     "widget_id": "0346bc9c-d235-4313-adc8-d0e210b2ef25"
                 },
@@ -1465,7 +1561,7 @@
                         "en": "Expected Project Start Date"
                     },
                     "node_id": "e00a7a4a-2800-11ef-97eb-0242ac120007",
-                    "sortorder": 4,
+                    "sortorder": 5,
                     "visible": true,
                     "widget_id": "10000000-0000-0000-0000-000000000004"
                 },
@@ -1537,6 +1633,24 @@
                     "sortorder": 0,
                     "visible": true,
                     "widget_id": "31f3728c-7613-11e7-a139-784f435179ea"
+                },
+                {
+                    "card_id": "3ed0fa37-95e4-4f59-90cc-74db40a41010",
+                    "config": {
+                        "acceptedFiles": ".pdf",
+                        "defaultValue": [],
+                        "label": "Site Assessment Final Report",
+                        "maxFilesize": "50",
+                        "rerender": true
+                    },
+                    "id": "50cc84cd-c2c9-478b-a0ef-3a8fdaa11132",
+                    "label": {
+                        "en": "Site Assessment Final Report"
+                    },
+                    "node_id": "71703fb6-2f80-11ef-9e9f-0242ac170006",
+                    "sortorder": 1,
+                    "visible": true,
+                    "widget_id": "10000000-0000-0000-0000-000000000019"
                 },
                 {
                     "card_id": "3b016d40-d785-11ee-b1e5-080027b7463b",
@@ -1912,6 +2026,36 @@
                     "widget_id": "10000000-0000-0000-0000-000000000001"
                 },
                 {
+                    "card_id": "3ed0fa37-95e4-4f59-90cc-74db40a41010",
+                    "config": {
+                        "defaultValue": {
+                            "en": {
+                                "direction": "ltr",
+                                "value": ""
+                            }
+                        },
+                        "i18n_properties": [
+                            "placeholder"
+                        ],
+                        "label": "FMO Comments on Site Assessment Final Report",
+                        "maxLength": null,
+                        "placeholder": {
+                            "en": "Enter text"
+                        },
+                        "reportTypeAbbreviation": "SAFR",
+                        "uneditable": false,
+                        "width": "100%"
+                    },
+                    "id": "80622069-8799-4bc2-b8ae-2c45db5099f7",
+                    "label": {
+                        "en": "FMO Comments on Site Assessment Final Report"
+                    },
+                    "node_id": "9a38535c-2f80-11ef-9e9f-0242ac170006",
+                    "sortorder": 2,
+                    "visible": true,
+                    "widget_id": "10000000-0000-0000-0000-000000000005"
+                },
+                {
                     "card_id": "dbb0d366-a360-11ed-ae42-5254004d77d3",
                     "config": {
                         "acceptedFiles": "",
@@ -2002,6 +2146,21 @@
                     "widget_id": "10000000-0000-0000-0000-000000000001"
                 },
                 {
+                    "card_id": "3ed0fa37-95e4-4f59-90cc-74db40a41010",
+                    "config": {
+                        "defaultValue": null,
+                        "label": "FMO SAFR Approval Status"
+                    },
+                    "id": "a1c308c9-2234-43a4-9be4-53a3608f899f",
+                    "label": {
+                        "en": "FMO SAFR Approval Status"
+                    },
+                    "node_id": "b2c0f604-2f80-11ef-9e9f-0242ac170006",
+                    "sortorder": 3,
+                    "visible": true,
+                    "widget_id": "10000000-0000-0000-0000-000000000006"
+                },
+                {
                     "card_id": "ff4fa404-a361-11ed-b0ab-5254004d77d3",
                     "config": {
                         "defaultValue": "",
@@ -2045,7 +2204,7 @@
                         "en": "Land Act File Number"
                     },
                     "node_id": "22631346-9e5c-11ed-9f51-5254004d77d3",
-                    "sortorder": 1,
+                    "sortorder": 2,
                     "visible": true,
                     "widget_id": "10000000-0000-0000-0000-000000000001"
                 },
@@ -2067,9 +2226,39 @@
                         "en": "Project Authorizing Agency"
                     },
                     "node_id": "df94dc8e-a356-11ed-b966-5254004d77d3",
-                    "sortorder": 3,
+                    "sortorder": 4,
                     "visible": true,
                     "widget_id": "10000000-0000-0000-0000-000000000002"
+                },
+                {
+                    "card_id": "dc10018f-670c-43c3-9b4c-d001f392dedd",
+                    "config": {
+                        "defaultValue": {
+                            "en": {
+                                "direction": "ltr",
+                                "value": ""
+                            }
+                        },
+                        "i18n_properties": [
+                            "placeholder"
+                        ],
+                        "label": "IMFR Number",
+                        "maxLength": null,
+                        "placeholder": {
+                            "en": "Enter text"
+                        },
+                        "reportTypeAbbreviation": "IMFR",
+                        "uneditable": false,
+                        "width": "100%"
+                    },
+                    "id": "b23089d4-0fa9-4279-9c27-6eb3d9596517",
+                    "label": {
+                        "en": "IMFR Number"
+                    },
+                    "node_id": "83ca1726-2f7c-11ef-93ea-0242ac170006",
+                    "sortorder": 0,
+                    "visible": true,
+                    "widget_id": "10000000-0000-0000-0000-000000000106"
                 },
                 {
                     "card_id": "dbb0dc26-a360-11ed-ae42-5254004d77d3",
@@ -2085,6 +2274,36 @@
                     "sortorder": 0,
                     "visible": true,
                     "widget_id": "10000000-0000-0000-0000-000000000006"
+                },
+                {
+                    "card_id": "3ed0fa37-95e4-4f59-90cc-74db40a41010",
+                    "config": {
+                        "defaultValue": {
+                            "en": {
+                                "direction": "ltr",
+                                "value": ""
+                            }
+                        },
+                        "i18n_properties": [
+                            "placeholder"
+                        ],
+                        "label": "SAFR Number",
+                        "maxLength": null,
+                        "placeholder": {
+                            "en": "Enter text"
+                        },
+                        "reportTypeAbbreviation": "AAA",
+                        "uneditable": false,
+                        "width": "100%"
+                    },
+                    "id": "b6511509-cdb1-4a41-be3b-205964715a62",
+                    "label": {
+                        "en": "SAFR Number"
+                    },
+                    "node_id": "4aac7520-2f80-11ef-9e9f-0242ac170006",
+                    "sortorder": 0,
+                    "visible": true,
+                    "widget_id": "10000000-0000-0000-0000-000000000001"
                 },
                 {
                     "card_id": "9de5c571-f507-4df0-af17-a90204edd2db",
@@ -2103,7 +2322,7 @@
                         "en": "Project Initiator"
                     },
                     "node_id": "694922ec-9dc0-11ed-8d8e-5254004d77d3",
-                    "sortorder": 2,
+                    "sortorder": 3,
                     "visible": true,
                     "widget_id": "31f3728c-7613-11e7-a139-784f435179ea"
                 },
@@ -2153,7 +2372,7 @@
                         "en": "Expected Project End Date"
                     },
                     "node_id": "df2080c0-2800-11ef-97eb-0242ac120007",
-                    "sortorder": 5,
+                    "sortorder": 6,
                     "visible": true,
                     "widget_id": "10000000-0000-0000-0000-000000000004"
                 },
@@ -2183,6 +2402,60 @@
                     },
                     "node_id": "dbb0eaa4-a360-11ed-ae42-5254004d77d3",
                     "sortorder": 0,
+                    "visible": true,
+                    "widget_id": "10000000-0000-0000-0000-000000000001"
+                },
+                {
+                    "card_id": "3ed0fa37-95e4-4f59-90cc-74db40a41010",
+                    "config": {
+                        "defaultValue": {
+                            "en": {
+                                "direction": "ltr",
+                                "value": ""
+                            }
+                        },
+                        "i18n_properties": [
+                            "placeholder"
+                        ],
+                        "label": "SAFR Number",
+                        "maxLength": null,
+                        "placeholder": {
+                            "en": "Enter text"
+                        },
+                        "reportTypeAbbreviation": "SAFR",
+                        "uneditable": false,
+                        "width": "100%"
+                    },
+                    "id": "c960aea1-1b20-4d3a-afc8-e56a377a6a7e",
+                    "label": {
+                        "en": "SAFR Number"
+                    },
+                    "node_id": "4aac7520-2f80-11ef-9e9f-0242ac170006",
+                    "sortorder": 0,
+                    "visible": true,
+                    "widget_id": "10000000-0000-0000-0000-000000000106"
+                },
+                {
+                    "card_id": "9de5c571-f507-4df0-af17-a90204edd2db",
+                    "config": {
+                        "defaultValue": "",
+                        "i18n_properties": [
+                            "placeholder"
+                        ],
+                        "label": "Industry Company Name",
+                        "maxLength": null,
+                        "placeholder": {
+                            "en": "Name of the company responsible for the project"
+                        },
+                        "uneditable": false,
+                        "width": "100%"
+                    },
+                    "id": "c9e03987-759c-43b7-9312-de908bcfabdb",
+                    "label": {
+                        "en": "Industry Company Name"
+                    },
+                    "node_id": "8d6de362-2f7b-11ef-aca8-0242ac170006",
+                    "sortorder": 1,
                     "visible": true,
                     "widget_id": "10000000-0000-0000-0000-000000000001"
                 },
@@ -2230,6 +2503,21 @@
                     "sortorder": 3,
                     "visible": true,
                     "widget_id": "31f3728c-7613-11e7-a139-784f435179ea"
+                },
+                {
+                    "card_id": "dc10018f-670c-43c3-9b4c-d001f392dedd",
+                    "config": {
+                        "defaultValue": null,
+                        "label": "IMFR - FMO Approval Status"
+                    },
+                    "id": "cafdf0c1-90a7-4361-9c0a-5e33f01a6efe",
+                    "label": {
+                        "en": "IMFR - FMO Approval Status"
+                    },
+                    "node_id": "4893c54c-2f7e-11ef-9621-0242ac170006",
+                    "sortorder": 0,
+                    "visible": true,
+                    "widget_id": "10000000-0000-0000-0000-000000000006"
                 },
                 {
                     "card_id": "dbb0d366-a360-11ed-ae42-5254004d77d3",
@@ -2280,6 +2568,35 @@
                     "sortorder": 0,
                     "visible": true,
                     "widget_id": "10000000-0000-0000-0000-000000000001"
+                },
+                {
+                    "card_id": "dc10018f-670c-43c3-9b4c-d001f392dedd",
+                    "config": {
+                        "defaultValue": {
+                            "en": {
+                                "direction": "ltr",
+                                "value": ""
+                            }
+                        },
+                        "i18n_properties": [
+                            "placeholder"
+                        ],
+                        "label": "FMO Comments on Impact Mitigation Final Report",
+                        "maxLength": null,
+                        "placeholder": {
+                            "en": "Enter text"
+                        },
+                        "uneditable": false,
+                        "width": "100%"
+                    },
+                    "id": "d2395f96-d4c0-4df0-9845-d03901723979",
+                    "label": {
+                        "en": "FMO Comments on Impact Mitigation Final Report"
+                    },
+                    "node_id": "98d9db1e-2f7d-11ef-a029-0242ac170006",
+                    "sortorder": 0,
+                    "visible": true,
+                    "widget_id": "10000000-0000-0000-0000-000000000005"
                 },
                 {
                     "card_id": "224f7282-cbf6-49de-ab0d-67ba7fe19e93",
@@ -2389,7 +2706,8 @@
                         ],
                         "placeholder": {
                             "en": "Select an option"
-                        }
+                        },
+                        "url": "/int/bc-fossil-management/concepts/dropdown?conceptid=37eccecb-dac0-435c-85a3-b1163c4a4cfb"
                     },
                     "id": "dd168b13-b46f-4dae-b7e3-64ab1d6f1c3c",
                     "label": {
@@ -2614,6 +2932,15 @@
                 },
                 {
                     "description": null,
+                    "domainnode_id": "3a654236-2f7c-11ef-93ea-0242ac170006",
+                    "edgeid": "0cc7cc10-9338-488e-a270-82520b7cdbca",
+                    "graph_id": "2aa724d1-ffd3-4823-8ff1-15a385b9a407",
+                    "name": null,
+                    "ontologyproperty": "http://www.cidoc-crm.org/cidoc-crm/P129_is_about",
+                    "rangenode_id": "4893c54c-2f7e-11ef-9621-0242ac170006"
+                },
+                {
+                    "description": null,
                     "domainnode_id": "afc9b782-e0bc-11ee-ba58-080027b7463b",
                     "edgeid": "0f38413f-e437-4173-acdb-c3bcd3017057",
                     "graph_id": "2aa724d1-ffd3-4823-8ff1-15a385b9a407",
@@ -2818,6 +3145,24 @@
                     "name": null,
                     "ontologyproperty": "http://www.cidoc-crm.org/cidoc-crm/P117_occurs_during",
                     "rangenode_id": "7fc4ff0c-2800-11ef-8af0-0242ac120007"
+                },
+                {
+                    "description": null,
+                    "domainnode_id": "1570c3ca-2f80-11ef-9e9f-0242ac170006",
+                    "edgeid": "40b08c97-0e78-4738-a299-7d19de6ae3c3",
+                    "graph_id": "2aa724d1-ffd3-4823-8ff1-15a385b9a407",
+                    "name": null,
+                    "ontologyproperty": "http://www.cidoc-crm.org/cidoc-crm/P129i_is_subject_of",
+                    "rangenode_id": "9a38535c-2f80-11ef-9e9f-0242ac170006"
+                },
+                {
+                    "description": null,
+                    "domainnode_id": "333303da-c372-11ed-9dd3-5254004d77d3",
+                    "edgeid": "4907f6d6-a0ff-41e7-a5ee-782d55c623d9",
+                    "graph_id": "2aa724d1-ffd3-4823-8ff1-15a385b9a407",
+                    "name": null,
+                    "ontologyproperty": "http://www.cidoc-crm.org/cidoc-crm/P70i_is_documented_in",
+                    "rangenode_id": "3a654236-2f7c-11ef-93ea-0242ac170006"
                 },
                 {
                     "description": null,
@@ -3055,6 +3400,15 @@
                 },
                 {
                     "description": null,
+                    "domainnode_id": "1570c3ca-2f80-11ef-9e9f-0242ac170006",
+                    "edgeid": "7316c02a-5b92-4173-9601-89e098188e59",
+                    "graph_id": "2aa724d1-ffd3-4823-8ff1-15a385b9a407",
+                    "name": null,
+                    "ontologyproperty": "http://www.ics.forth.gr/isl/CRMdig/L54i_is_same-as",
+                    "rangenode_id": "71703fb6-2f80-11ef-9e9f-0242ac170006"
+                },
+                {
+                    "description": null,
                     "domainnode_id": "dbb0d0fa-a360-11ed-ae42-5254004d77d3",
                     "edgeid": "740bbed5-bff3-4750-a8ae-796781000bf6",
                     "graph_id": "2aa724d1-ffd3-4823-8ff1-15a385b9a407",
@@ -3070,6 +3424,15 @@
                     "name": null,
                     "ontologyproperty": "http://www.cidoc-crm.org/cidoc-crm/P17_was_motivated_by",
                     "rangenode_id": "7e4cac36-c372-11ed-914a-5254004d77d3"
+                },
+                {
+                    "description": null,
+                    "domainnode_id": "3a654236-2f7c-11ef-93ea-0242ac170006",
+                    "edgeid": "7e128572-2b0b-4c7c-8da9-a8a6b6b7a939",
+                    "graph_id": "2aa724d1-ffd3-4823-8ff1-15a385b9a407",
+                    "name": null,
+                    "ontologyproperty": "http://www.cidoc-crm.org/cidoc-crm/P129i_is_subject_of",
+                    "rangenode_id": "98d9db1e-2f7d-11ef-a029-0242ac170006"
                 },
                 {
                     "description": null,
@@ -3172,6 +3535,15 @@
                 },
                 {
                     "description": null,
+                    "domainnode_id": "1570c3ca-2f80-11ef-9e9f-0242ac170006",
+                    "edgeid": "89a47ece-885d-44f3-a11c-638a39e22eec",
+                    "graph_id": "2aa724d1-ffd3-4823-8ff1-15a385b9a407",
+                    "name": null,
+                    "ontologyproperty": "http://www.cidoc-crm.org/cidoc-crm/P1_is_identified_by",
+                    "rangenode_id": "4aac7520-2f80-11ef-9e9f-0242ac170006"
+                },
+                {
+                    "description": null,
                     "domainnode_id": "9cf8ce58-9dcf-11ed-82b6-5254004d77d3",
                     "edgeid": "8b13e341-52b4-4f6b-9244-a7281bd7a0de",
                     "graph_id": "2aa724d1-ffd3-4823-8ff1-15a385b9a407",
@@ -3253,6 +3625,24 @@
                 },
                 {
                     "description": null,
+                    "domainnode_id": "3a654236-2f7c-11ef-93ea-0242ac170006",
+                    "edgeid": "9e039215-fa29-4565-82a8-0499f20ca8f7",
+                    "graph_id": "2aa724d1-ffd3-4823-8ff1-15a385b9a407",
+                    "name": null,
+                    "ontologyproperty": "http://www.ics.forth.gr/isl/CRMdig/L54i_is_same-as",
+                    "rangenode_id": "a861d380-2f7c-11ef-93ea-0242ac170006"
+                },
+                {
+                    "description": null,
+                    "domainnode_id": "1570c3ca-2f80-11ef-9e9f-0242ac170006",
+                    "edgeid": "9eb98b0f-a343-4478-8ebe-e9ede0613104",
+                    "graph_id": "2aa724d1-ffd3-4823-8ff1-15a385b9a407",
+                    "name": null,
+                    "ontologyproperty": "http://www.cidoc-crm.org/cidoc-crm/P129_is_about",
+                    "rangenode_id": "b2c0f604-2f80-11ef-9e9f-0242ac170006"
+                },
+                {
+                    "description": null,
                     "domainnode_id": "a0993e7a-a3cf-11ed-8a45-5254004d77d3",
                     "edgeid": "a16eaed1-92b9-4c80-b6bf-6f553442490e",
                     "graph_id": "2aa724d1-ffd3-4823-8ff1-15a385b9a407",
@@ -3316,6 +3706,15 @@
                 },
                 {
                     "description": null,
+                    "domainnode_id": "3a654236-2f7c-11ef-93ea-0242ac170006",
+                    "edgeid": "ae96c1b0-c958-4dce-b9b6-a2ddd559a4d4",
+                    "graph_id": "2aa724d1-ffd3-4823-8ff1-15a385b9a407",
+                    "name": null,
+                    "ontologyproperty": "http://www.cidoc-crm.org/cidoc-crm/P1_is_identified_by",
+                    "rangenode_id": "83ca1726-2f7c-11ef-93ea-0242ac170006"
+                },
+                {
+                    "description": null,
                     "domainnode_id": "7fc4ff0c-2800-11ef-8af0-0242ac120007",
                     "edgeid": "af998b28-6490-40b4-b500-188d41d63ddb",
                     "graph_id": "2aa724d1-ffd3-4823-8ff1-15a385b9a407",
@@ -3331,6 +3730,15 @@
                     "name": null,
                     "ontologyproperty": "http://www.ics.forth.gr/isl/CRMdig/L33_has_maker",
                     "rangenode_id": "01c483da-a3d0-11ed-8919-5254004d77d3"
+                },
+                {
+                    "description": null,
+                    "domainnode_id": "5dfe07ea-9dc0-11ed-82b6-5254004d77d3",
+                    "edgeid": "b341165e-81cf-4fda-8775-86f47b2b583d",
+                    "graph_id": "2aa724d1-ffd3-4823-8ff1-15a385b9a407",
+                    "name": null,
+                    "ontologyproperty": "http://www.cidoc-crm.org/cidoc-crm/P14_carried_out_by",
+                    "rangenode_id": "8d6de362-2f7b-11ef-aca8-0242ac170006"
                 },
                 {
                     "description": null,
@@ -3691,6 +4099,15 @@
                     "name": null,
                     "ontologyproperty": "http://www.cidoc-crm.org/cidoc-crm/P1_is_identified_by",
                     "rangenode_id": "ff4fb7c8-a361-11ed-b0ab-5254004d77d3"
+                },
+                {
+                    "description": null,
+                    "domainnode_id": "a48e1732-c371-11ed-bb65-5254004d77d3",
+                    "edgeid": "ff94557e-9a63-4f1e-8b2c-e745797e7709",
+                    "graph_id": "2aa724d1-ffd3-4823-8ff1-15a385b9a407",
+                    "name": null,
+                    "ontologyproperty": "http://www.cidoc-crm.org/cidoc-crm/P129i_is_subject_of",
+                    "rangenode_id": "1570c3ca-2f80-11ef-9e9f-0242ac170006"
                 }
             ],
             "functions_x_graphs": [
@@ -3762,8 +4179,20 @@
                 {
                     "cardinality": "1",
                     "legacygroupid": null,
+                    "nodegroupid": "1570c3ca-2f80-11ef-9e9f-0242ac170006",
+                    "parentnodegroup_id": "a48e1732-c371-11ed-bb65-5254004d77d3"
+                },
+                {
+                    "cardinality": "1",
+                    "legacygroupid": null,
                     "nodegroupid": "333303da-c372-11ed-9dd3-5254004d77d3",
                     "parentnodegroup_id": null
+                },
+                {
+                    "cardinality": "1",
+                    "legacygroupid": null,
+                    "nodegroupid": "3a654236-2f7c-11ef-93ea-0242ac170006",
+                    "parentnodegroup_id": "333303da-c372-11ed-9dd3-5254004d77d3"
                 },
                 {
                     "cardinality": "n",
@@ -4457,6 +4886,29 @@
                     "sourcebranchpublication_id": null
                 },
                 {
+                    "alias": null,
+                    "config": {
+                        "en": ""
+                    },
+                    "datatype": "semantic",
+                    "description": null,
+                    "exportable": false,
+                    "fieldname": null,
+                    "graph_id": "2aa724d1-ffd3-4823-8ff1-15a385b9a407",
+                    "hascustomalias": false,
+                    "is_collector": true,
+                    "isrequired": false,
+                    "issearchable": true,
+                    "istopnode": false,
+                    "name": "Site Assessment Final Report",
+                    "nodegroup_id": "1570c3ca-2f80-11ef-9e9f-0242ac170006",
+                    "nodeid": "1570c3ca-2f80-11ef-9e9f-0242ac170006",
+                    "ontologyclass": "http://www.cidoc-crm.org/cidoc-crm/E31_Document",
+                    "parentproperty": "http://www.cidoc-crm.org/cidoc-crm/P129i_is_subject_of",
+                    "sortorder": 3,
+                    "sourcebranchpublication_id": null
+                },
+                {
                     "alias": "land_act_file_number",
                     "config": {
                         "en": ""
@@ -4476,7 +4928,7 @@
                     "nodeid": "22631346-9e5c-11ed-9f51-5254004d77d3",
                     "ontologyclass": "http://www.cidoc-crm.org/cidoc-crm/E42_Identifier",
                     "parentproperty": "http://www.cidoc-crm.org/cidoc-crm/P1_is_identified_by",
-                    "sortorder": 3,
+                    "sortorder": 4,
                     "sourcebranchpublication_id": null
                 },
                 {
@@ -4665,6 +5117,29 @@
                     "sourcebranchpublication_id": null
                 },
                 {
+                    "alias": "impact_mitigation_final_report",
+                    "config": {
+                        "en": ""
+                    },
+                    "datatype": "semantic",
+                    "description": null,
+                    "exportable": false,
+                    "fieldname": null,
+                    "graph_id": "2aa724d1-ffd3-4823-8ff1-15a385b9a407",
+                    "hascustomalias": false,
+                    "is_collector": true,
+                    "isrequired": false,
+                    "issearchable": true,
+                    "istopnode": false,
+                    "name": "Impact Mitigation Final Report",
+                    "nodegroup_id": "3a654236-2f7c-11ef-93ea-0242ac170006",
+                    "nodeid": "3a654236-2f7c-11ef-93ea-0242ac170006",
+                    "ontologyclass": "http://www.cidoc-crm.org/cidoc-crm/E31_Document",
+                    "parentproperty": "http://www.cidoc-crm.org/cidoc-crm/P70i_is_documented_in",
+                    "sortorder": 2,
+                    "sourcebranchpublication_id": null
+                },
+                {
                     "alias": "site_assessment_photographs",
                     "config": {
                         "activateMax": false,
@@ -4687,7 +5162,7 @@
                     "nodeid": "3b016ade-d785-11ee-b1e5-080027b7463b",
                     "ontologyclass": "http://www.ics.forth.gr/isl/CRMdig/D13_Digital_Information_Carrier",
                     "parentproperty": "http://www.cidoc-crm.org/cidoc-crm/P17_was_motivated_by",
-                    "sortorder": 0,
+                    "sortorder": 2,
                     "sourcebranchpublication_id": null
                 },
                 {
@@ -4971,6 +5446,38 @@
                     "sourcebranchpublication_id": null
                 },
                 {
+                    "alias": "fmo_imfr_approval_status",
+                    "config": {
+                        "falseLabel": {
+                            "en": "Requires Changes"
+                        },
+                        "i18n_properties": [
+                            "trueLabel",
+                            "falseLabel"
+                        ],
+                        "trueLabel": {
+                            "en": "Accepted"
+                        }
+                    },
+                    "datatype": "boolean",
+                    "description": null,
+                    "exportable": false,
+                    "fieldname": null,
+                    "graph_id": "2aa724d1-ffd3-4823-8ff1-15a385b9a407",
+                    "hascustomalias": false,
+                    "is_collector": false,
+                    "isrequired": false,
+                    "issearchable": true,
+                    "istopnode": false,
+                    "name": "FMO IMFR Approval Status",
+                    "nodegroup_id": "3a654236-2f7c-11ef-93ea-0242ac170006",
+                    "nodeid": "4893c54c-2f7e-11ef-9621-0242ac170006",
+                    "ontologyclass": "http://www.cidoc-crm.org/cidoc-crm/E3_Condition_State",
+                    "parentproperty": "http://www.cidoc-crm.org/cidoc-crm/P129_is_about",
+                    "sortorder": 3,
+                    "sourcebranchpublication_id": null
+                },
+                {
                     "alias": "psr_fmo_internal_notes",
                     "config": {
                         "en": ""
@@ -4990,6 +5497,29 @@
                     "nodeid": "49c1384e-a3d1-11ed-afdd-5254004d77d3",
                     "ontologyclass": "http://www.ics.forth.gr/isl/CRMdig/D29_Annotation_Object",
                     "parentproperty": "http://www.cidoc-crm.org/cidoc-crm/P15_was_influenced_by",
+                    "sortorder": 0,
+                    "sourcebranchpublication_id": null
+                },
+                {
+                    "alias": "safr_number",
+                    "config": {
+                        "en": ""
+                    },
+                    "datatype": "string",
+                    "description": null,
+                    "exportable": false,
+                    "fieldname": null,
+                    "graph_id": "2aa724d1-ffd3-4823-8ff1-15a385b9a407",
+                    "hascustomalias": false,
+                    "is_collector": false,
+                    "isrequired": false,
+                    "issearchable": true,
+                    "istopnode": false,
+                    "name": "SAFR Number",
+                    "nodegroup_id": "1570c3ca-2f80-11ef-9e9f-0242ac170006",
+                    "nodeid": "4aac7520-2f80-11ef-9e9f-0242ac170006",
+                    "ontologyclass": "http://www.cidoc-crm.org/cidoc-crm/E42_Identifier",
+                    "parentproperty": "http://www.cidoc-crm.org/cidoc-crm/P1_is_identified_by",
                     "sortorder": 0,
                     "sourcebranchpublication_id": null
                 },
@@ -5116,7 +5646,7 @@
                     "nodeid": "59c1b050-3c49-11ee-9268-080027b7463b",
                     "ontologyclass": "http://www.cidoc-crm.org/cidoc-crm/E42_Identifier",
                     "parentproperty": "http://www.cidoc-crm.org/cidoc-crm/P1_is_identified_by",
-                    "sortorder": 4,
+                    "sortorder": 0,
                     "sourcebranchpublication_id": null
                 },
                 {
@@ -5351,7 +5881,7 @@
                     "nodeid": "694922ec-9dc0-11ed-8d8e-5254004d77d3",
                     "ontologyclass": "http://www.cidoc-crm.org/cidoc-crm/E39_Actor",
                     "parentproperty": "http://www.cidoc-crm.org/cidoc-crm/P11_had_participant",
-                    "sortorder": 2,
+                    "sortorder": 3,
                     "sourcebranchpublication_id": null
                 },
                 {
@@ -5783,6 +6313,32 @@
                     "sourcebranchpublication_id": null
                 },
                 {
+                    "alias": "safr_document",
+                    "config": {
+                        "activateMax": false,
+                        "imagesOnly": false,
+                        "maxFileSize": null,
+                        "maxFiles": 1
+                    },
+                    "datatype": "file-list",
+                    "description": null,
+                    "exportable": false,
+                    "fieldname": null,
+                    "graph_id": "2aa724d1-ffd3-4823-8ff1-15a385b9a407",
+                    "hascustomalias": false,
+                    "is_collector": false,
+                    "isrequired": false,
+                    "issearchable": true,
+                    "istopnode": false,
+                    "name": "SAFR Document",
+                    "nodegroup_id": "1570c3ca-2f80-11ef-9e9f-0242ac170006",
+                    "nodeid": "71703fb6-2f80-11ef-9e9f-0242ac170006",
+                    "ontologyclass": "http://www.ics.forth.gr/isl/CRMdig/D1_Digital_Object",
+                    "parentproperty": "http://www.ics.forth.gr/isl/CRMdig/L54i_is_same-as",
+                    "sortorder": 1,
+                    "sourcebranchpublication_id": null
+                },
+                {
                     "alias": "ground_disturbance",
                     "config": {
                         "rdmCollection": "7bdb3902-4541-44d7-bd54-ac144326e677"
@@ -5874,7 +6430,7 @@
                     "nodeid": "7e4cac36-c372-11ed-914a-5254004d77d3",
                     "ontologyclass": "http://www.cidoc-crm.org/cidoc-crm/E89_Propositional_Object",
                     "parentproperty": "http://www.cidoc-crm.org/cidoc-crm/P17_was_motivated_by",
-                    "sortorder": 0,
+                    "sortorder": 1,
                     "sourcebranchpublication_id": null
                 },
                 {
@@ -6306,6 +6862,29 @@
                     "sourcebranchpublication_id": null
                 },
                 {
+                    "alias": "imfr_number",
+                    "config": {
+                        "en": ""
+                    },
+                    "datatype": "string",
+                    "description": null,
+                    "exportable": false,
+                    "fieldname": null,
+                    "graph_id": "2aa724d1-ffd3-4823-8ff1-15a385b9a407",
+                    "hascustomalias": false,
+                    "is_collector": false,
+                    "isrequired": false,
+                    "issearchable": true,
+                    "istopnode": false,
+                    "name": "IMFR Number",
+                    "nodegroup_id": "3a654236-2f7c-11ef-93ea-0242ac170006",
+                    "nodeid": "83ca1726-2f7c-11ef-93ea-0242ac170006",
+                    "ontologyclass": "http://www.cidoc-crm.org/cidoc-crm/E42_Identifier",
+                    "parentproperty": "http://www.cidoc-crm.org/cidoc-crm/P1_is_identified_by",
+                    "sortorder": 0,
+                    "sourcebranchpublication_id": null
+                },
+                {
                     "alias": "proposed_activity",
                     "config": {
                         "en": ""
@@ -6409,6 +6988,29 @@
                     "sourcebranchpublication_id": null
                 },
                 {
+                    "alias": "industry_company_name",
+                    "config": {
+                        "en": ""
+                    },
+                    "datatype": "string",
+                    "description": null,
+                    "exportable": false,
+                    "fieldname": null,
+                    "graph_id": "2aa724d1-ffd3-4823-8ff1-15a385b9a407",
+                    "hascustomalias": false,
+                    "is_collector": false,
+                    "isrequired": false,
+                    "issearchable": true,
+                    "istopnode": false,
+                    "name": "Industry Company Name",
+                    "nodegroup_id": "5dfe07ea-9dc0-11ed-82b6-5254004d77d3",
+                    "nodeid": "8d6de362-2f7b-11ef-aca8-0242ac170006",
+                    "ontologyclass": "http://www.cidoc-crm.org/cidoc-crm/E39_Actor",
+                    "parentproperty": "http://www.cidoc-crm.org/cidoc-crm/P14_carried_out_by",
+                    "sortorder": 0,
+                    "sourcebranchpublication_id": null
+                },
+                {
                     "alias": "cfp_title",
                     "config": {
                         "en": ""
@@ -6478,6 +7080,29 @@
                     "sourcebranchpublication_id": null
                 },
                 {
+                    "alias": "fmo_imfr_comments",
+                    "config": {
+                        "en": ""
+                    },
+                    "datatype": "string",
+                    "description": null,
+                    "exportable": false,
+                    "fieldname": null,
+                    "graph_id": "2aa724d1-ffd3-4823-8ff1-15a385b9a407",
+                    "hascustomalias": false,
+                    "is_collector": false,
+                    "isrequired": false,
+                    "issearchable": true,
+                    "istopnode": false,
+                    "name": "FMO IMFR Comments",
+                    "nodegroup_id": "3a654236-2f7c-11ef-93ea-0242ac170006",
+                    "nodeid": "98d9db1e-2f7d-11ef-a029-0242ac170006",
+                    "ontologyclass": "http://www.ics.forth.gr/isl/CRMdig/D29_Annotation_Object",
+                    "parentproperty": "http://www.cidoc-crm.org/cidoc-crm/P129i_is_subject_of",
+                    "sortorder": 2,
+                    "sourcebranchpublication_id": null
+                },
+                {
                     "alias": "psr_recommendation",
                     "config": {
                         "en": ""
@@ -6498,6 +7123,29 @@
                     "ontologyclass": "http://www.cidoc-crm.org/cidoc-crm/E73_Information_Object",
                     "parentproperty": "http://www.cidoc-crm.org/cidoc-crm/P67i_is_referred_to_by",
                     "sortorder": 0,
+                    "sourcebranchpublication_id": null
+                },
+                {
+                    "alias": "fmo_safr_comments",
+                    "config": {
+                        "en": ""
+                    },
+                    "datatype": "string",
+                    "description": null,
+                    "exportable": false,
+                    "fieldname": null,
+                    "graph_id": "2aa724d1-ffd3-4823-8ff1-15a385b9a407",
+                    "hascustomalias": false,
+                    "is_collector": false,
+                    "isrequired": false,
+                    "issearchable": true,
+                    "istopnode": false,
+                    "name": "FMO SAFR Comments",
+                    "nodegroup_id": "1570c3ca-2f80-11ef-9e9f-0242ac170006",
+                    "nodeid": "9a38535c-2f80-11ef-9e9f-0242ac170006",
+                    "ontologyclass": "http://www.ics.forth.gr/isl/CRMdig/D29_Annotation_Object",
+                    "parentproperty": "http://www.cidoc-crm.org/cidoc-crm/P129i_is_subject_of",
+                    "sortorder": 2,
                     "sourcebranchpublication_id": null
                 },
                 {
@@ -6624,6 +7272,32 @@
                     "ontologyclass": "http://www.cidoc-crm.org/cidoc-crm/E14_Condition_Assessment",
                     "parentproperty": "http://www.ics.forth.gr/isl/CRMsci/O13_triggers",
                     "sortorder": 0,
+                    "sourcebranchpublication_id": null
+                },
+                {
+                    "alias": "imfr_document",
+                    "config": {
+                        "activateMax": false,
+                        "imagesOnly": false,
+                        "maxFileSize": null,
+                        "maxFiles": 1
+                    },
+                    "datatype": "file-list",
+                    "description": null,
+                    "exportable": false,
+                    "fieldname": null,
+                    "graph_id": "2aa724d1-ffd3-4823-8ff1-15a385b9a407",
+                    "hascustomalias": false,
+                    "is_collector": false,
+                    "isrequired": false,
+                    "issearchable": true,
+                    "istopnode": false,
+                    "name": "IMFR Document",
+                    "nodegroup_id": "3a654236-2f7c-11ef-93ea-0242ac170006",
+                    "nodeid": "a861d380-2f7c-11ef-93ea-0242ac170006",
+                    "ontologyclass": "http://www.cidoc-crm.org/cidoc-crm/E31_Document",
+                    "parentproperty": "http://www.ics.forth.gr/isl/CRMdig/L54i_is_same-as",
+                    "sortorder": 1,
                     "sourcebranchpublication_id": null
                 },
                 {
@@ -6932,6 +7606,38 @@
                     "sourcebranchpublication_id": null
                 },
                 {
+                    "alias": "fmo_safr_approval_status",
+                    "config": {
+                        "falseLabel": {
+                            "en": "Requires Changes"
+                        },
+                        "i18n_properties": [
+                            "trueLabel",
+                            "falseLabel"
+                        ],
+                        "trueLabel": {
+                            "en": "Accepted"
+                        }
+                    },
+                    "datatype": "boolean",
+                    "description": null,
+                    "exportable": false,
+                    "fieldname": null,
+                    "graph_id": "2aa724d1-ffd3-4823-8ff1-15a385b9a407",
+                    "hascustomalias": false,
+                    "is_collector": false,
+                    "isrequired": false,
+                    "issearchable": true,
+                    "istopnode": false,
+                    "name": "FMO SAFR Approval Status",
+                    "nodegroup_id": "1570c3ca-2f80-11ef-9e9f-0242ac170006",
+                    "nodeid": "b2c0f604-2f80-11ef-9e9f-0242ac170006",
+                    "ontologyclass": "http://www.cidoc-crm.org/cidoc-crm/E3_Condition_State",
+                    "parentproperty": "http://www.cidoc-crm.org/cidoc-crm/P129_is_about",
+                    "sortorder": 0,
+                    "sourcebranchpublication_id": null
+                },
+                {
                     "alias": "psr_fmo_assessment",
                     "config": {
                         "en": ""
@@ -7043,7 +7749,7 @@
                     "nodeid": "d4d462c2-9e58-11ed-b6d5-5254004d77d3",
                     "ontologyclass": "http://www.cidoc-crm.org/cidoc-crm/E27_Site",
                     "parentproperty": "http://www.cidoc-crm.org/cidoc-crm/P10_falls_within",
-                    "sortorder": 1,
+                    "sortorder": 2,
                     "sourcebranchpublication_id": null
                 },
                 {
@@ -7587,7 +8293,7 @@
                     "nodeid": "df94dc8e-a356-11ed-b966-5254004d77d3",
                     "ontologyclass": "http://www.cidoc-crm.org/cidoc-crm/E40_Legal_Body",
                     "parentproperty": "http://www.ics.forth.gr/isl/CRMdig/L29_has_responsible_organization",
-                    "sortorder": 0,
+                    "sortorder": 1,
                     "sourcebranchpublication_id": null
                 },
                 {
@@ -7834,7 +8540,7 @@
                     "nodeid": "e939481a-c372-11ed-b586-5254004d77d3",
                     "ontologyclass": "http://www.cidoc-crm.org/cidoc-crm/E7_Activity",
                     "parentproperty": "http://www.cidoc-crm.org/cidoc-crm/P20_had_specific_purpose",
-                    "sortorder": 0,
+                    "sortorder": 1,
                     "sourcebranchpublication_id": null
                 },
                 {
@@ -8409,8 +9115,8 @@
             "publication": {
                 "graph_id": "2aa724d1-ffd3-4823-8ff1-15a385b9a407",
                 "notes": null,
-                "publicationid": "09067a76-2f71-11ef-b360-0242ac170006",
-                "published_time": "2024-06-20T20:53:20.100"
+                "publicationid": "d195bdf2-2f81-11ef-9e9f-0242ac170006",
+                "published_time": "2024-06-20T22:53:28.531"
             },
             "relatable_resource_model_ids": [],
             "resource_2_resource_constraints": [],
