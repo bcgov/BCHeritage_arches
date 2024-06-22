@@ -51,9 +51,29 @@ define([
                             {key: "LOCAL_NAME", title: "Local Name: "},
                         ]
                     },
+                "WHSE_BASEMAPPING.GBA_LOCAL_REG_GREENSPACES_SP":
+                    {
+                        displayname: [{"key": "PARK_NAME", title: ""}],
+                        "map_popup": [ ]
+                    },
                 "WHSE_BASEMAPPING.TRIM_CONTOUR_LINES":
                     {
                         displayname: [{"key": "ELEVATION", title: "Elevation (m):"}],
+                        "map_popup": []
+                    },
+                "WHSE_ADMIN_BOUNDARIES.ADM_NR_DISTRICTS_SPG":
+                    {
+                        displayname: [{"key": "DISTRICT_NAME", title: ""}],
+                        "map_popup": []
+                    },
+                "WHSE_BASEMAPPING.NTS_50K_GRID":
+                    {
+                        displayname: [{"key": "MAP_TILE_DISPLAY_NAME", title: ""}],
+                        "map_popup": []
+                    },
+                "WHSE_BASEMAPPING.NTS_250K_GRID":
+                    {
+                        displayname: [{"key": "MAP_TILE_DISPLAY_NAME", title: ""}],
                         "map_popup": []
                     },
                 "map_data.fiss_frpc_br":
@@ -79,12 +99,20 @@ define([
                 "WHSE_MINERAL_TENURE.GEOL_BEDROCK_UNIT_POLY_SVW",
                 "WHSE_ADMIN_BOUNDARIES.EBC_REGIONAL_DISTRICTS_SP",
                 "WHSE_LEGAL_ADMIN_BOUNDARIES.ABMS_MUNICIPALITIES_SP",
-                "WHSE_TANTALIS.TA_PARK_ECORES_PA_SVW",
-                "WHSE_ADMIN_BOUNDARIES.CLAB_NATIONAL_PARKS",
+                "WHSE_TANTALIS.TA_PARK_ECORES_PA_SVW",            /* Parks - Provincial */
+                "WHSE_ADMIN_BOUNDARIES.CLAB_NATIONAL_PARKS",      /* Parks - National */
+                "WHSE_BASEMAPPING.GBA_LOCAL_REG_GREENSPACES_SP",  /* Parks - Municipal */
+                "WHSE_ADMIN_BOUNDARIES.ADM_NR_DISTRICTS_SPG",
+                "WHSE_BASEMAPPING.NTS_50K_GRID",
+                "WHSE_BASEMAPPING.NTS_250K_GRID",
+                "WHSE_MINERAL_TENURE.GEOL_BEDROCK_UNIT_POLY_SVW",  /* Bedrock Geology */
                 "map_data.fiss_frpc_br",
                 "map_data.fiss_frpc_ovb",
-                "c6651266-10c6-11ec-adef-5254008afee6", /* Important Areas Resource layer */
+                "5bfa1354-b6e1-11ee-9438-080027b7463b", /* Collection Event */
                 "2336968c-1035-11ec-a3aa-5254008afee6", /* Fossil Site layer */
+                "2bb08950-a880-11ed-95a4-5254004d77d3", /* IPA */
+                "c6651266-10c6-11ec-adef-5254008afee6", /* Important Areas Resource layer */
+                "dd19c7c6-0202-11ed-a511-0050568377a0", /* Provincially Protected Fossil Site */
                 "9f2c9e28-dedb-11ed-ac5a-5254004d77d3", /* BC Fossil Project Sandbox */
             ],
 
