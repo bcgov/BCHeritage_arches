@@ -360,7 +360,7 @@ from publication_details pd
                         where volume.publication_type = 'Volume / Publication Number'
                         ) pp on pp.publication_uuid = pd.parent_publication;
 
-drop materialized view publication.mv_ce_publication_summary cascade;
+drop materialized view if exists publication.mv_ce_publication_summary cascade;
 create materialized view publication.mv_ce_publication_summary as
 select collection_event,
        array_to_string(array_agg(distinct publication_year order by publication_year), '; ') publication_years,
