@@ -45,7 +45,7 @@ class CustomSearchValue:
         import arches.app.models.tile as tile
         custom_values = set(())
 
-        print("Slug: %s" % resourceinstance.graph.slug)
+        # print("Slug: %s" % resourceinstance.graph.slug)
         if resourceinstance.graph.slug == GraphSlugs.COLLECTION_EVENT:
             resourceinstance.load_tiles()
             # print("Node values: %s" % str(resourceinstance.get_node_values(sample_node.name)))
@@ -106,7 +106,7 @@ class CustomSearchValue:
         import arches.app.models.tile as tile
         sample_nodes = CustomSearchValue.sample_nodes
         custom_values = set(())
-        print("Sample: %s" % type(sample))
+        # print("Sample: %s" % type(sample))
         sample_id = sample["resourceId"] if type(sample) == dict else sample.resourceinstanceid
         related_tiles = tile.Tile.objects.filter(resourceinstance_id=sample_id,
                                                  nodegroup__nodegroupid=sample_nodes[fsa.SCIENTIFIC_NAME].nodegroup_id).all()
@@ -120,7 +120,7 @@ class CustomSearchValue:
             custom_values.add(name_val)
             custom_values.add(common_val)
 
-        print("Returning: %s" % custom_values)
+        #print("Returning: %s" % custom_values)
         return custom_values
 
 
