@@ -143,35 +143,13 @@ create materialized view mv_heritage_function as
                                                   __arches_get_concept_label(unnest(functional_state));
 create index mv_hf_idx on mv_heritage_function(resourceinstanceid);
 
-drop materialized view if exists mv_heritage_class cascade;
-create materialized view mv_heritage_class as
-    select resourceinstanceid,
-        jsonb_agg(
-            jsonb_build_object(
-                'resource_count', contributing_resource_count,
-                'ownership', __arches_get_concept_label(ownership),
-                'category', __arches_get_concept_label(heritage_category)
-            )
-        ) heritage_class
-    from heritage_site.heritage_class group by resourceinstanceid;
-create index mv_hf_idx on mv_heritage_class(resourceinstanceid);
-
-drop materialized view if exists mv_heritage_theme cascade;
-create materialized view mv_heritage_theme as
-    select resourceinstanceid,
-           __arches_get_concept_label(unnest(heritage_theme)) heritage_theme
-    from heritage_site.heritage_theme group by resourceinstanceid,
-                                                  __arches_get_concept_label(unnest(heritage_theme));
-create index mv_hf_idx on mv_heritage_theme(resourceinstanceid);
-
 drop materialized view if exists mv_construction_actors cascade;
 create materialized view mv_construction_actors as
-    select resourceinstanceid,
-        __arches_get_concept_label(construction_actor_type) actor_type,
-        array_agg(construction_actor->'en'->>'value') actors,
-        jsonb_array_elements_text(jsonb_agg(construction_actor_notes->'en'->>'value') - '') notes
-    from heritage_site.construction_actors
-    group by resourceinstanceid, __arches_get_concept_label(construction_actor_type);
+select resourceinstanceid,
+       __arches_get_concept_label(construction_actor_type) actor_type,
+       array_agg(construction_actor->'en'->>'value') actors
+        from heritage_site.construction_actors
+group by resourceinstanceid, __arches_get_concept_label(construction_actor_type);
 create index mv_ca_idx on mv_construction_actors(resourceinstanceid);
 
 create or replace function bc_get_utm_zone(point geometry) returns int as
@@ -233,8 +211,6 @@ BEGIN
     refresh materialized view mv_construction_actors;
     refresh materialized view mv_government;
     refresh materialized view mv_heritage_function;
-    refresh materialized view mv_heritage_class;
-    refresh materialized view mv_heritage_theme;
     refresh materialized view mv_legal_description;
     refresh materialized view mv_property_address;
     refresh materialized view mv_protection_event;
@@ -368,7 +344,7 @@ select distinct bn.resourceinstanceid site_id,
 --                 prop.pin,
 --                 prop.legal_description,
 --                 msra.restricted,
---                 msra.bcrhp_submission_status,
+--                ,msra.bcrhp_submission_status
 --                 msra.date_submitted_to_crhp,
 --                 msra.federal_id_number
 from mv_borden_number bn
