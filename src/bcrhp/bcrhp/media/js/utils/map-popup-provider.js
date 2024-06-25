@@ -8,10 +8,12 @@ define([
             layerConfigs: {
                 "WHSE_CADASTRE.PMBC_PARCEL_FABRIC_POLY_SVW":
                     {displayname: [{"key": "PID", title:""}],
-                        "map_popup": [{key: "OWNER_TYPE", title: "Owner Type: "},
-                            {key: "PLAN_NUMBER", title: "Plan #: "},
-                            {key: "PARCEL_CLASS", title: "Parcel Class: "},
+                        "map_popup": [
+                            {key: "OWNER_TYPE", title: "Owner Type: "},
                             {key: "MUNICIPALITY", title: "Municipality: "},
+                            {key: "PID", title: "PID: "},
+                            {key: "PIN", title: "PIN: "},
+                            {key: "LEGAL_DESCRIPTION", title: "Legal Description: "},  // NOTE: did not see listed as a key in databc
                             {key: "REGIONAL_DISTRICT", title: "Parcel Status: "},
                             {key: "PARCEL_STATUS", title: "Parcel Status: "},
                             {key: "PARCEL_START_DATE", title: "Parcel Start Date: "},
@@ -30,6 +32,11 @@ define([
                             {key: "ADMIN_AREA_BOUNDARY_TYPE", title: "Type: "},
                             {key: "AFFECTED_ADMIN_AREA_ABRVN", title: "Affected Area: "},
                         ]
+                    },
+                "WHSE_ADMIN_BOUNDARIES.ADM_INDIAN_RESERVES_BANDS_SP":
+                    {
+                        displayname: [{"key": "BAND_NAME", title: ""}],
+                        "map_popup": [{"key": "BAND_NAME", title: "Band Name: "}],
                     },
                 "WHSE_ADMIN_BOUNDARIES.CLAB_INDIAN_RESERVES":
                     {
@@ -54,6 +61,32 @@ define([
                     {
                         displayname: [{"key": "BORDGRID", title: ""}],
                         "map_popup": [ ]
+                    },
+                "WHSE_TANTALIS.TA_SURVEY_PARCELS_SVW":
+                    {
+                        displayname: [{"key": "LAND_TITLE_OFFICE_IDENTIFIER", title: ""}],
+                        "map_popup": [
+                            {"key": "LAND_TITLE_OFFICE_IDENTIFIER", title: "Identifier: "},
+                            {"key": "PARCEL_TYPE", title: "Parcel Type: "}
+                        ]
+                    },
+                "WHSE_LEGAL_ADMIN_BOUNDARIES.ADM_TOURISM_REGIONS_SP":
+                    {
+                        displayname: [{"key": "TOURISM_REGION_NAME", title: ""}],
+                        "map_popup": [{"key": "TOURISM_REGION_NAME", title: "Region Name: "}]
+                    },
+                "WHSE_LEGAL_ADMIN_BOUNDARIES.ABMS_ISLANDS_TRUST_SP":
+                    {
+                        displayname: [{"key": "ADMIN_AREA_NAME", title: ""}],
+                        "map_popup": [{"key": "ADMIN_AREA_NAME", title: "Admin Area Name: "}]
+                    },
+                "WHSE_LEGAL_ADMIN_BOUNDARIES.ABMS_LOCAL_TRUST_AREAS_SP":
+                    {
+                        displayname: [{"key": "ADMIN_AREA_NAME", title: ""}],
+                        "map_popup": [
+                            {"key": "ADMIN_AREA_NAME", title: "Admin Area Name: "},
+                            {"key": "ADMIN_AREA_GROUP_NAME", title: "Admin Area Group Name: "},
+                        ]
                     },
 
             },
