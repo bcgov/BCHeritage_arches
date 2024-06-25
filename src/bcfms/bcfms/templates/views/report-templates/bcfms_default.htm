@@ -13,7 +13,6 @@
         <div class="ep-form-toolbar-tools mar-no flex">
             <p class="report-print-date">
                 <span data-bind="text: reportDate"></span>
-                <span data-bind="text: reportDate"></span>
             </p>
         </div>
     </div>
@@ -34,6 +33,10 @@
                 <!-- ko if: report.get('name') == "Fossil Collection Event" -->
                 <!--div>Publication</div-->
                 {% include 'views/report-templates/details/collection_event.htm' %}
+                <!-- /ko -->
+                <!-- ko if: report.get('name') == "Contributor" -->
+                <!--div>Publication</div-->
+                {% include 'views/report-templates/details/contributor.htm' %}
                 <!-- /ko -->
             </div>
         </div>

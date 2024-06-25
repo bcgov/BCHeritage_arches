@@ -60,8 +60,9 @@ define([
 
         this.nodesHaveData = function(aliases, requireAll = false)
         {
+            const aliases_array = Array.isArray(aliases) ? aliases : [aliases];
             let values =  [];
-            _.each(aliases, alias => {
+            _.each(aliases_array, alias => {
                 values.push(getNodeValues(alias));
             });
             return !!_.find(_.flatten(values), value => {
