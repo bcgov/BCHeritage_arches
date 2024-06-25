@@ -38,6 +38,10 @@
                 <!--div>Publication</div-->
                 {% include 'views/report-templates/details/contributor.htm' %}
                 <!-- /ko -->
+                <!-- ko if: report.get('name') == "Important Fossil Area" -->
+                <!--div>Important Fossil Area</div-->
+                {% include 'views/report-templates/details/important_fossil_area.htm' %}
+                <!-- /ko -->
             </div>
         </div>
     </div>
