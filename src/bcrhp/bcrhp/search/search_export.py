@@ -14,10 +14,8 @@ class BCRHPSearchResultsExporter(SearchResultsExporter):
                     where array_position(%s, site_id::text) is not null
                 """, [collection_ids])
                 columns = [desc[0] for desc in cur.description]
-                instance_results = [dict(zip(instance_columns, row)) for row in cur.fetchall()]
-                print(instance_results[0])
-
-                return super().to_csv(instance_results, instance_columns, name)
+                results = [dict(zip(columns, row)) for row in cur.fetchall()]
+                return super().to_csv(results, columns, name)
 
         return super().to_csv(instances, headers, name)
 
