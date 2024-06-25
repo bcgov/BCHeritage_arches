@@ -1,0 +1,32 @@
+{
+  "name": "Indigenous Reserve Boundaries",
+  "sources": {
+    "indigenous-reserve-admin-boundaries-source": {
+      "type": "vector",
+      "tiles": [
+        "/{ url_context_root }/bctileserver/geo/pub/WHSE_ADMIN_BOUNDARIES.CLAB_INDIAN_RESERVES/ows?service=WMS&request=GetMap&layers=WHSE_ADMIN_BOUNDARIES.CLAB_INDIAN_RESERVES&styles=&format=pbf&transparent=true&version=1.1.1&height=512&width=512&srs=EPSG:3857&bbox={bbox-epsg-3857}"
+      ],
+      "tileSize": 512
+    }
+  },
+  "layers": [
+    {
+      "id": "indigenous-reserve-admin-boundaries",
+      "type": "line",
+      "source": "indigenous-reserve-admin-boundaries-source",
+      "source-layer": "WHSE_ADMIN_BOUNDARIES.CLAB_INDIAN_RESERVES"
+    },
+    {
+      "id": "indian-reserve-admin-boundaries-symbol",
+      "type": "symbol",
+      "source": "indigenous-reserve-admin-boundaries-source",
+      "source-layer": "WHSE_ADMIN_BOUNDARIES.CLAB_INDIAN_RESERVES",
+      "layout": {
+        "text-field": "{ENGLISH_NAME}"
+      },
+      "paint": {
+        "text-color": "#333333"
+      }
+    }
+  ]
+}
