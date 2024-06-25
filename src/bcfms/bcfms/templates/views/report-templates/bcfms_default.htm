@@ -42,6 +42,10 @@
                 <!--div>Important Fossil Area</div-->
                 {% include 'views/report-templates/details/important_fossil_area.htm' %}
                 <!-- /ko -->
+                <!-- ko if: report.get('name') == "Fossil Type" -->
+                <!--div>Fossil Type</div-->
+                {% include 'views/report-templates/details/fossil_type.htm' %}
+                <!-- /ko -->
             </div>
         </div>
     </div>

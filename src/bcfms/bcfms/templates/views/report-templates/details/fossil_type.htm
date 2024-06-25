@@ -1,0 +1,46 @@
+<div class="bc-grid-container">
+    <div class="bc-grid-item grid-col-1 grid-row-1">
+        <dl class="dl-vertical dl-vertical-bc" >
+            <dt>Name Type</dt>
+            <dd>
+                <div>
+                    <div class="name_type" data-bind="component: { name: 'concept-select-widget',
+                                            params: { value: getFirstNodeValue('name_type'), state: 'display_value' }}">
+                    </div>
+                </div>
+            </dd>
+        </dl>
+    </div>
+    <div class="bc-grid-item grid-col-1 grid-row-2" data-bind="visible: nodesHaveData(['size_category'])">
+        <dl class="dl-vertical dl-vertical-bc" >
+            <dt>Size Category</dt>
+            <dd>
+                <div>
+                    <div class="size_category" data-bind="component: { name: 'concept-select-widget',
+                                            params: { value: getFirstNodeValue('size_category'), state: 'display_value' }}">
+                    </div>
+                </div>
+            </dd>
+        </dl>
+    </div>
+    <div class="bc-grid-item grid-col-1 grid-row-3" data-bind="visible: nodesHaveData(['alternate_names'])">
+        <dl class="dl-vertical dl-vertical-bc" >
+            <dt>Related Names</dt>
+            <dd>
+                <div class="alternate_names" data-bind="component: { name: 'resource-instance-multiselect-widget',
+                                            params: { value: getFirstNodeValue('alternate_names'), state: 'display_value' }
+                                            }">
+
+                </div>
+            </dd>
+        </dl>
+    </div>
+    <div class="bc-grid-item grid-col-1 grid-row-4" data-bind="visible: nodesHaveData('default_significance')">
+        <dl class="dl-vertical dl-vertical-bc" >
+            <dt>Default Significance</dt>
+            <dd>
+                <div data-bind="text: getFirstBooleanValueLabel('default_significance')"></div>
+            </dd>
+        </dl>
+    </div>
+</div>
