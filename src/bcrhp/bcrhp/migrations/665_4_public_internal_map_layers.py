@@ -13,7 +13,7 @@ class Migration(migrations.Migration):
     operations = [
         RunPrivilegedSQL(
             """
-            update map_layers set ispublic=true where name ('Borden Grid', 'Cadastral ParcelMap', 'Rivers', 'Streams');
+            update map_layers set ispublic=true where name in ('Borden Grid', 'Cadastral ParcelMap', 'Rivers', 'Streams');
             update map_layers set ispublic=false where name = 'Crown Tenures';
             """,
             """

@@ -25,6 +25,19 @@
         "line-color": "rgb(26, 95, 177)",
         "line-width": 1
       }
+    },
+    {
+      "id": "tourism-regions-symbol",
+      "type": "symbol",
+      "source": "tourism-regions-source",
+      "minzoom": 7,
+      "source-layer": "WHSE_LEGAL_ADMIN_BOUNDARIES.ADM_TOURISM_REGIONS_SP",
+      "layout": {
+        "text-field": "{TOURISM_REGION_NAME}"
+      },
+      "paint": {
+        "text-color": "rgb(26, 95, 177)"
+      }
     }
   ]
 }

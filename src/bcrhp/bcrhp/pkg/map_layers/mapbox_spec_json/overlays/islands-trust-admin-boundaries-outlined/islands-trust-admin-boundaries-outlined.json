@@ -25,6 +25,19 @@
         "line-color": "rgb(255, 255, 255)",
         "line-width": 1
       }
+    },
+    {
+      "id": "islands-trust-admin-boundaries-outlined-symbol",
+      "type": "symbol",
+      "source": "islands-trust-admin-boundaries-outlined-source",
+      "minzoom": 7,
+      "source-layer": "WHSE_LEGAL_ADMIN_BOUNDARIES.ADM_TOURISM_REGIONS_SP",
+      "layout": {
+        "text-field": "{ADMIN_AREA_NAME}"
+      },
+      "paint": {
+        "text-color": "rgb(255, 255, 255)"
+      }
     }
   ]
 }
