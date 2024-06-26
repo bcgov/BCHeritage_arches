@@ -1,4 +1,7 @@
 {% extends "views/report-templates/default.htm" %}
+{% load static %}
+{% load template_tags %}
+{% load webpack_static from webpack_loader %}
 {% load i18n %}
 
 {% block summary %}
@@ -45,6 +48,10 @@
                 <!-- ko if: report.get('name') == "Fossil Type" -->
                 <!--div>Fossil Type</div-->
                 {% include 'views/report-templates/details/fossil_type.htm' %}
+                <!-- /ko -->
+                <!-- ko if: report.get('name') == "Industry Project Assessment" -->
+                <!--div>Industry Project Assessment</div-->
+                {% include 'views/report-templates/details/industry_project_assessment.htm' %}
                 <!-- /ko -->
             </div>
         </div>

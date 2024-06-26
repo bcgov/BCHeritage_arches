@@ -12,6 +12,15 @@ define([
         var self = this;
         self.urls = arches.urls;
 
+        this.projectDetailsVisible =  ko.observable(true);
+        this.projectSiteVisible =  ko.observable(true);
+        this.initialProjectReviewVisible = ko.observable(true);
+        this.psrVisible = ko.observable(true);
+        this.fiaVisible = ko.observable(true);
+        this.cfpVisible = ko.observable(true);
+        this.impVisible = ko.observable(true);
+        this.sapVisible = ko.observable(true);
+
         var getAllWidgets = function(card) {
             return _.flatten([ko.unwrap(card.tiles).length === 0 ? [] : ko.unwrap(card.widgets),
                 _.map(card.cards(), subcard => {return getAllWidgets(subcard); })]);
