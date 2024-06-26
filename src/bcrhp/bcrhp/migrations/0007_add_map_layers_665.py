@@ -8,21 +8,21 @@ from bcrhp.settings import APP_ROOT
 
 mapbox_overlays_dir = f'{APP_ROOT}/pkg/map_layers/mapbox_spec_json/overlays'
 
-def forward():
+def forward(apps, schema_editor):
     call_command('packages', operation='add_mapbox_layer',
                  layer_name='Islands Trust Administrative Boundaries Outlined',
-                 mapbox_layer_path=f'{mapbox_overlays_dir}/.json')
+                 mapbox_json_path=f'{mapbox_overlays_dir}/islands-trust-admin-boundaries-outlined/islands-trust-admin-boundaries-outlined.json')
     call_command('packages', operation='add_mapbox_layer',
                  layer_name='Local Trust Administrative Boundaries',
-                 mapbox_layer_path=f'{mapbox_overlays_dir}/.json')
+                 mapbox_json_path=f'{mapbox_overlays_dir}/local-trust-admin-boundaries/local-trust-admin-boundaries.json')
     call_command('packages', operation='add_mapbox_layer',
                  layer_name='Tourism Regions',
-                 mapbox_layer_path=f'{mapbox_overlays_dir}/.json')
+                 mapbox_json_path=f'{mapbox_overlays_dir}/tourism-regions/tourism-regions.json')
     call_command('packages', operation='add_mapbox_layer',
                  layer_name='Tantalis Surveyed Parcel',
-                 mapbox_layer_path=f'{mapbox_overlays_dir}/.json')
+                 mapbox_json_path=f'{mapbox_overlays_dir}/tantalis-surveyed-parcel/tantalis-surveyed-parcel.json')
 
-def backward():
+def backward(apps, schema_editor):
     call_command('packages', operation='delete_mapbox_layer', layer_name='Islands Trust Administrative Boundaries Outlined')
     call_command('packages', operation='delete_mapbox_layer', layer_name='Local Trust Administrative Boundaries')
     call_command('packages', operation='delete_mapbox_layer', layer_name='Tourism Regions')
