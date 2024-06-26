@@ -1,6 +1,6 @@
 {
   "name": "Local Trust Admin Boundaries",
-  "sources" {
+  "sources": {
     "local-trust-admin-boundaries-source": {
       "type": "vector",
       "tiles": [
@@ -10,7 +10,7 @@
     }
   },
   "arches-metadata": {
-    "isPublic": false
+    "ispublic": false
   },
   "layers": [
     {
@@ -20,7 +20,7 @@
       "source-layer": "WHSE_LEGAL_ADMIN_BOUNDARIES.ABMS_LOCAL_TRUST_AREAS_SP",
       "minzoom": 0,
       "maxzoom": 20,
-      "paint" {
+      "paint": {
         "line-color": "rbg(255, 255, 255)",
         "line-width": 1
       }
