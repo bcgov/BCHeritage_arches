@@ -1,5 +1,19 @@
 /* Front page */
 
+.app-info-manual {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+    align-items: center;
+    padding-right: 15px; /* This is for the .app-info-block to not have the container on the right edge */
+}
+
+.app-info-manual-item img {
+    width: 100%;
+    max-width: 200px;
+    height: auto;
+}
+
 .bc-splash-caption {
     background: rgba(0, 0, 0, 0.6);
     padding: 5px !important;
@@ -14,7 +28,7 @@
     /*margin-right: 20px;*/
     /*line-height: 1.4;*/
     /*padding: 0 5px;*/
-    /*font-size: unset;*/
+    font-size: 16px !important;
     /*font-weight: unset;*/
     color: #003366;
     opacity: 60%;
