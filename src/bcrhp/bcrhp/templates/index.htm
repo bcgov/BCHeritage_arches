@@ -244,11 +244,27 @@ along with this program. If not, see <http://www.gnu.org/licenses/>.
                     </div>
 
                     <div class="info-section">
-                                <!--                                <h2 class="app-info-block-header">{% trans "What are Historic Places?" %}</h2>-->
-                                <h3 class="app-info-block-title">{% trans "ARCHES is Designed to be Intuitive. View the Manual" %}</h3>
-                                <p class="app-info-block-text">
-                                    {% trans "Consult our two-page handy Instruction manual to help you navigate throughout the ARCHES interface, " %}<a target="bchp_manual" href="https://www2.gov.bc.ca/assets/gov/british-columbians-our-governments/our-history/historic-places/documents/heritage/user_guide_for_bc_historic_places_web_map_app.pdf">{% trans "available for download" %}</a>.
-                                </p>
+                            <h3 class="app-info-block-title">{% trans "Arches is designed to be intuitive" %}</h3>
+                            <p class="app-info-block-text">
+                                {% trans "Click on the thumbnails below to access the user guides to help you navigate the Arches interface:" %}
+                            </p>
+                            <div class="app-info-manual">
+                                <div class="app-info-manual-item">
+                                    <a href="">
+                                        <img alt="How to Search Guide" src="{% webpack_static 'img/front/manual-with-text-1.jpg' %}" />
+                                    </a>
+                                </div>
+                                <div class="app-info-manual-item">
+                                    <a href="">
+                                        <img alt="Advanced Search Guide" src="{% webpack_static 'img/front/manual-with-text-2.jpg' %}" />
+                                    </a>
+                                </div>
+                                <div class="app-info-manual-item">
+                                    <a href="">
+                                        <img alt="Basic Search Guide" src="{% webpack_static 'img/front/manual-with-text-3.jpg' %}" />
+                                    </a>
+                                </div>
+                            </div>
                     </div>
 
                 </div>
@@ -345,7 +361,10 @@ along with this program. If not, see <http://www.gnu.org/licenses/>.
                         <div class="app-info-block-intro">
                             <h3 class="app-info-block-title">{% trans "Contact the Heritage Branch" %}</h3>
                             <p class="app-info-block-text">
-                                {% trans "For more information about historic places or to report any issues, please contact the" %}<a target="heritage_branch" href="https://www2.gov.bc.ca/gov/content/governments/celebrating-british-columbia/historic-places"> {% trans "Heritage Branch" %}</a>
+                                {% trans "For more information or to report any issues please contact the Heritage Branch at" %}<a target="mail_address" href="mailto:heritage@gov.bc.ca"> {% trans "heritage@gov.bc.ca" %}</a>{% trans "or visit our" %}<a target="heritage_branch" href="https://www2.gov.bc.ca/gov/content/governments/celebrating-british-columbia/historic-places"> {% trans "website." %}</a>
+                            </p>
+                            <p class="app-info-block-text">
+                                {% trans "The Heritage Branch acknowledges it carries out its work on the traditional territories of Indigenous nations throughout British Columbia. We pay our respects to the Elders, past and present, descendants and custodians of these lands. We honour the knowledge keepers and the continuing relationships with Indigenous peoples in BC that develop through our work together. The Heritage Branch is grateful to the Lkwungen-speaking people, today known as the Esquimalt and Songhees First Nations, on whose traditional territories we operate our main offices." %}
                             </p>
                         </div>
                     </div>
