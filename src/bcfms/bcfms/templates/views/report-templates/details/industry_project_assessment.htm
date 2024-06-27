@@ -75,7 +75,7 @@
     <!-- /ko -->
 
     <!-- ko let: {targetSection: 'initial_project_review_section', sectionController: initialProjectReviewVisible,
-    sectionHasData: nodesHaveData(['psr_number','psr_recommendation','psr_fmo_approval_status'])} -->
+    sectionHasData: nodesHaveData(['psr_number','psr_recommendations','psr_fmo_approval_status'])} -->
     <div class="rp-card-section">
         <span class="rp-tile-title" data-bind="css: {'empty-section': !sectionHasData}">Initial Project Review</span>
         <i class="fa report-expander print-hide fa-angle-down" tabindex="0" role="button"
@@ -116,7 +116,7 @@
     <!-- /ko -->
 
     <!-- ko let: {targetSection: 'psr_section', sectionController: psrVisible,
-    sectionHasData: nodesHaveData(['psr_number','psr_recommendation','psr_fmo_approval_status'])} -->
+    sectionHasData: nodesHaveData(['psr_number','psr_recommendations','psr_fmo_approval_status'])} -->
     <div class="rp-card-section">
         <span class="rp-tile-title" data-bind="css: {'empty-section': !sectionHasData}">Preliminary Study Report (PSR)</span>
         <i class="fa report-expander print-hide fa-angle-down" tabindex="0" role="button"
@@ -141,11 +141,11 @@
                 </dl>
             </div>
             <div style="display: inline-flex; width: 100%; justify-content: space-between;"
-                 data-bind="visible: nodesHaveData('psr_recommendation')">
+                 data-bind="visible: nodesHaveData('psr_recommendations')">
                 <dl class="dl-horizontal">
                     <dt>PSR Recommendations</dt>
                     <dd data-bind="component: { name: 'text-widget',
-                                            params: { value: ko.unwrap(getFirstNodeValue('psr_recommendation')), state: 'display_value'}
+                                            params: { value: ko.unwrap(getFirstNodeValue('psr_recommendations')), state: 'display_value'}
                                             }"></dd>
                 </dl>
             </div>
@@ -164,7 +164,7 @@
     <!-- /ko -->
 
     <!-- ko let: {targetSection: 'fia_section', sectionController: fiaVisible,
-    sectionHasData: nodesHaveData(['fiap_report_number','fiap_report_recommendation','fiap_fmo_approval_status','fia_report_number','fia_report_recommendation','fia_fmo_approval_status'])} -->
+    sectionHasData: nodesHaveData(['fiap_report_number','fiap_report_recommendations','fiap_fmo_approval_status','fia_report_number','fia_report_recommendations','fia_fmo_approval_status'])} -->
     <div class="rp-card-section">
         <span class="rp-tile-title" data-bind="css: {'empty-section': !sectionHasData}">Fossil Impact Assessment (FIA)</span>
         <i class="fa report-expander print-hide fa-angle-down" tabindex="0" role="button"
@@ -189,11 +189,11 @@
                 </dl>
             </div>
             <div style="display: inline-flex; width: 100%; justify-content: space-between;"
-                 data-bind="visible: nodesHaveData('fiap_report_recommendation')">
+                 data-bind="visible: nodesHaveData('fiap_report_recommendations')">
                 <dl class="dl-horizontal">
                     <dt>FIA Plan Report Recommendations</dt>
                     <dd data-bind="component: { name: 'text-widget',
-                                            params: { value: ko.unwrap(getFirstNodeValue('fiap_report_recommendation')), state: 'display_value'}
+                                            params: { value: ko.unwrap(getFirstNodeValue('fiap_report_recommendations')), state: 'display_value'}
                                             }"></dd>
                 </dl>
             </div>
@@ -217,11 +217,11 @@
                 </dl>
             </div>
             <div style="display: inline-flex; width: 100%; justify-content: space-between;"
-                 data-bind="visible: nodesHaveData('fia_report_recommendation')">
+                 data-bind="visible: nodesHaveData('fia_report_recommendations')">
                 <dl class="dl-horizontal">
                     <dt>FIA Report Recommendations</dt>
                     <dd data-bind="component: { name: 'text-widget',
-                                            params: { value: ko.unwrap(getFirstNodeValue('fia_report_recommendation')), state: 'display_value'}
+                                            params: { value: ko.unwrap(getFirstNodeValue('fia_report_recommendations')), state: 'display_value'}
                                             }"></dd>
                 </dl>
             </div>
