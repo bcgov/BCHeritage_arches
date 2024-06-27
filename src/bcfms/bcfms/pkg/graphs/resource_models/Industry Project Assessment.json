@@ -2513,7 +2513,7 @@
                             "placeholder"
                         ],
                         "label": "Project Name",
-                        "maxLength": null,
+                        "maxLength": "120",
                         "placeholder": {
                             "en": "Enter text"
                         },
@@ -2838,7 +2838,7 @@
                             "placeholder"
                         ],
                         "label": "Land Act File Number",
-                        "maxLength": null,
+                        "maxLength": "40",
                         "placeholder": {
                             "en": "Enter text"
                         },
@@ -3203,7 +3203,7 @@
                             "placeholder"
                         ],
                         "label": "Industry Company Name",
-                        "maxLength": null,
+                        "maxLength": "80",
                         "placeholder": {
                             "en": "Name of the company responsible for the project"
                         },
@@ -5228,7 +5228,7 @@
                     },
                     "function_id": "60000000-0000-0000-0000-000000001001",
                     "graph_id": "2aa724d1-ffd3-4823-8ff1-15a385b9a407",
-                    "id": "64af0d9a-1a4a-462f-8905-21643e22a630"
+                    "id": "7e35fea2-bba8-46b7-acc9-01abdfd649bc"
                 }
             ],
             "graphid": "2aa724d1-ffd3-4823-8ff1-15a385b9a407",
@@ -10283,8 +10283,8 @@
             "publication": {
                 "graph_id": "2aa724d1-ffd3-4823-8ff1-15a385b9a407",
                 "notes": null,
-                "publicationid": "8e306a58-33e1-11ef-8a44-005056a3bc47",
-                "published_time": "2024-06-26T12:28:51.797"
+                "publicationid": "bc2767a6-34d4-11ef-960d-0242ac170009",
+                "published_time": "2024-06-27T17:29:36.618"
             },
             "relatable_resource_model_ids": [],
             "resource_2_resource_constraints": [],
@@ -10319,9 +10319,9 @@
         }
     ],
     "metadata": {
-        "db": "PostgreSQL 16.1 on x86_64-pc-linux-gnu, compiled by gcc (GCC) 11.4.1 20230605 (Red Hat 11.4.1-2), 64-bit",
-        "git hash": "fatal: not a git repository (or any parent up to mount point /fs)",
+        "db": "PostgreSQL 16.3 (Debian 16.3-1.pgdg110+1) on x86_64-pc-linux-gnu, compiled by gcc (Debian 10.2.1-6) 10.2.1 20210110, 64-bit",
+        "git hash": "6928cbe43 2024-06-21 15:22:35 -0700",
         "os": "Linux",
-        "os version": "5.14.0-427.18.1.el9_4.x86_64"
+        "os version": "6.6.31-linuxkit"
     }
 }
