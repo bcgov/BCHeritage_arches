@@ -72,12 +72,13 @@ define([
             const aliases_array = Array.isArray(aliases) ? aliases : [aliases];
             let values =  [];
             _.each(aliases_array, alias => {
-                values.push(getNodeValues(alias));
+                values.push(getNodeValues(alias)[0]);
             });
-            const foundValue =  !!_.find(_.flatten(values), value => {
-                return typeof(value) === "object" && "en" in value ? !!ko.unwrap(value["en"].value) : ko.unwrap(value) === false || !!ko.unwrap(value);
+            const foundValue =  !!_.some(_.flatten(values), value => {
+                return typeof(value) === "object" && "en" in value ? !!ko.unwrap(value["en"].value) :
+                    ko.unwrap(value) === false || !!ko.unwrap(value);
             });
-            return foundValue === false || !!foundValue;
+            return foundValue;
         }
 
         this.getFirstNodeValue = function(alias) {
@@ -112,7 +113,9 @@ define([
 
             var value = getNodeValues(alias)[0];
 
-            return ko.unwrap(!!value ? widget.node.config.trueLabel : widget.node.config.falseLabel);
+
+            return typeof value === "undefined" ? "" :
+                ko.unwrap(!!value ? widget.node.config.trueLabel : widget.node.config.falseLabel);
         };
 
         this.scientificNames = ko.computed(function() {
