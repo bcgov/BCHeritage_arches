@@ -688,7 +688,7 @@
                         "en": "Impact Mitigation Final Report"
                     },
                     "nodegroup_id": "3a654236-2f7c-11ef-93ea-0242ac170006",
-                    "sortorder": 1,
+                    "sortorder": 2,
                     "visible": true
                 },
                 {
@@ -853,7 +853,7 @@
                         "en": "FMO Plan Response"
                     },
                     "node_id": "02413b88-c373-11ed-af52-5254004d77d3",
-                    "sortorder": 3,
+                    "sortorder": 2,
                     "visible": true,
                     "widget_id": "10000000-0000-0000-0000-000000000005"
                 },
@@ -882,7 +882,7 @@
                         "en": "Internal Notes"
                     },
                     "node_id": "024139f8-c373-11ed-af52-5254004d77d3",
-                    "sortorder": 0,
+                    "sortorder": 3,
                     "visible": true,
                     "widget_id": "10000000-0000-0000-0000-000000000005"
                 },
@@ -897,9 +897,56 @@
                         "en": "SAP FMO Approval Status"
                     },
                     "node_id": "0241382c-c373-11ed-af52-5254004d77d3",
-                    "sortorder": 1,
+                    "sortorder": 0,
                     "visible": true,
                     "widget_id": "10000000-0000-0000-0000-000000000006"
+                },
+                {
+                    "card_id": "95b5f427-0064-4b75-a17e-838a65b73cc4",
+                    "config": {
+                        "defaultValue": "",
+                        "i18n_properties": [
+                            "placeholder"
+                        ],
+                        "label": "Proximity to Fossils",
+                        "options": [
+                            {
+                                "children": [],
+                                "collector": "",
+                                "conceptid": "0b9dbd01-32f2-4e26-9c17-f6555f1f0924",
+                                "id": "d6578b0a-a292-4847-a3f5-20187cc5692c",
+                                "sortorder": "",
+                                "text": "High"
+                            },
+                            {
+                                "children": [],
+                                "collector": "",
+                                "conceptid": "0da27ece-bc63-4a40-bd52-bd6b1cfdb8ac",
+                                "id": "b43fe9e6-7741-4fcd-a1ba-767aeefb364c",
+                                "sortorder": "",
+                                "text": "Low"
+                            },
+                            {
+                                "children": [],
+                                "collector": "",
+                                "conceptid": "79bb5289-5364-4f46-95c3-d729392a953f",
+                                "id": "823cfc3f-bdcc-4dc8-ac07-a303be33b223",
+                                "sortorder": "",
+                                "text": "Medium"
+                            }
+                        ],
+                        "placeholder": {
+                            "en": "Select an option"
+                        }
+                    },
+                    "id": "03d949c2-7f4d-433e-b4b7-9632bbd3c8f4",
+                    "label": {
+                        "en": "Proximity to Fossils"
+                    },
+                    "node_id": "12d2778a-a958-11ed-9961-5254004d77d3",
+                    "sortorder": 0,
+                    "visible": true,
+                    "widget_id": "10000000-0000-0000-0000-000000000002"
                 },
                 {
                     "card_id": "dc10018f-670c-43c3-9b4c-d001f392dedd",
@@ -908,7 +955,7 @@
                         "i18n_properties": [
                             "placeholder"
                         ],
-                        "label": "FMO Comments on Impact Mitigation Final Report",
+                        "label": "IMFR FMO Internal Notes",
                         "maxLength": null,
                         "placeholder": {
                             "en": "Enter text"
@@ -918,12 +965,60 @@
                     },
                     "id": "050d39f3-e31a-45dd-b7d6-abd3160360c4",
                     "label": {
-                        "en": "FMO Comments on Impact Mitigation Final Report"
+                        "en": "IMFR FMO Internal Notes"
                     },
                     "node_id": "98d9db1e-2f7d-11ef-a029-0242ac170006",
-                    "sortorder": 2,
+                    "sortorder": 5,
                     "visible": true,
                     "widget_id": "10000000-0000-0000-0000-000000000001"
+                },
+                {
+                    "card_id": "95b5f427-0064-4b75-a17e-838a65b73cc4",
+                    "config": {
+                        "defaultValue": "",
+                        "i18n_properties": [
+                            "placeholder"
+                        ],
+                        "label": "FRPR",
+                        "options": [
+                            {
+                                "children": [],
+                                "collector": "",
+                                "conceptid": "0b9dbd01-32f2-4e26-9c17-f6555f1f0924",
+                                "id": "d6578b0a-a292-4847-a3f5-20187cc5692c",
+                                "sortorder": "",
+                                "text": "High"
+                            },
+                            {
+                                "children": [],
+                                "collector": "",
+                                "conceptid": "0da27ece-bc63-4a40-bd52-bd6b1cfdb8ac",
+                                "id": "b43fe9e6-7741-4fcd-a1ba-767aeefb364c",
+                                "sortorder": "",
+                                "text": "Low"
+                            },
+                            {
+                                "children": [],
+                                "collector": "",
+                                "conceptid": "79bb5289-5364-4f46-95c3-d729392a953f",
+                                "id": "823cfc3f-bdcc-4dc8-ac07-a303be33b223",
+                                "sortorder": "",
+                                "text": "Medium"
+                            }
+                        ],
+                        "placeholder": {
+                            "en": "Select an option"
+                        },
+                        "url": "/int/bc-fossil-management/concepts/dropdown?conceptid=a979b729-9aa1-4aa6-877e-a61be5b83134"
+                    },
+                    "id": "066bac24-0f98-4798-99fa-ed1133f7b291",
+                    "label": {
+                        "en": "FRPR"
+                    },
+                    "node_id": "8c706cd8-a961-11ed-9c3b-5254004d77d3",
+                    "sortorder": 7,
+                    "visible": true,
+                    "widget_id": "10000000-0000-0000-0000-000000000009"
                 },
                 {
                     "card_id": "7e4cb186-c372-11ed-914a-5254004d77d3",
@@ -956,6 +1051,35 @@
                     "widget_id": "10000000-0000-0000-0000-000000000106"
                 },
                 {
+                    "card_id": "8a17d272-b08e-4fbc-acae-00054245095d",
+                    "config": {
+                        "defaultValue": {
+                            "en": {
+                                "direction": "ltr",
+                                "value": ""
+                            }
+                        },
+                        "i18n_properties": [
+                            "placeholder"
+                        ],
+                        "label": "PSR FMO Internal Notes",
+                        "maxLength": "80",
+                        "placeholder": {
+                            "en": "Enter text"
+                        },
+                        "uneditable": false,
+                        "width": "100%"
+                    },
+                    "id": "08d8cb64-e4b5-4438-9abe-eada5ab9e823",
+                    "label": {
+                        "en": "PSR FMO Internal Notes"
+                    },
+                    "node_id": "49c1384e-a3d1-11ed-afdd-5254004d77d3",
+                    "sortorder": 3,
+                    "visible": true,
+                    "widget_id": "10000000-0000-0000-0000-000000000005"
+                },
+                {
                     "card_id": "7e4cb186-c372-11ed-914a-5254004d77d3",
                     "config": {
                         "defaultResourceInstance": [],
@@ -972,7 +1096,7 @@
                         "en": "SAP Paleo Company"
                     },
                     "node_id": "7e4cc0fe-c372-11ed-914a-5254004d77d3",
-                    "sortorder": 6,
+                    "sortorder": 3,
                     "visible": true,
                     "widget_id": "31f3728c-7613-11e7-a139-784f435179ea"
                 },
@@ -993,9 +1117,37 @@
                         "en": "IMP Paleo Company"
                     },
                     "node_id": "6d2bc784-c372-11ed-aa09-5254004d77d3",
-                    "sortorder": 6,
+                    "sortorder": 3,
                     "visible": true,
                     "widget_id": "31f3728c-7613-11e7-a139-784f435179ea"
+                },
+                {
+                    "card_id": "01071c17-58bb-4718-a62e-1eb9a2418dcd",
+                    "config": {
+                        "defaultValue": {
+                            "en": {
+                                "direction": "ltr"
+                            }
+                        },
+                        "i18n_properties": [
+                            "placeholder"
+                        ],
+                        "label": "External Contact",
+                        "maxLength": "80",
+                        "placeholder": {
+                            "en": "Enter text"
+                        },
+                        "uneditable": false,
+                        "width": "100%"
+                    },
+                    "id": "0baaa43a-1f6f-44e3-bcb5-3cfb39262c5f",
+                    "label": {
+                        "en": "External Contact"
+                    },
+                    "node_id": "baa986d0-d8ad-11ee-a275-080027b7463b",
+                    "sortorder": 1,
+                    "visible": true,
+                    "widget_id": "10000000-0000-0000-0000-000000000001"
                 },
                 {
                     "card_id": "d024d4e2-a41b-44cd-aad3-d3a851a2b8ca",
@@ -1044,7 +1196,7 @@
                     "node_id": "ddea6b7a-e0bc-11ee-ba58-080027b7463b",
                     "sortorder": 3,
                     "visible": true,
-                    "widget_id": "10000000-0000-0000-0000-000000000001"
+                    "widget_id": "10000000-0000-0000-0000-000000000005"
                 },
                 {
                     "card_id": "6d2bbce4-c372-11ed-aa09-5254004d77d3",
@@ -1060,7 +1212,7 @@
                         "en": "Mitigation Plan File"
                     },
                     "node_id": "6d2bc450-c372-11ed-aa09-5254004d77d3",
-                    "sortorder": 4,
+                    "sortorder": 5,
                     "visible": true,
                     "widget_id": "10000000-0000-0000-0000-000000000019"
                 },
@@ -1107,7 +1259,54 @@
                         "en": "Fossil Repository Agreement"
                     },
                     "node_id": "3c2dce92-e000-11ee-bb3e-080027b7463b",
-                    "sortorder": 2,
+                    "sortorder": 1,
+                    "visible": true,
+                    "widget_id": "10000000-0000-0000-0000-000000000009"
+                },
+                {
+                    "card_id": "95b5f427-0064-4b75-a17e-838a65b73cc4",
+                    "config": {
+                        "defaultValue": "",
+                        "i18n_properties": [
+                            "placeholder"
+                        ],
+                        "label": "Initial Review Level of Risk",
+                        "options": [
+                            {
+                                "children": [],
+                                "collector": "",
+                                "conceptid": "0b9dbd01-32f2-4e26-9c17-f6555f1f0924",
+                                "id": "d6578b0a-a292-4847-a3f5-20187cc5692c",
+                                "sortorder": "",
+                                "text": "High"
+                            },
+                            {
+                                "children": [],
+                                "collector": "",
+                                "conceptid": "0da27ece-bc63-4a40-bd52-bd6b1cfdb8ac",
+                                "id": "b43fe9e6-7741-4fcd-a1ba-767aeefb364c",
+                                "sortorder": "",
+                                "text": "Low"
+                            },
+                            {
+                                "children": [],
+                                "collector": "",
+                                "conceptid": "79bb5289-5364-4f46-95c3-d729392a953f",
+                                "id": "823cfc3f-bdcc-4dc8-ac07-a303be33b223",
+                                "sortorder": "",
+                                "text": "Medium"
+                            }
+                        ],
+                        "placeholder": {
+                            "en": "Select an option"
+                        }
+                    },
+                    "id": "12a46701-dcd1-4084-a4cf-977ba2a47c7b",
+                    "label": {
+                        "en": "Initial Review Level of Risk"
+                    },
+                    "node_id": "da887b6a-a310-11ed-a1af-5254004d77d3",
+                    "sortorder": 8,
                     "visible": true,
                     "widget_id": "10000000-0000-0000-0000-000000000009"
                 },
@@ -1131,7 +1330,7 @@
                         "en": "SAP Consultant Report Number"
                     },
                     "node_id": "7e4cb988-c372-11ed-914a-5254004d77d3",
-                    "sortorder": 3,
+                    "sortorder": 4,
                     "visible": true,
                     "widget_id": "10000000-0000-0000-0000-000000000001"
                 },
@@ -1153,7 +1352,7 @@
                         "en": "Quaternary deposits"
                     },
                     "node_id": "24ca8016-a95f-11ed-a61b-5254004d77d3",
-                    "sortorder": 3,
+                    "sortorder": 6,
                     "visible": true,
                     "widget_id": "10000000-0000-0000-0000-000000000002"
                 },
@@ -1174,19 +1373,14 @@
                         "en": "Lead Paleontology Consultant"
                     },
                     "node_id": "01c483da-a3d0-11ed-8919-5254004d77d3",
-                    "sortorder": 6,
+                    "sortorder": 2,
                     "visible": true,
                     "widget_id": "31f3728c-7613-11e7-a139-784f435179ea"
                 },
                 {
                     "card_id": "219de984-0354-481f-8829-da2e7011c9b1",
                     "config": {
-                        "defaultValue": {
-                            "en": {
-                                "direction": "ltr",
-                                "value": ""
-                            }
-                        },
+                        "defaultValue": "",
                         "i18n_properties": [
                             "placeholder"
                         ],
@@ -1240,7 +1434,7 @@
                         "en": "Sedimentary rock"
                     },
                     "node_id": "bb88875a-a95f-11ed-ab02-5254004d77d3",
-                    "sortorder": 4,
+                    "sortorder": 5,
                     "visible": true,
                     "widget_id": "10000000-0000-0000-0000-000000000002"
                 },
@@ -1249,16 +1443,16 @@
                     "config": {
                         "acceptedFiles": ".pdf",
                         "defaultValue": [],
-                        "label": "Impact Mitigation Final Report",
+                        "label": "IMFR File",
                         "maxFilesize": "50",
                         "rerender": true
                     },
                     "id": "19be9c8a-8e93-40fb-b91f-1a3796c6abab",
                     "label": {
-                        "en": "Impact Mitigation Final Report"
+                        "en": "IMFR File"
                     },
                     "node_id": "a861d380-2f7c-11ef-93ea-0242ac170006",
-                    "sortorder": 1,
+                    "sortorder": 4,
                     "visible": true,
                     "widget_id": "10000000-0000-0000-0000-000000000019"
                 },
@@ -1298,7 +1492,8 @@
                         ],
                         "placeholder": {
                             "en": "Select an option"
-                        }
+                        },
+                        "url": "/int/bc-fossil-management/concepts/dropdown?conceptid=37eccecb-dac0-435c-85a3-b1163c4a4cfb"
                     },
                     "id": "1aaa8c9b-d4c8-4903-87c2-3f4202029caa",
                     "label": {
@@ -1332,6 +1527,58 @@
                     "widget_id": "10000000-0000-0000-0000-000000000002"
                 },
                 {
+                    "card_id": "dc10018f-670c-43c3-9b4c-d001f392dedd",
+                    "config": {
+                        "defaultValue": {
+                            "en": {
+                                "direction": "ltr"
+                            }
+                        },
+                        "i18n_properties": [
+                            "placeholder"
+                        ],
+                        "label": "IMFR FMO Response",
+                        "maxLength": "80",
+                        "placeholder": {
+                            "en": "Enter text"
+                        },
+                        "uneditable": false,
+                        "width": "100%"
+                    },
+                    "id": "1f06c6be-78f0-4f6f-8a0d-f819ce1e2cec",
+                    "label": {
+                        "en": "IMFR FMO Response"
+                    },
+                    "node_id": "78a87a3c-33db-11ef-b47d-005056a3bc47",
+                    "sortorder": 3,
+                    "visible": true,
+                    "widget_id": "10000000-0000-0000-0000-000000000001"
+                },
+                {
+                    "card_id": "d64614b1-79e7-443b-878a-d885f2e0d4d1",
+                    "config": {
+                        "defaultValue": "",
+                        "i18n_properties": [
+                            "placeholder"
+                        ],
+                        "label": "Other Project Type",
+                        "maxLength": null,
+                        "placeholder": {
+                            "en": "Enter text"
+                        },
+                        "uneditable": false,
+                        "width": "100%%"
+                    },
+                    "id": "244dd278-2441-4277-bb48-68f396ed48f6",
+                    "label": {
+                        "en": "Other Project Type"
+                    },
+                    "node_id": "5cf1205c-a357-11ed-87ab-5254004d77d3",
+                    "sortorder": 1,
+                    "visible": true,
+                    "widget_id": "10000000-0000-0000-0000-000000000001"
+                },
+                {
                     "card_id": "224f7282-cbf6-49de-ab0d-67ba7fe19e93",
                     "config": {
                         "acceptedFiles": "",
@@ -1345,9 +1592,33 @@
                         "en": "PSR File"
                     },
                     "node_id": "78147c0c-a3d0-11ed-afdd-5254004d77d3",
-                    "sortorder": 3,
+                    "sortorder": 5,
                     "visible": true,
                     "widget_id": "10000000-0000-0000-0000-000000000019"
+                },
+                {
+                    "card_id": "d024d4e2-a41b-44cd-aad3-d3a851a2b8ca",
+                    "config": {
+                        "defaultValue": "",
+                        "i18n_properties": [
+                            "placeholder"
+                        ],
+                        "label": "CFP Response",
+                        "maxLength": "80",
+                        "placeholder": {
+                            "en": "Enter text"
+                        },
+                        "uneditable": false,
+                        "width": "100%%"
+                    },
+                    "id": "27938d1c-4387-4202-b4fe-5f5259082ba6",
+                    "label": {
+                        "en": "CFP Response"
+                    },
+                    "node_id": "8f6e2260-e0bd-11ee-ba58-080027b7463b",
+                    "sortorder": 2,
+                    "visible": true,
+                    "widget_id": "10000000-0000-0000-0000-000000000001"
                 },
                 {
                     "card_id": "9de5c571-f507-4df0-af17-a90204edd2db",
@@ -1386,12 +1657,41 @@
                     "widget_id": "31f3728c-7613-11e7-a139-784f435179ea"
                 },
                 {
+                    "card_id": "01071c17-58bb-4718-a62e-1eb9a2418dcd",
+                    "config": {
+                        "defaultValue": {
+                            "en": {
+                                "direction": "ltr",
+                                "value": ""
+                            }
+                        },
+                        "i18n_properties": [
+                            "placeholder"
+                        ],
+                        "label": "Communication Note",
+                        "maxLength": "80",
+                        "placeholder": {
+                            "en": "Enter text"
+                        },
+                        "uneditable": false,
+                        "width": "100%"
+                    },
+                    "id": "2bcd64c0-10c4-4852-b84f-651bed62d0ab",
+                    "label": {
+                        "en": "Communication Note"
+                    },
+                    "node_id": "f2199142-9dc5-11ed-a03b-5254004d77d3",
+                    "sortorder": 4,
+                    "visible": true,
+                    "widget_id": "10000000-0000-0000-0000-000000000001"
+                },
+                {
                     "card_id": "776d6362-f148-49f9-bf57-00a89ae8ad80",
                     "config": {
-                        "acceptedFiles": "",
+                        "acceptedFiles": ".pdf",
                         "defaultValue": [],
                         "label": "CFP Document",
-                        "maxFilesize": "200",
+                        "maxFilesize": "50",
                         "rerender": true
                     },
                     "id": "2dd6ba87-4877-4eef-a43c-ce4b6f57be9e",
@@ -1399,7 +1699,7 @@
                         "en": "CFP Document"
                     },
                     "node_id": "2d0614bc-e0bc-11ee-bc48-080027b7463b",
-                    "sortorder": 1,
+                    "sortorder": 4,
                     "visible": true,
                     "widget_id": "10000000-0000-0000-0000-000000000019"
                 },
@@ -1449,9 +1749,52 @@
                         "en": "Photograph View"
                     },
                     "node_id": "7eab0c44-dff6-11ee-beaf-080027b7463b",
-                    "sortorder": 0,
+                    "sortorder": 3,
                     "visible": true,
                     "widget_id": "10000000-0000-0000-0000-000000000001"
+                },
+                {
+                    "card_id": "95b5f427-0064-4b75-a17e-838a65b73cc4",
+                    "config": {
+                        "defaultValue": "",
+                        "i18n_properties": [
+                            "placeholder"
+                        ],
+                        "label": "Initial Review Internal Notes",
+                        "maxLength": null,
+                        "placeholder": {
+                            "en": "Enter text"
+                        },
+                        "uneditable": false,
+                        "width": "100%"
+                    },
+                    "id": "38534909-9f4d-4272-a8a8-6846356f537e",
+                    "label": {
+                        "en": "Initial Review Internal Notes"
+                    },
+                    "node_id": "7e0e1326-9dcb-11ed-a03b-5254004d77d3",
+                    "sortorder": 5,
+                    "visible": true,
+                    "widget_id": "10000000-0000-0000-0000-000000000001"
+                },
+                {
+                    "card_id": "01071c17-58bb-4718-a62e-1eb9a2418dcd",
+                    "config": {
+                        "defaultValue": "Date of Data Entry",
+                        "label": "Communication Date",
+                        "maxDate": false,
+                        "minDate": false,
+                        "placeholder": "Enter date",
+                        "viewMode": "days"
+                    },
+                    "id": "3b7c6475-83be-49b3-a7b2-7c11925713e6",
+                    "label": {
+                        "en": "Communication Date"
+                    },
+                    "node_id": "e2b5df44-9dc5-11ed-9ef3-5254004d77d3",
+                    "sortorder": 3,
+                    "visible": true,
+                    "widget_id": "10000000-0000-0000-0000-000000000004"
                 },
                 {
                     "card_id": "6d2bbce4-c372-11ed-aa09-5254004d77d3",
@@ -1473,7 +1816,7 @@
                         "en": "IMP Title"
                     },
                     "node_id": "6d2bc5e0-c372-11ed-aa09-5254004d77d3",
-                    "sortorder": 5,
+                    "sortorder": 1,
                     "visible": true,
                     "widget_id": "10000000-0000-0000-0000-000000000001"
                 },
@@ -1494,7 +1837,7 @@
                         "en": "CFP Paleo Company"
                     },
                     "node_id": "9e692b92-e0be-11ee-925d-080027b7463b",
-                    "sortorder": 4,
+                    "sortorder": 3,
                     "visible": true,
                     "widget_id": "31f3728c-7613-11e7-a139-784f435179ea"
                 },
@@ -1541,7 +1884,7 @@
                         "en": "IMP FMO Response"
                     },
                     "node_id": "e9395120-c372-11ed-b586-5254004d77d3",
-                    "sortorder": 0,
+                    "sortorder": 2,
                     "visible": true,
                     "widget_id": "10000000-0000-0000-0000-000000000001"
                 },
@@ -1566,6 +1909,35 @@
                     "widget_id": "10000000-0000-0000-0000-000000000004"
                 },
                 {
+                    "card_id": "219de984-0354-481f-8829-da2e7011c9b1",
+                    "config": {
+                        "defaultValue": {
+                            "en": {
+                                "direction": "ltr",
+                                "value": ""
+                            }
+                        },
+                        "i18n_properties": [
+                            "placeholder"
+                        ],
+                        "label": "Multiple Geometry Qualifier",
+                        "maxLength": null,
+                        "placeholder": {
+                            "en": "If muliple geomtries are used, enter the meaning of each geometry here."
+                        },
+                        "uneditable": false,
+                        "width": "100%"
+                    },
+                    "id": "44ffb19e-7337-4e72-a796-f34d698e0045",
+                    "label": {
+                        "en": "Multiple Geometry Qualifier"
+                    },
+                    "node_id": "c09e49bc-a880-11ed-a26e-5254004d77d3",
+                    "sortorder": 3,
+                    "visible": true,
+                    "widget_id": "10000000-0000-0000-0000-000000000005"
+                },
+                {
                     "card_id": "224f7282-cbf6-49de-ab0d-67ba7fe19e93",
                     "config": {
                         "defaultValue": "",
@@ -1585,7 +1957,7 @@
                         "en": "PSR Recommendation"
                     },
                     "node_id": "9a01982c-a3d0-11ed-8ef6-5254004d77d3",
-                    "sortorder": 1,
+                    "sortorder": 6,
                     "visible": true,
                     "widget_id": "10000000-0000-0000-0000-000000000001"
                 },
@@ -1609,7 +1981,7 @@
                         "en": "CFP Title"
                     },
                     "node_id": "8e95c04c-e0bc-11ee-9140-080027b7463b",
-                    "sortorder": 3,
+                    "sortorder": 1,
                     "visible": true,
                     "widget_id": "10000000-0000-0000-0000-000000000001"
                 },
@@ -1630,7 +2002,7 @@
                         "en": "PSR Paleo Company"
                     },
                     "node_id": "3c248dc8-a884-11ed-9606-5254004d77d3",
-                    "sortorder": 2,
+                    "sortorder": 3,
                     "visible": true,
                     "widget_id": "31f3728c-7613-11e7-a139-784f435179ea"
                 },
@@ -1648,9 +2020,33 @@
                         "en": "Site Assessment Final Report"
                     },
                     "node_id": "71703fb6-2f80-11ef-9e9f-0242ac170006",
-                    "sortorder": 1,
+                    "sortorder": 3,
                     "visible": true,
                     "widget_id": "10000000-0000-0000-0000-000000000019"
+                },
+                {
+                    "card_id": "8a17d272-b08e-4fbc-acae-00054245095d",
+                    "config": {
+                        "defaultValue": "",
+                        "i18n_properties": [
+                            "placeholder"
+                        ],
+                        "label": "PSR FMO Response",
+                        "maxLength": "80",
+                        "placeholder": {
+                            "en": "Enter text"
+                        },
+                        "uneditable": false,
+                        "width": "100%"
+                    },
+                    "id": "53e42f25-3c8c-48e4-b923-a428fa13dd01",
+                    "label": {
+                        "en": "PSR FMO Response"
+                    },
+                    "node_id": "599ef6f2-a3d1-11ed-8a45-5254004d77d3",
+                    "sortorder": 1,
+                    "visible": true,
+                    "widget_id": "10000000-0000-0000-0000-000000000001"
                 },
                 {
                     "card_id": "3b016d40-d785-11ee-b1e5-080027b7463b",
@@ -1677,7 +2073,7 @@
                         "en": "Photographer"
                     },
                     "node_id": "3b017100-d785-11ee-b1e5-080027b7463b",
-                    "sortorder": 0,
+                    "sortorder": 2,
                     "visible": true,
                     "widget_id": "10000000-0000-0000-0000-000000000001"
                 },
@@ -1725,7 +2121,7 @@
                         "en": "FIAP Report Title"
                     },
                     "node_id": "ff4fbaca-a361-11ed-b0ab-5254004d77d3",
-                    "sortorder": 6,
+                    "sortorder": 1,
                     "visible": true,
                     "widget_id": "10000000-0000-0000-0000-000000000001"
                 },
@@ -1749,7 +2145,7 @@
                         "en": "FIA Report Recommendations"
                     },
                     "node_id": "4cbd87a4-a3cd-11ed-a29e-5254004d77d3",
-                    "sortorder": 1,
+                    "sortorder": 6,
                     "visible": true,
                     "widget_id": "10000000-0000-0000-0000-000000000001"
                 },
@@ -1803,7 +2199,7 @@
                         "en": "IMP Consultant Report Number"
                     },
                     "node_id": "6d2bc108-c372-11ed-aa09-5254004d77d3",
-                    "sortorder": 3,
+                    "sortorder": 4,
                     "visible": true,
                     "widget_id": "10000000-0000-0000-0000-000000000001"
                 },
@@ -1827,7 +2223,107 @@
                         "en": "IMP Recommendations"
                     },
                     "node_id": "6d2bc91e-c372-11ed-aa09-5254004d77d3",
+                    "sortorder": 6,
+                    "visible": true,
+                    "widget_id": "10000000-0000-0000-0000-000000000005"
+                },
+                {
+                    "card_id": "95b5f427-0064-4b75-a17e-838a65b73cc4",
+                    "config": {
+                        "defaultValue": "",
+                        "i18n_properties": [
+                            "placeholder"
+                        ],
+                        "label": "Metamorphic rock",
+                        "options": [
+                            {
+                                "children": [],
+                                "collector": "",
+                                "conceptid": "0b9dbd01-32f2-4e26-9c17-f6555f1f0924",
+                                "id": "d6578b0a-a292-4847-a3f5-20187cc5692c",
+                                "sortorder": "",
+                                "text": "High"
+                            },
+                            {
+                                "children": [],
+                                "collector": "",
+                                "conceptid": "0da27ece-bc63-4a40-bd52-bd6b1cfdb8ac",
+                                "id": "b43fe9e6-7741-4fcd-a1ba-767aeefb364c",
+                                "sortorder": "",
+                                "text": "Low"
+                            },
+                            {
+                                "children": [],
+                                "collector": "",
+                                "conceptid": "79bb5289-5364-4f46-95c3-d729392a953f",
+                                "id": "823cfc3f-bdcc-4dc8-ac07-a303be33b223",
+                                "sortorder": "",
+                                "text": "Medium"
+                            }
+                        ],
+                        "placeholder": {
+                            "en": "Select an option"
+                        }
+                    },
+                    "id": "5e870698-b878-4e3d-9e41-1787cc7bd35d",
+                    "label": {
+                        "en": "Metamorphic rock"
+                    },
+                    "node_id": "2b5f3cb8-a960-11ed-80f9-5254004d77d3",
+                    "sortorder": 3,
+                    "visible": true,
+                    "widget_id": "10000000-0000-0000-0000-000000000002"
+                },
+                {
+                    "card_id": "3ed0fa37-95e4-4f59-90cc-74db40a41010",
+                    "config": {
+                        "defaultValue": "",
+                        "i18n_properties": [
+                            "placeholder"
+                        ],
+                        "label": "SAFR Title",
+                        "maxLength": null,
+                        "placeholder": {
+                            "en": "Enter text"
+                        },
+                        "uneditable": false,
+                        "width": "100%%"
+                    },
+                    "id": "617eb826-f175-439b-8510-7fec02db2cbc",
+                    "label": {
+                        "en": "SAFR Title"
+                    },
+                    "node_id": "5c0fc2de-33dd-11ef-936b-005056a3bc47",
                     "sortorder": 1,
+                    "visible": true,
+                    "widget_id": "10000000-0000-0000-0000-000000000001"
+                },
+                {
+                    "card_id": "8a17d272-b08e-4fbc-acae-00054245095d",
+                    "config": {
+                        "defaultValue": {
+                            "en": {
+                                "direction": "ltr",
+                                "value": ""
+                            }
+                        },
+                        "i18n_properties": [
+                            "placeholder"
+                        ],
+                        "label": "PSR FMO Internal Notes",
+                        "maxLength": "80",
+                        "placeholder": {
+                            "en": "Enter text"
+                        },
+                        "uneditable": false,
+                        "width": "100%"
+                    },
+                    "id": "628a4bf8-e866-46bc-aeaa-b56f08d0178d",
+                    "label": {
+                        "en": "PSR FMO Internal Notes"
+                    },
+                    "node_id": "49c1384e-a3d1-11ed-afdd-5254004d77d3",
+                    "sortorder": 3,
                     "visible": true,
                     "widget_id": "10000000-0000-0000-0000-000000000001"
                 },
@@ -1857,6 +2353,21 @@
                     "widget_id": "10000000-0000-0000-0000-000000000106"
                 },
                 {
+                    "card_id": "95b5f427-0064-4b75-a17e-838a65b73cc4",
+                    "config": {
+                        "defaultValue": null,
+                        "label": "Intersects IFA"
+                    },
+                    "id": "6d5cf482-1cb9-454d-a881-91a35a94374c",
+                    "label": {
+                        "en": "Intersects IFA"
+                    },
+                    "node_id": "46ecfbbc-a30e-11ed-8fa3-5254004d77d3",
+                    "sortorder": 2,
+                    "visible": true,
+                    "widget_id": "10000000-0000-0000-0000-000000000006"
+                },
+                {
                     "card_id": "dbb0d366-a360-11ed-ae42-5254004d77d3",
                     "config": {
                         "defaultResourceInstance": [],
@@ -1873,7 +2384,7 @@
                         "en": "FIA Paleo Consultant"
                     },
                     "node_id": "dbb0e608-a360-11ed-ae42-5254004d77d3",
-                    "sortorder": 5,
+                    "sortorder": 2,
                     "visible": true,
                     "widget_id": "31f3728c-7613-11e7-a139-784f435179ea"
                 },
@@ -1899,6 +2410,27 @@
                     "widget_id": "31f3728c-7613-11e7-a139-784f435179ea"
                 },
                 {
+                    "card_id": "01071c17-58bb-4718-a62e-1eb9a2418dcd",
+                    "config": {
+                        "defaultResourceInstance": [],
+                        "i18n_properties": [
+                            "placeholder"
+                        ],
+                        "label": "FMO Actor",
+                        "placeholder": {
+                            "en": "Select FMO contact"
+                        }
+                    },
+                    "id": "71ade562-4b82-4791-b4b1-2fa5295e6e96",
+                    "label": {
+                        "en": "FMO Actor"
+                    },
+                    "node_id": "06863eb2-0a29-11ee-8900-5254004d77d3",
+                    "sortorder": 0,
+                    "visible": true,
+                    "widget_id": "31f3728c-7613-11e7-a139-784f435179ea"
+                },
+                {
                     "card_id": "224f7282-cbf6-49de-ab0d-67ba7fe19e93",
                     "config": {
                         "defaultValue": "",
@@ -1918,7 +2450,7 @@
                         "en": "PSR Title"
                     },
                     "node_id": "e1e38138-a3cf-11ed-8a3d-5254004d77d3",
-                    "sortorder": 5,
+                    "sortorder": 1,
                     "visible": true,
                     "widget_id": "10000000-0000-0000-0000-000000000001"
                 },
@@ -1947,9 +2479,31 @@
                         "en": "Photograph Description"
                     },
                     "node_id": "3b016eb2-d785-11ee-b1e5-080027b7463b",
-                    "sortorder": 0,
+                    "sortorder": 1,
                     "visible": true,
                     "widget_id": "10000000-0000-0000-0000-000000000001"
+                },
+                {
+                    "card_id": "95b5f427-0064-4b75-a17e-838a65b73cc4",
+                    "config": {
+                        "defaultValue": "",
+                        "i18n_properties": [
+                            "placeholder"
+                        ],
+                        "label": "FRPR",
+                        "options": [],
+                        "placeholder": {
+                            "en": "Select an option"
+                        }
+                    },
+                    "id": "76b29562-fba5-42c2-80a6-5e32296a9342",
+                    "label": {
+                        "en": "FRPR"
+                    },
+                    "node_id": "8c706cd8-a961-11ed-9c3b-5254004d77d3",
+                    "sortorder": 3,
+                    "visible": true,
+                    "widget_id": "10000000-0000-0000-0000-000000000002"
                 },
                 {
                     "card_id": "9de5c571-f507-4df0-af17-a90204edd2db",
@@ -1992,19 +2546,14 @@
                         "en": "FIAP Paleo Company"
                     },
                     "node_id": "e8c139e6-a884-11ed-ad8e-5254004d77d3",
-                    "sortorder": 2,
+                    "sortorder": 3,
                     "visible": true,
                     "widget_id": "31f3728c-7613-11e7-a139-784f435179ea"
                 },
                 {
                     "card_id": "dbb0dc26-a360-11ed-ae42-5254004d77d3",
                     "config": {
-                        "defaultValue": {
-                            "en": {
-                                "direction": "ltr",
-                                "value": ""
-                            }
-                        },
+                        "defaultValue": "",
                         "i18n_properties": [
                             "placeholder"
                         ],
@@ -2021,7 +2570,7 @@
                         "en": "FIA FMO Response"
                     },
                     "node_id": "dbb0e91e-a360-11ed-ae42-5254004d77d3",
-                    "sortorder": 0,
+                    "sortorder": 3,
                     "visible": true,
                     "widget_id": "10000000-0000-0000-0000-000000000001"
                 },
@@ -2057,7 +2606,7 @@
                         "i18n_properties": [
                             "placeholder"
                         ],
-                        "label": "FMO Comments on Site Assessment Final Report",
+                        "label": "SAFR FMO Response",
                         "maxLength": null,
                         "placeholder": {
                             "en": "Enter text"
@@ -2068,10 +2617,10 @@
                     },
                     "id": "80622069-8799-4bc2-b8ae-2c45db5099f7",
                     "label": {
-                        "en": "FMO Comments on Site Assessment Final Report"
+                        "en": "SAFR FMO Response"
                     },
                     "node_id": "9a38535c-2f80-11ef-9e9f-0242ac170006",
-                    "sortorder": 2,
+                    "sortorder": 4,
                     "visible": true,
                     "widget_id": "10000000-0000-0000-0000-000000000005"
                 },
@@ -2089,7 +2638,7 @@
                         "en": "FIA File"
                     },
                     "node_id": "dbb0e176-a360-11ed-ae42-5254004d77d3",
-                    "sortorder": 4,
+                    "sortorder": 5,
                     "visible": true,
                     "widget_id": "10000000-0000-0000-0000-000000000019"
                 },
@@ -2110,6 +2659,30 @@
                     "sortorder": 0,
                     "visible": true,
                     "widget_id": "10000000-0000-0000-0000-000000000019"
+                },
+                {
+                    "card_id": "219de984-0354-481f-8829-da2e7011c9b1",
+                    "config": {
+                        "defaultValue": "",
+                        "i18n_properties": [
+                            "placeholder"
+                        ],
+                        "label": "Multiple Geometry Qualifier",
+                        "maxLength": null,
+                        "placeholder": {
+                            "en": "Enter text"
+                        },
+                        "uneditable": false,
+                        "width": "100%%"
+                    },
+                    "id": "9611fe12-7d9c-4770-a37e-8a0625780603",
+                    "label": {
+                        "en": "Multiple Geometry Qualifier"
+                    },
+                    "node_id": "c09e49bc-a880-11ed-a26e-5254004d77d3",
+                    "sortorder": 2,
+                    "visible": true,
+                    "widget_id": "10000000-0000-0000-0000-000000000001"
                 },
                 {
                     "card_id": "776d6362-f148-49f9-bf57-00a89ae8ad80",
@@ -2142,6 +2715,30 @@
                     "widget_id": "10000000-0000-0000-0000-000000000106"
                 },
                 {
+                    "card_id": "d64614b1-79e7-443b-878a-d885f2e0d4d1",
+                    "config": {
+                        "defaultValue": "",
+                        "i18n_properties": [
+                            "placeholder"
+                        ],
+                        "label": "Proposed Activity",
+                        "maxLength": null,
+                        "placeholder": {
+                            "en": "Enter text"
+                        },
+                        "uneditable": false,
+                        "width": "100%%"
+                    },
+                    "id": "9f5465cc-d0bc-42ab-a5f6-f58147a1eae0",
+                    "label": {
+                        "en": "Proposed Activity"
+                    },
+                    "node_id": "87c69aaa-a357-11ed-8a1e-5254004d77d3",
+                    "sortorder": 2,
+                    "visible": true,
+                    "widget_id": "10000000-0000-0000-0000-000000000001"
+                },
+                {
                     "card_id": "dbb0d366-a360-11ed-ae42-5254004d77d3",
                     "config": {
                         "defaultValue": "",
@@ -2161,7 +2758,7 @@
                         "en": "FIA Report Title"
                     },
                     "node_id": "dbb0dfbe-a360-11ed-ae42-5254004d77d3",
-                    "sortorder": 3,
+                    "sortorder": 1,
                     "visible": true,
                     "widget_id": "10000000-0000-0000-0000-000000000001"
                 },
@@ -2176,7 +2773,7 @@
                         "en": "FMO SAFR Approval Status"
                     },
                     "node_id": "b2c0f604-2f80-11ef-9e9f-0242ac170006",
-                    "sortorder": 3,
+                    "sortorder": 2,
                     "visible": true,
                     "widget_id": "10000000-0000-0000-0000-000000000006"
                 },
@@ -2200,9 +2797,38 @@
                         "en": "FIAP Report Recommendation"
                     },
                     "node_id": "3767acaa-a3cc-11ed-ac97-5254004d77d3",
-                    "sortorder": 1,
+                    "sortorder": 6,
                     "visible": true,
                     "widget_id": "10000000-0000-0000-0000-000000000001"
+                },
+                {
+                    "card_id": "01071c17-58bb-4718-a62e-1eb9a2418dcd",
+                    "config": {
+                        "defaultValue": {
+                            "en": {
+                                "direction": "ltr",
+                                "value": ""
+                            }
+                        },
+                        "i18n_properties": [
+                            "placeholder"
+                        ],
+                        "label": "Communication Note",
+                        "maxLength": "80",
+                        "placeholder": {
+                            "en": "Enter text"
+                        },
+                        "uneditable": false,
+                        "width": "100%"
+                    },
+                    "id": "a6d43d3c-ffb0-4f96-b7b3-039e9cc9fc24",
+                    "label": {
+                        "en": "Communication Note"
+                    },
+                    "node_id": "f2199142-9dc5-11ed-a03b-5254004d77d3",
+                    "sortorder": 4,
+                    "visible": true,
+                    "widget_id": "10000000-0000-0000-0000-000000000005"
                 },
                 {
                     "card_id": "9de5c571-f507-4df0-af17-a90204edd2db",
@@ -2224,7 +2850,7 @@
                         "en": "Land Act File Number"
                     },
                     "node_id": "22631346-9e5c-11ed-9f51-5254004d77d3",
-                    "sortorder": 2,
+                    "sortorder": 4,
                     "visible": true,
                     "widget_id": "10000000-0000-0000-0000-000000000001"
                 },
@@ -2246,9 +2872,84 @@
                         "en": "Project Authorizing Agency"
                     },
                     "node_id": "df94dc8e-a356-11ed-b966-5254004d77d3",
-                    "sortorder": 4,
+                    "sortorder": 1,
                     "visible": true,
                     "widget_id": "10000000-0000-0000-0000-000000000002"
+                },
+                {
+                    "card_id": "dc10018f-670c-43c3-9b4c-d001f392dedd",
+                    "config": {
+                        "defaultValue": {
+                            "en": {
+                                "direction": "ltr"
+                            }
+                        },
+                        "i18n_properties": [
+                            "placeholder"
+                        ],
+                        "label": "IMFR Title",
+                        "maxLength": "80",
+                        "placeholder": {
+                            "en": "Enter text"
+                        },
+                        "uneditable": false,
+                        "width": "100%%"
+                    },
+                    "id": "ad8674fa-7b91-4df1-b38a-7a3e53f00ef5",
+                    "label": {
+                        "en": "IMFR Title"
+                    },
+                    "node_id": "e27aa804-33db-11ef-8a44-005056a3bc47",
+                    "sortorder": 1,
+                    "visible": true,
+                    "widget_id": "10000000-0000-0000-0000-000000000001"
+                },
+                {
+                    "card_id": "219de984-0354-481f-8829-da2e7011c9b1",
+                    "config": {
+                        "basemap": "British Columbia Roads",
+                        "bearing": 0,
+                        "centerX": -114.75289775782846,
+                        "centerY": 54.05859869126385,
+                        "defaultValue": "",
+                        "defaultValueType": "",
+                        "featureColor": "#FF0000",
+                        "featureLineWidth": 1,
+                        "featurePointSize": 3,
+                        "geocodePlaceholder": "Search",
+                        "geocodeProvider": "10000000-0000-0000-0000-010000000000",
+                        "geocoderVisible": true,
+                        "geometryTypes": [
+                            {
+                                "id": "Point",
+                                "text": "Point"
+                            },
+                            {
+                                "id": "Line",
+                                "text": "Line"
+                            },
+                            {
+                                "id": "Polygon",
+                                "text": "Polygon"
+                            }
+                        ],
+                        "label": "Project Location",
+                        "maxZoom": 20,
+                        "minZoom": 0,
+                        "overlayConfigs": [],
+                        "overlayOpacity": 0,
+                        "pitch": 0,
+                        "rerender": true,
+                        "zoom": 3.3151182836318323
+                    },
+                    "id": "af9837e0-7cda-4134-946c-3c795c385e37",
+                    "label": {
+                        "en": "Project Location"
+                    },
+                    "node_id": "2bb08950-a880-11ed-95a4-5254004d77d3",
+                    "sortorder": 1,
+                    "visible": true,
+                    "widget_id": "10000000-0000-0000-0000-000000000007"
                 },
                 {
                     "card_id": "dc10018f-670c-43c3-9b4c-d001f392dedd",
@@ -2291,39 +2992,34 @@
                         "en": "FIA FMO Approval Status"
                     },
                     "node_id": "dbb0eda6-a360-11ed-ae42-5254004d77d3",
-                    "sortorder": 0,
+                    "sortorder": 1,
                     "visible": true,
                     "widget_id": "10000000-0000-0000-0000-000000000006"
                 },
                 {
                     "card_id": "3ed0fa37-95e4-4f59-90cc-74db40a41010",
                     "config": {
-                        "defaultValue": {
-                            "en": {
-                                "direction": "ltr",
-                                "value": ""
-                            }
-                        },
+                        "defaultValue": "",
                         "i18n_properties": [
                             "placeholder"
                         ],
-                        "label": "SAFR Number",
+                        "label": "SAFR Report Number",
                         "maxLength": null,
                         "placeholder": {
                             "en": "Enter text"
                         },
-                        "reportTypeAbbreviation": "AAA",
+                        "reportTypeAbbreviation": "SAFR",
                         "uneditable": false,
                         "width": "100%"
                     },
                     "id": "b6511509-cdb1-4a41-be3b-205964715a62",
                     "label": {
-                        "en": "SAFR Number"
+                        "en": "SAFR Report Number"
                     },
                     "node_id": "4aac7520-2f80-11ef-9e9f-0242ac170006",
                     "sortorder": 0,
                     "visible": true,
-                    "widget_id": "10000000-0000-0000-0000-000000000001"
+                    "widget_id": "10000000-0000-0000-0000-000000000106"
                 },
                 {
                     "card_id": "9de5c571-f507-4df0-af17-a90204edd2db",
@@ -2342,9 +3038,60 @@
                         "en": "Project Initiator"
                     },
                     "node_id": "694922ec-9dc0-11ed-8d8e-5254004d77d3",
-                    "sortorder": 3,
+                    "sortorder": 2,
                     "visible": true,
                     "widget_id": "31f3728c-7613-11e7-a139-784f435179ea"
+                },
+                {
+                    "card_id": "95b5f427-0064-4b75-a17e-838a65b73cc4",
+                    "config": {
+                        "defaultValue": {
+                            "en": {
+                                "direction": "ltr",
+                                "value": ""
+                            }
+                        },
+                        "i18n_properties": [
+                            "placeholder"
+                        ],
+                        "label": "Initial Review Internal Notes",
+                        "maxLength": "80",
+                        "placeholder": {
+                            "en": "Enter text"
+                        },
+                        "uneditable": false,
+                        "width": "100%"
+                    },
+                    "id": "b7c880e5-7202-458d-8548-c0c9b7e03cac",
+                    "label": {
+                        "en": "Initial Review Internal Notes"
+                    },
+                    "node_id": "7e0e1326-9dcb-11ed-a03b-5254004d77d3",
+                    "sortorder": 10,
+                    "visible": true,
+                    "widget_id": "10000000-0000-0000-0000-000000000005"
+                },
+                {
+                    "card_id": "95b5f427-0064-4b75-a17e-838a65b73cc4",
+                    "config": {
+                        "defaultValue": "",
+                        "i18n_properties": [
+                            "placeholder"
+                        ],
+                        "label": "Initial Review Level of Risk",
+                        "options": [],
+                        "placeholder": {
+                            "en": "Select an option"
+                        }
+                    },
+                    "id": "bb7d153f-5087-4419-96c2-c19e148f9731",
+                    "label": {
+                        "en": "Initial Review Level of Risk"
+                    },
+                    "node_id": "da887b6a-a310-11ed-a1af-5254004d77d3",
+                    "sortorder": 4,
+                    "visible": true,
+                    "widget_id": "10000000-0000-0000-0000-000000000002"
                 },
                 {
                     "card_id": "dbb0d366-a360-11ed-ae42-5254004d77d3",
@@ -2399,12 +3146,7 @@
                 {
                     "card_id": "dbb0dc26-a360-11ed-ae42-5254004d77d3",
                     "config": {
-                        "defaultValue": {
-                            "en": {
-                                "direction": "ltr",
-                                "value": ""
-                            }
-                        },
+                        "defaultValue": "",
                         "i18n_properties": [
                             "placeholder"
                         ],
@@ -2421,7 +3163,7 @@
                         "en": "FIA FMO Internal Notes"
                     },
                     "node_id": "dbb0eaa4-a360-11ed-ae42-5254004d77d3",
-                    "sortorder": 0,
+                    "sortorder": 4,
                     "visible": true,
                     "widget_id": "10000000-0000-0000-0000-000000000001"
                 },
@@ -2430,30 +3172,28 @@
                     "config": {
                         "defaultValue": {
                             "en": {
-                                "direction": "ltr",
-                                "value": ""
+                                "direction": "ltr"
                             }
                         },
                         "i18n_properties": [
                             "placeholder"
                         ],
-                        "label": "SAFR Number",
+                        "label": "SAFR Internal Notes",
                         "maxLength": null,
                         "placeholder": {
                             "en": "Enter text"
                         },
-                        "reportTypeAbbreviation": "SAFR",
                         "uneditable": false,
-                        "width": "100%"
+                        "width": "100%%"
                     },
-                    "id": "c960aea1-1b20-4d3a-afc8-e56a377a6a7e",
+                    "id": "c5cd6d9f-b852-42ed-90ed-c62c777ceba2",
                     "label": {
-                        "en": "SAFR Number"
+                        "en": "SAFR Internal Notes"
                     },
-                    "node_id": "4aac7520-2f80-11ef-9e9f-0242ac170006",
-                    "sortorder": 0,
+                    "node_id": "b2eb38cc-33dd-11ef-936b-005056a3bc47",
+                    "sortorder": 5,
                     "visible": true,
-                    "widget_id": "10000000-0000-0000-0000-000000000106"
+                    "widget_id": "10000000-0000-0000-0000-000000000005"
                 },
                 {
                     "card_id": "9de5c571-f507-4df0-af17-a90204edd2db",
@@ -2475,7 +3215,7 @@
                         "en": "Industry Company Name"
                     },
                     "node_id": "8d6de362-2f7b-11ef-aca8-0242ac170006",
-                    "sortorder": 1,
+                    "sortorder": 3,
                     "visible": true,
                     "widget_id": "10000000-0000-0000-0000-000000000001"
                 },
@@ -2520,7 +3260,7 @@
                         "en": "FIAP Paleo Consultant"
                     },
                     "node_id": "ff4fae72-a361-11ed-b0ab-5254004d77d3",
-                    "sortorder": 3,
+                    "sortorder": 2,
                     "visible": true,
                     "widget_id": "31f3728c-7613-11e7-a139-784f435179ea"
                 },
@@ -2528,14 +3268,14 @@
                     "card_id": "dc10018f-670c-43c3-9b4c-d001f392dedd",
                     "config": {
                         "defaultValue": null,
-                        "label": "IMFR - FMO Approval Status"
+                        "label": "IMFR FMO Approval Status"
                     },
                     "id": "cafdf0c1-90a7-4361-9c0a-5e33f01a6efe",
                     "label": {
-                        "en": "IMFR - FMO Approval Status"
+                        "en": "IMFR FMO Approval Status"
                     },
                     "node_id": "4893c54c-2f7e-11ef-9621-0242ac170006",
-                    "sortorder": 3,
+                    "sortorder": 2,
                     "visible": true,
                     "widget_id": "10000000-0000-0000-0000-000000000006"
                 },
@@ -2556,7 +3296,7 @@
                         "en": "FIA Paleo Company"
                     },
                     "node_id": "aca03412-a884-11ed-9ea8-5254004d77d3",
-                    "sortorder": 2,
+                    "sortorder": 3,
                     "visible": true,
                     "widget_id": "31f3728c-7613-11e7-a139-784f435179ea"
                 },
@@ -2585,7 +3325,7 @@
                         "en": "IMP FMO Internal Notes"
                     },
                     "node_id": "e9394f7c-c372-11ed-b586-5254004d77d3",
-                    "sortorder": 0,
+                    "sortorder": 3,
                     "visible": true,
                     "widget_id": "10000000-0000-0000-0000-000000000001"
                 },
@@ -2601,7 +3341,7 @@
                         "i18n_properties": [
                             "placeholder"
                         ],
-                        "label": "FMO Comments on Impact Mitigation Final Report",
+                        "label": "IMFR FMO Internal Notes",
                         "maxLength": null,
                         "placeholder": {
                             "en": "Enter text"
@@ -2611,10 +3351,10 @@
                     },
                     "id": "d2395f96-d4c0-4df0-9845-d03901723979",
                     "label": {
-                        "en": "FMO Comments on Impact Mitigation Final Report"
+                        "en": "IMFR FMO Internal Notes"
                     },
                     "node_id": "98d9db1e-2f7d-11ef-a029-0242ac170006",
-                    "sortorder": 2,
+                    "sortorder": 5,
                     "visible": true,
                     "widget_id": "10000000-0000-0000-0000-000000000005"
                 },
@@ -2649,6 +3389,21 @@
                     "widget_id": "10000000-0000-0000-0000-000000000106"
                 },
                 {
+                    "card_id": "8a17d272-b08e-4fbc-acae-00054245095d",
+                    "config": {
+                        "defaultValue": null,
+                        "label": "PSR FMO Approval Status"
+                    },
+                    "id": "d32b4459-ee20-462b-aefd-32b3c2ab60e8",
+                    "label": {
+                        "en": "PSR FMO Approval Status"
+                    },
+                    "node_id": "b0d85562-a3d1-11ed-8a3d-5254004d77d3",
+                    "sortorder": 2,
+                    "visible": true,
+                    "widget_id": "10000000-0000-0000-0000-000000000006"
+                },
+                {
                     "card_id": "7e4cb186-c372-11ed-914a-5254004d77d3",
                     "config": {
                         "defaultValue": "",
@@ -2668,7 +3423,130 @@
                         "en": "SAP Recommendations"
                     },
                     "node_id": "7e4cc28e-c372-11ed-914a-5254004d77d3",
+                    "sortorder": 6,
+                    "visible": true,
+                    "widget_id": "10000000-0000-0000-0000-000000000005"
+                },
+                {
+                    "card_id": "95b5f427-0064-4b75-a17e-838a65b73cc4",
+                    "config": {
+                        "defaultValue": "",
+                        "i18n_properties": [
+                            "placeholder"
+                        ],
+                        "label": "Ground Disturbance",
+                        "options": [
+                            {
+                                "children": [],
+                                "collector": "",
+                                "conceptid": "0b9dbd01-32f2-4e26-9c17-f6555f1f0924",
+                                "id": "d6578b0a-a292-4847-a3f5-20187cc5692c",
+                                "sortorder": "",
+                                "text": "High"
+                            },
+                            {
+                                "children": [],
+                                "collector": "",
+                                "conceptid": "0da27ece-bc63-4a40-bd52-bd6b1cfdb8ac",
+                                "id": "b43fe9e6-7741-4fcd-a1ba-767aeefb364c",
+                                "sortorder": "",
+                                "text": "Low"
+                            },
+                            {
+                                "children": [],
+                                "collector": "",
+                                "conceptid": "79bb5289-5364-4f46-95c3-d729392a953f",
+                                "id": "823cfc3f-bdcc-4dc8-ac07-a303be33b223",
+                                "sortorder": "",
+                                "text": "Medium"
+                            }
+                        ],
+                        "placeholder": {
+                            "en": "Select an option"
+                        }
+                    },
+                    "id": "d3880d95-269c-46b4-b967-5bd865f1f5ff",
+                    "label": {
+                        "en": "Ground Disturbance"
+                    },
+                    "node_id": "75a7d32c-a95e-11ed-95d7-5254004d77d3",
                     "sortorder": 1,
+                    "visible": true,
+                    "widget_id": "10000000-0000-0000-0000-000000000002"
+                },
+                {
+                    "card_id": "95b5f427-0064-4b75-a17e-838a65b73cc4",
+                    "config": {
+                        "defaultValue": "",
+                        "i18n_properties": [
+                            "placeholder"
+                        ],
+                        "label": "Igneous rock",
+                        "options": [
+                            {
+                                "children": [],
+                                "collector": "",
+                                "conceptid": "0b9dbd01-32f2-4e26-9c17-f6555f1f0924",
+                                "id": "d6578b0a-a292-4847-a3f5-20187cc5692c",
+                                "sortorder": "",
+                                "text": "High"
+                            },
+                            {
+                                "children": [],
+                                "collector": "",
+                                "conceptid": "0da27ece-bc63-4a40-bd52-bd6b1cfdb8ac",
+                                "id": "b43fe9e6-7741-4fcd-a1ba-767aeefb364c",
+                                "sortorder": "",
+                                "text": "Low"
+                            },
+                            {
+                                "children": [],
+                                "collector": "",
+                                "conceptid": "79bb5289-5364-4f46-95c3-d729392a953f",
+                                "id": "823cfc3f-bdcc-4dc8-ac07-a303be33b223",
+                                "sortorder": "",
+                                "text": "Medium"
+                            }
+                        ],
+                        "placeholder": {
+                            "en": "Select an option"
+                        }
+                    },
+                    "id": "d7704376-14a9-403d-8aaf-122bf6632e1d",
+                    "label": {
+                        "en": "Igneous rock"
+                    },
+                    "node_id": "f227cc80-a95f-11ed-a27c-5254004d77d3",
+                    "sortorder": 4,
+                    "visible": true,
+                    "widget_id": "10000000-0000-0000-0000-000000000002"
+                },
+                {
+                    "card_id": "95b5f427-0064-4b75-a17e-838a65b73cc4",
+                    "config": {
+                        "defaultValue": {
+                            "en": {
+                                "direction": "ltr",
+                                "value": ""
+                            }
+                        },
+                        "i18n_properties": [
+                            "placeholder"
+                        ],
+                        "label": "Initial Review Outcome",
+                        "maxLength": "80",
+                        "placeholder": {
+                            "en": "Enter text"
+                        },
+                        "uneditable": false,
+                        "width": "100%"
+                    },
+                    "id": "d8be5484-3304-43da-a4fb-909204bd32eb",
+                    "label": {
+                        "en": "Initial Review Outcome"
+                    },
+                    "node_id": "eb34801c-9dca-11ed-9e26-5254004d77d3",
+                    "sortorder": 9,
                     "visible": true,
                     "widget_id": "10000000-0000-0000-0000-000000000001"
                 },
@@ -2677,18 +3555,40 @@
                     "config": {
                         "acceptedFiles": "",
                         "defaultValue": [],
-                        "label": "Site Assessment Plan File",
+                        "label": "SAP File",
                         "maxFilesize": "200",
                         "rerender": true
                     },
                     "id": "da471360-1c2c-4a24-9cc2-305fd3ca397e",
                     "label": {
-                        "en": "Site Assessment Plan File"
+                        "en": "SAP File"
                     },
                     "node_id": "7e4cbdca-c372-11ed-914a-5254004d77d3",
-                    "sortorder": 4,
+                    "sortorder": 5,
                     "visible": true,
                     "widget_id": "10000000-0000-0000-0000-000000000019"
+                },
+                {
+                    "card_id": "01071c17-58bb-4718-a62e-1eb9a2418dcd",
+                    "config": {
+                        "defaultValue": "",
+                        "i18n_properties": [
+                            "placeholder"
+                        ],
+                        "label": "IPA Phase",
+                        "options": [],
+                        "placeholder": {
+                            "en": "Select an option"
+                        }
+                    },
+                    "id": "da68db53-92fc-48d7-993f-c52f2b8fa85e",
+                    "label": {
+                        "en": "IPA Phase"
+                    },
+                    "node_id": "eed80ffc-a353-11ed-8336-5254004d77d3",
+                    "sortorder": 2,
+                    "visible": true,
+                    "widget_id": "10000000-0000-0000-0000-000000000002"
                 },
                 {
                     "card_id": "13b3e5e3-5a25-4414-8360-d9b9b2ccea6b",
@@ -2754,7 +3654,7 @@
                         "en": "SAP Fossil Repository Agreement"
                     },
                     "node_id": "a77d3314-dfff-11ee-bb3e-080027b7463b",
-                    "sortorder": 0,
+                    "sortorder": 1,
                     "visible": true,
                     "widget_id": "10000000-0000-0000-0000-000000000009"
                 },
@@ -2781,6 +3681,84 @@
                     "widget_id": "10000000-0000-0000-0000-000000000002"
                 },
                 {
+                    "card_id": "d024d4e2-a41b-44cd-aad3-d3a851a2b8ca",
+                    "config": {
+                        "defaultValue": null,
+                        "label": "CFP Approval Status"
+                    },
+                    "id": "ea45e2a0-50c4-4ee8-a5ba-55d46a008879",
+                    "label": {
+                        "en": "CFP Approval Status"
+                    },
+                    "node_id": "0e4bee9c-e0bd-11ee-ba58-080027b7463b",
+                    "sortorder": 0,
+                    "visible": true,
+                    "widget_id": "10000000-0000-0000-0000-000000000006"
+                },
+                {
+                    "card_id": "8a17d272-b08e-4fbc-acae-00054245095d",
+                    "config": {
+                        "defaultValue": "",
+                        "i18n_properties": [
+                            "placeholder"
+                        ],
+                        "label": "PSR FMO Determined Level of Risk",
+                        "options": [
+                            {
+                                "children": [],
+                                "collector": "",
+                                "conceptid": "bafdfae0-cd10-4ca2-9b48-2f09dbe9ad6a",
+                                "id": "58dce13d-a85d-40d9-8492-fe1294c498c7",
+                                "sortorder": "",
+                                "text": "High"
+                            },
+                            {
+                                "children": [],
+                                "collector": "",
+                                "conceptid": "f6d941d1-37d1-497c-9944-3edfc55d7aa4",
+                                "id": "e816e647-6611-405d-aeee-00d886f36658",
+                                "sortorder": "",
+                                "text": "Low"
+                            },
+                            {
+                                "children": [],
+                                "collector": "",
+                                "conceptid": "2b85ccb2-f8e3-4e43-b61d-ab5658805c05",
+                                "id": "c7b5a5c2-d4a5-4c75-9a05-b993d18a748b",
+                                "sortorder": "",
+                                "text": "Medium"
+                            },
+                            {
+                                "children": [],
+                                "collector": "",
+                                "conceptid": "0464facd-9edc-482e-98d5-ac0243439005",
+                                "id": "52e35be3-b591-409d-9ed6-303532f1d6fd",
+                                "sortorder": "",
+                                "text": "Unknown"
+                            },
+                            {
+                                "children": [],
+                                "collector": "",
+                                "conceptid": "9cb2571a-c30d-412c-9dd8-a1ddf29674ae",
+                                "id": "42dd5658-dfbf-4f9e-a3e9-a22fc0ad95d9",
+                                "sortorder": "",
+                                "text": "Very Low"
+                            }
+                        ],
+                        "placeholder": {
+                            "en": "Select an option"
+                        }
+                    },
+                    "id": "ea6bb290-13d4-460e-8de6-5ee8ce580607",
+                    "label": {
+                        "en": "PSR FMO Determined Level of Risk"
+                    },
+                    "node_id": "8a3d0e70-a3d1-11ed-8922-5254004d77d3",
+                    "sortorder": 0,
+                    "visible": true,
+                    "widget_id": "10000000-0000-0000-0000-000000000002"
+                },
+                {
                     "card_id": "3b016d40-d785-11ee-b1e5-080027b7463b",
                     "config": {
                         "defaultValue": "",
@@ -2795,7 +3773,7 @@
                         "en": "Photograph Date"
                     },
                     "node_id": "3b0171fa-d785-11ee-b1e5-080027b7463b",
-                    "sortorder": 0,
+                    "sortorder": 4,
                     "visible": true,
                     "widget_id": "10000000-0000-0000-0000-000000000004"
                 },
@@ -2819,9 +3797,31 @@
                         "en": "FIA Consultant Report Number"
                     },
                     "node_id": "dbb0e78e-a360-11ed-ae42-5254004d77d3",
-                    "sortorder": 6,
+                    "sortorder": 4,
                     "visible": true,
                     "widget_id": "10000000-0000-0000-0000-000000000001"
+                },
+                {
+                    "card_id": "d64614b1-79e7-443b-878a-d885f2e0d4d1",
+                    "config": {
+                        "defaultValue": "",
+                        "i18n_properties": [
+                            "placeholder"
+                        ],
+                        "label": "Project Type",
+                        "options": [],
+                        "placeholder": {
+                            "en": "Select an option"
+                        }
+                    },
+                    "id": "ee2bd90e-472e-4649-8a24-efb28b439d66",
+                    "label": {
+                        "en": "Project Type"
+                    },
+                    "node_id": "416e539a-a357-11ed-932e-5254004d77d3",
+                    "sortorder": 0,
+                    "visible": true,
+                    "widget_id": "10000000-0000-0000-0000-000000000002"
                 },
                 {
                     "card_id": "7e4cb186-c372-11ed-914a-5254004d77d3",
@@ -2843,14 +3843,14 @@
                         "en": "SAP Title"
                     },
                     "node_id": "7e4cbf64-c372-11ed-914a-5254004d77d3",
-                    "sortorder": 5,
+                    "sortorder": 1,
                     "visible": true,
                     "widget_id": "10000000-0000-0000-0000-000000000001"
                 }
             ],
             "color": "rgba(53,151,143,1)",
             "config": {
-                "basemap": "streets",
+                "basemap": "British Columbia Roads",
                 "bearing": 0,
                 "centerX": -122.3979693,
                 "centerY": 37.79,
@@ -3107,6 +4107,15 @@
                 },
                 {
                     "description": null,
+                    "domainnode_id": "1570c3ca-2f80-11ef-9e9f-0242ac170006",
+                    "edgeid": "31c7f89c-5225-475b-8a4b-b7611523ab05",
+                    "graph_id": "2aa724d1-ffd3-4823-8ff1-15a385b9a407",
+                    "name": null,
+                    "ontologyproperty": "http://www.cidoc-crm.org/cidoc-crm/P129i_is_subject_of",
+                    "rangenode_id": "b2eb38cc-33dd-11ef-936b-005056a3bc47"
+                },
+                {
+                    "description": null,
                     "domainnode_id": "10295f6a-9dc0-11ed-82b6-5254004d77d3",
                     "edgeid": "34640aa4-b0a5-4abc-beb3-dcd3651f5f77",
                     "graph_id": "2aa724d1-ffd3-4823-8ff1-15a385b9a407",
@@ -3194,6 +4203,15 @@
                     "name": null,
                     "ontologyproperty": "http://www.cidoc-crm.org/cidoc-crm/P129i_is_subject_of",
                     "rangenode_id": "9a38535c-2f80-11ef-9e9f-0242ac170006"
+                },
+                {
+                    "description": null,
+                    "domainnode_id": "1570c3ca-2f80-11ef-9e9f-0242ac170006",
+                    "edgeid": "4616ea54-d61f-42ec-8780-4156a896f008",
+                    "graph_id": "2aa724d1-ffd3-4823-8ff1-15a385b9a407",
+                    "name": null,
+                    "ontologyproperty": "http://www.cidoc-crm.org/cidoc-crm/P102_has_title",
+                    "rangenode_id": "5c0fc2de-33dd-11ef-936b-005056a3bc47"
                 },
                 {
                     "description": null,
@@ -3782,6 +4800,24 @@
                 },
                 {
                     "description": null,
+                    "domainnode_id": "3a654236-2f7c-11ef-93ea-0242ac170006",
+                    "edgeid": "b347fca9-c47b-4a66-b197-aff0a8670f75",
+                    "graph_id": "2aa724d1-ffd3-4823-8ff1-15a385b9a407",
+                    "name": null,
+                    "ontologyproperty": "http://www.cidoc-crm.org/cidoc-crm/P129i_is_subject_of",
+                    "rangenode_id": "78a87a3c-33db-11ef-b47d-005056a3bc47"
+                },
+                {
+                    "description": null,
+                    "domainnode_id": "3a654236-2f7c-11ef-93ea-0242ac170006",
+                    "edgeid": "b5917c35-2b04-4d64-b871-64efb29f269a",
+                    "graph_id": "2aa724d1-ffd3-4823-8ff1-15a385b9a407",
+                    "name": null,
+                    "ontologyproperty": "http://www.cidoc-crm.org/cidoc-crm/P102_has_title",
+                    "rangenode_id": "e27aa804-33db-11ef-8a44-005056a3bc47"
+                },
+                {
+                    "description": null,
                     "domainnode_id": "d4d462c2-9e58-11ed-b6d5-5254004d77d3",
                     "edgeid": "b71bdea6-6fa9-4a7a-99e7-59befa9a240b",
                     "graph_id": "2aa724d1-ffd3-4823-8ff1-15a385b9a407",
@@ -4192,7 +5228,7 @@
                     },
                     "function_id": "60000000-0000-0000-0000-000000001001",
                     "graph_id": "2aa724d1-ffd3-4823-8ff1-15a385b9a407",
-                    "id": "5af63f14-f737-4664-a9b7-c7e99757795b"
+                    "id": "64af0d9a-1a4a-462f-8905-21643e22a630"
                 }
             ],
             "graphid": "2aa724d1-ffd3-4823-8ff1-15a385b9a407",
@@ -4689,7 +5725,7 @@
                             {
                                 "graphid": "605b0bbc-8661-4cf2-b340-df743a8c5f89",
                                 "inverseRelationshipConcept": "ac41d9be-79db-4256-b368-2f4559cfbe55",
-                                "name": "BC Fossil Contributor",
+                                "name": "Contributor",
                                 "relationshipCollection": "00000000-0000-0000-0000-000000000005",
                                 "relationshipConcept": "ac41d9be-79db-4256-b368-2f4559cfbe55",
                                 "useOntologyRelationship": false
@@ -4790,7 +5826,7 @@
                     "graph_id": "2aa724d1-ffd3-4823-8ff1-15a385b9a407",
                     "hascustomalias": false,
                     "is_collector": false,
-                    "isrequired": false,
+                    "isrequired": true,
                     "issearchable": true,
                     "istopnode": false,
                     "name": "FMO Actor",
@@ -5514,7 +6550,7 @@
                     "nodeid": "4893c54c-2f7e-11ef-9621-0242ac170006",
                     "ontologyclass": "http://www.cidoc-crm.org/cidoc-crm/E3_Condition_State",
                     "parentproperty": "http://www.cidoc-crm.org/cidoc-crm/P129_is_about",
-                    "sortorder": 3,
+                    "sortorder": 4,
                     "sourcebranchpublication_id": null
                 },
                 {
@@ -5541,7 +6577,7 @@
                     "sourcebranchpublication_id": null
                 },
                 {
-                    "alias": "safr_number",
+                    "alias": "safr_report_number",
                     "config": {
                         "en": ""
                     },
@@ -5555,7 +6591,7 @@
                     "isrequired": false,
                     "issearchable": true,
                     "istopnode": false,
-                    "name": "SAFR Number",
+                    "name": "SAFR Report Number",
                     "nodegroup_id": "1570c3ca-2f80-11ef-9e9f-0242ac170006",
                     "nodeid": "4aac7520-2f80-11ef-9e9f-0242ac170006",
                     "ontologyclass": "http://www.cidoc-crm.org/cidoc-crm/E42_Identifier",
@@ -5709,6 +6745,29 @@
                     "nodeid": "5b6b2740-a3d0-11ed-99ab-5254004d77d3",
                     "ontologyclass": "http://www.cidoc-crm.org/cidoc-crm/E42_Identifier",
                     "parentproperty": "http://www.cidoc-crm.org/cidoc-crm/P1_is_identified_by",
+                    "sortorder": 0,
+                    "sourcebranchpublication_id": null
+                },
+                {
+                    "alias": "safr_title",
+                    "config": {
+                        "en": ""
+                    },
+                    "datatype": "string",
+                    "description": null,
+                    "exportable": false,
+                    "fieldname": null,
+                    "graph_id": "2aa724d1-ffd3-4823-8ff1-15a385b9a407",
+                    "hascustomalias": false,
+                    "is_collector": false,
+                    "isrequired": true,
+                    "issearchable": true,
+                    "istopnode": false,
+                    "name": "SAFR Title",
+                    "nodegroup_id": "1570c3ca-2f80-11ef-9e9f-0242ac170006",
+                    "nodeid": "5c0fc2de-33dd-11ef-936b-005056a3bc47",
+                    "ontologyclass": "http://www.cidoc-crm.org/cidoc-crm/E35_Title",
+                    "parentproperty": "http://www.cidoc-crm.org/cidoc-crm/P102_has_title",
                     "sortorder": 0,
                     "sourcebranchpublication_id": null
                 },
@@ -6353,7 +7412,7 @@
                     "sourcebranchpublication_id": null
                 },
                 {
-                    "alias": "safr_document",
+                    "alias": "safr_file",
                     "config": {
                         "activateMax": false,
                         "imagesOnly": false,
@@ -6370,7 +7429,7 @@
                     "isrequired": false,
                     "issearchable": true,
                     "istopnode": false,
-                    "name": "SAFR Document",
+                    "name": "SAFR File",
                     "nodegroup_id": "1570c3ca-2f80-11ef-9e9f-0242ac170006",
                     "nodeid": "71703fb6-2f80-11ef-9e9f-0242ac170006",
                     "ontologyclass": "http://www.ics.forth.gr/isl/CRMdig/D1_Digital_Object",
@@ -6424,6 +7483,29 @@
                     "nodeid": "78147c0c-a3d0-11ed-afdd-5254004d77d3",
                     "ontologyclass": "http://www.ics.forth.gr/isl/CRMdig/D1_Digital_Object",
                     "parentproperty": "http://www.ics.forth.gr/isl/CRMdig/L54_is_same-as",
+                    "sortorder": 0,
+                    "sourcebranchpublication_id": null
+                },
+                {
+                    "alias": "imfr_fmo_response",
+                    "config": {
+                        "en": ""
+                    },
+                    "datatype": "string",
+                    "description": null,
+                    "exportable": false,
+                    "fieldname": null,
+                    "graph_id": "2aa724d1-ffd3-4823-8ff1-15a385b9a407",
+                    "hascustomalias": false,
+                    "is_collector": false,
+                    "isrequired": false,
+                    "issearchable": true,
+                    "istopnode": false,
+                    "name": "IMFR FMO Response",
+                    "nodegroup_id": "3a654236-2f7c-11ef-93ea-0242ac170006",
+                    "nodeid": "78a87a3c-33db-11ef-b47d-005056a3bc47",
+                    "ontologyclass": "http://www.cidoc-crm.org/cidoc-crm/E73_Information_Object",
+                    "parentproperty": "http://www.cidoc-crm.org/cidoc-crm/P129i_is_subject_of",
                     "sortorder": 0,
                     "sourcebranchpublication_id": null
                 },
@@ -7120,7 +8202,7 @@
                     "sourcebranchpublication_id": null
                 },
                 {
-                    "alias": "imfr_fmo_comments",
+                    "alias": "imfr_fmo_internal_notes",
                     "config": {
                         "en": ""
                     },
@@ -7134,7 +8216,7 @@
                     "isrequired": false,
                     "issearchable": true,
                     "istopnode": false,
-                    "name": "IMFR FMO Comments",
+                    "name": "IMFR FMO Internal Notes",
                     "nodegroup_id": "3a654236-2f7c-11ef-93ea-0242ac170006",
                     "nodeid": "98d9db1e-2f7d-11ef-a029-0242ac170006",
                     "ontologyclass": "http://www.ics.forth.gr/isl/CRMdig/D29_Annotation_Object",
@@ -7166,7 +8248,7 @@
                     "sourcebranchpublication_id": null
                 },
                 {
-                    "alias": "safr_fmo_comments",
+                    "alias": "safr_fmo_response",
                     "config": {
                         "en": ""
                     },
@@ -7180,7 +8262,7 @@
                     "isrequired": false,
                     "issearchable": true,
                     "istopnode": false,
-                    "name": "SAFR FMO Comments",
+                    "name": "SAFR FMO Response",
                     "nodegroup_id": "1570c3ca-2f80-11ef-9e9f-0242ac170006",
                     "nodeid": "9a38535c-2f80-11ef-9e9f-0242ac170006",
                     "ontologyclass": "http://www.ics.forth.gr/isl/CRMdig/D29_Annotation_Object",
@@ -7541,7 +8623,7 @@
                     "nodeid": "ae7f34b4-e0bd-11ee-ba58-080027b7463b",
                     "ontologyclass": "http://www.cidoc-crm.org/cidoc-crm/E3_Condition_State",
                     "parentproperty": "http://www.cidoc-crm.org/cidoc-crm/P115i_is_finished_by",
-                    "sortorder": 0,
+                    "sortorder": 1,
                     "sourcebranchpublication_id": null
                 },
                 {
@@ -7674,6 +8756,29 @@
                     "nodeid": "b2c0f604-2f80-11ef-9e9f-0242ac170006",
                     "ontologyclass": "http://www.cidoc-crm.org/cidoc-crm/E3_Condition_State",
                     "parentproperty": "http://www.cidoc-crm.org/cidoc-crm/P129_is_about",
+                    "sortorder": 0,
+                    "sourcebranchpublication_id": null
+                },
+                {
+                    "alias": "safr_internal_notes",
+                    "config": {
+                        "en": ""
+                    },
+                    "datatype": "string",
+                    "description": null,
+                    "exportable": false,
+                    "fieldname": null,
+                    "graph_id": "2aa724d1-ffd3-4823-8ff1-15a385b9a407",
+                    "hascustomalias": false,
+                    "is_collector": false,
+                    "isrequired": false,
+                    "issearchable": true,
+                    "istopnode": false,
+                    "name": "SAFR Internal Notes",
+                    "nodegroup_id": "1570c3ca-2f80-11ef-9e9f-0242ac170006",
+                    "nodeid": "b2eb38cc-33dd-11ef-936b-005056a3bc47",
+                    "ontologyclass": "http://www.ics.forth.gr/isl/CRMdig/D29_Annotation_Object",
+                    "parentproperty": "http://www.cidoc-crm.org/cidoc-crm/P129i_is_subject_of",
                     "sortorder": 0,
                     "sourcebranchpublication_id": null
                 },
@@ -8287,7 +9392,7 @@
                     "nodeid": "ddea6b7a-e0bc-11ee-ba58-080027b7463b",
                     "ontologyclass": "http://www.cidoc-crm.org/cidoc-crm/E73_Information_Object",
                     "parentproperty": "http://www.cidoc-crm.org/cidoc-crm/P129i_is_subject_of",
-                    "sortorder": 0,
+                    "sortorder": 3,
                     "sourcebranchpublication_id": null
                 },
                 {
@@ -8406,6 +9511,29 @@
                     "sourcebranchpublication_id": null
                 },
                 {
+                    "alias": "imfr_title",
+                    "config": {
+                        "en": ""
+                    },
+                    "datatype": "string",
+                    "description": null,
+                    "exportable": false,
+                    "fieldname": null,
+                    "graph_id": "2aa724d1-ffd3-4823-8ff1-15a385b9a407",
+                    "hascustomalias": false,
+                    "is_collector": false,
+                    "isrequired": true,
+                    "issearchable": true,
+                    "istopnode": false,
+                    "name": "IMFR Title",
+                    "nodegroup_id": "3a654236-2f7c-11ef-93ea-0242ac170006",
+                    "nodeid": "e27aa804-33db-11ef-8a44-005056a3bc47",
+                    "ontologyclass": "http://www.cidoc-crm.org/cidoc-crm/E35_Title",
+                    "parentproperty": "http://www.cidoc-crm.org/cidoc-crm/P102_has_title",
+                    "sortorder": 0,
+                    "sourcebranchpublication_id": null
+                },
+                {
                     "alias": "communication_date",
                     "config": {
                         "dateFormat": "YYYY-MM-DD"
@@ -8417,7 +9545,7 @@
                     "graph_id": "2aa724d1-ffd3-4823-8ff1-15a385b9a407",
                     "hascustomalias": false,
                     "is_collector": false,
-                    "isrequired": false,
+                    "isrequired": true,
                     "issearchable": true,
                     "istopnode": false,
                     "name": "Communication Date",
@@ -9155,8 +10283,8 @@
             "publication": {
                 "graph_id": "2aa724d1-ffd3-4823-8ff1-15a385b9a407",
                 "notes": null,
-                "publicationid": "67709a5a-33be-11ef-b47d-0242ac170006",
-                "published_time": "2024-06-26T08:17:14.401"
+                "publicationid": "8e306a58-33e1-11ef-8a44-005056a3bc47",
+                "published_time": "2024-06-26T12:28:51.797"
             },
             "relatable_resource_model_ids": [],
             "resource_2_resource_constraints": [],
@@ -9191,9 +10319,9 @@
         }
     ],
     "metadata": {
-        "db": "PostgreSQL 16.3 (Debian 16.3-1.pgdg110+1) on x86_64-pc-linux-gnu, compiled by gcc (Debian 10.2.1-6) 10.2.1 20210110, 64-bit",
-        "git hash": "6928cbe43 2024-06-21 15:22:35 -0700",
+        "db": "PostgreSQL 16.1 on x86_64-pc-linux-gnu, compiled by gcc (GCC) 11.4.1 20230605 (Red Hat 11.4.1-2), 64-bit",
+        "git hash": "fatal: not a git repository (or any parent up to mount point /fs)",
         "os": "Linux",
-        "os version": "6.6.31-linuxkit"
+        "os version": "5.14.0-427.18.1.el9_4.x86_64"
     }
 }
