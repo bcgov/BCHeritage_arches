@@ -1,0 +1,63 @@
+{
+  "name": "Rivers",
+  "sources": {
+    "rivers-source": {
+      "type": "vector",
+      "tiles": [
+        "/{ url_context_root }/bctileserver/geo/pub/WHSE_BASEMAPPING.FWA_RIVERS_POLY/ows?service=WMS&request=GetMap&layers=WHSE_BASEMAPPING.FWA_RIVERS_POLY&styles=&format=pbf&transparent=true&version=1.3.0&height=512&width=512&srs=EPSG:3857&bbox={bbox-epsg-3857}"
+      ],
+      "tileSize": 512
+    }
+  },
+  "arches-metadata": {
+    "ispublic": false,
+    "addtomap": false,
+    "centerx": null,
+    "centery": null,
+    "icon": "fa fa-globe",
+    "isoverlay": true,
+    "legend": "<p><img alt=\"\" class=\"rivers legend-swatch\" src=\"/{ url_context_root }/static/img/blank.png\" />Rivers</p>",
+    "searchonly": false,
+    "sortorder": 0,
+    "zoom": null
+  },
+  "layers": [
+    {
+      "id": "rivers",
+      "type": "line",
+      "source": "rivers-source",
+      "source-layer": "WHSE_BASEMAPPING.FWA_RIVERS_POLY",
+      "minzoom": 0,
+      "maxzoom": 20,
+      "paint": {
+        "line-width": 1,
+        "line-color": "rgb(171,217,233)"
+      }
+    },
+    {
+      "id": "rivers-fill",
+      "type": "fill",
+      "paint": {
+        "fill-color": "rgba(171,217,233, .5)"
+      },
+      "source": "rivers-source",
+      "minzoom": 0,
+      "maxzoom": 20,
+      "source-layer": "WHSE_BASEMAPPING.FWA_RIVERS_POLY"
+    },
+    {
+      "id": "rivers-symbol",
+      "type": "symbol",
+      "source": "rivers-source",
+      "source-layer": "WHSE_BASEMAPPING.FWA_RIVERS_POLY",
+      "minzoom": 10,
+      "layout": {
+        "text-field": "{GNIS_NAME_1}",
+        "text-size": 12
+      },
+      "paint": {
+        "text-color": "rgb(91, 140, 140)"
+      }
+    }
+  ]
+}

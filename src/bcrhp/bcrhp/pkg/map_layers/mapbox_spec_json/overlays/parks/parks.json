@@ -1,0 +1,74 @@
+{
+  "name": "Parks - Provincial",
+  "sources": {
+    "parks-source": {
+      "type": "vector",
+      "tiles": [
+        "/{ url_context_root }/bctileserver/geo/pub/WHSE_TANTALIS.TA_PARK_ECORES_PA_SVW/ows?service=WMS&request=GetMap&layers=WHSE_TANTALIS.TA_PARK_ECORES_PA_SVW&styles=&format=pbf&transparent=true&version=1.3.0&height=512&width=512&srs=EPSG:3857&bbox={bbox-epsg-3857}"
+      ],
+      "tileSize": 512
+    }
+  },
+  "arches-metadata": {
+    "ispublic": false,
+    "addtomap": false,
+    "centerx": null,
+    "centery": null,
+    "icon": "fa fa-globe",
+    "isoverlay": true,
+    "legend": "<p><img alt=\"\" class=\"parks-ecological-reserve legend-swatch\" src=\"/{ url_context_root }/static/img/blank.png\" />Ecological Reserve<br /><img alt=\"\" class=\"parks-protected-area legend-swatch\" src=\"/{ url_context_root }/static/img/blank.png\" />Protected Area<br /><img alt=\"\" class=\"parks-provincial legend-swatch\" src=\"/{ url_context_root }/static/img/blank.png\" />Provincial Park</p>",
+    "searchonly": false,
+    "sortorder": 0,
+    "zoom": null
+  },
+  "layers": [
+    {
+      "id": "parks",
+      "type": "line",
+      "source": "parks-source",
+      "source-layer": "WHSE_TANTALIS.TA_PARK_ECORES_PA_SVW",
+      "minzoom": 0,
+      "maxzoom": 20,
+      "paint": {
+        "line-color": "rgb(117, 128, 102)",
+        "line-width": 0.6
+      }
+    },
+    {
+      "id": "parks-fill",
+      "type": "fill",
+      "paint": {
+        "fill-color": [
+          "match", ["get","PROTECTED_LANDS_CODE"],
+            "PA", "rgb(166,219,160)",
+            "PP", "rgb(90,174,97)",
+            "OI", "rgb(27,120,55)",
+            "rgb(217,240,211)"
+        ],
+        "fill-opacity": 0.3
+      },
+      "source": "parks-source",
+      "minzoom": 0,
+      "maxzoom": 20,
+      "source-layer": "WHSE_TANTALIS.TA_PARK_ECORES_PA_SVW"
+    },
+    {
+      "id": "parks-symbol",
+      "type": "symbol",
+      "source": "parks-source",
+      "minzoom": 7,
+      "source-layer": "WHSE_TANTALIS.TA_PARK_ECORES_PA_SVW",
+      "layout": {
+        "text-field": "{PROTECTED_LANDS_NAME}"
+      },
+      "paint": {
+        "text-color": [
+          "match", ["get","PROTECTED_LANDS_CODE"],
+            "OI", "rgb(255,255,255)",
+            "rgb(52,52,52)"
+        ]
+
+      }
+    }
+  ]
+}
