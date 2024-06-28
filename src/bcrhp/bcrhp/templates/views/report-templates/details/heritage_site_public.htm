@@ -27,7 +27,7 @@
                                         }"></span>
                 <span class="separator photo-caption-part" data-bind="visible: !!tileValues['image_features']() && (!!tileValues['image_view']() || !!tileValues['image_type']())">,</span>
                 <span class="photo-caption-part" data-bind="component: {name: 'text-widget',
-                               params: {value: tileValues['image_features'](),
+                               params: {value: ko.unwrap(tileValues['image_features']),
                                         state: 'display_value'
                                         }
                                }"></span>
@@ -40,17 +40,17 @@
             </div>
             <dl class="dl-horizontal">
             <div data-bind="visible: !!tileValues['copyright']">
-                <dt>Copyright</dt>
-                <dd data-bind="component: {name: 'text-widget',
-                               params: {value: tileValues['copyright'](),
+                <span>Copyright</span>
+                <span data-bind="component: {name: 'text-widget',
+                               params: {value: ko.unwrap(tileValues['copyright']),
                                         state: 'display_value'
                                         }
-                               }"></dd>
+                               }"></span>
             </div>
             <div data-bind="visible: !!$parent.textHasValue(tileValues['photographer'])">
                 <dt>Photographer</dt>
                 <dd data-bind="component: {name: 'text-widget',
-                               params: {value: tileValues['photographer'](),
+                               params: {value: ko.unwrap(tileValues['photographer']),
                                         state: 'display_value'
                                         }
                                }"></dd>
@@ -262,7 +262,7 @@
                     <div>
                         <dt>Reference Number</dt>
                         <dd data-bind="component: {name: 'text-widget',
-                           params: {value: values['reference_number'], state: 'display_value'
+                           params: {value: ko.unwrap(values['reference_number']), state: 'display_value'
                                     }
                            }"></dd>
                     </div>
