@@ -13,25 +13,27 @@ class Migration(migrations.Migration):
     operations = [
         RunPrivilegedSQL(
             """
-            update map_layer set sortorder = 1 where name = 'Cadastral ParcelMap';
-            update map_layer set sortorder = 2 where name = 'Municipal Boundaries';
-            update map_layer set sortorder = 3 where name = 'Regional District Boundaries';
-            update map_layer set sortorder = 4 where name = 'Indigenous Reserves and Band Names';
-            update map_layer set sortorder = 5 where name = 'Islands Trust Administrative Boundaries';
-            update map_layer set sortorder = 6 where name = 'Local Trust Administrative Boundaries';
-            update map_layer set sortorder = 7 where name = 'Tourism Regions';
-            update map_layer set sortorder = 8 where name = 'Digital Road Atlas';
-            update map_layer set sortorder = 9 where name = 'Trim Water Lines';
-            update map_layer set sortorder = 10 where name = 'Lakes';
-            update map_layer set sortorder = 11 where name = 'Crown tenures';
-            update map_layer set sortorder = 12 where name = 'Tantalis Surveyed Parcels';
-            update map_layer set sortorder = 13 where name = 'National parks';
-            update map_layer set sortorder = 14 where name = 'Provincial Parks';
-            update map_layer set sortorder = 15 where name = 'Municipal Parks';
-            update map_layer set sortorder = 16 where name = 'Borden Grid';
-            update map_layer set sortorder = 17 where name = 'Heritage Sites';
+            begin;
+            update map_layers set sortorder = 1 where name = 'Cadastral ParcelMap';
+            update map_layers set sortorder = 2 where name = 'Municipal Boundaries';
+            update map_layers set sortorder = 3 where name = 'Regional District Boundaries';
+            update map_layers set sortorder = 4 where name = 'Indian Reserves and Band Names';
+            update map_layers set sortorder = 5 where name = 'Islands Trust Administrative Boundaries Outlined';
+            update map_layers set sortorder = 6 where name = 'Local Trust Administrative Boundaries';
+            update map_layers set sortorder = 7 where name = 'Tourism Regions';
+            update map_layers set sortorder = 8 where name = 'Digital Roads Atlas';
+            update map_layers set sortorder = 9 where name = 'TRIM Water Lines';
+            update map_layers set sortorder = 10 where name = 'Lakes';
+            update map_layers set sortorder = 11 where name = 'Crown Tenures';
+            update map_layers set sortorder = 12 where name = 'Tantalis Surveyed Parcel';
+            update map_layers set sortorder = 13 where name = 'Parks - National';
+            update map_layers set sortorder = 14 where name = 'Parks - Provincial';
+            update map_layers set sortorder = 15 where name = 'Parks - Municipal';
+            update map_layers set sortorder = 16 where name = 'Borden Grid';
+            update map_layers set sortorder = 17 where name = 'Heritage Sites';
+            commit;
             """,
             """
-            update map_layer set sortorder = 0;
+            update map_layers set sortorder = 0;
             """)
     ]
