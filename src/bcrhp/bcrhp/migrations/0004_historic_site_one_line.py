@@ -238,7 +238,23 @@ class Migration(migrations.Migration):
                     )->0 significance_statement
                 from mv_bc_statement_of_significance
                 group by resourceinstanceid
-            ) sos on bn.resourceinstanceid = sos.resourceinstanceid, databc.get_first_address(bn.resourceinstanceid) prop
+            ) sos on bn.resourceinstanceid = sos.resourceinstanceid
+            left join (
+                select mpa.resourceinstanceid,
+                    mpa.property_address_id,
+                    mpa.street_address,
+                    mpa.city,
+                    mpa.province,
+                    mpa.postal_code,
+                    mpa.locality,
+                    mpa.location_description,
+                    case when mld.pid = 0 then null else lpad(mld.pid::text,9,'0') end pid,
+                    case when mld.pin = 0 then null else lpad(mld.pin::text,9,'0') end pin,
+                    mld.legal_description
+                from mv_property_address mpa
+                    left join mv_legal_description mld on mpa.property_address_id = mld.bc_property_address
+                limit 1
+            ) prop on bn.resourceinstanceid = prop.resourceinstanceid
             ;
              """,
              """
