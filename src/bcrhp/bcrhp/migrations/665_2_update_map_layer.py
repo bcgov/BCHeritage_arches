@@ -24,7 +24,7 @@ def backward(apps, schema_editor):
 class Migration(migrations.Migration):
 
     dependencies = [
-        ('bcrhp', '0005_remove_map_layers_665'),
+        ('bcrhp', '665_1_remove_map_layers'),
     ]
 
     operations = [

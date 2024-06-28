@@ -7,7 +7,7 @@ from bcrhp.migrations.operations.privileged_sql import RunPrivilegedSQL
 class Migration(migrations.Migration):
 
     dependencies = [
-        ('bcrhp', '0008_public_internal_map_layers_665'),
+        ('bcrhp', '665_4_public_internal_map_layers'),
     ]
 
     operations = [

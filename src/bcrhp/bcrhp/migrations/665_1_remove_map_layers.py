@@ -35,11 +35,10 @@ def backward(apps, schema_editor):
                  mapbox_json_path=f'{mapbox_overlays_dir}/trim-contours/trim-contours.json')
 
 
-
 class Migration(migrations.Migration):
 
     dependencies = [
-        ('bcrhp', '0004_historic_site_one_line'),
+        ('bcrhp', '947_historic_site_one_line'),
     ]
 
     operations = [

@@ -32,7 +32,7 @@ def backward(apps, schema_editor):
 class Migration(migrations.Migration):
 
     dependencies = [
-        ('bcrhp', '0006_update_map_layer_665'),
+        ('bcrhp', '665_2_update_map_layer'),
     ]
 
     operations = [
