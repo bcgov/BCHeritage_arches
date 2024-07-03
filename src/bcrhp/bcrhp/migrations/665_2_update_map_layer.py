@@ -10,7 +10,7 @@ mapbox_overlays_dir = f'{APP_ROOT}/pkg/map_layers/mapbox_spec_json/overlays'
 
 def forward(apps, schema_editor):
     call_command('packages', operation='add_mapbox_layer',
-                 layer_name='Indian Reserves and Band Names',
+                 layer_name='Indigenous Reserves and Band Names',
                  mapbox_json_path=f'{mapbox_overlays_dir}/indian-reserves-band-names/indian-reserves-band-names.json')
     call_command('packages', operation='delete_mapbox_layer', layer_name='Indigenous Reserve Boundaries')
 
@@ -18,7 +18,7 @@ def backward(apps, schema_editor):
     call_command('packages', operation='add_mapbox_layer',
                  layer_name='Indigenous Reserve Boundaries',
                  mapbox_json_path=f'{mapbox_overlays_dir}/indigenous-reserve-admin-boundaries/indigenous-reserve-admin-boundaries.json')
-    call_command('packages', operation='delete_mapbox_layer', layer_name='Indian Reserves and Band Names')
+    call_command('packages', operation='delete_mapbox_layer', layer_name='Indigenous Reserves and Band Names')
 
 
 class Migration(migrations.Migration):
