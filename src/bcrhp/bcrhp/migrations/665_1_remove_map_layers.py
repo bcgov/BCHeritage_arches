@@ -38,7 +38,7 @@ def backward(apps, schema_editor):
 class Migration(migrations.Migration):
 
     dependencies = [
-        ('bcrhp', '947_historic_site_one_line'),
+        ('bcrhp', '0003_create_databc_proxy_role'),
     ]
 
     operations = [

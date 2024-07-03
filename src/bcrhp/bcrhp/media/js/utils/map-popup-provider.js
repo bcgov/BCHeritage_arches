@@ -13,7 +13,7 @@ define([
                             {key: "MUNICIPALITY", title: "Municipality: "},
                             {key: "PID", title: "PID: "},
                             {key: "PIN", title: "PIN: "},
-                            {key: "LEGAL_DESCRIPTION", title: "Legal Description: "},  // NOTE: did not see listed as a key in databc
+                            {key: "LEGAL_DESCRIPTION", title: "Legal Description: "},
                             {key: "REGIONAL_DISTRICT", title: "Parcel Status: "},
                             {key: "PARCEL_STATUS", title: "Parcel Status: "},
                             {key: "PARCEL_START_DATE", title: "Parcel Start Date: "},
