@@ -24,13 +24,15 @@ class Migration(migrations.Migration):
             update map_layers set sortorder = 8 where name = 'Digital Roads Atlas';
             update map_layers set sortorder = 9 where name = 'TRIM Water Lines';
             update map_layers set sortorder = 10 where name = 'Lakes';
-            update map_layers set sortorder = 11 where name = 'Crown Tenures';
-            update map_layers set sortorder = 12 where name = 'Tantalis Surveyed Parcel';
-            update map_layers set sortorder = 13 where name = 'Parks - National';
-            update map_layers set sortorder = 14 where name = 'Parks - Provincial';
-            update map_layers set sortorder = 15 where name = 'Parks - Municipal';
-            update map_layers set sortorder = 16 where name = 'Borden Grid';
-            update map_layers set sortorder = 17 where name = 'Heritage Sites';
+            update map_layers set sortorder = 11 where name = 'Rivers';
+            update map_layers set sortorder = 12 where name = 'Streams';
+            update map_layers set sortorder = 13 where name = 'Crown Tenures';
+            update map_layers set sortorder = 14 where name = 'Tantalis Surveyed Parcel';
+            update map_layers set sortorder = 15 where name = 'Parks - National';
+            update map_layers set sortorder = 16 where name = 'Parks - Provincial';
+            update map_layers set sortorder = 17 where name = 'Parks - Municipal';
+            update map_layers set sortorder = 18 where name = 'Borden Grid';
+            update map_layers set sortorder = 19 where name = 'Heritage Sites';
             commit;
             """,
             """
