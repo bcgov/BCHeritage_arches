@@ -20,7 +20,7 @@ def forward(apps, schema_editor):
 def backward(apps, schema_editor):
     call_command('packages', operation='add_mapbox_layer',
                  layer_name='Natural Resource Regions',
-                 mapbox_json_path=f'{mapbox_overlays_dir}/natural-resource-regions/natural-resource-regions.json')
+                 mapbox_json_path=f'{mapbox_overlays_dir}/national-resource-regions/national-resource-regions.json')
     call_command('packages', operation='add_mapbox_layer',
                  layer_name='NTS 1:250k',
                  mapbox_json_path=f'{mapbox_overlays_dir}/nts250k/nts250k.json')
