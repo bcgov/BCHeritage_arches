@@ -319,34 +319,46 @@ class Migration(migrations.Migration):
             create or replace view heritage_site.csv_export as
             select
                 resourceinstanceid as site_id
-                , borden_number as "Borden Number"
-                , street_address as "Street Address"
-                , city as "City"
-                , locality as "Locality"
-                , postal_code as "Postal Code"
-                , location_description as "Location Description"
-                , registration_status as "Registration Status"
-                , authorities->>'registry_types' as "Registry Type"
-                , authorities->>'government_name' as "Recognition Government"
-                , authorities->>'recognition_type' as "Recognition Type"
-                , authorities->>'reference_number' as "Reference Number"
-                , to_date(authorities->>'start_date', 'YYYY-MM-DD') as "Recognition Start Date"
-                , to_date(authorities->>'end_date', 'YYYY-MM-DD') as "Recognition End Date"
-                , actors->>'Architect / Designer' as "Architect/Designer"
-                , actors->>'Builder' as "Builder"
-                , actor_notes as "Architect Builder Notes"
-                , case when chronology is null then null else chronology[0]->>'event' end as "Chronology Event"
-                , case when chronology is null then null else to_char(to_date(chronology[0]->>'start_year', 'YYYY-MM-DD'), 'YYYY')::numeric(4,0) end as "Chronology Start Year"
-                , case when chronology is null then null else to_char(to_date(chronology[0]->>'end_year', 'YYYY-MM-DD'), 'YYYY')::numeric(4,0) end as "Chronology End Year"
-                , case when chronology is null then null else chronology[0]->>'notes' end as "Chronology Notes"
-                , case when significance_statement is null then null else (significance_statement->>'significance_type') end as "SOS Type"
-                , case when significance_statement is null then null else (significance_statement->>'physical_description') end as "SOS Description"
-                , case when significance_statement is null then null else (significance_statement->>'document_location') end as "SOS Document Location"
-                , heritage_class as "Heritage Class"
-                , functional_states->>'Current' as "Current Function"
-                , functional_states->>'Historic' as "Historic Function"
-                , heritage_theme as "Heritage Theme"
+                , coalesce(borden_number, '') as "Borden Number"
+                , coalesce(street_address, '') as "Street Address"
+                , coalesce(city, '') as "City"
+                , coalesce(locality, '') as "Locality"
+                , coalesce(postal_code, '') as "Postal Code"
+                , coalesce(location_description, '') as "Location Description"
+                , coalesce(registration_status, '') as "Registration Status"
+                , coalesce((
+                    select string_agg(elem::text, '; ')
+                    from jsonb_array_elements_text(authorities->'registry_types') as elem
+                ), '') as "Registry Type"
+                , coalesce(authorities->>'government_name', '') as "Recognition Government"
+                , coalesce(authorities->>'recognition_type', '') as "Recognition Type"
+                , coalesce(authorities->>'reference_number', '') as "Reference Number"
+                , coalesce(to_char(to_date(authorities->>'start_date', 'YYYY-MM-DD'), 'YYYY-MM-DD'), '') as "Recognition Start Date"
+                , coalesce(to_char(to_date(authorities->>'end_date', 'YYYY-MM-DD'), 'YYYY-MM-DD'), '') as "Recognition End Date"
+                , coalesce(actors->>'Architect / Designer', '') as "Architect/Designer"
+                , coalesce(actors->>'Builder', '') as "Builder"
+                , coalesce(actor_notes, '') as "Architect Builder Notes"
+                , chronology_data.chronology as "Chronology"
+                , coalesce(significance_statement->>'significance_type', '') as "SOS Type"
+                , coalesce(significance_statement->>'physical_description', '') as "SOS Description"
+                , coalesce(significance_statement->>'document_location', '') as "SOS Document Location"
+                , coalesce(heritage_class, '') as "Heritage Class"
+                , coalesce(functional_states->>'Current', '') as "Current Function"
+                , coalesce(functional_states->>'Historic', '') as "Historic Function"
+                , coalesce(heritage_theme, '') as "Heritage Theme"
             from V_HISTORIC_SITE
+            left join lateral (
+                select
+                    string_agg(
+                        concat(
+                            coalesce(nullif(c.value->>'event', ''), '-'), ' ',
+                            coalesce(to_char(to_date(c.value->>'start_year', 'YYYY-MM-DD'), 'YYYY')::numeric(4,0)::text, '-'), ' ',
+                            coalesce(to_char(to_date(c.value->>'end_year', 'YYYY-MM-DD'), 'YYYY')::numeric(4,0)::text, '-'), ': ',
+                            coalesce(c.value->>'notes', '-')
+                        ), '; '
+                    ) as chronology
+                from jsonb_array_elements(v_historic_site.chronology) as c(value)
+            ) as chronology_data on true
             ;
             """,
             """
