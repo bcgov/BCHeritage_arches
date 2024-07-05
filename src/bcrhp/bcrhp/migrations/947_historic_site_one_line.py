@@ -62,21 +62,43 @@ class Migration(migrations.Migration):
         RunPrivilegedSQL(
             """
             begin;
-            drop index if exists mv_ca_idx;
             drop materialized view if exists mv_construction_actors cascade;
             create materialized view mv_construction_actors as
-                select resourceinstanceid,
-                    __arches_get_concept_label(construction_actor_type) actor_type,
-                    array_agg(construction_actor->'en'->>'value') actors,
-                    jsonb_array_elements_text(jsonb_agg(construction_actor_notes->'en'->>'value') - '') notes
-                from heritage_site.construction_actors
-                group by resourceinstanceid, __arches_get_concept_label(construction_actor_type);
+            select resourceinstanceid,
+                   __arches_get_concept_label(construction_actor_type) actor_type,
+                   array_agg(construction_actor->'en'->>'value') actors,
+                   array_remove(array_agg(construction_actor_notes->'en'->>'value'),'') notes
+            from heritage_site.construction_actors
+            group by resourceinstanceid, __arches_get_concept_label(construction_actor_type);
             create index mv_ca_idx on mv_construction_actors(resourceinstanceid);
             commit;
             """,
             """
-            drop index if exists mv_ca_idx;
+            begin;
             drop materialized view if exists mv_construction_actors cascade;
+            create materialized view mv_construction_actors as
+            select resourceinstanceid,
+                   __arches_get_concept_label(construction_actor_type) actor_type,
+                   array_agg(construction_actor->'en'->>'value') actors
+                    from heritage_site.construction_actors
+            group by resourceinstanceid, __arches_get_concept_label(construction_actor_type);
+            create index mv_ca_idx on mv_construction_actors(resourceinstanceid);
+            commit;
+            """),
+        RunPrivilegedSQL(
+            """
+            begin;
+            drop materialized view if exists mv_unique_property_address cascade;
+            create materialized view mv_unique_property_address as
+                select b.* from  heritage_site.instances i,
+                databc.get_first_address(i.resourceinstanceid) b;
+            create index mv_ua_idx on mv_unique_property_address(resourceinstanceid);
+            commit;
+            """,
+            """
+            begin;
+            drop materialized view if exists mv_unique_property_address cascade;
+            commit;
             """),
         RunPrivilegedSQL(
             """
@@ -94,6 +116,7 @@ class Migration(migrations.Migration):
                 refresh materialized view mv_heritage_theme;
                 refresh materialized view mv_legal_description;
                 refresh materialized view mv_property_address;
+                refresh materialized view mv_unique_property_address;
                 refresh materialized view mv_protection_event;
                 refresh materialized view mv_geojson_geoms;
                 refresh materialized view mv_site_boundary;
@@ -145,7 +168,6 @@ class Migration(migrations.Migration):
                 mc.chronology,
                 significance_statement,
                 ca.actors,
-                ca.actor_notes,
                 hf.functional_states,
                 ht.heritage_theme,
                 hc.heritage_class,
@@ -234,12 +256,11 @@ class Migration(migrations.Migration):
                 group by resourceinstanceid
             ) hc on bn.resourceinstanceid = hc.resourceinstanceid
             left join (select resourceinstanceid,
-                jsonb_object_agg(
-                    actor_type, array_to_string(actors, '; ')
-                ) actors,
-                array_to_string(array_agg(notes), '; ') actor_notes
-                from mv_construction_actors
-                group by resourceinstanceid
+                        jsonb_object_agg(
+                                actor_type, jsonb_build_object('actors', array_to_string(actors, '; '), 'notes', array_to_string(notes, '; ') )
+                            ) actors
+                             from mv_construction_actors
+                 group by resourceinstanceid order by resourceinstanceid
             ) ca on bn.resourceinstanceid = ca.resourceinstanceid
             left join mv_site_boundary msb on bn.resourceinstanceid = msb.resourceinstanceid
             left join (
@@ -258,23 +279,7 @@ class Migration(migrations.Migration):
                 from mv_bc_statement_of_significance
                 group by resourceinstanceid
             ) sos on bn.resourceinstanceid = sos.resourceinstanceid
-            left join (
-                select mpa.resourceinstanceid,
-                    mpa.property_address_id,
-                    mpa.street_address,
-                    mpa.city,
-                    mpa.province,
-                    mpa.postal_code,
-                    mpa.locality,
-                    mpa.location_description,
-                    case when mld.pid = 0 then null else lpad(mld.pid::text,9,'0') end pid,
-                    case when mld.pin = 0 then null else lpad(mld.pin::text,9,'0') end pin,
-                    mld.legal_description
-                from mv_property_address mpa
-                    left join mv_legal_description mld on mpa.property_address_id = mld.bc_property_address
-                limit 1
-            ) prop on bn.resourceinstanceid = prop.resourceinstanceid
-            ;
+            left join mv_unique_property_address prop on bn.resourceinstanceid = prop.resourceinstanceid;
              """,
              """
              drop view if exists V_HISTORIC_SITE cascade;
@@ -307,8 +312,8 @@ class Migration(migrations.Migration):
                 case when significance_statement is null then null else (significance_statement->>'heritage_value') end heritage_value,
                 case when significance_statement is null then null else (significance_statement->>'defining_elements') end defining_elements,
                 case when significance_statement is null then null else (significance_statement->>'document_location') end document_location,
-                actors->>'Architect / Designer' architect_name,
-                actors->>'Builder' builder_name,
+                actors->'Architect / Designer'->>'actors' architect_name,
+                actors->'Builder'->>'actors'  builder_name,
                 functional_states->>'Current' current_function,
                 functional_states->>'Historic' historic_function,
                 dimensions_area_sqm,
@@ -322,11 +327,6 @@ class Migration(migrations.Migration):
             from V_HISTORIC_SITE
             where bcrhp_submission_status in ('Approved - Basic Record','Approved - Full Record')
                 and registration_status in ('Federal Jurisdiction', 'Recorded/Unprotected', 'Registered', 'Legacy')
-                and exists (
-                    select 1
-                    from jsonb_array_elements(chronology) elem
-                    where elem->>'event' = 'Construction'
-                )
                 and not coalesce(restricted, false)
             ;
             """,
@@ -447,9 +447,12 @@ class Migration(migrations.Migration):
                 , coalesce(authorities->>'reference_number', '') as "Reference Number"
                 , coalesce(to_char(to_date(authorities->>'start_date', 'YYYY-MM-DD'), 'YYYY-MM-DD'), '') as "Recognition Start Date"
                 , coalesce(to_char(to_date(authorities->>'end_date', 'YYYY-MM-DD'), 'YYYY-MM-DD'), '') as "Recognition End Date"
-                , coalesce(actors->>'Architect / Designer', '') as "Architect/Designer"
-                , coalesce(actors->>'Builder', '') as "Builder"
-                , coalesce(actor_notes, '') as "Architect Builder Notes"
+                , coalesce(actors->'Architect / Designer'->>'actors', '') as "Architect/Designer"
+                , coalesce(actors->'Builder'->>'actors', '') as "Builder"
+                , concat(coalesce(actors->'Architect / Designer'->>'notes', ''),  
+                  (case when actors->'Architect / Designer'->>'notes' <> '' and actors->'Builder'->>'notes' <> '' then '; ' else '' end), 
+                  coalesce(actors->'Builder'->>'notes', ''))
+                 as "Architect Builder Notes"
                 , chronology_data.chronology as "Chronology"
                 , coalesce(significance_statement->>'significance_type', '') as "SOS Type"
                 , coalesce(significance_statement->>'physical_description', '') as "SOS Description"
