@@ -4,10 +4,14 @@
     "cadastral-vector-source": {
       "type": "vector",
       "tiles": [
-        "/{ url_context_root }/bctileserver/geo/pub/WHSE_CADASTRE.PMBC_PARCEL_FABRIC_POLY_SVW/ows?service=WMS&request=GetMap&layers=WHSE_CADASTRE.PMBC_PARCEL_FABRIC_POLY_SVW&styles=&format=pbf&transparent=true&version=1.1.1&height=512&width=512&srs=EPSG:3857&bbox={bbox-epsg-3857}"
+        "/int/bcrhp/bctileserver/geo/pub/WHSE_CADASTRE.PMBC_PARCEL_FABRIC_POLY_SVW/ows?service=WMS&request=GetMap&layers=WHSE_CADASTRE.PMBC_PARCEL_FABRIC_POLY_SVW&styles=&format=pbf&transparent=true&version=1.1.1&height=512&width=512&srs=EPSG:3857&bbox={bbox-epsg-3857}"
       ],
       "tileSize": 512
     }
+  },
+  "arches-metadata": {
+    "ispublic": true,
+    "sortorder": 1
   },
   "layers": [
     {

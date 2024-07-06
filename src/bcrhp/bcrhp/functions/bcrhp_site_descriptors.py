@@ -55,7 +55,7 @@ class BCRHPSiteDescriptors(AbstractPrimaryDescriptorsFunction):
     # @todo Change these to aliases
     _name_nodes = [aliases.NAME_TYPE, aliases.NAME, aliases.BORDEN_NUMBER]
     _sig_event_nodes = [aliases.START_YEAR, aliases.EVENT_DATES_APPROXIMATE, aliases.SIGNIFICANT_EVENTS]
-    _popup_nodes = [aliases.BORDEN_NUMBER, 'address']
+    _popup_nodes = [aliases.CITY, 'address']
     _card_nodes = [aliases.CITY,  'construction_date', aliases.REGISTRATION_STATUS]
     _address_nodes = [['street_address'],[aliases.CITY,'postal_code']]
 

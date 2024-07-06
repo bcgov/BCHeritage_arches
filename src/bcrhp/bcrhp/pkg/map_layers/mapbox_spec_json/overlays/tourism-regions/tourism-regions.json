@@ -1,0 +1,43 @@
+{
+  "name": "Tourism Regions",
+  "sources": {
+    "tourism-regions-source": {
+      "type": "vector",
+      "tiles": [
+        "/bcrhp/bctileserver/geo/pub/WHSE_LEGAL_ADMIN_BOUNDARIES.ADM_TOURISM_REGIONS_SP/ows?service=WMS&request=GetMap&layers=WHSE_LEGAL_ADMIN_BOUNDARIES.ADM_TOURISM_REGIONS_SP&styles=&format=pbf&transparent=true&version=1.1.1&height=512&width=512&srs=EPSG:3857&bbox={bbox-epsg-3857}"
+      ],
+      "tileSize": 512
+    }
+  },
+  "arches-metadata": {
+    "ispublic": false,
+    "sortorder": 7
+  },
+  "layers": [
+    {
+      "id": "tourism-regions-source",
+      "type": "line",
+      "source": "tourism-regions-source",
+      "source-layer": "WHSE_LEGAL_ADMIN_BOUNDARIES.ADM_TOURISM_REGIONS_SP",
+      "minzoom": 0,
+      "maxzoom": 19,
+      "paint": {
+        "line-color": "rgb(26, 95, 177)",
+        "line-width": 1
+      }
+    },
+    {
+      "id": "tourism-regions-symbol",
+      "type": "symbol",
+      "source": "tourism-regions-source",
+      "minzoom": 7,
+      "source-layer": "WHSE_LEGAL_ADMIN_BOUNDARIES.ADM_TOURISM_REGIONS_SP",
+      "layout": {
+        "text-field": "{TOURISM_REGION_NAME}"
+      },
+      "paint": {
+        "text-color": "rgb(26, 95, 177)"
+      }
+    }
+  ]
+}
