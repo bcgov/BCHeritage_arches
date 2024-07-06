@@ -35,7 +35,7 @@ class Migration(migrations.Migration):
                             prop.city,
                             prop.province,
                             prop.locality,
-                            prop.location_description,
+                            databc.html_to_plain_string(prop.location_description),
                             br.authorities->>'government_name' government_name,
                             br.authorities->>'authority' government_level,
                             br.authorities->>'recognition_type' protection_type,
