@@ -18,7 +18,7 @@
     padding: 5px !important;
     margin-left: 10vw !important;
     max-width: 50vw !important;
-    min-width: max-content !important;
+    min-width: max-content;
 }
 
 .vertical-nav-list-link:hover .vertical-nav-list-ref {
@@ -108,8 +108,15 @@ li.app-info-block-text {
     font-size: 16px;
 }
 
+@media only screen and (min-width: 280px) {
+    .bc-splash-caption {
+        min-width: 80vw !important;
+    }
+}
+
 @media only screen and (min-width: 768px) {
     .bc-splash-caption {
+        min-width: 80vw !important;
         margin-left: 10vw !important;
     }
 
@@ -359,4 +366,26 @@ a:hover {
 :focus {
     outline: 4px solid #3B99FC;
     outline-offset: 1px;
+}
+
+@media (max-width: 510px) {
+    .nav-brand-container h1 {
+        max-width: 22ch;
+        font-size: 0.8em;
+        line-height: 1.1em;
+    }
+}
+
+@media (max-width: 400px) {
+    .nav-brand-container h1 {
+        max-width: 16ch;
+        font-size: 0.6em;
+        line-height: 1.5em;
+    }
+}
+
+@media (max-width: 320px) {
+    .nav-brand-container h1 {
+        max-width: 16ch;
+    }
 }
