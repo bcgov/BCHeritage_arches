@@ -16,7 +16,7 @@ from bcrhp.migrations.operations.privileged_sql import RunPrivilegedSQL
 class Migration(migrations.Migration):
 
     dependencies = [
-        ('bcrhp', '0003_create_databc_proxy_role'),
+        ('bcrhp', '665_5_reorder_map_layers'),
     ]
 
     operations = [
