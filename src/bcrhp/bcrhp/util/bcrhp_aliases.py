@@ -23,6 +23,7 @@ class BCRHPSiteAliases(AbstractAliases):
     POSTAL_CODE = 'postal_code'
 
     RECOGNITION_TYPE = 'recognition_type'
+    REGISTRATION_STATUS = 'registration_status'
 
     SITE_GEOMETRY = 'site_boundary'
     OFFICIALLY_RECOGNIZED = 'officially_recognized_site'
