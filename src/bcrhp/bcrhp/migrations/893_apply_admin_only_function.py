@@ -4,7 +4,7 @@ from django.db import migrations, models
 class Migration(migrations.Migration):
 
     dependencies = [
-        ("bcrhp", "694_add_admin_only_function"),
+        ("bcrhp", "893_add_admin_only_function"),
     ]
 
     sql = """
