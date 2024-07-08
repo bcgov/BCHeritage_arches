@@ -1,6 +1,6 @@
 from django.contrib.auth.models import Group
 from django.contrib.auth import get_user_model
-from guardian.shortcuts import get_perms, assign_perm, remove_perm
+from guardian.shortcuts import assign_perm
 
 details = {
     "functionid": "60000000-0000-0000-0000-000000002002",
@@ -12,6 +12,7 @@ details = {
     "classname": "AdminOnlyAccess",
     "component": "views/components/functions/admin-only-access",
 }
+
 
 class AdminOnlyAccess(object):
     anonymous_user = None
@@ -28,7 +29,9 @@ class AdminOnlyAccess(object):
 
     def get_anonymous_user(self):
         if AdminOnlyAccess.anonymous_user is None:
-            AdminOnlyAccess.anonymous_user = get_user_model().objects.get(username="anonymous")
+            AdminOnlyAccess.anonymous_user = get_user_model().objects.get(
+                username="anonymous"
+            )
         return AdminOnlyAccess.anonymous_user
 
     def get(self, *args, **kwargs):
@@ -40,10 +43,18 @@ class AdminOnlyAccess(object):
         # print(context)
 
     def post_save(self, tile, request, context):
-        #print("Permissions before: %s" % get_perms(self.get_anonymous_user(), obj=tile.resourceinstance))
-        assign_perm('no_access_to_resourceinstance', self.get_guest_group(), obj=tile.resourceinstance)
-        assign_perm('no_access_to_resourceinstance', self.get_anonymous_user(), obj=tile.resourceinstance)
-        #print("Permissions after: %s" % get_perms(self.get_anonymous_user(), obj=tile.resourceinstance))
+        # print("Permissions before: %s" % get_perms(self.get_anonymous_user(), obj=tile.resourceinstance))
+        assign_perm(
+            "no_access_to_resourceinstance",
+            self.get_guest_group(),
+            obj=tile.resourceinstance,
+        )
+        assign_perm(
+            "no_access_to_resourceinstance",
+            self.get_anonymous_user(),
+            obj=tile.resourceinstance,
+        )
+        # print("Permissions after: %s" % get_perms(self.get_anonymous_user(), obj=tile.resourceinstance))
 
     def delete(self, tile, request):
         pass

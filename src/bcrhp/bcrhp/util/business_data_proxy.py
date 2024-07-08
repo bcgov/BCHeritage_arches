@@ -49,7 +49,6 @@ class BusinessDataProxy:
                 resourceinstance_id=resourceinstanceid
             )
         )
-        # print("Tiles: %s" % len(tiles))
 
         for tile in tiles:
             if tile:
@@ -71,7 +70,6 @@ class BusinessDataProxy:
                     display_values.append(
                         datatype.get_display_value(tile, node, language=language)
                     )
-        # print("%s -> %s" % (node.name, display_values))
         return (
             None
             if len(display_values) == 0
@@ -163,7 +161,6 @@ class LegislativeActDataProxy(BusinessDataProxy):
                     ),
                 }
             )
-        # print("values: %s" % values)
         values = list(filter(lambda val: val is not None, values))
         return values
 
