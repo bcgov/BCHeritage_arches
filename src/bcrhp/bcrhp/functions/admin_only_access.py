@@ -39,11 +39,8 @@ class AdminOnlyAccess(object):
 
     def save(self, tile, request, context):
         pass
-        # print("AdminOnlyAccess.save, args: %s, %s, %s" % (tile, request, context))
-        # print(context)
 
     def post_save(self, tile, request, context):
-        # print("Permissions before: %s" % get_perms(self.get_anonymous_user(), obj=tile.resourceinstance))
         assign_perm(
             "no_access_to_resourceinstance",
             self.get_guest_group(),
@@ -54,7 +51,6 @@ class AdminOnlyAccess(object):
             self.get_anonymous_user(),
             obj=tile.resourceinstance,
         )
-        # print("Permissions after: %s" % get_perms(self.get_anonymous_user(), obj=tile.resourceinstance))
 
     def delete(self, tile, request):
         pass

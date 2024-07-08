@@ -66,7 +66,6 @@ class Migration(migrations.Migration):
     ]
 
     operations = [
-        ## the following command has to be run after the previous RunSQL commands that update the domain datatype values
         migrations.RunPython(add_permissions, remove_permissions),
     ]
 
