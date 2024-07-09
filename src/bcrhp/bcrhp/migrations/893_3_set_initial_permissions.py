@@ -6,25 +6,21 @@ from arches.app.models.graph import Graph
 from guardian.shortcuts import assign_perm, remove_perm
 from django.core.management import call_command
 
-
-private_resources_sql = """
-    select distinct resourceinstanceid from heritage_site.site_record_admin
-         where restricted=true
-                or __arches_get_concept_label(bcrhp_submission_status) not in ('Approved - Basic Record', 'Approved - Full Record')
-union
-select resourceinstanceid from heritage_site.bc_right where not officially_recognized_site
-or __arches_get_concept_label(registration_status) not in ('Registered','Federal Jurisdiction');
-"""
+slugs = [
+    "lg_person",
+    "site_submission",
+    "project_sandbox",
+    "heritage_site_historical_data",
+]
 
 
 def add_permissions(apps, schema_editor, with_create_permissions=True):
-    slugs = ["heritage_site"]
 
     user = get_user_model().objects.get(username="anonymous")
     guest_group = Group.objects.filter(name="Guest").first()
     graphs = Graph.objects.filter(slug__in=slugs).all()
 
-    resources = Resource.objects.raw(private_resources_sql)
+    resources = Resource.objects.filter(graph__slug__in=slugs).all()
     print(len(resources))
     for resource in resources:
         assign_perm("no_access_to_resourceinstance", user, obj=resource)
@@ -39,12 +35,11 @@ def add_permissions(apps, schema_editor, with_create_permissions=True):
 
 
 def remove_permissions(apps, schema_editor, with_create_permissions=True):
-    slugs = ["heritage_site"]
     user = get_user_model().objects.get(username="anonymous")
     guest_group = Group.objects.filter(name="Guest").first()
 
     graphs = Graph.objects.filter(slug__in=slugs).all()
-    resources = Resource.objects.raw(private_resources_sql)
+    resources = Resource.objects.filter(graph__slug__in=slugs).all()
 
     print(len(resources))
     for resource in resources:
@@ -62,7 +57,7 @@ def remove_permissions(apps, schema_editor, with_create_permissions=True):
 class Migration(migrations.Migration):
 
     dependencies = [
-        ("bcrhp", "694_apply_restricted_site_access_function"),
+        ("bcrhp", "893_2_apply_admin_only_function"),
     ]
 
     operations = [

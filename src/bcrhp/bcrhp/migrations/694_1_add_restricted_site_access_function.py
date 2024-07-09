@@ -4,7 +4,7 @@ from django.db import migrations, models
 class Migration(migrations.Migration):
 
     dependencies = [
-        ("bcrhp", "893_set_initial_permissions"),
+        ("bcrhp", "893_4_restrict_nodes_from_public"),
     ]
 
     sql = """

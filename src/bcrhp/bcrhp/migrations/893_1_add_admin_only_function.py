@@ -1,10 +1,10 @@
-from django.db import migrations, models
+from django.db import migrations
 
 
 class Migration(migrations.Migration):
 
     dependencies = [
-        ("bcrhp", "665_5_reorder_map_layers"),
+        ("bcrhp", "893_0_add_historic_data_slug"),
     ]
 
     sql = """
