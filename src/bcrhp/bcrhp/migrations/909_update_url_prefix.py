@@ -7,7 +7,7 @@ from bcrhp.migrations.operations.privileged_sql import RunPrivilegedSQL
 class Migration(migrations.Migration):
 
     dependencies = [
-        ('bcrhp', '947_historic_site_one_line'),
+        ('bcrhp', '694_3_set_initial_permissions'),
     ]
 
     operations = [
