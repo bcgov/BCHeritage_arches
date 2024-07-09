@@ -2,6 +2,7 @@ import logging
 from arches.app.views.api import APIBase
 from django.http import HttpResponse
 
+from arches.app.models import models
 from django.views.decorators.csrf import csrf_exempt
 from django.utils.decorators import method_decorator
 from arches.app.utils.response import JSONResponse
@@ -32,6 +33,18 @@ class LegislativeAct(APIBase):
         act = legislative_act_proxy.get_authorities(act_id)
         # print("Scientific Names: %s" % names)
         return JSONResponse(JSONSerializer().serializeToPython(act))
+
+
+class UserProfile(APIBase):
+    def get(self, request):
+        user_profile = models.User.objects.get(id=request.user.pk)
+        group_names = [group.name for group in models.Group.objects.filter(user=user_profile).all()]
+        return JSONResponse(JSONSerializer().serializeToPython(
+            {"username": user_profile.username,
+             "first_name": user_profile.first_name,
+             "last_name": user_profile.last_name,
+             "groups": group_names}
+        ))
 
 
 query_config = {

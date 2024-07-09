@@ -172,6 +172,24 @@ define([
 
         this.actAuthorities = {};
 
+        this.getUser = function() {
+            let user = ko.mapping.fromJS({"username":"","first_name":"","last_name":"","groups":[]});
+            $.ajax({
+                url: `${self.urls.root}user_profile`
+            }).done(function (data) {
+                if (data)
+                {
+                    ko.mapping.fromJS(data, user);
+                }
+            });
+            return user;
+        };
+        this.user = this.getUser();
+
+        this.isAnonymous = ko.computed( function() {
+            return ko.unwrap(this.user.username) === 'anonymous';
+        }, this);
+
         this.getLegislativeAct = function (relatedActObject) {
             let actId = ko.unwrap(ko.unwrap(relatedActObject)[0].resourceId);
             if (!!actId && this.actAuthorities[actId])

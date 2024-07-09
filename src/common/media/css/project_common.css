@@ -101,6 +101,10 @@ table.bc-summary-table td {
     display: inline-block;
 }
 
+.hide-section {
+    display: none;
+}
+
 .grid-col-1 {
     grid-column-start: 1;
 }
@@ -374,6 +378,10 @@ img.bc-details-image
     /* Hide unwanted parts of the page */
     section.search-results-panel, .search-toolbar, #skip-link-holder {
         display: none !important;
+    }
+
+    .hide-section {
+        display: block;
     }
 
     /* Align the date on the RHS next to the name of the site*/
