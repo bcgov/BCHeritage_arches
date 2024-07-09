@@ -293,6 +293,22 @@ class Migration(migrations.Migration):
             commit;
             """
         ),
+        RunSQL(
+            """
+            begin;
+            update edit_log
+            set newvalue = replace(newvalue::text, '/int/bcrhp/', '/bcrhp/')::jsonb
+            where newvalue::text like '%/int/bcrhp/';
+            commit;
+            """,
+            """
+            begin;
+            update edit_log
+            set newvalue = replace(newvalue::text, '/bcrhp/', '/int/bcrhp/')::jsonb
+            where newvalue::text like '%/bcrhp/';
+            commit;
+            """
+        ),
         RunPrivilegedSQL(
             """
             create or replace view V_HISTORIC_SITE as
