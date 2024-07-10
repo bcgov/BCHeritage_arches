@@ -357,7 +357,7 @@
                 <div>
                     <dt>Document Location</dt>
                     <dd class="print-only" data-bind="component: {name: 'text-widget',
-                       params: {value: getFirstNodeValue('document_location'),
+                       params: {value: ko.unwrap(getFirstNodeValue('document_location')),
                                 state: 'display_value',
                                 displayfullvalue: true}
                        }"></dd>
