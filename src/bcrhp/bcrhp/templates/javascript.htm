@@ -1,0 +1,137 @@
+{% extends 'javascript.htm' %}
+{% load webpack_static from webpack_loader %}
+
+{% block require_config %}
+<script>
+    var CKEDITOR_BASEPATH = "{% webpack_static 'node_modules/ckeditor4/' %}";
+    window.CKEDITOR_BASEPATH = CKEDITOR_BASEPATH;
+    require.config({
+        baseUrl: "{% webpack_static '' %}",
+        urlArgs: '_dc={{ app_settings.VERSION }}',
+        paths: {
+            'bootstrap': "node_modules/bootstrap/dist/js/bootstrap.min",
+            'jquery-lib': "node_modules/jquery/dist/jquery.min",
+            'jquery': "node_modules/jquery-migrate/dist/jquery-migrate.min",
+            'jquery-ui': "node_modules/jqueryui/jquery-ui.min",
+            'jquery-validate': "node_modules/jquery-validation/dist/jquery.validate.min",
+            'underscore': "node_modules/underscore/underscore-min",
+            'chosen': "node_modules/chosen-js/chosen.jquery.min",
+            'knockout': "node_modules/knockout/build/output/knockout-latest",
+            'text': "node_modules/requirejs-text/text",
+            'app': "build/js/app",
+            /* Not entirely sure how to load the following or if they are
+             * required, they don't appear to be the media/ dir atm,
+             * ran out of time to investigate further
+            **/
+            //'themepunch-tools': "plugins/revolution-slider/rs-plugin/js/jquery.themepunch.tools.min",
+            //'themepunch-revolution': "plugins/revolution-slider/rs-plugin/js/jquery.themepunch.revolution",
+            //'revolution-slider': "plugins/revolution-slider",
+            //'slick': "build/js/plugins/slick/slick.min",
+        },
+        packages: [{
+            name: "codemirror",
+            location: "{% webpack_static 'node_modules/codemirror' %}",
+            main: "lib/codemirror"
+        }],
+        shim: {
+            'backbone': {
+                deps: ['jquery', 'jquery-lib', 'underscore'],
+                exports: 'Backbone'
+            },
+            'nifty': {
+                exports: 'nifty',
+                deps: ['bootstrap', 'jquery', 'jquery-ui', 'metismenu']
+            },
+            'metismenu': {
+                deps: ['jquery', 'jquery-ui']
+            },
+            'chosen': {
+                deps: ['jquery']
+            },
+            'bootstrap': {
+                deps: ['jquery', 'jquery-ui']
+            },
+            'knockout-mapping': {
+                deps: ['knockout']
+            },
+            'jquery-validate': {
+                deps: ['jquery']
+            },
+            'jquery-ui': {
+                deps: ['jquery']
+            },
+            'jqtree': {
+                deps: ['jquery']
+            },
+            'datatables': {
+                deps: ['jquery']
+            },
+            'datatables.net': {
+                deps: ['jquery']
+            },
+            'datatables.net-buttons-bs': {
+                deps: ['datatables.net-buttons']
+            },
+            'noUiSlider': {
+                deps: ['jquery'],
+                exports : '$'
+            },
+            'jquery': {
+                deps: ['jquery-lib'],
+                exports : '$'
+            },
+            'mapbox-gl-draw': {
+                deps: ['mapbox-gl']
+            },
+            'select-woo': {
+                deps: ['jquery'],
+            },
+            'moment': {
+                deps: ['jquery']
+            },
+            'uuid': {
+                exports: 'UUID'
+            },
+            'geohash': {
+                exports: 'Geohash'
+            },
+            'leaflet-iiif': {
+                deps: ['leaflet']
+            },
+            'leaflet-draw': {
+                deps: ['leaflet']
+            },
+            'slick': {
+                deps: ['jquery']
+            },
+            'leaflet-fullscreen': {
+                deps: ['leaflet']
+            },
+            'themepunch-tools': {
+                deps: ['jquery']
+            },
+            'themepunch-revolution': {
+                deps: ['jquery']
+            },
+            'app': {
+                deps: ['jquery']
+            },
+            {% block shim %}{% endblock shim %}
+        }
+    });
+    require([
+        'jquery',
+        'knockout',
+        'bootstrap',
+        'app',
+        ],
+        function ($) {
+            // FIXME not working anymore and not sure why, similar setup def
+            // in arches/app/templates/javascript.htm, App is undefined
+            $(document).ready(function () {
+                App.init();
+            });
+        }
+    );
+</script>
+{% endblock require_config %}
