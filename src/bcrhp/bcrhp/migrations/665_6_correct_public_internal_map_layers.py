@@ -6,7 +6,7 @@ from django.db.migrations.operations import RunSQL
 class Migration(migrations.Migration):
 
     dependencies = [
-        ('bcrhp', '694_3_set_initial_permissions'),
+        ('bcrhp', '983_delete_addresses'),
     ]
 
     operations = [
