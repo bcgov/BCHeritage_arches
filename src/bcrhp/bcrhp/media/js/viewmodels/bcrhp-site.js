@@ -31,7 +31,7 @@ define([
 
         this.helpenable = ko.observable(false);
         this.siteNamesVisible = ko.observable(true);
-        this.siteLocationVisible = ko.observable(true);
+        this.siteLocationVisible = ko.observable(false);
         this.bordenNumberVisible = ko.observable(true);
         this.recognitionInformationVisible = ko.observable(true);
         this.recognitionDetailsVisible = ko.observable(true);
