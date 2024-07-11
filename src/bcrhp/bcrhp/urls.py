@@ -7,7 +7,9 @@ from bcrhp.views.api import BordenNumber, MVT, LegislativeAct, UserProfile
 from bcrhp.views.crhp import CRHPXmlExport
 from bcrhp.views.search import export_results as bcrhp_export_results
 from bcrhp.views.resource import ResourceReportView
+from bcrhp.views.auth import UnauthorizedView
 from .views.map import BCTileserverProxyView
+from bcrhp.views.auth import ExternalOauth
 import re
 
 uuid_regex = settings.UUID_REGEX
@@ -55,6 +57,10 @@ urlpatterns = [
                       CRHPXmlExport.as_view(),
                       name="crhp_export",
                       ),
+                  re_path(bc_path_prefix(r"^auth/$"), ExternalOauth.start, name="external_oauth_start"),
+                  re_path(bc_path_prefix(r"^auth/eoauth_cb$"), ExternalOauth.callback, name="external_oauth_callback"),
+                  re_path(bc_path_prefix(r"^auth/eoauth_start$"), ExternalOauth.start, name="external_oauth_start"),
+                  re_path(bc_path_prefix(r"^unauthorized/"), UnauthorizedView.as_view(), name="unauthorized"),
                   re_path(
                       bc_path_prefix(r"^mvt/(?P<nodeid>%s)/(?P<zoom>[0-9]+|\{z\})/(?P<x>[0-9]+|\{x\})/(?P<y>[0-9]+|\{y\}).pbf$" % uuid_regex),
                       MVT.as_view(),
