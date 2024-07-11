@@ -1,5 +1,9 @@
 <div class="details-card-section">
-<div style="display: flex;justify-content:right;padding:1em 0">
+<div class="details-icons">
+    <a data-bind="click: function () { window.print() }" style="cursor:pointer;">
+        <span>Print</span>
+        <i class="fa fa-print"></i>
+    </a>
     <a data-bind="click: function () { helpactive(true) }" style="cursor:pointer;">
         <span data-bind="text: $root.translations.help"></span>
         <i class="fa fa-question-circle"></i>
