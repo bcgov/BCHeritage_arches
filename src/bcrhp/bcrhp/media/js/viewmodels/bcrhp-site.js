@@ -187,7 +187,7 @@ define([
         this.user = this.getUser();
 
         this.isAnonymous = ko.computed( function() {
-            return ko.unwrap(this.user.username) === 'anonymous';
+            return ko.unwrap(this.user.groups).length === 0 || this.user.groups().includes("Guest");
         }, this);
 
         this.getLegislativeAct = function (relatedActObject) {
