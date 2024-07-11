@@ -352,10 +352,7 @@ OAUTH_CLIENT_ID = ''  #'9JCibwrWQ4hwuGn5fu2u1oRZSs9V6gK8Vu8hpRC4'
 
 EXTERNAL_OAUTH_CONFIGURATION = {
     # these groups will be assigned to OAuth authenticated users on their first login
-    "default_user_groups": ["Guest", "Resource Exporter"],
-    # users who enter an email address with one of these domains will be authenticated through external OAuth
-    # "user_domains": ["idir"],
-    # "user_domains": get_env_variable("OAUTH_REDIRECT_DOMAINS").split(),
+    #"default_user_groups": ["Guest", "Resource Exporter"],
     # claim to be used to assign arches username from
     "uid_claim": "preferred_username",
     # application ID and secret assigned to your arches application
