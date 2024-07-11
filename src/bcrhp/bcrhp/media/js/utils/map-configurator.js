@@ -31,6 +31,13 @@ define(['mapbox-gl'], function(MapboxGl){
 
         postConfig: function(map) {
             console.log("Custom post-config");
+            // Workaround for bug in core causing geocoder placeholder to be null
+            map._controls.forEach(control => {
+                if (control.hasOwnProperty("geocoderService") && control.hasOwnProperty("placeholder"))
+              {
+                    control.setPlaceholder("Find an address...");
+                }
+            });
         },
     };
 
