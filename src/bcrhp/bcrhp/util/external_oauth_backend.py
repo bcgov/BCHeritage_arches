@@ -12,14 +12,19 @@ import logging
 import jwt
 from jwt import PyJWKClient
 from requests_oauthlib import OAuth2Session
+from arches.app.utils.external_oauth_backend import ExternalOauthAuthenticationBackend as CoreOauthBackend
 
 logger = logging.getLogger(__name__)
 
 
-class ExternalOauthAuthenticationBackend(ModelBackend):
+class ExternalOauthAuthenticationBackend(CoreOauthBackend):
+    # Overrides core class of the same name. Does not allow OAuth users to
+    # self-register. Redirects to unauthorized page if user is not already in the
+    # system.
+
     def authenticate(self, request, sso_authentication=False, **kwargs):
         try:
-            print("Authenticating")
+            logger.debug("Authenticating (custom)")
             if not sso_authentication or not request:
                 return None
 
@@ -33,9 +38,8 @@ class ExternalOauthAuthenticationBackend(ModelBackend):
 
             oauth = OAuth2Session(client_id, redirect_uri=redirect_uri, state=request.session["oauth_state"])
             try:
-                print("\n\nEndpoint: %s " % oauth2_settings["token_endpoint"])
-                print("Auth reponse: %s" % request.build_absolute_uri())
-                print("Client secret: %s\n\n" % app_secret)
+                logger.debug("\n\nEndpoint (custom): %s " % oauth2_settings["token_endpoint"])
+                logger.debug("Auth response (custom): %s" % request.build_absolute_uri())
                 token_response = oauth.fetch_token(
                     oauth2_settings["token_endpoint"],
                     authorization_response=request.build_absolute_uri(),
@@ -68,28 +72,15 @@ class ExternalOauthAuthenticationBackend(ModelBackend):
             try:
                 user = User.objects.get(username=username)
             except User.DoesNotExist:
+                logger.warning("Unregistered user tried to login: %s" % username)
                 user = None
-
-            # default_user_groups are used to assign groups to users that don't yet exist.
-            if user is None and "default_user_groups" in oauth2_settings:
-                email = decoded_id_token["email"] if "email" in decoded_id_token else None
-                given_name = decoded_id_token["given_name"] if "given_name" in decoded_id_token else ""
-                family_name = decoded_id_token["family_name"] if "family_name" in decoded_id_token else ""
-                is_superuser = True if "create_as_superuser" in oauth2_settings and oauth2_settings["create_as_superuser"] else False
-                is_staff = True if "create_as_staff" in oauth2_settings and oauth2_settings["create_as_staff"] else False
-                user = User.objects.create_user(
-                    username, email=email, first_name=given_name, last_name=family_name, is_staff=is_staff, is_superuser=is_superuser
-                )
-                for group in oauth2_settings["default_user_groups"]:
-                    django_group = Group.objects.get(name=group)
-                    user.groups.add(django_group)
-                user.save()
 
             if user is None:
                 return None
 
             token = ExternalOauthAuthenticationBackend.get_token(user)
             if token is not None and token.access_token_expiration > datetime.now():
+                logger.debug("Returning user (custom): %s" % user)
                 return user
 
             expiration_date = datetime.now() + timedelta(seconds=int(expires_in))
@@ -108,83 +99,12 @@ class ExternalOauthAuthenticationBackend(ModelBackend):
             logger.error("Error in external oauth backend", exc_info=True)
             raise e
 
-    def user_can_authenticate(self, user):
-        """
-        Reject users with is_active=False. Custom user models that don't have
-        that attribute are allowed.
-        """
-        is_active = getattr(user, "is_active", None)
-        return is_active or is_active is None
-
-    def get_user(self, user_id):
-        try:
-            return User.objects.get(pk=user_id)
-        except User.DoesNotExist:
-            return None
-
-    @receiver(user_logged_out)
-    def logout(sender, user, request, **kwargs):
-        try:
-            token = ExternalOauthAuthenticationBackend.get_token(user)
-            if token is not None:
-                token.delete()
-        except ExternalOauthToken.DoesNotExist:
-            pass
-
     @receiver(user_logged_in)
     def login(sender, user, request, **kwargs):
-        print("Logging in: %s" % user)
-        if user.backend == "arches.app.utils.external_oauth_backend.ExternalOauthAuthenticationBackend":
+        logger.debug("Logging in (custom): %s" % user)
+        if user.backend == "bcrhp.util.external_oauth_backend.ExternalOauthAuthenticationBackend":
             try:
                 token = ExternalOauthAuthenticationBackend.get_token(user)
                 request.session.set_expiry((token.access_token_expiration - datetime.now()).total_seconds())
             except ExternalOauthToken.DoesNotExist:
                 pass
-
-    def get_token(user: User) -> ExternalOauthToken or None:
-        """Get the token record for a particular user"""
-        try:
-            token = ExternalOauthToken.objects.get(user=user)
-            return token
-        except ExternalOauthToken.DoesNotExist:
-            return None
-
-    def get_token_for_username(username: str) -> Tuple[ExternalOauthToken, User] or None:
-        """Get the token record (and user) for a particular username"""
-        try:
-            user = User.objects.get(username=username)
-            return ExternalOauthAuthenticationBackend.get_token(user), user
-        except User.DoesNotExist:
-            return (None, None)
-
-    def get_oauth2_settings() -> dict or None:
-        """Get oauth2 settings from oidc endpoint or settings.EXTERNAL_OAUTH_CONFIGURATION"""
-        oauth_settings = {**{}, **settings.EXTERNAL_OAUTH_CONFIGURATION}
-        if "oidc_discovery_url" in oauth_settings:
-            try:
-                r = requests.get(oauth_settings["oidc_discovery_url"])
-
-                response_json = r.json()
-                oauth_settings["jwks_uri"] = response_json["jwks_uri"]
-                oauth_settings["token_endpoint"] = response_json["token_endpoint"]
-                oauth_settings["authorization_endpoint"] = response_json["authorization_endpoint"]
-                oauth_settings["end_session_endpoint"] = response_json["end_session_endpoint"]
-                return oauth_settings
-            except Exception as e:
-                logger = logging.getLogger(__name__)
-                logger.error("Error with oidc discovery", exc_info=1)
-                raise e
-
-        return oauth_settings if len(oauth_settings) > 0 else None
-
-    def get_authorization_url(request) -> Tuple[str, str]:
-        """Return authorization URL to redirect user to and XSRF state token"""
-        oauth2_settings = ExternalOauthAuthenticationBackend.get_oauth2_settings()
-        client_id = oauth2_settings["app_id"]
-        redirect_uri = request.build_absolute_uri(reverse("external_oauth_callback"))
-        scope = oauth2_settings["scopes"]
-        auth_url = oauth2_settings["authorization_endpoint"]
-
-        oauth = OAuth2Session(client_id, redirect_uri=redirect_uri, scope=scope)
-
-        return oauth.authorization_url(auth_url)

@@ -190,10 +190,10 @@ ARCHES_APPLICATIONS = ()
 AUTHENTICATION_BACKENDS = (
     # "arches.app.utils.email_auth_backend.EmailAuthenticationBackend", #Comment out for IDIR
     "oauth2_provider.backends.OAuth2Backend",
-    "arches.app.utils.external_oauth_backend.ExternalOauthAuthenticationBackend",
+    "bcrhp.util.external_oauth_backend.ExternalOauthAuthenticationBackend",
     # "django.contrib.auth.backends.ModelBackend",  # this is default # Comment out for IDIR
     # "django.contrib.auth.backends.RemoteUserBackend",
-    "bcrhp.util.auth.backends.BCGovRemoteUserBackend",  # For IDIR authentication behind legacy siteminder
+    # "bcrhp.util.auth.backends.BCGovRemoteUserBackend",  # For IDIR authentication behind legacy siteminder
     "guardian.backends.ObjectPermissionBackend",
     "arches.app.utils.permission_backend.PermissionBackend",
 )
@@ -210,7 +210,7 @@ MIDDLEWARE = [
     "arches.app.utils.middleware.ModifyAuthorizationHeader",
     "oauth2_provider.middleware.OAuth2TokenMiddleware",
     "django.contrib.auth.middleware.AuthenticationMiddleware",
-    "bcrhp.util.auth.middleware.SiteminderMiddleware",
+    # "bcrhp.util.auth.middleware.SiteminderMiddleware",
     # "bcrhp.util.auth.auth_required_middleware.AuthRequiredMiddleware",
     "django.contrib.messages.middleware.MessageMiddleware",
     # "django.middleware.clickjacking.XFrameOptionsMiddleware",
@@ -354,7 +354,8 @@ EXTERNAL_OAUTH_CONFIGURATION = {
     # these groups will be assigned to OAuth authenticated users on their first login
     "default_user_groups": ["Guest", "Resource Exporter"],
     # users who enter an email address with one of these domains will be authenticated through external OAuth
-    "user_domains": get_env_variable("OAUTH_REDIRECT_DOMAINS").split(),
+    # "user_domains": ["idir"],
+    # "user_domains": get_env_variable("OAUTH_REDIRECT_DOMAINS").split(),
     # claim to be used to assign arches username from
     "uid_claim": "preferred_username",
     # application ID and secret assigned to your arches application
