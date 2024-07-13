@@ -15,8 +15,8 @@ private_resources_sql = """
         where not officially_recognized_site
         or __arches_get_concept_label(registration_status) not in ('Registered','Federal Jurisdiction')
     union
-    select resourceinstanceid from heritage_site.instances i except (
-        select resourceinstanceid from heritage_site.bc_right r);
+    (select resourceinstanceid from heritage_site.instances i except (
+        select resourceinstanceid from heritage_site.bc_right r));
 """
 
 
