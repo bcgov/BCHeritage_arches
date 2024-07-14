@@ -64,8 +64,7 @@
             <div class="rp-card-section">
                 <!--div data-bind="text: report.get('name')"></div-->
                 <!-- ko if: report.get('name') == "Heritage Site" -->
-                <!--div>User: {{ user.username }}</div-->
-                {% include 'views/report-templates/details/heritage_site_public.htm' %}
+                {% include 'views/report-templates/details/heritage_site.htm' %}
                 <!-- /ko -->
                 <!-- ko if: report.get('name') == "Legislative Act" -->
                 {% include 'views/report-templates/details/legislative_act.htm' %}
