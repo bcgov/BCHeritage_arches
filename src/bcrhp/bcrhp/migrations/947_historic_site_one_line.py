@@ -117,6 +117,15 @@ class Migration(migrations.Migration):
             where msra.bcrhp_submission_status in ('Approved - Basic Record','Approved - Full Record')
             and registration_status in ('Federal Jurisdiction', 'Recorded/Unprotected', 'Registered', 'Legacy')
             and not coalesce(msra.restricted, false);
+            DO
+            $$
+                DECLARE
+                    databc_user text;
+                BEGIN
+                    select replace(current_database(), 'bcrhp','proxy_databc') into databc_user;
+                    EXECUTE format('grant select on databc.v_historic_enviro_onerow_site to %s' ,quote_ident(databc_user));
+                end;
+            $$ language 'plpgsql';
             """),
         RunPrivilegedSQL(
             """
@@ -403,9 +412,15 @@ class Migration(migrations.Migration):
                 authorities->>'recognition_type' protection_type,
                 to_date(authorities->>'start_date', 'YYYY-MM-DD') protection_start_date,
                 authorities->>'reference_number' reference_number,
-                case when chronology is null then null else to_char(to_date(chronology[0]->>'start_year', 'YYYY-MM-DD'), 'YYYY')::numeric(4,0) end construction_date,
-                case when chronology is not null and (chronology[0]->>'dates_approximate')::boolean then 'Circa' end construction_date_qualifier,
-                case when significance_statement is null then null else (significance_statement->>'significance_type') end significance_type,
+                case when chronology is null then null else
+                    (select
+                         to_char(to_date(a->>'start_year', 'YYYY-MM-DD'), 'YYYY')::numeric(4,0)
+                     from jsonb_array_elements(chronology) a where a->>'event' = 'Construction' limit 1)
+                    end construction_date,
+                case when chronology is null then null else
+                    (select case when (a->>'dates_approximate')::boolean then 'Circa' end
+                     from jsonb_array_elements(chronology) a where a->>'event' = 'Construction' limit 1)
+                    end construction_date_qualifier,               case when significance_statement is null then null else (significance_statement->>'significance_type') end significance_type,
                 case when significance_statement is null then null else (significance_statement->>'physical_description') end physical_description,
                 case when significance_statement is null then null else (significance_statement->>'heritage_value') end heritage_value,
                 case when significance_statement is null then null else (significance_statement->>'defining_elements') end defining_elements,
@@ -425,8 +440,16 @@ class Migration(migrations.Migration):
             from V_HISTORIC_SITE
             where bcrhp_submission_status in ('Approved - Basic Record','Approved - Full Record')
                 and registration_status in ('Federal Jurisdiction', 'Recorded/Unprotected', 'Registered', 'Legacy')
-                and not coalesce(restricted, false)
-            ;
+                and not coalesce(restricted, false);
+            DO
+            $$
+                DECLARE
+                    databc_user text;
+                BEGIN
+                    select replace(current_database(), 'bcrhp','proxy_databc') into databc_user;
+                    EXECUTE format('grant select on databc.v_historic_enviro_onerow_site to %s' ,quote_ident(databc_user));
+                end;
+            $$ language 'plpgsql';
             """,
             ""),
         RunPrivilegedSQL(
@@ -472,7 +495,7 @@ class Migration(migrations.Migration):
                    string_agg(
                       concat(
                         case when c.value->>'event' <> '' then concat(c.value->>'event', ' ')end,
-                        case when (c.value->'dates_approximate')::boolean then 'Circa ' end,
+                        case when (c.value->>'dates_approximate')::boolean then 'Circa ' end,
                         coalesce(to_char(to_date(c.value->>'start_year', 'YYYY-MM-DD'), 'YYYY')::numeric(4,0)::text, ''), '-',
                         coalesce(to_char(to_date(c.value->>'end_year', 'YYYY-MM-DD'), 'YYYY')::numeric(4,0)::text, ''),
                         case when c.value->>'notes' <> '' then concat(': ', coalesce(c.value->>'notes', '-')) end
@@ -480,8 +503,16 @@ class Migration(migrations.Migration):
                 ) as chronology
                 from jsonb_array_elements(v_historic_site.chronology) as c(value)
             ) as chronology_data on true
-            order by "Borden Number"
-            ;
+            order by "Borden Number";
+            DO
+            $$
+                DECLARE
+                    app_user text;
+                BEGIN
+                    select current_database() into app_user;
+                    EXECUTE format('grant select on heritage_site.csv_export to %s' ,quote_ident(app_user));
+                end;
+            $$ language 'plpgsql';
             """,
             """
             drop view if exists heritage_site.csv_export cascade;
