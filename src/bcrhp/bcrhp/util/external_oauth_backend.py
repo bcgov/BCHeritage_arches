@@ -28,7 +28,9 @@ class ExternalOauthAuthenticationBackend(CoreOauthBackend):
     def _clean_username(self, username):
         # DLVR: IDIR = <username>@idir, TEST, PROD: IDIR = idir\\<username>
 
-        return None if username is None else re.sub(r"^(.*)(@idir)$", r"idir\\\1", username)
+        return (
+            None if username is None else re.sub(r"^idir\\(.*)$", r"\1@idir", username)
+        )
 
     def authenticate(self, request, sso_authentication=False, **kwargs):
         try:
