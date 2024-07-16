@@ -52,12 +52,12 @@
                                }"></span>
             </div>
             <div data-bind="visible: !!$parent.textHasValue(tileValues['photographer'])">
-                <dt>Photographer</dt>
-                <dd data-bind="component: {name: 'text-widget',
+                <span>Photographer</span>
+                <span data-bind="component: {name: 'text-widget',
                                params: {value: ko.unwrap(tileValues['photographer']),
                                         state: 'display_value'
                                         }
-                               }"></dd>
+                               }"></span>
             </div>
             </dl>
         </div>
