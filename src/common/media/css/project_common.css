@@ -352,6 +352,53 @@ img.bc-details-image
 @media only screen and (min-width: 992px) {
 }
 
+@media only screen and (max-width: 1024px) {
+    .data-carousel {
+        max-width: 100% !important;
+    }
+
+    .slick-arrow {
+        background: rgba(255,255,255,0.8) !important;
+        border-radius: 100%;
+        height: 40px !important;
+        width: 40px !important;
+    }
+
+    .slick-next {
+        right: 8px !important;
+    }
+
+    .slick-prev {
+        left: 8px !important;
+    }
+
+    .slick-slide {
+        max-width: 80vw;
+    }
+
+    .slick-slide img {
+        align-self: center;
+        height: auto !important;
+        max-width: 80vw;
+    }
+
+    .slick-slide .photo-info {
+        align-self: end;
+    }
+
+    .details-carousel {
+        display: grid !important;
+        grid-template-rows: 4fr 1fr;
+        justify-items: center;
+        min-height: 50vh;
+    }
+
+    .dl-horizontal dd {
+        display: block;
+        width: auto !important;
+    }
+}
+
 /* Extra large devices (large laptops and desktops, 1200px and up) */
 @media only screen and (min-width: 1200px) {
 }
