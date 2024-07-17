@@ -40,6 +40,7 @@ define([
         this.heritageClassVisible = ko.observable(true);
         this.heritageFunctionVisible = ko.observable(true);
         this.heritageThemeVisible = ko.observable(true);
+        this.externalUrlsVisible = ko.observable(true);
 
         this.helpactive = function(state) { this.helpenable(state) };
 

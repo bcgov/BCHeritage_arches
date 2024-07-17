@@ -504,4 +504,38 @@
     </div>
     <!-- /ko -->
 </div>
+    <div class="rp-card-section" data-bind="css: {'hide-section': !isAnonymous()}, visible: nodesHaveData(['external_url'])">
+        <!-- ko let: {targetSection: 'external_urls_section', sectionController: externalUrlsVisible} -->
+        <span class="rp-tile-title">External URLs</span>
+        <i class="fa report-expander print-hide fa-angle-down" tabindex="0" role="button" data-target="site_name_section" data-bind="onEnterkeyClick, onSpaceClick,
+                css: {'fa-angle-down': sectionController(), 'fa-angle-right': !sectionController()},
+                click: function() {sectionController(!sectionController());},
+                attr: {
+                    'aria-expanded': sectionController().toString(),
+                    'aria-controls': targetSection,
+                    'aria-label': 'Toggle Site Name section',
+                }
+            "></i>
+
+        <div class="rp-card-section" data-bind="visible: sectionController, attr: {id: targetSection}">
+            <div style="display: inline-flex; width: 100%; justify-content: space-between;">
+                <dl class="dl-horizontal">
+                    <!-- ko foreach: { data: getValuesFromTiles(['external_url']), as: 'tileValues' } -->
+                    <div class="external-urls">
+                        <dt>External URL</dt>
+                        <dd>
+                        <span data-bind="component: { name: 'urldatatype',
+                                            params: {
+                                                value: ko.unwrap(tileValues['external_url']),
+                                                state: 'display_value'
+                                            }
+                                        }, click: $parent.clickUrl, $parent.onEnterkeyClick, $parent.onSpaceClick"></span>
+                        </dd>
+                    </div>
+                    <!-- /ko -->
+                </dl>
+            </div>
+        </div>
+        <!-- /ko -->
+    </div>
 </div>
