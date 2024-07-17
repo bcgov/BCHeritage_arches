@@ -180,6 +180,7 @@
                 <div class="edge-node-display-name" data-bind="text: displayname"></div>
                 <div class="edge-node-graph-name" data-bind="text: $parent.informationGraph().name"></div>
                 <div class="edge-node-links">
+                    {% comment %}
                 <span tabindex="0" role="link" data-bind="onEnterkeyClick, onSpaceClick, click: $parent.viewInformationNodeReport,
                     attr: {'aria-label': $root.translations.visitResourceReport(displayname) }"
                 >
@@ -193,6 +194,7 @@
                     <i class="fa fa-pencil"></i>
                     <span data-bind="text: $root.translations.edit"></span>
                 </span>
+                    {% endcomment %}
                 </div>
             </div>
         </div>
