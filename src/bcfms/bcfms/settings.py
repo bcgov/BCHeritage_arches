@@ -184,10 +184,11 @@ ARCHES_APPLICATIONS = ()
 
 AUTHENTICATION_BACKENDS = (
     # "arches.app.utils.email_auth_backend.EmailAuthenticationBackend", #Comment out for IDIR
+    "bcfms.util.auth.external_oauth_backend.ExternalOauthAuthenticationBackend",
     "oauth2_provider.backends.OAuth2Backend",
     # "django.contrib.auth.backends.ModelBackend",  # this is default # Comment out for IDIR
     # "django.contrib.auth.backends.RemoteUserBackend",
-    "bcfms.util.auth.backends.BCGovRemoteUserBackend",  # For IDIR authentication
+    # "bcfms.util.auth.backends.BCGovRemoteUserBackend",  # For IDIR authentication
     "guardian.backends.ObjectPermissionBackend",
     "arches.app.utils.permission_backend.PermissionBackend",
 )
@@ -204,7 +205,7 @@ MIDDLEWARE = [
     "arches.app.utils.middleware.ModifyAuthorizationHeader",
     "oauth2_provider.middleware.OAuth2TokenMiddleware",
     "django.contrib.auth.middleware.AuthenticationMiddleware",
-    "bcfms.util.auth.middleware.SiteminderMiddleware",
+    #"bcfms.util.auth.middleware.SiteminderMiddleware",
     "bcfms.util.auth.auth_required_middleware.AuthRequiredMiddleware",
     "django.contrib.messages.middleware.MessageMiddleware",
     # "django.middleware.clickjacking.XFrameOptionsMiddleware",
@@ -346,6 +347,23 @@ CLUSTER_DISTANCE_MAX = 20000 #meters
 GRAPH_MODEL_CACHE_TIMEOUT = None
 
 OAUTH_CLIENT_ID = ''  #'9JCibwrWQ4hwuGn5fu2u1oRZSs9V6gK8Vu8hpRC4'
+
+EXTERNAL_OAUTH_CONFIGURATION = {
+    # claim to be used to assign arches username from
+    "uid_claim": "preferred_username",
+    # application ID and secret assigned to your arches application
+    "app_id": get_env_variable("OAUTH_CLIENT_ID"),
+    "app_secret": get_env_variable("OAUTH_CLIENT_SECRET"),
+    # provider scopes must at least give Arches access to openid, email and profile
+    "scopes": ["openid", "profile", "email"],
+
+    # authorization, token and jwks URIs must be configured for your provider
+    "authorization_endpoint": get_env_variable("OAUTH_AUTH_ENDPOINT"),
+    "token_endpoint": get_env_variable("OAUTH_TOKEN_ENDPOINT"),
+    "jwks_uri": get_env_variable("OAUTH_JWKS_URI"),
+    # enforces token validation on authentication, AVOID setting this to False,
+    "validate_id_token": True,
+}
 
 APP_TITLE = 'BC Government | Fossil Management System'
 COPYRIGHT_TEXT = 'All Rights Reserved.'
