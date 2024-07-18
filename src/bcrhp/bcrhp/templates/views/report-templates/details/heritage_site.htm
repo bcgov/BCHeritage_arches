@@ -9,7 +9,7 @@
         <i class="fa fa-question-circle"></i>
     </a>
 </div>
-<div class="data-carousel summary-slider" data-bind="descendantsComplete: initCarousel, visible: nodesHaveData(['site_images'])" style="background-color:#f2f2f2;max-width: calc(100vw - 600px);padding:1em">
+<div class="data-carousel summary-slider details-site-images" data-bind="descendantsComplete: initCarousel, visible: nodesHaveData(['site_images'])" style="background-color:#f2f2f2;max-width: calc(100vw - 600px);padding:1em">
     <!-- ko let: {widget: getWidgetForAlias('image_date')}-->
     <!-- ko foreach: { data: getValuesFromTiles(['site_images', 'image_type', 'image_features', 'image_view', 'image_date', 'copyright', 'photographer']), as: 'tileValues' } -->
     <div class="details-carousel">

@@ -353,40 +353,40 @@ img.bc-details-image
 }
 
 @media only screen and (max-width: 1024px) {
-    .data-carousel {
+    .data-carousel.details-site-images {
         max-width: 100% !important;
     }
 
-    .slick-arrow {
+    .details-site-images .slick-arrow {
         background: rgba(255,255,255,0.8) !important;
         border-radius: 100%;
         height: 40px !important;
         width: 40px !important;
     }
 
-    .slick-next {
+    .details-site-images .slick-next {
         right: 8px !important;
     }
 
-    .slick-prev {
+    .details-site-images .slick-prev {
         left: 8px !important;
     }
 
-    .slick-slide {
+    .details-site-images .slick-slide {
         max-width: 80vw;
     }
 
-    .slick-slide img {
+    .details-site-images .slick-slide img {
         align-self: center;
         height: auto !important;
         max-width: 80vw;
     }
 
-    .slick-slide .photo-info {
+    .details-site-images .slick-slide .photo-info {
         align-self: end;
     }
 
-    .details-carousel {
+    .details-site-images .details-carousel {
         display: grid !important;
         grid-template-rows: 4fr 1fr;
         justify-items: center;
