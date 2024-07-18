@@ -57,6 +57,8 @@ urlpatterns = [
                       CRHPXmlExport.as_view(),
                       name="crhp_export",
                       ),
+                  # Redirect the admin login page to use OAuth
+                  re_path(bc_path_prefix(r"^admin/login/$"), ExternalOauth.start, name="external_oauth_start"),
                   re_path(bc_path_prefix(r"^auth/$"), ExternalOauth.start, name="external_oauth_start"),
                   re_path(bc_path_prefix(r"^auth/eoauth_cb$"), ExternalOauth.callback, name="external_oauth_callback"),
                   re_path(bc_path_prefix(r"^auth/eoauth_start$"), ExternalOauth.start, name="external_oauth_start"),
