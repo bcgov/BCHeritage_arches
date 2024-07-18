@@ -27,7 +27,7 @@ class MVT(APIBase):
         cache_key = MVT.create_mvt_cache_key(node, zoom, x, y, request.user)
         tile = cache.get(cache_key)
         if tile is None:
-            resource_ids = get_restricted_instances(request.user, allresources=True)
+            resource_ids = [] if request.user.is_superuser else get_restricted_instances(request.user, allresources=True)
             if len(resource_ids) == 0:
                 resource_ids.append(
                     "10000000-0000-0000-0000-000000000001"
