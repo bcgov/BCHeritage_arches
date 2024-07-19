@@ -91,15 +91,17 @@ along with this program. If not, see <http://www.gnu.org/licenses/>.
                         <a href="{% url 'resource' %}" target="_blank">{% trans "Manage" %}</a>
                     </li>
                     {% endif %}
-                    {% if user.username  %}
+                    {% if user.username and user.username != 'anonymous' %}
                     <li>
                         <a class="auth-welcome" href="{% url 'user_profile_manager' %}">
                             {% trans "Welcome, " %} {{ user.first_name|default:user.username }}
                         </a>
                     </li>
-                    <!--li>
-                        <a class="application-login" href="{% url 'auth' %}?next={% url 'home' %}{% if user.username != 'anonymous' %}&logout=true{% endif %}">{% trans 'Log off' %}</a>
-                    </li-->
+                    {% endif %}
+                    {% if not user.username or user.username == 'anonymous' %}
+                    <li>
+                        <a class="application-login" href="{% url 'auth' %}?next={% url 'home' %}">{% trans 'Log in' %}</a>
+                    </li>
                     {% endif %}
                     {% if show_language_swtich %}
                     <li>
