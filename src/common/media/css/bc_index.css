@@ -377,6 +377,30 @@ a:hover {
     outline-offset: 1px;
 }
 
+/* iPhone 13 */
+@media only screen and (max-width: 1284px) {
+    /* Override from details page */
+    .slick-arrow {
+        background: none !important;
+    }
+
+    .home-slider .slick-prev {
+        left: .5rem;
+    }
+
+    .home-slider .slick-next {
+        right: .5rem;
+    }
+
+    .arches_logo {
+        max-height: 15px;
+    }
+
+    .footer ul {
+        padding-inline-start: 0;
+    }
+}
+
 @media (max-width: 510px) {
     .nav-brand-container h1 {
         max-width: 22ch;
