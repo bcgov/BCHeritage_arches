@@ -114,6 +114,15 @@ li.app-info-block-text {
     }
 }
 
+@media only screen and (max-width: 768px) {
+    .app-info-block {
+        padding: 20px 10px;
+    }
+    .app-info-block.intro-section {
+        padding: 0;
+    }
+}
+
 @media only screen and (min-width: 768px) {
     .bc-splash-caption {
         min-width: 80vw !important;
