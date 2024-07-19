@@ -26,7 +26,7 @@
             <dt class="registry_types">Act Section</dt>
             <dd data-bind="component: { name: 'text-widget',
                                             params: {
-                                                value: getFirstNodeValue('act_section'),
+                                                value: ko.unwrap(getFirstNodeValue('act_section')),
                                                 state: 'display_value'
                                             }
                                         }"></dd>
