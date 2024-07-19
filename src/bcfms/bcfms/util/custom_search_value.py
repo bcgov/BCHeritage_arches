@@ -66,7 +66,10 @@ class CustomSearchValue:
             for alias in custom_value_aliases:
                 custom_values |= set(
                     CustomSearchValue.fossil_sample_proxy.get_values_from_samples(
-                        sample_ids, alias[0], alias[1]
+                        samples=sample_ids,
+                        node_alias=alias[0],
+                        uncertainty_alias=alias[1],
+                        flatten=True,
                     )
                 )
 
