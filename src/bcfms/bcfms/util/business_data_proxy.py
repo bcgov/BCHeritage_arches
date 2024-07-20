@@ -114,7 +114,7 @@ class FossilSampleDataProxy(BusinessDataProxy):
                     ),
                 )
             values += (
-                next_value if type(next_value) and flatten is list else [next_value]
+                next_value if type(next_value) is list and flatten else [next_value]
             )
             # values.append(self.get_value_from_node(node_alias, resourceinstanceid=sample))
         # values = [val for val in values if val is not None and val != ""]
