@@ -6,9 +6,9 @@
     <div class="rp-card-section" data-bind="css: card.model.cssclass, visible: card.fullyProvisional() !== 'fullyprovisional', let: {uid: Math.random().toString()}">
         <span class="rp-tile-title" data-bind="text: card.model.get('name')"></span>
         <!-- ko if: card.tiles().length > 0 -->
-        <i class="fa report-expander print-hide" tabindex="0" role="button"
+        <i class="fa report-expander print-hide" tabindex="0" role="button" 
             data-bind="onEnterkeyClick, onSpaceClick,
-                css: {'fa-angle-down': reportExpanded(), 'fa-angle-right': !reportExpanded()},
+                css: {'fa-angle-down': reportExpanded(), 'fa-angle-right': !reportExpanded()}, 
                 click: function () { reportExpanded(!reportExpanded()) },
                 attr: {
                     'aria-expanded': reportExpanded().toString(),
@@ -43,9 +43,7 @@
                                             node: widget.node,
                                             value: tile.data[widget.node.nodeid],
                                             state: "report",
-                                            hideEmptyNodes: tile.parent.hideEmptyNodes || false,
-                                            bc_card: card,
-                                            tile: tile
+                                            hideEmptyNodes: tile.parent.hideEmptyNodes || false
                                         }
                                     } --><!-- /ko -->
                                     <!-- /ko -->

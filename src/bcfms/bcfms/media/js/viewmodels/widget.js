@@ -5,20 +5,19 @@ define([
     'utils/dispose'
 ], function(ko, _, uuid, dispose) {
     /**
-     * A viewmodel used for generic widgets
-     *
-     * @constructor
-     * @name WidgetViewModel
-     *
-     * @param  {string} params - a configuration object
-     */
+    * A viewmodel used for generic widgets
+    *
+    * @constructor
+    * @name WidgetViewModel
+    *
+    * @param  {string} params - a configuration object
+    */
     var WidgetViewModel = function(params) {
         this.externalObservables = ['value', 'config', 'expanded', 'defaultValueSubscription', 'valueSubscription'];
         var self = this;
         this.state = params.state || 'form';
         var expanded = params.expanded || ko.observable(false);
         var nodeid = params.node ? params.node.nodeid : uuid.generate();
-        this.bc_card = params.bc_card;
         this.expanded = ko.computed({
             read: function() {
                 return nodeid === expanded();
@@ -67,24 +66,8 @@ define([
             return [ko.unwrap(self.node?.alias),
                 self.node?.graph?.attributes?.slug,
                 self.widget?.widgetLookup[ko.unwrap(self.widget?.widget_id)].name
-            ].join(" ").trim();
+                ].join(" ").trim();
         });
-        // If the node for this widget has been flagged as a control
-        // node, register the value change in the card
-        if (!!params.bc_card)
-        {
-            this.controlData = params.bc_card.controlData;
-            if (ko.isObservable(this.value) && !!this.controlData)
-            {
-                this.value.subscribe(function(newValue){
-                    // console.log(`Value set to ${newValue}`);
-                    if (self.node.alias() in self.controlData())
-                    {
-                        self.controlData()[self.node.alias()](newValue);
-                    }
-                });
-            }
-        }
 
         this.disposables = [];
 
@@ -98,7 +81,7 @@ define([
             });
 
             var reverseSubscription = self.config.subscribe(function(val) {
-                if (!(Number.isNaN(val[key]) && Number.isNaN(self[key]())) && val[key] !== self[key]()) {
+                if (val[key] !== self[key]()) {
                     self[key](val[key]);
                 }
             });
@@ -120,12 +103,12 @@ define([
             if (!self.form) {
                 if (ko.isObservable(self.value)) {
                     self.valueSubscription = self.value.subscribe(function(val){
-                        if (!(Number.isNaN(self.defaultValue()) && Number.isNaN(val)) && self.defaultValue() != val) {
+                        if (self.defaultValue() != val) {
                             self.defaultValue(val);
                         }
                     });
                     self.defaultValueSubscription = self.defaultValue.subscribe(function(val){
-                        if (!(Number.isNaN(self.value()) && Number.isNaN(val)) && self.value() != val) {
+                        if (self.value() != val) {
                             self.value(val);
                         }
                     });
