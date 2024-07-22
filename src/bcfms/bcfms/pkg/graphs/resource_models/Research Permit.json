@@ -5,6 +5,90 @@
             "cards": [
                 {
                     "active": true,
+                    "cardid": "07f2dd9c-4834-11ef-8aee-0242ac170009",
+                    "component_id": "f05e4d3a-53c1-11e8-b0ea-784f435179ea",
+                    "config": null,
+                    "constraints": [],
+                    "cssclass": null,
+                    "description": "",
+                    "graph_id": "109a0272-d968-11ed-b8ae-5254004d77d3",
+                    "helpenabled": false,
+                    "helptext": {
+                        "en": ""
+                    },
+                    "helptitle": {
+                        "en": ""
+                    },
+                    "instructions": {
+                        "en": ""
+                    },
+                    "is_editable": false,
+                    "name": {
+                        "en": "Final Research Report FMO Assessment"
+                    },
+                    "nodegroup_id": "07f2db1c-4834-11ef-8aee-0242ac170009",
+                    "sortorder": 1,
+                    "visible": true
+                },
+                {
+                    "active": true,
+                    "cardid": "07f2e120-4834-11ef-8aee-0242ac170009",
+                    "component_id": "f05e4d3a-53c1-11e8-b0ea-784f435179ea",
+                    "config": null,
+                    "constraints": [],
+                    "cssclass": null,
+                    "description": "",
+                    "graph_id": "109a0272-d968-11ed-b8ae-5254004d77d3",
+                    "helpenabled": false,
+                    "helptext": {
+                        "en": ""
+                    },
+                    "helptitle": {
+                        "en": ""
+                    },
+                    "instructions": {
+                        "en": ""
+                    },
+                    "is_editable": false,
+                    "name": {
+                        "en": "Interim Research Report"
+                    },
+                    "nodegroup_id": "07f2df68-4834-11ef-8aee-0242ac170009",
+                    "sortorder": 0,
+                    "visible": true
+                },
+                {
+                    "active": true,
+                    "cardid": "07f2e4b8-4834-11ef-8aee-0242ac170009",
+                    "component_id": "f05e4d3a-53c1-11e8-b0ea-784f435179ea",
+                    "config": {
+                        "groupedCardIds": [],
+                        "sortedWidgetIds": []
+                    },
+                    "constraints": [],
+                    "cssclass": null,
+                    "description": "",
+                    "graph_id": "109a0272-d968-11ed-b8ae-5254004d77d3",
+                    "helpenabled": false,
+                    "helptext": {
+                        "en": ""
+                    },
+                    "helptitle": {
+                        "en": ""
+                    },
+                    "instructions": {
+                        "en": ""
+                    },
+                    "is_editable": false,
+                    "name": {
+                        "en": "Interim Research Reports"
+                    },
+                    "nodegroup_id": "07f2e2ec-4834-11ef-8aee-0242ac170009",
+                    "sortorder": 2,
+                    "visible": true
+                },
+                {
+                    "active": true,
                     "cardid": "10710974-fb0c-11ed-a587-5254004d77d3",
                     "component_id": "f05e4d3a-53c1-11e8-b0ea-784f435179ea",
                     "config": null,
@@ -81,7 +165,7 @@
                         "en": "Communications Log"
                     },
                     "nodegroup_id": "109a21da-d968-11ed-b8ae-5254004d77d3",
-                    "sortorder": 8,
+                    "sortorder": 4,
                     "visible": true
                 },
                 {
@@ -135,7 +219,7 @@
                         "en": "Final Research Report"
                     },
                     "nodegroup_id": "109a92d2-d968-11ed-b8ae-5254004d77d3",
-                    "sortorder": 7,
+                    "sortorder": 3,
                     "visible": true
                 },
                 {
@@ -306,11 +390,156 @@
                         "en": "Research Request Process"
                     },
                     "nodegroup_id": "109b4d94-d968-11ed-b8ae-5254004d77d3",
-                    "sortorder": 4,
+                    "sortorder": 1,
                     "visible": true
                 }
             ],
             "cards_x_nodes_x_widgets": [
+                {
+                    "card_id": "07f2e120-4834-11ef-8aee-0242ac170009",
+                    "config": {
+                        "acceptedFiles": ".pdf",
+                        "defaultValue": [],
+                        "label": "Interim Research Report File",
+                        "maxFilesize": "50",
+                        "rerender": true
+                    },
+                    "id": "07f2ee72-4834-11ef-8aee-0242ac170009",
+                    "label": {
+                        "en": "Interim Research Report File"
+                    },
+                    "node_id": "07f2eb34-4834-11ef-8aee-0242ac170009",
+                    "sortorder": 2,
+                    "visible": true,
+                    "widget_id": "10000000-0000-0000-0000-000000000019"
+                },
+                {
+                    "card_id": "07f2e120-4834-11ef-8aee-0242ac170009",
+                    "config": {
+                        "defaultValue": {
+                            "en": {
+                                "direction": "ltr",
+                                "value": ""
+                            }
+                        },
+                        "i18n_properties": [
+                            "placeholder"
+                        ],
+                        "label": "Interim Research Report Number",
+                        "maxLength": null,
+                        "placeholder": {
+                            "en": "Enter text"
+                        },
+                        "reportTypeAbbreviation": "IRR",
+                        "uneditable": false,
+                        "width": "100%%"
+                    },
+                    "id": "07f2ef3a-4834-11ef-8aee-0242ac170009",
+                    "label": {
+                        "en": "Interim Research Report Number"
+                    },
+                    "node_id": "07f2e63e-4834-11ef-8aee-0242ac170009",
+                    "sortorder": 0,
+                    "visible": true,
+                    "widget_id": "10000000-0000-0000-0000-000000000106"
+                },
+                {
+                    "card_id": "07f2e120-4834-11ef-8aee-0242ac170009",
+                    "config": {
+                        "defaultValue": "",
+                        "i18n_properties": [
+                            "placeholder"
+                        ],
+                        "label": "Interim Research Report Title",
+                        "maxLength": null,
+                        "placeholder": {
+                            "en": "Enter text"
+                        },
+                        "uneditable": false,
+                        "width": "100%"
+                    },
+                    "id": "07f2efe4-4834-11ef-8aee-0242ac170009",
+                    "label": {
+                        "en": "Interim Research Report Title"
+                    },
+                    "node_id": "07f2edb4-4834-11ef-8aee-0242ac170009",
+                    "sortorder": 1,
+                    "visible": true,
+                    "widget_id": "10000000-0000-0000-0000-000000000001"
+                },
+                {
+                    "card_id": "07f2dd9c-4834-11ef-8aee-0242ac170009",
+                    "config": {
+                        "defaultValue": null,
+                        "label": "Approval Status"
+                    },
+                    "id": "07f2f08e-4834-11ef-8aee-0242ac170009",
+                    "label": {
+                        "en": "Approval Status"
+                    },
+                    "node_id": "07f2e882-4834-11ef-8aee-0242ac170009",
+                    "sortorder": 0,
+                    "visible": true,
+                    "widget_id": "10000000-0000-0000-0000-000000000006"
+                },
+                {
+                    "card_id": "07f2dd9c-4834-11ef-8aee-0242ac170009",
+                    "config": {
+                        "defaultValue": {
+                            "en": {
+                                "direction": "ltr",
+                                "value": ""
+                            }
+                        },
+                        "i18n_properties": [
+                            "placeholder"
+                        ],
+                        "label": "FMO Report Response",
+                        "maxLength": null,
+                        "placeholder": {
+                            "en": "Enter text"
+                        },
+                        "uneditable": false,
+                        "width": "100%"
+                    },
+                    "id": "07f2f1d8-4834-11ef-8aee-0242ac170009",
+                    "label": {
+                        "en": "FMO Report Response"
+                    },
+                    "node_id": "07f2e9ea-4834-11ef-8aee-0242ac170009",
+                    "sortorder": 2,
+                    "visible": true,
+                    "widget_id": "10000000-0000-0000-0000-000000000005"
+                },
+                {
+                    "card_id": "07f2dd9c-4834-11ef-8aee-0242ac170009",
+                    "config": {
+                        "defaultValue": {
+                            "en": {
+                                "direction": "ltr",
+                                "value": ""
+                            }
+                        },
+                        "i18n_properties": [
+                            "placeholder"
+                        ],
+                        "label": "Internal Notes",
+                        "maxLength": null,
+                        "placeholder": {
+                            "en": "Enter text"
+                        },
+                        "uneditable": false,
+                        "width": "100%"
+                    },
+                    "id": "07f2f2a0-4834-11ef-8aee-0242ac170009",
+                    "label": {
+                        "en": "Internal Notes"
+                    },
+                    "node_id": "07f2ec74-4834-11ef-8aee-0242ac170009",
+                    "sortorder": 1,
+                    "visible": true,
+                    "widget_id": "10000000-0000-0000-0000-000000000005"
+                },
                 {
                     "card_id": "10710974-fb0c-11ed-a587-5254004d77d3",
                     "config": {
@@ -667,12 +896,7 @@
                 {
                     "card_id": "109a8e72-d968-11ed-b8ae-5254004d77d3",
                     "config": {
-                        "defaultValue": {
-                            "en": {
-                                "direction": "ltr",
-                                "value": ""
-                            }
-                        },
+                        "defaultValue": "",
                         "i18n_properties": [
                             "placeholder"
                         ],
@@ -689,7 +913,7 @@
                         "en": "Final Research Report Title"
                     },
                     "node_id": "109c4320-d968-11ed-b8ae-5254004d77d3",
-                    "sortorder": 0,
+                    "sortorder": 1,
                     "visible": true,
                     "widget_id": "10000000-0000-0000-0000-000000000001"
                 },
@@ -707,19 +931,14 @@
                         "en": "Final Report File"
                     },
                     "node_id": "109ca1c6-d968-11ed-b8ae-5254004d77d3",
-                    "sortorder": 1,
+                    "sortorder": 2,
                     "visible": true,
                     "widget_id": "10000000-0000-0000-0000-000000000019"
                 },
                 {
                     "card_id": "109b48ee-d968-11ed-b8ae-5254004d77d3",
                     "config": {
-                        "defaultValue": {
-                            "en": {
-                                "direction": "ltr",
-                                "value": ""
-                            }
-                        },
+                        "defaultValue": "",
                         "i18n_properties": [
                             "placeholder"
                         ],
@@ -736,7 +955,7 @@
                         "en": "Research Plan Title"
                     },
                     "node_id": "109f629e-d968-11ed-b8ae-5254004d77d3",
-                    "sortorder": 0,
+                    "sortorder": 1,
                     "visible": true,
                     "widget_id": "10000000-0000-0000-0000-000000000001"
                 },
@@ -754,7 +973,7 @@
                         "en": "Research Plan File"
                     },
                     "node_id": "109f646a-d968-11ed-b8ae-5254004d77d3",
-                    "sortorder": 1,
+                    "sortorder": 2,
                     "visible": true,
                     "widget_id": "10000000-0000-0000-0000-000000000019"
                 },
@@ -882,6 +1101,34 @@
                     "widget_id": "10000000-0000-0000-0000-000000000001"
                 },
                 {
+                    "card_id": "109b48ee-d968-11ed-b8ae-5254004d77d3",
+                    "config": {
+                        "defaultValue": {
+                            "en": {
+                                "direction": "ltr"
+                            }
+                        },
+                        "i18n_properties": [
+                            "placeholder"
+                        ],
+                        "label": "Research Plan Report Number",
+                        "maxLength": null,
+                        "placeholder": {
+                            "en": "Enter text"
+                        },
+                        "uneditable": false,
+                        "width": "100%%"
+                    },
+                    "id": "1e221f61-cf60-48f2-b5d4-3c8ffca25a55",
+                    "label": {
+                        "en": "Research Plan Report Number"
+                    },
+                    "node_id": "d46b8cb6-482f-11ef-94eb-0242ac170009",
+                    "sortorder": 0,
+                    "visible": true,
+                    "widget_id": "10000000-0000-0000-0000-000000000001"
+                },
+                {
                     "card_id": "109ad7ba-d968-11ed-b8ae-5254004d77d3",
                     "config": {
                         "dateFormat": "YYYY-MM-DD",
@@ -972,6 +1219,36 @@
                     "widget_id": "31f3728c-7613-11e7-a139-784f435179ea"
                 },
                 {
+                    "card_id": "109b48ee-d968-11ed-b8ae-5254004d77d3",
+                    "config": {
+                        "defaultValue": {
+                            "en": {
+                                "direction": "ltr",
+                                "value": ""
+                            }
+                        },
+                        "i18n_properties": [
+                            "placeholder"
+                        ],
+                        "label": "Research Plan Report Number",
+                        "maxLength": null,
+                        "placeholder": {
+                            "en": "Enter text"
+                        },
+                        "reportTypeAbbreviation": "RPR",
+                        "uneditable": false,
+                        "width": "100%%"
+                    },
+                    "id": "a28e06db-338f-4ec7-8a21-8354f3c0e7ed",
+                    "label": {
+                        "en": "Research Plan Report Number"
+                    },
+                    "node_id": "d46b8cb6-482f-11ef-94eb-0242ac170009",
+                    "sortorder": 0,
+                    "visible": true,
+                    "widget_id": "10000000-0000-0000-0000-000000000106"
+                },
+                {
                     "card_id": "109b2404-d968-11ed-b8ae-5254004d77d3",
                     "config": {
                         "defaultValue": {
@@ -999,6 +1276,36 @@
                     "sortorder": 2,
                     "visible": true,
                     "widget_id": "10000000-0000-0000-0000-000000000001"
+                },
+                {
+                    "card_id": "109a8e72-d968-11ed-b8ae-5254004d77d3",
+                    "config": {
+                        "defaultValue": {
+                            "en": {
+                                "direction": "ltr",
+                                "value": ""
+                            }
+                        },
+                        "i18n_properties": [
+                            "placeholder"
+                        ],
+                        "label": "Final Research Report Number",
+                        "maxLength": null,
+                        "placeholder": {
+                            "en": "Enter text"
+                        },
+                        "reportTypeAbbreviation": "FRR",
+                        "uneditable": false,
+                        "width": "100%%"
+                    },
+                    "id": "d6b19fc1-cec0-4dba-bb04-934be4b40911",
+                    "label": {
+                        "en": "Final Research Report Number"
+                    },
+                    "node_id": "98c675de-482c-11ef-b41c-0242ac170009",
+                    "sortorder": 0,
+                    "visible": true,
+                    "widget_id": "10000000-0000-0000-0000-000000000106"
                 },
                 {
                     "card_id": "109a2554-d968-11ed-b8ae-5254004d77d3",
@@ -1168,6 +1475,78 @@
                     "name": null,
                     "ontologyproperty": "http://www.cidoc-crm.org/cidoc-crm/P11_had_participant",
                     "rangenode_id": "6055f260-fb0c-11ed-bdbe-5254004d77d3"
+                },
+                {
+                    "description": null,
+                    "domainnode_id": "07f2e2ec-4834-11ef-8aee-0242ac170009",
+                    "edgeid": "07f34af2-4834-11ef-8aee-0242ac170009",
+                    "graph_id": "109a0272-d968-11ed-b8ae-5254004d77d3",
+                    "name": null,
+                    "ontologyproperty": "http://www.cidoc-crm.org/cidoc-crm/P20_had_specific_purpose",
+                    "rangenode_id": "07f2db1c-4834-11ef-8aee-0242ac170009"
+                },
+                {
+                    "description": null,
+                    "domainnode_id": "07f2df68-4834-11ef-8aee-0242ac170009",
+                    "edgeid": "07f34cdc-4834-11ef-8aee-0242ac170009",
+                    "graph_id": "109a0272-d968-11ed-b8ae-5254004d77d3",
+                    "name": null,
+                    "ontologyproperty": "http://www.cidoc-crm.org/cidoc-crm/P129i_is_subject_of",
+                    "rangenode_id": "07f2eb34-4834-11ef-8aee-0242ac170009"
+                },
+                {
+                    "description": null,
+                    "domainnode_id": "07f2e2ec-4834-11ef-8aee-0242ac170009",
+                    "edgeid": "07f34e6c-4834-11ef-8aee-0242ac170009",
+                    "graph_id": "109a0272-d968-11ed-b8ae-5254004d77d3",
+                    "name": null,
+                    "ontologyproperty": "http://www.cidoc-crm.org/cidoc-crm/P17_was_motivated_by",
+                    "rangenode_id": "07f2df68-4834-11ef-8aee-0242ac170009"
+                },
+                {
+                    "description": null,
+                    "domainnode_id": "07f2db1c-4834-11ef-8aee-0242ac170009",
+                    "edgeid": "07f35006-4834-11ef-8aee-0242ac170009",
+                    "graph_id": "109a0272-d968-11ed-b8ae-5254004d77d3",
+                    "name": null,
+                    "ontologyproperty": "http://www.cidoc-crm.org/cidoc-crm/P15_was_influenced_by",
+                    "rangenode_id": "07f2ec74-4834-11ef-8aee-0242ac170009"
+                },
+                {
+                    "description": null,
+                    "domainnode_id": "07f2db1c-4834-11ef-8aee-0242ac170009",
+                    "edgeid": "07f35196-4834-11ef-8aee-0242ac170009",
+                    "graph_id": "109a0272-d968-11ed-b8ae-5254004d77d3",
+                    "name": null,
+                    "ontologyproperty": "http://www.cidoc-crm.org/cidoc-crm/P129i_is_subject_of",
+                    "rangenode_id": "07f2e9ea-4834-11ef-8aee-0242ac170009"
+                },
+                {
+                    "description": null,
+                    "domainnode_id": "07f2db1c-4834-11ef-8aee-0242ac170009",
+                    "edgeid": "07f35326-4834-11ef-8aee-0242ac170009",
+                    "graph_id": "109a0272-d968-11ed-b8ae-5254004d77d3",
+                    "name": null,
+                    "ontologyproperty": "http://www.cidoc-crm.org/cidoc-crm/P115i_is_finished_by",
+                    "rangenode_id": "07f2e882-4834-11ef-8aee-0242ac170009"
+                },
+                {
+                    "description": null,
+                    "domainnode_id": "07f2df68-4834-11ef-8aee-0242ac170009",
+                    "edgeid": "07f354b6-4834-11ef-8aee-0242ac170009",
+                    "graph_id": "109a0272-d968-11ed-b8ae-5254004d77d3",
+                    "name": null,
+                    "ontologyproperty": "http://www.cidoc-crm.org/cidoc-crm/P1_is_identified_by",
+                    "rangenode_id": "07f2e63e-4834-11ef-8aee-0242ac170009"
+                },
+                {
+                    "description": null,
+                    "domainnode_id": "07f2df68-4834-11ef-8aee-0242ac170009",
+                    "edgeid": "07f3563c-4834-11ef-8aee-0242ac170009",
+                    "graph_id": "109a0272-d968-11ed-b8ae-5254004d77d3",
+                    "name": null,
+                    "ontologyproperty": "http://www.cidoc-crm.org/cidoc-crm/P1_is_identified_by",
+                    "rangenode_id": "07f2edb4-4834-11ef-8aee-0242ac170009"
                 },
                 {
                     "description": null,
@@ -1522,6 +1901,15 @@
                 },
                 {
                     "description": null,
+                    "domainnode_id": "109a8a58-d968-11ed-b8ae-5254004d77d3",
+                    "edgeid": "a887efa9-f44d-4162-9c6c-f1dd048342df",
+                    "graph_id": "109a0272-d968-11ed-b8ae-5254004d77d3",
+                    "name": null,
+                    "ontologyproperty": "http://www.cidoc-crm.org/cidoc-crm/P1_is_identified_by",
+                    "rangenode_id": "98c675de-482c-11ef-b41c-0242ac170009"
+                },
+                {
+                    "description": null,
                     "domainnode_id": "1071050a-fb0c-11ed-a587-5254004d77d3",
                     "edgeid": "b41ada1a-cf2f-40a0-9f8c-a32e4199b879",
                     "graph_id": "109a0272-d968-11ed-b8ae-5254004d77d3",
@@ -1546,6 +1934,24 @@
                     "name": null,
                     "ontologyproperty": "http://www.cidoc-crm.org/cidoc-crm/P11_had_participant",
                     "rangenode_id": "07fbaf8a-d8ae-11ee-a275-080027b7463b"
+                },
+                {
+                    "description": null,
+                    "domainnode_id": "109b3e58-d968-11ed-b8ae-5254004d77d3",
+                    "edgeid": "f7a29307-6eb7-41f6-9a8c-76a15abcb0ad",
+                    "graph_id": "109a0272-d968-11ed-b8ae-5254004d77d3",
+                    "name": null,
+                    "ontologyproperty": "http://www.cidoc-crm.org/cidoc-crm/P1_is_identified_by",
+                    "rangenode_id": "d46b8cb6-482f-11ef-94eb-0242ac170009"
+                },
+                {
+                    "description": null,
+                    "domainnode_id": "109c7692-d968-11ed-b8ae-5254004d77d3",
+                    "edgeid": "fa6231c5-7343-4fb3-bcff-323e810f9bbd",
+                    "graph_id": "109a0272-d968-11ed-b8ae-5254004d77d3",
+                    "name": null,
+                    "ontologyproperty": "http://www.cidoc-crm.org/cidoc-crm/P20_had_specific_purpose",
+                    "rangenode_id": "07f2e2ec-4834-11ef-8aee-0242ac170009"
                 }
             ],
             "functions_x_graphs": [
@@ -1589,18 +1995,36 @@
                     },
                     "function_id": "60000000-0000-0000-0000-000000001001",
                     "graph_id": "109a0272-d968-11ed-b8ae-5254004d77d3",
-                    "id": "8366230c-4c41-46e6-b20d-1ceba1464b59"
+                    "id": "bc0ec735-ab14-4f8b-b7ce-d69e9b1ddfcb"
                 }
             ],
             "graphid": "109a0272-d968-11ed-b8ae-5254004d77d3",
             "iconclass": "fa fa-pencil",
-            "is_editable": true,
+            "is_editable": false,
             "isresource": true,
             "jsonldcontext": null,
             "name": {
                 "en": "Research Permit"
             },
             "nodegroups": [
+                {
+                    "cardinality": "1",
+                    "legacygroupid": null,
+                    "nodegroupid": "07f2db1c-4834-11ef-8aee-0242ac170009",
+                    "parentnodegroup_id": "07f2e2ec-4834-11ef-8aee-0242ac170009"
+                },
+                {
+                    "cardinality": "1",
+                    "legacygroupid": null,
+                    "nodegroupid": "07f2df68-4834-11ef-8aee-0242ac170009",
+                    "parentnodegroup_id": "07f2e2ec-4834-11ef-8aee-0242ac170009"
+                },
+                {
+                    "cardinality": "n",
+                    "legacygroupid": null,
+                    "nodegroupid": "07f2e2ec-4834-11ef-8aee-0242ac170009",
+                    "parentnodegroup_id": null
+                },
                 {
                     "cardinality": "1",
                     "legacygroupid": null,
@@ -1669,6 +2093,225 @@
                 }
             ],
             "nodes": [
+                {
+                    "alias": "irr_fmo_assessment",
+                    "config": {
+                        "en": ""
+                    },
+                    "datatype": "semantic",
+                    "description": "",
+                    "exportable": false,
+                    "fieldname": null,
+                    "graph_id": "109a0272-d968-11ed-b8ae-5254004d77d3",
+                    "hascustomalias": false,
+                    "is_collector": true,
+                    "isrequired": false,
+                    "issearchable": true,
+                    "istopnode": false,
+                    "name": "IRR FMO Assessment",
+                    "nodegroup_id": "07f2db1c-4834-11ef-8aee-0242ac170009",
+                    "nodeid": "07f2db1c-4834-11ef-8aee-0242ac170009",
+                    "ontologyclass": "http://www.cidoc-crm.org/cidoc-crm/E7_Activity",
+                    "parentproperty": "http://www.cidoc-crm.org/cidoc-crm/P20_had_specific_purpose",
+                    "sortorder": 0,
+                    "sourcebranchpublication_id": null
+                },
+                {
+                    "alias": "interim_research_report",
+                    "config": {
+                        "en": ""
+                    },
+                    "datatype": "semantic",
+                    "description": "",
+                    "exportable": false,
+                    "fieldname": null,
+                    "graph_id": "109a0272-d968-11ed-b8ae-5254004d77d3",
+                    "hascustomalias": false,
+                    "is_collector": true,
+                    "isrequired": false,
+                    "issearchable": true,
+                    "istopnode": false,
+                    "name": "Interim Research Report",
+                    "nodegroup_id": "07f2df68-4834-11ef-8aee-0242ac170009",
+                    "nodeid": "07f2df68-4834-11ef-8aee-0242ac170009",
+                    "ontologyclass": "http://www.cidoc-crm.org/cidoc-crm/E89_Propositional_Object",
+                    "parentproperty": "http://www.cidoc-crm.org/cidoc-crm/P17_was_motivated_by",
+                    "sortorder": 0,
+                    "sourcebranchpublication_id": null
+                },
+                {
+                    "alias": "interim_research_reports",
+                    "config": {
+                        "en": ""
+                    },
+                    "datatype": "semantic",
+                    "description": "",
+                    "exportable": false,
+                    "fieldname": null,
+                    "graph_id": "109a0272-d968-11ed-b8ae-5254004d77d3",
+                    "hascustomalias": false,
+                    "is_collector": true,
+                    "isrequired": false,
+                    "issearchable": true,
+                    "istopnode": false,
+                    "name": "Interim Research Reports",
+                    "nodegroup_id": "07f2e2ec-4834-11ef-8aee-0242ac170009",
+                    "nodeid": "07f2e2ec-4834-11ef-8aee-0242ac170009",
+                    "ontologyclass": "http://www.cidoc-crm.org/cidoc-crm/E7_Activity",
+                    "parentproperty": "http://www.cidoc-crm.org/cidoc-crm/P20_had_specific_purpose",
+                    "sortorder": 2,
+                    "sourcebranchpublication_id": null
+                },
+                {
+                    "alias": "interim_research_report_number",
+                    "config": {
+                        "en": ""
+                    },
+                    "datatype": "string",
+                    "description": null,
+                    "exportable": false,
+                    "fieldname": null,
+                    "graph_id": "109a0272-d968-11ed-b8ae-5254004d77d3",
+                    "hascustomalias": false,
+                    "is_collector": false,
+                    "isrequired": true,
+                    "issearchable": true,
+                    "istopnode": false,
+                    "name": "Interim Research Report Number",
+                    "nodegroup_id": "07f2df68-4834-11ef-8aee-0242ac170009",
+                    "nodeid": "07f2e63e-4834-11ef-8aee-0242ac170009",
+                    "ontologyclass": "http://www.cidoc-crm.org/cidoc-crm/E42_Identifier",
+                    "parentproperty": "http://www.cidoc-crm.org/cidoc-crm/P1_is_identified_by",
+                    "sortorder": 0,
+                    "sourcebranchpublication_id": null
+                },
+                {
+                    "alias": "irr_fmo_approval_status",
+                    "config": {
+                        "falseLabel": {
+                            "en": "Requires Changes"
+                        },
+                        "i18n_properties": [
+                            "trueLabel",
+                            "falseLabel"
+                        ],
+                        "trueLabel": {
+                            "en": "Accepted"
+                        }
+                    },
+                    "datatype": "boolean",
+                    "description": null,
+                    "exportable": false,
+                    "fieldname": null,
+                    "graph_id": "109a0272-d968-11ed-b8ae-5254004d77d3",
+                    "hascustomalias": false,
+                    "is_collector": false,
+                    "isrequired": false,
+                    "issearchable": true,
+                    "istopnode": false,
+                    "name": "IRR FMO Approval Status",
+                    "nodegroup_id": "07f2db1c-4834-11ef-8aee-0242ac170009",
+                    "nodeid": "07f2e882-4834-11ef-8aee-0242ac170009",
+                    "ontologyclass": "http://www.cidoc-crm.org/cidoc-crm/E3_Condition_State",
+                    "parentproperty": "http://www.cidoc-crm.org/cidoc-crm/P115i_is_finished_by",
+                    "sortorder": 0,
+                    "sourcebranchpublication_id": null
+                },
+                {
+                    "alias": "irr_fmo_response",
+                    "config": {
+                        "en": ""
+                    },
+                    "datatype": "string",
+                    "description": null,
+                    "exportable": false,
+                    "fieldname": null,
+                    "graph_id": "109a0272-d968-11ed-b8ae-5254004d77d3",
+                    "hascustomalias": false,
+                    "is_collector": false,
+                    "isrequired": false,
+                    "issearchable": true,
+                    "istopnode": false,
+                    "name": "IRR FMO Response",
+                    "nodegroup_id": "07f2db1c-4834-11ef-8aee-0242ac170009",
+                    "nodeid": "07f2e9ea-4834-11ef-8aee-0242ac170009",
+                    "ontologyclass": "http://www.cidoc-crm.org/cidoc-crm/E73_Information_Object",
+                    "parentproperty": "http://www.cidoc-crm.org/cidoc-crm/P129i_is_subject_of",
+                    "sortorder": 0,
+                    "sourcebranchpublication_id": null
+                },
+                {
+                    "alias": "interim_research_report_file",
+                    "config": {
+                        "activateMax": false,
+                        "imagesOnly": false,
+                        "maxFileSize": null,
+                        "maxFiles": 4
+                    },
+                    "datatype": "file-list",
+                    "description": null,
+                    "exportable": false,
+                    "fieldname": null,
+                    "graph_id": "109a0272-d968-11ed-b8ae-5254004d77d3",
+                    "hascustomalias": false,
+                    "is_collector": false,
+                    "isrequired": true,
+                    "issearchable": true,
+                    "istopnode": false,
+                    "name": "Interim Research Report File",
+                    "nodegroup_id": "07f2df68-4834-11ef-8aee-0242ac170009",
+                    "nodeid": "07f2eb34-4834-11ef-8aee-0242ac170009",
+                    "ontologyclass": "http://www.ics.forth.gr/isl/CRMdig/D1_Digital_Object",
+                    "parentproperty": "http://www.cidoc-crm.org/cidoc-crm/P129i_is_subject_of",
+                    "sortorder": 0,
+                    "sourcebranchpublication_id": null
+                },
+                {
+                    "alias": "irr_fmo_internal_notes",
+                    "config": {
+                        "en": ""
+                    },
+                    "datatype": "string",
+                    "description": null,
+                    "exportable": false,
+                    "fieldname": null,
+                    "graph_id": "109a0272-d968-11ed-b8ae-5254004d77d3",
+                    "hascustomalias": false,
+                    "is_collector": false,
+                    "isrequired": false,
+                    "issearchable": true,
+                    "istopnode": false,
+                    "name": "IRR FMO Internal Notes",
+                    "nodegroup_id": "07f2db1c-4834-11ef-8aee-0242ac170009",
+                    "nodeid": "07f2ec74-4834-11ef-8aee-0242ac170009",
+                    "ontologyclass": "http://www.ics.forth.gr/isl/CRMdig/D29_Annotation_Object",
+                    "parentproperty": "http://www.cidoc-crm.org/cidoc-crm/P15_was_influenced_by",
+                    "sortorder": 0,
+                    "sourcebranchpublication_id": null
+                },
+                {
+                    "alias": "interim_research_report_title",
+                    "config": {
+                        "en": ""
+                    },
+                    "datatype": "string",
+                    "description": null,
+                    "exportable": false,
+                    "fieldname": null,
+                    "graph_id": "109a0272-d968-11ed-b8ae-5254004d77d3",
+                    "hascustomalias": false,
+                    "is_collector": false,
+                    "isrequired": true,
+                    "issearchable": true,
+                    "istopnode": false,
+                    "name": "Interim Research Report Title",
+                    "nodegroup_id": "07f2df68-4834-11ef-8aee-0242ac170009",
+                    "nodeid": "07f2edb4-4834-11ef-8aee-0242ac170009",
+                    "ontologyclass": "http://www.cidoc-crm.org/cidoc-crm/E35_Title",
+                    "parentproperty": "http://www.cidoc-crm.org/cidoc-crm/P1_is_identified_by",
+                    "sortorder": 0,
+                    "sourcebranchpublication_id": null
+                },
                 {
                     "alias": "external_actor",
                     "config": {
@@ -1908,7 +2551,7 @@
                     "nodeid": "109a21da-d968-11ed-b8ae-5254004d77d3",
                     "ontologyclass": "http://www.cidoc-crm.org/cidoc-crm/E5_Event",
                     "parentproperty": "http://www.cidoc-crm.org/cidoc-crm/P117_occurs_during",
-                    "sortorder": 0,
+                    "sortorder": 4,
                     "sourcebranchpublication_id": null
                 },
                 {
@@ -1954,7 +2597,7 @@
                     "nodeid": "109a92d2-d968-11ed-b8ae-5254004d77d3",
                     "ontologyclass": "http://www.cidoc-crm.org/cidoc-crm/E7_Activity",
                     "parentproperty": "http://www.cidoc-crm.org/cidoc-crm/P117_occurs_during",
-                    "sortorder": 0,
+                    "sortorder": 3,
                     "sourcebranchpublication_id": null
                 },
                 {
@@ -2092,7 +2735,7 @@
                     "nodeid": "109b4d94-d968-11ed-b8ae-5254004d77d3",
                     "ontologyclass": "http://www.cidoc-crm.org/cidoc-crm/E7_Activity",
                     "parentproperty": "http://www.cidoc-crm.org/cidoc-crm/P117i_includes",
-                    "sortorder": 0,
+                    "sortorder": 1,
                     "sourcebranchpublication_id": null
                 },
                 {
@@ -2849,6 +3492,29 @@
                     "sourcebranchpublication_id": null
                 },
                 {
+                    "alias": "final_research_report_number",
+                    "config": {
+                        "en": ""
+                    },
+                    "datatype": "string",
+                    "description": null,
+                    "exportable": false,
+                    "fieldname": null,
+                    "graph_id": "109a0272-d968-11ed-b8ae-5254004d77d3",
+                    "hascustomalias": false,
+                    "is_collector": false,
+                    "isrequired": true,
+                    "issearchable": true,
+                    "istopnode": false,
+                    "name": "Final Research Report Number",
+                    "nodegroup_id": "109a8a58-d968-11ed-b8ae-5254004d77d3",
+                    "nodeid": "98c675de-482c-11ef-b41c-0242ac170009",
+                    "ontologyclass": "http://www.cidoc-crm.org/cidoc-crm/E42_Identifier",
+                    "parentproperty": "http://www.cidoc-crm.org/cidoc-crm/P1_is_identified_by",
+                    "sortorder": 0,
+                    "sourcebranchpublication_id": null
+                },
+                {
                     "alias": "project_start_date",
                     "config": {
                         "dateFormat": "YYYY-MM-DD"
@@ -2868,6 +3534,29 @@
                     "nodeid": "bafd3444-d96a-11ed-b2f0-5254004d77d3",
                     "ontologyclass": "http://www.cidoc-crm.org/cidoc-crm/E4_Period",
                     "parentproperty": "http://www.cidoc-crm.org/cidoc-crm/P116_starts",
+                    "sortorder": 0,
+                    "sourcebranchpublication_id": null
+                },
+                {
+                    "alias": "research_plan_report_number",
+                    "config": {
+                        "en": ""
+                    },
+                    "datatype": "string",
+                    "description": null,
+                    "exportable": false,
+                    "fieldname": null,
+                    "graph_id": "109a0272-d968-11ed-b8ae-5254004d77d3",
+                    "hascustomalias": false,
+                    "is_collector": false,
+                    "isrequired": false,
+                    "issearchable": true,
+                    "istopnode": false,
+                    "name": "Research Plan Report Number",
+                    "nodegroup_id": "109b3e58-d968-11ed-b8ae-5254004d77d3",
+                    "nodeid": "d46b8cb6-482f-11ef-94eb-0242ac170009",
+                    "ontologyclass": "http://www.cidoc-crm.org/cidoc-crm/E42_Identifier",
+                    "parentproperty": "http://www.cidoc-crm.org/cidoc-crm/P1_is_identified_by",
                     "sortorder": 0,
                     "sourcebranchpublication_id": null
                 },
@@ -3019,8 +3708,8 @@
             "publication": {
                 "graph_id": "109a0272-d968-11ed-b8ae-5254004d77d3",
                 "notes": null,
-                "publicationid": "2d325740-d8ae-11ee-a1fb-080027b7463b",
-                "published_time": "2024-03-02T10:01:48.924"
+                "publicationid": "eaa5bc2c-4834-11ef-8aee-0242ac170009",
+                "published_time": "2024-07-22T09:15:58.400"
             },
             "relatable_resource_model_ids": [],
             "resource_2_resource_constraints": [],
@@ -3055,9 +3744,9 @@
         }
     ],
     "metadata": {
-        "db": "PostgreSQL 15.3 on x86_64-pc-linux-gnu, compiled by gcc (GCC) 11.3.1 20221121 (Red Hat 11.3.1-4), 64-bit",
-        "git hash": "9975977532 2024-02-07 12:28:09 -0800",
+        "db": "PostgreSQL 16.3 (Debian 16.3-1.pgdg110+1) on x86_64-pc-linux-gnu, compiled by gcc (Debian 10.2.1-6) 10.2.1 20210110, 64-bit",
+        "git hash": "5d0d8577d 2024-06-20 08:45:57 -0700",
         "os": "Linux",
-        "os version": "5.14.0-333.el9.x86_64"
+        "os version": "6.6.31-linuxkit"
     }
 }
