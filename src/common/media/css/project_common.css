@@ -101,6 +101,10 @@ table.bc-summary-table td {
     display: inline-block;
 }
 
+.hide-section {
+    display: none;
+}
+
 .grid-col-1 {
     grid-column-start: 1;
 }
@@ -159,12 +163,42 @@ table.bc-summary-table td {
     margin-right: 25px;
 }
 
+.card-help-panel dl dt {
+    float: left;
+    margin-right: 5px;
+}
+
+.card-help-panel dl > dl {
+    margin-left: 20px;
+    margin-top: 20px;
+}
+
+.dl-horizontal {
+    width: 100%;
+}
+
 .dl-horizontal dt, .dl-horizontal dd {
     vertical-align: top;
     display: inline-block;
     padding: 2px 5px 2px 20px;
     align-items: start;
     justify-content: left;
+}
+
+.details-icons {
+    display: flex;
+    gap: 12px;
+    justify-content: right;
+    padding: 14px 0;
+}
+
+.details-card-section .dl-horizontal dt {
+    width: 200px;
+    overflow: visible !important;
+}
+
+.details-card-section .dl-horizontal dd {
+    width: calc(100% - 210px);
 }
 
 .rp-card-section .rp-report-tile .dl-horizontal dd {
@@ -318,6 +352,53 @@ img.bc-details-image
 @media only screen and (min-width: 992px) {
 }
 
+@media only screen and (max-width: 1024px) {
+    .data-carousel.details-site-images {
+        max-width: 100% !important;
+    }
+
+    .details-site-images .slick-arrow {
+        background: rgba(255,255,255,0.8) !important;
+        border-radius: 100%;
+        height: 40px !important;
+        width: 40px !important;
+    }
+
+    .details-site-images .slick-next {
+        right: 8px !important;
+    }
+
+    .details-site-images .slick-prev {
+        left: 8px !important;
+    }
+
+    .details-site-images .slick-slide {
+        max-width: 80vw;
+    }
+
+    .details-site-images .slick-slide img {
+        align-self: center;
+        height: auto !important;
+        max-width: 80vw;
+    }
+
+    .details-site-images .slick-slide .photo-info {
+        align-self: end;
+    }
+
+    .details-site-images .details-carousel {
+        display: grid !important;
+        grid-template-rows: 4fr 1fr;
+        justify-items: center;
+        min-height: 50vh;
+    }
+
+    .dl-horizontal dd {
+        display: block;
+        width: auto !important;
+    }
+}
+
 /* Extra large devices (large laptops and desktops, 1200px and up) */
 @media only screen and (min-width: 1200px) {
 }
@@ -347,6 +428,16 @@ img.bc-details-image
     /*html, body {*/
     /*    height: 99%;*/
     /*}*/
+
+    /* From arches but doesn't set it to important */
+    .print-hide {
+        display: none !important;
+        height: 0 !important;
+    }
+
+    .hide-section {
+        display: block;
+    }
 
     /* Hide unwanted parts of the page */
     section.search-results-panel, .search-toolbar, #skip-link-holder {
@@ -411,7 +502,7 @@ img.bc-details-image
         page-break-before: always;
         break-before: page;
     }
-    
+
     div {
         break-before: auto;
     }
@@ -420,4 +511,57 @@ img.bc-details-image
         display: block !important;
     }
 
+    .details-icons {
+        display: none;
+    }
+
+    #sos_section > div {
+        display: block !important;
+    }
+
+    dt {
+        color: black !important;
+        text-decoration: none;
+    }
+
+    dd {
+        clear: none !important;
+    }
+
+    /* For displaying long-form text blocks as full width of the page,
+     * some elements are within components and not easy to modify but do have
+     * an id that can be queried.
+     */
+    dd[data-bind*="addressPart"],
+    dd[data-bind*="physical_description"],
+    dd[data-bind*="heritage_value"],
+    dd[data-bind*="defining_elements"] {
+        width: auto !important;
+        display: block !important;
+    }
+
+    .data-carousel {
+        max-width: 100vw !important;
+    }
+
+    .data-carousel button,
+    .data-carousel .slick-dots {
+        display: none !important;
+    }
+
+    .data-carousel .slick-track {
+        display: flex;
+        transform: unset !important;
+        width: 100% !important;
+        justify-content: center;
+    }
+
+    .data-carousel .slick-slide {
+        display: none !important;
+    }
+
+    .data-carousel .slick-slide:first-child {
+        display: block !important;
+        float: none !important;
+    }
 }

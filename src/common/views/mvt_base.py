@@ -1,6 +1,6 @@
 from django.http import HttpResponse, Http404
 
-from arches.app.views.api import MVT as MVTBase
+from .mvt_core import MVT as MVTBase
 from django.core.cache import cache
 from django.db import connection
 from arches.app.utils.permission_backend import (
@@ -84,10 +84,10 @@ class MVT(MVTBase):
             return super(MVT, self).get(request, nodeid, zoom, x, y)
         else:
             # print("Using app-specific select with generated query")
-            cache_key = f"mvt_{nodeid}_{zoom}_{x}_{y}"
+            cache_key = MVT.create_mvt_cache_key(node, zoom, x, y, request.user)
             tile = cache.get(cache_key)
             if tile is None:
-                resource_ids = get_restricted_instances(request.user, allresources=True)
+                resource_ids = [] if request.user.is_superuser else get_restricted_instances(request.user, allresources=True)
                 if len(resource_ids) == 0:
                     resource_ids.append("10000000-0000-0000-0000-000000000001")  # This must have a uuid that will never be a resource id.
                 resource_ids = tuple(resource_ids)

@@ -1,0 +1,47 @@
+{
+  "name": "Indigenous Reserves and Band Names",
+  "sources": {
+    "indian-reserves-band-names-source": {
+      "type": "vector",
+      "tiles": [
+        "/bcrhp/bctileserver/geo/pub/WHSE_ADMIN_BOUNDARIES.ADM_INDIAN_RESERVES_BANDS_SP/ows?service=WMS&request=GetMap&layers=WHSE_ADMIN_BOUNDARIES.ADM_INDIAN_RESERVES_BANDS_SP&styles=&format=pbf&transparent=true&version=1.1.1&height=512&width=512&srs=EPSG:3857&bbox={bbox-epsg-3857}"
+      ],
+      "tileSize": 512
+    }
+  },
+  "arches-metadata": {
+    "ispublic": false,
+    "sortorder": 4
+  },
+  "layers": [
+    {
+      "id": "indian-reserves-band-names",
+      "type": "line",
+      "source": "indian-reserves-band-names-source",
+      "source-layer": "WHSE_ADMIN_BOUNDARIES.ADM_INDIAN_RESERVES_BANDS_SP"
+    },
+    {
+      "id": "indian-reserves-band-names-fill",
+      "type": "fill",
+      "source": "indian-reserves-band-names-source",
+      "source-layer": "WHSE_ADMIN_BOUNDARIES.ADM_INDIAN_RESERVES_BANDS_SP",
+      "minzoom": 0,
+      "maxzoom": 20,
+      "paint": {
+        "fill-color": "rgba(215, 176, 158, 0.8)"
+      }
+    },
+    {
+      "id": "indian-reserves-band-names-symbol",
+      "type": "symbol",
+      "source": "indian-reserves-band-names-source",
+      "source-layer": "WHSE_ADMIN_BOUNDARIES.ADM_INDIAN_RESERVES_BANDS_SP",
+      "layout": {
+        "text-field": "{BAND_NAME}"
+      },
+      "paint": {
+        "text-color": "#333333"
+      }
+    }
+  ]
+}

@@ -1,74 +1,128 @@
-<div class="bcrhp-grid-container">
-    <div class="bcrhp-grid-item grid-col-1 grid-row-1">
-        <dl class="dl-vertical dl-vertical-bc" >
-            <dt>Site Names</dt>
+<div class="details-card-section">
+<div class="details-icons">
+    <a data-bind="click: function () { window.print() }" style="cursor:pointer;">
+        <span>Print</span>
+        <i class="fa fa-print"></i>
+    </a>
+    <a data-bind="click: function () { helpactive(true) }" style="cursor:pointer;">
+        <span data-bind="text: $root.translations.help"></span>
+        <i class="fa fa-question-circle"></i>
+    </a>
+</div>
+<div class="data-carousel summary-slider details-site-images" data-bind="descendantsComplete: initCarousel, visible: nodesHaveData(['site_images'])" style="background-color:#f2f2f2;max-width: calc(100vw - 600px);padding:1em">
+    <!-- ko let: {widget: getWidgetForAlias('image_date')}-->
+    <!-- ko foreach: { data: getValuesFromTiles(['site_images', 'image_type', 'image_features', 'image_view', 'image_date', 'copyright', 'photographer']), as: 'tileValues' } -->
+    <div class="details-carousel">
+        <img class="details-photo" data-bind="attr: {src: ko.unwrap(ko.unwrap(tileValues['site_images'])[0]['url'])}"/>
+        <div class="photo-info" style="max-width: 500px;">
+            <div class="photo-caption">
+                <span class="photo-caption-part" data-bind="component: { name: 'concept-select-widget',
+                                            params: {
+                                                value: tileValues['image_type'],
+                                                state: 'display_value'
+                                            }
+                                        }"></span>
+                <span class="separator photo-caption-part" data-bind="visible: !!tileValues['image_type']() && !!tileValues['image_view']()">,</span>
+                <span class="photo-caption-part" data-bind="component: { name: 'concept-select-widget',
+                                            params: {
+                                                value: tileValues['image_view'],
+                                                state: 'display_value'
+                                            }
+                                        }"></span>
+                <span class="separator photo-caption-part" data-bind="visible: !!tileValues['image_features']() && (!!tileValues['image_view']() || !!tileValues['image_type']())">,</span>
+                <span class="photo-caption-part" data-bind="component: {name: 'text-widget',
+                               params: {value: ko.unwrap(tileValues['image_features']),
+                                        state: 'display_value'
+                                        }
+                               }"></span>
+                <span class="separator photo-caption-part" data-bind="visible: !!tileValues['image_features']() && (!!tileValues['image_view']() || !!tileValues['image_type']() || tileValues['image_features']())">,</span>
+                <span class="photo-caption-part" data-bind="component: { name: 'datepicker-widget',
+                                            params: { value: tileValues['image_date'],
+                                            node: widget.node,
+                                            state: 'display_value' }
+                                            }"></span>
+            </div>
+            <dl class="dl-horizontal">
+            <div data-bind="visible: !!tileValues['copyright']">
+                <span>Copyright</span>
+                <span data-bind="component: {name: 'text-widget',
+                               params: {value: ko.unwrap(tileValues['copyright']),
+                                        state: 'display_value'
+                                        }
+                               }"></span>
+            </div>
+            <div data-bind="visible: !!$parent.textHasValue(tileValues['photographer'])">
+                <span>Photographer</span>
+                <span data-bind="component: {name: 'text-widget',
+                               params: {value: ko.unwrap(tileValues['photographer']),
+                                        state: 'display_value'
+                                        }
+                               }"></span>
+            </div>
+            </dl>
+        </div>
+    </div>
+    <!-- /ko -->
+    <!-- /ko -->
+</div>
+<div class="rp-card-section" data-bind="css: {'hide-section': !isAnonymous()}">
+    <!-- ko let: {targetSection: 'site_name_section', sectionController: siteNamesVisible} -->
+    <span class="rp-tile-title">Site Name</span>
+    <i class="fa report-expander print-hide fa-angle-down" tabindex="0" role="button" data-target="site_name_section" data-bind="onEnterkeyClick, onSpaceClick, let: {sectionController: siteNamesVisible, targetSection: 'site_name_section'},
+                css: {'fa-angle-down': sectionController(), 'fa-angle-right': !sectionController()},
+                click: function() {sectionController(!sectionController());},
+                attr: {
+                    'aria-expanded': sectionController().toString(),
+                    'aria-controls': targetSection,
+                    'aria-label': 'Toggle Site Name section',
+                }
+            "></i>
+
+    <div class="rp-card-section" data-bind="visible: sectionController, attr: {id: targetSection}">
+        <div style="display: inline-flex; width: 100%; justify-content: space-between;">
             <!-- ko let: {nameWidget: getWidgetForAlias('name')} -->
             <!-- ko let: {nameTypeWidget: getWidgetForAlias('name_type')} -->
+            <dl class="dl-horizontal">
             <!-- ko foreach: { data: getTilesForAlias('name'), as: 'siteNameTile'} -->
-            <dd>
                 <div data-bind="component: { name: 'site-name-filter-widget',
                                              params: {
                                              tile: siteNameTile,
                                              name_widget: nameWidget,
                                              name_type_widget: nameTypeWidget,
-                                             visible_name_types: ['Common'],
+                                             visible_name_types: ['Common','Other'],
                                              state: 'display_value'
                                             }
                                         }"></div>
-            </dd>
+            <!-- /ko -->
+            </dl>
             <!-- /ko -->
             <!-- /ko -->
-            <!-- /ko -->
-        </dl>
+        </div>
     </div>
-    <div class="bchrp-grid-item grid-col-2 grid-col-2 grid-row-1">
-        <dl class="dl-vertical dl-vertical-bc">
-            <dt>Borden Number</dt>
-            <dd data-bind="component: { name: 'borden-number-widget',
-                                        params: { value: getFirstNodeValue('borden_number'), state: 'display_value'}
-                                        }"></dd>
-        </dl>
-    </div>
+    <!-- /ko -->
+</div>
 
-    <div class="grid-row-1 grid-col-3 bc-details-images">
-        <!-- ko let: { photoWidget: getWidgetForAlias('site_images') } -->
-        <!-- ko let: { titleWidget: getWidgetForAlias('image_features') } -->
-        <!-- ko let: { descriptionWidget: getWidgetForAlias('image_description') } -->
-        <!-- ko if: photoWidget -->
-        <dl class="dl-vertical">
-            <dt data-bind="class: photoWidget.node.alias"></dt>
-            <dd>
-                <!-- ko foreach: { data: getTilesForAlias('site_images'), as: 'phototile' } -->
-                <span data-bind="component: {
-                                            name: 'photo-widget',
-                                            params: {
-                                                tile: phototile,
-                                                node: photoWidget.node,
-                                                config: photoWidget.config,
-                                                value: phototile.data[photoWidget.attributes.node_id()],
-                                                imageTitle: phototile.data[titleWidget.attributes.node_id()],
-                                                imageDescription: phototile.data[descriptionWidget.attributes.node_id()],
-                                                state: 'display_value',
-                                            }
-                                        }, click: function(event){console.log(photocard);},
-                                        css: {'print-hide': $index() > 1}"></span>
-                <!-- /ko -->
-            </dd>
-        </dl>
-        <!-- /ko -->
-        <!-- /ko -->
-        <!-- /ko -->
-        <!-- /ko -->
-    </div>
-    <div class="bcrhp-grid-item grid-col-1 grid-row-2">
-        <!-- ko let: { card: getCardWithName(['Heritage Site Location', 'BC Property Address']) } -->
-        <!-- ko foreach: { data: card.tiles, as: 'tile' } -->
-        <dl class="dl-vertical dl-vertical-bc"
-            data-bind="css: {'provisional': ko.unwrap(tile.provisionaledits) !== null && tile.userisreviewer === false}">
-            <!-- ko if: tileIndex() === 0 -->
-            <dt>Property Address(es)</dt>
-            <!-- /ko -->
-            <dd data-bind="component: {
+<div class="rp-card-section">
+    <!-- ko let: {targetSection: 'site_location_section', sectionController: siteLocationVisible} -->
+    <span class="rp-tile-title">Heritage Site Location</span>
+    <i class="fa report-expander print-hide fa-angle-down" tabindex="0" role="button" data-target="site_name_section" data-bind="onEnterkeyClick, onSpaceClick, let: {sectionController: siteNamesVisible, targetSection: 'site_name_section'},
+                css: {'fa-angle-down': sectionController(), 'fa-angle-right': !sectionController()},
+                click: function() {sectionController(!sectionController());},
+                attr: {
+                    'aria-expanded': sectionController().toString(),
+                    'aria-controls': targetSection,
+                    'aria-label': 'Toggle Site Location section',
+                }
+            "></i>
+
+    <div class="rp-card-section" data-bind="visible: sectionController, attr: {id: targetSection}">
+        <div style="display: inline-flex; width: 100%; justify-content: space-between; flex-direction: column;">
+            <!-- ko let: { card: getCardWithName(['Heritage Site Location', 'BC Property Address']) } -->
+            <!-- ko foreach: { data: card.tiles, as: 'tile' } -->
+            <div class="card-content-section">
+            <dl class="dl-horizontal dl-horizontal-bc"
+                data-bind="css: {'provisional': ko.unwrap(tile.provisionaledits) !== null && tile.userisreviewer === false}">
+                <div data-bind="component: {
                                             name: 'civic-address-widget',
                                             params: {
                                                 tile: tile,
@@ -76,87 +130,412 @@
                                                 value: tile.data,
                                                 state: 'display_value',
                                             }
-                                        }, click: function(){console.log(card);}"></dd>
-        </dl>
-        <!-- /ko -->
-        <!-- /ko -->
+                                        }"></div>
+            </dl>
+            </div>
+            <!-- /ko -->
+            <!-- /ko -->
+        </div>
     </div>
-    <div class="bcrhp-grid-item grid-col-2 grid-row-2 print-hide">
-        <dl class="dl-vertical dl-vertical-bc">
-            <dt class="registry_types">Registry Types</dt>
-            <dd data-bind="component: { name: 'concept-multiselect-widget',
+    <!-- /ko -->
+</div>
+
+<div class="rp-card-section" data-bind="css: {'hide-section': !isAnonymous()}">
+    <!-- ko let: {targetSection: 'borden_number_section', sectionController: bordenNumberVisible} -->
+    <span class="rp-tile-title">Site ID Number</span>
+    <i class="fa report-expander print-hide fa-angle-down" tabindex="0" role="button" data-target="site_name_section" data-bind="onEnterkeyClick, onSpaceClick, let: {sectionController: siteNamesVisible, targetSection: 'site_name_section'},
+                css: {'fa-angle-down': sectionController(), 'fa-angle-right': !sectionController()},
+                click: function() {sectionController(!sectionController());},
+                attr: {
+                    'aria-expanded': sectionController().toString(),
+                    'aria-controls': targetSection,
+                    'aria-label': 'Toggle Site ID section',
+                }
+            "></i>
+
+    <div class="rp-card-section" data-bind="visible: sectionController, attr: {id: targetSection}">
+        <div style="display: inline-flex; width: 100%; justify-content: space-between;">
+            <dl class="dl-horizontal">
+                <dt>Borden Number</dt>
+                <dd data-bind="component: { name: 'borden-number-widget',
+                                            params: { value: getFirstNodeValue('borden_number'), state: 'display_value'}
+                                            }"></dd>
+            </dl>
+        </div>
+    </div>
+    <!-- /ko -->
+</div>
+
+<div class="rp-card-section">
+    <!-- ko let: {targetSection: 'recognition_information_section', sectionController: recognitionInformationVisible} -->
+    <span class="rp-tile-title">Official Recognition Information</span>
+    <i class="fa report-expander print-hide fa-angle-down" tabindex="0" role="button" data-target="site_name_section" data-bind="onEnterkeyClick, onSpaceClick, let: {sectionController: siteNamesVisible, targetSection: 'site_name_section'},
+                css: {'fa-angle-down': sectionController(), 'fa-angle-right': !sectionController()},
+                click: function() {sectionController(!sectionController());},
+                attr: {
+                    'aria-expanded': sectionController().toString(),
+                    'aria-controls': targetSection,
+                    'aria-label': 'Toggle Official Recognition section',
+                }
+            "></i>
+
+    <div class="rp-card-section" data-bind="visible: sectionController, attr: {id: targetSection}">
+        <div style="display: inline-flex; width: 100%; justify-content: space-between;">
+            <dl class="dl-horizontal">
+                <div>
+                <dt class="registry_types">Registration Status</dt>
+                <dd data-bind="component: { name: 'concept-select-widget',
+                                            params: {
+                                                value: getFirstNodeValue('registration_status'),
+                                                state: 'display_value'
+                                            }
+                                        }"></dd>
+                </div>
+                <div>
+                <dt class="registry_types">Registry Types</dt>
+                <dd data-bind="component: { name: 'concept-multiselect-widget',
                                             params: {
                                                 value: getFirstNodeValue('registry_types'),
                                                 state: 'display_value'
                                             }
                                         }"></dd>
-        </dl>
+                </div>
+            </dl>
+        </div>
     </div>
-    <div class="bcrhp-grid-item grid-col-1 grid-row-3">
-        <dl class="dl-vertical dl-vertical-bc">
-            <dt>Construction Date(s)</dt>
-            <!-- ko foreach: { data: getTilesForAlias('chronology'), as: 'tile' } -->
-            <dd data-bind="component: {
-                                            name: 'significant-event-widget',
-                                            params: {
-                                                card: $parent.getWidgetForAlias('chronology').card,
-                                                tile: tile,
-                                                value: tile.data,
-                                                state: 'display_value',
-                                                event_types: ['Construction']
-                                            }
-                                        }, click: function(){console.log(card);}"></dd>
-            <!-- /ko -->
-        </dl>
-    </div>
-    <div class="bcrhp-grid-item grid-col-2 grid-row-3">
-        <dl class="dl-vertical dl-vertical-bc">
-            <dt>Legislative Act</dt>
-            <dd>
-                <!-- ko foreach: { data: getResourceInstanceValues('legislative_act'), as: 'legislative_act' } -->
-                <div data-bind="component: {
-                                            name: 'resource-instance-select-widget',
-                                            params: { value: legislative_act, state: 'display_value'}
-                                        }"></div>
-                <!-- /ko -->
-            </dd>
-        </dl>
-    </div>
+    <!-- /ko -->
+</div>
 
-    <div class="bc-grid-item bc-full-width-grid-item bc-top-offset"
-         data-bind="visible: nodesHaveData(['significance_type','physical_description'])">
-        <dl>
-            <dt>
-            <span data-bind="component: {name: 'concept-select-widget',
-                                            params: {value: getFirstNodeValue('significance_type'),
-                                                     state: 'display_value'}
+<div class="rp-card-section">
+    <!-- ko let: {targetSection: 'recognition_details_section', sectionController: recognitionDetailsVisible} -->
+    <span class="rp-tile-title">Official Recognition Details</span>
+    <i class="fa report-expander print-hide fa-angle-down" tabindex="0" role="button" data-target="site_name_section" data-bind="onEnterkeyClick, onSpaceClick, let: {sectionController: siteNamesVisible, targetSection: 'site_name_section'},
+                css: {'fa-angle-down': sectionController(), 'fa-angle-right': !sectionController()},
+                click: function() {sectionController(!sectionController());},
+                attr: {
+                    'aria-expanded': sectionController().toString(),
+                    'aria-controls': targetSection,
+                    'aria-label': 'Toggle Recognition Details section',
+                }
+            "></i>
+
+    <div class="rp-card-section" data-bind="visible: sectionController, attr: {id: targetSection}">
+        <div style="display: flex; flex-flow: column; width: 100%; justify-content: space-between;">
+            <!-- ko let: {widget: getWidgetForAlias('designation_or_protection_start_date')}-->
+            <!-- ko foreach: { data: getValuesFromTiles(['legislative_act', 'responsible_government', 'designation_or_protection_start_date', 'reference_number']), as: 'values' } -->
+            <dl class="dl-horizontal">
+                <div class="details-authority-section">
+                    <div>
+                        <dt>Recognition Type</dt>
+                        <dd>
+                            <div style="display: inline-block;" data-placement="auto" data-toggle="tooltip"
+                                 data-bind="attr: {'data-original-title': $parent.getLegislativeAct(values['legislative_act']).definition,
+                                                   'title': $parent.getLegislativeAct(values['legislative_act']).definition},
+                                            text: $parent.getLegislativeAct(values['legislative_act']).display_value">
+                            </div>
+                            <button class="btn info-button tooltips tooltips-toggle" data-placement="top" data-toggle="tooltip"
+                                    data-bind="attr: {'data-original-title': $parent.getLegislativeAct(values['legislative_act']).definition,
+                                                   'title': $parent.getLegislativeAct(values['legislative_act']).definition}"
+                            >
+                                <i class="fa fa-info-circle"
+                                   data-bind="attr: {'aria-label': $parent.getLegislativeAct(values['legislative_act']).definition},
+                                          visible: $parent.getLegislativeAct(values['legislative_act']).definition"></i>
+                            </button>
+                        </dd>
+                    </div>
+                    <div>
+                        <dt>Recognition Government</dt>
+                        <dd>
+                            <div data-bind="component: {
+                                            name: 'resource-instance-select-widget',
+                                            params: { value: values['responsible_government'], state: 'display_value'}
+                                        }"></div>
+                        </dd>
+                    </div>
+                    <div>
+                        <dt>Recognition Date</dt>
+                        <dd>
+                            <div data-bind="component: { name: 'datepicker-widget',
+                                            params: { value: values['designation_or_protection_start_date'],
+                                            node: widget.node,
+                                            state: 'display_value' }
+                                            }"></div>
+                        </dd>
+                    </div>
+                    <div>
+                        <dt>Reference Number</dt>
+                        <dd data-bind="component: {name: 'text-widget',
+                           params: {value: ko.unwrap(values['reference_number']), state: 'display_value'
+                                    }
+                           }"></dd>
+                    </div>
+                </div>
+            </dl>
+            <!-- /ko -->
+            <!-- /ko -->
+        </div>
+    </div>
+    <!-- /ko -->
+</div>
+
+<div class="rp-card-section" data-bind="css: {'hide-section': !isAnonymous()}, visible: nodesHaveData(['chronology'])">
+    <!-- ko let: {targetSection: 'chronology_section', sectionController: chronologyVisible} -->
+    <span class="rp-tile-title">Chronology</span>
+    <i class="fa report-expander print-hide fa-angle-down" tabindex="0" role="button" data-target="site_name_section" data-bind="onEnterkeyClick, onSpaceClick, let: {sectionController: siteNamesVisible, targetSection: 'site_name_section'},
+                css: {'fa-angle-down': sectionController(), 'fa-angle-right': !sectionController()},
+                click: function() {sectionController(!sectionController());},
+                attr: {
+                    'aria-expanded': sectionController().toString(),
+                    'aria-controls': targetSection,
+                    'aria-label': 'Toggle Chronology section',
+                }
+            "></i>
+
+    <div class="rp-card-section" data-bind="visible: sectionController, attr: {id: targetSection}">
+        <div style="display: flex; flex-flow: column; width: 100%; justify-content: space-between;">
+            <!-- ko foreach: { data: getTilesForAlias('chronology'), as: 'tile' } -->
+            <!-- ko component: { name: 'significant-event-widget',
+                                 params: {
+                                     card: $parent.getWidgetForAlias('chronology').card,
+                                     tile: tile,
+                                     value: tile.data,
+                                     state: 'display_value',
+                                     event_types: ['Construction','Significant']
+                                 }
+                               }
+            -->
+            <!-- /ko -->
+            <!-- /ko -->
+        </div>
+    </div>
+    <!-- /ko -->
+</div>
+
+<div class="rp-card-section" data-bind="css: {'hide-section': !isAnonymous()},
+        visible: nodesHaveData(['significance_type','physical_description','heritage_value','defining_elements','document_location'])">
+    <!-- ko let: {targetSection: 'sos_section', sectionController: sosVisible} -->
+    <span class="rp-tile-title">Statement of Significance</span>
+    <i class="fa report-expander print-hide fa-angle-down" tabindex="0" role="button" data-target="site_name_section" data-bind="onEnterkeyClick, onSpaceClick, let: {sectionController: siteNamesVisible, targetSection: 'site_name_section'},
+                css: {'fa-angle-down': sectionController(), 'fa-angle-right': !sectionController()},
+                click: function() {sectionController(!sectionController());},
+                attr: {
+                    'aria-expanded': sectionController().toString(),
+                    'aria-controls': targetSection,
+                    'aria-label': 'Toggle Statement of Significance section',
+                }
+            "></i>
+
+    <div class="rp-card-section" data-bind="visible: sectionController, attr: {id: targetSection}">
+        <div style="display: inline-flex; width: 100%; justify-content: space-between;">
+            <dl class="dl-horizontal">
+                <div data-bind="visible: !!nodesHaveData(['significance_type'])">
+                    <dt>Significance Type</dt>
+                    <dd data-bind="component: {name: 'concept-select-widget',
+                                        params: {value: getFirstNodeValue('significance_type'),
+                                                 state: 'display_value'}
+                                    }"></dd>
+                </div>
+                <div data-bind="visible: !!nodesHaveData(['physical_description'])">
+                    <dt>Description</dt>
+                    <dd data-bind="component: {name: 'rich-text-widget',
+                       params: {value: getFirstNodeValue('physical_description'),
+                                state: 'display_value',
+                                displayfullvalue: true}
+                       }"></dd>
+                </div>
+                <div data-bind="visible: !!nodesHaveData(['heritage_value'])">
+                    <dt>Heritage Value</dt>
+                    <dd data-bind="component: {name: 'rich-text-widget',
+                       params: {value: getFirstNodeValue('heritage_value'),
+                                state: 'display_value',
+                                displayfullvalue: true}
+                       }"></dd>
+                </div>
+                <div data-bind="visible: !!nodesHaveData(['defining_elements'])">
+                    <dt>Character Defining Elements</dt>
+                    <dd class="print-only" data-bind="component: {name: 'rich-text-widget',
+                       params: {value: getFirstNodeValue('defining_elements'),
+                                state: 'display_value',
+                                displayfullvalue: true}
+                       }"></dd>
+                </div>
+                <div data-bind="visible: !!nodesHaveData(['document_location'])">
+                    <dt>Document Location</dt>
+                    <dd class="print-only" data-bind="component: {name: 'text-widget',
+                       params: {value: ko.unwrap(getFirstNodeValue('document_location')),
+                                state: 'display_value',
+                                displayfullvalue: true}
+                       }"></dd>
+                </div>
+            </dl>
+        </div>
+    </div>
+    <!-- /ko -->
+</div>
+
+<div class="rp-card-section" data-bind="css: {'hide-section': !isAnonymous()}, visible: nodesHaveData(['heritage_category','ownership'])">
+    <!-- ko let: {targetSection: 'heritage_class_section', sectionController: heritageClassVisible} -->
+    <span class="rp-tile-title">Heritage Class</span>
+    <i class="fa report-expander print-hide fa-angle-down" tabindex="0" role="button" data-target="site_name_section" data-bind="onEnterkeyClick, onSpaceClick, let: {sectionController: siteNamesVisible, targetSection: 'site_name_section'},
+                css: {'fa-angle-down': sectionController(), 'fa-angle-right': !sectionController()},
+                click: function() {sectionController(!sectionController());},
+                attr: {
+                    'aria-expanded': sectionController().toString(),
+                    'aria-controls': targetSection,
+                    'aria-label': 'Toggle Site Name section',
+                }
+            "></i>
+
+    <div class="rp-card-section" data-bind="visible: sectionController, attr: {id: targetSection}">
+        <div style="display: inline-flex; width: 100%; justify-content: space-between;">
+            <dl class="dl-horizontal">
+                <!-- ko foreach: { data: getValuesFromTiles(['contributing_resource_count', 'heritage_category', 'ownership']), as: 'tileValues' } -->
+                <div>
+                    <div>
+                        <dt>Heritage Resources</dt>
+                        <dd>
+                        <span data-bind="component: { name: 'number-widget',
+                                                    params: {
+                                                        value: tileValues['contributing_resource_count'],
+                                                        state: 'display_value'
+                                                    }
+                                                }"></span><span>,</span>
+                            <span data-bind="component: { name: 'concept-select-widget',
+                                                    params: {
+                                                        value: tileValues['heritage_category'],
+                                                        state: 'display_value'
+                                                    }
+                                                }"></span>
+                        </dd>
+                    </div>
+                    <div>
+                        <dt>Ownership</dt>
+                        <dd data-bind="component: { name: 'concept-select-widget',
+                                                params: {
+                                                    value: tileValues['ownership'],
+                                                    state: 'display_value'
+                                                }
+                                            }"></dd>
+
+                    </div>
+                </div>
+                <!-- /ko -->
+            </dl>
+        </div>
+    </div>
+    <!-- /ko -->
+</div>
+
+<div class="rp-card-section" data-bind="css: {'hide-section': !isAnonymous()},
+                visible: nodesHaveData(['functional_category','functional_state'])">
+    <!-- ko let: {targetSection: 'heritage_function_section', sectionController: heritageFunctionVisible} -->
+    <span class="rp-tile-title">Heritage Function</span>
+    <i class="fa report-expander print-hide fa-angle-down" tabindex="0" role="button" data-target="site_name_section" data-bind="onEnterkeyClick, onSpaceClick, let: {sectionController: siteNamesVisible, targetSection: 'site_name_section'},
+                css: {'fa-angle-down': sectionController(), 'fa-angle-right': !sectionController()},
+                click: function() {sectionController(!sectionController());},
+                attr: {
+                    'aria-expanded': sectionController().toString(),
+                    'aria-controls': targetSection,
+                    'aria-label': 'Toggle Site Name section',
+                }
+            "></i>
+
+    <div class="rp-card-section" data-bind="visible: sectionController, attr: {id: targetSection}">
+        <div style="display: inline-flex; width: 100%; justify-content: space-between;">
+            <dl class="dl-horizontal">
+                <!-- ko foreach: { data: getValuesFromTiles(['functional_category', 'functional_state']), as: 'tileValues' } -->
+                <div class="card-content-section">
+                    <div>
+                        <dt>Heritage Function</dt>
+                        <dd data-bind="component: { name: 'concept-select-widget',
+                                            params: {
+                                                value: tileValues['functional_category'],
+                                                state: 'display_value'
+                                            }
+                                        }"></dd>
+                    </div>
+                    <div>
+                        <dt>Function Period</dt>
+                        <dd data-bind="component: { name: 'concept-multiselect-widget',
+                                                params: {
+                                                    value: tileValues['functional_state'],
+                                                    state: 'display_value'
+                                                }
+                                            }"></dd>
+
+                    </div>
+                </div>
+                <!-- /ko -->
+            </dl>
+        </div>
+    </div>
+    <!-- /ko -->
+</div>
+
+<div class="rp-card-section" data-bind="css: {'hide-section': !isAnonymous()}, visible: nodesHaveData(['heritage_theme'])">
+    <!-- ko let: {targetSection: 'heritage_theme_section', sectionController: heritageThemeVisible} -->
+    <span class="rp-tile-title">Heritage Theme</span>
+    <i class="fa report-expander print-hide fa-angle-down" tabindex="0" role="button" data-target="site_name_section" data-bind="onEnterkeyClick, onSpaceClick, let: {sectionController: siteNamesVisible, targetSection: 'site_name_section'},
+                css: {'fa-angle-down': sectionController(), 'fa-angle-right': !sectionController()},
+                click: function() {sectionController(!sectionController());},
+                attr: {
+                    'aria-expanded': sectionController().toString(),
+                    'aria-controls': targetSection,
+                    'aria-label': 'Toggle Site Name section',
+                }
+            "></i>
+
+    <div class="rp-card-section" data-bind="visible: sectionController, attr: {id: targetSection}">
+        <div style="display: inline-flex; width: 100%; justify-content: space-between;">
+            <dl class="dl-horizontal">
+                <div>
+                    <dt>Heritage Theme</dt>
+                    <dd>
+                        <span data-bind="component: { name: 'concept-multiselect-widget',
+                                            params: {
+                                                value: getFirstNodeValue('heritage_theme'),
+                                                state: 'display_value'
+                                            }
                                         }"></span>
-                <span>Statement of Significance</span>
-            </dt>
-            <dd class="bc-subsection-header">Description</dd>
-            <dd data-bind="component: {name: 'rich-text-widget',
-                           params: {value: getFirstNodeValue('physical_description'),
-                                    state: 'display_value',
-                                    displayfullvalue: true}
-                           }"></dd>
-            <dd class="bc-subsection-header print-only">Heritage Value</dd>
-            <dd class="print-only" data-bind="component: {name: 'rich-text-widget',
-                           params: {value: getFirstNodeValue('heritage_value'),
-                                    state: 'display_value',
-                                    displayfullvalue: true}
-                           }"></dd>
-            <dd class="bc-subsection-header print-only">Character Defining Elements</dd>
-            <dd class="print-only" data-bind="component: {name: 'rich-text-widget',
-                           params: {value: getFirstNodeValue('defining_elements'),
-                                    state: 'display_value',
-                                    displayfullvalue: true}
-                           }"></dd>
-            <dd class="bc-subsection-header print-only">Document Location</dd>
-            <dd class="print-only" data-bind="component: {name: 'text-widget',
-                           params: {value: getFirstNodeValue('document_location'),
-                                    state: 'display_value',
-                                    displayfullvalue: true}
-                           }"></dd>
-        </dl>
+                    </dd>
+                </div>
+            </dl>
+        </div>
+    </div>
+    <!-- /ko -->
+</div>
+    <div class="rp-card-section" data-bind="css: {'hide-section': !isAnonymous()}, visible: nodesHaveData(['external_url'])">
+        <!-- ko let: {targetSection: 'external_urls_section', sectionController: externalUrlsVisible} -->
+        <span class="rp-tile-title">External URLs</span>
+        <i class="fa report-expander print-hide fa-angle-down" tabindex="0" role="button" data-target="site_name_section" data-bind="onEnterkeyClick, onSpaceClick,
+                css: {'fa-angle-down': sectionController(), 'fa-angle-right': !sectionController()},
+                click: function() {sectionController(!sectionController());},
+                attr: {
+                    'aria-expanded': sectionController().toString(),
+                    'aria-controls': targetSection,
+                    'aria-label': 'Toggle Site Name section',
+                }
+            "></i>
+
+        <div class="rp-card-section" data-bind="visible: sectionController, attr: {id: targetSection}">
+            <div style="display: inline-flex; width: 100%; justify-content: space-between;">
+                <dl class="dl-horizontal">
+                    <!-- ko foreach: { data: getValuesFromTiles(['external_url']), as: 'tileValues' } -->
+                    <div class="external-urls">
+                        <dt>External URL</dt>
+                        <dd>
+                        <span data-bind="component: { name: 'urldatatype',
+                                            params: {
+                                                value: ko.unwrap(tileValues['external_url']),
+                                                state: 'display_value'
+                                            }
+                                        }, click: $parent.clickUrl, $parent.onEnterkeyClick, $parent.onSpaceClick"></span>
+                        </dd>
+                    </div>
+                    <!-- /ko -->
+                </dl>
+            </div>
+        </div>
+        <!-- /ko -->
     </div>
 </div>

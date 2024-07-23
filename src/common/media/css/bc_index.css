@@ -1,11 +1,24 @@
 /* Front page */
 
+.app-info-manual {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+    align-items: center;
+    padding-right: 15px; /* This is for the .app-info-block to not have the container on the right edge */
+}
+
+.app-info-manual-item img {
+    width: 100%;
+    height: auto;
+}
+
 .bc-splash-caption {
     background: rgba(0, 0, 0, 0.6);
     padding: 5px !important;
-    left: 10vw !important;
+    margin-left: 10vw !important;
     max-width: 50vw !important;
-    min-width: max-content !important;
+    min-width: max-content;
 }
 
 .vertical-nav-list-link:hover .vertical-nav-list-ref {
@@ -14,8 +27,8 @@
     /*margin-right: 20px;*/
     /*line-height: 1.4;*/
     /*padding: 0 5px;*/
-    font-size: unset;
-    font-weight: unset;
+    font-size: 16px !important;
+    /*font-weight: unset;*/
     color: #003366;
     opacity: 60%;
     float: left !important;
@@ -42,6 +55,8 @@
     left: 25px !important;
     right: unset !important;
     top: 150px !important;
+    background: none !important;
+    border: none !important;
 }
 
 .vertical-nav-list-ref {
@@ -69,7 +84,7 @@
 .bc-splash-caption > h3 {
     color: white;
     padding: 0 20px;
-    font-size: 30px;
+    font-size: 1.44rem;
 }
 
 .bc-splash-caption > h4 {
@@ -82,7 +97,7 @@
 }
 
 .app-info-block {
-    min-height: 600px;
+    min-height: 300px;
     padding: 80px 100px 140px 100px;
     background: #fff;
     border-top: 1px solid #ddd;
@@ -93,17 +108,29 @@ li.app-info-block-text {
     font-size: 16px;
 }
 
+@media only screen and (min-width: 280px) {
+    .bc-splash-caption {
+        min-width: 80vw !important;
+    }
+}
+
+@media only screen and (max-width: 768px) {
+    .app-info-block {
+        padding: 20px 10px;
+    }
+    .app-info-block.intro-section {
+        padding: 0;
+    }
+}
+
 @media only screen and (min-width: 768px) {
     .bc-splash-caption {
-        background: rgba(0, 0, 0, 0.6);
-        padding: 5px !important;
-        left: 10vw !important;
-        max-width: 50vw !important;
-        min-width: max-content !important;
+        min-width: 80vw !important;
+        margin-left: 10vw !important;
     }
 
     .bc-splash-caption > h4 {
-        max-width:90% !important;
+        max-width:90vw !important;
     }
     .app-info-content {
         margin-left: 300px;
@@ -124,8 +151,10 @@ li.app-info-block-text {
 
 @media only screen and (min-width: 992px) {
     .bc-splash-caption > h4 {
-        max-width:75% !important;
+        max-width:75vw !important;
+        padding-left: 25vw;
     }
+
     .app-info-block {
         padding-left: 50px;
         padding-right: 50px;
@@ -176,6 +205,44 @@ li.app-info-block-text {
     /*color: #000000;*/
 }
 
+.slide-img-container {
+    top: 100px;
+    max-height: 100vh;
+    width: 100vw;
+    overflow-y: clip;
+}
+.slide-caption {
+    max-width: 70vw;
+    padding-left: 30px;
+}
+
+.slide-img-attribution {
+    font-size: .8rem !important;
+}
+
+.home-slider img {
+    height: 100vh !important;
+    min-width: 100vw !important;
+    overflow: clip;
+}
+
+.home-slider .slick-autoplay-toggle-button {
+    color: #fff;
+    bottom: 10px;
+}
+
+.home-slider .slick-prev > i, .home-slider .slick-next > i {
+    color: #fff !important;
+}
+
+.home-slider .slick-prev {
+    left: 1.5rem;
+}
+
+.home-slider .slick-next {
+    right: 1.5rem;
+}
+
 h3.app-info-block-title {
     /* What are Historic Places? */
     /* H500
@@ -219,7 +286,7 @@ h4.app-info-block-title {
 }
 
 .navbar-brand-v5-icon {
-    height: 50px;
+    height: 50px !important;
 }
 
 .nav-brand-container h1 {
@@ -308,4 +375,50 @@ a:hover {
 :focus {
     outline: 4px solid #3B99FC;
     outline-offset: 1px;
+}
+
+/* iPhone 13 */
+@media only screen and (max-width: 1284px) {
+    /* Override from details page */
+    .slick-arrow {
+        background: none !important;
+    }
+
+    .home-slider .slick-prev {
+        left: .5rem;
+    }
+
+    .home-slider .slick-next {
+        right: .5rem;
+    }
+
+    .arches_logo {
+        max-height: 15px;
+    }
+
+    .footer ul {
+        padding-inline-start: 0;
+    }
+}
+
+@media (max-width: 510px) {
+    .nav-brand-container h1 {
+        max-width: 22ch;
+        font-size: 0.8em;
+        line-height: 1.1em;
+    }
+}
+
+@media (max-width: 400px) {
+    .nav-brand-container h1 {
+        max-width: 16ch;
+        font-size: 0.6em;
+        line-height: 1.5em;
+    }
+}
+
+@media (max-width: 320px) {
+    .nav-brand-container h1 {
+        max-width: 16ch;
+    }
 }

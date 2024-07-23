@@ -28,6 +28,8 @@ define(['knockout',
             this.nameTypeWidget = params.name_type_widget;
 
             this.showName = ko.observable(false);
+            this.siteNameLabel = ko.observable("");
+            this.siteName = ko.unwrap(self.tile).data[self.nameWidget.node.nodeid];
 
             this.setNameVisible = function(widget)
             {
@@ -43,13 +45,10 @@ define(['knockout',
                         dataType: "json"
                     }).done(function(data) {
                         self.showName(_.contains(self.nameTypes, data.value));
+                        self.siteNameLabel(`${data.value} Name`);
                     });
                 }
             }
-
-            this.siteName = ko.computed(function() {
-                return ko.unwrap(self.tile).data[self.nameWidget.node.nodeid];
-            });
 
             this.siteNameWidget = ko.computed(function()
             {
@@ -58,6 +57,11 @@ define(['knockout',
             });
 
             this.siteNameType = ko.computed(function()
+            {
+                return ko.unwrap(self.tile).data[self.nameTypeWidget.node.nodeid];
+            });
+
+            this.siteNameTypeWidget = ko.computed(function()
             {
                 return self.nameTypeWidget;
             });

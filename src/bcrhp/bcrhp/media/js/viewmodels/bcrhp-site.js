@@ -1,14 +1,19 @@
 define([
     'jquery',
     'underscore',
+    'slick',
     'knockout',
     'knockout-mapping',
     'arches',
     'viewmodels/map-report',
-    'bindings/chosen'
-], function($, _, ko, koMapping, arches, MapReportViewModel) {
+    'bindings/chosen',
+], function($, _, slick, ko, koMapping, arches, MapReportViewModel) {
+    $.ready(function() {
+        $(".data-carousel").slick({});
+    });
     return function(params) {
         var self = this;
+        self.urls = arches.urls;
 
         MapReportViewModel.apply(this, [params]);
         var getAllWidgets = function(card) {
@@ -23,6 +28,21 @@ define([
         var widgets = _.flatten(_.map(params.report.cards, card => {return getAllWidgets(card)}));
 
         var tiles = _.flatten(_.map(params.report.cards, card => {return getAllTiles(card)}));
+
+        this.helpenable = ko.observable(false);
+        this.siteNamesVisible = ko.observable(true);
+        this.siteLocationVisible = ko.observable(false);
+        this.bordenNumberVisible = ko.observable(true);
+        this.recognitionInformationVisible = ko.observable(true);
+        this.recognitionDetailsVisible = ko.observable(true);
+        this.chronologyVisible = ko.observable(true);
+        this.sosVisible = ko.observable(true);
+        this.heritageClassVisible = ko.observable(true);
+        this.heritageFunctionVisible = ko.observable(true);
+        this.heritageThemeVisible = ko.observable(true);
+        this.externalUrlsVisible = ko.observable(true);
+
+        this.helpactive = function(state) { this.helpenable(state) };
 
         var getWidgetForAlias = function(node_alias){
             var widget = _.find(widgets, widget => {
@@ -75,6 +95,27 @@ define([
             return values;
         }
 
+        this.getValuesFromTiles = function(node_aliases) {
+            let widgets = {};
+            node_aliases.map(alias => {
+                widgets[alias] = getWidgetForAlias(alias);
+            });
+
+            var values_list = [];
+            _.each(ko.unwrap(tiles), tile => {
+                let tileValues = {};
+                _.keys(widgets).map( key => {
+                    tileValues[key] = getValueFromTile(tile, widgets[key]);
+                });
+                if (_.some(_.values(tileValues)))
+                {
+                    _.each(_.keys(tileValues), k => { tileValues[k] = ko.observable(tileValues[k])});
+                    values_list.push(tileValues);
+                }
+            });
+            return values_list;
+        };
+
         this.getNodeValues = function(node_alias)
         {
             return getNodeValues(node_alias, true);
@@ -89,6 +130,12 @@ define([
             return !!_.find(_.flatten(values), value => {
                 return ko.unwrap(value) != null
             });
+        }
+
+        this.textHasValue = function(textValue, languages = ['en'])
+        {
+            let textObject = ko.unwrap(textValue);
+            return languages.find((language) => !!ko.unwrap(ko.unwrap(textObject) ? textObject[language].value : null));
         }
 
         this.getFirstNodeValue = function(alias) {
@@ -123,6 +170,57 @@ define([
             let filename = event.currentTarget.getElementsByTagName('a')[0].text.trim();
             window.open(url, filename);
         }
+
+        this.actAuthorities = {};
+
+        this.getUser = function() {
+            let user = ko.mapping.fromJS({"username":"","first_name":"","last_name":"","groups":[]});
+            $.ajax({
+                url: `${self.urls.root}user_profile`
+            }).done(function (data) {
+                if (data)
+                {
+                    ko.mapping.fromJS(data, user);
+                }
+            });
+            return user;
+        };
+        this.user = this.getUser();
+
+        this.isAnonymous = ko.computed( function() {
+            return ko.unwrap(this.user.groups).length === 0 || this.user.groups().includes("Guest");
+        }, this);
+
+        this.getLegislativeAct = function (relatedActObject) {
+            let actId = ko.unwrap(ko.unwrap(relatedActObject)[0].resourceId);
+            if (!!actId && this.actAuthorities[actId])
+            {
+                return this.actAuthorities[actId];
+            }
+
+            let authority = {
+                display_value: ko.observable(""),
+                definition: ko.observable("")
+            };
+            this.actAuthorities[actId] = authority;
+
+            if (self.report.graph.slug === "heritage_site" && self.tiles().length > 0) {
+                let url = `${self.urls.root}legislative_act/${actId}`;
+                $.ajax({
+                    url: url
+                }).done(function (data) {
+                    if (!!data && data.length > 0)
+                    {
+                        authority.display_value(`${data[0].authority}, ${data[0].recognition_type}`);
+                        if (data[0].recognition_type_definition)
+                        {
+                            authority.definition(data[0].recognition_type_definition.value);
+                        }
+                    }
+                });
+            }
+            return authority;
+        };
 
 
         /* Old config ... to remove */
@@ -161,7 +259,23 @@ define([
             }
             return null;
         };
-        /* Old config ... to remove */
-
+        this.initCarousel = function(parent)
+        {
+            // $(parent).slick();
+            $(parent).slick({
+                // accessibility: true,
+                // slidesToShow: 2,
+                // slidesToScroll: 1,
+                // arrowsPlacement: 'split',
+                centerMode: true,
+                dots: true,
+                variableWidth: true,
+                infinite: false,
+                // autoplay: true,
+                // autoplaySpeed: 6000,
+                prevArrow:"<button type='button' class='slick-prev pull-left'><i class='fa fa-chevron-left' aria-hidden='false'></i></button>",
+                nextArrow:"<button type='button' class='slick-next pull-right'><i class='fa fa-chevron-right' aria-hidden='false'></i></button>"
+            });
+        };
     };
 });

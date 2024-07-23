@@ -1,0 +1,43 @@
+{
+  "name": "Tantalis Surveyed Parcel",
+  "sources": {
+    "tantalis-surveyed-parcel-source": {
+      "type": "vector",
+      "tiles": [
+        "/bcrhp/bctileserver/geo/pub/WHSE_TANTALIS.TA_SURVEY_PARCELS_SVW/ows?service=WMS&request=GetMap&layers=WHSE_TANTALIS.TA_SURVEY_PARCELS_SVW&styles=&format=pbf&transparent=true&version=1.1.1&height=512&width=512&srs=EPSG:3857&bbox={bbox-epsg-3857}"
+      ],
+      "tileSize": 512
+    }
+  },
+  "arches-metadata": {
+    "ispublic": false,
+    "sortorder": 14
+  },
+  "layers": [
+    {
+      "id": "tantalis-surveyed-parcel",
+      "type": "line",
+      "source": "tantalis-surveyed-parcel-source",
+      "source-layer": "WHSE_TANTALIS.TA_SURVEY_PARCELS_SVW",
+      "minzoom": 9,
+      "maxzoom": 19,
+      "paint": {
+        "line-color": "rgb(95, 95, 95)",
+        "line-width": 1
+      }
+    },
+    {
+      "id": "tantalis-surveyed-parcel-symbol",
+      "type": "symbol",
+      "source": "tantalis-surveyed-parcel-source",
+      "source-layer": "WHSE_TANTALIS.TA_SURVEY_PARCELS_SVW",
+      "layout": {
+        "text-field": "{PARCEL_SHORT_DESCRIPTION}",
+        "text-size": 12
+      },
+      "paint": {
+        "text-color": "rgb(0, 0, 0)"
+      }
+    }
+  ]
+}

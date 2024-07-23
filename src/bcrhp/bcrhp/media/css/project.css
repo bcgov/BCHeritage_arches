@@ -1,5 +1,8 @@
 @import "project_common.css";
 @import "map_legend.css";
+@import "fontawesome/css/fontawesome.min.css";
+@import "fontawesome/css/solid.min.css";
+@import "resource_details.css";
 
 .card_component.start_year, .card_component.end_year, .card_component.dates_approximate {
     display: inline-block;
@@ -31,4 +34,70 @@
     padding: 10px 5px 25px 5px;
     display: inline-block;
     vertical-align: bottom;
+}
+
+.summary-slider img {
+    height: 350px;
+}
+
+/*Details Card*/
+.details-card-section > .rp-card-section {
+    margin-top: 2.5rem;
+}
+
+.card-content-section {
+    margin-top: 1.5rem;
+}
+
+.details-authority-section {
+    margin-bottom: 1.5rem;
+}
+
+/* Image slider caption information */
+.photo-info {
+    max-width: 500px;
+    margin: 1rem 2rem;
+    font-size: 0;
+}
+
+.photo-info span.separator {
+    margin-right: .5rem;
+}
+
+.slick-slide .photo-info {
+    opacity: 0;
+}
+
+.photo-caption-part > span, .photo-info dl, span.separator {
+    font-size: 1.4rem;
+}
+
+.photo-info dt {
+    width: 110px !important;
+    text-align: left !important;
+    padding-left: 0;
+}
+
+.photo-info dd {
+    width: unset !important;
+    padding-left: 0;
+}
+
+/*.details-photo {*/
+/*    padding-left: 3px;*/
+/*    padding-right: 3px;*/
+/*}*/
+
+.slick-slide img.details-photo {
+    scale: 80% !important;
+    opacity: 80% !important;
+}
+
+.slick-slide.slick-current img.details-photo {
+    scale: 100% !important;
+    opacity: 100% !important;
+}
+
+.slick-slide.slick-current .photo-info {
+    opacity: 100% !important;
 }

@@ -40,6 +40,21 @@ define(['knockout', 'underscore', 'viewmodels/widget', 'templates/views/componen
                 return self.getWidgetWithLabel(self.card(), "province");
             });
 
+            this.locality = ko.computed(function()
+            {
+                return self.getWidgetWithLabel(self.card(), "locality");
+            });
+
+            this.postal_code = ko.computed(function()
+            {
+                return self.getWidgetWithLabel(self.card(), "postal_code");
+            });
+            
+            this.location_description = ko.computed(function()
+            {
+                return self.getWidgetWithLabel(self.card(), "location_description");
+            });
+
         },
         template: defaultCivicAddressWidgetTemplate
     });

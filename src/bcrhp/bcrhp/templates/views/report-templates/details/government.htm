@@ -5,7 +5,7 @@
             <dt class="registry_types">Government Name</dt>
             <dd data-bind="component: { name: 'text-widget',
                                             params: {
-                                                value: getFirstNodeValue('government_name'),
+                                                value: ko.unwrap(getFirstNodeValue('government_name')),
                                                 state: 'display_value'
                                             }
                                         }"></dd>

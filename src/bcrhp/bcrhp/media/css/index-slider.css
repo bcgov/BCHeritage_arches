@@ -1,0 +1,151 @@
+.slick-prev {
+    width: 20px;
+    height: 29px;
+    left: -3rem;
+    z-index: 10;
+}
+
+.slick-next {
+    width: 20px;
+    height: 29px;
+    right: -3rem;
+    z-index: 10;
+}
+
+.slick-prev .fa, .slick-next .fa {
+    color: #000!important;
+    opacity: 0.75!important;
+    font-size: 1.5rem;
+    /*-webkit-text-stroke: 2px #000;*/
+}
+
+.slick-slider.slick-dotted {
+    margin-bottom: 30px !important;
+}
+
+.slick-dots {
+    margin-top: 15px;
+}
+
+.home-slider .slick-dots {
+    bottom: 30px;
+}
+
+.home-slider .slick-dots li.slick-active button .slick-dot-icon {
+    color: orange;
+}
+.slick-dots li button .slick-dot-icon {
+    opacity: 0.75;
+}
+
+.slick-slider .slick-track,
+.slick-slider .slick-list {
+    -webkit-transform: translate3d(0, 0, 0);
+    -moz-transform: translate3d(0, 0, 0);
+    -ms-transform: translate3d(0, 0, 0);
+    -o-transform: translate3d(0, 0, 0);
+    transform: translate3d(0, 0, 0);
+    transition-delay: 10ms;
+}
+
+.slide-caption {
+    position: absolute;
+    bottom: 30vh;
+    background: rgba(0, 0, 0, 0.5);
+    padding: 10px;
+}
+
+.slide-caption h2 {
+    font-size: 2.7rem;
+    font-weight: 300;
+    color: #fff;
+    padding-bottom: 5px;
+    margin: 10px 0;
+}
+
+.slide-caption p {
+    font-size: 1.38rem;
+    font-weight: 300;
+    color: #fff;
+    line-height: 0.7;
+}
+
+.slide-img-attribution {
+    position: absolute;
+    bottom: 6vh;
+    color: #fff;
+    padding: 10px;
+    background: rgba(0,0,0,.5);
+    text-align: start;
+    font-size: 1.3rem;
+}
+
+/* ------------------------------Media queries------------------------------ */
+
+@media (max-width: 1280px) {
+    .slide-img-attribution {
+        font-size: 1.5vw;
+    }
+}
+
+@media (max-width: 1000px) {
+    .one-page-header .navbar-nav>li> .fa-chevron-circle-down {
+        padding-left: 12px;
+        margin-top: 14px;
+    }
+    .slide-caption h2 {
+        font-size: 5vw;
+    }
+    .slide-caption p {
+        font-size: 3.5vw;
+    }
+
+    .app-info-block.intro-section h2 {
+        font-size: 2rem;
+    }
+
+    .bc-splash-caption > h3 {
+        font-size: 1.1rem;
+    }
+
+    .bc-splash-caption > h4 {
+        max-width: 50vw !important;
+    }
+}
+
+@media screen and (max-height: 819px) {
+    /*.down-button,*/
+    /*.vertical-nav-container,*/
+    /*.slide-caption,*/
+    /*.slide-img-attribution {*/
+    /*    display: none;*/
+    /*}*/
+    .down-button-icon {
+        font-size: 2.1rem;
+        padding-top: .2vh;
+        /*padding-left: 2vh;*/
+        /*height: 7vh;*/
+        /*width: 7vh;*/
+    }
+
+    .app-info-block.intro-section h2 {
+        font-size: 2rem;
+    }
+
+    .bc-splash-caption > h3 {
+        font-size: 1.1rem;
+    }
+}
+
+@media (min-width: 768px) {
+    .one-page-header .navbar-nav>li> .fa-chevron-circle-down {
+        color: #eee;
+    }
+}
+
+@media (max-width: 481px) {
+    .slide-img-attribution {
+        font-size: 3vw;
+        max-width: 100vw;
+    }
+}

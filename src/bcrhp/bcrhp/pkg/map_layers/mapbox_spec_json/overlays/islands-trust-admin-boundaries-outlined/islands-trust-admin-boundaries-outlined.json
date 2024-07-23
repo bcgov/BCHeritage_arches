@@ -1,0 +1,43 @@
+{
+  "name": "Islands Trust Admin Boundaries Outlined",
+  "sources": {
+    "islands-trust-admin-boundaries-outlined-source": {
+      "type": "vector",
+      "tiles": [
+        "/bcrhp/bctileserver/geo/pub/WHSE_LEGAL_ADMIN_BOUNDARIES.ABMS_ISLANDS_TRUST_SP/ows?service=WMS&request=GetMap&layers=WHSE_LEGAL_ADMIN_BOUNDARIES.ABMS_ISLANDS_TRUST_SP&styles=&format=pbf&transparent=true&version=1.1.1&height=512&width=512&srs=EPSG:3857&bbox={bbox-epsg-3857}"
+      ],
+      "tileSize": 512
+    }
+  },
+  "arches-metadata": {
+    "ispublic": false,
+    "sortorder": 5
+  },
+  "layers": [
+    {
+      "id": "islands-trust-admin-boundaries-outlined",
+      "type": "line",
+      "source": "islands-trust-admin-boundaries-outlined-source",
+      "source-layer": "WHSE_LEGAL_ADMIN_BOUNDARIES.ABMS_ISLANDS_TRUST_SP",
+      "minzoom": 7,
+      "maxzoom": 19,
+      "paint": {
+        "line-color": "rgb(255, 255, 255)",
+        "line-width": 1
+      }
+    },
+    {
+      "id": "islands-trust-admin-boundaries-outlined-symbol",
+      "type": "symbol",
+      "source": "islands-trust-admin-boundaries-outlined-source",
+      "minzoom": 7,
+      "source-layer": "WHSE_LEGAL_ADMIN_BOUNDARIES.ABMS_ISLANDS_TRUST_SP",
+      "layout": {
+        "text-field": "{ADMIN_AREA_NAME}"
+      },
+      "paint": {
+        "text-color": "rgb(255, 255, 255)"
+      }
+    }
+  ]
+}

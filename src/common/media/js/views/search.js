@@ -153,7 +153,9 @@ define([
             var url_data = '';
             if (request_type === 'POST' && !!queryString['map-filter'])
             {
-                map_filter = {'map-filter': queryString['map-filter']};
+                map_filter = {'map-filter': queryString['map-filter'],
+                    'csrfmiddlewaretoken':$("input[name='csrfmiddlewaretoken']")[0].value,
+                };
                 delete queryString['map-filter'];
                 url_data =  queryString;
             }

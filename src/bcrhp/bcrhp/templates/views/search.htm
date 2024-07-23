@@ -1,0 +1,15 @@
+{% extends "views/search.htm" %}
+{% load webpack_static from webpack_loader %}
+
+{% block css %}
+{{ block.super }}
+<!-- TEST!!! --->
+<link rel="stylesheet" type="text/css" href="{% webpack_static 'plugins/slick/slick.min.css' %}">
+<link rel="stylesheet" type="text/css" href="{% webpack_static 'plugins/slick/accessible-slick-theme.min.css' %}">
+<link rel="stylesheet" type="text/css" href="{% webpack_static 'css/index-slider.css' %}">
+{% endblock css %}
+
+{% block main_content %}
+{{ block.super }}
+{% csrf_token %}
+{% endblock main_content %}

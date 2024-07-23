@@ -33,5 +33,6 @@ def generate_filename(instance, filename):
     else:
         paths.append(str(instance.tile.resourceinstance.resourceinstanceid))
 
+    graph_slug = instance.tile.resourceinstance.graph.slug if instance.tile.resourceinstance.graph.slug else "system_settings"
     # print("Paths: %s" % str(paths))
-    return os.path.join(instance.tile.resourceinstance.graph.slug, *paths, filename)
+    return os.path.join(graph_slug, *paths, filename)
