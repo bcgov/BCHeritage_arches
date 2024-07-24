@@ -31,7 +31,7 @@ except ImportError:
 
 load_dotenv(os.path.join(os.path.split(os.path.dirname(os.path.abspath(__file__)))[0], ".env"))
 APP_NAME = 'bcrhp'
-APP_VERSION = semantic_version.Version(major=1, minor=1, patch=0)
+APP_VERSION = semantic_version.Version(major=1, minor=1, patch=1)
 APP_ROOT = os.path.dirname(os.path.abspath(inspect.getfile(inspect.currentframe())))
 MIN_ARCHES_VERSION = arches.__version__
 MAX_ARCHES_VERSION = arches.__version__
@@ -238,7 +238,7 @@ WSGI_APPLICATION = 'bcrhp.wsgi.application'
 
 # URL that handles the media served from MEDIA_ROOT, used for managing stored files.
 # It must end in a slash if set to a non-empty value.
-MEDIA_URL = '/bcrhp/files/'
+MEDIA_URL = '/files/'
 
 # Absolute filesystem path to the directory that will hold user-uploaded files.
 MEDIA_ROOT = os.path.join(APP_ROOT)
