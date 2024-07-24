@@ -13,7 +13,7 @@
     <!-- ko let: {widget: getWidgetForAlias('image_date')}-->
     <!-- ko foreach: { data: getValuesFromTiles(['site_images', 'image_type', 'image_features', 'image_view', 'image_date', 'copyright', 'photographer']), as: 'tileValues' } -->
     <div class="details-carousel">
-        <img class="details-photo" data-bind="attr: {src: ko.unwrap(ko.unwrap(tileValues['site_images'])[0]['url'])}"/>
+        <img class="details-photo" data-bind="attr: {src: $parent.getFileUrl(ko.unwrap(ko.unwrap(tileValues['site_images'])[0]['url']))}"/>
         <div class="photo-info" style="max-width: 500px;">
             <div class="photo-caption">
                 <span class="photo-caption-part" data-bind="component: { name: 'concept-select-widget',
