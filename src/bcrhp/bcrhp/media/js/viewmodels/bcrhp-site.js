@@ -165,6 +165,14 @@ define([
             return resourceValues;
         }
 
+        this.getFileUrl = function(urltoclean) {
+            const url = ko.unwrap(urltoclean);
+            const httpRegex = /^https?:\/\//;
+            // test whether the url is fully qualified or already starts with url_subpath
+            return !url || httpRegex.test(url) || url.startsWith(arches.urls.url_subpath) ? url :
+                (arches.urls.url_subpath + url).replace('//', '/');
+        };
+
         this.clickUrl = function(data, event) {
             let url = event.currentTarget.getElementsByTagName('a')[0]['href'];
             let filename = event.currentTarget.getElementsByTagName('a')[0].text.trim();
