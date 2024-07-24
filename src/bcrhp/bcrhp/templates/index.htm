@@ -249,20 +249,24 @@ along with this program. If not, see <http://www.gnu.org/licenses/>.
                                 {% trans "Click on the thumbnails below to access the user guides to help you navigate the Arches interface:" %}
                             </p>
                             <div class="app-info-manual">
-                                <div class="app-info-manual-item">
-                                    <a href="">
+                                <div class="app-info-manual-item" style="grid-column: 1">
+                                    <a href="https://www2.gov.bc.ca/assets/gov/british-columbians-our-governments/our-history/historic-places/documents/20240719_how_to_search_bcrhp_final.pdf"
+                                       target="search_manual">
                                         <img alt="How to Search PDF Guide" src="{% webpack_static 'img/front/manual-with-text-1.jpg' %}" />
                                     </a>
                                 </div>
-                                <div class="app-info-manual-item">
+                                <div class="app-info-manual-item" style="grid-column: 2; grid-row: 1;">
                                     <a href="">
                                         <img alt="Basic Search Video Guide" src="{% webpack_static 'img/front/manual-with-text-2.jpg' %}" />
                                     </a>
                                 </div>
-                                <div class="app-info-manual-item">
+                                <div class="app-info-manual-item" style="grid-column: 3; grid-row: 1;">
                                     <a href="">
                                         <img alt="Advanced Search Video Guide" src="{% webpack_static 'img/front/manual-with-text-3.jpg' %}" />
                                     </a>
+                                </div>
+                                <div style="grid-column-start: 2; grid-column-end: 4; grid-row: 1; z-index: 1; min-height: 50px; color: white; background: rgba(0,0,0,.5); height: 100%; align-content: center; text-align: center; font-size: 1.5rem;">
+                                    <div style="transform: rotate(-15deg)">Coming soon</div>
                                 </div>
                             </div>
                     </div>
