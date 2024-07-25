@@ -258,8 +258,6 @@ from ce_collection_details ced
     left join ce_abundance cea on cea.resourceinstanceid = ced.resourceinstanceid
     left join ce_significant ces on ces.resourceinstanceid = ced.resourceinstanceid;
 
-select * from fossil_collection_event.collection_event_vw;
-
 create or replace procedure refresh_export_mvs() as
 $$
 BEGIN
