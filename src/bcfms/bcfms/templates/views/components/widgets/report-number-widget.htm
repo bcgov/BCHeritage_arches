@@ -74,12 +74,12 @@
 {% block config_form %}
 <div class="node-config-item">
     <div class="control-label">
-        <span class="widget-input-label">Report Type Abbreviation</span>
+        <span class="widget-input-label">Report Type Abbreviation (2-4 letters)</span>
     </div>
     <div class="col-xs-12" style="display:flex;flex-wrap: wrap;flex-direction: column;">
         <input type="text" style="flex:1" id="input-default-value" class="form-control input-lg widget-input"
                data-bind="textInput: reportTypeAbbreviation,
-                attr: {placeholder: 'AAA', maxlength: 4, dir: currentDefaultDirection, 'aria-label': $root.translations.defaultValue}
+                attr: {placeholder: 'AAA', minlength: 2, maxlength: 4, dir: currentDefaultDirection, 'aria-label': $root.translations.defaultValue}
         ">
     </div>
 </div>
