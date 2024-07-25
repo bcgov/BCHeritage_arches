@@ -13,8 +13,18 @@ class AuthRequiredMiddleware(AuthenticationMiddleware):
 
     def _get_public_urls(self):
         if len(AuthRequiredMiddleware._valid_urls) == 0:
-            base_url = self._clean_path(settings.BCGOV_PROXY_PREFIX)
-            for suffix in ["", "/auth", "/auth/eoauth_start", "/auth/eoauth_cb", "/unauthorized"]:
+            base_url = self._clean_path(
+                settings.FORCE_SCRIPT_NAME
+                if settings.FORCE_SCRIPT_NAME
+                else settings.BCGOV_PROXY_PREFIX
+            )
+            for suffix in [
+                "",
+                "/auth",
+                "/auth/eoauth_start",
+                "/auth/eoauth_cb",
+                "/unauthorized",
+            ]:
                 AuthRequiredMiddleware._valid_urls.append("%s%s" % (base_url, suffix))
         return AuthRequiredMiddleware._valid_urls
 
