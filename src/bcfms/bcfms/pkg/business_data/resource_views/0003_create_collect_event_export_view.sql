@@ -25,5 +25,3 @@ select
     authors  "Authors"
 from fossil_collection_event.collection_event_vw
 order by "Location Descriptor", "Collection Start Year";
-
-select * from fossil_collection_event.collection_event_vw;
