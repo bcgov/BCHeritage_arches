@@ -66,10 +66,10 @@ select row_uuid,
        collection_start_year,
        array_to_string(collector_names, ', ') collectors,
        location_descriptor,
-       --collection_event_significant
+       collection_event_significant,
        common_names,
        scientific_names,
-       --abundance,
+       fossil_abundance,
        size_categories,
        time_scale,
        minimum_time,
@@ -82,5 +82,3 @@ select row_uuid,
        publication_types,
        authors
 from fossil_collection_event.collection_event_vw;
-
-select * from fossil_collection_event.collection_event_vw;
