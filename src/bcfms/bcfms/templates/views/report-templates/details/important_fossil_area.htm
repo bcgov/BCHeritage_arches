@@ -1,0 +1,38 @@
+<div class="bc-map-thumbnail">
+    <dl class="dl-vertical dl-vertical-bc" >
+        <dt>Location</dt>
+        <dd>
+            <div data-bind="component: {
+                        name: 'report-header-map',
+                        params: $data
+                    }" class="report-map-header-component"></div>
+        </dd>
+    </dl>
+</div>
+<div class="bc-grid-container">
+    <div class="bc-grid-item grid-col-1 grid-row-2" data-bind="visible: nodesHaveData('description_n1')">
+        <dl class="dl-vertical dl-vertical-bc" >
+            <dt>Description</dt>
+            <dd>
+                <div class="description_n1" data-bind="component: {
+                    name: 'text-widget',
+                    params: { value: ko.unwrap(getFirstNodeValue('description_n1')), state: 'display_value' }
+                    }">
+                </div>
+            </dd>
+        </dl>
+    </div>
+
+    <div class="bc-grid-item grid-col-1 grid-row-3"  data-bind="visible: nodesHaveData('potential_ranking')">
+        <dl class="dl-vertical dl-vertical-bc" >
+            <dt>Potential Ranking</dt>
+            <dd>
+                <div>
+                    <div class="contributor_type" data-bind="component: { name: 'concept-select-widget',
+                                            params: { value: getFirstNodeValue('potential_ranking'), state: 'display_value' }}">
+                    </div>
+                </div>
+            </dd>
+        </dl>
+    </div>
+</div>

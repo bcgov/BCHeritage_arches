@@ -11,9 +11,7 @@ const { CleanWebpackPlugin } = require('clean-webpack-plugin');
 const { spawn } = require("child_process");
 const { VueLoaderPlugin } = require("vue-loader");
 
-const { buildImageFilePathLookup } = require('./webpack-utils/build-image-filepath-lookup');
-const { buildJavascriptFilepathLookup } = require('./webpack-utils/build-javascript-filepath-lookup');
-const { buildTemplateFilePathLookup } = require('./webpack-utils/build-template-filepath-lookup');
+const { buildFilePathLookup } = require('./webpack-utils/build-filepath-lookup');
 const { buildVueFilePathLookup } = require('./webpack-utils/build-vue-filepath-lookup');
 
 
@@ -34,13 +32,13 @@ module.exports = () => {
 
             // BEGIN create entry point configurations
         
-            const archesCoreEntryPointConfiguration = buildJavascriptFilepathLookup(Path.resolve(__dirname, ROOT_DIR, 'app', 'media', 'js'), {});
-            const projectEntryPointConfiguration = buildJavascriptFilepathLookup(Path.resolve(__dirname, APP_ROOT, 'media', 'js'), {});
+            const archesCoreEntryPointConfiguration = buildFilePathLookup(Path.resolve(__dirname, ROOT_DIR, 'app', 'media', 'js'));
+            const projectEntryPointConfiguration = buildFilePathLookup(Path.resolve(__dirname, APP_ROOT, 'media', 'js'));
 
             const archesApplicationsEntrypointConfiguration = ARCHES_APPLICATIONS.reduce((acc, archesApplication) => {   
                 return {
                     ...acc,
-                    ...buildJavascriptFilepathLookup(Path.resolve(__dirname, ARCHES_APPLICATIONS_PATHS[archesApplication], 'media', 'js'), {})
+                    ...buildFilePathLookup(Path.resolve(__dirname, ARCHES_APPLICATIONS_PATHS[archesApplication], 'media', 'js'))
                 };
             }, {});
 
@@ -48,15 +46,24 @@ module.exports = () => {
             // BEGIN create JavaScript filepath lookups
 
             const archesCoreJavascriptRelativeFilepathToAbsoluteFilepathLookup = Object.entries(archesCoreEntryPointConfiguration).reduce((acc, [path, config]) => {
-                acc[path + '$'] = Path.resolve(__dirname, path, config['import']);
+                if ((typeof config) == "object")
+                    acc[path + '$'] = Path.resolve(__dirname, path, config['import']);
+                else
+                    console.log(`Skipping ${path}`)
                 return acc;
             }, {});
             const projectJavascriptRelativeFilepathToAbsoluteFilepathLookup = Object.entries(projectEntryPointConfiguration).reduce((acc, [path, config]) => {
-                acc[path + '$'] = Path.resolve(__dirname, path, config['import']);
+                if ((typeof config) == "object")
+                    acc[path + '$'] = Path.resolve(__dirname, path, config['import']);
+                else
+                    console.log(`Skipping ${path}`)
                 return acc;
             }, {});
             const archesApplicationsJavascriptRelativeFilepathToAbsoluteFilepathLookup = Object.entries(archesApplicationsEntrypointConfiguration).reduce((acc, [path, config]) => {
-                acc[path + '$'] = Path.resolve(__dirname, path, config['import']);
+                if ((typeof config) == "object")
+                    acc[path + '$'] = Path.resolve(__dirname, path, config['import']);
+                else
+                    console.log(`Skipping ${path}`)
                 return acc;
             }, {});
 
@@ -147,13 +154,13 @@ module.exports = () => {
             // END create node modules aliases
             // BEGIN create template filepath lookup
             
-            const coreArchesTemplatePathConfiguration = buildTemplateFilePathLookup(Path.resolve(__dirname, ROOT_DIR, 'app', 'templates'), {});
-            const projectTemplatePathConfiguration = buildTemplateFilePathLookup(Path.resolve(__dirname, APP_ROOT, 'templates'), {});
+            const coreArchesTemplatePathConfiguration = buildFilePathLookup(Path.resolve(__dirname, ROOT_DIR, 'app', 'templates'));
+            const projectTemplatePathConfiguration = buildFilePathLookup(Path.resolve(__dirname, APP_ROOT, 'templates'));
 
-            const archesApplicationsTemplatePathConfiguration = ARCHES_APPLICATIONS.reduce((acc, archesApplication) => {   
+            const archesApplicationsTemplatePathConfiguration = ARCHES_APPLICATIONS.reduce((acc, archesApplication) => {
                 return {
                     ...acc,
-                    ...buildTemplateFilePathLookup(Path.resolve(__dirname, ARCHES_APPLICATIONS_PATHS[archesApplication], 'templates'), {})
+                    ...buildFilePathLookup(Path.resolve(__dirname, ARCHES_APPLICATIONS_PATHS[archesApplication], 'templates'))
                 };
             }, {});
 
@@ -167,13 +174,14 @@ module.exports = () => {
             // END create template filepath lookup
             // BEGIN create image filepath lookup
 
-            const coreArchesImagePathConfiguration = buildImageFilePathLookup(STATIC_URL, Path.resolve(__dirname, ROOT_DIR, 'app', 'media', 'img'), {});
-            const projectImagePathConfiguration = buildImageFilePathLookup(STATIC_URL, Path.resolve(__dirname, APP_ROOT, 'media', 'img'), {});
+            const coreArchesImagePathConfiguration = buildFilePathLookup(Path.resolve(__dirname, ROOT_DIR, 'app', 'media', 'img'), STATIC_URL);
+            console.log(coreArchesImagePathConfiguration);
+            const projectImagePathConfiguration = buildFilePathLookup(Path.resolve(__dirname, APP_ROOT, 'media', 'img'), STATIC_URL);
 
             const archesApplicationsImagePathConfiguration = ARCHES_APPLICATIONS.reduce((acc, archesApplication) => {   
                 return {
                     ...acc,
-                    ...buildImageFilePathLookup(STATIC_URL, Path.resolve(__dirname, ARCHES_APPLICATIONS_PATHS[archesApplication], 'media', 'img'), {})
+                    ...buildFilePathLookup(Path.resolve(__dirname, ARCHES_APPLICATIONS_PATHS[archesApplication], 'media', 'img'), STATIC_URL)
                 };
             }, {});
 
@@ -188,6 +196,7 @@ module.exports = () => {
             // BEGIN create vue filepath lookup
 
             const coreArchesVuePathConfiguration = buildVueFilePathLookup(Path.resolve(__dirname, ROOT_DIR, 'app', 'src'), {});
+            console.log(coreArchesVuePathConfiguration)
             const projectVuePathConfiguration = buildVueFilePathLookup(Path.resolve(__dirname, APP_ROOT, 'src'), {});
 
             const archesApplicationsVuePaths = []

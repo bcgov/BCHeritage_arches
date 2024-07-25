@@ -1,0 +1,65 @@
+{% extends "base.htm" %}
+{% load static %}
+{% load i18n %}
+{% load webpack_static from webpack_loader %}
+
+{% block css %}
+{{ block.super }}
+
+<link href="{% webpack_static 'css/login.css' %}" rel="stylesheet">
+<style>
+    .panel-header {
+        background: #041b33;
+        border: 1px solid #ddd;
+        border-bottom: none;
+        border-radius: 0;
+    }
+
+    .navbar-brand-v5-icon {
+        height: 50px;
+    }
+
+    a {
+        color: #337ab7 !important;
+    }
+
+    a:hover {
+        color: #115895 !important;
+    }
+
+    .system-link {
+        margin-top: 2rem;
+    }
+</style>
+{% endblock css %}
+
+{% block loading_mask %}
+{% endblock loading_mask %}
+
+{% block body %}
+<div id="container" class="cls-container arches-login">
+    <div class="cls-content arches-signin">
+        <div class="cls-content-sm panel login-panel" >
+            <div class="panel-header navbar">
+                <img class="navbar-brand-v5-icon" src="/bcrhp/static/img/logo/BCID_H_rgb_rev.png" />
+            </div>
+            <div class="panel-body">
+                <header>
+                    <h1 class="login-panel-header arches-signin">{% trans "Unauthorized" %}</h1>
+                </header>
+                <main>
+                    <div>
+                        <div>You are not authorized to login to the system. Only anonymous access is permitted.</div>
+                        <div class="system-link"><a href="{% url 'home' %}">Return to the system here.</a></div>
+                    </div>
+                </main>
+            </div>
+
+            <footer class="panel-footer">
+                {% trans "Learn more about "%}<br/><a href='https://www2.gov.bc.ca/gov/content/industry/natural-resource-use/fossil-management/' target="_blank">Fossil Management in British Columbia</a>
+            </footer>
+        </div>
+    </div>
+</div>
+
+{% endblock body %}

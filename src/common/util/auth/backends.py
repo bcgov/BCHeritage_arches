@@ -10,5 +10,5 @@ class BCGovRemoteUserBackend(RemoteUserBackend):
         """
         cleaned_username = username.lower().replace('idir\\', '')
 
-        print("Replacing "+username+" with "+cleaned_username)
+        # print("Replacing "+username+" with "+cleaned_username)
         return cleaned_username

@@ -27,7 +27,7 @@
                         "en": "Contributor"
                     },
                     "nodegroup_id": "c4ec91a4-9dea-11ed-9a7b-5254004d77d3",
-                    "sortorder": null,
+                    "sortorder": 0,
                     "visible": true
                 }
             ],
@@ -114,7 +114,7 @@
                         "placeholder": {
                             "en": "Select an option"
                         },
-                        "url": "/int/bc-fossil-management/concepts/dropdown?conceptid=0454aeb7-da1e-4d10-b45b-9ec16a52767b"
+                        "url": "/bc-fossil-management/concepts/dropdown?conceptid=0454aeb7-da1e-4d10-b45b-9ec16a52767b"
                     },
                     "id": "56a839af-4f62-4511-8091-98d655e78ee7",
                     "label": {
@@ -388,9 +388,9 @@
                                 "delimiter": "<br>",
                                 "first_only": false,
                                 "node_ids": [
-                                    "e2f1c29a-c500-11ed-9089-5254004d77d3",
+                                    "c4eca2de-9dea-11ed-9a7b-5254004d77d3",
                                     "009ba8da-faf6-11ed-ac37-5254004d77d3",
-                                    "c4eca2de-9dea-11ed-9a7b-5254004d77d3"
+                                    "e2f1c29a-c500-11ed-9089-5254004d77d3"
                                 ],
                                 "show_name": true,
                                 "type": "description"
@@ -422,7 +422,7 @@
                     },
                     "function_id": "60000000-0000-0000-0000-000000001001",
                     "graph_id": "605b0bbc-8661-4cf2-b340-df743a8c5f89",
-                    "id": "50d7ddec-e315-465e-985a-0cefa4033fbb"
+                    "id": "c263fdd1-9f2f-465a-a699-18b1b544861c"
                 }
             ],
             "graphid": "605b0bbc-8661-4cf2-b340-df743a8c5f89",
@@ -542,7 +542,7 @@
                                 "should": []
                             }
                         },
-                        "searchString": "/int/bc-fossil-management/search?paging-filter=1&tiles=true&format=tilecsv&reportlink=false&precision=6&total=0&advanced-search=%5B%7B%22op%22%3A%22and%22%2C%22009ba8da-faf6-11ed-ac37-5254004d77d3%22%3A%7B%22op%22%3A%22%22%2C%22val%22%3A%22%22%7D%2C%22c4eca2de-9dea-11ed-9a7b-5254004d77d3%22%3A%7B%22op%22%3A%22eq%22%2C%22val%22%3A%22a7a00d7b-ac19-4b7a-b911-55b4fb1473ff%22%7D%2C%22e2f1c29a-c500-11ed-9089-5254004d77d3%22%3A%7B%22op%22%3A%22eq%22%2C%22val%22%3A%22%22%7D%2C%22a5b2cd72-c4f4-11ed-a06d-5254004d77d3%22%3A%7B%22op%22%3A%22~%22%2C%22lang%22%3A%22en%22%2C%22val%22%3A%22%22%7D%2C%22b5ed0072-c4f4-11ed-94de-5254004d77d3%22%3A%7B%22op%22%3A%22~%22%2C%22lang%22%3A%22en%22%2C%22val%22%3A%22%22%7D%2C%2299643f1e-9e4e-11ed-b6d5-5254004d77d3%22%3A%7B%22val%22%3A%22%22%7D%2C%22c4ec9b2c-9dea-11ed-9a7b-5254004d77d3%22%3A%7B%22op%22%3A%22~%22%2C%22lang%22%3A%22en%22%2C%22val%22%3A%22%22%7D%2C%22c4eca13a-9dea-11ed-9a7b-5254004d77d3%22%3A%7B%22op%22%3A%22~%22%2C%22lang%22%3A%22en%22%2C%22val%22%3A%22%22%7D%7D%5D"
+                        "searchString": "/bc-fossil-management/search?paging-filter=1&tiles=true&format=tilecsv&reportlink=false&precision=6&total=0&advanced-search=%5B%7B%22op%22%3A%22and%22%2C%22009ba8da-faf6-11ed-ac37-5254004d77d3%22%3A%7B%22op%22%3A%22%22%2C%22val%22%3A%22%22%7D%2C%22c4eca2de-9dea-11ed-9a7b-5254004d77d3%22%3A%7B%22op%22%3A%22eq%22%2C%22val%22%3A%22a7a00d7b-ac19-4b7a-b911-55b4fb1473ff%22%7D%2C%22e2f1c29a-c500-11ed-9089-5254004d77d3%22%3A%7B%22op%22%3A%22eq%22%2C%22val%22%3A%22%22%7D%2C%22a5b2cd72-c4f4-11ed-a06d-5254004d77d3%22%3A%7B%22op%22%3A%22~%22%2C%22lang%22%3A%22en%22%2C%22val%22%3A%22%22%7D%2C%22b5ed0072-c4f4-11ed-94de-5254004d77d3%22%3A%7B%22op%22%3A%22~%22%2C%22lang%22%3A%22en%22%2C%22val%22%3A%22%22%7D%2C%2299643f1e-9e4e-11ed-b6d5-5254004d77d3%22%3A%7B%22val%22%3A%22%22%7D%2C%22c4ec9b2c-9dea-11ed-9a7b-5254004d77d3%22%3A%7B%22op%22%3A%22~%22%2C%22lang%22%3A%22en%22%2C%22val%22%3A%22%22%7D%2C%22c4eca13a-9dea-11ed-9a7b-5254004d77d3%22%3A%7B%22op%22%3A%22~%22%2C%22lang%22%3A%22en%22%2C%22val%22%3A%22%22%7D%7D%5D"
                     },
                     "datatype": "resource-instance",
                     "description": null,
@@ -693,7 +693,7 @@
                     },
                     "datatype": "string",
                     "description": "Name of the contributor - Last name if an individual, Organization name for an organization",
-                    "exportable": false,
+                    "exportable": true,
                     "fieldname": null,
                     "graph_id": "605b0bbc-8661-4cf2-b340-df743a8c5f89",
                     "hascustomalias": false,
@@ -815,7 +815,7 @@
                     },
                     "datatype": "concept-list",
                     "description": null,
-                    "exportable": false,
+                    "exportable": true,
                     "fieldname": null,
                     "graph_id": "605b0bbc-8661-4cf2-b340-df743a8c5f89",
                     "hascustomalias": false,
@@ -836,8 +836,8 @@
             "publication": {
                 "graph_id": "605b0bbc-8661-4cf2-b340-df743a8c5f89",
                 "notes": null,
-                "publicationid": "6b1e91da-36f7-11ee-af1c-0050568377a0",
-                "published_time": "2023-08-09T15:57:57.705"
+                "publicationid": "dfd385f6-1f6a-11ef-a174-0242ac120006",
+                "published_time": "2024-05-31T11:28:55.395"
             },
             "relatable_resource_model_ids": [],
             "resource_2_resource_constraints": [],
@@ -872,9 +872,9 @@
         }
     ],
     "metadata": {
-        "db": "PostgreSQL 15.3 on x86_64-pc-linux-gnu, compiled by gcc (GCC) 11.3.1 20221121 (Red Hat 11.3.1-4), 64-bit",
-        "git hash": "878aec681 2023-11-20 12:09:49 -0800",
+        "db": "PostgreSQL 14.5 (Debian 14.5-1.pgdg110+1) on x86_64-pc-linux-gnu, compiled by gcc (Debian 10.2.1-6) 10.2.1 20210110, 64-bit",
+        "git hash": "6321c1b38 2023-12-07 21:11:06 -0800",
         "os": "Linux",
-        "os version": "5.14.0-333.el9.x86_64"
+        "os version": "6.6.22-linuxkit"
     }
 }

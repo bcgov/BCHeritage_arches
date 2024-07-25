@@ -21,11 +21,11 @@
             <dt>1:50k Mapsheet</dt>
             <dd>
                 <div data-bind="component: { name: 'text-widget',
-                                            params: { value: getFirstNodeValue('nts_mapsheet_number'), state: 'display_value' }
+                                            params: { value: ko.unwrap(getFirstNodeValue('nts_mapsheet_number')), state: 'display_value' }
                                             }">
                 </div>
                 <div data-bind="component: { name: 'text-widget',
-                                            params: { value: getFirstNodeValue('nts_mapsheet_name'), state: 'display_value' }
+                                            params: { value: ko.unwrap(getFirstNodeValue('nts_mapsheet_name')), state: 'display_value' }
                                             }">
                 </div>
             </dd>
@@ -36,7 +36,7 @@
             <dt>1:250k Mapsheet</dt>
             <dd>
                 <div data-bind="component: { name: 'text-widget',
-                                            params: { value: getFirstNodeValue('geographical_name'), state: 'display_value' }
+                                            params: { value: ko.unwrap(getFirstNodeValue('geographical_name')), state: 'display_value' }
                                             }, visible: nodesHaveData(['geographical_name'])">
                 </div>
             </dd>

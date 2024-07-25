@@ -1,6 +1,6 @@
 define([
         'knockout',
-        'reports/bcfms-report',
+        'viewmodels/bcfms-report',
         'templates/views/report-templates/bcfms_default.htm',
         'templates/views/report-templates/details/fossil_sample.htm',
         'templates/views/report-templates/details/publication.htm',

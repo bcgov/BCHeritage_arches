@@ -13,14 +13,13 @@ define([
     'utils/set-csrf-token'
 ], function($, _, ko, koMapping, arches,  CardModel, CardWidgetModel, require, uuid, dispose) {
     /**
-     * A BCGov viewmodel extension used for generic cards.
-     * Added functionality: chained widget dependencies
-     *
-     * @constructor
-     * @name CardViewModel
-     *
-     * @param  {string} params - a configuration object
-     */
+    * A viewmodel used for generic cards
+    *
+    * @constructor
+    * @name CardViewModel
+    *
+    * @param  {string} params - a configuration object
+    */
     var isChildSelected = function(parent) {
         var childSelected = false;
         var children = [];
@@ -110,8 +109,7 @@ define([
                 widgets: params.cardwidgets,
                 nodes: params.graphModel.get('nodes'),
                 nodegroup: nodegroup,
-                constraints: cardConstraints,
-                controlData: ko.observable({}) // This is used for inter-widget dependencies
+                constraints: cardConstraints
             }),
             datatypelookup: params.graphModel.get('datatypelookup'),
         });
@@ -242,7 +240,6 @@ define([
                 }).map(function(card) {
                     return new CardViewModel({
                         card: _.clone(card),
-                        bc_card: _.clone(card),
                         graphModel: params.graphModel,
                         tile: null,
                         resourceId: params.resourceId,

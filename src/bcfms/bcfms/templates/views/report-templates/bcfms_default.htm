@@ -1,4 +1,7 @@
 {% extends "views/report-templates/default.htm" %}
+{% load static %}
+{% load template_tags %}
+{% load webpack_static from webpack_loader %}
 {% load i18n %}
 
 {% block summary %}
@@ -12,7 +15,6 @@
         <!-- Tools -->
         <div class="ep-form-toolbar-tools mar-no flex">
             <p class="report-print-date">
-                <span data-bind="text: reportDate"></span>
                 <span data-bind="text: reportDate"></span>
             </p>
         </div>
@@ -34,6 +36,22 @@
                 <!-- ko if: report.get('name') == "Fossil Collection Event" -->
                 <!--div>Publication</div-->
                 {% include 'views/report-templates/details/collection_event.htm' %}
+                <!-- /ko -->
+                <!-- ko if: report.get('name') == "Contributor" -->
+                <!--div>Publication</div-->
+                {% include 'views/report-templates/details/contributor.htm' %}
+                <!-- /ko -->
+                <!-- ko if: report.get('name') == "Important Fossil Area" -->
+                <!--div>Important Fossil Area</div-->
+                {% include 'views/report-templates/details/important_fossil_area.htm' %}
+                <!-- /ko -->
+                <!-- ko if: report.get('name') == "Fossil Type" -->
+                <!--div>Fossil Type</div-->
+                {% include 'views/report-templates/details/fossil_type.htm' %}
+                <!-- /ko -->
+                <!-- ko if: report.get('name') == "Industry Project Assessment" -->
+                <!--div>Industry Project Assessment</div-->
+                {% include 'views/report-templates/details/industry_project_assessment.htm' %}
                 <!-- /ko -->
             </div>
         </div>

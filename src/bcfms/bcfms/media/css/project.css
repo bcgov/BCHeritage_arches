@@ -21,7 +21,8 @@ dl.stratigraphy > dd > div.stratigraphy-level > div
    padding-bottom: 17px;
 }
 
-.card_component.journal_or_volume_name, .card_component.other_journal_or_volume_name {
+.card_component.journal_or_volume_name, .card_component.other_journal_or_volume_name,
+.card_component.project_start_date, .card_component.project_end_date {
    display: inline-block;
    width: 49%;
    vertical-align: top;
@@ -41,5 +42,15 @@ dl.stratigraphy > dd > div.stratigraphy-level > div
 
 .publication-identifier-type {
    color: rgb(120,120,120);
+   font-style: italic;
+}
+
+
+.bc-details-tab dt {
+   width: 300px !important;
+}
+
+.empty-section {
+   color: lightgray !important;
    font-style: italic;
 }

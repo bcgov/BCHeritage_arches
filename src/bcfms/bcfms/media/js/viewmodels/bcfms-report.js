@@ -12,6 +12,15 @@ define([
         var self = this;
         self.urls = arches.urls;
 
+        this.projectDetailsVisible =  ko.observable(true);
+        this.projectSiteVisible =  ko.observable(true);
+        this.initialProjectReviewVisible = ko.observable(true);
+        this.psrVisible = ko.observable(true);
+        this.fiaVisible = ko.observable(true);
+        this.cfpVisible = ko.observable(true);
+        this.impVisible = ko.observable(true);
+        this.sapVisible = ko.observable(true);
+
         var getAllWidgets = function(card) {
             return _.flatten([ko.unwrap(card.tiles).length === 0 ? [] : ko.unwrap(card.widgets),
                 _.map(card.cards(), subcard => {return getAllWidgets(subcard); })]);
@@ -52,7 +61,7 @@ define([
             var values = [];
             _.each(ko.unwrap(tiles), tile => {
                 var value = getValueFromTile(tile, widget)
-                if (!!value)
+                if (value === false || !!value)
                     values.push(value);
             });
             return values;
@@ -60,13 +69,16 @@ define([
 
         this.nodesHaveData = function(aliases, requireAll = false)
         {
+            const aliases_array = Array.isArray(aliases) ? aliases : [aliases];
             let values =  [];
-            _.each(aliases, alias => {
-                values.push(getNodeValues(alias));
+            _.each(aliases_array, alias => {
+                values.push(getNodeValues(alias)[0]);
             });
-            return !!_.find(_.flatten(values), value => {
-                return typeof(value) === "object" && "en" in value ? !!ko.unwrap(value["en"].value) : !!ko.unwrap(value);
+            const foundValue =  !!_.some(_.flatten(values), value => {
+                return typeof(value) === "object" && "en" in value ? !!ko.unwrap(value["en"].value) :
+                    ko.unwrap(value) === false || !!ko.unwrap(value);
             });
+            return foundValue;
         }
 
         this.getFirstNodeValue = function(alias) {
@@ -101,7 +113,9 @@ define([
 
             var value = getNodeValues(alias)[0];
 
-            return ko.unwrap(!!value ? widget.node.config.trueLabel : widget.node.config.trueLabel);
+
+            return typeof value === "undefined" ? "" :
+                ko.unwrap(!!value ? widget.node.config.trueLabel : widget.node.config.falseLabel);
         };
 
         this.scientificNames = ko.computed(function() {

@@ -7,16 +7,22 @@ define(['mapbox-gl'], function(MapboxGl){
             Map Header: map.getCanvasContainer().closest("div.report-map-header-component")
             Map Editor: map.getCanvasContainer().closest("div.map-widget")
          */
-        icons: [{"name":"micro-marker", "url":'/int/bc-fossil-management/static/img/markers/micro.png'},
-            {"name":"macro-marker", "url":'/int/bc-fossil-management/static/img/markers/macro.png'},
-            {"name":"macromicro-marker", "url":'/int/bc-fossil-management/static/img/markers/macromicro.png'},
-            {"name":"nosize-marker", "url":'/int/bc-fossil-management/static/img/markers/nosize.png'},
+        icons: [{"name":"micro-marker", "url":'/bc-fossil-management/static/img/markers/micro.png'},
+            {"name":"macro-marker", "url":'/bc-fossil-management/static/img/markers/macro.png'},
+            {"name":"macromicro-marker", "url":'/bc-fossil-management/static/img/markers/macromicro.png'},
+            {"name":"nosize-marker", "url":'/bc-fossil-management/static/img/markers/nosize.png'},
         ],
         preConfig: function(map) {
-            console.log("Custom pre-config");
+            // console.log("Custom pre-config");
+            const defaultMaxZoom = map.getMaxZoom();
+            map.once('render', () => {
+                map.setMaxZoom(defaultMaxZoom);
+            });
+            // Set max zoom to 16 for the first rendering
+            map.setMaxZoom(16);
             map.addControl(new MapboxGl.ScaleControl({ maxWidth: 200}));
             this.icons.forEach(function(icon) {
-                console.log(`Loading ${icon.name}: ${icon.url}`);
+                // console.log(`Loading ${icon.name}: ${icon.url}`);
                 map.loadImage(icon.url,
                     (error, image) => {
                         if (error) throw error;
@@ -25,7 +31,7 @@ define(['mapbox-gl'], function(MapboxGl){
             });
         },
         postConfig: function(map) {
-            console.log("Custom post-config");
+            // console.log("Custom post-config");
         },
     };
 
