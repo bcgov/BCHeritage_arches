@@ -1,175 +1,3 @@
--- drop materialized view fossil_collection_event.collection_details_mv;
--- create materialized view fossil_collection_event.collection_details_mv as
---     select resourceinstanceid,
---            tileid collection_details_uuid,
---            collection_start_year,
---            field_notes->'en'->>'value' field_notes
--- from fossil_collection_event.collection_details;
--- create index cd_idx1 on fossil_collection_event.collection_details_mv(collection_details_uuid);
--- create index cd_idx2 on fossil_collection_event.collection_details_mv(resourceinstanceid);
---
--- drop materialized view if exists fossil_collection_event.collection_event_location_mv;
--- create materialized view fossil_collection_event.collection_event_location_mv as
--- select resourceinstanceid,
---        collection_details,
---        location_descriptor->'en'->>'value' location_descriptor,
---        detailed_location->'en'->>'value' detailed_location,
---        st_asgeojson(collection_location)::jsonb->'coordinates'->0 collection_location
--- from fossil_collection_event.collection_event_location;
--- create index cel_idx1 on fossil_collection_event.collection_event_location_mv(resourceinstanceid);
--- create index cel_idx2 on fossil_collection_event.collection_event_location_mv(collection_details);
---
--- drop materialized view if exists fossil_collection_event.samples_collected_mv;
--- create materialized view fossil_collection_event.samples_collected_mv as
--- select resourceinstanceid,
---        (jsonb_array_elements(samples_collected)->>'resourceId')::uuid sample_uuid
--- from fossil_collection_event.samples_collected;
--- create index sc_idx1 on fossil_collection_event.samples_collected_mv(resourceinstanceid);
---
---
--- drop view if exists fossil_collection_event.collection_event_vw;
--- -- create or replace view fossil_collection_event.collection_event_vw as
--- select cd.resourceinstanceid collection_event_uuid,
---        cd.collection_start_year,
---        cel.location_descriptor,
---        cel.collection_location,
---        sc.sample_uuid
--- --         ,*
--- from fossil_collection_event.collection_details_mv cd
---            left join fossil_collection_event.collection_event_location_mv cel on cd.collection_details_uuid = cel.collection_details
---            left join fossil_collection_event.samples_collected_mv sc on cd.resourceinstanceid = sc.resourceinstanceid;
-
--- drop function __bc_node_id_for_alias;
--- create or replace function __bc_node_id_for_alias(p_alias text, p_graph_slug text default null) returns uuid as
---     $$
--- DECLARE
---     l_nodeid uuid;
--- BEGIN
---     select nodeid
---     into l_nodeid
---     from nodes
---              join graphs g on nodes.graphid = g.graphid
---     where alias = p_alias
---       and g.slug = coalesce(p_graph_slug, g.slug);
---     return l_nodeid;
--- END $$ language plpgsql;
---
--- drop function __bc_nodegroup_id_for_alias;
--- create or replace function __bc_nodegroup_id_for_alias(p_alias text, p_graph_slug text default null) returns uuid as
--- $$
--- DECLARE
---     l_nodeid uuid;
--- BEGIN
---     select nodegroupid
---     into l_nodeid
---     from nodes
---              join graphs g on nodes.graphid = g.graphid
---     where alias = p_alias
---       and g.slug = coalesce(p_graph_slug, g.slug);
---     return l_nodeid;
--- END $$ language plpgsql;
-
-drop procedure if exists __bc_create_node_aliases;
-create or replace procedure __bc_create_node_aliases(p_graph_slug text, p_schema_name text default null) as
-$$
-DECLARE
-    node_rec record;
-BEGIN
-    for node_rec in select n.* from nodes n join graphs g on n.graphid = g.graphid where g.slug = p_graph_slug loop
-              raise Notice '%', node_rec.alias;
-              execute format('create or replace function %I.%I() returns uuid as $body$ begin return ''%s''::uuid; end $body$ language plpgsql', coalesce(p_schema_name, p_graph_slug), node_rec.alias||'_nodeid', node_rec.nodeid);
-              execute format('create or replace function %I.%I() returns uuid as $body$ begin return ''%s''::uuid; end $body$ language plpgsql', coalesce(p_schema_name, p_graph_slug), node_rec.alias||'_nodegroupid', node_rec.nodegroupid);
-        end loop;
-END $$ language plpgsql;
-
-drop function if exists __bc_text_from_tile;
-create or replace function __bc_text_from_tile(tiledata jsonb, nodeid uuid) returns text as
-$$
-DECLARE
-BEGIN
-    return tiledata[nodeid::text]->'en'->>'value';
-END $$ language plpgsql;
-
-drop function if exists __bc_point_from_tile;
-create or replace function __bc_point_from_tile(tiledata jsonb, nodeid uuid) returns text as
-$$
-DECLARE
-BEGIN
-    return tiledata[nodeid::text]->'features'->0->'geometry'->>'coordinates';
-END $$ language plpgsql;
-
-drop function if exists __bc_ref_from_tile;
-create or replace function __bc_ref_from_tile(tiledata jsonb, nodeid uuid) returns setof uuid as
-$$
-DECLARE
-BEGIN
-    if (jsonb_typeof(tiledata->(nodeid::text)) = 'null' or tiledata->>(nodeid::text)::text = '') then
-        return query select null::uuid;
-    else
-        return query select (jsonb_array_elements(tiledata[nodeid::text])->>'resourceId')::uuid;
-    end if;
-EXCEPTION WHEN OTHERS THEN
-    raise EXCEPTION 'Unable to parse %', tiledata;
-END $$ language plpgsql;
-
-drop function if exists __bc_format_uncertainty;
-create or replace function __bc_format_uncertainty(tiledata jsonb, nodeid uuid, uncertainty_nodeid uuid) returns text as
-$$
-DECLARE
-    nodeval text;
-    is_uncertain boolean;
-BEGIN
-
-    nodeval = __arches_get_node_display_value(tiledata, nodeid);
-    if (nodeval is null or nodeval = '') then
-        return '';
-    else
-        is_uncertain = (tiledata->uncertainty_nodeid::text) is not null and (tiledata->uncertainty_nodeid::text)::boolean;
-        return nodeval || (case when is_uncertain then ' ?' else '' end);
-    end if;
-END $$ language plpgsql;
-
-drop function if exists __bc_unique_array;
-create or replace function __bc_unique_array(p_inarray anyarray) returns anyarray as
-$$
-DECLARE
-    uq_array text[];
-BEGIN
-    with uq as (select distinct val from unnest(p_inarray) val
-                                    where coalesce(val,'') <> '' order by 1)
-    select array_agg(val) into uq_array from uq;
-    return uq_array;
-END $$ language plpgsql;
-
-/*
- * Format the scientific name parts (name, connector other name) into a string
- */
-drop function if exists __bc_format_scientific_name cascade;
-create or replace function __bc_format_scientific_name(name text, name_rank text, connector text, other_name text, other_name_rank text) returns text as
-$$
-DECLARE
-BEGIN
-    return trim(replace(coalesce(name, '') ||  ' ' ||
-                        coalesce(connector, '') || ' ' ||
-                        coalesce(other_name, '')
-        , '  ', ' ')
-
-        );
-END $$ language plpgsql;
-
--- with repo_info as (select resourceinstanceid,
---                           __bc_ref_from_tile(tiledata, fossil_sample.repository_name_nodeid()) repository_uuid,
---                           __bc_text_from_tile(tiledata, fossil_sample.storage_reference_nodeid()) "Storage Reference"
---                    from tiles where nodegroupid = fossil_sample.repository_information_nodegroupid())
--- select ri.*
---        ,sl.storage_location_name->'en'->>'value' "Storage Location Name"
--- from repo_info ri
---          left join fossil_storage_location.storage_location_identifier sl
---                    on ri.repository_uuid = sl.resourceinstanceid
--- order by "Storage Location Name";
--- -- where ri.resourceinstanceid = '30e19a47-c255-4a6c-b3a4-0f778315dae9'::uuid;
-
-
 call __bc_create_node_aliases('collection_event', 'fossil_collection_event');
 call __bc_create_node_aliases('fossil_sample');
 call __bc_create_node_aliases('fossil_type');
@@ -190,9 +18,9 @@ select
 from tiles where nodegroupid = fossil_sample.bc_fossil_identification_nodegroupid();
 -- select * from fossil_sample.fossil_name_vw;
 
-create materialized view fossil_sample.mv_fossil_name as select * from fossil_sample.fossil_name_vw;
-create index fs_fnmv_idx1 on fossil_sample.mv_fossil_name(fossil_sample_uuid);
-create index fs_fnmv_idx2 on fossil_sample.mv_fossil_name(scientific_name, other_scientific_name, common_name);
+create materialized view fossil_sample.fossil_name_mv as select * from fossil_sample.fossil_name_vw;
+create index fs_fnmv_idx1 on fossil_sample.fossil_name_mv(fossil_sample_uuid);
+create index fs_fnmv_idx2 on fossil_sample.fossil_name_mv(scientific_name, other_scientific_name, common_name);
 
 
 drop view if exists fossil_sample.storage_location_vw cascade;
@@ -260,14 +88,14 @@ from name_qry child
          left join name_qry parent on child.parent_name::uuid = parent.resourceinstanceid
 order by trim(coalesce(parent.name, '') || ' ' || coalesce(child.name,'') || case when coalesce(child.taxonomic_rank, parent.taxonomic_rank) = 'Genus' then ' sp.' else '' end);
 
-create materialized view fossil_type.mv_fossil_name as select * from fossil_type.fossil_name_vw;
-create index ft_fn_mv_idx1 on fossil_type.mv_fossil_name(fossil_name_uuid);
+create materialized view fossil_type.fossil_name_mv as select * from fossil_type.fossil_name_vw;
+create index ft_fn_mv_idx1 on fossil_type.fossil_name_mv(fossil_name_uuid);
 
 /*
  * Materialized view that summarizes all the fossil samples associated with a collection event
  */
-drop materialized view if exists fossil_sample.mv_ce_sample_summary;
-create materialized view fossil_sample.mv_ce_sample_summary as
+drop materialized view if exists fossil_sample.ce_sample_summary_mv;
+create materialized view fossil_sample.ce_sample_summary_mv as
 with ce_samples_collected as (select resourceinstanceid collection_event_id,
                                      __bc_ref_from_tile(tiledata,
                                                         fossil_collection_event.samples_collected_nodeid()) samples_collected_uuid
@@ -292,14 +120,14 @@ select coll.collection_event_id,
 from ce_samples_collected coll
          left join fossil_sample.geological_age_vw ga on coll.samples_collected_uuid = ga.fossil_sample_uuid
          left join fossil_sample.stratigraphy_vw strat on coll.samples_collected_uuid = strat.fossil_sample_uuid,
-     fossil_sample.mv_fossil_name s
-         left join fossil_type.mv_fossil_name s1 on s.scientific_name = s1.fossil_name_uuid
-         left join fossil_type.mv_fossil_name s2 on s.other_scientific_name = s2.fossil_name_uuid
-         left join fossil_type.mv_fossil_name cn on s.common_name = cn.fossil_name_uuid
+     fossil_sample.fossil_name_mv s
+         left join fossil_type.fossil_name_mv s1 on s.scientific_name = s1.fossil_name_uuid
+         left join fossil_type.fossil_name_mv s2 on s.other_scientific_name = s2.fossil_name_uuid
+         left join fossil_type.fossil_name_mv cn on s.common_name = cn.fossil_name_uuid
          left join fossil_sample.storage_location_vw slv on s.fossil_sample_uuid = slv.collected_sample_uuid
 where coll.samples_collected_uuid = s.fossil_sample_uuid
 group by coll.collection_event_id;
-create unique index ce_sample_summary_idx1 on fossil_sample.mv_ce_sample_summary(collection_event_id);
+create unique index ce_sample_summary_idx1 on fossil_sample.ce_sample_summary_mv(collection_event_id);
 -- select * from fossil_type.fossil_name_vw;
 
 
@@ -360,8 +188,8 @@ from publication_details pd
                         where volume.publication_type = 'Volume / Publication Number'
                         ) pp on pp.publication_uuid = pd.parent_publication;
 
-drop materialized view if exists publication.mv_ce_publication_summary cascade;
-create materialized view publication.mv_ce_publication_summary as
+drop materialized view if exists publication.ce_publication_summary_mv cascade;
+create materialized view publication.ce_publication_summary_mv as
 select collection_event,
        array_to_string(array_agg(distinct publication_year order by publication_year), '; ') publication_years,
        array_to_string(array_agg(distinct publication_type order by publication_type),'; ') publication_types,
@@ -370,61 +198,74 @@ select collection_event,
 from publication.publication_details_vw
 group by collection_event
 order by collection_event;
-create unique index ce_ps_idx1 on publication.mv_ce_publication_summary(collection_event);
+create unique index ce_ps_idx1 on publication.ce_publication_summary_mv(collection_event);
 
+drop view if exists fossil_collection_event.collectors_vw;
+create or replace view fossil_collection_event.collectors_vw as
+with ce_collectors as (select resourceinstanceid collection_event_id,
+                              __bc_ref_from_tile(tiledata, fossil_collection_event.collectors_nodeid()) collector_id
+                       from tiles
+                       where nodegroupid = fossil_collection_event.collectors_nodegroupid())
+select coll.collection_event_id,
+       array_agg(collector_id) collector_ids,
+       array_agg((cont.contributor_name -> 'en' ->> 'value') || ', ' || (cont.first_name -> 'en' ->> 'value')) collector_names
+from ce_collectors coll
+         join contributor.contributor cont on coll.collector_id = cont.resourceinstanceid
+group by coll.collection_event_id;
 
-drop view if exists fossil_collection_event.collection_event_vw;
+drop view if exists fossil_collection_event.collection_event_vw cascade;
 create or replace view fossil_collection_event.collection_event_vw as
 with ce_collection_details as (select * from tiles where nodegroupid = fossil_collection_event.collection_start_year_nodegroupid()),
-     ce_location as (select * from tiles where nodegroupid = fossil_collection_event.collection_location_nodegroupid()), /*__bc_nodegroup_id_for_alias('collection_location', 'collection_event')*/--
-     ce_samples_collected as (select resourceinstanceid,
-                                     __bc_ref_from_tile(tiledata,
-                                                        fossil_collection_event.samples_collected_nodeid()) samples_collected_uuid
-                              from tiles
-                              where nodegroupid = fossil_collection_event.samples_collected_nodegroupid())--,
+     ce_location as (select * from tiles where nodegroupid = fossil_collection_event.collection_location_nodegroupid()),
+     ce_abundance as (select * from tiles where nodegroupid = fossil_collection_event.fossil_abundance_nodegroupid()),
+     ce_significant as (select * from tiles where nodegroupid = fossil_collection_event.collection_event_significant_nodegroupid())
 select
     uuid_generate_v4() row_uuid,
     ced.resourceinstanceid collection_event_id,
-    coalesce(__arches_get_node_display_value(ced.tiledata, fossil_collection_event.collection_start_year_nodeid()), '') "Collection Start Year",
-    __bc_text_from_tile(cel.tiledata, fossil_collection_event.location_descriptor_nodeid()) "Location Descriptor",
-    __bc_point_from_tile(cel.tiledata, fossil_collection_event.collection_location_nodeid()) "Collection Location",
+    coalesce(__arches_get_node_display_value(ced.tiledata, fossil_collection_event.collection_start_year_nodeid()), '') collection_start_year,
+    __bc_text_from_tile(cel.tiledata, fossil_collection_event.location_descriptor_nodeid()) location_descriptor,
+    __bc_point_from_tile(cel.tiledata, fossil_collection_event.collection_location_nodeid()) collection_location,
+    __arches_get_node_display_value(cea.tiledata, fossil_collection_event.fossil_abundance_nodeid()) fossil_abundance,
+    coalesce((cea.tiledata->>fossil_collection_event.collection_event_significant_nodeid()::text)::boolean, false) collection_event_significant,
 --     st_asgeojson(cel.tiledata->>'collection_location')::jsonb->'coordinates'->0 "Collection Location",
 --     __arches_get_node_display_value(cel.tiledata, fossil_collection_event.collection_location_nodeid()),
 --     cesc.samples_collected_uuid,
-    ce_sample_summary.storage_locations "Storage Locations",
-    ce_sample_summary.storage_references "Storage References",
-    ce_sample_summary.scientific_names "Scientific Names",
-    ce_sample_summary.common_names "Common Names",
-    ce_sample_summary.size_categories "Size Categories",
-    ce_sample_summary.geological_groups "Geological Groups",
-    ce_sample_summary.geological_formations "Geological Formations",
-    ce_sample_summary.geological_members "Geological Members",
-    ce_sample_summary.informal_names "Informal Name",
-    ce_sample_summary.other_names "Other Names",
-    coalesce(ce_sample_summary.time_scale,'') "Time Scale",
-    coalesce(ce_sample_summary.minimum_time,'') "Minumum Time",
-    coalesce(ce_sample_summary.maximum_time,'') "Maximum Time",
-    coalesce(pub_summ.publication_count, 0) "Publication Count",
-    coalesce(pub_summ.publication_years, '') "Publication Year",
-    coalesce(pub_summ.publication_types,'')  "Publication Type",
-    coalesce(pub_summ.authors,'')  "Authors"
+    coll.collector_ids,
+    coll.collector_names,
+    ce_sample_summary.storage_locations,
+    ce_sample_summary.storage_references,
+    ce_sample_summary.scientific_names,
+    ce_sample_summary.common_names,
+    ce_sample_summary.size_categories,
+    ce_sample_summary.geological_groups,
+    ce_sample_summary.geological_formations,
+    ce_sample_summary.geological_members,
+    ce_sample_summary.informal_names,
+    ce_sample_summary.other_names,
+    coalesce(ce_sample_summary.time_scale,'') time_scale,
+    coalesce(ce_sample_summary.minimum_time,'') minimum_time,
+    coalesce(ce_sample_summary.maximum_time,'') maximum_time,
+    coalesce(pub_summ.publication_count, 0) publication_count,
+    coalesce(pub_summ.publication_years, '') publication_years,
+    coalesce(pub_summ.publication_types,'')  publication_types,
+    coalesce(pub_summ.authors,'')  authors
 --     ,*
 from ce_collection_details ced
-    left join fossil_sample.mv_ce_sample_summary ce_sample_summary on ce_sample_summary.collection_event_id = ced.resourceinstanceid
+    left join fossil_sample.ce_sample_summary_mv ce_sample_summary on ce_sample_summary.collection_event_id = ced.resourceinstanceid
     left join ce_location cel on cel.parenttileid = ced.tileid
-    left join publication.mv_ce_publication_summary pub_summ on pub_summ.collection_event = ced.resourceinstanceid
-order by "Location Descriptor", "Collection Start Year";
+    left join publication.ce_publication_summary_mv pub_summ on pub_summ.collection_event = ced.resourceinstanceid
+    left join fossil_collection_event.collectors_vw coll on coll.collection_event_id = ced.resourceinstanceid
+    left join ce_abundance cea on cea.resourceinstanceid = ced.resourceinstanceid
+    left join ce_significant ces on ces.resourceinstanceid = ced.resourceinstanceid;
+
+select * from fossil_collection_event.collection_event_vw;
 
 create or replace procedure refresh_export_mvs() as
 $$
 BEGIN
-    refresh materialized view fossil_type.mv_fossil_name;
-    refresh materialized view fossil_sample.mv_fossil_name;
-    refresh materialized view fossil_sample.mv_ce_sample_summary;
-    refresh materialized view publication.mv_ce_publication_summary;
+    refresh materialized view fossil_type.fossil_name_mv;
+    refresh materialized view fossil_sample.fossil_name_mv;
+    refresh materialized view fossil_sample.ce_sample_summary_mv;
+    refresh materialized view publication.ce_publication_summary_mv;
 END
 $$ language plpgsql;
-
--- select * from fossil_collection_event.collection_event_vw
--- where collection_event_id = '949fab24-8ab3-4433-8325-2beaef949adf'::uuid;
-
