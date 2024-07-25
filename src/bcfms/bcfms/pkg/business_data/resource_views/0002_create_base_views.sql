@@ -200,8 +200,20 @@ group by collection_event
 order by collection_event;
 create unique index ce_ps_idx1 on publication.ce_publication_summary_mv(collection_event);
 
+drop view if exists fossil_collection_event.collectors_vw;
+create or replace view fossil_collection_event.collectors_vw as
+with ce_collectors as (select resourceinstanceid collection_event_id,
+                              __bc_ref_from_tile(tiledata, fossil_collection_event.collectors_nodeid()) collector_id
+                       from tiles
+                       where nodegroupid = fossil_collection_event.collectors_nodegroupid())
+select coll.collection_event_id,
+       array_agg(collector_id) collector_ids,
+       array_agg((cont.contributor_name -> 'en' ->> 'value') || ', ' || (cont.first_name -> 'en' ->> 'value')) collector_names
+from ce_collectors coll
+         join contributor.contributor cont on coll.collector_id = cont.resourceinstanceid
+group by coll.collection_event_id;
 
-drop view if exists fossil_collection_event.collection_event_vw;
+drop view if exists fossil_collection_event.collection_event_vw cascade;
 create or replace view fossil_collection_event.collection_event_vw as
 with ce_collection_details as (select * from tiles where nodegroupid = fossil_collection_event.collection_start_year_nodegroupid()),
      ce_location as (select * from tiles where nodegroupid = fossil_collection_event.collection_location_nodegroupid())
@@ -214,6 +226,8 @@ select
 --     st_asgeojson(cel.tiledata->>'collection_location')::jsonb->'coordinates'->0 "Collection Location",
 --     __arches_get_node_display_value(cel.tiledata, fossil_collection_event.collection_location_nodeid()),
 --     cesc.samples_collected_uuid,
+    coll.collector_ids,
+    coll.collector_names,
     ce_sample_summary.storage_locations,
     ce_sample_summary.storage_references,
     ce_sample_summary.scientific_names,
@@ -235,7 +249,10 @@ select
 from ce_collection_details ced
     left join fossil_sample.ce_sample_summary_mv ce_sample_summary on ce_sample_summary.collection_event_id = ced.resourceinstanceid
     left join ce_location cel on cel.parenttileid = ced.tileid
-    left join publication.ce_publication_summary_mv pub_summ on pub_summ.collection_event = ced.resourceinstanceid;
+    left join publication.ce_publication_summary_mv pub_summ on pub_summ.collection_event = ced.resourceinstanceid
+    left join fossil_collection_event.collectors_vw coll on coll.collection_event_id = ced.resourceinstanceid;
+
+select * from fossil_collection_event.collection_event_vw;
 
 create or replace procedure refresh_export_mvs() as
 $$
