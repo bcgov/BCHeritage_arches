@@ -105,7 +105,7 @@
                     "instructions": {
                         "en": ""
                     },
-                    "is_editable": true,
+                    "is_editable": false,
                     "name": {
                         "en": "Chance Find Protocol"
                     },
@@ -1039,7 +1039,7 @@
                         },
                         "reportTypeAbbreviation": "SAP",
                         "uneditable": false,
-                        "width": "100%%%%"
+                        "width": "100%"
                     },
                     "id": "078fa5be-a974-44ec-99ab-4d7fcdc6b3f0",
                     "label": {
@@ -1252,7 +1252,8 @@
                         ],
                         "placeholder": {
                             "en": "Select an option"
-                        }
+                        },
+                        "url": "/bc-fossil-management/concepts/dropdown?conceptid=37eccecb-dac0-435c-85a3-b1163c4a4cfb"
                     },
                     "id": "113c9962-d6a9-477e-b24d-99d9e11a3fe8",
                     "label": {
@@ -1323,7 +1324,7 @@
                             "en": "Enter text"
                         },
                         "uneditable": false,
-                        "width": "100%%"
+                        "width": "100%"
                     },
                     "id": "13d75875-3246-4d2d-8e3b-1838fc8d2fd0",
                     "label": {
@@ -1567,7 +1568,7 @@
                             "en": "Enter text"
                         },
                         "uneditable": false,
-                        "width": "100%%"
+                        "width": "100%"
                     },
                     "id": "244dd278-2441-4277-bb48-68f396ed48f6",
                     "label": {
@@ -1609,7 +1610,7 @@
                             "en": "Enter text"
                         },
                         "uneditable": false,
-                        "width": "100%%"
+                        "width": "100%"
                     },
                     "id": "27938d1c-4387-4202-b4fe-5f5259082ba6",
                     "label": {
@@ -1655,35 +1656,6 @@
                     "sortorder": 2,
                     "visible": true,
                     "widget_id": "31f3728c-7613-11e7-a139-784f435179ea"
-                },
-                {
-                    "card_id": "01071c17-58bb-4718-a62e-1eb9a2418dcd",
-                    "config": {
-                        "defaultValue": {
-                            "en": {
-                                "direction": "ltr",
-                                "value": ""
-                            }
-                        },
-                        "i18n_properties": [
-                            "placeholder"
-                        ],
-                        "label": "Communication Note",
-                        "maxLength": "80",
-                        "placeholder": {
-                            "en": "Enter text"
-                        },
-                        "uneditable": false,
-                        "width": "100%"
-                    },
-                    "id": "2bcd64c0-10c4-4852-b84f-651bed62d0ab",
-                    "label": {
-                        "en": "Communication Note"
-                    },
-                    "node_id": "f2199142-9dc5-11ed-a03b-5254004d77d3",
-                    "sortorder": 4,
-                    "visible": true,
-                    "widget_id": "10000000-0000-0000-0000-000000000001"
                 },
                 {
                     "card_id": "776d6362-f148-49f9-bf57-00a89ae8ad80",
@@ -1809,7 +1781,7 @@
                             "en": "Enter text"
                         },
                         "uneditable": false,
-                        "width": "100%%"
+                        "width": "100%"
                     },
                     "id": "3ba79ad5-3605-422d-ba61-d1c7c8cce1ac",
                     "label": {
@@ -1877,7 +1849,7 @@
                             "en": "Enter text"
                         },
                         "uneditable": false,
-                        "width": "100%%"
+                        "width": "100%"
                     },
                     "id": "41c06b4f-c802-4a11-bd62-95e013ac1686",
                     "label": {
@@ -1886,7 +1858,7 @@
                     "node_id": "e9395120-c372-11ed-b586-5254004d77d3",
                     "sortorder": 2,
                     "visible": true,
-                    "widget_id": "10000000-0000-0000-0000-000000000001"
+                    "widget_id": "10000000-0000-0000-0000-000000000005"
                 },
                 {
                     "card_id": "9de5c571-f507-4df0-af17-a90204edd2db",
@@ -1950,7 +1922,7 @@
                             "en": "Enter text"
                         },
                         "uneditable": false,
-                        "width": "100%%"
+                        "width": "100%"
                     },
                     "id": "482f4abe-febc-42eb-aef9-b0e08f4aca49",
                     "label": {
@@ -1974,7 +1946,7 @@
                             "en": "Enter text"
                         },
                         "uneditable": false,
-                        "width": "100%%"
+                        "width": "100%"
                     },
                     "id": "4fa0c1a8-3075-4746-9c6f-4d5a961c9d31",
                     "label": {
@@ -1999,7 +1971,7 @@
                         "en": "Project Documents"
                     },
                     "node_id": "a881e5f6-9dc6-11ed-82b6-5254004d77d3",
-                    "sortorder": null,
+                    "sortorder": 0,
                     "visible": true,
                     "widget_id": "10000000-0000-0000-0000-000000000019"
                 },
@@ -2108,7 +2080,7 @@
                             "en": "Enter text"
                         },
                         "uneditable": false,
-                        "width": "100%%"
+                        "width": "100%"
                     },
                     "id": "563ba9f0-95b0-417f-89dd-1c4ab7e9ceb8",
                     "label": {
@@ -2132,7 +2104,7 @@
                             "en": "Enter text"
                         },
                         "uneditable": false,
-                        "width": "100%%"
+                        "width": "100%"
                     },
                     "id": "59a819ce-7f74-4a5d-8a6b-461adc0ffd20",
                     "label": {
@@ -2156,7 +2128,7 @@
                             "en": "Enter text"
                         },
                         "uneditable": false,
-                        "width": "100%%"
+                        "width": "100%"
                     },
                     "id": "5bcdb258-85d7-43cb-a89a-82351267252a",
                     "label": {
@@ -2186,7 +2158,7 @@
                         },
                         "reportTypeAbbreviation": "IMP",
                         "uneditable": false,
-                        "width": "100%%%%"
+                        "width": "100%"
                     },
                     "id": "5bfcacc2-9889-4eab-a287-50a13e2f4794",
                     "label": {
@@ -2210,7 +2182,7 @@
                             "en": "Enter text"
                         },
                         "uneditable": false,
-                        "width": "100%%"
+                        "width": "100%"
                     },
                     "id": "5c8b86cc-c682-4c9f-9a92-20b5b97418ae",
                     "label": {
@@ -2234,7 +2206,7 @@
                             "en": "Enter text"
                         },
                         "uneditable": false,
-                        "width": "100%%"
+                        "width": "100%"
                     },
                     "id": "5e0154d5-c7d0-49a8-b843-467f30c6d3dd",
                     "label": {
@@ -2305,7 +2277,7 @@
                             "en": "Enter SAFR Title"
                         },
                         "uneditable": false,
-                        "width": "100%%"
+                        "width": "100%"
                     },
                     "id": "617eb826-f175-439b-8510-7fec02db2cbc",
                     "label": {
@@ -2346,6 +2318,35 @@
                     "widget_id": "10000000-0000-0000-0000-000000000001"
                 },
                 {
+                    "card_id": "ff4fa88c-a361-11ed-b0ab-5254004d77d3",
+                    "config": {
+                        "defaultValue": {
+                            "en": {
+                                "direction": "ltr",
+                                "value": ""
+                            }
+                        },
+                        "i18n_properties": [
+                            "placeholder"
+                        ],
+                        "label": "FIAP FMO Internal Notes",
+                        "maxLength": null,
+                        "placeholder": {
+                            "en": "Enter text"
+                        },
+                        "uneditable": false,
+                        "width": "100%"
+                    },
+                    "id": "660d3203-0c6e-46d4-9fdd-930c7e2944d8",
+                    "label": {
+                        "en": "FIAP FMO Internal Notes"
+                    },
+                    "node_id": "ff4fb4bc-a361-11ed-b0ab-5254004d77d3",
+                    "sortorder": 2,
+                    "visible": true,
+                    "widget_id": "10000000-0000-0000-0000-000000000005"
+                },
+                {
                     "card_id": "ff4fa404-a361-11ed-b0ab-5254004d77d3",
                     "config": {
                         "defaultValue": "",
@@ -2359,7 +2360,7 @@
                         },
                         "reportTypeAbbreviation": "FIAP",
                         "uneditable": false,
-                        "width": "100%%%%"
+                        "width": "100%"
                     },
                     "id": "6a3b0611-29fb-4362-bca8-c4e06a38210e",
                     "label": {
@@ -2466,7 +2467,7 @@
                             "en": "Enter text"
                         },
                         "uneditable": false,
-                        "width": "100%%"
+                        "width": "100%"
                     },
                     "id": "71ede630-9f97-41ad-a9ca-f3d3a32943a7",
                     "label": {
@@ -2538,10 +2539,10 @@
                         "label": "Project Name",
                         "maxLength": "120",
                         "placeholder": {
-                            "en": "Enter text"
+                            "en": "Enter brief name - maximum 120 chars"
                         },
                         "uneditable": false,
-                        "width": "100%%"
+                        "width": "100%"
                     },
                     "id": "79d965ed-d378-44c5-91c5-6a830f70e174",
                     "label": {
@@ -2586,7 +2587,7 @@
                             "en": "Enter text"
                         },
                         "uneditable": false,
-                        "width": "100%%"
+                        "width": "100%"
                     },
                     "id": "7d357daa-2605-4b97-896d-e0f4cf0d1c52",
                     "label": {
@@ -2595,7 +2596,7 @@
                     "node_id": "dbb0e91e-a360-11ed-ae42-5254004d77d3",
                     "sortorder": 3,
                     "visible": true,
-                    "widget_id": "10000000-0000-0000-0000-000000000001"
+                    "widget_id": "10000000-0000-0000-0000-000000000005"
                 },
                 {
                     "card_id": "13b3e5e3-5a25-4414-8360-d9b9b2ccea6b",
@@ -2696,7 +2697,7 @@
                             "en": "Enter text"
                         },
                         "uneditable": false,
-                        "width": "100%%"
+                        "width": "100%"
                     },
                     "id": "9611fe12-7d9c-4770-a37e-8a0625780603",
                     "label": {
@@ -2726,7 +2727,7 @@
                         },
                         "reportTypeAbbreviation": "CFP",
                         "uneditable": false,
-                        "width": "100%%%%"
+                        "width": "100%"
                     },
                     "id": "98c723f0-6f24-437d-b7a1-5c0aac1474fa",
                     "label": {
@@ -2736,6 +2737,21 @@
                     "sortorder": 0,
                     "visible": true,
                     "widget_id": "10000000-0000-0000-0000-000000000106"
+                },
+                {
+                    "card_id": "ff4fa88c-a361-11ed-b0ab-5254004d77d3",
+                    "config": {
+                        "defaultValue": null,
+                        "label": "FIAP FMO Approval Status"
+                    },
+                    "id": "9beb7950-8ae8-4608-9d37-c5af8eedb96b",
+                    "label": {
+                        "en": "FIAP FMO Approval Status"
+                    },
+                    "node_id": "ff4fb020-a361-11ed-b0ab-5254004d77d3",
+                    "sortorder": 0,
+                    "visible": true,
+                    "widget_id": "10000000-0000-0000-0000-000000000006"
                 },
                 {
                     "card_id": "d64614b1-79e7-443b-878a-d885f2e0d4d1",
@@ -2750,7 +2766,7 @@
                             "en": "Enter text"
                         },
                         "uneditable": false,
-                        "width": "100%%"
+                        "width": "100%"
                     },
                     "id": "9f5465cc-d0bc-42ab-a5f6-f58147a1eae0",
                     "label": {
@@ -2774,7 +2790,7 @@
                             "en": "Enter text"
                         },
                         "uneditable": false,
-                        "width": "100%%"
+                        "width": "100%"
                     },
                     "id": "9f65bb36-8b93-4dc4-865c-93c55aea5917",
                     "label": {
@@ -2813,7 +2829,7 @@
                             "en": "Enter text"
                         },
                         "uneditable": false,
-                        "width": "100%%"
+                        "width": "100%"
                     },
                     "id": "a3dd5803-6320-41f9-94f9-b59c4051e2a8",
                     "label": {
@@ -2823,6 +2839,35 @@
                     "sortorder": 6,
                     "visible": true,
                     "widget_id": "10000000-0000-0000-0000-000000000001"
+                },
+                {
+                    "card_id": "ff4fa88c-a361-11ed-b0ab-5254004d77d3",
+                    "config": {
+                        "defaultValue": {
+                            "en": {
+                                "direction": "ltr",
+                                "value": ""
+                            }
+                        },
+                        "i18n_properties": [
+                            "placeholder"
+                        ],
+                        "label": "FIAP FMO Response",
+                        "maxLength": null,
+                        "placeholder": {
+                            "en": "Enter text"
+                        },
+                        "uneditable": false,
+                        "width": "100%"
+                    },
+                    "id": "a52ffef8-37bf-4c91-9f14-af85c017f47d",
+                    "label": {
+                        "en": "FIAP FMO Response"
+                    },
+                    "node_id": "ff4fb336-a361-11ed-b0ab-5254004d77d3",
+                    "sortorder": 1,
+                    "visible": true,
+                    "widget_id": "10000000-0000-0000-0000-000000000005"
                 },
                 {
                     "card_id": "01071c17-58bb-4718-a62e-1eb9a2418dcd",
@@ -2866,7 +2911,7 @@
                             "en": "Enter text"
                         },
                         "uneditable": false,
-                        "width": "100%%"
+                        "width": "100%"
                     },
                     "id": "a98791ef-0f3b-455b-b906-19e0d6896c92",
                     "label": {
@@ -2916,7 +2961,7 @@
                             "en": "Enter text"
                         },
                         "uneditable": false,
-                        "width": "100%%"
+                        "width": "100%"
                     },
                     "id": "ad8674fa-7b91-4df1-b38a-7a3e53f00ef5",
                     "label": {
@@ -3135,7 +3180,7 @@
                         },
                         "reportTypeAbbreviation": "FIA",
                         "uneditable": false,
-                        "width": "100%%%%"
+                        "width": "100%"
                     },
                     "id": "bf8e8f06-76d8-4697-92cb-468e01113a43",
                     "label": {
@@ -3179,7 +3224,7 @@
                             "en": "Enter text"
                         },
                         "uneditable": false,
-                        "width": "100%%"
+                        "width": "100%"
                     },
                     "id": "c41869d2-c945-482a-9eac-e7586a239dc8",
                     "label": {
@@ -3188,7 +3233,7 @@
                     "node_id": "dbb0eaa4-a360-11ed-ae42-5254004d77d3",
                     "sortorder": 4,
                     "visible": true,
-                    "widget_id": "10000000-0000-0000-0000-000000000001"
+                    "widget_id": "10000000-0000-0000-0000-000000000005"
                 },
                 {
                     "card_id": "3ed0fa37-95e4-4f59-90cc-74db40a41010",
@@ -3207,7 +3252,7 @@
                             "en": "Enter text"
                         },
                         "uneditable": false,
-                        "width": "100%%"
+                        "width": "100%"
                     },
                     "id": "c5cd6d9f-b852-42ed-90ed-c62c777ceba2",
                     "label": {
@@ -3255,7 +3300,7 @@
                             "en": "Enter text"
                         },
                         "uneditable": false,
-                        "width": "100%%"
+                        "width": "100%"
                     },
                     "id": "c9e5486c-362f-438b-8bf4-252804ad2449",
                     "label": {
@@ -3341,7 +3386,7 @@
                             "en": "Enter text"
                         },
                         "uneditable": false,
-                        "width": "100%%"
+                        "width": "100%"
                     },
                     "id": "d1fa87fd-303b-4175-b07c-529e04b4d2da",
                     "label": {
@@ -3350,7 +3395,7 @@
                     "node_id": "e9394f7c-c372-11ed-b586-5254004d77d3",
                     "sortorder": 3,
                     "visible": true,
-                    "widget_id": "10000000-0000-0000-0000-000000000001"
+                    "widget_id": "10000000-0000-0000-0000-000000000005"
                 },
                 {
                     "card_id": "dc10018f-670c-43c3-9b4c-d001f392dedd",
@@ -3400,7 +3445,7 @@
                         },
                         "reportTypeAbbreviation": "PSR",
                         "uneditable": false,
-                        "width": "100%%"
+                        "width": "100%"
                     },
                     "id": "d2ead648-afc0-454a-9878-57ff89a9f897",
                     "label": {
@@ -3439,7 +3484,7 @@
                             "en": "Enter text"
                         },
                         "uneditable": false,
-                        "width": "100%%"
+                        "width": "100%"
                     },
                     "id": "d3543c1b-4b41-4fa8-8e3d-e9448f481cce",
                     "label": {
@@ -3813,7 +3858,7 @@
                             "en": "Enter text"
                         },
                         "uneditable": false,
-                        "width": "100%%"
+                        "width": "100%"
                     },
                     "id": "ed6aca9e-ca44-4e96-a1f2-fae676e4c291",
                     "label": {
@@ -3859,7 +3904,7 @@
                             "en": "Enter text"
                         },
                         "uneditable": false,
-                        "width": "100%%"
+                        "width": "100%"
                     },
                     "id": "fffdd159-d3d6-4acb-b149-2519e17f45b8",
                     "label": {
@@ -5251,12 +5296,12 @@
                     },
                     "function_id": "60000000-0000-0000-0000-000000001001",
                     "graph_id": "2aa724d1-ffd3-4823-8ff1-15a385b9a407",
-                    "id": "7e35fea2-bba8-46b7-acc9-01abdfd649bc"
+                    "id": "f1743ac2-5d49-4970-8395-275f2d15c138"
                 }
             ],
             "graphid": "2aa724d1-ffd3-4823-8ff1-15a385b9a407",
             "iconclass": "fa fa-diamond",
-            "is_editable": true,
+            "is_editable": false,
             "isresource": true,
             "jsonldcontext": null,
             "name": {
@@ -10306,8 +10351,8 @@
             "publication": {
                 "graph_id": "2aa724d1-ffd3-4823-8ff1-15a385b9a407",
                 "notes": null,
-                "publicationid": "d2d28560-34d6-11ef-84ee-0242ac170009",
-                "published_time": "2024-06-27T17:44:33.643"
+                "publicationid": "36d6ff04-50da-11ef-aaa6-0242ac170006",
+                "published_time": "2024-08-02T09:19:22.492"
             },
             "relatable_resource_model_ids": [],
             "resource_2_resource_constraints": [],
@@ -10343,7 +10388,7 @@
     ],
     "metadata": {
         "db": "PostgreSQL 16.3 (Debian 16.3-1.pgdg110+1) on x86_64-pc-linux-gnu, compiled by gcc (Debian 10.2.1-6) 10.2.1 20210110, 64-bit",
-        "git hash": "6928cbe43 2024-06-21 15:22:35 -0700",
+        "git hash": "7a36d9589 2024-08-01 14:01:52 -0700",
         "os": "Linux",
         "os version": "6.6.31-linuxkit"
     }
