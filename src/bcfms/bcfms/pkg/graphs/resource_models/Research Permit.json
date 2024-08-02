@@ -22,9 +22,9 @@
                     "instructions": {
                         "en": ""
                     },
-                    "is_editable": false,
+                    "is_editable": true,
                     "name": {
-                        "en": "Final Research Report FMO Assessment"
+                        "en": "Interim Research Report FMO Assessment"
                     },
                     "nodegroup_id": "07f2db1c-4834-11ef-8aee-0242ac170009",
                     "sortorder": 1,
@@ -49,7 +49,7 @@
                     "instructions": {
                         "en": ""
                     },
-                    "is_editable": false,
+                    "is_editable": true,
                     "name": {
                         "en": "Interim Research Report"
                     },
@@ -79,7 +79,7 @@
                     "instructions": {
                         "en": ""
                     },
-                    "is_editable": false,
+                    "is_editable": true,
                     "name": {
                         "en": "Interim Research Reports"
                     },
@@ -718,7 +718,7 @@
                         "en": "FMO Plan Response"
                     },
                     "node_id": "109f4ce6-d968-11ed-b8ae-5254004d77d3",
-                    "sortorder": 4,
+                    "sortorder": 3,
                     "visible": true,
                     "widget_id": "10000000-0000-0000-0000-000000000005"
                 },
@@ -747,7 +747,7 @@
                         "en": "Internal Notes"
                     },
                     "node_id": "109f4a70-d968-11ed-b8ae-5254004d77d3",
-                    "sortorder": 3,
+                    "sortorder": 2,
                     "visible": true,
                     "widget_id": "10000000-0000-0000-0000-000000000005"
                 },
@@ -1221,35 +1221,6 @@
                     "widget_id": "10000000-0000-0000-0000-000000000106"
                 },
                 {
-                    "card_id": "109b2404-d968-11ed-b8ae-5254004d77d3",
-                    "config": {
-                        "defaultValue": {
-                            "en": {
-                                "direction": "ltr",
-                                "value": ""
-                            }
-                        },
-                        "i18n_properties": [
-                            "placeholder"
-                        ],
-                        "label": "Research Plan Number",
-                        "maxLength": null,
-                        "placeholder": {
-                            "en": "Enter text"
-                        },
-                        "uneditable": false,
-                        "width": "100%"
-                    },
-                    "id": "a7fb8455-121d-4bf2-82f1-32ff3cdad679",
-                    "label": {
-                        "en": "Research Plan Number"
-                    },
-                    "node_id": "49f46976-d969-11ed-b2f0-5254004d77d3",
-                    "sortorder": 2,
-                    "visible": true,
-                    "widget_id": "10000000-0000-0000-0000-000000000001"
-                },
-                {
                     "card_id": "109a8e72-d968-11ed-b8ae-5254004d77d3",
                     "config": {
                         "defaultValue": {
@@ -1370,18 +1341,26 @@
                             {
                                 "children": [],
                                 "collector": "",
-                                "conceptid": "eb02e2ed-7351-43d6-a268-ea7d14c5cda8",
-                                "id": "fb014722-f513-4b28-a399-a626e12fc778",
-                                "sortorder": "",
-                                "text": "on park"
-                            },
-                            {
-                                "children": [],
-                                "collector": "",
                                 "conceptid": "733e12d8-73cf-4cf4-bb0e-26ed5b7a521f",
                                 "id": "cacaf9ba-5c08-4bc3-95de-be0fcdee8a70",
                                 "sortorder": "",
                                 "text": "on private land"
+                            },
+                            {
+                                "children": [],
+                                "collector": "",
+                                "conceptid": "22c0e799-a150-44ac-b9a9-bc5ab7f3d6a2",
+                                "id": "a5f3fb2b-52d3-4268-89f0-93d1d7a46fc8",
+                                "sortorder": "",
+                                "text": "within other park"
+                            },
+                            {
+                                "children": [],
+                                "collector": "",
+                                "conceptid": "eb02e2ed-7351-43d6-a268-ea7d14c5cda8",
+                                "id": "fb014722-f513-4b28-a399-a626e12fc778",
+                                "sortorder": "",
+                                "text": "within provincial park"
                             }
                         ],
                         "placeholder": {
@@ -1855,15 +1834,6 @@
                 },
                 {
                     "description": null,
-                    "domainnode_id": "109b20b2-d968-11ed-b8ae-5254004d77d3",
-                    "edgeid": "98c98cfc-5516-45ba-978d-5d5f03f96495",
-                    "graph_id": "109a0272-d968-11ed-b8ae-5254004d77d3",
-                    "name": null,
-                    "ontologyproperty": "http://www.cidoc-crm.org/cidoc-crm/P1_is_identified_by",
-                    "rangenode_id": "49f46976-d969-11ed-b2f0-5254004d77d3"
-                },
-                {
-                    "description": null,
                     "domainnode_id": "109acc48-d968-11ed-b8ae-5254004d77d3",
                     "edgeid": "a857cefe-6fd6-4e7a-a238-4d2353b24dd5",
                     "graph_id": "109a0272-d968-11ed-b8ae-5254004d77d3",
@@ -1967,12 +1937,12 @@
                     },
                     "function_id": "60000000-0000-0000-0000-000000001001",
                     "graph_id": "109a0272-d968-11ed-b8ae-5254004d77d3",
-                    "id": "bc0ec735-ab14-4f8b-b7ce-d69e9b1ddfcb"
+                    "id": "d9517500-30c8-46ca-8091-05ef1c6dc1ea"
                 }
             ],
             "graphid": "109a0272-d968-11ed-b8ae-5254004d77d3",
             "iconclass": "fa fa-pencil",
-            "is_editable": false,
+            "is_editable": true,
             "isresource": true,
             "jsonldcontext": null,
             "name": {
@@ -3245,29 +3215,6 @@
                     "sourcebranchpublication_id": null
                 },
                 {
-                    "alias": "research_plan_number",
-                    "config": {
-                        "en": ""
-                    },
-                    "datatype": "string",
-                    "description": null,
-                    "exportable": false,
-                    "fieldname": null,
-                    "graph_id": "109a0272-d968-11ed-b8ae-5254004d77d3",
-                    "hascustomalias": false,
-                    "is_collector": false,
-                    "isrequired": true,
-                    "issearchable": true,
-                    "istopnode": false,
-                    "name": "Research Plan Number",
-                    "nodegroup_id": "109b20b2-d968-11ed-b8ae-5254004d77d3",
-                    "nodeid": "49f46976-d969-11ed-b2f0-5254004d77d3",
-                    "ontologyclass": "http://www.cidoc-crm.org/cidoc-crm/E42_Identifier",
-                    "parentproperty": "http://www.cidoc-crm.org/cidoc-crm/P1_is_identified_by",
-                    "sortorder": 0,
-                    "sourcebranchpublication_id": null
-                },
-                {
                     "alias": "project_name",
                     "config": {
                         "en": ""
@@ -3680,8 +3627,8 @@
             "publication": {
                 "graph_id": "109a0272-d968-11ed-b8ae-5254004d77d3",
                 "notes": null,
-                "publicationid": "eaa5bc2c-4834-11ef-8aee-0242ac170009",
-                "published_time": "2024-07-22T09:15:58.400"
+                "publicationid": "c84638b0-50df-11ef-81fe-0242ac170006",
+                "published_time": "2024-08-02T09:59:13.975"
             },
             "relatable_resource_model_ids": [],
             "resource_2_resource_constraints": [],
@@ -3717,7 +3664,7 @@
     ],
     "metadata": {
         "db": "PostgreSQL 16.3 (Debian 16.3-1.pgdg110+1) on x86_64-pc-linux-gnu, compiled by gcc (Debian 10.2.1-6) 10.2.1 20210110, 64-bit",
-        "git hash": "5d0d8577d 2024-06-20 08:45:57 -0700",
+        "git hash": "7a36d9589 2024-08-01 14:01:52 -0700",
         "os": "Linux",
         "os version": "6.6.31-linuxkit"
     }
