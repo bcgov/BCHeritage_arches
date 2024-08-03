@@ -109,16 +109,10 @@ class CustomSearchValue:
                 )
 
     @staticmethod
-    def add_search_filter(search_query, term):
-
-        print("Search query before: %s" % search_query)
-        # print("Search query type: %s" % type(search_query))
-        # print("DSL type: %s" % type(search_query.dsl))
-
-        search_query.dsl["bool"]["should"] = search_query.dsl["bool"]["must"]
-        search_query.dsl["bool"]["must"] = []
-        search_query.dsl["bool"]["minimum_should_match"] = 1
-
+    def create_nested_custom_filter(term, original_element):
+        if "nested" not in original_element:
+            return original_element
+        # print("Original element: %s" % original_element)
         document_key = CustomSearchValue.custom_search_path
         custom_filter = Bool()
         custom_filter.should(
@@ -136,12 +130,25 @@ class CustomSearchValue:
             )
         )
         nested_custom_filter = Nested(path=document_key, query=custom_filter)
-        # return nested_custom_filter
-        if term["inverted"]:
-            search_query.must_not(nested_custom_filter)
-        else:
-            search_query.should(nested_custom_filter)
-        print("Search query after: %s" % search_query)
+        new_must_element = Bool()
+        new_must_element.should(original_element)
+        new_must_element.should(nested_custom_filter)
+        new_must_element.dsl["bool"]["minimum_should_match"] = 1
+        return new_must_element
+
+    @staticmethod
+    def add_search_filter(search_query, term):
+        # print("Search query before: %s" % search_query)
+        original_must_filter = search_query.dsl["bool"]["must"]
+        search_query.dsl["bool"]["must"] = []
+        for must_element in original_must_filter:
+            search_query.must(CustomSearchValue.create_nested_custom_filter(term, must_element))
+
+        original_must_filter = search_query.dsl["bool"]["must_not"]
+        search_query.dsl["bool"]["must_not"] = []
+        for must_element in original_must_filter:
+            search_query.must_not(CustomSearchValue.create_nested_custom_filter(term, must_element))
+        # print("Search query after: %s" % search_query)
 
     @staticmethod
     def get_custom_search_config():
