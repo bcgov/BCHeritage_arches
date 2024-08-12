@@ -7,13 +7,13 @@ from django.contrib.auth.models import User
 from django.http import HttpRequest
 from django.utils.translation import gettext as _
 from arches.app.models import models
-from arches.app.tasks import create_user_task_record
+from arches.app.tasks import create_user_task_record, update_user_task_record, log_error
 from arches.app.utils.message_contexts import return_message_context
 from tempfile import NamedTemporaryFile
 
 @shared_task(bind=True)
 def export_search_results(self, userid, request_values, format, report_link):
-    from arches.app.search.search_export import SearchResultsExporter
+    from bcfms.search.search_export import BCFMSSearchResultsExporter as SearchResultsExporter
     from arches.app.models.system_settings import settings
 
     logger = logging.getLogger(__name__)

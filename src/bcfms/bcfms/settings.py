@@ -381,8 +381,8 @@ if DEBUG is True:
 
 # EMAIL_BACKEND = 'django.core.mail.backends.console.EmailBackend'  #<-- Only need to uncomment this for testing without an actual email server
 # EMAIL_USE_TLS = True
-# EMAIL_HOST = 'smtp.gmail.com'
-EMAIL_HOST_USER = "xxxx@xxx.com"
+EMAIL_HOST = 'apps.smtp.gov.bc.ca'
+EMAIL_HOST_USER = "Fossil.Management@gov.bc.ca"
 # EMAIL_HOST_PASSWORD = 'xxxxxxx'
 # EMAIL_PORT = 587
 
