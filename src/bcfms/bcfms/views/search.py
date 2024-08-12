@@ -1,7 +1,6 @@
 import logging
 import os
 from arches.app.utils.decorators import group_required
-from bcfms.search.search_export import BCFMSSearchResultsExporter
 from arches.app.models.system_settings import settings
 from django.utils.translation import gettext as _
 from io import StringIO
@@ -16,6 +15,8 @@ logger = logging.getLogger(__name__)
 
 @group_required("Resource Exporter")
 def export_results(request):
+    # This can't be imported above due to circular reference
+    from bcfms.search.search_export import BCFMSSearchResultsExporter
     # Merge the GET and POST data. Arches assumes data is in the GET object
     request.GET = request.GET.copy()
     for key, value in request.POST.items():
