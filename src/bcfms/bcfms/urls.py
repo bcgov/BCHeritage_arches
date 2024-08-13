@@ -15,6 +15,7 @@ uuid_regex = settings.UUID_REGEX
 path_prefix_re = re.compile(r"^(\^)(.*)$")
 
 
+
 def bc_path_prefix(path):
     if not settings.BCGOV_PROXY_PREFIX:
         return path

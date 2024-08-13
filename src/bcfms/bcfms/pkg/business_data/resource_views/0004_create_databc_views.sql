@@ -48,9 +48,9 @@ select n.resourceinstanceid                                                     
        __arches_get_concept_label(ga.geologic_timescale_division)                                      geologic_timescale_division,
        __bc_format_uncertainty(__arches_get_concept_label(ga.minimum_time), ga.minimum_time_uncertain) minimum_time,
        __bc_format_uncertainty(__arches_get_concept_label(ga.maximum_time), ga.maximum_time_uncertain) maximum_time,
-       __arches_get_concept_list_label(array_to_json(geological_group)::jsonb) geologic_groups,
-       __arches_get_concept_list_label(array_to_json(geological_formation)::jsonb) geologic_groups,
-       __arches_get_concept_list_label(array_to_json(geological_member)::jsonb) geologic_groups
+       __bc_format_uncertainty(__arches_get_concept_label(geological_group),geological_group_uncertain) geologic_group,
+       __bc_format_uncertainty(__arches_get_concept_label(geological_formation), geological_formation_uncertain) geologic_formation,
+       __bc_format_uncertainty(__arches_get_concept_label(geological_member),geological_member_uncertain) geologic_member
 from provincially_protected_fossil_site.site_name n
          join area_boundaries l on n.resourceinstanceid = l.resourceinstanceid
          left join provincially_protected_fossil_site.protection_status ps
