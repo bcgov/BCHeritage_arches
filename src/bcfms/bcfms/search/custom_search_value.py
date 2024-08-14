@@ -1,28 +1,24 @@
 from arches.app.search.elasticsearch_dsl_builder import (
     Bool,
-    Ids,
     Match,
     Nested,
-    SimpleQueryString,
-    QueryString,
-    Terms,
-    Term,
 )
 from bcfms.util.bcfms_aliases import FossilSampleAliases as fsa, GraphSlugs
 from bcfms.util.business_data_proxy import (
     FossilSampleDataProxy,
     CollectionEventDataProxy,
 )
+from arches.app.search.custom_resource_search import CustomResourceSearchValue
 
 
-class CustomSearchValue:
-    custom_search_path = "custom_values"
+class CustomSearchValue(CustomResourceSearchValue):
+    # custom_search_path = "custom_values"
     initialized = False
     fossil_sample_proxy = None
     collection_event_proxy = None
 
-    def __init__(self):
-        pass
+    # def __init__(self):
+    #     pass
 
     @staticmethod
     def initialize():
@@ -142,12 +138,16 @@ class CustomSearchValue:
         original_must_filter = search_query.dsl["bool"]["must"]
         search_query.dsl["bool"]["must"] = []
         for must_element in original_must_filter:
-            search_query.must(CustomSearchValue.create_nested_custom_filter(term, must_element))
+            search_query.must(
+                CustomSearchValue.create_nested_custom_filter(term, must_element)
+            )
 
         original_must_filter = search_query.dsl["bool"]["must_not"]
         search_query.dsl["bool"]["must_not"] = []
         for must_element in original_must_filter:
-            search_query.must_not(CustomSearchValue.create_nested_custom_filter(term, must_element))
+            search_query.must_not(
+                CustomSearchValue.create_nested_custom_filter(term, must_element)
+            )
         # print("Search query after: %s" % search_query)
 
     @staticmethod

@@ -59,7 +59,7 @@ FILENAME_GENERATOR = "bcfms.util.storage_filename_generator.generate_filename"
 UPLOADED_FILES_DIR = "uploadedfiles"
 
 # This is a class to add custom search values for cross-resource searching
-CUSTOM_SEARCH_CLASS = "bcfms.util.custom_search_value.CustomSearchValue"
+CUSTOM_SEARCH_CLASS = "bcfms.search.custom_search_value.CustomSearchValue"
 
 # SECURITY WARNING: keep the secret key used in production secret!
 SECRET_KEY = get_env_variable("DJANGO_SECRET_KEY")
