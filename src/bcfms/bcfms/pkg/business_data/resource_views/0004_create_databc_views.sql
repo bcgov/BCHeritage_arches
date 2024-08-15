@@ -1,4 +1,4 @@
-drop function if exists __bc_format_uncertainty;
+drop function if exists __bc_format_uncertainty(text, boolean);
 create or replace function __bc_format_uncertainty(value text, value_uncertain boolean) returns text as
 $$
 DECLARE
