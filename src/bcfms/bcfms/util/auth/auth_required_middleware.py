@@ -11,13 +11,16 @@ class AuthRequiredMiddleware(AuthenticationMiddleware):
     def _clean_path(self, path):
         return re.sub(r"^/*", "", re.sub("/*$", "", path))
 
+    def _get_base_url(self):
+        return self._clean_path(
+            settings.FORCE_SCRIPT_NAME
+            if settings.FORCE_SCRIPT_NAME
+            else settings.BCGOV_PROXY_PREFIX
+        )
+
     def _get_public_urls(self):
         if len(AuthRequiredMiddleware._valid_urls) == 0:
-            base_url = self._clean_path(
-                settings.FORCE_SCRIPT_NAME
-                if settings.FORCE_SCRIPT_NAME
-                else settings.BCGOV_PROXY_PREFIX
-            )
+            base_url = self._get_base_url()
             for suffix in [
                 "",
                 "/auth",
@@ -48,9 +51,7 @@ class AuthRequiredMiddleware(AuthenticationMiddleware):
     def process_request(self, request):
         if not request.user.is_authenticated:
             if not self.bypass_auth(request):
-                return HttpResponseRedirect(
-                    "/%s/" % self._clean_path(settings.BCGOV_PROXY_PREFIX)
-                )
+                return HttpResponseRedirect("/%s/" % self._get_base_url())
             else:
                 print("Bypassing auth")
         return None
