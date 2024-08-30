@@ -1,0 +1,86 @@
+{% extends "views/components/widgets/text.htm" %}
+{% load template_tags %}
+{% load i18n %}
+
+{% block form %}
+<div class="row widget-wrapper" data-bind="let: {uid: Math.random().toString()}, class: nodeCssClasses">
+    <div class="form-group" style="position: relative;">
+        <div style="max-width: 600px; position: relative">
+            <div class="" tabindex="0">
+                <span class="control-label widget-input-label" data-bind="text:label"></span>
+                <span style="display: none">
+                    <i class="fa" data-bind="{
+                        css: {
+                            'fa-caret-down' : !showi18nOptions(),
+                            'fa-caret-up' : showi18nOptions(),
+                        }
+                    }"></i>
+                    <span data-bind="text: $root.translations.languages"></span>
+                </span>
+            </div>
+            <div data-bind="if: showi18nOptions, attr: {id: uid}">
+                <div class="i18n-style-tools-panel">
+                    <div style="display: flex; flex-direction: column; max-width:600px">
+                        <span class="control-label widget-input-label" data-bind="text: $root.translations.language"></span>
+                        <select
+                                style="flex:1"
+                                name="language"
+                                data-bind="
+                                options: languages,
+                                optionsText: function(item){return item.name + ' (' + item.code + ')'},
+                                value: currentLanguage,
+                                chosen: {width:'100%'},
+                                attr: {'aria-label': $root.translations.language}
+                            "
+                        ></select>
+                        <span class="control-label widget-input-label" data-bind="text: $root.translations.direction"></span>
+                        <select
+                                style="flex:1"
+                                name="language"
+                                data-bind="
+                                value: currentDirection,
+                                chosen: {'width':'100%'},
+                                optionsText: 'text',
+                                optionsValue: 'value',
+                                options: [
+                                    { text: $root.translations.leftToRight, value: 'ltr' },
+                                    { text: $root.translations.rightToLeft, value: 'rtl' },
+                                ],
+                                attr: {'aria-label': $root.translations.direction}
+                            "
+                        ></select>
+                    </div>
+                </div>
+            </div>
+            <div class="col-xs-12" style="display:flex;flex-wrap: wrap;flex-direction: row;">
+                <input type="text" style="flex:1; max-width: 200px" class="form-control input-lg widget-input"
+                       data-bind="textInput: currentText,
+                        attr: {placeholder: placeholder, maxlength: maxLength, disabled: true, 'aria-label': label, dir: currentDirection},
+                ">
+                <div class="install-buttons" style="max-height: 36px; margin-left: 5px;">
+                    <button class="btn btn-shim btn-labeled btn-lg fa fa-plus btn-primary"
+                            data-bind="attr: {disabled: disable},
+                                        visible: !disable(),
+                                        click: function(){getReportNumber()}">
+                        <span>Generate Report Number</span>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock form %}
+
+{% block config_form %}
+<div class="node-config-item">
+    <div class="control-label">
+        <span class="widget-input-label">Report Type Abbreviation (2-4 letters)</span>
+    </div>
+    <div class="col-xs-12" style="display:flex;flex-wrap: wrap;flex-direction: column;">
+        <input type="text" style="flex:1" id="input-default-value" class="form-control input-lg widget-input"
+               data-bind="textInput: reportTypeAbbreviation,
+                attr: {placeholder: 'AAA', minlength: 2, maxlength: 4, dir: currentDefaultDirection, 'aria-label': $root.translations.defaultValue}
+        ">
+    </div>
+</div>
+{% endblock config_form %}

@@ -1,0 +1,61 @@
+<div class="bc-grid-container">
+    <div class="bc-grid-item grid-col-1 grid-row-1">
+        <dl class="dl-vertical dl-vertical-bc" >
+            <dt>Contributor Type</dt>
+            <dd>
+                <div>
+                    <div class="contributor_type" data-bind="component: { name: 'concept-select-widget',
+                                            params: { value: getFirstNodeValue('contributor_type'), state: 'display_value' }}">
+                    </div>
+                </div>
+            </dd>
+        </dl>
+    </div>
+    <div class="bc-grid-item grid-col-2 grid-row-1" data-bind="visible: nodesHaveData(['associated_organization'])">
+        <dl class="dl-vertical dl-vertical-bc" >
+            <dt>Associated Organization</dt>
+            <dd>
+                <div data-bind="component: { name: 'resource-instance-multiselect-widget',
+                                            params: { value: getFirstNodeValue('associated_organization'), state: 'display_value' }
+                                            }">
+
+                </div>
+            </dd>
+        </dl>
+    </div>
+    <div class="bc-grid-item grid-col-1 grid-row-2" data-bind="visible: nodesHaveData('contributor_role')">
+        <dl class="dl-vertical dl-vertical-bc" >
+            <dt>Role(s)</dt>
+            <dd>
+                <div class="contributor_role" data-bind="component: { name: 'concept-multiselect-widget',
+                                            params: { value: getFirstNodeValue('contributor_role'), state: 'display_value' }
+                                            }">
+                </div>
+            </dd>
+        </dl>
+    </div>
+    <div class="bc-grid-item grid-col- grid-row-3" data-bind="visible: nodesHaveData('contact_email')">
+        <dl class="dl-vertical dl-vertical-bc" >
+            <dt>Email</dt>
+            <dd>
+                <div class="contact_email" data-bind="component: {
+                    name: 'text-widget',
+                    params: { value: ko.unwrap(getFirstNodeValue('contact_email')), state: 'display_value' }
+                    }">
+                </div>
+            </dd>
+        </dl>
+    </div>
+    <div class="bc-grid-item grid-col-1 grid-row-4" data-bind="visible: nodesHaveData('contact_phone_number')">
+        <dl class="dl-vertical dl-vertical-bc" >
+            <dt>Phone</dt>
+            <dd>
+                <div class="contact_phone_number" data-bind="component: {
+                    name: 'text-widget',
+                    params: { value: ko.unwrap(getFirstNodeValue('contact_phone_number')), state: 'display_value' }
+                    }">
+                </div>
+            </dd>
+        </dl>
+    </div>
+</div>

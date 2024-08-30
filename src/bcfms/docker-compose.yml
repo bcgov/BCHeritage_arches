@@ -1,0 +1,50 @@
+version: '3.8'
+name: bcfms7-5-2
+services:
+  bcfms:
+    container_name: bcfms7-5-2
+    image: bcgov/bcfms7-5-2
+    build:
+      context: ..
+      dockerfile: bcfms/Dockerfile
+    command: run_arches
+    volumes:
+      - ../arches/:/web_root/arches
+      - ./:/web_root/bcfms
+      - ../common/:/web_root/common
+    env_file:
+      - ./docker/env_file.env
+    ports:
+      - 5689:5678
+      - 81:80
+      - 444:443
+    stdin_open: true
+    tty: true
+
+  bcfms-webpack:
+    container_name: bcfms-webpack-7-5-2
+    image: bcgov/bcfms-webpack-7-5-2
+    build:
+      context: ..
+      dockerfile: bcfms/docker/webpack/Dockerfile
+    command: run_webpack
+    volumes:
+      - ../arches/:/web_root/arches
+      - ./:/web_root/bcfms
+    env_file:
+      - ./docker/webpack/env_file.env
+    ports:
+      - 8023:8021
+    stdin_open: true
+    tty: true
+
+networks:
+  default:
+    external: true
+#    name: arches7-5-dev
+    name: arches7-5-2-dev
+
+
+volumes:
+  arches-log-bcfms7-5:
+  arches-static-bcfms7-5:

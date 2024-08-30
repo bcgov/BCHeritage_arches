@@ -1,0 +1,410 @@
+<div class="bc-map-thumbnail" data-bind="visible: nodesHaveData('project_location')">
+    <dl class="dl-vertical dl-vertical-bc" >
+        <dt>Location</dt>
+        <dd>
+            <div data-bind="component: {
+                        name: 'report-header-map',
+                        params: $data
+                    }" class="report-map-header-component"></div>
+        </dd>
+    </dl>
+</div>
+<div class="rp-card-section bc-details-tab">
+    <!-- ko let: {targetSection: 'project_details_section', sectionController: projectDetailsVisible,
+    sectionHasData: nodesHaveData(['industry_company_name','project_initiator','project_authorizing_agency', 'project_type', 'location_description'])} -->
+    <div class="rp-card-section">
+        <span class="rp-tile-title" data-bind="css: {'empty-section': !sectionHasData}">Project Details</span>
+        <i class="fa report-expander print-hide fa-angle-down" tabindex="0" role="button"
+           data-target="project_details_section" data-bind="onEnterkeyClick, onSpaceClick, visible: sectionHasData,
+                css: {'fa-angle-down': sectionController(), 'fa-angle-right': !sectionController()},
+                click: function() {sectionController(!sectionController());},
+                attr: {
+                    'aria-expanded': sectionController().toString(),
+                    'aria-controls': targetSection,
+                    'aria-label': 'Toggle Project Details section',
+                }
+            "></i>
+        <div class="rp-card-section" data-bind="visible: sectionController, attr: {id: targetSection}">
+            <div style="display: inline-flex; width: 100%; justify-content: space-between;"
+                 data-bind="visible: nodesHaveData('industry_company_name')">
+                <dl class="dl-horizontal">
+                    <dt>Industry Company Name</dt>
+                    <dd data-bind="component: { name: 'text-widget',
+                                            params: { value: ko.unwrap(getFirstNodeValue('industry_company_name')), state: 'display_value'}
+                                            }"></dd>
+                </dl>
+            </div>
+            <div style="display: inline-flex; width: 100%; justify-content: space-between;"
+                 data-bind="visible: nodesHaveData('project_initiator')">
+                <dl class="dl-horizontal">
+                    <dt>Project Initiator</dt>
+                    <dd data-bind="component: { name: 'resource-instance-select-widget',
+                                            params: { value: getFirstNodeValue('project_initiator'), state: 'display_value'}
+                                            }"></dd>
+                </dl>
+            </div>
+            <div style="display: inline-flex; width: 100%; justify-content: space-between;"
+                 data-bind="visible: nodesHaveData('project_authorizing_agency')">
+                <dl class="dl-horizontal">
+                    <dt>Project Authorizing Agency</dt>
+                    <dd data-bind="component: { name: 'concept-select-widget',
+                                            params: { value: getFirstNodeValue('project_authorizing_agency'), state: 'display_value'}
+                                            }"></dd>
+                </dl>
+            </div>
+            <div style="display: inline-flex; width: 100%; justify-content: space-between;"
+                 data-bind="visible: nodesHaveData('project_type')">
+                <dl class="dl-horizontal">
+                    <dt>Project Type</dt>
+                    <dd data-bind="component: { name: 'concept-select-widget',
+                                            params: { value: getFirstNodeValue('project_type'), state: 'display_value'}
+                                            }"></dd>
+                </dl>
+            </div>
+            <div style="display: inline-flex; width: 100%; justify-content: space-between;"
+                 data-bind="visible: nodesHaveData('location_description')">
+                <dl class="dl-horizontal">
+                    <dt>Location Description</dt>
+                    <dd data-bind="component: { name: 'text-widget',
+                                        params: { value: ko.unwrap(getFirstNodeValue('location_description')), state: 'display_value'}
+                                        }"></dd>
+                </dl>
+            </div>
+        </div>
+    </div>
+    <!-- /ko -->
+
+    <!-- ko let: {targetSection: 'initial_project_review_section', sectionController: initialProjectReviewVisible,
+    sectionHasData: nodesHaveData(['psr_number','psr_recommendations','psr_fmo_approval_status'])} -->
+    <div class="rp-card-section">
+        <span class="rp-tile-title" data-bind="css: {'empty-section': !sectionHasData}">Initial Project Review</span>
+        <i class="fa report-expander print-hide fa-angle-down" tabindex="0" role="button"
+           data-target="project_details_section" data-bind="onEnterkeyClick, onSpaceClick, visible: sectionHasData,
+                css: {'fa-angle-down': sectionController(), 'fa-angle-right': !sectionController()},
+                click: function() {sectionController(!sectionController());},
+                attr: {
+                    'aria-expanded': sectionController().toString(),
+                    'aria-controls': targetSection,
+                    'aria-label': 'Toggle Initial Project Review section',
+                }
+            "></i>
+
+        <div class="rp-card-section" data-bind="visible: sectionController, attr: {id: targetSection}">
+            <div style="display: inline-flex; width: 100%; justify-content: space-between;"
+                 data-bind="visible: nodesHaveData('initial_review_level_of_risk')">
+                <dl class="dl-horizontal">
+                    <dt>Initial Review Level of Risk</dt>
+                    <dd data-bind="component: { name: 'concept-select-widget',
+                                            params: { value: getFirstNodeValue('initial_review_level_of_risk'), state: 'display_value'}
+                                            }"></dd>
+                </dl>
+            </div>
+        </div>
+
+        <div class="rp-card-section" data-bind="visible: sectionController, attr: {id: targetSection}">
+            <div style="display: inline-flex; width: 100%; justify-content: space-between;"
+                 data-bind="visible: nodesHaveData('initial_review_outcome')">
+                <dl class="dl-horizontal">
+                    <dt>Initial Review Outcome</dt>
+                    <dd data-bind="component: { name: 'text-widget',
+                                            params: { value: ko.unwrap(getFirstNodeValue('initial_review_outcome')), state: 'display_value'}
+                                            }"></dd>
+                </dl>
+            </div>
+        </div>
+    </div>
+    <!-- /ko -->
+
+    <!-- ko let: {targetSection: 'psr_section', sectionController: psrVisible,
+    sectionHasData: nodesHaveData(['psr_number','psr_recommendations','psr_fmo_approval_status'])} -->
+    <div class="rp-card-section">
+        <span class="rp-tile-title" data-bind="css: {'empty-section': !sectionHasData}">Preliminary Study Report (PSR)</span>
+        <i class="fa report-expander print-hide fa-angle-down" tabindex="0" role="button"
+           data-target="project_details_section" data-bind="onEnterkeyClick, onSpaceClick, visible: sectionHasData,
+                css: {'fa-angle-down': sectionController(), 'fa-angle-right': !sectionController()},
+                click: function() {sectionController(!sectionController());},
+                attr: {
+                    'aria-expanded': sectionController().toString(),
+                    'aria-controls': targetSection,
+                    'aria-label': 'Toggle PSR section',
+                }
+           "></i>
+
+        <div class="rp-card-section" data-bind="visible: sectionController, attr: {id: targetSection}">
+            <div style="display: inline-flex; width: 100%; justify-content: space-between;"
+                 data-bind="visible: nodesHaveData('psr_number')">
+                <dl class="dl-horizontal">
+                    <dt>PSR Number</dt>
+                    <dd data-bind="component: { name: 'text-widget',
+                                            params: { value: ko.unwrap(getFirstNodeValue('psr_number')), state: 'display_value'}
+                                            }"></dd>
+                </dl>
+            </div>
+            <div style="display: inline-flex; width: 100%; justify-content: space-between;"
+                 data-bind="visible: nodesHaveData('psr_recommendations')">
+                <dl class="dl-horizontal">
+                    <dt>PSR Recommendations</dt>
+                    <dd data-bind="component: { name: 'text-widget',
+                                            params: { value: ko.unwrap(getFirstNodeValue('psr_recommendations')), state: 'display_value'}
+                                            }"></dd>
+                </dl>
+            </div>
+            <div style="display: inline-flex; width: 100%; justify-content: space-between;"
+                 data-bind="visible: nodesHaveData('psr_fmo_approval_status')">
+                <dl class="dl-horizontal">
+                    <dt>PSR FMO Approval Status</dt>
+                    <dd>
+                        <div data-bind="text: getFirstBooleanValueLabel('psr_fmo_approval_status')"></div>
+                    </dd>
+                </dl>
+            </div>
+        </div>
+
+    </div>
+    <!-- /ko -->
+
+    <!-- ko let: {targetSection: 'fia_section', sectionController: fiaVisible,
+    sectionHasData: nodesHaveData(['fiap_report_number','fiap_report_recommendations','fiap_fmo_approval_status','fia_report_number','fia_report_recommendations','fia_fmo_approval_status'])} -->
+    <div class="rp-card-section">
+        <span class="rp-tile-title" data-bind="css: {'empty-section': !sectionHasData}">Fossil Impact Assessment (FIA)</span>
+        <i class="fa report-expander print-hide fa-angle-down" tabindex="0" role="button"
+           data-target="project_details_section" data-bind="onEnterkeyClick, onSpaceClick, visible: sectionHasData,
+                css: {'fa-angle-down': sectionController(), 'fa-angle-right': !sectionController()},
+                click: function() {sectionController(!sectionController());},
+                attr: {
+                    'aria-expanded': sectionController().toString(),
+                    'aria-controls': targetSection,
+                    'aria-label': 'Toggle FIA section',
+                }
+            "></i>
+
+        <div class="rp-card-section" data-bind="visible: sectionController, attr: {id: targetSection}">
+            <div style="display: inline-flex; width: 100%; justify-content: space-between;"
+                 data-bind="visible: nodesHaveData('fiap_report_number')">
+                <dl class="dl-horizontal">
+                    <dt>FIA Plan Report Number</dt>
+                    <dd data-bind="component: { name: 'text-widget',
+                                            params: { value: ko.unwrap(getFirstNodeValue('fiap_report_number')), state: 'display_value'}
+                                            }"></dd>
+                </dl>
+            </div>
+            <div style="display: inline-flex; width: 100%; justify-content: space-between;"
+                 data-bind="visible: nodesHaveData('fiap_report_recommendations')">
+                <dl class="dl-horizontal">
+                    <dt>FIA Plan Report Recommendations</dt>
+                    <dd data-bind="component: { name: 'text-widget',
+                                            params: { value: ko.unwrap(getFirstNodeValue('fiap_report_recommendations')), state: 'display_value'}
+                                            }"></dd>
+                </dl>
+            </div>
+            <div style="display: inline-flex; width: 100%; justify-content: space-between;"
+                 data-bind="visible: nodesHaveData('fiap_fmo_approval_status')">
+                <dl class="dl-horizontal">
+                    <dt>FIA Plan FMO Approval Status</dt>
+                    <dd>
+                        <div data-bind="text: getFirstBooleanValueLabel('fiap_fmo_approval_status')"></div>
+                    </dd>
+
+                </dl>
+            </div>
+            <div style="display: inline-flex; width: 100%; justify-content: space-between;"
+                 data-bind="visible: nodesHaveData('fia_report_number')">
+                <dl class="dl-horizontal">
+                    <dt>FIA Report Number</dt>
+                    <dd data-bind="component: { name: 'text-widget',
+                                            params: { value: ko.unwrap(getFirstNodeValue('fia_report_number')), state: 'display_value'}
+                                            }"></dd>
+                </dl>
+            </div>
+            <div style="display: inline-flex; width: 100%; justify-content: space-between;"
+                 data-bind="visible: nodesHaveData('fia_report_recommendations')">
+                <dl class="dl-horizontal">
+                    <dt>FIA Report Recommendations</dt>
+                    <dd data-bind="component: { name: 'text-widget',
+                                            params: { value: ko.unwrap(getFirstNodeValue('fia_report_recommendations')), state: 'display_value'}
+                                            }"></dd>
+                </dl>
+            </div>
+            <div style="display: inline-flex; width: 100%; justify-content: space-between;"
+                 data-bind="visible: nodesHaveData('fia_fmo_approval_status')">
+                <dl class="dl-horizontal">
+                    <dt>FIA FMO Approval Status</dt>
+                    <dd>
+                        <div data-bind="text: getFirstBooleanValueLabel('fia_fmo_approval_status')"></div>
+                    </dd>
+                </dl>
+            </div>
+        </div>
+    </div>
+    <!-- /ko -->
+
+    <!-- ko let: {targetSection: 'cfp_section', sectionController: cfpVisible,
+    sectionHasData: nodesHaveData(['cfp_number','cfp_approval_status'])} -->
+    <div class="rp-card-section">
+        <span class="rp-tile-title" data-bind="css: {'empty-section': !sectionHasData}">Chance Find Protocol (CFP)</span>
+        <i class="fa report-expander print-hide fa-angle-down" tabindex="0" role="button"
+           data-target="project_details_section" data-bind="onEnterkeyClick, onSpaceClick, visible: sectionHasData,
+                css: {'fa-angle-down': sectionController(), 'fa-angle-right': !sectionController()},
+                click: function() {sectionController(!sectionController());},
+                attr: {
+                    'aria-expanded': sectionController().toString(),
+                    'aria-controls': targetSection,
+                    'aria-label': 'Toggle PSR section',
+                }
+            "></i>
+
+        <div class="rp-card-section" data-bind="visible: sectionController, attr: {id: targetSection}">
+            <div style="display: inline-flex; width: 100%; justify-content: space-between;"
+                 data-bind="visible: nodesHaveData('cfp_number')">
+                <dl class="dl-horizontal">
+                    <dt>CFP Number</dt>
+                    <dd data-bind="component: { name: 'text-widget',
+                                            params: { value: ko.unwrap(getFirstNodeValue('cfp_number')), state: 'display_value'}
+                                            }"></dd>
+                </dl>
+            </div>
+            <div style="display: inline-flex; width: 100%; justify-content: space-between;"
+                 data-bind="visible: nodesHaveData('cfp_approval_status')">
+                <dl class="dl-horizontal">
+                    <dt>CFP Approval Status</dt>
+                    <dd>
+                        <div data-bind="text: getFirstBooleanValueLabel('cfp_approval_status')"></div>
+                    </dd>
+                </dl>
+            </div>
+        </div>
+
+    </div>
+    <!-- /ko -->
+
+    <!-- ko let: {targetSection: 'imp_section', sectionController: impVisible,
+    sectionHasData: nodesHaveData(['imp_report_number','imp_recommendations','imp_fmo_approval_status','imfr_number','imfr_fmo_approval_status'])} -->
+    <div class="rp-card-section">
+        <span class="rp-tile-title" data-bind="css: {'empty-section': !sectionHasData}">Impact Mitigation Process (IMP)</span>
+        <i class="fa report-expander print-hide fa-angle-down" tabindex="0" role="button"
+           data-target="project_details_section" data-bind="onEnterkeyClick, onSpaceClick, visible: sectionHasData,
+                css: {'fa-angle-down': sectionController(), 'fa-angle-right': !sectionController()},
+                click: function() {sectionController(!sectionController());},
+                attr: {
+                    'aria-expanded': sectionController().toString(),
+                    'aria-controls': targetSection,
+                    'aria-label': 'Toggle FIA section',
+                }
+            "></i>
+
+        <div class="rp-card-section" data-bind="visible: sectionController, attr: {id: targetSection}">
+            <div style="display: inline-flex; width: 100%; justify-content: space-between;"
+                 data-bind="visible: nodesHaveData('imp_report_number')">
+                <dl class="dl-horizontal">
+                    <dt>IMP Report Number</dt>
+                    <dd data-bind="component: { name: 'text-widget',
+                                            params: { value: ko.unwrap(getFirstNodeValue('imp_report_number')), state: 'display_value'}
+                                            }"></dd>
+                </dl>
+            </div>
+            <div style="display: inline-flex; width: 100%; justify-content: space-between;"
+                 data-bind="visible: nodesHaveData('imp_recommendations')">
+                <dl class="dl-horizontal">
+                    <dt>IMP Recommendations</dt>
+                    <dd data-bind="component: { name: 'text-widget',
+                                            params: { value: ko.unwrap(getFirstNodeValue('imp_recommendations')), state: 'display_value'}
+                                            }"></dd>
+                </dl>
+            </div>
+            <div style="display: inline-flex; width: 100%; justify-content: space-between;"
+                 data-bind="visible: nodesHaveData('imp_fmo_approval_status')">
+                <dl class="dl-horizontal">
+                    <dt>IMP FMO Approval Status</dt>
+                    <dd>
+                        <div data-bind="text: getFirstBooleanValueLabel('imp_fmo_approval_status')"></div>
+                    </dd>
+                </dl>
+            </div>
+            <div style="display: inline-flex; width: 100%; justify-content: space-between;"
+                 data-bind="visible: nodesHaveData('imfr_number')">
+                <dl class="dl-horizontal">
+                    <dt>IMFR Report Number</dt>
+                    <dd data-bind="component: { name: 'text-widget',
+                                            params: { value: ko.unwrap(getFirstNodeValue('imfr_number')), state: 'display_value'}
+                                            }"></dd>
+                </dl>
+            </div>
+            <div style="display: inline-flex; width: 100%; justify-content: space-between;"
+                 data-bind="visible: nodesHaveData('imfr_fmo_approval_status')">
+                <dl class="dl-horizontal">
+                    <dt>IMFR FMO Approval Status</dt>
+                    <dd>
+                        <div data-bind="text: getFirstBooleanValueLabel('imfr_fmo_approval_status')"></div>
+                    </dd>
+                </dl>
+            </div>
+        </div>
+
+    </div>
+    <!-- /ko -->
+
+    <!-- ko let: {targetSection: 'sap_section', sectionController: sapVisible,
+    sectionHasData: nodesHaveData(['sap_report_number','sap_recommendations','sap_fmo_approval_status','safr_number','safr_fmo_approval_status'])} -->
+    <div class="rp-card-section">
+        <span class="rp-tile-title" data-bind="css: {'empty-section': !sectionHasData}">Site Assessment Process (SAP)</span>
+        <i class="fa report-expander print-hide fa-angle-down" tabindex="0" role="button"
+           data-target="project_details_section" data-bind="onEnterkeyClick, onSpaceClick, visible: sectionHasData,
+                css: {'fa-angle-down': sectionController(), 'fa-angle-right': !sectionController()},
+                click: function() {sectionController(!sectionController());},
+                attr: {
+                    'aria-expanded': sectionController().toString(),
+                    'aria-controls': targetSection,
+                    'aria-label': 'Toggle FIA section',
+                }
+            "></i>
+
+        <div class="rp-card-section" data-bind="visible: sectionController, attr: {id: targetSection}">
+            <div style="display: inline-flex; width: 100%; justify-content: space-between;"
+                 data-bind="visible: nodesHaveData('sap_report_number')">
+                <dl class="dl-horizontal">
+                    <dt>SAP Report Number</dt>
+                    <dd data-bind="component: { name: 'text-widget',
+                                            params: { value: ko.unwrap(getFirstNodeValue('sap_report_number')), state: 'display_value'}
+                                            }"></dd>
+                </dl>
+            </div>
+            <div style="display: inline-flex; width: 100%; justify-content: space-between;"
+                 data-bind="visible: nodesHaveData('sap_recommendations')">
+                <dl class="dl-horizontal">
+                    <dt>SAP Recommendations</dt>
+                    <dd data-bind="component: { name: 'text-widget',
+                                            params: { value: ko.unwrap(getFirstNodeValue('sap_recommendations')), state: 'display_value'}
+                                            }"></dd>
+                </dl>
+            </div>
+            <div style="display: inline-flex; width: 100%; justify-content: space-between;"
+                 data-bind="visible: nodesHaveData('sap_fmo_approval_status')">
+                <dl class="dl-horizontal">
+                    <dt>SAP FMO Approval Status</dt>
+                    <dd>
+                        <div data-bind="text: getFirstBooleanValueLabel('sap_fmo_approval_status')"></div>
+                    </dd>
+                </dl>
+            </div>
+            <div style="display: inline-flex; width: 100%; justify-content: space-between;"
+                 data-bind="visible: nodesHaveData('safr_number')">
+                <dl class="dl-horizontal">
+                    <dt>SAFR Report Number</dt>
+                    <dd data-bind="component: { name: 'text-widget',
+                                            params: { value: ko.unwrap(getFirstNodeValue('safr_number')), state: 'display_value'}
+                                            }"></dd>
+                </dl>
+            </div>
+            <div style="display: inline-flex; width: 100%; justify-content: space-between;"
+                 data-bind="visible: nodesHaveData('safr_fmo_approval_status')">
+                <dl class="dl-horizontal">
+                    <dt>SAFR FMO Approval Status</dt>
+                    <dd>
+                        <div data-bind="text: getFirstBooleanValueLabel('safr_fmo_approval_status')"></div>
+                    </dd>
+                </dl>
+            </div>
+        </div>
+    </div>
+    <!-- /ko -->
+</div>

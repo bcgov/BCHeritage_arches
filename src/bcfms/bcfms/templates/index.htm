@@ -91,15 +91,17 @@ along with this program. If not, see <http://www.gnu.org/licenses/>.
                         <a href="{% url 'resource' %}" target="_blank">{% trans "Manage" %}</a>
                     </li>
                     {% endif %}
-                    {% if user.username  %}
+                    {% if user.username and user.username != 'anonymous' %}
                     <li>
                         <a class="auth-welcome" href="{% url 'user_profile_manager' %}">
                             {% trans "Welcome, " %} {{ user.first_name|default:user.username }}
                         </a>
                     </li>
-                    <!--li>
-                        <a class="application-login" href="{% url 'auth' %}?next={% url 'home' %}{% if user.username != 'anonymous' %}&logout=true{% endif %}">{% trans 'Log off' %}</a>
-                    </li-->
+                    {% endif %}
+                    {% if not user.username or user.username == 'anonymous' %}
+                    <li>
+                        <a class="application-login" href="{% url 'auth' %}?next={% url 'home' %}">{% trans 'Log in' %}</a>
+                    </li>
                     {% endif %}
                     {% if show_language_swtich %}
                     <li>
@@ -151,11 +153,6 @@ along with this program. If not, see <http://www.gnu.org/licenses/>.
                     <li>
                         <a class="vertical-nav-list-link" href="#info-block-4" data-number="5" aria-label="Go to the workflow section">
                             <span class="vertical-nav-list-ref">{% trans "Workflow" %}</span>
-                        </a>
-                    </li>
-                    <li>
-                        <a class="vertical-nav-list-link" href="#info-block-5" data-number="6" aria-label="Go to the mobile section">
-                            <span class="vertical-nav-list-ref">{% trans "Mobile" %}</span>
                         </a>
                     </li>
                 </ul>
@@ -256,7 +253,7 @@ along with this program. If not, see <http://www.gnu.org/licenses/>.
                         </p>
                         <figure class="splash-img">
                             <img src="{% webpack_static 'img/front/2023-04-01_screenshot_search.png' %}"  alt="Arches Designer">
-                            <figcaption style="color: red">{% trans "Figure 2. Need text." %}</figcaption>
+                            <figcaption>{% trans "Figure 2. BC map with fossil collection events." %}</figcaption>
                         </figure>
                     </div>
                 </div>
@@ -266,9 +263,6 @@ along with this program. If not, see <http://www.gnu.org/licenses/>.
                         <h4 class="app-info-block-title">{% trans "Data Discovery and Search" %}</h4>
                         <p class="app-info-block-text">
                             {% trans "The data can be explored in a general way by using the Map view. With the Fossil Collection Event overlay on, you can view information by clicking on a fossil location (orange dots) and see a Map Pop-up with brief information. Selecting the word Report at the bottom of the pop-up card will provide details about the event." %}
-                        </p>
-                        <p class="app-info-block-text" style="color: red">
-                            {% trans "Insert image once we have Report formatted" %}
                         </p>
                         <p class="app-info-block-text">
                             {% trans "The data can be searched in more detail by using the Search function in two ways:" %}
@@ -281,10 +275,6 @@ along with this program. If not, see <http://www.gnu.org/licenses/>.
                                 {% trans "Alternatively, you can start in the central screen, where you will see the Advanced Search function tab on the top of the screen. This allows you to apply filters to find fossil occurrences such as by location, time, geology, collector, or taxonomy. Each of these attributes is related to information stored under the blue tab called Resource Types." %}
                             </li>
                         </ol>
-                        <figure class="splash-img">
-                            <img src="{% webpack_static 'img/front/2023-04-01_screenshot_search.png' %}"  alt="Arches Designer">
-                            <figcaption style="color: red">{% trans "Figure 3. Need screen shot. Need caption text." %}</figcaption>
-                        </figure>
                     </div>
                 </div>
             </div>
@@ -306,36 +296,6 @@ along with this program. If not, see <http://www.gnu.org/licenses/>.
             </div>
         </section>
         <!-- End Info Block 4 -->
-
-        <!-- Info Block 5 -->
-        <section id="info-block-5" class="app-info-block app-info-content relative">
-            <div>
-                <!-- Heading Info -->
-                <div class="sub-section">
-                </div>
-                <!-- Content -->
-                <div class="row">
-                    <div class="col-md-6 col-lg-4 text-center">
-                        <img class="iphone" src="{% webpack_static 'img/landing/IPhone_8_map.png' %}" alt="Arches Designer">
-                    </div>
-                    <div class="col-md-6 col-lg-8">
-                        <div class="mobile-description-container">
-                            <div class="box-highlight">
-                                <h2 class="app-info-block-title">{% trans "Work on the go..." %}</h2>
-                                <p>
-                                    {% trans "Arches Collector allows you to create new data and edit existing records when you're away from your computer.  Don't worry if you're out of cell or Wi-Fi range.  Create new records, update information, even add new map locations.  Then synch your changes to your Arches application when you re-establish a network connection." %}
-                                </p>
-                                <br>
-                                <p>
-                                    {% trans "Arches Collector is available for iOS and Android devices.  Download the app from your favorite marketplace." %}
-                                </p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
-        <!-- End Info Block 5 -->
     </article>
 </main>
 

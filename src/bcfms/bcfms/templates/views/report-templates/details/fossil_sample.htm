@@ -74,7 +74,7 @@
                 <div class="bc-inline" data-bind="visible: getFirstNodeValue('repository_uncertain')">?</div>
                 <div data-bind="component: {
                     name: 'text-widget',
-                    params: { value: getFirstNodeValue('storage_reference'), state: 'display_value' }
+                    params: { value: ko.unwrap(getFirstNodeValue('storage_reference')), state: 'display_value' }
                     }">
                 </div>
             </dd>
@@ -172,7 +172,7 @@
                 </div>
                 <div data-bind="visible: nodesHaveData(['fossil_part_details']),
                                 component: { name: 'text-widget',
-                                            params: { value: getFirstNodeValue('fossil_part_details'), state: 'display_value' }
+                                            params: { value: ko.unwrap(getFirstNodeValue('fossil_part_details')), state: 'display_value' }
                                             }">
                 </div>
             </dd>
@@ -187,7 +187,7 @@
                                   params: { value: getFirstNodeValue('trace_fossil'), state: 'display_value' }
                                   }"></div>
                 <div data-bind="component: { name: 'text-widget',
-                                            params: { value: getFirstNodeValue('trace_fossil_details'), state: 'display_value' }
+                                            params: { value: ko.unwrap(getFirstNodeValue('trace_fossil_details')), state: 'display_value' }
                                             }">
                 </div>
             </dd>
@@ -220,7 +220,7 @@
             <dt>Fossil Notes</dt>
             <dd>
                 <div data-bind="component: { name: 'text-widget',
-                                            params: { value: getFirstNodeValue('fossil_notes'), state: 'display_value' }
+                                            params: { value: ko.unwrap(getFirstNodeValue('fossil_notes')), state: 'display_value' }
                                             }"></div>
             </dd>
         </dl>

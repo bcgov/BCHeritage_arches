@@ -87,7 +87,7 @@
             <dt>Publication Identifier</dt>
             <dd>
                 <div class="bc-inline" data-bind="component: { name: 'text-widget',
-                                            params: { value: getFirstNodeValue('publication_identifier'), state: 'display_value' }
+                                            params: { value: ko.unwrap(getFirstNodeValue('publication_identifier')), state: 'display_value' }
                                             }, visible: nodesHaveData(['publication_identifier'])">
                 </div>
                 <div class="bc-inline publication-identifier-type" data-bind="component: { name: 'concept-select-widget',
