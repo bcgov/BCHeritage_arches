@@ -388,11 +388,11 @@ EMAIL_HOST_USER = "Fossil.Management@gov.bc.ca"
 
 DEFAULT_FROM_EMAIL = EMAIL_HOST_USER
 
+CELERY_WORKER_NAME = get_env_variable("CELERY_WORKER_NAME")
 CELERY_BROKER_URL = get_env_variable("CELERY_BROKER_URL") # RabbitMQ --> "amqp://guest:guest@localhost",  Redis --> "redis://localhost:6379/0"
 CELERY_ACCEPT_CONTENT = ['json']
 CELERY_RESULT_BACKEND = 'django-db' # Use 'django-cache' if you want to use your cache as your backend
 CELERY_TASK_SERIALIZER = 'json'
-
 
 CELERY_SEARCH_EXPORT_EXPIRES = 24 * 3600  # seconds
 CELERY_SEARCH_EXPORT_CHECK = 3600  # seconds
