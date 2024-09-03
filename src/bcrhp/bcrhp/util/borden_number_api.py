@@ -25,9 +25,9 @@ class BordenNumberApi:
         if not self.geom_node or not self.officially_recognized_node:
             self._datatype_factory = DataTypeFactory()
             graph = models.GraphModel.objects.filter(slug=slugs.HERITAGE_SITE).first()
-            self.geom_node = models.Node.objects.filter(alias=site_aliases.SITE_GEOMETRY,
+            self.geom_node = models.Node.objects.filter(alias=site_aliases.SITE_BOUNDARY,
                                                         graph=graph).first()
-            self.officially_recognized_node = models.Node.objects.filter(alias=site_aliases.OFFICIALLY_RECOGNIZED,
+            self.officially_recognized_node = models.Node.objects.filter(alias=site_aliases.OFFICIALLY_RECOGNIZED_SITE,
                                                                          graph=graph).first()
 
     def _get_borden_grid(self, resourceinstanceid):
