@@ -7,7 +7,6 @@ from arches.app.models.system_settings import settings
 import arches.app.utils.zip as zip_utils
 from arches.app.utils.response import JSONResponse, JSONErrorResponse
 import arches.app.utils.task_management as task_management
-from bcrhp.search.search_export import BCRHPSearchResultsExporter
 import bcrhp.tasks.tasks as tasks
 from tempfile import NamedTemporaryFile
 
@@ -15,6 +14,7 @@ logger = logging.getLogger(__name__)
 
 @group_required("Resource Exporter")
 def export_results(request):
+    from bcrhp.search.search_export import BCRHPSearchResultsExporter
     # Merge the GET and POST data. Arches assumes data is in the GET object
     request.GET = request.GET.copy()
     for key, value in request.POST.items():
