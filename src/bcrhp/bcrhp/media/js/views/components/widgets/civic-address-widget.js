@@ -24,6 +24,12 @@ define(['knockout', 'underscore', 'viewmodels/widget', 'templates/views/componen
                 return namedWidget;
             };
 
+            this.textHasValue = function(textValue, languages = ['en'])
+            {
+                let textObject = ko.unwrap(textValue);
+                return languages.find((language) => !!ko.unwrap(ko.unwrap(textObject) ? textObject[language].value : null));
+            };
+
             this.streetAddress = ko.computed(function()
             {
                 let widget = self.getWidgetWithLabel(self.card(), "street_address");
