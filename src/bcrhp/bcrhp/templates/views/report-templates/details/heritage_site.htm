@@ -21,21 +21,24 @@
                                                 value: tileValues['image_type'],
                                                 state: 'display_value'
                                             }
-                                        }"></span>
+                                        },
+                                        display: !!ko.unwrap(tileValues['image_type'])"></span>
                 <span class="separator photo-caption-part" data-bind="visible: !!tileValues['image_type']() && !!tileValues['image_view']()">,</span>
                 <span class="photo-caption-part" data-bind="component: { name: 'concept-select-widget',
                                             params: {
                                                 value: tileValues['image_view'],
                                                 state: 'display_value'
                                             }
-                                        }"></span>
-                <span class="separator photo-caption-part" data-bind="visible: !!tileValues['image_features']() && (!!tileValues['image_view']() || !!tileValues['image_type']())">,</span>
-                <span class="photo-caption-part" data-bind="component: {name: 'text-widget',
+                                        },
+                                        display: !!tileValues['image_view']()"></span>
+                <span class="separator photo-caption-part" data-bind="visible: $parent.textHasValue(tileValues['image_features']) && (!!tileValues['image_view']() || !!tileValues['image_type']())">,</span>
+                |<span class="photo-caption-part" data-bind="component: {name: 'text-widget',
                                params: {value: ko.unwrap(tileValues['image_features']),
                                         state: 'display_value'
                                         }
-                               }"></span>
-                <span class="separator photo-caption-part" data-bind="visible: !!tileValues['image_features']() && (!!tileValues['image_view']() || !!tileValues['image_type']() || tileValues['image_features']())">,</span>
+                               },
+                                        display: $parent.textHasValue(tileValues['image_features'])"></span>|
+                <span class="separator photo-caption-part" data-bind="visible: (!!$parent.textHasValue(tileValues['image_features']) && (!!tileValues['image_view']() || !!tileValues['image_type']())) && !!ko.unwrap(tileValues['image_date'])">,</span>
                 <span class="photo-caption-part" data-bind="component: { name: 'datepicker-widget',
                                             params: { value: tileValues['image_date'],
                                             node: widget.node,
@@ -43,7 +46,7 @@
                                             }"></span>
             </div>
             <dl class="dl-horizontal">
-            <div data-bind="visible: !!tileValues['copyright']">
+            <div data-bind="visible: $parent.textHasValue(tileValues['copyright'])">
                 <span>Copyright</span>
                 <span data-bind="component: {name: 'text-widget',
                                params: {value: ko.unwrap(tileValues['copyright']),
