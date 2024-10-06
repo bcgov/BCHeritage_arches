@@ -338,49 +338,55 @@
             "></i>
 
     <div class="rp-card-section" data-bind="visible: sectionController, attr: {id: targetSection}">
+        <!-- ko foreach: { data: getValuesFromTiles(['significance_type', 'physical_description', 'heritage_value', 'defining_elements','document_location']), as: 'tileValues' } -->
         <div style="display: inline-flex; width: 100%; justify-content: space-between;">
+
             <dl class="dl-horizontal">
-                <div data-bind="visible: !!nodesHaveData(['significance_type'])">
+                <!-- ko if: $index() != 0 --><hr class="rp-tile-separator"/><!-- /ko -->
+
+                <div data-bind="visible: !!tileValues['significance_type']">
                     <dt>Significance Type</dt>
                     <dd data-bind="component: {name: 'concept-select-widget',
-                                        params: {value: getFirstNodeValue('significance_type'),
+                                        params: { value: tileValues['significance_type'],
                                                  state: 'display_value'}
                                     }"></dd>
                 </div>
-                <div data-bind="visible: !!nodesHaveData(['physical_description'])">
+                <div data-bind="visible: !!tileValues['physical_description']">
                     <dt>Description</dt>
                     <dd data-bind="component: {name: 'rich-text-widget',
-                       params: {value: getFirstNodeValue('physical_description'),
+                       params: {value: tileValues['physical_description'],
                                 state: 'display_value',
                                 displayfullvalue: true}
                        }"></dd>
                 </div>
-                <div data-bind="visible: !!nodesHaveData(['heritage_value'])">
+                <div data-bind="visible: !!tileValues['heritage_value']">
                     <dt>Heritage Value</dt>
                     <dd data-bind="component: {name: 'rich-text-widget',
-                       params: {value: getFirstNodeValue('heritage_value'),
+                       params: {value: tileValues['heritage_value'],
                                 state: 'display_value',
                                 displayfullvalue: true}
                        }"></dd>
                 </div>
-                <div data-bind="visible: !!nodesHaveData(['defining_elements'])">
+                <div data-bind="visible: !!tileValues['defining_elements']">
                     <dt>Character Defining Elements</dt>
                     <dd class="print-only" data-bind="component: {name: 'rich-text-widget',
-                       params: {value: getFirstNodeValue('defining_elements'),
+                       params: {value: tileValues['defining_elements'],
                                 state: 'display_value',
                                 displayfullvalue: true}
                        }"></dd>
                 </div>
-                <div data-bind="visible: !!nodesHaveData(['document_location'])">
+                <div data-bind="visible: $parent.textHasValue(tileValues['document_location'])">
+
                     <dt>Document Location</dt>
                     <dd class="print-only" data-bind="component: {name: 'text-widget',
-                       params: {value: ko.unwrap(getFirstNodeValue('document_location')),
+                       params: {value: ko.unwrap(tileValues['document_location']),
                                 state: 'display_value',
                                 displayfullvalue: true}
                        }"></dd>
                 </div>
             </dl>
         </div>
+        <!-- /ko  -->
     </div>
     <!-- /ko -->
 </div>
