@@ -8,6 +8,10 @@
         <span data-bind="text: $root.translations.help"></span>
         <i class="fa fa-question-circle"></i>
     </a>
+    <a data-bind="click: function () { showAllFields(!showAllFields()) }" style="cursor:pointer;">
+        <span data-bind="text: fullViewText"></span>
+        <i class="fa" data-bind="css: {'fa-eye-slash': showAllFields, 'fa-eye': !showAllFields()}"></i>
+    </a>
 </div>
 <div class="data-carousel summary-slider details-site-images" data-bind="descendantsComplete: initCarousel, visible: nodesHaveData(['site_images'])" style="background-color:#f2f2f2;max-width: calc(100vw - 600px);padding:1em">
     <!-- ko let: {widget: getWidgetForAlias('image_date')}-->
@@ -68,7 +72,7 @@
     <!-- /ko -->
     <!-- /ko -->
 </div>
-<div class="rp-card-section" data-bind="css: {'hide-section': !isAnonymous()}">
+<div class="rp-card-section" data-bind="css: {'hide-section': !fullView()}">
     <!-- ko let: {targetSection: 'site_name_section', sectionController: siteNamesVisible} -->
     <span class="rp-tile-title">Site Name</span>
     <i class="fa report-expander print-hide fa-angle-down" tabindex="0" role="button" data-target="site_name_section" data-bind="onEnterkeyClick, onSpaceClick, let: {sectionController: siteNamesVisible, targetSection: 'site_name_section'},
@@ -143,7 +147,7 @@
     <!-- /ko -->
 </div>
 
-<div class="rp-card-section" data-bind="css: {'hide-section': !isAnonymous()}">
+<div class="rp-card-section" data-bind="css: {'hide-section': !fullView()}">
     <!-- ko let: {targetSection: 'borden_number_section', sectionController: bordenNumberVisible} -->
     <span class="rp-tile-title">Site ID Number</span>
     <i class="fa report-expander print-hide fa-angle-down" tabindex="0" role="button" data-target="site_name_section" data-bind="onEnterkeyClick, onSpaceClick, let: {sectionController: siteNamesVisible, targetSection: 'site_name_section'},
@@ -290,7 +294,7 @@
     <!-- /ko -->
 </div>
 
-<div class="rp-card-section" data-bind="css: {'hide-section': !isAnonymous()}, visible: nodesHaveData(['chronology'])">
+<div class="rp-card-section" data-bind="css: {'hide-section': !fullView()}, visible: nodesHaveData(['chronology'])">
     <!-- ko let: {targetSection: 'chronology_section', sectionController: chronologyVisible} -->
     <span class="rp-tile-title">Chronology</span>
     <i class="fa report-expander print-hide fa-angle-down" tabindex="0" role="button" data-target="site_name_section" data-bind="onEnterkeyClick, onSpaceClick, let: {sectionController: siteNamesVisible, targetSection: 'site_name_section'},
@@ -323,7 +327,7 @@
     <!-- /ko -->
 </div>
 
-<div class="rp-card-section" data-bind="css: {'hide-section': !isAnonymous()},
+<div class="rp-card-section" data-bind="css: {'hide-section': !fullView()},
         visible: nodesHaveData(['significance_type','physical_description','heritage_value','defining_elements','document_location'])">
     <!-- ko let: {targetSection: 'sos_section', sectionController: sosVisible} -->
     <span class="rp-tile-title">Statement of Significance</span>
@@ -391,7 +395,7 @@
     <!-- /ko -->
 </div>
 
-<div class="rp-card-section" data-bind="css: {'hide-section': !isAnonymous()}, visible: nodesHaveData(['heritage_category','ownership'])">
+<div class="rp-card-section" data-bind="css: {'hide-section': !fullView()}, visible: nodesHaveData(['heritage_category','ownership'])">
     <!-- ko let: {targetSection: 'heritage_class_section', sectionController: heritageClassVisible} -->
     <span class="rp-tile-title">Heritage Class</span>
     <i class="fa report-expander print-hide fa-angle-down" tabindex="0" role="button" data-target="site_name_section" data-bind="onEnterkeyClick, onSpaceClick, let: {sectionController: siteNamesVisible, targetSection: 'site_name_section'},
@@ -444,7 +448,7 @@
     <!-- /ko -->
 </div>
 
-<div class="rp-card-section" data-bind="css: {'hide-section': !isAnonymous()},
+<div class="rp-card-section" data-bind="css: {'hide-section': !fullView()},
                 visible: nodesHaveData(['functional_category','functional_state'])">
     <!-- ko let: {targetSection: 'heritage_function_section', sectionController: heritageFunctionVisible} -->
     <span class="rp-tile-title">Heritage Function</span>
@@ -490,7 +494,7 @@
     <!-- /ko -->
 </div>
 
-<div class="rp-card-section" data-bind="css: {'hide-section': !isAnonymous()}, visible: nodesHaveData(['heritage_theme'])">
+<div class="rp-card-section" data-bind="css: {'hide-section': !fullView()}, visible: nodesHaveData(['heritage_theme'])">
     <!-- ko let: {targetSection: 'heritage_theme_section', sectionController: heritageThemeVisible} -->
     <span class="rp-tile-title">Heritage Theme</span>
     <i class="fa report-expander print-hide fa-angle-down" tabindex="0" role="button" data-target="site_name_section" data-bind="onEnterkeyClick, onSpaceClick, let: {sectionController: siteNamesVisible, targetSection: 'site_name_section'},
@@ -522,7 +526,7 @@
     </div>
     <!-- /ko -->
 </div>
-    <div class="rp-card-section" data-bind="css: {'hide-section': !isAnonymous()}, visible: nodesHaveData(['external_url'])">
+    <div class="rp-card-section" data-bind="css: {'hide-section': !fullView()}, visible: nodesHaveData(['external_url'])">
         <!-- ko let: {targetSection: 'external_urls_section', sectionController: externalUrlsVisible} -->
         <span class="rp-tile-title">External URLs</span>
         <i class="fa report-expander print-hide fa-angle-down" tabindex="0" role="button" data-target="site_name_section" data-bind="onEnterkeyClick, onSpaceClick,
