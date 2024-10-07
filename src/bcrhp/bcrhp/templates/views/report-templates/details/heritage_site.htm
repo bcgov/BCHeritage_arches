@@ -109,7 +109,8 @@
     <!-- /ko -->
 </div>
 
-<div class="rp-card-section">
+<!-- ko let: { card: getCardWithName(['Heritage Site Location', 'BC Property Address']) } -->
+<div class="rp-card-section" data-bind="visible: card.tiles().length > 0">
     <!-- ko let: {targetSection: 'site_location_section', sectionController: siteLocationVisible} -->
     <span class="rp-tile-title">Heritage Site Location</span>
     <i class="fa report-expander print-hide fa-angle-down" tabindex="0" role="button" data-target="site_name_section" data-bind="onEnterkeyClick, onSpaceClick, let: {sectionController: siteNamesVisible, targetSection: 'site_name_section'},
@@ -124,7 +125,6 @@
 
     <div class="rp-card-section" data-bind="visible: sectionController, attr: {id: targetSection}">
         <div style="display: inline-flex; width: 100%; justify-content: space-between; flex-direction: column;">
-            <!-- ko let: { card: getCardWithName(['Heritage Site Location', 'BC Property Address']) } -->
             <!-- ko foreach: { data: card.tiles, as: 'tile' } -->
             <div class="card-content-section">
             <dl class="dl-horizontal dl-horizontal-bc"
@@ -141,11 +141,11 @@
             </dl>
             </div>
             <!-- /ko -->
-            <!-- /ko -->
         </div>
     </div>
     <!-- /ko -->
 </div>
+<!-- /ko -->
 
 <div class="rp-card-section" data-bind="css: {'hide-section': !fullView()}">
     <!-- ko let: {targetSection: 'borden_number_section', sectionController: bordenNumberVisible} -->

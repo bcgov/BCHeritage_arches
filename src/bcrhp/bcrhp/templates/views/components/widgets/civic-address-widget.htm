@@ -12,11 +12,11 @@
                                                     tile: tile(),
                                                     node: addressPart.node,
                                                     config: addressPart.config,
-                                                    label: addressPart.label(),
                                                     value: tile().data[addressPart.attributes.node_id()],
                                                     state: 'display_value',
                                                 }
-                                            }, click: function(){console.log(card);}">
+                                            }, click: function(){console.log(card);},
+                                             visible:  textHasValue(tile().data[streetAddress().attributes.node_id()])">
         </span>
         <span class="address_separator" data-bind="visible: (textHasValue(tile().data[city().attributes.node_id()]) && textHasValue(tile().data[streetAddress().attributes.node_id()]))">, </span>
         <!-- /ko -->
@@ -27,11 +27,11 @@
                                                 tile: tile(),
                                                 node: addressPart.node,
                                                 config: addressPart.config,
-                                                label: addressPart.label(),
                                                 value: tile().data[addressPart.attributes.node_id()],
                                                 state: 'display_value',
                                             }
-                                        }, click: function(){console.log(card);}"></span>
+                                        }, click: function(){console.log(card);},
+                                         visible:  textHasValue(tile().data[city().attributes.node_id()])"></span>
         <span class="address_separator" data-bind="visible: (!!ko.unwrap(tile().data[province().attributes.node_id()]) && (textHasValue(tile().data[city().attributes.node_id()]) || textHasValue(tile().data[streetAddress().attributes.node_id()])) )">, </span>
         <!-- /ko -->
         <!-- ko let: {addressPart: province()} -->
@@ -41,7 +41,6 @@
                                                     tile: tile(),
                                                     node: addressPart.node,
                                                     config: addressPart.config,
-                                                    label: addressPart.label(),
                                                     value: tile().data[addressPart.attributes.node_id()],
                                                     state: 'display_value',
                                                 }
@@ -67,9 +66,9 @@
     </dd>
 </div>
 <!-- /ko -->
-<div>
+<!-- ko let: {addressPart: location_description()} -->
+<div data-bind="visible: textHasValue(tile().data[addressPart.attributes.node_id()])">
     <dt>Location Description</dt>
-    <!-- ko let: {addressPart: location_description()} -->
     <dd data-bind="component: {
                                             name: addressPart.widgetLookup[addressPart.widget_id()].name,
                                             params: {
@@ -83,6 +82,6 @@
                                             }
                                         }">
     </dd>
-    <!-- /ko -->
 </div>
+<!-- /ko -->
 {% endblock display_value %}
