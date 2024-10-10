@@ -114,6 +114,12 @@ define([
                     return function(){
                         reportDataLoaded(false);
 
+                        reportDataLoaded.subscribe(loaded => {
+                            if (loaded) {
+                                self.details.setupReport(result._source, self.bulkResourceReportCache, self.bulkDisambiguatedResourceInstanceCache);
+                            }
+                        });
+
                         if (!self.bulkDisambiguatedResourceInstanceCache()[resourceId]) {
                             const url = arches.urls.api_bulk_disambiguated_resource_instance + `?v=beta&resource_ids=${resourceId}`;
 
@@ -135,11 +141,7 @@ define([
                             self.shiftFocus('.resource-report');
                         }
 
-                        reportDataLoaded.subscribe(loaded => {
-                            if (loaded) {
-                                self.details.setupReport(result._source, self.bulkResourceReportCache, self.bulkDisambiguatedResourceInstanceCache);
-                            }
-                        });
+
 
                         if (self.selectedTab() !== 'search-result-details') {
                             self.selectedTab('search-result-details');
