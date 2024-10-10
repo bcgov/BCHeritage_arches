@@ -496,6 +496,8 @@ define([
                 const url = arches.urls.search_results+`?id=${resourceinstanceid}&tiles=true`
                 const searchResults = this.filters["search-results"]
                 const instanceCache = searchResults().bulkDisambiguatedResourceInstanceCache;
+                searchResults().selectedTab('search-result-details');
+                searchResults().details.loading(true);
                 if (!instanceCache()[resourceinstanceid])
                 {
                     $.getJSON(url, (resp) => {
