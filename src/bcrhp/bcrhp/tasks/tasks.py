@@ -7,7 +7,7 @@ from django.contrib.auth.models import User
 from django.http import HttpRequest
 from django.utils.translation import gettext as _
 from arches.app.models import models
-from arches.app.tasks import create_user_task_record
+from arches.app.tasks import create_user_task_record, update_user_task_record, log_error
 from arches.app.utils.message_contexts import return_message_context
 from tempfile import NamedTemporaryFile
 
