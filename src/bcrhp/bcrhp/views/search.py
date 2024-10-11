@@ -8,6 +8,7 @@ import arches.app.utils.zip as zip_utils
 from arches.app.utils.response import JSONResponse, JSONErrorResponse
 import arches.app.utils.task_management as task_management
 import bcrhp.tasks.tasks as tasks
+from arches.app.tasks import update_user_task_record, log_error
 from tempfile import NamedTemporaryFile
 
 logger = logging.getLogger(__name__)
@@ -44,8 +45,8 @@ def export_results(request):
                 request_values["path"] = request.get_full_path()
                 result = tasks.export_search_results.apply_async(
                     (request.user.id, request_values, format, report_link),
-                    link=tasks.update_user_task_record.s(),
-                    link_error=tasks.log_error.s(),
+                    link=update_user_task_record.s(),
+                    link_error=log_error.s(),
                 )
                 message = _(
                     "{total} instances have been submitted for export. \
