@@ -387,7 +387,7 @@ if DEBUG is True:
 # EMAIL_USE_TLS = True
 # EMAIL_HOST = 'smtp.gmail.com'
 EMAIL_HOST = 'apps.smtp.gov.bc.ca'
-EMAIL_HOST_USER = "heritage@gov.bc.ca"
+EMAIL_HOST_USER = "BCHistoricPlacesRegister@gov.bc.ca"
 # EMAIL_HOST_PASSWORD = 'xxxxxxx'
 # EMAIL_PORT = 587
 
