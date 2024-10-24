@@ -8,7 +8,9 @@
         <span data-bind="text: $root.translations.help"></span>
         <i class="fa fa-question-circle"></i>
     </a>
-    <a data-bind="click: function () { showAllFields(!showAllFields()) }" style="cursor:pointer;">
+    <a data-bind="click: function () { showAllFields(!showAllFields()) }, hidden: isAnonymous()"
+       style="cursor:pointer;"
+    >
         <span data-bind="text: fullViewText"></span>
         <i class="fa" data-bind="css: {'fa-eye-slash': showAllFields, 'fa-eye': !showAllFields()}"></i>
     </a>
