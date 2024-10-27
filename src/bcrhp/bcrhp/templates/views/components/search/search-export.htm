@@ -178,6 +178,7 @@
                 ></input>
             </div>
         </div>
+        {% if false %}
         <div>
             <div class="instruction">
                     <div class="search-export-instruction-h2 h2">
@@ -188,12 +189,12 @@
                     </div>
             </div>
             <div class="parameter">
-                <input 
-                    class="form-control input-md widget-input" 
+                <input
+                    class="form-control input-md widget-input"
                     data-bind="
                         attr: {
-                            placeholder: $root.translations.noEmailSavedForUser, 
-                            'aria-label': $root.translations.listItemFiveEmailAddress, 
+                            placeholder: $root.translations.noEmailSavedForUser,
+                            'aria-label': $root.translations.listItemFiveEmailAddress,
                             'aria-description': $root.translations.listItemFiveEmailAddressText
                         },
                         textInput: emailInput
@@ -201,6 +202,7 @@
                 ></input>
             </div>
         </div>
+        {% endif %}
         <!-- /ko -->
     </div>
 
