@@ -29,6 +29,4 @@ class BCRHPSearchResultsExporter(SearchResultsExporter):
                 headers.append("resourceid")
                 return super().to_csv(instances, headers, name)
 
-        headers.append("resourceid")
-
         return super().to_csv(instances, headers, name)
