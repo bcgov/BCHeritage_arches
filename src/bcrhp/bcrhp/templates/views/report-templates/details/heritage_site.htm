@@ -28,7 +28,7 @@
                                                 state: 'display_value'
                                             }
                                         },
-                                        display: !!ko.unwrap(tileValues['image_type'])"></span>
+                                        visible: !!ko.unwrap(tileValues['image_type'])"></span>
                 <span class="separator photo-caption-part" data-bind="visible: !!tileValues['image_type']() && !!tileValues['image_view']()">,</span>
                 <span class="photo-caption-part" data-bind="component: { name: 'concept-select-widget',
                                             params: {
@@ -36,15 +36,15 @@
                                                 state: 'display_value'
                                             }
                                         },
-                                        display: !!tileValues['image_view']()"></span>
+                                        visible: !!tileValues['image_view']()"></span>
                 <span class="separator photo-caption-part" data-bind="visible: $parent.textHasValue(tileValues['image_features']) && (!!tileValues['image_view']() || !!tileValues['image_type']())">,</span>
-                |<span class="photo-caption-part" data-bind="component: {name: 'text-widget',
+                <span class="photo-caption-part" data-bind="component: {name: 'text-widget',
                                params: {value: ko.unwrap(tileValues['image_features']),
                                         state: 'display_value'
                                         }
                                },
-                                        display: $parent.textHasValue(tileValues['image_features'])"></span>|
-                <span class="separator photo-caption-part" data-bind="visible: (!!$parent.textHasValue(tileValues['image_features']) && (!!tileValues['image_view']() || !!tileValues['image_type']())) && !!ko.unwrap(tileValues['image_date'])">,</span>
+                               visible: $parent.textHasValue(tileValues['image_features'])"></span>
+                <span class="separator photo-caption-part" data-bind="visible: (!!ko.unwrap(tileValues['image_date']) && ($parent.textHasValue(tileValues['image_features']) || !!tileValues['image_view']() || !!tileValues['image_type']()))">,</span>
                 <span class="photo-caption-part" data-bind="component: { name: 'datepicker-widget',
                                             params: { value: tileValues['image_date'],
                                             node: widget.node,
