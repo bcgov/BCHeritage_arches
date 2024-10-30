@@ -24,9 +24,12 @@ class BCRHPSearchResultsExporter(SearchResultsExporter):
                     results = [dict(zip(columns, row)) for row in cur.fetchall()]
                     return super().to_csv(results, columns, name)
             else:  # We're an authenticated user - show all the nodes
+                has_report_link = len(instances) > 0 and "Link" in instances[0]
                 graph = models.GraphModel.objects.get(slug=GraphSlugs.HERITAGE_SITE)
                 headers = self.return_ordered_header_for_all(graph.graphid)
                 headers.append("resourceid")
+                if has_report_link and ("Link" not in headers):
+                    headers.append("Link")
                 return super().to_csv(instances, headers, name)
 
         return super().to_csv(instances, headers, name)
