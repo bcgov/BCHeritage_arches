@@ -128,7 +128,7 @@ define([
                             $.getJSON(url, (resp) => {
                                 const instanceCache = self.bulkDisambiguatedResourceInstanceCache();
                                 Object.keys(resp).forEach(function(resourceId) {
-                                    instanceCache[resourceId] = resp[resourceId];
+                                    instanceCache[resourceId] = _.extend(resp[resourceId], {"tiles": result._source.tiles});
                                 });
 
                                 reportDataLoaded(true);
