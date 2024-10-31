@@ -5,10 +5,79 @@ from bcrhp.util.bcrhp_aliases import GraphSlugs
 
 
 class BCRHPSearchResultsExporter(SearchResultsExporter):
+    _heritage_site_nodegroups = None
+
+    def flatten_tiles(self, tiles, datatype_factory, compact=True, use_fieldname=False):
+
+        if not self._heritage_site_nodegroups:
+            graph = models.GraphModel.objects.get(slug=GraphSlugs.HERITAGE_SITE)
+            nodes = (
+                models.Node.objects.filter(graph=graph)
+                .exclude(nodegroup__isnull=True)
+                .all()
+            )
+            self._heritage_site_nodegroups = set()
+            for node in nodes:
+                self._heritage_site_nodegroups.add(str(node.nodegroup.nodegroupid))
+
+        feature_collections = {}
+        compacted_data = {}
+        lookup = {}
+        has_geometry = False
+
+        is_heritage_site = (
+            next((x["nodegroup_id"] for x in tiles if x["nodegroup_id"]), None)
+            in self._heritage_site_nodegroups
+        )
+
+        for tile in tiles:  # normalize tile.data to use labels instead of node ids
+            compacted_data["resourceid"] = tile["resourceinstance_id"]
+            for nodeid, value in tile["data"].items():
+                node = self.get_node(nodeid)
+                if node.exportable or (
+                    is_heritage_site and self.search_request.user.is_superuser
+                ):
+                    datatype = datatype_factory.get_instance(node.datatype)
+                    node_value = datatype.get_display_value(tile, node)
+                    label = node.fieldname if use_fieldname is True else node.name
+
+                    if compact:
+                        if node.datatype == "geojson-feature-collection" and node_value:
+                            has_geometry = True
+                            feature_collections = self.get_feature_collections(
+                                tile, node, feature_collections, label, datatype
+                            )
+                        else:
+                            try:
+                                compacted_data[label] += ", " + str(node_value)
+                            except KeyError:
+                                compacted_data[label] = str(node_value)
+                    else:
+                        data[label] = str(node_value)
+
+            if (
+                not compact
+            ):  # add on the cardinality and card_names to the tile for use later on
+                tile["data"] = data
+                card = models.CardModel.objects.get(nodegroup=tile["nodegroup_id"])
+                tile["card_name"] = card.name
+                tile["cardinality"] = node.nodegroup.cardinality
+                tile[card.name] = tile["data"]
+                lookup[tile["tileid"]] = tile
+        if compact:
+            for key, value in feature_collections.items():
+                compacted_data[key] = value["datatype"].transform_export_values(value)
+            compacted_data["has_geometry"] = has_geometry
+            return compacted_data
+
+        resource_json = self.create_resource_json(tiles)
+        return flatten_dict(resource_json)
 
     def to_csv(self, instances, headers, name):
         if name == "Heritage Site":
-            if self.search_request.user.username == "anonymous":  # Anonymous users use the view
+            if (
+                self.search_request.user.username == "anonymous"
+            ):  # Anonymous users use the view
                 collection_ids = [o["resourceid"] for o in instances]
 
                 with connection.cursor() as cur:
@@ -30,6 +99,7 @@ class BCRHPSearchResultsExporter(SearchResultsExporter):
                 headers.append("resourceid")
                 if has_report_link and ("Link" not in headers):
                     headers.append("Link")
+                print("First row: %s" % instances[0])
                 return super().to_csv(instances, headers, name)
 
         return super().to_csv(instances, headers, name)
@@ -38,8 +108,12 @@ class BCRHPSearchResultsExporter(SearchResultsExporter):
         # Copy of the SearchResultsExporter.return_ordered_header() function without filtering by exportable=True
 
         subcard_list_with_sort = []
-        all_cards = models.CardModel.objects.filter(graph=graphid).prefetch_related("nodegroup")
-        all_card_list_with_sort = list(all_cards.exclude(sortorder=None).order_by("sortorder"))
+        all_cards = models.CardModel.objects.filter(graph=graphid).prefetch_related(
+            "nodegroup"
+        )
+        all_card_list_with_sort = list(
+            all_cards.exclude(sortorder=None).order_by("sortorder")
+        )
         card_list_no_sort = list(all_cards.filter(sortorder=None))
         sorted_card_list = []
 
@@ -62,8 +136,12 @@ class BCRHPSearchResultsExporter(SearchResultsExporter):
         def order_cards(subcards_added=True):
             if subcards_added == True:
                 subcards_added = False
-                unsorted_subcards_added = self.insert_subcard_below_parent_card(sorted_card_list, card_list_no_sort, subcards_added)
-                sorted_subcards_added = self.insert_subcard_below_parent_card(sorted_card_list, subcard_list_with_sort, unsorted_subcards_added)
+                unsorted_subcards_added = self.insert_subcard_below_parent_card(
+                    sorted_card_list, card_list_no_sort, subcards_added
+                )
+                sorted_subcards_added = self.insert_subcard_below_parent_card(
+                    sorted_card_list, subcard_list_with_sort, unsorted_subcards_added
+                )
                 order_cards(sorted_subcards_added)
 
         order_cards()
@@ -73,13 +151,19 @@ class BCRHPSearchResultsExporter(SearchResultsExporter):
 
         ordered_list_all_nodes = []
         for sorted_card in sorted_card_list:
-            card_node_objects = list(models.CardXNodeXWidget.objects.filter(card_id=sorted_card.cardid).prefetch_related("node"))
+            card_node_objects = list(
+                models.CardXNodeXWidget.objects.filter(
+                    card_id=sorted_card.cardid
+                ).prefetch_related("node")
+            )
             if len(card_node_objects) > 0:
                 nodes_in_card = []
                 for card_node_object in card_node_objects:
                     if card_node_object.node.datatype != "semantic":
                         nodes_in_card.append(card_node_object)
-                node_object_list_sorted = sorted(nodes_in_card, key=lambda x: x.sortorder)
+                node_object_list_sorted = sorted(
+                    nodes_in_card, key=lambda x: x.sortorder
+                )
                 for sorted_node_object in node_object_list_sorted:
                     ordered_list_all_nodes.append(sorted_node_object)
 
