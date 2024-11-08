@@ -48,12 +48,31 @@ define([
         },
 
         doQuery: function() {
+            var maxUrlLength = 8192;
             const queryObj = JSON.parse(this.queryString());
             if (self.updateRequest) { self.updateRequest.abort(); }
+
+            var request_type = (arches.urls.search_results.length +
+                $.param(this.sharedStateObject.queryString()).split('+').join('%20').length)
+            < maxUrlLength ? "GET" : "POST";
+            var map_filter;
+            var url_data = '';
+            if (request_type === 'POST' && !!this.sharedStateObject.queryString['map-filter'])
+            {
+                map_filter = {'map-filter': this.sharedStateObject.queryString['map-filter'],
+                    'csrfmiddlewaretoken':$("input[name='csrfmiddlewaretoken']")[0].value,
+                };
+                delete this.sharedStateObject.queryString['map-filter'];
+            }
+            else
+            {
+                url_data =  this.sharedStateObject.queryString();
+            }
+
             self.updateRequest = $.ajax({
-                type: "GET",
-                url: arches.urls.search_results,
-                data: queryObj,
+                type: request_type,
+                url: arches.urls.search_results  + (!!url_data ? '?'+new URLSearchParams(url_data).toString() : ''),
+                data: (!!map_filter ? map_filter : queryObj),
                 context: this,
                 success: function(response) {
                     _.each(this.sharedStateObject.searchResults, function(value, key, results) {

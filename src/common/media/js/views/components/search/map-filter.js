@@ -137,15 +137,15 @@ define([
                 val: 'ft'
             }];
 
-                this.geometryOperations = [{
-                    name: 'Intersection',
-                    val: 'intersect'
-                },{
-                    name: 'Union',
-                    val: 'union'
-                }];
+            this.geometryOperations = [{
+                name: 'Intersection',
+                val: 'intersect'
+            },{
+                name: 'Union',
+                val: 'union'
+            }];
 
-                this.hasMultipleGeometries = ko.observable(false);
+            this.hasMultipleGeometries = ko.observable(false);
 
             this.mapLinkData.subscribe(function(data) {
                 this.zoomToGeoJSON(data);
@@ -158,7 +158,7 @@ define([
                 if(this.geoJSONErrors().length === 0){
                     var geoJSON = JSON.parse(geoJSONString);
                     // remove any extra geometries as only one geometry is allowed for search
-                    geoJSON.features = geoJSON.features.slice(0, 1);
+                    // geoJSON.features = geoJSON.features.slice(0, 1);
                     if(geoJSON.features.length > 0){
                         var extent = geojsonExtent(geoJSON);
                         var bounds = new this.mapboxgl.LngLatBounds(extent);
@@ -213,21 +213,21 @@ define([
                         }
                     }
 
-                        if (!!feature.properties && !!feature.properties.geometryOperation){
-                            var geometryOperation = feature.properties.geometryOperation;
-                            try{
-                                if(geometryOperation !== 'intersect' && geometryOperation !== 'union'){
-                                    throw new Error('Whoops!');
-                                }
+                    if (!!feature.properties && !!feature.properties.geometryOperation){
+                        var geometryOperation = feature.properties.geometryOperation;
+                        try{
+                            if(geometryOperation !== 'intersect' && geometryOperation !== 'union'){
+                                throw new Error('Whoops!');
                             }
-                            catch {
-                                hint.push({
-                                    "level": 'warning',
-                                    "message": 'Group operation be either "intersect" or "union"'
-                                });
-                            }
-
                         }
+                        catch {
+                            hint.push({
+                                "level": 'warning',
+                                "message": 'Group operation be either "intersect" or "union"'
+                            });
+                        }
+
+                    }
 
                     if (!!feature.properties && !!feature.properties.inverted){
                         var inverted = feature.properties.inverted;
@@ -336,15 +336,29 @@ define([
             },
              */
 
-            this.filterByFeatureGeom = function(feature) {
-                if (feature.geometry.type == 'Point' && this.buffer() == 0) { this.buffer(25); }
-                // self.searchGeometries.removeAll();
-                // this.draw.deleteAll();
-                this.draw.set({
-                    "type": "FeatureCollection",
-                    "features": [feature]
-                });
-                self.searchGeometries([feature]);
+            /**
+             * Filter by one or more geometries.
+             * @param feature Feature to filter by
+             * @param addToFilter if true, add to any existing features already selected, owtherwise clear selection and
+             * set the feature as the sole geometry filter
+             */
+            this.filterByFeatureGeom = function(feature, addToFilter) {
+                if (feature.geometry.type === 'Point' && this.buffer() === 0) { this.buffer(25); }
+                if (!addToFilter)
+                {
+                    self.searchGeometries.removeAll();
+                    this.draw.deleteAll();
+                    this.draw.set({
+                        "type": "FeatureCollection",
+                        "features": [feature]
+                    });
+                    self.searchGeometries([feature]);
+                }
+                else
+                {
+                    this.draw.add(feature);
+                    self.searchGeometries().push(feature);
+                }
                 self.updateFilter();
             };
 
@@ -431,9 +445,9 @@ define([
                     this.updateFilter();
                 }, this);
 
-                    this.geometryOperation.subscribe(function(val) {
-                        this.updateFilter();
-                    }, this);
+                this.geometryOperation.subscribe(function(val) {
+                    this.updateFilter();
+                }, this);
 
                 this.searchAggregations.subscribe(this.updateSearchResultsLayers, this);
                 if (ko.isObservable(bins)) {
@@ -463,19 +477,23 @@ define([
             });
             this.map().addControl(this.draw);
             this.map().on('draw.create', function(e) {
-                    /*
-                self.draw.getAll().features.forEach(function(feature){
-                    if(feature.id !== e.features[0].id){
-                        self.draw.delete(feature.id);
-                    }
-                });
-            */
-                self.searchGeometries(e.features);
+                /*
+            self.draw.getAll().features.forEach(function(feature){
+                if(feature.id !== e.features[0].id){
+                    self.draw.delete(feature.id);
+                }
+            });
+        */
+                self.searchGeometries().push(...e.features);
                 self.updateFilter();
                 self.selectedTool(undefined);
             });
             this.map().on('draw.update', function(e) {
-                self.searchGeometries(e.features);
+                let updatedGeoms = _.filter(self.searchGeometries(), function (geom) {
+                    return geom.id !== e.features[0].id
+                });
+                updatedGeoms.push(...e.features);
+                self.searchGeometries(updatedGeoms);
                 self.updateFilter();
             });
             this.map().on("draw.modechange", function(e) {
@@ -544,7 +562,7 @@ define([
             }, this);
             this.filter.feature_collection({
                 "type": "FeatureCollection",
-                    "operation": this.geometryOperation(),
+                "operation": this.geometryOperation(),
                 "features": this.searchGeometries()
             });
         },
@@ -611,7 +629,7 @@ define([
             var query = this.query();
             var buffer = 10;
             var bufferUnit = 'm';
-            var geometryOperation = 'intersect';
+            var geometryOperation = 'union';
             var inverted = false;
             var hasSpatialFilter = false;
             if (componentName in query) {
@@ -632,7 +650,7 @@ define([
             // we need to add these observables here AFTER initial values have been discovered
             // because of the race nature of these variables' subscriptions
             this.buffer = ko.observable(buffer).extend({ deferred: true });
-                this.geometryOperation = ko.observable(geometryOperation).extend( {deferred: true})
+            this.geometryOperation = ko.observable(geometryOperation).extend( {deferred: true})
             this.bufferUnit = ko.observable(bufferUnit).extend({ deferred: true });
             this.filter.inverted = ko.observable(inverted).extend({ deferred: true });
             if (hasSpatialFilter) {
@@ -652,7 +670,11 @@ define([
             }
             if(!!this.searchResults[componentName]) {
                 var buffer = this.searchResults[componentName].search_buffer;
-                this.map().getSource('geojson-search-buffer-data').setData(buffer);
+                this.map().getSource('geojson-search-buffer-data').setData(
+                    {
+                        "type": "FeatureCollection",
+                        "features": buffer
+                    });
             }
         },
 
