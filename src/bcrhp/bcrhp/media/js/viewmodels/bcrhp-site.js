@@ -41,6 +41,7 @@ define([
         this.heritageFunctionVisible = ko.observable(true);
         this.heritageThemeVisible = ko.observable(true);
         this.externalUrlsVisible = ko.observable(true);
+        this.showAllFields= ko.observable(false);
 
         this.helpactive = function(state) { this.helpenable(state) };
 
@@ -135,8 +136,8 @@ define([
         this.textHasValue = function(textValue, languages = ['en'])
         {
             let textObject = ko.unwrap(textValue);
-            return languages.find((language) => !!ko.unwrap(ko.unwrap(textObject) ? textObject[language].value : null));
-        }
+            return !! languages.find((language) => !!ko.unwrap(ko.unwrap(textObject) ? textObject[language].value : null));
+        };
 
         this.getFirstNodeValue = function(alias) {
             return ko.observable(getNodeValues(alias)[0]);
@@ -194,6 +195,14 @@ define([
             return user;
         };
         this.user = this.getUser();
+
+        this.fullView = ko.pureComputed(function () {
+            return self.showAllFields() || ko.unwrap(self.isAnonymous);
+        });
+
+        this.fullViewText = ko.pureComputed(function () {
+            return self.fullView() ? 'Hide fields' : 'Show all fields';
+        });
 
         this.isAnonymous = ko.computed( function() {
             return ko.unwrap(this.user.groups).length === 0 || this.user.groups().includes("Guest");

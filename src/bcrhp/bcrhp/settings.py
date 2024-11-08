@@ -31,7 +31,7 @@ except ImportError:
 
 load_dotenv(os.path.join(os.path.split(os.path.dirname(os.path.abspath(__file__)))[0], ".env"))
 APP_NAME = 'bcrhp'
-APP_VERSION = semantic_version.Version(major=1, minor=1, patch=1)
+APP_VERSION = semantic_version.Version(major=1, minor=2, patch=0)
 APP_ROOT = os.path.dirname(os.path.abspath(inspect.getfile(inspect.currentframe())))
 MIN_ARCHES_VERSION = arches.__version__
 MAX_ARCHES_VERSION = arches.__version__
@@ -386,13 +386,15 @@ if DEBUG is True:
 # EMAIL_BACKEND = 'django.core.mail.backends.console.EmailBackend'  #<-- Only need to uncomment this for testing without an actual email server
 # EMAIL_USE_TLS = True
 # EMAIL_HOST = 'smtp.gmail.com'
-EMAIL_HOST_USER = "xxxx@xxx.com"
+EMAIL_HOST = 'apps.smtp.gov.bc.ca'
+EMAIL_HOST_USER = "BCHistoricPlacesRegister@gov.bc.ca"
 # EMAIL_HOST_PASSWORD = 'xxxxxxx'
 # EMAIL_PORT = 587
 
 DEFAULT_FROM_EMAIL = EMAIL_HOST_USER
 
-CELERY_BROKER_URL = "" # RabbitMQ --> "amqp://guest:guest@localhost",  Redis --> "redis://localhost:6379/0"
+CELERY_WORKER_NAME = get_env_variable("CELERY_WORKER_NAME")
+CELERY_BROKER_URL = get_env_variable("CELERY_BROKER_URL") # RabbitMQ --> "amqp://guest:guest@localhost",  Redis --> "redis://localhost:6379/0"
 CELERY_ACCEPT_CONTENT = ['json']
 CELERY_RESULT_BACKEND = 'django-db' # Use 'django-cache' if you want to use your cache as your backend
 CELERY_TASK_SERIALIZER = 'json'

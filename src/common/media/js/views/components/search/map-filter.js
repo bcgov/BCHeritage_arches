@@ -7,6 +7,7 @@ define([
     'views/components/map',
     'views/components/widgets/map/bin-feature-collection',
     'views/components/widgets/map/map-styles',
+    'models/graph',
     'turf',
     'geohash',
     'geojson-extent',
@@ -16,7 +17,7 @@ define([
     'utils/map-filter-utils',
     'utils/resource-geom-callback-factory',
     'templates/views/components/search/map-filter.htm'
-], function ($, _, arches, ko, BaseFilter, MapComponentViewModel, binFeatureCollection, mapStyles, turf, geohash, geojsonExtent, uuid, geojsonhint, popupDataProvider, mapFilterUtils, geomCallbackFactory, defaultMapFilterTemplate) {
+], function ($, _, arches, ko, BaseFilter, MapComponentViewModel, binFeatureCollection, mapStyles, GraphModel, turf, geohash, geojsonExtent, uuid, geojsonhint, popupDataProvider, mapFilterUtils, geomCallbackFactory, defaultMapFilterTemplate) {
     // Overrides the base map-filter.js Allows multiple geometries to be used as the map filter
     //
     // @todo - Need to find a way to extend not just override.
@@ -490,6 +491,61 @@ define([
                 this.searchGeometries([boundsFeature]);
                 this.updateFilter();
                 this.selectedTool(undefined);
+            },
+            showDetailsFromFilter: function(resourceinstanceid) {
+                const url = arches.urls.search_results+`?id=${resourceinstanceid}&tiles=true`
+                const searchResults = this.filters["search-results"]
+                const instanceCache = searchResults().bulkDisambiguatedResourceInstanceCache;
+                searchResults().selectedTab('search-result-details');
+                searchResults().details.loading(true);
+                if (!instanceCache()[resourceinstanceid])
+                {
+                    $.getJSON(url, (resp) => {
+                        const result = resp.results.hits.hits[0];
+                        const graphId = result._source.graph_id;
+                        instanceCache()[resourceinstanceid] = result._source;
+                        searchResults().bulkDisambiguatedResourceInstanceCache(instanceCache());
+                        if (!searchResults().bulkResourceReportCache()[graphId])
+                        {
+                            this.getMissingGraphAndShowReport(graphId, result, searchResults());
+                        }
+                        else
+                        {
+                            // Otherwise load the details page directly
+                            console.log("Showing details from showDetailsFromFilter");
+                            this.filters["search-results"]().showResourceSummaryReport(result)();
+                        }
+                    });
+                }
+                else
+                {
+                    searchResults().showResourceSummaryReport({_source: instanceCache()[resourceinstanceid]})();
+                }
+            },
+            getMissingGraphAndShowReport: function(graphId, resource, searchResults) {
+                if (!!searchResults.bulkResourceReportCache()[graphId])
+                {
+                    return false;
+                }
+                let url = arches.urls.api_bulk_resource_report + `?graph_ids=${[graphId]}`;
+                $.getJSON(url, function(resp) {
+                    var bulkResourceReportCache = searchResults.bulkResourceReportCache();
+
+                    Object.keys(resp).forEach(function(graphId) {
+                        var graphData = resp[graphId];
+
+                        if (graphData.graph) {
+                            graphData['graphModel'] = new GraphModel({
+                                data: graphData.graph,
+                                datatypes: graphData.datatypes
+                            });
+                        }
+                        bulkResourceReportCache[graphId] = graphData;
+                    });
+                    searchResults.bulkResourceReportCache(bulkResourceReportCache);
+                    searchResults.showResourceSummaryReport(resource)();
+                });
+                return true;
             },
 
             showSelectAsFilter: function(feature) {
