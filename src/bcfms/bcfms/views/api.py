@@ -1,22 +1,24 @@
-from bcfms.views.mvt_base import MVTConfig, MVT as MVTCommon
+from django.http import HttpResponse, Http404
+from arches.app.views.api import MVT as MVTBase
 from arches.app.views.api import APIBase
 from arches.app.utils.response import JSONResponse, JSONErrorResponse
 from arches.app.utils.betterJSONSerializer import JSONSerializer, JSONDeserializer
 from bcfms.util.business_data_proxy import FossilSampleDataProxy, CollectionEventDataProxy, IPADataProxy
+from arches.app.models import models
+from bcfms.util.mvt_tiler import MVTTiler
 
-query_config = {
-    '5bfa1354-b6e1-11ee-9438-080027b7463b': ['size_categories'],  # collection_event, collection_location
-    'c66518e2-10c6-11ec-adef-5254008afee6': ['name', 'ranking'],
-    'dd19c7c6-0202-11ed-a511-0050568377a0': ['name', 'ranking'],  # protected_site, area_boundary
-    '2336968c-1035-11ec-a3aa-5254008afee6': ['name', 'ranking'],  # fossil_site, area_boundary
-    '4fe7beb2-1f3a-11ed-a99d-5254008afee6': ['name', 'ranking'],
-}
+class MVT(MVTBase):
 
-mvt_config = MVTConfig(query_config)
-class MVT(MVTCommon):
+    def get(self, request, nodeid, zoom, x, y):
+        if hasattr(request.user, "userprofile") is not True:
+            models.UserProfile.objects.create(user=request.user)
+        viewable_nodegroups = request.user.userprofile.viewable_nodegroups
+        user = request.user
 
-    def get_mvt_config(self):
-        return mvt_config
+        tile = MVTTiler().createTile(nodeid, viewable_nodegroups, user, zoom, x, y)
+        if not tile or not len(tile):
+            raise Http404()
+        return HttpResponse(tile, content_type="application/x-protobuf")
 
 
 class CollectionEventFossilNames(APIBase):

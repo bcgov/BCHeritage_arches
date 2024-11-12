@@ -5,7 +5,8 @@ define([
     'backbone',
     'arches',
     'viewmodels/alert',
-], function($, _, ko, BackBone, arches, AlertViewModel) {
+    'js-cookie',
+], function($, _, ko, BackBone, arches, AlertViewModel, Cookies) {
     return Backbone.View.extend({
         constructor: function() {
             this.name = 'Base Search View';
@@ -49,7 +50,8 @@ define([
 
         doQuery: function() {
             var maxUrlLength = 8192;
-            const queryObj = JSON.parse(this.queryString());
+            // const queryObj = JSON.parse(this.queryString());
+            const queryObj = this.query();
             if (self.updateRequest) { self.updateRequest.abort(); }
 
             var request_type = (arches.urls.search_results.length +
@@ -57,12 +59,12 @@ define([
             < maxUrlLength ? "GET" : "POST";
             var map_filter;
             var url_data = '';
-            if (request_type === 'POST' && !!this.sharedStateObject.queryString['map-filter'])
+            if (request_type === 'POST' && !!queryObj['map-filter'])
             {
-                map_filter = {'map-filter': this.sharedStateObject.queryString['map-filter'],
-                    'csrfmiddlewaretoken':$("input[name='csrfmiddlewaretoken']")[0].value,
+                map_filter = {'map-filter': queryObj['map-filter'],
+                    'csrfmiddlewaretoken': Cookies.get('csrftoken')
                 };
-                delete this.sharedStateObject.queryString['map-filter'];
+                delete this.query()['map-filter'];
             }
             else
             {
