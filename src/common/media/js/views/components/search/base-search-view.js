@@ -50,31 +50,17 @@ define([
 
         doQuery: function() {
             var maxUrlLength = 8192;
-            // const queryObj = JSON.parse(this.queryString());
             const queryObj = this.query();
             if (self.updateRequest) { self.updateRequest.abort(); }
 
             var request_type = (arches.urls.search_results.length +
                 $.param(this.sharedStateObject.queryString()).split('+').join('%20').length)
             < maxUrlLength ? "GET" : "POST";
-            var map_filter;
-            var url_data = '';
-            if (request_type === 'POST' && !!queryObj['map-filter'])
-            {
-                map_filter = {'map-filter': queryObj['map-filter'],
-                    'csrfmiddlewaretoken': Cookies.get('csrftoken')
-                };
-                delete this.query()['map-filter'];
-            }
-            else
-            {
-                url_data =  this.sharedStateObject.queryString();
-            }
 
             self.updateRequest = $.ajax({
                 type: request_type,
-                url: arches.urls.search_results  + (!!url_data ? '?'+new URLSearchParams(url_data).toString() : ''),
-                data: (!!map_filter ? map_filter : queryObj),
+                url: arches.urls.search_results,
+                data: _.extend(queryObj, {'csrfmiddlewaretoken': Cookies.get('csrftoken')}),
                 context: this,
                 success: function(response) {
                     _.each(this.sharedStateObject.searchResults, function(value, key, results) {
@@ -103,7 +89,10 @@ define([
                 },
                 complete: function(request, status) {
                     self.updateRequest = undefined;
-                    window.history.pushState({}, '', '?' + $.param(queryObj).split('+').join('%20'));
+                    if (request_type === "GET")
+                    {
+                        window.history.pushState({}, '', '?' + $.param(queryObj).split('+').join('%20'));
+                    }
                     this.sharedStateObject.loading(false);
                 }
             });
