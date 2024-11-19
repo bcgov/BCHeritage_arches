@@ -7,7 +7,10 @@ from bcfms.views.api import MVT, CollectionEventFossilNames, ReportNumberGenerat
 from bcfms.views.map import BCTileserverProxyView, BCTileserverLocalProxyView
 from bcfms.views.search import export_results as bcfms_export_results
 from bcfms.views.auth import ExternalOauth, UnauthorizedView
+from bcfms.views.root import BcfmsRootView
+from bcfms.views.api2 import user as api_user
 import re
+
 
 uuid_regex = settings.UUID_REGEX
 
@@ -41,6 +44,10 @@ for pattern in bc_url_resolver.url_patterns:
     # print("After: %s" % pattern.pattern)
 
 urlpatterns = [
+    re_path(bc_path_prefix(r"^workflows/"), BcfmsRootView.as_view()),
+
+    path(bc_path_prefix(r"^api/user/"), api_user.UserView.as_view(), name="api_user"),
+
     re_path(
         bc_path_prefix(r"^bctileserver/(?P<path>.*)$"), BCTileserverProxyView.as_view()
     ),
