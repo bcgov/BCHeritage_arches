@@ -1,36 +1,23 @@
 <script setup lang="ts">
-import {computed, ref} from "vue";
+import {computed, ref, provide} from "vue";
 import Stepper from 'primevue/stepper';
 import StepItem from 'primevue/stepitem';
 import Step from 'primevue/step';
 import StepPanel from 'primevue/steppanel';
 import StepperNavigation from '@/bcfms/components/stepper/StepperNavigation.vue';
-import InputText from 'primevue/inputtext';
-import FieldSet from 'primevue/fieldset';
 
 import Panel from 'primevue/panel';
 
 import type { Ref } from "vue";
 import type { StepperProps } from "primevue/stepper";
 import type { StepperState } from "primevue/stepper";
-import LabelledInput from "@/bcfms/components/labelledinput/LabelledInput.vue";
+// import LabelledInput from "@/bcfms/components/labelledinput/LabelledInput.vue";
 
 import IpaSubmitStep1 from "./steps/IpaSubmitStep1.vue";
+import IpaSubmitStep2 from "./steps/IpaSubmitStep2.vue";
 
-// import { useGettext } from "vue3-gettext";
-
-// import { routeNames } from "@/bcfms/routes.ts";
-
-// const { $gettext } = useGettext();
-// const workflowItems = ref([
-//   {
-//     label: $gettext("Industry Project Assessment (IPA)"),
-//     description: $gettext("IPA filings"),
-//     icon: "fa fa-file",
-//     class: "dashboard-card ipa",
-//     routeName: routeNames.ipaWorkflows
-//   },
-// ]);
+import {getIpaSubmission} from "@/bcfms/schema/IpaSchema.ts";
+import type {IpaSubmission} from "@/bcfms/schema/IpaSchema.ts";
 
 function activateStep(step: number) {
   console.log(`Step2!!: ${step}`);
@@ -71,10 +58,8 @@ const currentStep = computed(() => {
 });
 
 const submitted = ref(false);
-const ipaData = ref({
-  projectName: "",
-  companyName: ""
-});
+const ipaData: Ref<IpaSubmission> = ref(getIpaSubmission());
+provide('ipaData',ipaData);
 
 </script>
 <template >
@@ -108,26 +93,7 @@ const ipaData = ref({
       <StepItem :value="2">
         <Step>Project Details</Step>
         <StepPanel v-slot="{ activateCallback }">
-          <div class="flex flex-col h-48">
-            <div class="border-2 border-dashed border-surface-200 dark:border-surface-700 rounded bg-surface-50 dark:bg-surface-950 flex-auto flex justify-center items-center font-medium">
-              <FieldSet legend="Details">
-                <LabelledInput
-                  label="Project Name"
-                  hint="Enter a unique name for your project."
-                  input-name="projectName"
-                  :required="true">
-                  <InputText id="projectName" v-model="ipaData.projectName" aria-describedby="username-help" required aria-required="true" fluid/>
-                </LabelledInput>
-                <LabelledInput
-                    label="Industry Company / Individual / Organization"
-                    hint="Enter the name of the Company / Individual / Organization that is responsible for executing the project."
-                    input-name="companyName"
-                    :required="true">
-                  <InputText id="companyName" v-model="ipaData.companyName" aria-describedby="companyname-help" required aria-required="true" fluid/>
-                </LabelledInput>
-              </FieldSet>
-            </div>
-          </div>
+          <IpaSubmitStep2 ref="steps[1]"></IpaSubmitStep2>
           <div class="flex py-6 gap-2">
             <StepperNavigation
                 :step-number="2"

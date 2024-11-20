@@ -5,7 +5,9 @@ const props = defineProps({
   label: {type: String, default: ""},
   hint: {type: String, default: ""},
   required: {type: Boolean, default: false},
-  inputName: {type: String, default: ""}});
+  inputName: {type: String, default: ""},
+  errorMessage: {type: String, default: ""}}
+);
 import Message from 'primevue/message';
 
 const isRequired = computed(() => {
@@ -21,6 +23,7 @@ const isRequired = computed(() => {
     >{{ props.label }}</label>
     <slot></slot>
     <Message class="label-message" severity="secondary">{{ props.hint }}</Message>
+    <Message class="label-message" severity="error">{{ props.errorMessage }}</Message>
   </div>
 </template>
 
@@ -40,6 +43,7 @@ const isRequired = computed(() => {
    margin-bottom: 0;
    font-weight: 500;
    font-size: .8rem;
+   margin-top: 1rem;
  }
 
 </style>
