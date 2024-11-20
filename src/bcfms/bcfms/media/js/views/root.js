@@ -55,6 +55,10 @@ const BCGovPreset = definePreset(Aura, {
             paddingX: "0.2rem",
             paddingY: "0.2rem"
         },
+        select: {
+            paddingX: "0.2rem",
+            paddingY: "0.2rem"
+        },
         panel: {
             contentPadding: "1.0rem",
             colorScheme: {

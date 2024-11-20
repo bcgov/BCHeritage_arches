@@ -1,5 +1,6 @@
 import arches from "arches";
 import Cookies from "js-cookie";
+import type {Ref} from "vue";
 
 function getToken() {
     const token = Cookies.get("csrftoken");
@@ -31,7 +32,6 @@ export const logout = async () => {
 };
 
 export const fetchUser = async () => {
-    console.log(arches.urls);
     const response = await fetch(arches.urls.api_user);
     const parsed = await response.json();
     if (!response.ok) throw new Error(parsed.message || response.statusText);
@@ -56,9 +56,11 @@ export const fetchSearchResults = async (
     return parsed;
 };
 
-export const fetchConcepts = async () => {
-    const response = await fetch(arches.urls.api_concepts);
-    const parsed = await response.json();
-    if (!response.ok) throw new Error(parsed.message || response.statusText);
-    return parsed;
+export const fetchConcepts = function (concept_id: string, concepts: Ref) {
+    const params = new URLSearchParams({
+        conceptid: concept_id
+    });
+    fetch(`${arches.urls.paged_dropdown}?${params.toString()}`)
+        .then(response => response.json())
+        .then(data => concepts.value = data.results);
 };
