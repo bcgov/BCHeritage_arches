@@ -13,7 +13,10 @@ import {ZodError} from "zod";
 import {fetchConcepts} from "@/bcfms/api.ts";
 
 
-const childIpaData: IpaSubmission = inject('ipaData') as IpaSubmission;
+const childIpaData: IpaSubmission= inject('ipaData') as IpaSubmission;
+
+// This is needed to access the IPA Data in methods? The above appears to be undefined after mounting.
+const childIpaDataRef: Ref<IpaSubmission> = ref(childIpaData);
 
 type FormErrors = Partial<Record<keyof IpaSubmission, string[]>>;
 const errors: Ref<FormErrors> = ref<FormErrors>({});
@@ -28,12 +31,9 @@ const fields = {
 
 const isValid = () => {
   let valid = true;
-  let result;
-  Object.keys(fields).forEach(fieldName => {
-    result = requiredIpaSubmissionSchema.shape[fieldName as keyof IpaSubmission]
-        .safeParse(childIpaData[fieldName as keyof IpaSubmission]);
-    valid = valid && result.success;
-  });
+  for (const field of Object.values(fields)) {
+    valid = validateField(field.value.rootEl as HTMLInputElement) && valid;
+  }
   return valid;
 };
 
@@ -43,7 +43,7 @@ const valueUpdated = function($event: Event, value: string) {
 
 const valueChanged = function(event: Event) {
   console.log(`valueChanged`);
-  validateField(event);
+  validateField(event.target as HTMLInputElement);
 };
 
 const onFocusHandler = function(event: Event) {
@@ -53,25 +53,24 @@ const onFocusHandler = function(event: Event) {
 
 const onFocusOutHandler = function(event: Event) {
   console.log(`onFocusOutHandler`);
-  validateField(event);
+  validateField(event.target as HTMLInputElement);
   // (event.target as HTMLInputElement).classList.remove("p-invalid");
 };
 
-const validateField = function(event: Event) {
-  console.log(`validateField: ${event}`);
-  const target = event.target as HTMLInputElement;
-  const key: keyof IpaSubmission = target.id as keyof IpaSubmission;
-  const fieldValidation = requiredIpaSubmissionSchema.shape[key].safeParse(target.value);
+const validateField = function(field: HTMLInputElement) {
+  const key: keyof IpaSubmission = field.id as keyof IpaSubmission;
+  const fieldValidation = requiredIpaSubmissionSchema.shape[key].safeParse(childIpaDataRef.value[key]);
   if (fieldValidation.success)
   {
-    target.classList.remove("p-invalid");
+    field.classList.remove("p-invalid");
     errors.value[key] = [];
   }
   else
   {
-    target.classList.add("p-invalid");
+    field.classList.add("p-invalid");
     errors.value[key] = (fieldValidation.error as ZodError).flatten().formErrors;
   }
+  return fieldValidation.success;
 };
 
 const projectName = ref();
@@ -92,7 +91,7 @@ onMounted(() => {
 </script>
 <template>
   <div class="flex flex-col h-48">
-    <div>Child {{childIpaData.projectName}}</div>
+    <div>Child {{childIpaData}}</div>
     <div class="border-2 border-dashed border-surface-200 dark:border-surface-700 rounded bg-surface-50 dark:bg-surface-950 flex-auto flex justify-center items-center font-medium">
       <FieldSet legend="Details">
         <LabelledInput

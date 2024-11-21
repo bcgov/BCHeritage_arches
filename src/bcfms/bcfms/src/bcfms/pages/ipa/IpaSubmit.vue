@@ -20,7 +20,7 @@ import {getIpaSubmission} from "@/bcfms/schema/IpaSchema.ts";
 import type {IpaSubmission} from "@/bcfms/schema/IpaSchema.ts";
 
 function activateStep(step: number) {
-  if (!isValid(lastStep))
+  if (step > lastStep && !isValid(lastStep))
   {
     myStepper.value.d_value = lastStep;
   }
