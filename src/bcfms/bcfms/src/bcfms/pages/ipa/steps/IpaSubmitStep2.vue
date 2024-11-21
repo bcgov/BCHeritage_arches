@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import {inject, ref} from "vue";
+import {inject, ref, onMounted} from "vue";
 import type { Ref } from "vue";
 
 import FieldSet from 'primevue/fieldset';
@@ -18,16 +18,23 @@ const childIpaData: IpaSubmission = inject('ipaData') as IpaSubmission;
 type FormErrors = Partial<Record<keyof IpaSubmission, string[]>>;
 const errors: Ref<FormErrors> = ref<FormErrors>({});
 
+const concepts = ref([]);
+// These names need to match the Zog schema
+const fields = {
+  projectName: ref(),
+  companyName: ref(),
+  authorizingAgency: ref()
+};
+
 const isValid = () => {
-  const result = requiredIpaSubmissionSchema.safeParse(childIpaData);
-  const errors = result.success ? {} : result.error.format();
-  if (!result.success)
-  {
-    console.log(errors);
-    // errors.value = error.flatten().fieldErrors;
-  }
-  console.log(`Result ${result}`);
-  return result.success;
+  let valid = true;
+  let result;
+  Object.keys(fields).forEach(fieldName => {
+    result = requiredIpaSubmissionSchema.shape[fieldName as keyof IpaSubmission]
+        .safeParse(childIpaData[fieldName as keyof IpaSubmission]);
+    valid = valid && result.success;
+  });
+  return valid;
 };
 
 const valueUpdated = function($event: Event, value: string) {
@@ -57,6 +64,7 @@ const validateField = function(event: Event) {
   const fieldValidation = requiredIpaSubmissionSchema.shape[key].safeParse(target.value);
   if (fieldValidation.success)
   {
+    target.classList.remove("p-invalid");
     errors.value[key] = [];
   }
   else
@@ -66,15 +74,20 @@ const validateField = function(event: Event) {
   }
 };
 
-const authorizingAgencySelect = ref();
+const projectName = ref();
+const companyName = ref();
+const authorizingAgency = ref();
 
 // This needs to be removed - added because ESLint was complaining. Need to figure out
 // configuration so API methods are not
-isValid();
-defineExpose(["isValid"]) ;
+defineExpose({isValid}) ;
 
-const concepts = ref([]);
 fetchConcepts("6021f510-ec29-4cd5-a7c4-e971ac7d9cf8", concepts);
+onMounted(() => {
+  fields.projectName = projectName;
+  fields.companyName = companyName;
+  fields.authorizingAgency = authorizingAgency;
+});
 
 </script>
 <template>
@@ -90,9 +103,10 @@ fetchConcepts("6021f510-ec29-4cd5-a7c4-e971ac7d9cf8", concepts);
             :required="true">
           <InputText
               id="projectName"
+              ref="projectName"
               v-model="childIpaData.projectName"
               aria-describedby="username-help"
-              required aria-required="true"
+              aria-required="true"
               fluid
               @change="valueChanged"
               @focus="onFocusHandler"
@@ -109,9 +123,9 @@ fetchConcepts("6021f510-ec29-4cd5-a7c4-e971ac7d9cf8", concepts);
             :required="true">
           <InputText
               id="companyName"
+              ref="companyName"
               v-model="childIpaData.companyName"
               aria-describedby="companyname-help"
-              required
               aria-required="true"
               fluid
               @change="valueChanged"
@@ -127,14 +141,13 @@ fetchConcepts("6021f510-ec29-4cd5-a7c4-e971ac7d9cf8", concepts);
             :required="true">
           <Select
               id="authorizingAgency"
-              ref="authorizingAgencySelect"
+              ref="authorizingAgency"
               :options="concepts"
               option-value="conceptid"
               option-label="text"
               placeholder="Select Agency"
               v-model="childIpaData.authorizingAgency"
               aria-describedby="authorizing-agency-help"
-              required
               aria-required="true"
               fluid
           />
