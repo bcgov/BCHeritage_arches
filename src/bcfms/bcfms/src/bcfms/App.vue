@@ -71,9 +71,9 @@ router.beforeEach(async (to, _from, next) => {
 <template>
     <main>
         <PageHeader v-if="route.meta.shouldShowNavigation" />
-        <div style="display: flex; flex: auto; flex-direction: row">
+        <div style="display: flex; flex: auto; margin-top: 50px; flex-direction: row">
             <SideNav v-if="route.meta.shouldShowNavigation" />
-            <div style="flex: auto; margin-top: 50px;">
+            <div class="bcgov-main-content" style="flex: auto; background-color: #e9e9e9">
                 <RouterView />
             </div>
         </div>

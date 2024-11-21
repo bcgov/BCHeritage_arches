@@ -1,9 +1,10 @@
 <script setup lang="ts">
 import {computed, ref, provide, onMounted} from "vue";
 import Stepper from 'primevue/stepper';
-import StepItem from 'primevue/stepitem';
 import Step from 'primevue/step';
 import StepPanel from 'primevue/steppanel';
+import StepList from 'primevue/steplist';
+import StepPanels from 'primevue/steppanels';
 import StepperNavigation from '@/bcfms/components/stepper/StepperNavigation.vue';
 
 import Panel from 'primevue/panel';
@@ -18,6 +19,16 @@ import IpaSubmitStep2 from "./steps/IpaSubmitStep2.vue";
 
 import {getIpaSubmission} from "@/bcfms/schema/IpaSchema.ts";
 import type {IpaSubmission} from "@/bcfms/schema/IpaSchema.ts";
+
+const activateNextStep = () =>
+{
+  myStepper.value.d_value++;
+};
+
+const activatePreviousStep = () =>
+{
+  myStepper.value.d_value--;
+};
 
 function activateStep(step: number) {
   if (step > lastStep && !isValid(lastStep))
@@ -53,6 +64,11 @@ const myStepper = ref();
 
 const step1= ref();
 const step2= ref();
+const step3= ref();
+const step4= ref();
+const step5= ref();
+const step6= ref();
+const step7= ref();
 
 const steps: Ref[] = [];
 
@@ -72,14 +88,23 @@ provide('ipaData',ipaData);
 
 onMounted(() =>
 {
-  steps.push(step1, step2);
+  steps.push(step1, step2, step3, step4, step5, step6, step7);
+});
+
+const nextLabel = computed(() => {
+  if (currentStep.value === steps.length) return "Print";
+  return currentStep.value < steps.length - 1 ? "Next" : "Submit";
+});
+
+const showPrevious = computed(() => {
+  return !(currentStep.value === steps.length || currentStep.value === 1);
 });
 
 </script>
 
 <template >
   <Panel header="Submit New Project" class="full-height">
-    <div>Step: {{currentStep}}</div>
+    <div style="display: none">Step: {{currentStep}}</div>
     <Stepper
         ref=myStepper
         :state=stepperState
@@ -89,9 +114,31 @@ onMounted(() =>
         @update:value="activateStep"
         :ptOptions=stepperOptions
     >
-      <StepItem :value="1">
-        <Step>Submission Information</Step>
-        <StepPanel v-slot="{ activateCallback }">
+      <div class="bcgov-stepper">
+      <div class="bcgov-vertical-steps">
+        <StepList>
+          <Step :value="1">Submission Information</Step>
+          <Step :value="2">Project Details</Step>
+          <Step :value="3">Project Type</Step>
+          <Step :value="4">Location</Step>
+          <Step :value="5">Documents</Step>
+          <Step :value="6">Review Submission</Step>
+          <Step :value="7">Submission Complete</Step>
+        </StepList>
+      </div>
+      <div class="bcgov-verical-step_panels">
+        <div class="py-6">
+          <StepperNavigation
+              :step-number="currentStep"
+              :validate-fn="isValid"
+              :show-previous="showPrevious"
+              :next-label="nextLabel"
+              @next-click="activateNextStep"
+              @previous-click="activatePreviousStep"
+          ></StepperNavigation>
+        </div>
+      <StepPanels>
+        <StepPanel :value="1" v-slot="{ activateCallback }">
           <IpaSubmitStep1 ref="step1"></IpaSubmitStep1>
           <div class="py-6">
             <StepperNavigation
@@ -102,10 +149,7 @@ onMounted(() =>
             ></StepperNavigation>
           </div>
         </StepPanel>
-      </StepItem>
-      <StepItem :value="2">
-        <Step>Project Details</Step>
-        <StepPanel v-slot="{ activateCallback }">
+        <StepPanel :value="2" v-slot="{ activateCallback }">
           <IpaSubmitStep2 ref="step2"></IpaSubmitStep2>
           <div class="flex py-6 gap-2">
             <StepperNavigation
@@ -116,10 +160,7 @@ onMounted(() =>
             ></StepperNavigation>
           </div>
         </StepPanel>
-      </StepItem>
-      <StepItem :value="3">
-        <Step>Project Type</Step>
-        <StepPanel v-slot="{ activateCallback }">
+        <StepPanel :value="3" v-slot="{ activateCallback }">
           <div class="flex flex-col h-48">
             <div class="border-2 border-dashed border-surface-200 dark:border-surface-700 rounded bg-surface-50 dark:bg-surface-950 flex-auto flex justify-center items-center font-medium">
               Project Type
@@ -134,11 +175,8 @@ onMounted(() =>
             ></StepperNavigation>
           </div>
         </StepPanel>
-      </StepItem>
 
-      <StepItem :value="4">
-        <Step>Location</Step>
-        <StepPanel v-slot="{ activateCallback }">
+        <StepPanel :value="4" v-slot="{ activateCallback }">
           <div class="flex flex-col h-48">
             <div class="border-2 border-dashed border-surface-200 dark:border-surface-700 rounded bg-surface-50 dark:bg-surface-950 flex-auto flex justify-center items-center font-medium">
               Location
@@ -153,11 +191,8 @@ onMounted(() =>
             ></StepperNavigation>
           </div>
         </StepPanel>
-      </StepItem>
 
-      <StepItem :value="5">
-        <Step>Documents</Step>
-        <StepPanel v-slot="{ activateCallback }">
+        <StepPanel :value="5" v-slot="{ activateCallback }">
           <div class="flex flex-col h-48">
             <div class="border-2 border-dashed border-surface-200 dark:border-surface-700 rounded bg-surface-50 dark:bg-surface-950 flex-auto flex justify-center items-center font-medium">
               Documents
@@ -172,11 +207,8 @@ onMounted(() =>
             ></StepperNavigation>
           </div>
         </StepPanel>
-      </StepItem>
 
-      <StepItem :value="6">
-        <Step>Review Submission</Step>
-        <StepPanel v-slot="{ activateCallback }">
+        <StepPanel :value="6" v-slot="{ activateCallback }">
           <div class="flex flex-col h-48">
             <div class="border-2 border-dashed border-surface-200 dark:border-surface-700 rounded bg-surface-50 dark:bg-surface-950 flex-auto flex justify-center items-center font-medium">Content III</div>
           </div>
@@ -190,10 +222,7 @@ onMounted(() =>
             ></StepperNavigation>
           </div>
         </StepPanel>
-      </StepItem>
-      <StepItem :value="7">
-        <Step>Submission Complete</Step>
-        <StepPanel>
+        <StepPanel :value="7">
           <div class="flex flex-col h-48">
             <div class="border-2 border-dashed border-surface-200 dark:border-surface-700 rounded bg-surface-50 dark:bg-surface-950 flex-auto flex justify-center items-center font-medium">Content III</div>
           </div>
@@ -207,7 +236,10 @@ onMounted(() =>
             ></StepperNavigation>
           </div>
         </StepPanel>
-      </StepItem>
+      </StepPanels>
+
+      </div>
+      </div>
     </Stepper>
   </Panel>
 </template>

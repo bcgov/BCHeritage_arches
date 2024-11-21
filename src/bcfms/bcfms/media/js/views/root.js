@@ -32,6 +32,7 @@ const BCGovPreset = definePreset(Aura, {
         },
         colorScheme: {
             light: {
+                color: '{gray.50}',
                 formField: {
                     hoverBorderColor: '{primary.color}'
                 }
@@ -51,6 +52,18 @@ const BCGovPreset = definePreset(Aura, {
         card: {
             titleFontSize: "1.0rem",
         },
+        fieldset: {
+            colorScheme: {
+                light: {
+                    background: "{grey.50}",
+                    legendBackground: "{grey.50}"
+                },
+                dark: {
+                    background: "{grey.900}",
+                    legendBackground: "{grey.900}"
+                }
+            }
+        },
         inputtext: {
             paddingX: "0.2rem",
             paddingY: "0.2rem"
@@ -63,16 +76,19 @@ const BCGovPreset = definePreset(Aura, {
             contentPadding: "1.0rem",
             colorScheme: {
                 light: {
-                    // background: "#e9e9e9"
+                    background: "{grey.50}"
                 },
                 dark: {
-                    // background: "#222"
+                    background: "#222"
                 }
             }
         },
         stepper: {
             stepNumberSize: "1.5rem",
-            stepNumberFontSize: "1.0rem"
+            stepNumberFontSize: "1.0rem",
+            steppanel: {
+                background: "{grey.50}"
+            }
         }
     }
 });

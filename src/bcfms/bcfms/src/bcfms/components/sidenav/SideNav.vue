@@ -43,7 +43,6 @@ const items = ref([
     align-items: center;
     min-width: 3rem;
     border-right: 1px solid var(--p-menubar-border-color);
-    margin-top: 50px;
     background: var(--p-panel-background);
 }
 
