@@ -91,7 +91,7 @@ onMounted(() => {
 </script>
 <template>
   <div class="flex flex-col h-48">
-    <div>Child {{childIpaData}}</div>
+    <div style="display: none;">Child {{childIpaData}}</div>
     <div class="border-2 border-dashed border-surface-200 dark:border-surface-700 rounded bg-surface-50 dark:bg-surface-950 flex-auto flex justify-center items-center font-medium">
       <FieldSet legend="Details">
         <LabelledInput
