@@ -1,8 +1,13 @@
 import { z } from 'zod';
 
 const IpaSubmissionSchema = z.object({
-    projectName: z.string().min(5).max(120),
-    companyName: z.string().max(80),
+    projectName: z.string()
+        .min(1, {message: "Project Name is required."} )
+        .min(5)
+        .max(120),
+    companyName: z.string()
+        .min(1, {message: "Company Name is required."} )
+        .max(80),
     authorizingAgency: z.string().uuid(),
     projectStartDate: z.date(),
     projectEndDate: z.date(),
@@ -15,8 +20,14 @@ const IpaSubmissionSchema = z.object({
     multipleGeometryQualifier: z.string() // Need max length
 });
 
-type IpaSubmissionType = z.infer<typeof IpaSubmissionSchema>;
+const requiredIpaSubmissionSchema = IpaSubmissionSchema.partial({
+    projectEndDate: true,
+    projectType: true,
+    otherProjectType: true,
+    multipleGeometryQualifier: true
+});
 
+type IpaSubmissionType = z.infer<typeof IpaSubmissionSchema>;
 
 function getIpaSubmission(): IpaSubmissionType {
     return new IpaSubmission();
@@ -52,12 +63,6 @@ class IpaSubmission implements IpaSubmissionType {
     proposedActivity: string;
 }
 
-const requiredIpaSubmissionSchema = IpaSubmissionSchema.partial({
-    projectEndDate: true,
-    projectType: true,
-    otherProjectType: true,
-    multipleGeometryQualifier: true
-});
 
 console.log(requiredIpaSubmissionSchema);
 

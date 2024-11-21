@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import {computed, ref, provide} from "vue";
+import {computed, ref, provide, onMounted} from "vue";
 import Stepper from 'primevue/stepper';
 import StepItem from 'primevue/stepitem';
 import Step from 'primevue/step';
@@ -20,14 +20,19 @@ import {getIpaSubmission} from "@/bcfms/schema/IpaSchema.ts";
 import type {IpaSubmission} from "@/bcfms/schema/IpaSchema.ts";
 
 function activateStep(step: number) {
-  console.log(`Step2!!: ${step}`);
-  console.log(`myStepper: ${myStepper.value?.d_value}`);
+  if (!isValid(lastStep))
+  {
+    myStepper.value.d_value = lastStep;
+  }
+  else
+  {
+    lastStep = step;
+  }
 }
 
 const isValid = (step: number) => {
-  // console.log(`isValid(${step})`);
   let stepValid = true;
-  if (steps[step-1]?.value?.isValid === "function")
+  if (typeof steps[step-1]?.value?.isValid === "function")
   {
     stepValid = steps[step-1]?.value?.isValid();
   }
@@ -36,8 +41,8 @@ const isValid = (step: number) => {
     submitted.value = true;
   }
   return stepValid;
-  // return step !== 4;
 };
+
 const printDetails = () =>
 {
   console.log("printDetails");
@@ -46,40 +51,48 @@ const stepperProps:  Ref<StepperProps | null> = ref(null);
 const stepperState:  Ref<StepperState | null> = ref(null);
 const myStepper = ref();
 
-const steps: Ref[] = [];
-for (let x = 0 ; x < 7; x++)
-{
-  steps.push(ref());
-}
-// const steps = _.times(7, () => { return ref(); });
+const step1= ref();
+const step2= ref();
 
+const steps: Ref[] = [];
+
+let lastStep = 1;
 const currentStep = computed(() => {
   return myStepper.value?.d_value;
 });
 
+const stepperOptions = {
+  activateCallback: activateStep
+};
+
 const submitted = ref(false);
 const ipaData: Ref<IpaSubmission> = ref(getIpaSubmission());
+
 provide('ipaData',ipaData);
 
+onMounted(() =>
+{
+  steps.push(step1, step2);
+});
+
 </script>
+
 <template >
   <Panel header="Submit New Project" class="full-height">
     <div>Step: {{currentStep}}</div>
     <Stepper
-        ref="myStepper"
-        :before-update="isValid"
+        ref=myStepper
         :state=stepperState
         :props=stepperProps
         :value=1
         linear
         @update:value="activateStep"
+        :ptOptions=stepperOptions
     >
       <StepItem :value="1">
         <Step>Submission Information</Step>
         <StepPanel v-slot="{ activateCallback }">
-          <IpaSubmitStep1
-              ref="steps[0]"
-          ></IpaSubmitStep1>
+          <IpaSubmitStep1 ref="step1"></IpaSubmitStep1>
           <div class="py-6">
             <StepperNavigation
                 :step-number="1"
@@ -93,7 +106,7 @@ provide('ipaData',ipaData);
       <StepItem :value="2">
         <Step>Project Details</Step>
         <StepPanel v-slot="{ activateCallback }">
-          <IpaSubmitStep2 ref="steps[1]"></IpaSubmitStep2>
+          <IpaSubmitStep2 ref="step2"></IpaSubmitStep2>
           <div class="flex py-6 gap-2">
             <StepperNavigation
                 :step-number="2"

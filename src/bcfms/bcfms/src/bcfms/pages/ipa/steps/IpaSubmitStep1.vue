@@ -4,10 +4,7 @@ const isValid = () => {
   return true;
 };
 
-// This needs to be removed - added becuse ESLint was complaining. Need to figure out
-// configuration so API methods are not
-isValid();
-defineExpose(["isValid"]) ;
+defineExpose({isValid}) ;
 
 </script>
 <template>
