@@ -85,6 +85,9 @@ along with this program. If not, see <http://www.gnu.org/licenses/>.
                     </li>
                     {% if user|can_create_resource_instance and user.username != 'anonymous' %}
                     <li>
+                        <a href="{% url 'dashboard' %}">{% trans "Dashboard" %}</a>
+                    </li>
+                    <li>
                         <a href="{% url 'search_home' %}">{% trans "Search Fossils" %}</a>
                     </li>
                     <li>
