@@ -44,7 +44,7 @@ for pattern in bc_url_resolver.url_patterns:
     # print("After: %s" % pattern.pattern)
 
 urlpatterns = [
-    re_path(bc_path_prefix(r"^workflows/"), BcfmsRootView.as_view()),
+    re_path(bc_path_prefix(r"^workflows/"), BcfmsRootView.as_view(), name="dashboard"),
 
     path(bc_path_prefix(r"^api/user/"), api_user.UserView.as_view(), name="api_user"),
 
