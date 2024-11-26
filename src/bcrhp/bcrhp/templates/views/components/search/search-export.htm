@@ -37,7 +37,6 @@
                     <input type="radio" name="stat-w-label" data-bind="checked: format() === 'tilecsv'" value="true">
                     <span data-bind="text: $root.translations.csv"></span>
                 </label>
-                {% comment %}
                 <!-- ko if: hasExportHtmlTemplates() -->
                 <label role="radio" tabindex="0" class="form-radio form-normal form-text" 
                     data-bind="
@@ -68,7 +67,8 @@
                     <span data-bind="text: $root.translations.shapefile"></span>
                 </label>
 
-                <label role="radio" tabindex="0" class="form-radio form-normal form-text" 
+                {% comment %}
+                <label role="radio" tabindex="0" class="form-radio form-normal form-text"
                     data-bind="
                         css: { 'active': format() === 'tilexl', 'disabled': !hasResourceTypeFilter() }, 
                         click: function () { if (hasResourceTypeFilter()) {format('tilexl')} },
@@ -131,6 +131,7 @@
             ></input>
         </div>
         
+        {% comment %}
         <!-- 3. Report link -->
         <div class="instruction">
             <div class="search-export-instruction-h2 h2">
@@ -156,13 +157,14 @@
                     "
             ></div>
         </div>
+        {% endcomment %}
 
         <!-- Options if Celery is running -->
         <!-- ko if: ((total() > {{app_settings.SEARCH_EXPORT_IMMEDIATE_DOWNLOAD_THRESHOLD}} && celeryRunning() === "True") || (format() === "html" && total() > {{app_settings.SEARCH_EXPORT_IMMEDIATE_DOWNLOAD_THRESHOLD_HTML_FORMAT}} && celeryRunning() === "True")) && ("{{app_settings.RESTRICT_CELERY_EXPORT_FOR_ANONYMOUS_USER}}" === "False" || "{{app_settings.RESTRICT_CELERY_EXPORT_FOR_ANONYMOUS_USER}}" === "True" && "{{user.username}}" !== "anonymous")-->
         <div>
             <div class="instruction">
                 <div class="search-export-instruction-h2 h2">
-                    <span data-bind="text: $root.translations.listItemFourNameThisExport"></span>
+                    <span>3. Name this export</span>
                 </div>
             </div>
             <div class="parameter">
@@ -178,6 +180,7 @@
                 ></input>
             </div>
         </div>
+        {% if false %}
         <div>
             <div class="instruction">
                     <div class="search-export-instruction-h2 h2">
@@ -188,12 +191,12 @@
                     </div>
             </div>
             <div class="parameter">
-                <input 
-                    class="form-control input-md widget-input" 
+                <input
+                    class="form-control input-md widget-input"
                     data-bind="
                         attr: {
-                            placeholder: $root.translations.noEmailSavedForUser, 
-                            'aria-label': $root.translations.listItemFiveEmailAddress, 
+                            placeholder: $root.translations.noEmailSavedForUser,
+                            'aria-label': $root.translations.listItemFiveEmailAddress,
                             'aria-description': $root.translations.listItemFiveEmailAddressText
                         },
                         textInput: emailInput
@@ -201,6 +204,7 @@
                 ></input>
             </div>
         </div>
+        {% endif %}
         <!-- /ko -->
     </div>
 

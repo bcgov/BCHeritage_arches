@@ -52,7 +52,7 @@
     </dd>
 </dl>
 <!-- ko let: {notes: eventNotes()} -->
-<dl class="dl-horizontal" data-bind="visible: !!ko.unwrap(tile().data[notes.attributes.node_id()].en.value)">
+<dl class="dl-horizontal" data-bind="visible: !!ko.unwrap(tile().data[notes.attributes.node_id()]) && !!ko.unwrap(tile().data[notes.attributes.node_id()].en.value)">
     <dt>Chronology Notes</dt>
     <dd data-bind="component: {
         name: notes.widgetLookup[notes.widget_id()].name,
