@@ -1,10 +1,10 @@
-FROM ubuntu:22.04 as base 
+FROM ubuntu:22.04 AS base
 USER root
 ENV WEB_ROOT=/web_root
 ENV ARCHES_ROOT=${WEB_ROOT}/arches
 ENV APP_ROOT=${WEB_ROOT}/bcrhp
 #ENV AFS_ROOT=${WEB_ROOT}/arches-for-science
-ENV NODE_MAJOR=18
+ENV NODE_MAJOR=20
 RUN mkdir -p ${APP_ROOT}/bcrhp/webpack
 
 RUN apt-get update && apt-get install -y make software-properties-common && apt-get install -y ca-certificates curl gnupg && mkdir -p /etc/apt/keyrings
@@ -15,13 +15,12 @@ RUN set -ex \
   && apt-get update -y \
   && RUN_DEPS=" \
   build-essential \
-  python3.10-dev \
+  python3.11-dev \
   mime-support \
   libgdal-dev \
-  python3-venv \
-  python3.10 \
-  python3.10-distutils \
-  python3.10-venv \
+  python3.11 \
+  python3.11-distutils \
+  python3.11-venv \
   dos2unix \
   git \
   " \
@@ -41,8 +40,6 @@ RUN apt-get update && apt-get -y install curl \
 
 WORKDIR ${ARCHES_ROOT}
 RUN pip install -e . --user
-RUN pip install -r arches/install/requirements.txt 
-RUN pip install -r arches/install/requirements_dev.txt
 
 COPY /bcrhp/docker/webpack/entrypoint.sh ${WEB_ROOT}/entrypoint.sh
 RUN chmod -R 700 ${WEB_ROOT}/entrypoint.sh

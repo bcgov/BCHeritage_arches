@@ -33,15 +33,13 @@ load_dotenv(os.path.join(os.path.split(os.path.dirname(os.path.abspath(__file__)
 APP_NAME = 'bcrhp'
 APP_VERSION = semantic_version.Version(major=1, minor=2, patch=0)
 APP_ROOT = os.path.dirname(os.path.abspath(inspect.getfile(inspect.currentframe())))
-MIN_ARCHES_VERSION = arches.__version__
-MAX_ARCHES_VERSION = arches.__version__
 
 # PROXY prefix used - NB - cannot have leading "/", and must have trailing "/"
 BCGOV_PROXY_PREFIX = get_env_variable('BCGOV_PROXY_PREFIX')
 
 WEBPACK_LOADER = {
     "DEFAULT": {
-        "STATS_FILE": os.path.join(APP_ROOT, 'webpack/webpack-stats.json'),
+        "STATS_FILE": os.path.join(APP_ROOT, '..', 'webpack/webpack-stats.json'),
     },
 }
 
@@ -50,10 +48,10 @@ FUNCTION_LOCATIONS.append('bcrhp.functions')
 ETL_MODULE_LOCATIONS.append('bcrhp.etl_modules')
 SEARCH_COMPONENT_LOCATIONS.append('bcrhp.search_components')
 
-LOCALE_PATHS.append(os.path.join(APP_ROOT, 'locale'))
+LOCALE_PATHS.insert(0, os.path.join(APP_ROOT, 'locale'))
 
 FILE_TYPE_CHECKING = False
-FILE_TYPES = ["bmp", "gif", "jpg", "jpeg", "pdf", "png", "psd", "rtf", "tif", "tiff", "xlsx", "csv", "zip"]
+FILE_TYPES = ["bmp", "gif", "jpg", "jpeg", "pdf", "png", "psd", "rtf", "tif", "tiff", "xlsx", "csv", "zip", "json"]
 FILENAME_GENERATOR = "bcrhp.util.storage_filename_generator.generate_filename"
 UPLOADED_FILES_DIR = "uploadedfiles"
 
@@ -170,6 +168,7 @@ INSTALLED_APPS = (
     "django.contrib.messages",
     "django.contrib.staticfiles",
     "django.contrib.gis",
+    "django_hosts",
     "arches",
     "arches.app.models",
     "arches.management",
@@ -179,13 +178,15 @@ INSTALLED_APPS = (
     "corsheaders",
     "oauth2_provider",
     "django_celery_results",
-    "compressor",
+    # "compressor",
     # "silk",
     "storages",
     "bcrhp",
 )
+INSTALLED_APPS += ("arches.app",)
 
-ARCHES_APPLICATIONS = ()
+ROOT_HOSTCONF = "bcrhp.hosts"
+DEFAULT_HOST = "bcrhp"
 
 AUTHENTICATION_BACKENDS = (
     # "arches.app.utils.email_auth_backend.EmailAuthenticationBackend", #Comment out for IDIR
@@ -213,22 +214,25 @@ MIDDLEWARE = [
     # "bcrhp.util.auth.middleware.SiteminderMiddleware",
     # "bcrhp.util.auth.auth_required_middleware.AuthRequiredMiddleware",
     "django.contrib.messages.middleware.MessageMiddleware",
-    # "django.middleware.clickjacking.XFrameOptionsMiddleware",
+    "django.middleware.clickjacking.XFrameOptionsMiddleware",
     "arches.app.utils.middleware.SetAnonymousUser",
     # "silk.middleware.SilkyMiddleware",
 ]
 
-STATICFILES_DIRS = build_staticfiles_dirs(
-    root_dir=ROOT_DIR,
-    app_root=APP_ROOT,
-    arches_applications=ARCHES_APPLICATIONS,
+MIDDLEWARE.insert(  # this must resolve to first MIDDLEWARE entry
+    0,
+    "django_hosts.middleware.HostsRequestMiddleware"
 )
 
+MIDDLEWARE.append(  # this must resolve last MIDDLEWARE entry
+    "django_hosts.middleware.HostsResponseMiddleware"
+)
+
+STATICFILES_DIRS = build_staticfiles_dirs(app_root=APP_ROOT)
+
 TEMPLATES = build_templates_config(
-    root_dir=ROOT_DIR,
     debug=DEBUG,
     app_root=APP_ROOT,
-    arches_applications=ARCHES_APPLICATIONS,
 )
 
 ALLOWED_HOSTS = get_env_variable("ALLOWED_HOSTS").split()
@@ -594,15 +598,3 @@ TIMEWHEEL_DATE_TIERS = {
         # }
     }
 }
-
-# returns an output that can be read by NODEJS
-if __name__ == "__main__":
-    transmit_webpack_django_config(
-        root_dir=os.path.realpath(ROOT_DIR),
-        app_root=os.path.realpath(APP_ROOT),
-        arches_applications=ARCHES_APPLICATIONS,
-        public_server_address=PUBLIC_SERVER_ADDRESS,
-        static_url=STATIC_URL,
-        webpack_development_server_port=WEBPACK_DEVELOPMENT_SERVER_PORT,
-    )
-

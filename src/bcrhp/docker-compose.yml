@@ -1,9 +1,8 @@
-version: '3.8'
-name: bcrhp7-5
+name: bcrhp7-6-3
 services:
   bcrhp:
-    container_name:  bcrhp7-5
-    image: bcgov/bcrhp7-5
+    container_name:  bcrhp7-6-3
+    image: bcgov/bcrhp7-6-3
     build:
       context: ..
       dockerfile: bcrhp/Dockerfile
@@ -22,8 +21,8 @@ services:
     tty: true
 
   bcrhp-webpack:
-    container_name: bcrhp-webpack-7-5
-    image: bcgov/bcrhp-webpack-7-5
+    container_name: bcrhp-webpack-7-6-3
+    image: bcgov/bcrhp-webpack-7-6-3
     build:
       context: ..
       dockerfile: bcrhp/docker/webpack/Dockerfile
@@ -41,9 +40,9 @@ services:
 networks:
   default:
     external: true
-    name: arches7-5-dev
+    name: arches7-5-2-dev
 
 
 volumes:
-  arches-log-bcrhp7-5:
-  arches-static-bcrhp7-5:
+  arches-log-bcrhp7-6-3:
+  arches-static-bcrhp7-6-3:
