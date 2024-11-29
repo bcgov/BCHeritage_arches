@@ -1,0 +1,51 @@
+from django.db import migrations
+import os
+
+class Migration(migrations.Migration):
+    dependencies = [('bcrhp',
+                     '1081_drop_materialized_views')]
+
+    drop_materialized_views = """
+       drop materialized view if exists mv_bc_statement_of_significance cascade;
+       drop materialized view if exists mv_chronology cascade;
+       drop materialized view if exists mv_construction_actors cascade;
+       drop materialized view if exists mv_government cascade;
+       drop materialized view if exists mv_heritage_class cascade;
+       drop materialized view if exists mv_heritage_function cascade;
+       drop materialized view if exists mv_heritage_theme cascade;
+       drop materialized view if exists mv_property_address cascade;
+       drop materialized view if exists mv_site_names cascade;
+       drop materialized view if exists mv_site_protection_event cascade;
+       drop materialized view if exists mv_site_record_admin cascade;
+       drop materialized view if exists mv_bc_right cascade;
+       drop view if exists bcrhp_crhp_data_vw cascade;
+        """
+
+    files = [
+        '2024-11-29_mv_bc_statement_of_significance.sql',
+        '2024-11-29_mv_chronology.sql',
+        '2024-11-29_mv_construction_actors.sql',
+        '2024-11-29_mv_government.sql',
+        '2024-11-29_mv_heritage_class.sql',
+        '2024-11-29_mv_heritage_function.sql',
+        '2024-11-29_mv_heritage_theme.sql',
+        '2024-11-29_mv_property_address.sql',
+        '2024-11-29_mv_site_names.sql',
+        '2024-11-29_mv_site_protection_event.sql',
+        '2024-11-29_mv_site_record_admin.sql',
+        '2024-11-29_mv_bc_right.sql',
+        '2024-11-29_refresh_materialized_views.sql',
+        '2024-11-29_v_historic_site.sql',
+        '2024-11-29_v_historic_enviro_onerow_site.sql',
+        '2024-11-29_bcrhp_crhp_data_vw.sql'
+             ]
+    reverse_sql_string = ""
+    for file in files:
+        file_path = os.path.join(os.path.dirname(__file__), 'sql', file)
+        reverse_sql_string = reverse_sql_string + "\n" + open(file_path).read()
+
+    reverse_sql_string = reverse_sql_string + "\n" + " begin; call refresh_materialized_views(); commit;"
+
+    operations = [
+        migrations.RunSQL(reverse_sql_string, drop_materialized_views),
+    ]
