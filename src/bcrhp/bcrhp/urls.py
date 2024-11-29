@@ -78,7 +78,19 @@ urlpatterns = [
                       bcrhp_export_results,
                       name="export_results"),
                   bc_url_resolver,
-              ] + static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
+              ]
+# Ensure Arches core urls are superseded by project-level urls
+urlpatterns.append(path('', include('arches.urls')))
 
-if settings.SHOW_LANGUAGE_SWITCH is True:
-    urlpatterns = i18n_patterns(*urlpatterns)
+
+
+# Adds URL pattern to serve media files during development
+urlpatterns += static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
+
+# Only handle i18n routing in active project. This will still handle the routes provided by Arches core and Arches applications,
+# but handling i18n routes in multiple places causes application errors.
+if settings.ROOT_URLCONF == __name__:
+    if settings.SHOW_LANGUAGE_SWITCH is True:
+        urlpatterns = i18n_patterns(*urlpatterns)
+
+    urlpatterns.append(path("i18n/", include("django.conf.urls.i18n")))

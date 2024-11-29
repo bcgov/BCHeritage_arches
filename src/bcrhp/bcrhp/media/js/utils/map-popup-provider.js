@@ -178,7 +178,43 @@ define([
                     });
                     return returnValue;
                 });
-            }
+            },
+            /**
+             * This method enables custom logic for how the feature in the popup should be handled and/or mutated en route to the mapFilter.
+             * @param popupFeatureObject - the javascript object of the feature and its associated contexts (e.g. mapCard).
+             * @required @method mapCard.filterByFeatureGeom()
+             * @required @send argument: @param feature - a geojson feature object
+             */
+            sendFeatureToMapFilter: function(popupFeatureObject, addToFilter)
+            {
+                const foundFeature = this.findPopupFeatureById(popupFeatureObject);
+                popupFeatureObject.mapCard.filterByFeatureGeom(foundFeature, addToFilter);
+            },
+
+            /**
+             * Determines whether to show the button for Filter By Feature
+             * @param popupFeatureObject - the javascript object of the feature and its associated contexts (e.g. mapCard).
+             * @returns {boolean} - whether to show "Filter by Feature" on map popup
+             * typically dependent on at least 1 feature with a geometry and/or a featureid/resourceid combo
+             */
+            showFilterByFeature: function(popupFeatureObject) {
+                const noFeatureId = popupFeatureObject.feature?.properties?.featureid === undefined;
+                if (noFeatureId)
+                    return false;
+                return this.findPopupFeatureById(popupFeatureObject) !== null;
+            },
+            findPopupFeatureById: function(popupFeatureObject) {
+                let foundFeature = null;
+                const strippedFeatureId = popupFeatureObject.feature.properties.featureid.replace(/-/g,"");
+                for (let geometry of popupFeatureObject.geometries()) {
+                    if (geometry.geom && Array.isArray(geometry.geom.features)) {
+                        foundFeature = geometry.geom.features.find(feature => feature.id.replace(/-/g, "") === strippedFeatureId);
+                        if (foundFeature)
+                            break;
+                    }
+                }
+                return foundFeature;
+            },
         };
     return popupDataProvider;
 });
