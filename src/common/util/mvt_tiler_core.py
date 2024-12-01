@@ -61,7 +61,7 @@ class MVTTiler:
                             )
                             SELECT ST_AsMVT(
                                 tile,
-                                %(resource_ids)s,
+                                %(nodeid)s,
                                 4096,
                                 'geom',
                                 'id'
