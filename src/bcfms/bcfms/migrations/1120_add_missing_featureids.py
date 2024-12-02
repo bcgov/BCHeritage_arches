@@ -1,8 +1,8 @@
 from django.db import migrations
 
+
 class Migration(migrations.Migration):
-    dependencies = [('bcfms',
-                     '0002_create_view_support_functions')]
+    dependencies = [("bcfms", "1082_recreate_materialized_views")]
 
     add_missing_featureids = """
         DO $$
@@ -48,5 +48,7 @@ class Migration(migrations.Migration):
 
     operations = [
         migrations.RunSQL(add_missing_featureids, migrations.RunSQL.noop),
-        migrations.RunSQL("select refresh_geojson_geometries()", migrations.RunSQL.noop),
+        migrations.RunSQL(
+            "select refresh_geojson_geometries()", migrations.RunSQL.noop
+        ),
     ]
