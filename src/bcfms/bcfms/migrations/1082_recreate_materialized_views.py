@@ -18,8 +18,11 @@ class Migration(migrations.Migration):
         "2024-07-25_publication.ce_publication_summary_mv.sql",
         "2024-07-25_fossil_collection_event.collection_event_vw.sql",
         "2024-07-25_fossil_collection_event.collection_event_csv_export_vw.sql",
+        "2024-08-15_databc.collection_events_vw.sql",
         "2024-08-15_databc.provincially_protected_fossil_sites_vw.sql",
+        "2024-08-15_databc.fossil_sites_vw.sql",
         "2024-07-25_refresh_export_mvs.sql",
+        "2024-08-15_databc_grants.sql"
     ]
     sql_dir = os.path.join(os.path.dirname(__file__), "sql")
     create_materialized_views = (
@@ -30,6 +33,7 @@ class Migration(migrations.Migration):
 
     drop_materialized_views = """
         drop view if exists fossil_collection_event.collection_event_csv_export_vw;
+        drop view if exists databc.collection_events_vw;
         drop view if exists fossil_collection_event.collection_event_vw;
         drop materialized view if exists fossil_sample.ce_sample_summary_mv;
         drop materialized view if exists fossil_sample.fossil_name_mv;
