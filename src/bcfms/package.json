@@ -2,7 +2,7 @@
     "name": "bcfms",
     "license": "AGPL-3.0-only",
     "scripts": {
-        "build_development": "npm run eslint:check && npm run ts:check && cross-env NODE_OPTIONS=--max-old-space-size=2048 webpack --config ./webpack/webpack.config.dev.js",
+        "build_development": "npm i typescript@5.6.2 && npm run eslint:check && npm run ts:check && cross-env NODE_OPTIONS=--max-old-space-size=2048 webpack --config ./webpack/webpack.config.dev.js",
         "build_production": "npm run eslint:check && npm run ts:check && cross-env NODE_OPTIONS=--max-old-space-size=2048 NODE_ENV=production webpack --config ./webpack/webpack.config.prod.js",
         "build_test": "npm run eslint:check && npm run ts:check && cross-env NODE_OPTIONS=--max-old-space-size=2048 webpack --config ./webpack/webpack.config.dev.js --env test=true",
         "eslint:check": "eslint **/src",
@@ -27,8 +27,7 @@
         "arches-dev-dependencies": "archesproject/arches-dev-dependencies#stable/7.6.1"
     },
     "dependencies": {
-        "arches": "archesproject/arches#stable/7.6.3",
-        "typescript": "^5.6.2"
+        "arches": "archesproject/arches#stable/7.6.3"
     },
     "nodeModulesPaths": {}
 }
