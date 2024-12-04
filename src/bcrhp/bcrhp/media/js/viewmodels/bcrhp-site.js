@@ -14,20 +14,7 @@ define([
     return function(params) {
         var self = this;
         self.urls = arches.urls;
-
         MapReportViewModel.apply(this, [params]);
-        var getAllWidgets = function(card) {
-            return _.flatten([ko.unwrap(card.tiles).length === 0 ? [] : ko.unwrap(card.widgets),
-                _.map(card.cards(), subcard => {return getAllWidgets(subcard); })]);
-        }
-        var getAllTiles = function(card) {
-            return _.flatten([ko.unwrap(card.tiles),
-                _.map(card.cards(), subcard => {return getAllTiles(subcard); })]);
-        }
-
-        var widgets = _.flatten(_.map(params.report.cards, card => {return getAllWidgets(card)}));
-
-        var tiles = _.flatten(_.map(params.report.cards, card => {return getAllTiles(card)}));
 
         this.helpenable = ko.observable(false);
         this.siteNamesVisible = ko.observable(true);
@@ -43,13 +30,36 @@ define([
         this.externalUrlsVisible = ko.observable(true);
         this.showAllFields= ko.observable(false);
 
+        var getAllWidgets = function(card) {
+            return _.flatten([ko.unwrap(card.tiles).length === 0 ? [] : ko.unwrap(card.widgets),
+                _.map(card.cards(), subcard => {return getAllWidgets(subcard); })]);
+        }
+        var getAllTiles = function(card) {
+            return _.flatten([ko.unwrap(card.tiles),
+                _.map(card.cards(), subcard => {return getAllTiles(subcard); })]);
+        }
+
+        // var widgets = _.flatten(_.map(params.report.cards, card => {return getAllWidgets(card)}));
+
+        var tiles = _.flatten(_.map(params.report.cards, card => {return getAllTiles(card)}));
+
+        var nodeid_to_widget_lookup = _.object(_.map(params.report.attributes.widgets, function (widget) {
+            return widget.node_id
+        }), params.report.attributes.widgets);
+        var node_alias_to_node_lookup = _.object(_.map(params.report.attributes.nodes, function (node) {
+            return node.alias
+        }), params.report.attributes.nodes);
+
+
         this.helpactive = function(state) { this.helpenable(state) };
 
         var getWidgetForAlias = function(node_alias){
-            var widget = _.find(widgets, widget => {
-                return ko.unwrap(widget.node.alias) === node_alias;
-            })
-            return widget;
+            if (node_alias in node_alias_to_node_lookup)
+            {
+                return _.extend(nodeid_to_widget_lookup[node_alias_to_node_lookup[node_alias].nodeid],
+                    {"node": node_alias_to_node_lookup[node_alias]});
+            }
+            return null;
         };
         // Used by template to get widgets for config
         this.getWidgetForAlias = function(node_alias) {
@@ -141,6 +151,16 @@ define([
 
         this.getFirstNodeValue = function(alias) {
             return ko.observable(getNodeValues(alias)[0]);
+        };
+
+        this.getFirstBooleanValueLabel = function(alias) {
+            var widget = getWidgetForAlias(alias);
+            // If we don't have a widget the node doesn't exist
+            if (!widget) return "";
+
+            var value = getNodeValues(alias)[0];
+
+            return ko.unwrap(!!value ? widget.node.config.trueLabel : widget.node.config.trueLabel);
         };
 
         this.getResourceInstanceValues = function(aliases)
@@ -238,6 +258,25 @@ define([
             }
             return authority;
         };
+
+        this.submittedSites = ko.computed(function() {
+            let opWidget = getWidgetForAlias('requested_operation'),
+                infoWidget = getWidgetForAlias('information_provided'),
+                siteWidget = getWidgetForAlias('heritage_site');
+
+            var values = [];
+            _.each(ko.unwrap(tiles), tile => {
+                var opVal = getValueFromTile(tile, opWidget),
+                    infoVal = getValueFromTile(tile, infoWidget),
+                    siteVal = getValueFromTile(tile, siteWidget);
+                if (!!opVal || !!infoVal || !!siteVal)
+                    values.push({'requested_operation': ko.observable(opVal),
+                        'information_provided': ko.observable(infoVal),
+                        'heritage_site': ko.observable(siteVal)});
+
+            });
+            return values;
+        });
 
 
         /* Old config ... to remove */
