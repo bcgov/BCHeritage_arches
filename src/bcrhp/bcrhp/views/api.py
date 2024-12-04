@@ -49,10 +49,6 @@ class UserProfile(APIBase):
         ))
 
 
-query_config = {
-    '1b6235b0-0d0f-11ed-98c2-5254008afee6': ['authorities', 'borden_number'], # Heritage Site
-}
-
 class MVT(MVTBase):
 
     def get(self, request, nodeid, zoom, x, y):

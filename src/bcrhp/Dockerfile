@@ -49,7 +49,7 @@ COPY ./arches ${ARCHES_ROOT}
 # From here, run commands from ARCHES_ROOT
 WORKDIR ${ARCHES_ROOT}
 RUN pip install -e .[dev] && \
-    pip install python-dotenv boto3==1.26 django-storages==1.13 oracledb html2text
+    pip install python-dotenv boto3==1.26 django-storages==1.13 oracledb html2text cffi
 COPY ./bcrhp/docker/entrypoint.sh ${WEB_ROOT}/entrypoint.sh
 RUN chmod -R 700 ${WEB_ROOT}/entrypoint.sh &&\
   dos2unix ${WEB_ROOT}/entrypoint.sh

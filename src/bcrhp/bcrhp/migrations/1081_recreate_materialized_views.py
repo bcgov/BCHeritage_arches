@@ -21,6 +21,7 @@ class Migration(migrations.Migration):
        drop view if exists bcrhp_crhp_data_vw cascade;
         """
 
+    reverse_sql_string = ""
     files = [
         '2024-11-29_mv_bc_statement_of_significance.sql',
         '2024-11-29_mv_chronology.sql',
@@ -38,12 +39,12 @@ class Migration(migrations.Migration):
         '2024-11-29_v_historic_site.sql',
         '2024-11-29_v_historic_enviro_onerow_site.sql',
         '2024-11-29_bcrhp_crhp_data_vw.sql'
-             ]
-    reverse_sql_string = ""
-    for file in files:
-        file_path = os.path.join(os.path.dirname(__file__), 'sql', file)
-        reverse_sql_string = reverse_sql_string + "\n" + open(file_path).read()
+    ]
 
+    for filename in files:
+        file_path = os.path.join(os.path.dirname(__file__), 'sql', filename)
+        with open(file_path) as file:
+            reverse_sql_string = reverse_sql_string + "\n" + file.read()
     reverse_sql_string = reverse_sql_string + "\n" + " begin; call refresh_materialized_views(); commit;"
 
     operations = [
