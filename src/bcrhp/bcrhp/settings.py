@@ -30,10 +30,8 @@ def get_pg_user():
     # in the settings_admin.py if it exists
     try:
         from bcrhp.settings_admin import PG_SUPERUSER
-        print("Returning: %s" % PG_SUPERUSER)
         return PG_SUPERUSER
     except:
-        print("Returning: %s" % get_env_variable("PGUSERNAME"))
         return get_env_variable("PGUSERNAME")
 
 
@@ -42,10 +40,8 @@ def get_pg_password():
     # in the settings_admin.py if it exists
     try:
         from bcrhp.settings_admin import PG_SUPERUSER_PW
-        print("Returning: %s" % PG_SUPERUSER_PW)
         return PG_SUPERUSER_PW
     except:
-        print("Returning: %s" % get_env_variable("PGPASSWORD"))
         return get_env_variable("PGPASSWORD")
 
 try:

@@ -51,10 +51,7 @@ $$
     DECLARE
         databc_user text;
     BEGIN
-        /* Fix me!
         select replace(current_database(), 'bcrhp','proxy_databc') into databc_user;
-         */
-        databc_user = 'proxy_databc_dev';
         EXECUTE format('grant select on databc.v_historic_enviro_onerow_site to %s' ,quote_ident(databc_user));
     end;
 $$ language 'plpgsql';
