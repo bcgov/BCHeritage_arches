@@ -84,6 +84,12 @@ define([
             return getTilesForAlias(node_alias);
         };
 
+        this.getCardForAlias = function(node_alias)
+        {
+            const widget = getWidgetForAlias(node_alias);
+            return widget ? _.find(self.report.cards, (card) => {return card.nodegroupid === widget.node.nodegroup_id}) : null;
+        };
+
         var getValueFromTile = function(tile, widget)
         {
             return (!tile || !ko.unwrap(tile) || !widget) ? null : ko.unwrap(ko.unwrap(tile).data[widget.node.nodeid]);
