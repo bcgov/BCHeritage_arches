@@ -22,7 +22,7 @@ class Migration(migrations.Migration):
         "2024-11-29_v_historic_site.sql",
         "2024-11-29_v_historic_enviro_onerow_site.sql",
         "2024-11-29_bcrhp_crhp_data_vw.sql",
-        "2024-11-29_csv_export.sql"
+        "2024-11-29_heritage_site.csv_export.sql"
     ]
 
     sql_dir = os.path.join(os.path.dirname(__file__), "sql")
@@ -35,7 +35,7 @@ class Migration(migrations.Migration):
     dependencies = [("bcrhp", "1168_fix_mv_chronology_index")]
 
     drop_views = """
-       drop view if exists csv_export;
+       drop view if exists heritage_site.csv_export;
        drop view if exists databc.V_HISTORIC_ENVIRO_ONEROW_SITE;
        drop view if exists bcrhp_crhp_data_vw;
        drop view if exists v_historic_site;

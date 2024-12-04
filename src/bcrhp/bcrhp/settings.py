@@ -24,6 +24,30 @@ def get_env_variable(var_name, is_optional=False):
         error_msg = msg % var_name
         raise ImproperlyConfigured(error_msg)
 
+
+def get_pg_user():
+    # This is to allow privileged user for migrations. The PG_SUPERUSER is defined
+    # in the settings_admin.py if it exists
+    try:
+        from bcrhp.settings_admin import PG_SUPERUSER
+        print("Returning: %s" % PG_SUPERUSER)
+        return PG_SUPERUSER
+    except:
+        print("Returning: %s" % get_env_variable("PGUSERNAME"))
+        return get_env_variable("PGUSERNAME")
+
+
+def get_pg_password():
+    # This is to allow privileged user for migrations. The PG_SUPERUSER_PW is defined
+    # in the settings_admin.py if it exists
+    try:
+        from bcrhp.settings_admin import PG_SUPERUSER_PW
+        print("Returning: %s" % PG_SUPERUSER_PW)
+        return PG_SUPERUSER_PW
+    except:
+        print("Returning: %s" % get_env_variable("PGPASSWORD"))
+        return get_env_variable("PGPASSWORD")
+
 try:
     from arches.settings import *
 except ImportError:
@@ -134,7 +158,7 @@ DATABASES = {
         "HOST": get_env_variable("PGHOST"),
         "NAME": get_env_variable("PGDBNAME"),
         "OPTIONS": {},
-        "PASSWORD": get_env_variable("PGPASSWORD"),
+        "PASSWORD": get_pg_password(),
         "PORT": "5432",
         "POSTGIS_TEMPLATE": "template_postgis",
         "TEST": {
@@ -144,7 +168,7 @@ DATABASES = {
             "NAME": None
         },
         "TIME_ZONE": None,
-        "USER": get_env_variable("PGUSERNAME")
+        "USER": get_pg_user()
     }
 }
 
