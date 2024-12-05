@@ -1,10 +1,11 @@
 from django.db import migrations
 import os
 from .util.migration_util import format_files_into_sql
+from .operations.privileged_sql import RunPrivilegedSQL
+
 
 class Migration(migrations.Migration):
-    dependencies = [('bcrhp',
-                     '1081_drop_materialized_views')]
+    dependencies = [("bcrhp", "1081_drop_materialized_views")]
 
     drop_views = """
        drop view if exists heritage_site.csv_export;
@@ -42,16 +43,21 @@ class Migration(migrations.Migration):
         "2024-11-29_v_historic_site.sql",
         "2024-11-29_v_historic_enviro_onerow_site.sql",
         "2024-11-29_bcrhp_crhp_data_vw.sql",
-        "2024-11-29_heritage_site.csv_export.sql"
+        "2024-11-29_heritage_site.csv_export.sql",
     ]
 
     sql_dir = os.path.join(os.path.dirname(__file__), "sql")
     create_views = (
-            format_files_into_sql(files, sql_dir)
-            + "\n"
-            + " begin; call refresh_materialized_views(); commit;"
+        format_files_into_sql(files, sql_dir)
+        + "\n"
+        + " begin; call refresh_materialized_views(); commit;"
+    )
+
+    fix_object_owner_sql = format_files_into_sql(
+        files=["2024-12-05_fix_object_owner.sql"], sql_dir=sql_dir
     )
 
     operations = [
         migrations.RunSQL(create_views, drop_views),
+        RunPrivilegedSQL(migrations.RunSQL.noop, fix_object_owner_sql),
     ]
