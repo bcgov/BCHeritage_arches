@@ -12,6 +12,6 @@ DO $$
                             and viewname not in ('instances')
                             and viewowner = 'postgres'
                           order by schemaname, viewname loop
-                execute format('alter materialized view %s owner to %s;', update_rec.schemaname||'.'||update_rec.viewname, current_database());
+                execute format('alter view %s owner to %s;', update_rec.schemaname||'.'||update_rec.viewname, current_database());
             end loop;
     END $$ language plpgsql;
