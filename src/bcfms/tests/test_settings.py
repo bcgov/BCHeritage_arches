@@ -23,7 +23,13 @@ from bcfms.settings import *
 PACKAGE_NAME = "bcfms"
 
 PROJECT_TEST_ROOT = os.path.dirname(__file__)
+
 MEDIA_ROOT = os.path.join(PROJECT_TEST_ROOT, "fixtures", "data")
+
+RESOURCE_GRAPH_LOCATIONS = (os.path.join(PROJECT_TEST_ROOT, "..", "bcfms", "pkg", "graphs", "resource_models"),)
+
+# ONTOLOGY_FIXTURES = os.path.join(PROJECT_TEST_ROOT, "fixtures", "ontologies", "test_ontology")
+ONTOLOGY_PATH = os.path.join(PROJECT_TEST_ROOT, "fixtures", "ontologies", "cidoc_crm")
 
 BUSINESS_DATA_FILES = (
     # Put strings here, like "/home/html/django_templates" or "C:/www/django/templates".
@@ -31,13 +37,14 @@ BUSINESS_DATA_FILES = (
     # Don't forget to use absolute paths, not relative paths.
 )
 
+print ("Host: %s" % get_env_variable("PGHOST"))
 DATABASES = {
     "default": {
         "ATOMIC_REQUESTS": False,
         "AUTOCOMMIT": True,
         "CONN_MAX_AGE": 0,
         "ENGINE": "django.contrib.gis.db.backends.postgis",
-        "HOST": "localhost",
+        "HOST": get_env_variable("PGHOST"),
         "NAME": "bcfms",
         "OPTIONS": {},
         "PASSWORD": "postgis",
@@ -68,11 +75,28 @@ LOGGING["loggers"]["arches"]["level"] = "ERROR"
 
 ELASTICSEARCH_PREFIX = "test"
 
-TEST_RUNNER = "arches.test.runner.ArchesTestRunner"
+#TEST_RUNNER = "arches.test.runner.ArchesTestRunner"
+TEST_RUNNER = "tests.base_test.ArchesTestRunner"
 SILENCED_SYSTEM_CHECKS.append(
     "arches.W001",  # Cache backend does not support rate-limiting
 )
 
-ELASTICSEARCH_HOSTS = [
-    {"scheme": "http", "host": "localhost", "port": ELASTICSEARCH_HTTP_PORT}
-]
+# ELASTICSEARCH_HOSTS = [
+#     {"scheme": "http", "host": get_env_variable("ESPORT"), "port": ELASTICSEARCH_HTTP_PORT}
+# ]
+
+ELASTICSEARCH_SCHEME = get_env_variable("ES_SCHEME")
+ELASTICSEARCH_HTTP_PORT = int(get_env_variable("ES_PORT"))
+ELASTICSEARCH_HTTP_HOST = get_env_variable("ES_HOST")
+ELASTICSEARCH_HOSTS = [{"scheme": ELASTICSEARCH_SCHEME, "host": ELASTICSEARCH_HTTP_HOST, "port": ELASTICSEARCH_HTTP_PORT}]
+
+ELASTICSEARCH_CERT_LOCATION=get_env_variable("ES_CERT_FILE")
+ELASTICSEARCH_API_KEY=get_env_variable("ES_API_KEY")
+if ELASTICSEARCH_CERT_LOCATION and ELASTICSEARCH_API_KEY:
+    ELASTICSEARCH_CONNECTION_OPTIONS = {"timeout": 30,
+                                        "api_key": ELASTICSEARCH_API_KEY,
+                                        "verify_certs": True,
+                                        "ca_certs": ELASTICSEARCH_CERT_LOCATION
+                                        }
+# a prefix to append to all elasticsearch indexes, note: must be lower case
+ELASTICSEARCH_PREFIX = 'test_bcfms'+get_env_variable("APP_SUFFIX")

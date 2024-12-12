@@ -24,6 +24,7 @@ class ActivityStreamCollectionTests(TestCase):
     ]
 
     def test_scientific_name_formatting(self):
+        # print("test_scientific_name_formatting")
         for sci_format in self.sci_formats:
             self.assertEqual(ScientificTermsFormatter.format_scientific_name(
                 sci_format["parts"]["name"],

@@ -20,12 +20,13 @@ along with this program. If not, see <http://www.gnu.org/licenses/>.
 import sys
 import os
 from django.test.utils import get_runner
-from bcfms.tests import test_settings
+from tests import test_settings
 
 
 def run_all(argv=None):
     os.environ["DJANGO_SETTINGS_MODULE"] = "tests.test_settings"
 
+    print("\n\n\nrun_all\n\n\n")
     if argv is None or len(argv[1:]) == 0:
         argv = ["tests"]
 
