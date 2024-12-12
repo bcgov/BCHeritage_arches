@@ -39,9 +39,9 @@ class BCRegexPattern(RegexPattern):
 bc_url_resolver = re_path(r"^", include("arches.urls"))
 
 for pattern in bc_url_resolver.url_patterns:
-    #print("Before: %s" % pattern.pattern)
+    # print("Before: %s" % pattern.pattern)
     pattern.pattern = BCRegexPattern(pattern.pattern)
-    #print("After: %s" % pattern.pattern)
+    # print("After: %s" % pattern.pattern)
 
 urlpatterns = [
     re_path(bc_path_prefix(r"^workflows/"), BcfmsRootView.as_view(), name="dashboard"),
