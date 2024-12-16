@@ -26,6 +26,7 @@ requires-python = ">=3.10"
 dependencies = [
 #    "arches>=7.6.1,<7.7.0",
     "arches @ git+https://github.com/bcgov/arches.git@stable/7.6.3_bcgov",
+    "arches_common @ git+https://github.com/bcgov/arches_common.git#feat/rename_app",
 ]
 version = "1.1.0"
 

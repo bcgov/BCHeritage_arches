@@ -1,6 +1,7 @@
 """
 Django settings for bcfms project.
 """
+
 import json
 import os
 from dotenv import load_dotenv
@@ -13,6 +14,7 @@ from datetime import datetime, timedelta
 from django.utils.translation import gettext_lazy as _
 from django.core.exceptions import ImproperlyConfigured
 
+
 def get_env_variable(var_name, is_optional=False):
     msg = "Set the %s environment variable"
     try:
@@ -24,35 +26,53 @@ def get_env_variable(var_name, is_optional=False):
         error_msg = msg % var_name
         raise ImproperlyConfigured(error_msg)
 
+
 try:
     from arches.settings import *
 except ImportError:
     pass
 
-load_dotenv(os.path.join(os.path.split(os.path.dirname(os.path.abspath(__file__)))[0], ".env"))
-APP_NAME = 'bcfms'
+load_dotenv(
+    os.path.join(os.path.split(os.path.dirname(os.path.abspath(__file__)))[0], ".env")
+)
+APP_NAME = "bcfms"
 APP_VERSION = semantic_version.Version(major=1, minor=1, patch=0)
 APP_ROOT = os.path.dirname(os.path.abspath(inspect.getfile(inspect.currentframe())))
 
 # PROXY prefix used - NB - cannot have leading "/", and must have trailing "/"
-BCGOV_PROXY_PREFIX = get_env_variable('BCGOV_PROXY_PREFIX')
+BCGOV_PROXY_PREFIX = get_env_variable("BCGOV_PROXY_PREFIX")
 
 WEBPACK_LOADER = {
     "DEFAULT": {
-        "STATS_FILE": os.path.join(APP_ROOT, '..', 'webpack/webpack-stats.json'),
+        "STATS_FILE": os.path.join(APP_ROOT, "..", "webpack/webpack-stats.json"),
     },
 }
 
-DATATYPE_LOCATIONS.append('bcfms.datatypes')
-FUNCTION_LOCATIONS.append('bcfms.functions')
-ETL_MODULE_LOCATIONS.append('bcfms.etl_modules')
-SEARCH_COMPONENT_LOCATIONS.append('bcfms.search_components')
-SEARCH_COMPONENT_LOCATIONS.append('bcfms.search.components')
+DATATYPE_LOCATIONS.append("bcfms.datatypes")
+FUNCTION_LOCATIONS.append("bcfms.functions")
+ETL_MODULE_LOCATIONS.append("bcfms.etl_modules")
+SEARCH_COMPONENT_LOCATIONS.append("bcfms.search_components")
+SEARCH_COMPONENT_LOCATIONS.append("bcfms.search.components")
 
-LOCALE_PATHS.insert(0, os.path.join(APP_ROOT, 'locale'))
+LOCALE_PATHS.insert(0, os.path.join(APP_ROOT, "locale"))
 
 FILE_TYPE_CHECKING = False
-FILE_TYPES = ["bmp", "gif", "jpg", "jpeg", "pdf", "png", "psd", "rtf", "tif", "tiff", "xlsx", "csv", "zip", "json"]
+FILE_TYPES = [
+    "bmp",
+    "gif",
+    "jpg",
+    "jpeg",
+    "pdf",
+    "png",
+    "psd",
+    "rtf",
+    "tif",
+    "tiff",
+    "xlsx",
+    "csv",
+    "zip",
+    "json",
+]
 FILENAME_GENERATOR = "bcfms.util.storage_filename_generator.generate_filename"
 UPLOADED_FILES_DIR = "uploadedfiles"
 
@@ -68,12 +88,18 @@ MODE = get_env_variable("DJANGO_MODE")
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = ast.literal_eval(get_env_variable("DJANGO_DEBUG"))
 
-ROOT_URLCONF = 'bcfms.urls'
+ROOT_URLCONF = "bcfms.urls"
 
 ELASTICSEARCH_SCHEME = get_env_variable("ES_SCHEME")
 ELASTICSEARCH_HTTP_PORT = int(get_env_variable("ES_PORT"))
 ELASTICSEARCH_HTTP_HOST = get_env_variable("ES_HOST")
-ELASTICSEARCH_HOSTS = [{"scheme": ELASTICSEARCH_SCHEME, "host": ELASTICSEARCH_HTTP_HOST, "port": ELASTICSEARCH_HTTP_PORT}]
+ELASTICSEARCH_HOSTS = [
+    {
+        "scheme": ELASTICSEARCH_SCHEME,
+        "host": ELASTICSEARCH_HTTP_HOST,
+        "port": ELASTICSEARCH_HTTP_PORT,
+    }
+]
 
 # Modify this line as needed for your project to connect to elasticsearch with a password that you generate
 # ELASTICSEARCH_CONNECTION_OPTIONS = {"request_timeout": 30, "verify_certs": False, "basic_auth": ("elastic", "E1asticSearchforArche5")}
@@ -95,18 +121,19 @@ ELASTICSEARCH_HOSTS = [{"scheme": ELASTICSEARCH_SCHEME, "host": ELASTICSEARCH_HT
 # ELASTICSEARCH_HOSTS = [{"scheme": "https", "host": ELASTICSEARCH_HTTP_HOST, "port": ELASTICSEARCH_HTTP_PORT}]
 #
 # # How do we handle this across environments?
-ELASTICSEARCH_CERT_LOCATION=get_env_variable("ES_CERT_FILE")
-ELASTICSEARCH_API_KEY=get_env_variable("ES_API_KEY")
+ELASTICSEARCH_CERT_LOCATION = get_env_variable("ES_CERT_FILE")
+ELASTICSEARCH_API_KEY = get_env_variable("ES_API_KEY")
 #
 # # # If you need to connect to Elasticsearch via an API key instead of username/password, use the syntax below:
 if ELASTICSEARCH_CERT_LOCATION and ELASTICSEARCH_API_KEY:
-    ELASTICSEARCH_CONNECTION_OPTIONS = {"timeout": 30,
-                                        "api_key": ELASTICSEARCH_API_KEY,
-                                        "verify_certs": True,
-                                        "ca_certs": ELASTICSEARCH_CERT_LOCATION
-                                        }
+    ELASTICSEARCH_CONNECTION_OPTIONS = {
+        "timeout": 30,
+        "api_key": ELASTICSEARCH_API_KEY,
+        "verify_certs": True,
+        "ca_certs": ELASTICSEARCH_CERT_LOCATION,
+    }
 # a prefix to append to all elasticsearch indexes, note: must be lower case
-ELASTICSEARCH_PREFIX = 'bcfms'+get_env_variable("APP_SUFFIX")
+ELASTICSEARCH_PREFIX = "bcfms" + get_env_variable("APP_SUFFIX")
 
 ELASTICSEARCH_CUSTOM_INDEXES = []
 # [{
@@ -141,14 +168,9 @@ DATABASES = {
         "PASSWORD": get_env_variable("PGPASSWORD"),
         "PORT": "5432",
         "POSTGIS_TEMPLATE": "template_postgis",
-        "TEST": {
-            "CHARSET": None,
-            "COLLATION": None,
-            "MIRROR": None,
-            "NAME": None
-        },
+        "TEST": {"CHARSET": None, "COLLATION": None, "MIRROR": None, "NAME": None},
         "TIME_ZONE": None,
-        "USER": get_env_variable("PGUSERNAME")
+        "USER": get_env_variable("PGUSERNAME"),
     }
 }
 
@@ -177,6 +199,7 @@ INSTALLED_APPS = (
     # "silk",
     "storages",
     "bcfms",
+    "bcgov_arches_common",
 )
 INSTALLED_APPS += ("arches.app",)
 
@@ -206,7 +229,7 @@ MIDDLEWARE = [
     "arches.app.utils.middleware.ModifyAuthorizationHeader",
     "oauth2_provider.middleware.OAuth2TokenMiddleware",
     "django.contrib.auth.middleware.AuthenticationMiddleware",
-    #"bcfms.util.auth.middleware.SiteminderMiddleware",
+    # "bcfms.util.auth.middleware.SiteminderMiddleware",
     "bcfms.util.auth.auth_required_middleware.AuthRequiredMiddleware",
     "django.contrib.messages.middleware.MessageMiddleware",
     "django.middleware.clickjacking.XFrameOptionsMiddleware",
@@ -215,8 +238,7 @@ MIDDLEWARE = [
 ]
 
 MIDDLEWARE.insert(  # this must resolve to first MIDDLEWARE entry
-    0,
-    "django_hosts.middleware.HostsRequestMiddleware"
+    0, "django_hosts.middleware.HostsRequestMiddleware"
 )
 
 MIDDLEWARE.append(  # this must resolve last MIDDLEWARE entry
@@ -232,12 +254,14 @@ TEMPLATES = build_templates_config(
 
 ALLOWED_HOSTS = get_env_variable("ALLOWED_HOSTS").split()
 
-SYSTEM_SETTINGS_LOCAL_PATH = os.path.join(APP_ROOT, 'system_settings', 'System_Settings.json')
-WSGI_APPLICATION = 'bcfms.wsgi.application'
+SYSTEM_SETTINGS_LOCAL_PATH = os.path.join(
+    APP_ROOT, "system_settings", "System_Settings.json"
+)
+WSGI_APPLICATION = "bcfms.wsgi.application"
 
 # URL that handles the media served from MEDIA_ROOT, used for managing stored files.
 # It must end in a slash if set to a non-empty value.
-MEDIA_URL = '/files/'
+MEDIA_URL = "/files/"
 
 # Absolute filesystem path to the directory that will hold user-uploaded files.
 MEDIA_ROOT = os.path.join(APP_ROOT)
@@ -248,11 +272,11 @@ FORCE_SCRIPT_NAME = get_env_variable("FORCE_SCRIPT_NAME")
 # URL prefix for static files.
 # Example: "http://media.lawrence.com/static/"
 if BCGOV_PROXY_PREFIX:
-    STATIC_URL = '/'+BCGOV_PROXY_PREFIX+'static/'
+    STATIC_URL = "/" + BCGOV_PROXY_PREFIX + "static/"
 elif FORCE_SCRIPT_NAME:
-    STATIC_URL = FORCE_SCRIPT_NAME+'static/'
+    STATIC_URL = FORCE_SCRIPT_NAME + "static/"
 else:
-    STATIC_URL = '/static/'
+    STATIC_URL = "/static/"
 
 # Absolute path to the directory static files should be collected to.
 # Don't put anything in this directory yourself; store your static files
@@ -262,46 +286,42 @@ STATIC_ROOT = os.path.join(APP_ROOT, "staticfiles")
 
 OVERRIDE_RESOURCE_MODEL_LOCK = False
 
-RESOURCE_IMPORT_LOG = os.path.join(APP_ROOT, 'logs', 'resource_import.log')
-DEFAULT_RESOURCE_IMPORT_USER = {'username': 'admin', 'userid': 1}
+RESOURCE_IMPORT_LOG = os.path.join(APP_ROOT, "logs", "resource_import.log")
+DEFAULT_RESOURCE_IMPORT_USER = {"username": "admin", "userid": 1}
 
 LOGGING = {
-    'version': 1,
-    'disable_existing_loggers': False,
-    'formatters': {
-        'console': {
-            'format': '%(asctime)s %(name)-12s %(levelname)-8s %(message)s',
+    "version": 1,
+    "disable_existing_loggers": False,
+    "formatters": {
+        "console": {
+            "format": "%(asctime)s %(name)-12s %(levelname)-8s %(message)s",
         },
     },
-    'handlers': {
-        'file': {
-            'level': 'DEBUG',  # DEBUG, INFO, WARNING, ERROR
-            'class': 'logging.FileHandler',
-            'filename': os.path.join(APP_ROOT, 'logs', 'arches.log'),
-            'formatter': 'console'
+    "handlers": {
+        "file": {
+            "level": "DEBUG",  # DEBUG, INFO, WARNING, ERROR
+            "class": "logging.FileHandler",
+            "filename": os.path.join(APP_ROOT, "logs", "arches.log"),
+            "formatter": "console",
         },
-        'console': {
-            'level': 'DEBUG',
-            'class': 'logging.StreamHandler',
-            'formatter': 'console'
-        }
+        "console": {
+            "level": "DEBUG",
+            "class": "logging.StreamHandler",
+            "formatter": "console",
+        },
     },
-    'loggers': {
-        'django': {
-            'handlers': ['file', 'console'],
-            'level': 'INFO',
+    "loggers": {
+        "django": {
+            "handlers": ["file", "console"],
+            "level": "INFO",
         },
-        'arches': {
-            'handlers': ['file', 'console'],
-            'level': 'DEBUG',
-            'propagate': True
+        "arches": {
+            "handlers": ["file", "console"],
+            "level": "DEBUG",
+            "propagate": True,
         },
-        'bcfms': {
-            'handlers': ['file', 'console'],
-            'level': 'DEBUG',
-            'propagate': True
-        }
-    }
+        "bcfms": {"handlers": ["file", "console"], "level": "DEBUG", "propagate": True},
+    },
 }
 
 # Rate limit for authentication views
@@ -313,18 +333,18 @@ RATE_LIMIT = "5/m"
 DATA_UPLOAD_MAX_MEMORY_SIZE = 15728640
 
 # Unique session cookie ensures that logins are treated separately for each app
-SESSION_COOKIE_NAME = 'bcfms'+get_env_variable("APP_SUFFIX")
+SESSION_COOKIE_NAME = "bcfms" + get_env_variable("APP_SUFFIX")
 
 
 # For more info on configuring your cache: https://docs.djangoproject.com/en/2.2/topics/cache/
 CACHES = {
-    'default': {
+    "default": {
         "BACKEND": get_env_variable("CACHE_BACKEND"),
         "LOCATION": get_env_variable("CACHE_BACKEND_LOCATION", is_optional=True),
     },
-    'user_permission': {
-        'BACKEND': 'django.core.cache.backends.db.DatabaseCache',
-        'LOCATION': 'user_permission_cache',
+    "user_permission": {
+        "BACKEND": "django.core.cache.backends.db.DatabaseCache",
+        "LOCATION": "user_permission_cache",
     },
 }
 
@@ -334,23 +354,22 @@ HIDE_EMPTY_NODES_IN_REPORT = True
 BYPASS_UNIQUE_CONSTRAINT_TILE_VALIDATION = False
 BYPASS_REQUIRED_VALUE_TILE_VALIDATION = False
 
-DATE_IMPORT_EXPORT_FORMAT = "%Y-%m-%d" # Custom date format for dates imported from and exported to csv
+DATE_IMPORT_EXPORT_FORMAT = (
+    "%Y-%m-%d"  # Custom date format for dates imported from and exported to csv
+)
 
 # This is used to indicate whether the data in the CSV and SHP exports should be
 # ordered as seen in the resource cards or not.
 EXPORT_DATA_FIELDS_IN_CARD_ORDER = True
 
-#Identify the usernames and duration (seconds) for which you want to cache the time wheel
-CACHE_BY_USER = {
-    "default": 3600 * 24, #24hrs
-    "anonymous": 3600 * 24 #24hrs
-}
+# Identify the usernames and duration (seconds) for which you want to cache the time wheel
+CACHE_BY_USER = {"default": 3600 * 24, "anonymous": 3600 * 24}  # 24hrs  # 24hrs
 
-TILE_CACHE_TIMEOUT = 600 #seconds
-CLUSTER_DISTANCE_MAX = 20000 #meters
+TILE_CACHE_TIMEOUT = 600  # seconds
+CLUSTER_DISTANCE_MAX = 20000  # meters
 GRAPH_MODEL_CACHE_TIMEOUT = None
 
-OAUTH_CLIENT_ID = ''  #'9JCibwrWQ4hwuGn5fu2u1oRZSs9V6gK8Vu8hpRC4'
+OAUTH_CLIENT_ID = ""  #'9JCibwrWQ4hwuGn5fu2u1oRZSs9V6gK8Vu8hpRC4'
 
 EXTERNAL_OAUTH_CONFIGURATION = {
     # claim to be used to assign arches username from
@@ -360,7 +379,6 @@ EXTERNAL_OAUTH_CONFIGURATION = {
     "app_secret": get_env_variable("OAUTH_CLIENT_SECRET"),
     # provider scopes must at least give Arches access to openid, email and profile
     "scopes": ["openid", "profile", "email"],
-
     # authorization, token and jwks URIs must be configured for your provider
     "authorization_endpoint": get_env_variable("OAUTH_AUTH_ENDPOINT"),
     "token_endpoint": get_env_variable("OAUTH_TOKEN_ENDPOINT"),
@@ -369,9 +387,9 @@ EXTERNAL_OAUTH_CONFIGURATION = {
     "validate_id_token": True,
 }
 
-APP_TITLE = 'BC Government | Fossil Management System'
-COPYRIGHT_TEXT = 'All Rights Reserved.'
-COPYRIGHT_YEAR = '2019'
+APP_TITLE = "BC Government | Fossil Management System"
+COPYRIGHT_TEXT = "All Rights Reserved."
+COPYRIGHT_YEAR = "2019"
 
 ENABLE_CAPTCHA = False
 # RECAPTCHA_PUBLIC_KEY = ''
@@ -385,7 +403,7 @@ if DEBUG is True:
 
 # EMAIL_BACKEND = 'django.core.mail.backends.console.EmailBackend'  #<-- Only need to uncomment this for testing without an actual email server
 # EMAIL_USE_TLS = True
-EMAIL_HOST = 'apps.smtp.gov.bc.ca'
+EMAIL_HOST = "apps.smtp.gov.bc.ca"
 EMAIL_HOST_USER = "Fossil.Management@gov.bc.ca"
 # EMAIL_HOST_PASSWORD = 'xxxxxxx'
 # EMAIL_PORT = 587
@@ -393,17 +411,28 @@ EMAIL_HOST_USER = "Fossil.Management@gov.bc.ca"
 DEFAULT_FROM_EMAIL = EMAIL_HOST_USER
 
 CELERY_WORKER_NAME = get_env_variable("CELERY_WORKER_NAME")
-CELERY_BROKER_URL = get_env_variable("CELERY_BROKER_URL") # RabbitMQ --> "amqp://guest:guest@localhost",  Redis --> "redis://localhost:6379/0"
-CELERY_ACCEPT_CONTENT = ['json']
-CELERY_RESULT_BACKEND = 'django-db' # Use 'django-cache' if you want to use your cache as your backend
-CELERY_TASK_SERIALIZER = 'json'
+CELERY_BROKER_URL = get_env_variable(
+    "CELERY_BROKER_URL"
+)  # RabbitMQ --> "amqp://guest:guest@localhost",  Redis --> "redis://localhost:6379/0"
+CELERY_ACCEPT_CONTENT = ["json"]
+CELERY_RESULT_BACKEND = (
+    "django-db"  # Use 'django-cache' if you want to use your cache as your backend
+)
+CELERY_TASK_SERIALIZER = "json"
 
 CELERY_SEARCH_EXPORT_EXPIRES = 24 * 3600  # seconds
 CELERY_SEARCH_EXPORT_CHECK = 3600  # seconds
 
 CELERY_BEAT_SCHEDULE = {
-    "delete-expired-search-export": {"task": "arches.app.tasks.delete_file", "schedule": CELERY_SEARCH_EXPORT_CHECK,},
-    "notification": {"task": "arches.app.tasks.message", "schedule": CELERY_SEARCH_EXPORT_CHECK, "args": ("Celery Beat is Running",),},
+    "delete-expired-search-export": {
+        "task": "arches.app.tasks.delete_file",
+        "schedule": CELERY_SEARCH_EXPORT_CHECK,
+    },
+    "notification": {
+        "task": "arches.app.tasks.message",
+        "schedule": CELERY_SEARCH_EXPORT_CHECK,
+        "args": ("Celery Beat is Running",),
+    },
 }
 
 # Set to True if you want to send celery tasks to the broker without being able to detect celery.
@@ -453,7 +482,9 @@ RESTRICT_CELERY_EXPORT_FOR_ANONYMOUS_USER = False
 # Dictionary containing any additional context items for customising email templates
 EXTRA_EMAIL_CONTEXT = {
     "salutation": _("Hi"),
-    "expiration":(datetime.now() + timedelta(seconds=CELERY_SEARCH_EXPORT_EXPIRES)).strftime("%A, %d %B %Y")
+    "expiration": (
+        datetime.now() + timedelta(seconds=CELERY_SEARCH_EXPORT_EXPIRES)
+    ).strftime("%A, %d %B %Y"),
 }
 
 # see https://docs.djangoproject.com/en/1.9/topics/i18n/translation/#how-django-discovers-language-preference
@@ -484,10 +515,10 @@ LANGUAGE_CODE = "en"
 # {langcode}-{regioncode} eg: en, en-gb ....
 # a list of language codes can be found here http://www.i18nguy.com/unicode/language-identifiers.html
 LANGUAGES = [
-#   ('de', _('German')),
-    ('en', _('English')),
-#   ('en-gb', _('British English')),
-#   ('es', _('Spanish')),
+    #   ('de', _('German')),
+    ("en", _("English")),
+    #   ('en-gb', _('British English')),
+    #   ('es', _('Spanish')),
 ]
 
 # override this to permenantly display/hide the language switcher
@@ -517,7 +548,7 @@ except ImportError:
 WEBPACK_DEVELOPMENT_SERVER_PORT = 9000
 
 ARCHES_NAMESPACE_FOR_DATA_EXPORT = PUBLIC_SERVER_ADDRESS
-ADMIN_MEDIA_PREFIX = STATIC_URL+"admin/"
+ADMIN_MEDIA_PREFIX = STATIC_URL + "admin/"
 
 ###########
 # End BCGov specific settings.
@@ -539,7 +570,7 @@ AWS_SECRET_ACCESS_KEY = get_env_variable("S3_SECRET_ACCESS_KEY")
 AWS_S3_ENDPOINT_URL = "https://nrs.objectstore.gov.bc.ca/"
 S3_URL = AWS_S3_ENDPOINT_URL
 # We want media to be accessed through the arches app not directly from S3
-#MEDIA_URL = AWS_S3_ENDPOINT_URL
+# MEDIA_URL = AWS_S3_ENDPOINT_URL
 AWS_S3_PROXIES = {"https": get_env_variable("S3_PROXIES")}
 
 # CSRF_TRUSTED_ORIGINS = ["https://{{ arches_url_hostname }}"]
@@ -548,8 +579,8 @@ AWS_S3_PROXIES = {"https": get_env_variable("S3_PROXIES")}
 # All tileserver requests go through the BCTileserverProxyView to avoid CORS issues
 # There is a local instance of pg_tileserv for overlays that aren't hosted in the BCGW
 
-#This is the default if source isn't set as a parameter in the request
-TILESERVER_URL="https://openmaps.gov.bc.ca/"
+# This is the default if source isn't set as a parameter in the request
+TILESERVER_URL = "https://openmaps.gov.bc.ca/"
 BC_TILESERVER_URLS = {
     "maps": "https://maps.gov.bc.ca/",
     "openmaps": TILESERVER_URL,
@@ -557,18 +588,32 @@ BC_TILESERVER_URLS = {
 }
 
 AUTH_BYPASS_HOSTS = get_env_variable("AUTH_BYPASS_HOSTS")
-AUTH_NOACCESS_URL = 'https://www2.gov.bc.ca/gov/content/industry/natural-resource-use/fossil-management/'
+AUTH_NOACCESS_URL = "https://www2.gov.bc.ca/gov/content/industry/natural-resource-use/fossil-management/"
 
 # Need to use an outbound proxy as route to tile servers is blocked by firewall
-TILESERVER_OUTBOUND_PROXY=get_env_variable("TILESERVER_OUTBOUND_PROXY")
+TILESERVER_OUTBOUND_PROXY = get_env_variable("TILESERVER_OUTBOUND_PROXY")
 # END Tileserver proxy configuration
 
 DATE_FORMATS = {
     # Keep index values the same for formats in the python and javascript arrays.
-    "Python": ["%Y-%m-%dT%H:%M:%S.%f%z", "%Y-%m-%dT%H:%M:%S%z", "%Y-%m-%d %H:%M:%S%z", "%Y-%m-%d", "%Y-%m", "%Y",
-               "-%Y"],
-    "JavaScript": ["YYYY-MM-DDTHH:mm:ss.sssZ", "YYYY-MM-DDTHH:mm:ssZ", "YYYY-MM-DD HH:mm:ssZ", "YYYY-MM-DD", "YYYY-MM",
-                   "YYYY", "-YYYY"],
+    "Python": [
+        "%Y-%m-%dT%H:%M:%S.%f%z",
+        "%Y-%m-%dT%H:%M:%S%z",
+        "%Y-%m-%d %H:%M:%S%z",
+        "%Y-%m-%d",
+        "%Y-%m",
+        "%Y",
+        "-%Y",
+    ],
+    "JavaScript": [
+        "YYYY-MM-DDTHH:mm:ss.sssZ",
+        "YYYY-MM-DDTHH:mm:ssZ",
+        "YYYY-MM-DD HH:mm:ssZ",
+        "YYYY-MM-DD",
+        "YYYY-MM",
+        "YYYY",
+        "-YYYY",
+    ],
     "Elasticsearch": [
         "yyyy-MM-dd'T'HH:mm:ss.SSSZZZZZ",
         "yyyy-MM-dd'T'HH:mm:ss.SSSZ",
@@ -595,5 +640,5 @@ TIMEWHEEL_DATE_TIERS = {
         #     "interval": 5,
         #     "range": {"min": 2010, "max": 2023}
         # }
-    }
+    },
 }

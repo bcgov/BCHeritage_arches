@@ -12,6 +12,7 @@ services:
       - ../arches/:/web_root/arches
       - ./:/web_root/bcfms
       - ../common/:/web_root/common
+      - ../arches_common/:/web_root/arches_common
     env_file:
       - ./docker/env_file.env
     ports:

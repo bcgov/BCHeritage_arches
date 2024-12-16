@@ -4,7 +4,11 @@ from django.conf.urls.static import static
 from django.conf.urls.i18n import i18n_patterns
 from django.urls.resolvers import RegexPattern
 from bcfms.views.api import MVT, CollectionEventFossilNames, ReportNumberGenerator
-from bcfms.views.map import BCTileserverProxyView, BCTileserverLocalProxyView
+from bcgov_arches_common.views.map import (
+    BCTileserverProxyView,
+    BCTileserverLocalProxyView,
+)
+from bcgov_arches_common.views.search import SearchView
 from bcfms.views.search import export_results as bcfms_export_results
 from bcfms.views.auth import ExternalOauth, UnauthorizedView
 import re
@@ -13,7 +17,6 @@ uuid_regex = settings.UUID_REGEX
 
 
 path_prefix_re = re.compile(r"^(\^)(.*)$")
-
 
 
 def bc_path_prefix(path):
@@ -41,6 +44,7 @@ for pattern in bc_url_resolver.url_patterns:
     # print("After: %s" % pattern.pattern)
 
 urlpatterns = [
+    re_path(bc_path_prefix(r"^search$"), SearchView.as_view(), name="search_home"),
     re_path(
         bc_path_prefix(r"^bctileserver/(?P<path>.*)$"), BCTileserverProxyView.as_view()
     ),
@@ -99,7 +103,7 @@ urlpatterns = [
 ]
 
 # Ensure Arches core urls are superseded by project-level urls
-urlpatterns.append(path('', include('arches.urls')))
+urlpatterns.append(path("", include("arches.urls")))
 
 # Adds URL pattern to serve media files during development
 urlpatterns += static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
