@@ -36,7 +36,7 @@ load_dotenv(
     os.path.join(os.path.split(os.path.dirname(os.path.abspath(__file__)))[0], ".env")
 )
 APP_NAME = "bcrhp"
-APP_VERSION = semantic_version.Version(major=1, minor=2, patch=0)
+APP_VERSION = semantic_version.Version(major=1, minor=3, patch=0)
 APP_ROOT = os.path.dirname(os.path.abspath(inspect.getfile(inspect.currentframe())))
 
 # PROXY prefix used - NB - cannot have leading "/", and must have trailing "/"
