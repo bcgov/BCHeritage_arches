@@ -8,7 +8,7 @@ from bcrhp.views.crhp import CRHPXmlExport
 from bcrhp.views.search import export_results as bcrhp_export_results
 from bcrhp.views.resource import ResourceReportView
 from bcrhp.views.auth import UnauthorizedView
-from .views.map import BCTileserverProxyView
+from bcgov_arches_common.views.map import BCTileserverProxyView
 from bcrhp.views.auth import ExternalOauth
 import re
 

@@ -1,7 +1,7 @@
 from django.db import migrations
 import os
 from .util.migration_util import format_files_into_sql
-from .operations.privileged_sql import RunPrivilegedSQL
+from bcgov_arches_common.migrations.operations.privileged_sql import RunPrivilegedSQL
 
 
 class Migration(migrations.Migration):
