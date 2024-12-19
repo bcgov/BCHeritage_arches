@@ -2,7 +2,7 @@
 
 from django.db import migrations
 from django.db.migrations.operations import RunSQL
-from bcrhp.migrations.operations.privileged_sql import RunPrivilegedSQL
+from bcgov_arches_common.migrations.operations.privileged_sql import RunPrivilegedSQL
 
 
 class Migration(migrations.Migration):

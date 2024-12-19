@@ -7,8 +7,8 @@ from bcfms.util.bcfms_aliases import (
     FossilSampleAliases as sample_aliases,
 )
 from bcfms.util.scientific_terms_util import ScientificTermsFormatter
-from bcfms.util.graph_lookup import GraphLookup
-from bcfms.util.bc_primary_descriptors_function import BCPrimaryDescriptorsFunction
+from bcgov_arches_common.util.graph_lookup import GraphLookup
+from bcgov_arches_common.util.bc_primary_descriptors_function import BCPrimaryDescriptorsFunction
 
 details = {
     "functionid": "60000000-0000-0000-0000-000000001001",

@@ -35,7 +35,7 @@ ROOT_DIR = os.path.normpath(os.path.join("/apps_ux","projects","arches-core","ar
 print("Root dir: %s" % ROOT_DIR)
 # TEST_ROOT = os.path.normpath(os.path.join(ROOT_DIR, "tests"))
 TEST_ROOT = os.path.normpath(os.path.join("apps_ux","projects","bcrhp", "bcrhp", "tests"))
-# APP_ROOT = os.path.normpath(os.path.join(ROOT_DIR, "bcfms"))
+# APP_ROOT = os.path.normpath(os.path.join(ROOT_DIR, "bcrhp"))
 APP_ROOT = ""
 ELASTICSEARCH_HTTP_PORT = 9200
 

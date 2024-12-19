@@ -314,7 +314,7 @@
             <!-- ko foreach: { data: getTilesForAlias('chronology'), as: 'tile' } -->
             <!-- ko component: { name: 'significant-event-widget',
                                  params: {
-                                     card: $parent.getWidgetForAlias('chronology').card,
+                                     card: $parent.getCardForAlias('chronology'),
                                      tile: tile,
                                      value: tile.data,
                                      state: 'display_value',

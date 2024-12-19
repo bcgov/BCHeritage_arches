@@ -2,146 +2,144 @@
 /* Map Legends   */
 /*****************/
 
-@import "map_legend_common.css";
-
 /* Bedrock */
-img.bedrock-intrusive {
+div.bedrock-intrusive {
     background: rgba(246,239,247,0.3);
     border-color: rgba(246,239,247,1);
 }
 
-img.bedrock-metamorphic {
+div.bedrock-metamorphic {
     background: rgba(189,201,225, 0.3);
     border-color: rgba(246,239,247,1);
 }
 
-img.bedrock-sedimentary {
+div.bedrock-sedimentary {
     background: rgba(103,169,207, 0.4);
     border-color: rgba(103,169,207,1);
 }
 
-img.bedrock-ultramafic {
+div.bedrock-ultramafic {
     background: rgba(28,144,153, 0.3);
     border-color: rgba(28,144,153, 1);
 }
 
-img.bedrock-volcanic {
+div.bedrock-volcanic {
     background: rgba(1,108,89, 0.3);
     border-color: rgba(1,108,89, 1);
 }
 
 /* FRPC */
-img.frpc-high {
+div.frpc-high {
     background: rgba(136,65,157,0.6);
     border-color: rgba(136,65,157,1);
 }
-img.frpc-medium {
+div.frpc-medium {
     background: rgba(140,150,198,0.6);
     border-color: rgba(140,150,198,1);
 }
 
-img.frpc-low {
+div.frpc-low {
     background: rgba(179,205,227,0.6);
     border-color: rgba(179,205,227,1);
 }
 
-img.frpc-very-low {
+div.frpc-very-low {
     background: rgba(237,248,251,0.6);
     border-color: rgba(237,248,251,1);
 }
 
 /* FRPC Overburden */
-img.frpc_ovb-high {
+div.frpc_ovb-high {
     background: rgba(82,82,82,.2);
     border-color: rgba(82,82,82,1);
 }
 
-img.frpc_ovb-medium {
+div.frpc_ovb-medium {
     background: rgba(150,150,150,.2);
     border-color: rgba(150,150,150,1);
 }
 
-img.frpc_ovb-low {
+div.frpc_ovb-low {
     background: rgba(204,204,204,.2);
     border-color: rgba(204,204,204,1);
 }
 
-img.frpc_ovb-very-low {
+div.frpc_ovb-very-low {
     background: rgba(247,247,247,.2);
     border-color: rgba(247,247,247,1);
 }
 
 /* Resource Model legends */
 /* Collection event */
-img.collection-event {
+div.collection-event {
     /*background: rgba(244,109,67,0.7);*/
     height: 15px;
     width: 15px;
     border: none;
 }
 
-img.important-fossil-area {
+div.important-fossil-area {
     background: rgba(215,48,39,0.5);
     border-color: rgb(215,48,39);
 }
 
-img.provincially-protected-site {
+div.provincially-protected-site {
     background: rgba(255,0,0, 0.5);
     border-color: rgba(255,0,0, 1);
 }
 
 /* Cadastral layer */
-img.cadastral-crown-agency {
+div.cadastral-crown-agency {
     background: rgba(255,209,257, 0.6);
     border-color: rgba(255,195,230, 1);
 }
-img.cadastral-crown-provincial {
+div.cadastral-crown-provincial {
     background: rgba(255,190,232, 0.6);
     border-color: rgba(255, 159, 229, 1);
 }
 
-img.cadastral-federal {
+div.cadastral-federal {
     background: rgba(128, 177,211, 0.6);
     border-color: rgba(117, 166, 209, 1);
 }
 
-img.cadastral-first-nations {
+div.cadastral-first-nations {
     background: rgba(215,194,159, 0.6);
     border-color: rgba(181,160,124, 1);
 }
 
-img.cadastral-mixed {
+div.cadastral-mixed {
     background: rgba(252,128,114, 0.6);
     border-color: rgba(252,128,114, 1);
 }
 
-img.cadastral-municipal {
+div.cadastral-municipal {
     background: rgba(36,174,96, 0.6);
     border-color: rgba(48, 171, 69, 1);
 }
 
-img.cadastral-private {
+div.cadastral-private {
     background: rgba(255,235,118, 0.6);
     border-color: rgba(255,206,85, 1);
 }
 
-img.cadastral-unclassified {
+div.cadastral-unclassified {
     background: rgba(157,157,157, 0.6);
     border-color: rgba(135,135,135, 1);
 }
 
-img.cadastral-untitled_provincial {
+div.cadastral-untitled_provincial {
     background: rgba(206,180,253, 0.6);
     border-color: rgba(167,150,198, 1);
 }
 
-img.land-management-regions {
+div.land-management-regions {
     background: black;
     width: 6px;
     margin-right: 6px;
 }
 
-img.natural-resource-districts {
+div.natural-resource-districts {
     background: black;
     width: 6px;
     margin-right: 6px;

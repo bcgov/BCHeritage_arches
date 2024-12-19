@@ -21,23 +21,27 @@ define([
         this.impVisible = ko.observable(true);
         this.sapVisible = ko.observable(true);
 
-        var getAllWidgets = function(card) {
-            return _.flatten([ko.unwrap(card.tiles).length === 0 ? [] : ko.unwrap(card.widgets),
-                _.map(card.cards(), subcard => {return getAllWidgets(subcard); })]);
-        }
-        var getAllTiles = function(card) {
+        this.getAllTiles = function(card) {
             return _.flatten([ko.unwrap(card.tiles),
-                _.map(card.cards(), subcard => {return getAllTiles(subcard); })]);
+                _.map(card.cards(), subcard => {return self.getAllTiles(subcard); })]);
         }
-        var widgets = _.flatten(_.map(params.report.cards, card => {return getAllWidgets(card)}));
 
-        var tiles = _.flatten(_.map(params.report.cards, card => {return getAllTiles(card)}));
+        var nodeid_to_widget_lookup = _.object(_.map(params.report.attributes.widgets, function (widget) {
+            return widget.node_id
+        }), params.report.attributes.widgets);
+        var node_alias_to_node_lookup = _.object(_.map(params.report.attributes.nodes, function (node) {
+            return node.alias
+        }), params.report.attributes.nodes);
+
+        var tiles = _.flatten(_.map(params.report.cards, card => {return self.getAllTiles(card)}));
 
         var getWidgetForAlias = function(node_alias){
-            var widget = _.find(widgets, widget => {
-                return ko.unwrap(widget.node.alias) === node_alias;
-            })
-            return widget;
+            if (node_alias in node_alias_to_node_lookup)
+            {
+                return _.extend(nodeid_to_widget_lookup[node_alias_to_node_lookup[node_alias].nodeid],
+                    {"node": node_alias_to_node_lookup[node_alias]});
+            }
+            return null;
         };
 
         // Used by template to get widgets for config

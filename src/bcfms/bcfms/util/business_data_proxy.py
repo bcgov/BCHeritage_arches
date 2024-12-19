@@ -6,7 +6,7 @@ from bcfms.util.bcfms_aliases import (
     IPA,
 )
 from bcfms.util.scientific_terms_util import ScientificTermsFormatter
-from bcfms.util.graph_lookup import GraphLookup
+from bcgov_arches_common.util.graph_lookup import GraphLookup
 from arches.settings import LANGUAGE_CODE
 from datetime import date
 import re
