@@ -1,6 +1,6 @@
 from arches.app.models import models
 from bcrhp.util.bcrhp_aliases import GraphSlugs, LegislativeActAliases, BCRHPSiteAliases
-from bcrhp.util.graph_lookup import GraphLookup
+from bcgov_arches_common.util.graph_lookup import GraphLookup
 from arches.settings import LANGUAGE_CODE
 
 

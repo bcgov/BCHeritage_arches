@@ -1,6 +1,6 @@
 from bcrhp.util.bcrhp_aliases import GraphSlugs, BCRHPSiteSubmissionAliases as aliases
-from bcrhp.util.bc_primary_descriptors_function import BCPrimaryDescriptorsFunction
-from bcrhp.util.graph_lookup import GraphLookup
+from bcgov_arches_common.util.bc_primary_descriptors_function import BCPrimaryDescriptorsFunction
+from bcgov_arches_common.util.graph_lookup import GraphLookup
 
 details = {
     "functionid": "60000000-0000-0000-0000-000000001005",
