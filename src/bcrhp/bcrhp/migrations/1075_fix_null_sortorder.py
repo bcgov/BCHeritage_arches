@@ -6,15 +6,12 @@ fix_null_sort_order_values = """
        where sortorder is null;
     """
 
+
 class Migration(migrations.Migration):
     dependencies = [
         ("bcrhp", "1034_fix_file_urls"),
     ]
 
     operations = [
-        migrations.RunSQL(
-            fix_null_sort_order_values,
-            migrations.RunSQL.noop
-        ),
+        migrations.RunSQL(fix_null_sort_order_values, migrations.RunSQL.noop),
     ]
-

@@ -7,7 +7,7 @@ ENV APP_ROOT=${WEB_ROOT}/bcfms
 # Root project folder
 ENV WHEELS=/wheels
 ENV PYTHONUNBUFFERED=1
-ENV NODE_MAJOR=18
+ENV NODE_MAJOR=20
 
 RUN apt-get update && apt-get install -y make software-properties-common && apt-get install -y ca-certificates curl gnupg && mkdir -p /etc/apt/keyrings
 RUN curl -fsSL https://deb.nodesource.com/gpgkey/nodesource-repo.gpg.key | gpg --dearmor -o /etc/apt/keyrings/nodesource.gpg
@@ -24,14 +24,14 @@ RUN mkdir ${WEB_ROOT}
 RUN set -ex \
   && RUN_DEPS=" \
   build-essential \
-  python3.10-dev \
+  python3.11-dev \
   mime-support \
   libgdal-dev \
   python3-venv \
   postgresql-client-12 \
-  python3.10 \
-  python3.10-distutils \
-  python3.10-venv \
+  python3.11 \
+  python3.11-distutils \
+  python3.11-venv \
   dos2unix \
   git \
   " \

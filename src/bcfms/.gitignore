@@ -12,9 +12,14 @@ bcfms/business_data/*.csv
 bcfms/mangement/data/test_user_list.py
 
 bcfms/staticfiles
-bcfms/webpack/webpack-stats.json
-bcfms/webpack/webpack-user-config.js
+webpack/webpack-stats.json
 node_modules
+
+*.egg-info
+.DS_STORE
+.tsconfig-paths.json
+.frontend-configuration-settings.json
+coverage/
 
 # Files copied from arches_common
 bcfms/media/css/project_common.css

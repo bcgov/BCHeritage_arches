@@ -20,8 +20,14 @@ def get_nodegroups():
     site_graph = Graph.objects.filter(slug="heritage_site").first()
     nodegroups = list(set([node.nodegroup for node in nodes]))
     nodegroups.remove(None)
-    nodegroups.append(Node.objects.filter(graph=site_graph, alias="site_record_admin").first().nodegroup)
-    nodegroups.append(Node.objects.filter(graph=site_graph, alias="internal_remark").first().nodegroup)
+    nodegroups.append(
+        Node.objects.filter(graph=site_graph, alias="site_record_admin")
+        .first()
+        .nodegroup
+    )
+    nodegroups.append(
+        Node.objects.filter(graph=site_graph, alias="internal_remark").first().nodegroup
+    )
     print(len(nodegroups))
     return nodegroups
 
@@ -54,7 +60,5 @@ class Migration(migrations.Migration):
     ]
 
     operations = [
-
         migrations.RunPython(add_permissions, remove_permissions),
     ]
-

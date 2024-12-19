@@ -62,4 +62,3 @@ class Command(BaseCommand):
             quiet=False,
             recalculate_descriptors=False,
         )
-

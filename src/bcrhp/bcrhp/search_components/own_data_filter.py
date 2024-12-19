@@ -24,7 +24,9 @@ class OwnDataFilter(BaseSearchFilter):
         #         return True
         # return False
 
-    def append_dsl(self, search_results_object, permitted_nodegroups, include_provisional):
+    def append_dsl(
+        self, search_results_object, permitted_nodegroups, include_provisional
+    ):
         search_query = Bool()
         if self.user_in_group("Local Government"):
             print("\tUser in Local Government... filter")

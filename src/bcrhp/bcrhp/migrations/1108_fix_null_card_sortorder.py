@@ -21,6 +21,7 @@ reverse_fix_null_sort_order_values = """
                                  ) 
     """
 
+
 class Migration(migrations.Migration):
     dependencies = [
         ("bcrhp", "1075_fix_null_sortorder"),
@@ -28,8 +29,6 @@ class Migration(migrations.Migration):
 
     operations = [
         migrations.RunSQL(
-            fix_null_sort_order_values,
-            reverse_fix_null_sort_order_values
+            fix_null_sort_order_values, reverse_fix_null_sort_order_values
         ),
     ]
-

@@ -17,7 +17,9 @@ details = {
 
 
 class UserCreatedContentFilter(BaseSearchFilter):
-    def append_dsl(self, search_results_object, permitted_nodegroups, include_provisional):
+    def append_dsl(
+        self, search_results_object, permitted_nodegroups, include_provisional
+    ):
         search_query = Bool()
         querystring_params = self.request.GET.get(details["componentname"], "")
 

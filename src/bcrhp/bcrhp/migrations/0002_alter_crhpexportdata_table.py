@@ -6,12 +6,12 @@ from django.db import migrations
 class Migration(migrations.Migration):
 
     dependencies = [
-        ('bcrhp', '0001_initial'),
+        ("bcrhp", "0001_initial"),
     ]
 
     operations = [
         migrations.AlterModelTable(
-            name='crhpexportdata',
-            table='bcrhp_crhp_data_vw',
+            name="crhpexportdata",
+            table="bcrhp_crhp_data_vw",
         ),
     ]

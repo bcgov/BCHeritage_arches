@@ -23,15 +23,12 @@ revert_config = """
         delete from cards_x_nodes_x_widgets where id = '6504d542-f1d8-4668-bd5b-e46e3e58b617';
     """
 
+
 class Migration(migrations.Migration):
     dependencies = [
         ("bcrhp", "1036_update_heritage_site_export_config"),
     ]
 
     operations = [
-        migrations.RunSQL(
-            update_config,
-            revert_config
-        ),
+        migrations.RunSQL(update_config, revert_config),
     ]
-

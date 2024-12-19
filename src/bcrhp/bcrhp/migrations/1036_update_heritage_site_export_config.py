@@ -176,15 +176,12 @@ revert_config = """
         update nodes set exportable = false, fieldname = null where nodeid = 'fdd1b2ca-cd78-11ed-b7b5-5254004d77d3'; --Construction Actors
     """
 
+
 class Migration(migrations.Migration):
     dependencies = [
         ("bcrhp", "1044_disable_download_email_notifications"),
     ]
 
     operations = [
-        migrations.RunSQL(
-            update_config,
-            revert_config
-        ),
+        migrations.RunSQL(update_config, revert_config),
     ]
-

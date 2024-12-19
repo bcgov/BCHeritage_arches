@@ -22,7 +22,9 @@ from arches.app.models.graph import Graph
 from arches.app.models.models import Ontology
 from arches.app.models.system_settings import settings
 from arches.app.utils.betterJSONSerializer import JSONSerializer, JSONDeserializer
-from arches.app.utils.data_management.resource_graphs.importer import import_graph as ResourceGraphImporter
+from arches.app.utils.data_management.resource_graphs.importer import (
+    import_graph as ResourceGraphImporter,
+)
 from arches.app.utils.data_management.resources.importer import BusinessDataImporter
 from bcrhp.tests import test_settings
 from arches.app.utils.context_processors import app_settings
@@ -51,7 +53,9 @@ CREATE_TOKEN_SQL = """
             token, expires, scope, application_id, user_id, created, updated)
             VALUES ('{token}', '1-1-2068', 'read write', 44, {user_id}, '1-1-2018', '1-1-2018');
     """
-DELETE_TOKEN_SQL = "DELETE FROM public.oauth2_provider_accesstoken WHERE application_id = 44;"
+DELETE_TOKEN_SQL = (
+    "DELETE FROM public.oauth2_provider_accesstoken WHERE application_id = 44;"
+)
 
 
 class ArchesTestRunner(DiscoverRunner):
@@ -72,15 +76,23 @@ class ArchesTestRunner(DiscoverRunner):
 
         super().teardown_databases(old_config, **kwargs)
 
+
 class ArchesTestCase(TestCase):
     def __init__(self, *args, **kwargs):
         super(ArchesTestCase, self).__init__(*args, **kwargs)
         if settings.DEFAULT_BOUNDS is None:
             management.call_command("migrate")
-            with open(os.path.join("tests/fixtures/system_settings/Arches_System_Settings_Model.json"), "r") as f:
+            with open(
+                os.path.join(
+                    "tests/fixtures/system_settings/Arches_System_Settings_Model.json"
+                ),
+                "r",
+            ) as f:
                 archesfile = JSONDeserializer().deserialize(f)
             ResourceGraphImporter(archesfile["graph"], True)
-            BusinessDataImporter("tests/fixtures/system_settings/Arches_System_Settings_Local.json").import_business_data()
+            BusinessDataImporter(
+                "tests/fixtures/system_settings/Arches_System_Settings_Local.json"
+            ).import_business_data()
             settings.update_from_db()
 
     @classmethod
