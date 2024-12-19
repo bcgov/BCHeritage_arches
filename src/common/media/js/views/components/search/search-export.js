@@ -10,13 +10,13 @@ define([
     'views/components/simple-switch',
 ], function($, Cookies, ko, arches, moment, searchExportTemplate) {
     var componentName = 'search-export';
-    const viewModel = function(params) {
+    const viewModel = function(sharedStateObject) {
         var self = this;
 
-         
-        this.total = params.total;
-        this.query = params.query;
-        this.selectedPopup = params.selectedPopup;
+
+        this.total = sharedStateObject.total;
+        this.query = sharedStateObject.query;
+        this.selectedPopup = sharedStateObject.selectedPopup;
         this.downloadStarted = ko.observable(false);
         this.reportlink = ko.observable(false);
         this.format = ko.observable('tilecsv');
@@ -27,7 +27,8 @@ define([
         this.celeryRunning = ko.observable(arches.celeryRunning);
         this.hasExportHtmlTemplates = ko.observable(arches.exportHtmlTemplates.length > 0);
         this.downloadPending = ko.observable(false);
-        this.hasResourceTypeFilter = ko.observable(!!params.query()['resource-type-filter']);
+        this.hasResourceTypeFilter = ko.observable(!!sharedStateObject.query()['resource-type-filter']);
+        this.exportSystemValues = ko.observable(false);
 
         this.query.subscribe(function(val) {
             if (val['resource-type-filter']) {
@@ -51,6 +52,7 @@ define([
             urlparams.reportlink = self.reportlink();
             urlparams.precision = self.precision();
             urlparams.total = self.total();
+            urlparams.exportsystemvalues = self.exportSystemValues();
             url = url + '?' + $.param(urlparams);
             return url;
         });
@@ -73,6 +75,7 @@ define([
             payload.total = this.total();
             payload.email = this.emailInput();
             payload.exportName = this.exportName() || "Arches Export";
+            payload.exportsystemvalues = this.exportSystemValues();
             $.ajax({
                 type: "GET",
                 url: arches.urls.export_results,
@@ -123,7 +126,7 @@ define([
         this.executeExport = function(limit){
             if (ko.unwrap(self.format()) === 'geojson' && this.total() <= limit) {
                 window.open(this.geojsonUrl());
-            } else if (this.total() > limit) { // Celery
+            } else if (this.total() > limit) {
                 this.getExportData();
             } else if (this.total() > 0) {
                 const url = this.url();
@@ -138,6 +141,7 @@ define([
             }
         };
 
+        sharedStateObject.searchFilterVms[componentName](this);
     };
 
     return ko.components.register(componentName, {

@@ -1,15 +1,17 @@
+from django.http import HttpResponse, Http404
+from arches.app.views.api import MVT as MVTBase
 import logging
 from arches.app.views.api import APIBase
 from django.http import HttpResponse
 
-from arches.app.models import models
 from django.views.decorators.csrf import csrf_exempt
 from django.utils.decorators import method_decorator
 from arches.app.utils.response import JSONResponse
 from arches.app.utils.betterJSONSerializer import JSONSerializer
 from bcrhp.util.borden_number_api import BordenNumberApi
-from bcrhp.views.mvt_base import MVT as MVTCommon, MVTConfig
 from bcrhp.util.business_data_proxy import LegislativeActDataProxy
+from arches.app.models import models
+from bcrhp.util.mvt_tiler import MVTTiler
 
 logger = logging.getLogger(__name__)
 
@@ -47,12 +49,16 @@ class UserProfile(APIBase):
         ))
 
 
-query_config = {
-    '1b6235b0-0d0f-11ed-98c2-5254008afee6': ['authorities', 'borden_number'], # Heritage Site
-}
+class MVT(MVTBase):
 
-mvt_config = MVTConfig(query_config)
-class MVT(MVTCommon):
+    def get(self, request, nodeid, zoom, x, y):
+        if hasattr(request.user, "userprofile") is not True:
+            models.UserProfile.objects.create(user=request.user)
+        viewable_nodegroups = request.user.userprofile.viewable_nodegroups
+        user = request.user
 
-    def get_mvt_config(self):
-        return mvt_config
+        tile = MVTTiler().createTile(nodeid, viewable_nodegroups, user, zoom, x, y)
+        if not tile or not len(tile):
+            raise Http404()
+        return HttpResponse(tile, content_type="application/x-protobuf")
+
