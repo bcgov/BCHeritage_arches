@@ -13,15 +13,17 @@ The database must be pre-seeded with all the data population beforehand.
 from django.db import migrations
 from bcgov_arches_common.migrations.operations.privileged_sql import RunPrivilegedSQL
 
+
 class Migration(migrations.Migration):
 
     dependencies = [
-        ('bcrhp', '947_create_testing_table'),
+        ("bcrhp", "947_create_testing_table"),
     ]
 
     operations = [
         # The reverse of the databc.V_HISTORIC_ENVIRO_ONEROW_SITE  needs to be done after all the MVs have been created
-        RunPrivilegedSQL("",
+        RunPrivilegedSQL(
+            "",
             """
             create or replace view databc.V_HISTORIC_ENVIRO_ONEROW_SITE as
             select distinct bn.resourceinstanceid site_id,
@@ -126,7 +128,8 @@ class Migration(migrations.Migration):
                     EXECUTE format('grant select on databc.v_historic_enviro_onerow_site to %s' ,quote_ident(databc_user));
                 end;
             $$ language 'plpgsql';
-            """),
+            """,
+        ),
         RunPrivilegedSQL(
             """
             begin;
@@ -148,7 +151,8 @@ class Migration(migrations.Migration):
             """
             drop index if exists mv_hc_idx;
             drop materialized view if exists mv_heritage_class cascade;
-            """),
+            """,
+        ),
         RunPrivilegedSQL(
             """
             begin;
@@ -165,7 +169,8 @@ class Migration(migrations.Migration):
             """
             drop index if exists mv_ht_idx;
             drop materialized view if exists mv_heritage_theme cascade;
-            """),
+            """,
+        ),
         RunPrivilegedSQL(
             """
             begin;
@@ -191,7 +196,8 @@ class Migration(migrations.Migration):
             group by resourceinstanceid, __arches_get_concept_label(construction_actor_type);
             create index mv_ca_idx on mv_construction_actors(resourceinstanceid);
             commit;
-            """),
+            """,
+        ),
         RunPrivilegedSQL(
             """
             begin;
@@ -206,7 +212,8 @@ class Migration(migrations.Migration):
             begin;
             drop materialized view if exists mv_unique_property_address cascade;
             commit;
-            """),
+            """,
+        ),
         RunPrivilegedSQL(
             """
             create or replace procedure refresh_materialized_views() as
@@ -254,7 +261,8 @@ class Migration(migrations.Migration):
                 refresh materialized view mv_site_record_admin;
             END
             $$ language plpgsql;
-            """),
+            """,
+        ),
         RunPrivilegedSQL(
             """
             create or replace view V_HISTORIC_SITE as
@@ -388,9 +396,10 @@ class Migration(migrations.Migration):
             ) sos on bn.resourceinstanceid = sos.resourceinstanceid
             left join mv_unique_property_address prop on bn.resourceinstanceid = prop.resourceinstanceid;
              """,
-             """
+            """
              drop view if exists V_HISTORIC_SITE cascade;
-             """),
+             """,
+        ),
         RunPrivilegedSQL(
             """
             create or replace view databc.V_HISTORIC_ENVIRO_ONEROW_SITE as
@@ -451,9 +460,10 @@ class Migration(migrations.Migration):
                 end;
             $$ language 'plpgsql';
             """,
-            ""),
+            "",
+        ),
         RunPrivilegedSQL(
-             """
+            """
             create or replace view heritage_site.csv_export as
             select
                 resourceinstanceid as site_id
@@ -516,6 +526,6 @@ class Migration(migrations.Migration):
             """,
             """
             drop view if exists heritage_site.csv_export cascade;
-            """),
+            """,
+        ),
     ]
-

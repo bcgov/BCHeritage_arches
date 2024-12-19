@@ -23,9 +23,13 @@ class ExternalOauth(CoreExternalOauth):
     )  # exempt; returned from other oauth2 authorization server, handled by 'oauth_state' in session
     def callback(request):
         logger.debug("In callback (custom)")
-        next_url = request.session["next"] if "next" in request.session else reverse("home")
+        next_url = (
+            request.session["next"] if "next" in request.session else reverse("home")
+        )
         logger.debug("Session user (custom): %s" % request.session["user"])
-        user = authenticate(request, username=request.session["user"], sso_authentication=True)
+        user = authenticate(
+            request, username=request.session["user"], sso_authentication=True
+        )
         logger.debug("User (custom): %s" % user)
         return ExternalOauth.log_user_in(request, user, next_url)
 
@@ -33,7 +37,11 @@ class ExternalOauth(CoreExternalOauth):
     def log_user_in(request, user, next_url):
         logger.debug("In ExternalOauth (custom): %s" % user)
         if user is not None:
-            login(request, user, backend="bcrhp.util.external_oauth_backend.ExternalOauthAuthenticationBackend")
+            login(
+                request,
+                user,
+                backend="bcrhp.util.external_oauth_backend.ExternalOauthAuthenticationBackend",
+            )
             logger.debug("Next URL: %s" % next_url)
             return redirect(next_url)
         else:

@@ -1,4 +1,6 @@
 from django.db import models
+
+
 class CrhpExportData(models.Model):
     resourceinstanceid = models.UUIDField(primary_key=True)
     site_descriptors = models.JSONField()

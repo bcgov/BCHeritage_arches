@@ -6,7 +6,7 @@ from django.db.migrations.operations import RunSQL
 class Migration(migrations.Migration):
 
     dependencies = [
-        ('bcrhp', '983_delete_addresses'),
+        ("bcrhp", "983_delete_addresses"),
     ]
 
     operations = [
@@ -58,6 +58,6 @@ class Migration(migrations.Migration):
                 , 'TRIM Water Lines'
             );
             commit;
-            """
+            """,
         )
     ]

@@ -15,6 +15,7 @@ from bcrhp.util.mvt_tiler import MVTTiler
 
 logger = logging.getLogger(__name__)
 
+
 @method_decorator(csrf_exempt, name="dispatch")
 class BordenNumber(APIBase):
     api = BordenNumberApi()
@@ -25,7 +26,7 @@ class BordenNumber(APIBase):
         # print("Got borden grid: %s" % borden_grid)
         return_data = '{"status": "success", "borden_number": "%s"}' % new_borden_number
         return_bytes = return_data.encode("utf-8")
-        return HttpResponse(return_bytes , content_type="application/json")
+        return HttpResponse(return_bytes, content_type="application/json")
 
 
 class LegislativeAct(APIBase):
@@ -40,13 +41,19 @@ class LegislativeAct(APIBase):
 class UserProfile(APIBase):
     def get(self, request):
         user_profile = models.User.objects.get(id=request.user.pk)
-        group_names = [group.name for group in models.Group.objects.filter(user=user_profile).all()]
-        return JSONResponse(JSONSerializer().serializeToPython(
-            {"username": user_profile.username,
-             "first_name": user_profile.first_name,
-             "last_name": user_profile.last_name,
-             "groups": group_names}
-        ))
+        group_names = [
+            group.name for group in models.Group.objects.filter(user=user_profile).all()
+        ]
+        return JSONResponse(
+            JSONSerializer().serializeToPython(
+                {
+                    "username": user_profile.username,
+                    "first_name": user_profile.first_name,
+                    "last_name": user_profile.last_name,
+                    "groups": group_names,
+                }
+            )
+        )
 
 
 class MVT(MVTBase):
@@ -61,4 +68,3 @@ class MVT(MVTBase):
         if not tile or not len(tile):
             raise Http404()
         return HttpResponse(tile, content_type="application/x-protobuf")
-

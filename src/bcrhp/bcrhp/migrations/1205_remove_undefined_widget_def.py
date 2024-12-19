@@ -11,7 +11,7 @@ def unregister_widget(self, name):
         instances = models.Widget.objects.filter(name="bchp-map-widget")
         instances[0].delete()
     except Exception as e:
-            print(e)
+        print(e)
 
 
 class Migration(migrations.Migration):
