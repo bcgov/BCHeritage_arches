@@ -8,19 +8,12 @@ update_legend_sql = """
                           '"<p><div class=\\"important-fossil-area legend-swatch\\"></div>Area Boundary</p>"'
                               ::jsonb)
         where graphid = '4d6c9226-10c6-11ec-9a94-5254008afee6' and alias = 'area_boundary'; -- Important Fossil Area
-
         update nodes
         set config =
                 jsonb_set(config, '{layerLegend}',
                     '"<p><div class=\\"provincially-protected-site legend-swatch\\"></div>Area Boundary</p>"'
                               ::jsonb)
         where graphid = 'dd19a93a-0202-11ed-a511-0050568377a0' and alias = 'area_boundary'; -- Provincially Protected Fossil Site
-
-        update nodes
-        set config =
-                jsonb_set(config, '{layerLegend}',
-                    '"<p><div class=\\"collection-event legend-swatch\\"></div>Macrofossil<br /><div class=\\"collection-event legend-swatch\\"></div>Microfossil<br/> <div class=\\"collection-event legend-swatch\\"></div>Macrofossil &amp; Microfossil<br /> <div class=\\"collection-event legend-swatch\\"></div>None / Uncertain</p>"'::jsonb)
-        where alias = 'collection_location'; -- Collection Event
 """
 
 revert_legend_sql = """
@@ -36,11 +29,6 @@ revert_legend_sql = """
                           '"<p><img alt=\\"\\" class=\\"provincially-protected-site legend-swatch\\" src=\\"/bc-fossil-management/static/img/blank.png\\" />Area Boundary</p>"'
                               ::jsonb)
         where graphid = 'dd19a93a-0202-11ed-a511-0050568377a0' and alias = 'area_boundary'; -- Provincially Protected Fossil Site
-        update nodes
-        set config =
-                jsonb_set(config, '{layerLegend}',
-                          '"<p><img alt=\\"\\" class=\\"collection-event legend-swatch\\" src=\\"/bc-fossil-management/static/img/markers/macro.png\\" />Macrofossil<br /><img alt=\\"\\" class=\\"collection-event legend-swatch\\" src=\\"/bc-fossil-management/static/img/markers/micro.png\\" />Microfossil<br /> <img alt=\\"\\" class=\\"collection-event legend-swatch\\" src=\\"/bc-fossil-management/static/img/markers/macromicro.png\\" />Macrofossil &amp; Microfossil<br /> <img alt=\\"\\" class=\\"collection-event legend-swatch\\" src=\\"/bc-fossil-management/static/img/markers/nosize.png\\" />None / Uncertain</p>"'::jsonb)
-        where alias = 'collection_location'; -- Collection Event
 """
 
 
