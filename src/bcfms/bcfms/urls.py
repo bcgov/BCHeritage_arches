@@ -8,7 +8,6 @@ from bcgov_arches_common.views.map import (
     BCTileserverProxyView,
     BCTileserverLocalProxyView,
 )
-from bcgov_arches_common.views.search import SearchView
 from bcfms.views.search import export_results as bcfms_export_results
 from bcfms.views.auth import ExternalOauth, UnauthorizedView
 import re
@@ -44,7 +43,6 @@ for pattern in bc_url_resolver.url_patterns:
     # print("After: %s" % pattern.pattern)
 
 urlpatterns = [
-    re_path(bc_path_prefix(r"^search$"), SearchView.as_view(), name="search_home"),
     re_path(
         bc_path_prefix(r"^bctileserver/(?P<path>.*)$"), BCTileserverProxyView.as_view()
     ),
