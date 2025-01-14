@@ -25,7 +25,7 @@ logger = logging.getLogger(__name__)
 
 
 class BordenNumberDataType(StringDataType):
-    borden_number_format = re.compile("^[A-Z][a-z][A-Z][a-z]-\d{1,4}$")
+    borden_number_format = re.compile("^[A-Z][a-z][A-Z][a-z]-\\d{1,4}$")
     bn_api = BordenNumberApi()
 
     def validate(
