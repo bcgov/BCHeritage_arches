@@ -53,7 +53,7 @@ urlpatterns = [
     re_path(
         bc_path_prefix(
             r"^get_next_report_number/(?P<nodeid>%s)/(?P<typeAbbreviation>%s)$"
-            % (uuid_regex, "[A-Z]{3,4}")
+            % (uuid_regex, "[A-Z]{2,4}")
         ),
         ReportNumberGenerator.as_view(),
     ),
