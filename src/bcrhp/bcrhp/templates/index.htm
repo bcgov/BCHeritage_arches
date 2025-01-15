@@ -39,7 +39,7 @@ along with this program. If not, see <http://www.gnu.org/licenses/>.
     <link rel="shortcut icon" href="{% webpack_static 'img/favicon.png' %}" />
 
     <link rel='stylesheet' type='text/css' href='//fonts.googleapis.com/css?family=Open+Sans:400,300,600&amp;subset=cyrillic,latin'>
-    <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.2/css/bootstrap.min.css">
+    <link rel="stylesheet" href="{% webpack_static 'node_modules/bootstrap/dist/css/bootstrap.min.css' %}">
 
     <link href="{% webpack_static 'css/unify.css' %}" rel="stylesheet">
 <!--    <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/font-awesome/4.2.0/css/font-awesome.min.css">-->
@@ -382,6 +382,7 @@ along with this program. If not, see <http://www.gnu.org/licenses/>.
     <footer class="footer">
         <div class="arches_footer">
             <a class="arches_link" target="archesproject" href="https://archesproject.org" >
+                <div class="arches_version">Arches Core Version: {{ app_settings.VERSION }}</div>
                 <img class="arches_logo"
                      src="{% webpack_static 'img/logo/arches/Arches_badge_white_powered_by_2.png' %}" alt="Powered by Arches logo">
             </a>
@@ -398,6 +399,7 @@ along with this program. If not, see <http://www.gnu.org/licenses/>.
                     <li><a href="https://www2.gov.bc.ca/gov/content/home/get-help-with-government-services" target="_blank">Contact Us</a></li>
                 </ul>
             </div>
+            <div class="project_version">BCRHP Version: {{ app_settings.APP_VERSION }}</div>
         </div>
     </footer>
     <!-- End Footer -->
