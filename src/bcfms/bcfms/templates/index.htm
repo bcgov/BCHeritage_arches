@@ -49,22 +49,6 @@ along with this program. If not, see <http://www.gnu.org/licenses/>.
     {% if app_settings.ACCESSIBILITY_MODE %}
     <link href="{% webpack_static 'css/accessibility.css' %}" rel="stylesheet">
     {% endif %}
-    <style>
-        a > div.arches_version:hover {
-            text-decoration: none !important;
-            color: #337ab7 !important;
-        }
-        a > div.arches_version, .bcfms_version {
-            display: inline-block;
-            font-size: .45rem;
-            position: absolute;
-            right: 5px;
-            margin-top: -2px;
-        }
-        .bcfms_version {
-            color: #66adda;
-        }
-    </style>
 </head>
 
 <body>
@@ -338,7 +322,7 @@ along with this program. If not, see <http://www.gnu.org/licenses/>.
                 <li><a href="https://www2.gov.bc.ca/gov/content/home/get-help-with-government-services" target="_blank">Contact Us</a></li>
             </ul>
         </div>
-        <div class="bcfms_version">BCFMS Version: {{ app_settings.APP_VERSION }}</div>
+        <div class="project_version">BCFMS Version: {{ app_settings.APP_VERSION }}</div>
     </div>
 </footer>
 <!-- End Footer -->
