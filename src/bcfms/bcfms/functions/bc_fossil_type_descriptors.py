@@ -75,12 +75,14 @@ class BCFossilTypeDescriptors(BCPrimaryDescriptorsFunction):
         if taxonomic_rank == "Species":
             display_value = self._get_parent_name(resource, context) + " "
 
-        display_value += self.get_value_from_node(
+        name = self.get_value_from_node(
             node=self._graph_lookup.get_node(aliases.NAME),
             datatype=self._graph_lookup.get_datatype(aliases.NAME),
             resourceinstanceid=resource.resourceinstanceid,
             context=context,
         )
-        print("Returning: %s" % display_value)
+        display_value += name if name else ""
 
-        return display_value
+        print("Returning: %s" % display_value.strip())
+
+        return display_value.strip()
