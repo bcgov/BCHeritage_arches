@@ -545,6 +545,8 @@ except ImportError:
 # BCGov specific settings. Should these be externalized into separate file?
 ###########
 
+# Set this if the server-internal URL is different from the externally accessible URL
+WEBPACK_SERVER_ADDRESS = get_env_variable("WEBPACK_SERVER_ADDRESS")
 WEBPACK_DEVELOPMENT_SERVER_PORT = 9000
 
 ARCHES_NAMESPACE_FOR_DATA_EXPORT = PUBLIC_SERVER_ADDRESS
