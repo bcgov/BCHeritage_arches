@@ -5,7 +5,7 @@ from bcgov_arches_common.util.pkg_util import update_map_source_prefix
 
 
 def reload_map_layers(apps, schema_editor):
-    # BCFMS-specific map layers
+    # BCRHP-specific map layers
     for layer_spec in get_mapbox_spec_files():
         call_command(
             "packages",
