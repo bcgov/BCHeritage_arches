@@ -1,7 +1,13 @@
 FROM ubuntu:22.04 AS base
 USER root
 ENV WEB_ROOT=/web_root
+
+# Arches Core root folder
 ENV ARCHES_ROOT=${WEB_ROOT}/arches
+
+# Arches Common App root
+ENV ARCHES_COMMON_ROOT=${WEB_ROOT}/arches_common
+
 ENV APP_ROOT=${WEB_ROOT}/bcrhp
 #ENV AFS_ROOT=${WEB_ROOT}/arches-for-science
 ENV NODE_MAJOR=20
@@ -31,15 +37,20 @@ RUN curl https://bootstrap.pypa.io/get-pip.py -o get-pip.py && python3 get-pip.p
   && pip install setuptools python-dotenv django-storages
 
 COPY ./arches ${ARCHES_ROOT}
+COPY ./arches_common ${ARCHES_COMMON_ROOT}
 #COPY ../arches-for-science ${AFS_ROOT}
 RUN apt-get update && apt-get -y install curl \
-  && apt-get install nodejs && npm install -g yarn && apt install wait-for-it
+  && apt-get install nodejs && apt install wait-for-it
 
 #WORKDIR ${AFS_ROOT}
 #RUN pip show setuptools && pip --version && pip install -e . && pip uninstall arches -y
 
 WORKDIR ${ARCHES_ROOT}
 RUN pip install -e . --user
+
+# Install BCGov Arches Common app
+WORKDIR ${ARCHES_COMMON_ROOT}
+RUN pip install -e .
 
 COPY /bcrhp/docker/webpack/entrypoint.sh ${WEB_ROOT}/entrypoint.sh
 RUN chmod -R 700 ${WEB_ROOT}/entrypoint.sh

@@ -119,7 +119,7 @@ run_migrations() {
 	echo "----- RUNNING DATABASE MIGRATIONS -----"
 	echo ""
 	cd ${APP_FOLDER}
-	python3 manage.py migrate
+	${PYTHON_EXEC} manage.py migrate
 }
 
 run_setup_db() {
@@ -127,7 +127,7 @@ run_setup_db() {
 	echo "----- RUNNING SETUP_DB -----"
 	echo ""
 	cd ${APP_FOLDER}
-	python3 manage.py setup_db --force
+	${PYTHON_EXEC} manage.py setup_db --force
 }
 
 run_load_package() {
@@ -135,7 +135,7 @@ run_load_package() {
 	echo "----- *** LOADING PACKAGE: ${ARCHES_PROJECT} *** -----"
 	echo ""
 	cd ${APP_FOLDER}
-	python3 manage.py packages -o load_package -s bcrhp/pkg -db -dev -y
+	${PYTHON_EXEC} manage.py packages -o load_package -s bcrhp/pkg -db -dev -y
 }
 
 # "exec" means that it will finish building???
@@ -154,7 +154,7 @@ run_livereload_server() {
 	echo ""
 	cd ${APP_FOLDER}
     echo "Running livereload"
-    exec sh -c "python3 manage.py developer livereload --livereloadhost 0.0.0.0"
+    exec sh -c "${PYTHON_EXEC} manage.py developer livereload --livereloadhost 0.0.0.0"
 }
 
 activate_virtualenv() {
