@@ -1,6 +1,7 @@
 from django.db import migrations
 import os
 from .util.migration_util import format_files_into_sql
+from bcgov_arches_common.migrations.operations.privileged_sql import RunPrivilegedSQL
 
 
 class Migration(migrations.Migration):
@@ -55,6 +56,6 @@ class Migration(migrations.Migration):
         """
 
     operations = [
-        migrations.RunSQL(fix_format_uncertainty, revert_format_uncertainty),
+        RunPrivilegedSQL(fix_format_uncertainty, revert_format_uncertainty),
         migrations.RunSQL(create_materialized_views, drop_materialized_views),
     ]
