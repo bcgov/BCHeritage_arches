@@ -30,6 +30,12 @@ class Migration(migrations.Migration):
         + "\n"
         + " begin; call refresh_export_mvs(); commit;"
     )
+    fix_format_uncertainty = format_files_into_sql(
+        ["2025-01-26___bc_format_uncertainty.sql"], os.path.join(sql_dir, "2025")
+    )
+    revert_format_uncertainty = format_files_into_sql(
+        ["2024-12-02___bc_format_uncertainty.sql"], sql_dir
+    )
 
     drop_materialized_views = """
         drop view if exists fossil_collection_event.collection_event_csv_export_vw;
@@ -49,5 +55,6 @@ class Migration(migrations.Migration):
         """
 
     operations = [
+        migrations.RunSQL(fix_format_uncertainty, revert_format_uncertainty),
         migrations.RunSQL(create_materialized_views, drop_materialized_views),
     ]
