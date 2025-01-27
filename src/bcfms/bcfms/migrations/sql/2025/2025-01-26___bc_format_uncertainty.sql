@@ -1,4 +1,4 @@
-CREATE FUNCTION public.__bc_format_uncertainty(tiledata jsonb, nodeid uuid, uncertainty_nodeid uuid) RETURNS text
+CREATE OR REPLACE FUNCTION public.__bc_format_uncertainty(tiledata jsonb, nodeid uuid, uncertainty_nodeid uuid) RETURNS text
     LANGUAGE plpgsql
 AS $$
 DECLARE
