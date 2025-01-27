@@ -19,3 +19,9 @@ BEGIN
         return nodeval || (case when is_uncertain then ' ?' else '' end);
     end if;
 END $$;
+
+DO $$
+    DECLARE
+    BEGIN
+        execute format('alter function public.__bc_format_uncertainty(jsonb, uuid, uuid) owner to %s;', current_database());
+    END $$ language plpgsql;
