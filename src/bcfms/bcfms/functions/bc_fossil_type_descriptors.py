@@ -83,6 +83,4 @@ class BCFossilTypeDescriptors(BCPrimaryDescriptorsFunction):
         )
         display_value += name if name else ""
 
-        print("Returning: %s" % display_value.strip())
-
         return display_value.strip()

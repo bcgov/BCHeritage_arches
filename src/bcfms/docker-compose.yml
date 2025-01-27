@@ -3,6 +3,7 @@ name: bcfms7-6
 services:
   bcfms:
     container_name: bcfms7-6
+    hostname: bcfms7-6
     image: bcgov/bcfms7-6
     build:
       context: ..
@@ -24,6 +25,7 @@ services:
 
   bcfms-webpack:
     container_name: bcfms-webpack7-6
+    hostname: bcfms-webpack7-6
     image: bcgov/bcfms-webpack7-6
     build:
       context: ..
