@@ -98,7 +98,7 @@ class Command(BaseCommand):
                 user.save()
 
                 print(
-                    f"Added test user: {user.username}, password: {profile['password']}"
+                    f"Added test user: {user.username}"
                 )
 
                 for group_name in profile["groups"]:
