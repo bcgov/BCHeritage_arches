@@ -8,10 +8,10 @@ from bcfms.util.business_data_proxy import (
     FossilSampleDataProxy,
     CollectionEventDataProxy,
 )
-from arches.app.search.custom_resource_search import CustomResourceSearchValue
+from arches.app.search.es_mapping_modifier import  EsMappingModifier
 
 
-class CustomSearchValue(CustomResourceSearchValue):
+class CustomSearchValue(EsMappingModifier):
     # custom_search_path = "custom_values"
     initialized = False
     fossil_sample_proxy = None
@@ -151,7 +151,7 @@ class CustomSearchValue(CustomResourceSearchValue):
         # print("Search query after: %s" % search_query)
 
     @staticmethod
-    def get_custom_search_config():
+    def get_mapping_definition():
         return {
             "type": "nested",
             "properties": {

@@ -39,10 +39,10 @@ along with this program. If not, see <http://www.gnu.org/licenses/>.
     <link rel="shortcut icon" href="{% webpack_static 'img/favicon.png' %}" />
 
     <link rel='stylesheet' type='text/css' href='//fonts.googleapis.com/css?family=Open+Sans:400,300,600&amp;subset=cyrillic,latin'>
-    <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.2/css/bootstrap.min.css">
+    <link rel="stylesheet" href="{% webpack_static 'node_modules/bootstrap/dist/css/bootstrap.min.css' %}">
 
-    <link href="{% webpack_static 'css/unify.css' %}" rel="stylesheet">
-    <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/font-awesome/4.2.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="{% webpack_static 'node_modules/font-awesome/css/font-awesome.min.css'%}">
+
     <link href="{% webpack_static 'css/index.css' %}" rel="stylesheet">
     <link href="{% webpack_static 'css/project.css' %}" rel="stylesheet">
     <link href="{% webpack_static 'css/bc_index.css' %}" rel="stylesheet">
@@ -159,13 +159,13 @@ along with this program. If not, see <http://www.gnu.org/licenses/>.
             </div>
 
             <!-- Splash Screen -->
-            <div class="fullscreenbanner-container">
+            <div class="fullscreenbanner-container bc-full-height-image">
                 <div class="fullscreenbanner">
                     <ul>
                         <!-- SLIDE 1 -->
                         <li data-transition="fade" data-slotamount="9" data-masterspeed="0" data-title="Slide 1">
                             <!-- MAIN IMAGE -->
-                            <img src="{% webpack_static 'img/front/mcabee.jpg' %}" alt="slidebg1" data-bgfit="cover" data-bgposition="center center" data-bgrepeat="no-repeat">
+                            <img src="{% webpack_static 'img/front/mcabee.jpg' %}"  alt="slidebg1" data-bgfit="cover" data-bgposition="center center" data-bgrepeat="no-repeat">
                             <!-- LAYERS -->
                             <!-- NEW LAYER -->
                             <div class="tp-caption sft start text-bold bc-splash-caption" delay="4500" data-hoffset="0" data-y="400" data-speed="800" data-start="100" data-easing="Back.easeInOut" data-endspeed="300" data-x="0">
@@ -305,6 +305,7 @@ along with this program. If not, see <http://www.gnu.org/licenses/>.
 <footer class="footer">
     <div class="arches_footer">
         <a class="arches_link" target="archesproject" href="https://archesproject.org" >
+            <div class="arches_version">Arches Core Version: {{ app_settings.VERSION }}</div>
             <img class="arches_logo"
                  src="{% webpack_static 'img/logo/arches/Arches_badge_white_powered_by_2.png' %}" alt="Powered by Arches logo">
         </a>
@@ -321,6 +322,7 @@ along with this program. If not, see <http://www.gnu.org/licenses/>.
                 <li><a href="https://www2.gov.bc.ca/gov/content/home/get-help-with-government-services" target="_blank">Contact Us</a></li>
             </ul>
         </div>
+        <div class="project_version">BCFMS Version: {{ app_settings.APP_VERSION }}</div>
     </div>
 </footer>
 <!-- End Footer -->

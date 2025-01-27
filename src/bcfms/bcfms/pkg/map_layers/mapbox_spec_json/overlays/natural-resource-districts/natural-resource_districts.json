@@ -4,7 +4,7 @@
     "natural-resource-districts-source": {
       "type": "vector",
       "tiles": [
-        "/{ url_context_root }/bctileserver/geo/pub/WHSE_ADMIN_BOUNDARIES.ADM_NR_DISTRICTS_SPG/ows?service=WMS&request=GetMap&layers=pub:WHSE_ADMIN_BOUNDARIES.ADM_NR_DISTRICTS_SPG&styles=&format=pbf&transparent=true&version=1.1.1&height=512&width=512&srs=EPSG:3857&bbox={bbox-epsg-3857}"
+        "/bc-fossil-management/bctileserver/geo/pub/WHSE_ADMIN_BOUNDARIES.ADM_NR_DISTRICTS_SPG/ows?service=WMS&request=GetMap&layers=pub:WHSE_ADMIN_BOUNDARIES.ADM_NR_DISTRICTS_SPG&styles=&format=pbf&transparent=true&version=1.1.1&height=512&width=512&srs=EPSG:3857&bbox={bbox-epsg-3857}"
       ],
       "tileSize": 512
     }
@@ -16,7 +16,7 @@
     "centery": null,
     "icon": "fa fa-globe",
     "isoverlay": true,
-    "legend": "<p><img alt=\"\" class=\"natural-resource-districts legend-line\" src=\"/{ url_context_root }/static/img/blank.png\" />Regional District Boundary</p>",
+    "legend": "<p><div class=\"natural-resource-districts legend-line\"></div>Regional District Boundary</p>",
     "searchonly": false,
     "sortorder": 0,
     "zoom": null

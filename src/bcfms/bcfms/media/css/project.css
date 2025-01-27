@@ -1,5 +1,13 @@
-@import "project_common.css";
 @import "map_legend.css";
+@import url("node_modules/bcgov_arches_common/bcgov_arches_common/media/css/project.css");
+/* Index page */
+.tp-caption {
+   left: 0 !important;
+}
+
+.bc-full-height-image {
+   height: 100vh !important;
+}
 
 /* Details tab rules */
 dl.geological-age > dd > div,
