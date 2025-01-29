@@ -72,9 +72,13 @@ class AdminOnlyPermissionManager:
     def apply_object_permissions(self, obj):
         for user_or_group in self.restricted_users + self.restricted_groups:
             if self._is_resource_restricted(obj):
-                assign_perm(perm=self.no_access_perm, user_or_group=user_or_group, obj=obj)
+                assign_perm(
+                    perm=self.no_access_perm, user_or_group=user_or_group, obj=obj
+                )
             else:
-                remove_perm(perm=self.no_access_perm, user_or_group=user_or_group, obj=obj)
+                remove_perm(
+                    perm=self.no_access_perm, user_or_group=user_or_group, obj=obj
+                )
 
     def remove_object_permissions(self, permission, obj, user_or_group=None):
         for entity in (

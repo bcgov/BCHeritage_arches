@@ -1,0 +1,22 @@
+create or replace view databc.collection_events_vw as
+select row_uuid,
+       collection_event_id,
+       collection_start_year,
+       array_to_string(collector_names, ', ') collectors,
+       location_descriptor,
+       collection_event_significant,
+       common_names,
+       scientific_names,
+       fossil_abundance,
+       size_categories,
+       time_scale,
+       minimum_time,
+       maximum_time,
+       geological_groups,
+       geological_formations,
+       geological_members,
+       publication_count,
+       publication_years,
+       publication_types,
+       authors
+from fossil_collection_event.collection_event_vw;

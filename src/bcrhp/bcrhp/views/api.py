@@ -1,17 +1,20 @@
+from django.http import HttpResponse, Http404
+from arches.app.views.api import MVT as MVTBase
 import logging
 from arches.app.views.api import APIBase
 from django.http import HttpResponse
 
-from arches.app.models import models
 from django.views.decorators.csrf import csrf_exempt
 from django.utils.decorators import method_decorator
 from arches.app.utils.response import JSONResponse
 from arches.app.utils.betterJSONSerializer import JSONSerializer
 from bcrhp.util.borden_number_api import BordenNumberApi
-from bcrhp.views.mvt_base import MVT as MVTCommon, MVTConfig
 from bcrhp.util.business_data_proxy import LegislativeActDataProxy
+from arches.app.models import models
+from bcrhp.util.mvt_tiler import MVTTiler
 
 logger = logging.getLogger(__name__)
+
 
 @method_decorator(csrf_exempt, name="dispatch")
 class BordenNumber(APIBase):
@@ -23,7 +26,7 @@ class BordenNumber(APIBase):
         # print("Got borden grid: %s" % borden_grid)
         return_data = '{"status": "success", "borden_number": "%s"}' % new_borden_number
         return_bytes = return_data.encode("utf-8")
-        return HttpResponse(return_bytes , content_type="application/json")
+        return HttpResponse(return_bytes, content_type="application/json")
 
 
 class LegislativeAct(APIBase):
@@ -38,21 +41,30 @@ class LegislativeAct(APIBase):
 class UserProfile(APIBase):
     def get(self, request):
         user_profile = models.User.objects.get(id=request.user.pk)
-        group_names = [group.name for group in models.Group.objects.filter(user=user_profile).all()]
-        return JSONResponse(JSONSerializer().serializeToPython(
-            {"username": user_profile.username,
-             "first_name": user_profile.first_name,
-             "last_name": user_profile.last_name,
-             "groups": group_names}
-        ))
+        group_names = [
+            group.name for group in models.Group.objects.filter(user=user_profile).all()
+        ]
+        return JSONResponse(
+            JSONSerializer().serializeToPython(
+                {
+                    "username": user_profile.username,
+                    "first_name": user_profile.first_name,
+                    "last_name": user_profile.last_name,
+                    "groups": group_names,
+                }
+            )
+        )
 
 
-query_config = {
-    '1b6235b0-0d0f-11ed-98c2-5254008afee6': ['authorities', 'borden_number'], # Heritage Site
-}
+class MVT(MVTBase):
 
-mvt_config = MVTConfig(query_config)
-class MVT(MVTCommon):
+    def get(self, request, nodeid, zoom, x, y):
+        if hasattr(request.user, "userprofile") is not True:
+            models.UserProfile.objects.create(user=request.user)
+        viewable_nodegroups = request.user.userprofile.viewable_nodegroups
+        user = request.user
 
-    def get_mvt_config(self):
-        return mvt_config
+        tile = MVTTiler().createTile(nodeid, viewable_nodegroups, user, zoom, x, y)
+        if not tile or not len(tile):
+            raise Http404()
+        return HttpResponse(tile, content_type="application/x-protobuf")

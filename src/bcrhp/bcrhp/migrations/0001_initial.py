@@ -7,38 +7,41 @@ class Migration(migrations.Migration):
 
     initial = True
 
-    dependencies = [ ]
+    dependencies = []
 
     operations = [
         migrations.CreateModel(
-            name='CrhpExportData',
+            name="CrhpExportData",
             fields=[
-                ('resourceinstanceid', models.UUIDField(primary_key=True, serialize=False)),
-                ('site_descriptors', models.JSONField()),
-                ('borden_number', models.CharField()),
-                ('site_names', models.JSONField()),
-                ('sos', models.JSONField()),
-                ('addresses', models.JSONField()),
-                ('site_boundary', models.IntegerField()),
-                ('boundary_geojson', models.CharField()),
-                ('site_centroid_latitude',  models.FloatField()),
-                ('site_centroid_longitude', models.FloatField()),
-                ('area_sqm', models.DecimalField(decimal_places=5, max_digits=12)),
-                ('heritage_categories', models.JSONField()),
-                ('heritage_functions', models.JSONField()),
-                ('significant_events', models.JSONField()),
-                ('construction_actors', models.JSONField()),
-                ('heritage_themes', models.JSONField()),
-                ('registration_status', models.CharField()),
-                ('registry_types', models.JSONField()),
-                ('officially_recognized_site', models.BooleanField()),
-                ('protection_events', models.JSONField()),
-                ('site_images', models.JSONField()),
-                ('external_urls', models.JSONField()),
+                (
+                    "resourceinstanceid",
+                    models.UUIDField(primary_key=True, serialize=False),
+                ),
+                ("site_descriptors", models.JSONField()),
+                ("borden_number", models.CharField()),
+                ("site_names", models.JSONField()),
+                ("sos", models.JSONField()),
+                ("addresses", models.JSONField()),
+                ("site_boundary", models.IntegerField()),
+                ("boundary_geojson", models.CharField()),
+                ("site_centroid_latitude", models.FloatField()),
+                ("site_centroid_longitude", models.FloatField()),
+                ("area_sqm", models.DecimalField(decimal_places=5, max_digits=12)),
+                ("heritage_categories", models.JSONField()),
+                ("heritage_functions", models.JSONField()),
+                ("significant_events", models.JSONField()),
+                ("construction_actors", models.JSONField()),
+                ("heritage_themes", models.JSONField()),
+                ("registration_status", models.CharField()),
+                ("registry_types", models.JSONField()),
+                ("officially_recognized_site", models.BooleanField()),
+                ("protection_events", models.JSONField()),
+                ("site_images", models.JSONField()),
+                ("external_urls", models.JSONField()),
             ],
             options={
-                'db_table': '',
-                'managed': False,
+                "db_table": "",
+                "managed": False,
             },
         ),
     ]

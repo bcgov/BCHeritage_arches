@@ -63,4 +63,3 @@ class Migration(migrations.Migration):
     operations = [
         migrations.RunPython(add_permissions, remove_permissions),
     ]
-

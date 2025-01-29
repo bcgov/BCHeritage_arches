@@ -8,12 +8,18 @@ bcrhp/media/packages
 bcrhp/uploadedfiles/*
 bcrhp/settings_local.py
 bcrhp/staticfiles
-bcrhp/webpack/webpack-stats.json
-bcrhp/webpack/webpack-user-config.js
+webpack/webpack-stats.json
+
+*.egg-info
+.DS_STORE
+.tsconfig-paths.json
+.frontend-configuration-settings.json
+coverage/
 
 # Common resources that are copied from arches_common
 bcrhp/media/css/project_common.css
-arches_fossils/media/css/bc_index.css
+bcrhp/media/css/bc_index.css
+bcrhp/media/css/map_legend_common.css
 node_modules
 .vscode/
 CACHE

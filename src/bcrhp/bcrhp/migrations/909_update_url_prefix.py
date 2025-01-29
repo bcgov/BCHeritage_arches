@@ -2,13 +2,13 @@
 
 from django.db import migrations
 from django.db.migrations.operations import RunSQL
-from bcrhp.migrations.operations.privileged_sql import RunPrivilegedSQL
+from bcgov_arches_common.migrations.operations.privileged_sql import RunPrivilegedSQL
 
 
 class Migration(migrations.Migration):
 
     dependencies = [
-        ('bcrhp', '694_3_set_initial_permissions'),
+        ("bcrhp", "694_3_set_initial_permissions"),
     ]
 
     operations = [
@@ -26,7 +26,7 @@ class Migration(migrations.Migration):
             set legend = replace(legend, '/bcrhp/', '/int/bcrhp/')
             where legend like '%/bcrhp/%';
             commit;
-            """
+            """,
         ),
         RunSQL(
             """
@@ -56,7 +56,7 @@ class Migration(migrations.Migration):
             )
             where source::text like '%/bcrhp/%';
             commit;
-            """
+            """,
         ),
         RunSQL(
             """
@@ -82,7 +82,7 @@ class Migration(migrations.Migration):
             where (config->'url') is not null
             and config->>'url' like '%/bcrhp/%';
             commit;
-            """
+            """,
         ),
         # dc12f414-0d07-11ed-8804-5254008afee6 - Site Document node
         # 0a883b80-2fb6-11ed-be5f-5254008afee6 - Site Image node (there are multiple but this uuid is the only one with results for the needed changes)
@@ -209,7 +209,7 @@ class Migration(migrations.Migration):
             and (tiledata -> '0a883b80-2fb6-11ed-be5f-5254008afee6') -> 0 ->> 'content' like '%/bcrhp/%'
             ;
             commit;
-            """
+            """,
         ),
         RunSQL(
             """
@@ -237,7 +237,7 @@ class Migration(migrations.Migration):
             and config->>'searchString' like '%/bcrhp/%'
             ;
             commit;
-            """
+            """,
         ),
         RunSQL(
             """
@@ -255,7 +255,7 @@ class Migration(migrations.Migration):
             where legacyoid like '%/bcrhp/%'
             ;
             commit;
-            """
+            """,
         ),
         RunSQL(
             """
@@ -273,7 +273,7 @@ class Migration(migrations.Migration):
             where value like '%/bcrhp/%'
             ;
             commit;
-            """
+            """,
         ),
         RunSQL(
             """
@@ -291,7 +291,7 @@ class Migration(migrations.Migration):
             where serialized_graph::text like '%/bcrhp/%'
             ;
             commit;
-            """
+            """,
         ),
         RunSQL(
             """
@@ -307,7 +307,7 @@ class Migration(migrations.Migration):
             set newvalue = replace(newvalue::text, '/bcrhp/', '/int/bcrhp/')::jsonb
             where newvalue::text like '%/bcrhp/';
             commit;
-            """
+            """,
         ),
         RunPrivilegedSQL(
             """
@@ -573,6 +573,6 @@ class Migration(migrations.Migration):
                 group by resourceinstanceid
             ) sos on bn.resourceinstanceid = sos.resourceinstanceid
             left join mv_unique_property_address prop on bn.resourceinstanceid = prop.resourceinstanceid;
-            """
-        )
+            """,
+        ),
     ]

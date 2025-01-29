@@ -13,9 +13,11 @@ from tempfile import NamedTemporaryFile
 
 logger = logging.getLogger(__name__)
 
+
 @group_required("Resource Exporter")
 def export_results(request):
     from bcrhp.search.search_export import BCRHPSearchResultsExporter
+
     # Merge the GET and POST data. Arches assumes data is in the GET object
     request.GET = request.GET.copy()
     for key, value in request.POST.items():
@@ -31,7 +33,9 @@ def export_results(request):
         download_limit = settings.SEARCH_EXPORT_IMMEDIATE_DOWNLOAD_THRESHOLD
 
     if total > download_limit and format != "geojson":
-        if (settings.RESTRICT_CELERY_EXPORT_FOR_ANONYMOUS_USER is True) and (request.user.username == "anonymous"):
+        if (settings.RESTRICT_CELERY_EXPORT_FOR_ANONYMOUS_USER is True) and (
+            request.user.username == "anonymous"
+        ):
             message = _(
                 "Your search exceeds the {download_limit} instance download limit.  \
                 Anonymous users cannot run an export exceeding this limit.  \
@@ -54,9 +58,9 @@ def export_results(request):
                 ).format(**locals())
                 return JSONResponse({"success": True, "message": message})
             else:
-                message = _("Your search exceeds the {download_limit} instance download limit. Please refine your search").format(
-                    **locals()
-                )
+                message = _(
+                    "Your search exceeds the {download_limit} instance download limit. Please refine your search"
+                ).format(**locals())
                 return JSONResponse({"success": False, "message": message})
 
     elif format == "tilexl":
@@ -69,7 +73,9 @@ def export_results(request):
                 tmp.seek(0)
                 stream = tmp.read()
                 export_files[0]["outputfile"] = tmp
-                result = zip_utils.zip_response(export_files, zip_file_name=f"{settings.APP_NAME}_export.zip")
+                result = zip_utils.zip_response(
+                    export_files, zip_file_name=f"{settings.APP_NAME}_export.zip"
+                )
         except OSError:
             logger.error("Temp file could not be created.")
             raise
@@ -88,4 +94,6 @@ def export_results(request):
             dest = StringIO()
             dest.write(message)
             export_files.append({"name": "error.txt", "outputfile": dest})
-        return zip_utils.zip_response(export_files, zip_file_name=f"{settings.APP_NAME}_export.zip")
+        return zip_utils.zip_response(
+            export_files, zip_file_name=f"{settings.APP_NAME}_export.zip"
+        )

@@ -10,12 +10,7 @@ else
 	PACKAGE_JSON_FOLDER=${ARCHES_ROOT}
 fi
 
-YARN_MODULES_FOLDER=${PACKAGE_JSON_FOLDER}/$(awk \
-	-F '--install.modules-folder' '{print $2}' ${PACKAGE_JSON_FOLDER}/.yarnrc \
-	| awk '{print $1}' \
-	| tr -d $'\r' \
-	| tr -d '"' \
-	| sed -e "s/^\.\///g")
+PYTHON_EXEC=python3.11
 
 # Environmental Variables
 export DJANGO_PORT=${DJANGO_PORT:-8000}
@@ -94,12 +89,11 @@ init_arches() {
 	fi
 }
 
-# Yarn
-install_yarn_components() {
-	if [[ ! -d ${YARN_MODULES_FOLDER} ]] || [[ ! "$(ls ${YARN_MODULES_FOLDER})" ]]; then
-		echo "Yarn modules do not exist, installing..."
-		cd ${PACKAGE_JSON_FOLDER}
-		yarn install
+# NPM
+install_npm_components() {
+	if [[ ! -d node_modules ]] || [[ ! "$(ls node_modules)" ]]; then
+		echo "NPM modules do not exist, installing..."
+		npm install
 	fi
 }
 
@@ -125,7 +119,7 @@ run_migrations() {
 	echo "----- RUNNING DATABASE MIGRATIONS -----"
 	echo ""
 	cd ${APP_FOLDER}
-	python3 manage.py migrate
+	${PYTHON_EXEC} manage.py migrate
 }
 
 run_setup_db() {
@@ -133,7 +127,7 @@ run_setup_db() {
 	echo "----- RUNNING SETUP_DB -----"
 	echo ""
 	cd ${APP_FOLDER}
-	python3 manage.py setup_db --force
+	${PYTHON_EXEC} manage.py setup_db --force
 }
 
 run_load_package() {
@@ -141,7 +135,7 @@ run_load_package() {
 	echo "----- *** LOADING PACKAGE: ${ARCHES_PROJECT} *** -----"
 	echo ""
 	cd ${APP_FOLDER}
-	python3 manage.py packages -o load_package -s bcrhp/pkg -db -dev -y
+	${PYTHON_EXEC} manage.py packages -o load_package -s bcrhp/pkg -db -dev -y
 }
 
 # "exec" means that it will finish building???
@@ -151,7 +145,7 @@ run_django_server() {
 	echo ""
 	cd ${APP_FOLDER}
     echo "Running Django"
-	exec sh -c "pip install debugpy -t /tmp && python3 -Wdefault /tmp/debugpy --listen 0.0.0.0:5678 manage.py runserver 0.0.0.0:${DJANGO_PORT}"
+	exec sh -c "pip install debugpy -t /tmp && ${PYTHON_EXEC} -Wdefault /tmp/debugpy --listen 0.0.0.0:5678 manage.py runserver 0.0.0.0:${DJANGO_PORT}"
 }
 
 run_livereload_server() {
@@ -160,7 +154,7 @@ run_livereload_server() {
 	echo ""
 	cd ${APP_FOLDER}
     echo "Running livereload"
-    exec sh -c "python3 manage.py developer livereload --livereloadhost 0.0.0.0"
+    exec sh -c "${PYTHON_EXEC} manage.py developer livereload --livereloadhost 0.0.0.0"
 }
 
 activate_virtualenv() {
@@ -170,7 +164,7 @@ activate_virtualenv() {
 #### Main commands
 run_arches() {
 	init_arches
-	install_yarn_components
+	install_npm_components
 	run_django_server
 }
 
@@ -229,8 +223,8 @@ do
 			wait_for_db
 			run_migrations
 		;;
-		install_yarn_components)
-			install_yarn_components
+		install_npm_components)
+			install_npm_components
 		;;
 		help|-h)
 			display_help

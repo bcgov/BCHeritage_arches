@@ -11,7 +11,7 @@ The database must be pre-seeded with all the data population beforehand.
 
 """
 from django.db import migrations
-from bcrhp.migrations.operations.privileged_sql import RunPrivilegedSQL
+from bcgov_arches_common.migrations.operations.privileged_sql import RunPrivilegedSQL
 
 
 class Migration(migrations.Migration):
@@ -22,11 +22,14 @@ class Migration(migrations.Migration):
 
     operations = [
         # The reverse of the databc.V_HISTORIC_ENVIRO_ONEROW_SITE  needs to be done after all the MVs have been created
-        migrations.RunSQL("""
+        migrations.RunSQL(
+            """
         begin;
         call refresh_materialized_views();
         commit;
-        """, ""),
+        """,
+            "",
+        ),
         RunPrivilegedSQL(
             """
             begin;
@@ -40,4 +43,3 @@ class Migration(migrations.Migration):
              """,
         ),
     ]
-

@@ -52,6 +52,7 @@ reverse_fix_documents_sql = """
     where b.tileid = i.tileid;
     """
 
+
 class Migration(migrations.Migration):
     dependencies = [
         ("bcrhp", "910_update_heritage_usernames"),
@@ -75,4 +76,3 @@ class Migration(migrations.Migration):
             reverse_fix_documents_sql,
         ),
     ]
-

@@ -16,15 +16,12 @@ enable_emails = """
         where notiftype_id = '441e6ed4-188d-11ea-a35b-784f435179ea';
     """
 
+
 class Migration(migrations.Migration):
     dependencies = [
         ("bcrhp", "1108_fix_null_card_sortorder"),
     ]
 
     operations = [
-        migrations.RunSQL(
-            disable_emails,
-            enable_emails
-        ),
+        migrations.RunSQL(disable_emails, enable_emails),
     ]
-

@@ -1,11 +1,11 @@
 from django.db import migrations
-from bcrhp.migrations.operations.privileged_sql import RunPrivilegedSQL
+from bcgov_arches_common.migrations.operations.privileged_sql import RunPrivilegedSQL
 
 
 class Migration(migrations.Migration):
 
     dependencies = [
-        ('bcrhp', '0002_alter_crhpexportdata_table'),
+        ("bcrhp", "0002_alter_crhpexportdata_table"),
     ]
 
     create_databc_proxy_schema = """
@@ -19,7 +19,6 @@ class Migration(migrations.Migration):
     grant_databc_proxy_schema = """
         grant all privileges on schema databc to {{ arches_db_user }};
     """
-
 
     create_databc_proxy_role = """
         DO
