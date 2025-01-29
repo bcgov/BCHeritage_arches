@@ -1,9 +1,9 @@
 from django.db import migrations
 import os
 
+
 class Migration(migrations.Migration):
-    dependencies = [('bcrhp',
-                     '1111_add_missing_submission_documents_config')]
+    dependencies = [("bcrhp", "1111_add_missing_submission_documents_config")]
 
     fix_mv_chronology_index = """
        drop index if exists mv_chron_idx;

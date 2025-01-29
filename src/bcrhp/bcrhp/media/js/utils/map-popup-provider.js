@@ -1,9 +1,10 @@
 define([
     'knockout',
     'underscore',
+    'utils/map-filter-utils',
     'templates/views/components/map_popup/toggle-map-popup.htm',
     'templates/views/components/map_popup/edit-map-popup.htm'
-], function (ko, _, default_template, edit_popup) {
+], function (ko, _, mapFilterUtils, default_template, edit_popup) {
     var popupDataProvider = {
             layerConfigs: {
                 "WHSE_CADASTRE.PMBC_PARCEL_FABRIC_POLY_SVW":
@@ -187,7 +188,7 @@ define([
              */
             sendFeatureToMapFilter: function(popupFeatureObject, addToFilter)
             {
-                const foundFeature = this.findPopupFeatureById(popupFeatureObject);
+                const foundFeature = popupFeatureObject.feature.properties.featureid ? this.findPopupFeatureById(popupFeatureObject) : mapFilterUtils.getFeatureFromWFS(popupFeatureObject.feature, popupFeatureObject.feature.sourceLayer);
                 popupFeatureObject.mapCard.filterByFeatureGeom(foundFeature, addToFilter);
             },
 
@@ -200,7 +201,7 @@ define([
             showFilterByFeature: function(popupFeatureObject) {
                 const noFeatureId = popupFeatureObject.feature?.properties?.featureid === undefined;
                 if (noFeatureId)
-                    return false;
+                    return this.isSelectableAsFilter(popupFeatureObject.feature);
                 return this.findPopupFeatureById(popupFeatureObject) !== null;
             },
             findPopupFeatureById: function(popupFeatureObject) {

@@ -7,7 +7,7 @@ from bcgov_arches_common.migrations.operations.privileged_sql import RunPrivileg
 class Migration(migrations.Migration):
 
     dependencies = [
-        ('bcrhp', '665_3_add_map_layers'),
+        ("bcrhp", "665_3_add_map_layers"),
     ]
 
     operations = [
@@ -19,6 +19,6 @@ class Migration(migrations.Migration):
             """
             update map_layers set ispublic=true where name in ('Borden Grid', 'Cadastral ParcelMap', 'Crown Tenures');
             update map_layers set ispublic=false where name in ('Rivers', 'Streams');
-            """
+            """,
         )
     ]

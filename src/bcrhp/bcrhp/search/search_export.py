@@ -35,7 +35,9 @@ class BCRHPSearchResultsExporter(SearchResultsExporter):
             for nodeid, value in tile["data"].items():
                 node = self.get_node(nodeid)
                 if node.exportable or (
-                    is_heritage_site and node.datatype != "semantic" and self.search_request.user.is_superuser
+                    is_heritage_site
+                    and node.datatype != "semantic"
+                    and self.search_request.user.is_superuser
                 ):
                     datatype = datatype_factory.get_instance(node.datatype)
                     node_value = datatype.get_display_value(tile, node)

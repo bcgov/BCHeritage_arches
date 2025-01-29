@@ -31,10 +31,14 @@ ROOT_DIR = os.path.dirname(os.path.abspath(inspect.getfile(inspect.currentframe(
 print("Root dir: %s" % ROOT_DIR)
 ROOT_DIR = os.path.normpath(os.path.join(ROOT_DIR, "..", "..", "bcrhp"))
 print("Root dir: %s" % ROOT_DIR)
-ROOT_DIR = os.path.normpath(os.path.join("/apps_ux","projects","arches-core","arches"))
+ROOT_DIR = os.path.normpath(
+    os.path.join("/apps_ux", "projects", "arches-core", "arches")
+)
 print("Root dir: %s" % ROOT_DIR)
 # TEST_ROOT = os.path.normpath(os.path.join(ROOT_DIR, "tests"))
-TEST_ROOT = os.path.normpath(os.path.join("apps_ux","projects","bcrhp", "bcrhp", "tests"))
+TEST_ROOT = os.path.normpath(
+    os.path.join("apps_ux", "projects", "bcrhp", "bcrhp", "tests")
+)
 # APP_ROOT = os.path.normpath(os.path.join(ROOT_DIR, "bcrhp"))
 APP_ROOT = ""
 ELASTICSEARCH_HTTP_PORT = 9200
@@ -108,12 +112,16 @@ FORCE_TWO_FACTOR_AUTHENTICATION = False
 
 DATATYPE_LOCATIONS.append("tests.fixtures.datatypes")
 # ELASTICSEARCH_HOSTS = [{"scheme": "http", "host": "localhost", "port": ELASTICSEARCH_HTTP_PORT}]
-ELASTICSEARCH_HOSTS = [{"scheme": "https", "host": "localhost", "port": ELASTICSEARCH_HTTP_PORT}]
-ELASTICSEARCH_CERT_LOCATION="/etc/elasticsearch/certs/http_ca.crt"
-ELASTICSEARCH_CONNECTION_OPTIONS = {"timeout": 30,
-                                    "verify_certs": True,
-                                    "ca_certs": ELASTICSEARCH_CERT_LOCATION,
-                                    "basic_auth": ("arches_test2", "arches_test")}
+ELASTICSEARCH_HOSTS = [
+    {"scheme": "https", "host": "localhost", "port": ELASTICSEARCH_HTTP_PORT}
+]
+ELASTICSEARCH_CERT_LOCATION = "/etc/elasticsearch/certs/http_ca.crt"
+ELASTICSEARCH_CONNECTION_OPTIONS = {
+    "timeout": 30,
+    "verify_certs": True,
+    "ca_certs": ELASTICSEARCH_CERT_LOCATION,
+    "basic_auth": ("arches_test2", "arches_test"),
+}
 
 LANGUAGES = [
     ("de", _("German")),

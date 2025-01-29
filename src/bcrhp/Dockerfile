@@ -6,6 +6,9 @@ ENV WEB_ROOT=/web_root
 ENV APP_ROOT=${WEB_ROOT}/${PROJECT_NAME}
 # Root project folder
 ENV ARCHES_ROOT=${WEB_ROOT}/arches
+# Arches Common App root
+ENV ARCHES_COMMON_ROOT=${WEB_ROOT}/arches_common
+
 ENV WHEELS=/wheels
 ENV PYTHONUNBUFFERED=1
 RUN apt-get update && apt-get install -y make software-properties-common
@@ -46,10 +49,17 @@ RUN rm -rf /root/.cache/pip/*
 # Install the Arches application
 # FIXME: ADD from github repository instead?
 COPY ./arches ${ARCHES_ROOT}
+COPY ./arches_common ${ARCHES_COMMON_ROOT}
 # From here, run commands from ARCHES_ROOT
 WORKDIR ${ARCHES_ROOT}
 RUN pip install -e .[dev] && \
-    pip install python-dotenv boto3==1.26 django-storages==1.13 oracledb html2text cffi
+    pip install python-dotenv boto3==1.26 django-storages==1.13 oracledb html2text cffi redis && \
+    pip install --upgrade cryptography PyJWT
+
+# Install BCGov Arches Common app
+WORKDIR ${ARCHES_COMMON_ROOT}
+RUN pip install -e .
+
 COPY ./bcrhp/docker/entrypoint.sh ${WEB_ROOT}/entrypoint.sh
 RUN chmod -R 700 ${WEB_ROOT}/entrypoint.sh &&\
   dos2unix ${WEB_ROOT}/entrypoint.sh
@@ -57,7 +67,10 @@ RUN mkdir /var/log/supervisor
 RUN mkdir /var/log/celery
 # Set default workdir
 WORKDIR ${APP_ROOT}
-COPY ../common/* ${PROJECT_NAME}/
+
+# These have been moved to BCGov Arches Common app
+#COPY ../common/* ${PROJECT_NAME}/
+
 # # Set entrypoint
 ENTRYPOINT ["../entrypoint.sh"]
 CMD ["run_arches"]

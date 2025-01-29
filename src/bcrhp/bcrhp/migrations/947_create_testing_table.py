@@ -22,11 +22,14 @@ class Migration(migrations.Migration):
 
     operations = [
         # The reverse of the databc.V_HISTORIC_ENVIRO_ONEROW_SITE  needs to be done after all the MVs have been created
-        migrations.RunSQL("""
+        migrations.RunSQL(
+            """
         begin;
         call refresh_materialized_views();
         commit;
-        """, ""),
+        """,
+            "",
+        ),
         RunPrivilegedSQL(
             """
             begin;
@@ -40,4 +43,3 @@ class Migration(migrations.Migration):
              """,
         ),
     ]
-
