@@ -4,7 +4,7 @@
     "frpc_ovb-source": {
       "type": "vector",
       "tiles": [
-        "/{ url_context_root }/bclocaltileserver/map_data.fiss_frpc_ovb/{z}/{x}/{y}.pbf?source=local"
+        "/bc-fossil-management/bclocaltileserver/map_data.fiss_frpc_ovb/{z}/{x}/{y}.pbf?source=local"
       ],
       "tileSize": 512
     }
@@ -16,7 +16,7 @@
     "centery": null,
     "icon": "fa fa-globe",
     "isoverlay": true,
-    "legend": "<p><em>Fossil Resource Potential Classification - Overburden</em><br /> <img alt=\"\" class=\"frpc_ovb-high legend-swatch\" src=\"/{ url_context_root }/static/img/blank.png\" />High Potential<br /> <img alt=\"\" class=\"frpc_ovb-medium legend-swatch\" src=\"/{ url_context_root }/static/img/blank.png\" />Medium Potential<br /> <img alt=\"\" class=\"frpc_ovb-low legend-swatch\" src=\"/{ url_context_root }/static/img/blank.png\" />Low Potential<br /> <img alt=\"\" class=\"frpc_ovb-very-low legend-swatch\" src=\"/{ url_context_root }/static/img/blank.png\" />Very Low Potential</p>",
+    "legend": "<p><em>Fossil Resource Potential Classification - Overburden</em><br /> <div class=\"frpc_ovb-high legend-swatch\"></div>High Potential<br /> <div class=\"frpc_ovb-medium legend-swatch\"></div>Medium Potential<br /> <div class=\"frpc_ovb-low legend-swatch\"></div>Low Potential<br /> <div class=\"frpc_ovb-very-low legend-swatch\"></div>Very Low Potential</p>",
     "searchonly": false,
     "sortorder": 0,
     "zoom": null

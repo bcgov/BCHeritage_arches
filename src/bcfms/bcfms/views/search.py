@@ -93,4 +93,6 @@ def export_results(request):
             dest = StringIO()
             dest.write(message)
             export_files.append({"name": "error.txt", "outputfile": dest})
-        return zip_utils.zip_response(export_files, zip_file_name=f"{settings.APP_NAME}_export.zip")
+        return zip_utils.zip_response(
+            export_files, zip_file_name=f"{settings.APP_NAME}_export.zip"
+        )

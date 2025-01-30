@@ -4,7 +4,7 @@
     "land-management-regions-source": {
       "type": "vector",
       "tiles": [
-        "/{ url_context_root }/bctileserver/geo/pub/WHSE_TANTALIS.TA_LAND_MGMT_REGIONS_SVW/ows?service=WMS&request=GetMap&layers=pub:WHSE_TANTALIS.TA_LAND_MGMT_REGIONS_SVW&styles=&format=pbf&transparent=true&version=1.1.1&height=512&width=512&srs=EPSG:3857&bbox={bbox-epsg-3857}"
+        "/bc-fossil-management/bctileserver/geo/pub/WHSE_TANTALIS.TA_LAND_MGMT_REGIONS_SVW/ows?service=WMS&request=GetMap&layers=pub:WHSE_TANTALIS.TA_LAND_MGMT_REGIONS_SVW&styles=&format=pbf&transparent=true&version=1.1.1&height=512&width=512&srs=EPSG:3857&bbox={bbox-epsg-3857}"
       ],
       "tileSize": 512
     }
@@ -16,7 +16,7 @@
     "centery": null,
     "icon": "fa fa-globe",
     "isoverlay": true,
-    "legend": "<p><img alt=\"\" class=\"land-management-regions legend-line\" src=\"/{ url_context_root }/static/img/blank.png\" />Land Management Region</p>",
+    "legend": "<p><div class=\"land-management-regions legend-line\"></div>Land Management Region</p>",
     "searchonly": false,
     "sortorder": 0,
     "zoom": null

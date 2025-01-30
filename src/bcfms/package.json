@@ -1,6 +1,7 @@
 {
     "name": "bcfms",
     "license": "AGPL-3.0-only",
+    "version": "1.1.0-b.0",
     "scripts": {
         "build_development": "npm i typescript@5.6.2 && npm run eslint:check && npm run ts:check && cross-env NODE_OPTIONS=--max-old-space-size=2048 webpack --config ./webpack/webpack.config.dev.js",
         "build_production": "npm run eslint:check && npm run ts:check && cross-env NODE_OPTIONS=--max-old-space-size=2048 NODE_ENV=production webpack --config ./webpack/webpack.config.prod.js",
@@ -24,10 +25,11 @@
         "underscore": "^1.13.6"
     },
     "devDependencies": {
-        "arches-dev-dependencies": "archesproject/arches-dev-dependencies#stable/7.6.1"
+        "arches-dev-dependencies": "archesproject/arches-dev-dependencies#stable/7.6.4"
     },
     "dependencies": {
-        "arches": "archesproject/arches#stable/7.6.3"
+        "arches": "github:bcgov/arches#v7.6.4.1_bcgov",
+        "bcgov_arches_common": "github:bcgov/arches_common"
     },
     "nodeModulesPaths": {}
 }
