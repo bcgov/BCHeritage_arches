@@ -707,14 +707,15 @@
                         ],
                         "placeholder": {
                             "en": "Select an option"
-                        }
+                        },
+                        "url": "/bc-fossil-management/concepts/dropdown?conceptid=37eccecb-dac0-435c-85a3-b1163c4a4cfb"
                     },
                     "id": "7c864eb6-afa9-4d87-baac-7902e4ee3937",
                     "label": {
                         "en": "Fossil Repository Agreement"
                     },
                     "node_id": "86895a94-e4c6-11ef-a3b6-0242ac170009",
-                    "sortorder": 4,
+                    "sortorder": 5,
                     "visible": true,
                     "widget_id": "10000000-0000-0000-0000-000000000009"
                 },
@@ -1919,6 +1920,35 @@
                     "sortorder": 0,
                     "visible": true,
                     "widget_id": "10000000-0000-0000-0000-000000000106"
+                },
+                {
+                    "card_id": "83860218-3ada-4ad1-bd45-ab1308647f04",
+                    "config": {
+                        "defaultValue": {
+                            "en": {
+                                "direction": "ltr",
+                                "value": ""
+                            }
+                        },
+                        "i18n_properties": [
+                            "placeholder"
+                        ],
+                        "label": "Other Requirement Details",
+                        "maxLength": null,
+                        "placeholder": {
+                            "en": "Enter Other Requirement Details"
+                        },
+                        "uneditable": false,
+                        "width": "100%%"
+                    },
+                    "id": "dd4a083d-6234-450b-9680-082625e82217",
+                    "label": {
+                        "en": "Other Requirement Details"
+                    },
+                    "node_id": "fe31dc72-e4cd-11ef-80da-0242ac170009",
+                    "sortorder": 4,
+                    "visible": true,
+                    "widget_id": "10000000-0000-0000-0000-000000000001"
                 }
             ],
             "color": "rgba(53,151,143,1)",
@@ -2105,6 +2135,15 @@
                     "name": null,
                     "ontologyproperty": "http://www.cidoc-crm.org/cidoc-crm/P1_is_identified_by",
                     "rangenode_id": "5e33612e-e4c7-11ef-afe5-0242ac170009"
+                },
+                {
+                    "description": null,
+                    "domainnode_id": "bbdf2f7e-dc66-11ef-a53d-0242ac170009",
+                    "edgeid": "702b1129-d37a-4ffc-8722-732de7ff2109",
+                    "graph_id": "a237a6dc-dc5c-11ef-80ef-0242ac170009",
+                    "name": null,
+                    "ontologyproperty": "http://www.cidoc-crm.org/cidoc-crm/P117i_includes",
+                    "rangenode_id": "fe31dc72-e4cd-11ef-80da-0242ac170009"
                 },
                 {
                     "description": null,
@@ -4768,14 +4807,37 @@
                     "parentproperty": "http://www.cidoc-crm.org/cidoc-crm/P140i_was_attributed_by",
                     "sortorder": 1,
                     "sourcebranchpublication_id": null
+                },
+                {
+                    "alias": "other_requirement_details",
+                    "config": {
+                        "en": ""
+                    },
+                    "datatype": "string",
+                    "description": null,
+                    "exportable": false,
+                    "fieldname": null,
+                    "graph_id": "a237a6dc-dc5c-11ef-80ef-0242ac170009",
+                    "hascustomalias": false,
+                    "is_collector": false,
+                    "isrequired": false,
+                    "issearchable": true,
+                    "istopnode": false,
+                    "name": "Other Requirement Details",
+                    "nodegroup_id": "bbdf2f7e-dc66-11ef-a53d-0242ac170009",
+                    "nodeid": "fe31dc72-e4cd-11ef-80da-0242ac170009",
+                    "ontologyclass": "http://www.cidoc-crm.org/cidoc-crm/E13_Attribute_Assignment",
+                    "parentproperty": "http://www.cidoc-crm.org/cidoc-crm/P117i_includes",
+                    "sortorder": 4,
+                    "sourcebranchpublication_id": null
                 }
             ],
             "ontology_id": "e6e8db47-2ccf-11e6-927e-b8f6b115d7dd",
             "publication": {
                 "graph_id": "a237a6dc-dc5c-11ef-80ef-0242ac170009",
-                "notes": null,
-                "publicationid": "994060ea-e4c8-11ef-aa7a-0242ac170009",
-                "published_time": "2025-02-06T20:26:08.750"
+                "notes": "Add other requirement details node",
+                "publicationid": "33a492a8-e4d0-11ef-854a-0242ac170009",
+                "published_time": "2025-02-06T21:20:34.252"
             },
             "relatable_resource_model_ids": [],
             "resource_2_resource_constraints": [],
