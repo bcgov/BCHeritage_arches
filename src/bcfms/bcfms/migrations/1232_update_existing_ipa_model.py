@@ -3,7 +3,15 @@ from django.core.management import call_command
 from arches.app.models.graph import Graph
 
 def replace_ipa_graph(apps, schema_editor):
-    Graph.objects.filter(slug="project_assessment").first().delete()
+    graph = Graph.objects.filter(slug="project_assessment").first()
+    call_command(
+        "resources",
+        operation="remove_resources",
+        graph=graph.graphid,
+        yes = True
+    )
+
+    graph.delete()
     call_command(
         "packages",
         operation="import_graphs",
