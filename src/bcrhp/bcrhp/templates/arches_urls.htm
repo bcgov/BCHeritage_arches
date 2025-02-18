@@ -1,0 +1,15 @@
+{% extends "arches_urls.htm" %}
+
+{% load static %}
+{% load l10n %}
+{% load i18n %}
+
+{% block arches_urls %}
+{{ block.super }}
+<div class="arches-urls"
+     api_user="{% url 'api_user' %}"
+     user_profile_manager="{% url 'user_profile_manager' %}"
+     dashboard="{% url 'submissions' %}">
+</div>
+
+{% endblock arches_urls %}

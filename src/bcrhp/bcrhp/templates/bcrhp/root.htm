@@ -1,0 +1,20 @@
+{% extends "base-root.htm" %}
+{% load webpack_static from webpack_loader %}
+
+{% block title %}
+
+{% endblock title %}
+
+{% block css %}
+  {{ block.super }}
+    <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.2/css/bootstrap.min.css">
+    <link href="{% webpack_static 'css/unify.css' %}" rel="stylesheet">
+    <link href="{% webpack_static 'css/index.css' %}" rel="stylesheet">
+    <link href="{% webpack_static 'css/project.css' %}" rel="stylesheet">
+    <link  href="{% webpack_static 'css/bc_index.css' %}" rel="stylesheet"/>
+    <link href="{% webpack_static 'css/accessibility.css' %}" rel="stylesheet">
+{% endblock css %}
+
+{% block body %}
+<div id="bcrhp-mounting-point" class="bcgov-vue-mounting-point"></div>
+{% endblock body %}

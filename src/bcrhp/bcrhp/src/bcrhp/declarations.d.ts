@@ -2,3 +2,7 @@
 // Module homepage on npmjs.com uses logos "TS" or "DT" to indicate if typed
 
 import("@/arches/declarations.d.ts");
+import("@/bcgov_arches_common/declarations.d.ts");
+
+declare module "zod";
+declare module "bcrhp";
