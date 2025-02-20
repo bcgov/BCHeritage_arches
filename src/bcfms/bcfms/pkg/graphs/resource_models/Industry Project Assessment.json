@@ -24,10 +24,10 @@
                     },
                     "is_editable": true,
                     "name": {
-                        "en": "Report Submission"
+                        "en": "Submission"
                     },
                     "nodegroup_id": "594f9a5e-dc5e-11ef-93b5-0242ac170009",
-                    "sortorder": 0,
+                    "sortorder": 2,
                     "visible": true
                 },
                 {
@@ -54,7 +54,7 @@
                         "en": "FMO Report Assessment"
                     },
                     "nodegroup_id": "65cbfe76-dc5e-11ef-93b5-0242ac170009",
-                    "sortorder": 1,
+                    "sortorder": 4,
                     "visible": true
                 },
                 {
@@ -139,7 +139,7 @@
                         "en": "Submission Photographs"
                     },
                     "nodegroup_id": "84f9ad00-dc65-11ef-a53d-0242ac170009",
-                    "sortorder": 1,
+                    "sortorder": 3,
                     "visible": true
                 },
                 {
@@ -456,7 +456,7 @@
                         "i18n_properties": [
                             "placeholder"
                         ],
-                        "label": "Report Recommendations",
+                        "label": "Recommendations",
                         "maxLength": null,
                         "placeholder": {
                             "en": "Enter text"
@@ -466,7 +466,7 @@
                     },
                     "id": "594fa436-dc5e-11ef-93b5-0242ac170009",
                     "label": {
-                        "en": "Report Recommendations"
+                        "en": "Recommendations"
                     },
                     "node_id": "594fa06c-dc5e-11ef-93b5-0242ac170009",
                     "sortorder": 6,
@@ -485,17 +485,17 @@
                         "i18n_properties": [
                             "placeholder"
                         ],
-                        "label": "Report Title",
+                        "label": "Document Title",
                         "maxLength": "80",
                         "placeholder": {
-                            "en": "Enter text"
+                            "en": "Enter the title of the document"
                         },
                         "uneditable": false,
                         "width": "100%"
                     },
                     "id": "594fa4fe-dc5e-11ef-93b5-0242ac170009",
                     "label": {
-                        "en": "Report Title"
+                        "en": "Document Title"
                     },
                     "node_id": "594f9e00-dc5e-11ef-93b5-0242ac170009",
                     "sortorder": 1,
@@ -1021,7 +1021,7 @@
                         "en": "Expected Project End Date"
                     },
                     "node_id": "a238a4ce-dc5c-11ef-80ef-0242ac170009",
-                    "sortorder": 7,
+                    "sortorder": 6,
                     "visible": true,
                     "widget_id": "10000000-0000-0000-0000-000000000004"
                 },
@@ -1065,7 +1065,7 @@
                         "en": "Expected Project Start Date"
                     },
                     "node_id": "a23899e8-dc5c-11ef-80ef-0242ac170009",
-                    "sortorder": 5,
+                    "sortorder": 6,
                     "visible": true,
                     "widget_id": "10000000-0000-0000-0000-000000000004"
                 },
@@ -1080,7 +1080,7 @@
                         "en": "Project Completed"
                     },
                     "node_id": "a238988a-dc5c-11ef-80ef-0242ac170009",
-                    "sortorder": 6,
+                    "sortorder": 7,
                     "visible": true,
                     "widget_id": "0346bc9c-d235-4313-adc8-d0e210b2ef25"
                 },
@@ -1222,7 +1222,7 @@
                         "en": "Initial Review Internal Notes"
                     },
                     "node_id": "a2388f16-dc5c-11ef-80ef-0242ac170009",
-                    "sortorder": 10,
+                    "sortorder": 9,
                     "visible": true,
                     "widget_id": "10000000-0000-0000-0000-000000000005"
                 },
@@ -1269,7 +1269,7 @@
                         "en": "Proximity to Fossils"
                     },
                     "node_id": "a238eace-dc5c-11ef-80ef-0242ac170009",
-                    "sortorder": 0,
+                    "sortorder": 1,
                     "visible": true,
                     "widget_id": "10000000-0000-0000-0000-000000000002"
                 },
@@ -1345,7 +1345,7 @@
                         "en": "Initial Review Outcome"
                     },
                     "node_id": "a238c06c-dc5c-11ef-80ef-0242ac170009",
-                    "sortorder": 9,
+                    "sortorder": 10,
                     "visible": true,
                     "widget_id": "10000000-0000-0000-0000-000000000001"
                 },
@@ -1367,7 +1367,7 @@
                         "en": "FRPR"
                     },
                     "node_id": "a238a3f2-dc5c-11ef-80ef-0242ac170009",
-                    "sortorder": 3,
+                    "sortorder": 7,
                     "visible": true,
                     "widget_id": "10000000-0000-0000-0000-000000000002"
                 },
@@ -1389,7 +1389,7 @@
                         "en": "Initial Review Level of Risk"
                     },
                     "node_id": "a2389e0c-dc5c-11ef-80ef-0242ac170009",
-                    "sortorder": 4,
+                    "sortorder": 8,
                     "visible": true,
                     "widget_id": "10000000-0000-0000-0000-000000000002"
                 },
@@ -1483,7 +1483,7 @@
                         "en": "Ground Disturbance"
                     },
                     "node_id": "a238b87e-dc5c-11ef-80ef-0242ac170009",
-                    "sortorder": 1,
+                    "sortorder": 2,
                     "visible": true,
                     "widget_id": "10000000-0000-0000-0000-000000000002"
                 },
@@ -1567,7 +1567,7 @@
                         "en": "Intersects IFA"
                     },
                     "node_id": "a238be3c-dc5c-11ef-80ef-0242ac170009",
-                    "sortorder": 2,
+                    "sortorder": 0,
                     "visible": true,
                     "widget_id": "10000000-0000-0000-0000-000000000006"
                 },
@@ -1613,7 +1613,7 @@
                         "en": "Initial Review Internal Notes"
                     },
                     "node_id": "a2388f16-dc5c-11ef-80ef-0242ac170009",
-                    "sortorder": 5,
+                    "sortorder": 9,
                     "visible": true,
                     "widget_id": "10000000-0000-0000-0000-000000000001"
                 },
@@ -2762,12 +2762,12 @@
                     "isrequired": false,
                     "issearchable": true,
                     "istopnode": false,
-                    "name": "Report Submission",
+                    "name": "Submission",
                     "nodegroup_id": "594f9a5e-dc5e-11ef-93b5-0242ac170009",
                     "nodeid": "594f9a5e-dc5e-11ef-93b5-0242ac170009",
                     "ontologyclass": "http://www.cidoc-crm.org/cidoc-crm/E31_Document",
                     "parentproperty": "http://www.cidoc-crm.org/cidoc-crm/P17_was_motivated_by",
-                    "sortorder": 0,
+                    "sortorder": 2,
                     "sourcebranchpublication_id": null
                 },
                 {
@@ -2785,7 +2785,7 @@
                     "isrequired": true,
                     "issearchable": true,
                     "istopnode": false,
-                    "name": "Report Title",
+                    "name": "Document Title",
                     "nodegroup_id": "594f9a5e-dc5e-11ef-93b5-0242ac170009",
                     "nodeid": "594f9e00-dc5e-11ef-93b5-0242ac170009",
                     "ontologyclass": "http://www.cidoc-crm.org/cidoc-crm/E35_Title",
@@ -2808,7 +2808,7 @@
                     "isrequired": false,
                     "issearchable": true,
                     "istopnode": false,
-                    "name": "Report Recommendations",
+                    "name": "Recommendations",
                     "nodegroup_id": "594f9a5e-dc5e-11ef-93b5-0242ac170009",
                     "nodeid": "594fa06c-dc5e-11ef-93b5-0242ac170009",
                     "ontologyclass": "http://www.cidoc-crm.org/cidoc-crm/E73_Information_Object",
@@ -3213,7 +3213,7 @@
                     "nodeid": "5e33612e-e4c7-11ef-afe5-0242ac170009",
                     "ontologyclass": "http://www.cidoc-crm.org/cidoc-crm/E42_Identifier",
                     "parentproperty": "http://www.cidoc-crm.org/cidoc-crm/P1_is_identified_by",
-                    "sortorder": 0,
+                    "sortorder": 1,
                     "sourcebranchpublication_id": null
                 },
                 {
@@ -3236,7 +3236,7 @@
                     "nodeid": "65cbfe76-dc5e-11ef-93b5-0242ac170009",
                     "ontologyclass": "http://www.cidoc-crm.org/cidoc-crm/E7_Activity",
                     "parentproperty": "http://www.cidoc-crm.org/cidoc-crm/P117i_includes",
-                    "sortorder": 2,
+                    "sortorder": 4,
                     "sourcebranchpublication_id": null
                 },
                 {
@@ -3432,7 +3432,7 @@
                     "nodeid": "84f9ad00-dc65-11ef-a53d-0242ac170009",
                     "ontologyclass": "http://www.ics.forth.gr/isl/CRMdig/D13_Digital_Information_Carrier",
                     "parentproperty": "http://www.cidoc-crm.org/cidoc-crm/P17_was_motivated_by",
-                    "sortorder": 1,
+                    "sortorder": 3,
                     "sourcebranchpublication_id": null
                 },
                 {
@@ -3768,7 +3768,7 @@
                     "nodeid": "a23875c6-dc5c-11ef-80ef-0242ac170009",
                     "ontologyclass": "http://www.ics.forth.gr/isl/CRMsci/S15_Observable_Entity",
                     "parentproperty": "http://www.cidoc-crm.org/cidoc-crm/P15_was_influenced_by",
-                    "sortorder": 0,
+                    "sortorder": 3,
                     "sourcebranchpublication_id": null
                 },
                 {
@@ -3837,7 +3837,7 @@
                     "nodeid": "a2388728-dc5c-11ef-80ef-0242ac170009",
                     "ontologyclass": "http://www.ics.forth.gr/isl/CRMsci/S15_Observable_Entity",
                     "parentproperty": "http://www.cidoc-crm.org/cidoc-crm/P15_was_influenced_by",
-                    "sortorder": 0,
+                    "sortorder": 5,
                     "sourcebranchpublication_id": null
                 },
                 {
@@ -3883,7 +3883,7 @@
                     "nodeid": "a2388f16-dc5c-11ef-80ef-0242ac170009",
                     "ontologyclass": "http://www.ics.forth.gr/isl/CRMdig/D29_Annotation_Object",
                     "parentproperty": "http://www.cidoc-crm.org/cidoc-crm/P15_was_influenced_by",
-                    "sortorder": 0,
+                    "sortorder": 8,
                     "sourcebranchpublication_id": null
                 },
                 {
@@ -3938,7 +3938,7 @@
                     "nodeid": "a238988a-dc5c-11ef-80ef-0242ac170009",
                     "ontologyclass": "http://www.cidoc-crm.org/cidoc-crm/E3_Condition_State",
                     "parentproperty": "http://www.cidoc-crm.org/cidoc-crm/P115i_is_finished_by",
-                    "sortorder": 0,
+                    "sortorder": 3,
                     "sourcebranchpublication_id": null
                 },
                 {
@@ -4007,7 +4007,7 @@
                     "nodeid": "a2389e0c-dc5c-11ef-80ef-0242ac170009",
                     "ontologyclass": "http://www.cidoc-crm.org/cidoc-crm/E13_Attribute_Assignment",
                     "parentproperty": "http://www.cidoc-crm.org/cidoc-crm/P140i_was_attributed_by",
-                    "sortorder": 0,
+                    "sortorder": 8,
                     "sourcebranchpublication_id": null
                 },
                 {
@@ -4076,7 +4076,7 @@
                     "nodeid": "a238a4ce-dc5c-11ef-80ef-0242ac170009",
                     "ontologyclass": "http://www.cidoc-crm.org/cidoc-crm/E64_End_of_Existence",
                     "parentproperty": "http://www.cidoc-crm.org/cidoc-crm/P115_finishes",
-                    "sortorder": 0,
+                    "sortorder": 1,
                     "sourcebranchpublication_id": null
                 },
                 {
@@ -4099,7 +4099,7 @@
                     "nodeid": "a238b43c-dc5c-11ef-80ef-0242ac170009",
                     "ontologyclass": "http://www.ics.forth.gr/isl/CRMsci/S15_Observable_Entity",
                     "parentproperty": "http://www.cidoc-crm.org/cidoc-crm/P15_was_influenced_by",
-                    "sortorder": 0,
+                    "sortorder": 6,
                     "sourcebranchpublication_id": null
                 },
                 {
@@ -4145,7 +4145,7 @@
                     "nodeid": "a238b87e-dc5c-11ef-80ef-0242ac170009",
                     "ontologyclass": "http://www.ics.forth.gr/isl/CRMsci/S15_Observable_Entity",
                     "parentproperty": "http://www.cidoc-crm.org/cidoc-crm/P15_was_influenced_by",
-                    "sortorder": 0,
+                    "sortorder": 2,
                     "sourcebranchpublication_id": null
                 },
                 {
@@ -4223,7 +4223,7 @@
                     "nodeid": "a238c06c-dc5c-11ef-80ef-0242ac170009",
                     "ontologyclass": "http://www.ics.forth.gr/isl/CRMinf/I3_Inference_Logic",
                     "parentproperty": "http://www.cidoc-crm.org/cidoc-crm/P129i_is_subject_of",
-                    "sortorder": 0,
+                    "sortorder": 10,
                     "sourcebranchpublication_id": null
                 },
                 {
@@ -4455,7 +4455,7 @@
                     "nodeid": "a238e5ba-dc5c-11ef-80ef-0242ac170009",
                     "ontologyclass": "http://www.ics.forth.gr/isl/CRMsci/S15_Observable_Entity",
                     "parentproperty": "http://www.cidoc-crm.org/cidoc-crm/P15_was_influenced_by",
-                    "sortorder": 0,
+                    "sortorder": 4,
                     "sourcebranchpublication_id": null
                 },
                 {
@@ -4501,7 +4501,7 @@
                     "nodeid": "a238eace-dc5c-11ef-80ef-0242ac170009",
                     "ontologyclass": "http://www.ics.forth.gr/isl/CRMsci/S15_Observable_Entity",
                     "parentproperty": "http://www.cidoc-crm.org/cidoc-crm/P15_was_influenced_by",
-                    "sortorder": 0,
+                    "sortorder": 1,
                     "sourcebranchpublication_id": null
                 },
                 {
