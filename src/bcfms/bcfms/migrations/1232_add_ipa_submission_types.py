@@ -5,17 +5,18 @@ add_concepts = """
         DECLARE
             scheme_uuid uuid;
             top_collection_uuid uuid;
-            value text;
+            value json;
             child_values json;
-            requirements text[] = array['Chance Find Protocol',
-                                        'Fossil Impact Assessment',
-                                        'Fossil Impact Assessment Plan',
-                                        'Impact Mitigation Final Report',
-                                        'Impact Mitigation Plan',
-                                        'Other Requirement',
-                                        'Preliminary Study Report',
-                                        'Site Assessment Final Report',
-                                        'Site Assessment Plan'];
+            requirements json[] = array[
+                '{"label": "Chance Find Protocol","values": [{"type": "sortorder", "value": "05"}]}'::json,
+                '{"label": "Preliminary Study Report","values": [{"type": "sortorder", "value": "10"}]}'::json,
+                '{"label": "Fossil Impact Assessment Plan","values": [{"type": "sortorder", "value": "15"}]}'::json,
+                '{"label": "Fossil Impact Assessment","values": [{"type": "sortorder", "value": "20"}]}'::json,
+                '{"label": "Impact Mitigation Plan","values": [{"type": "sortorder", "value": "25"}]}'::json,
+                '{"label": "Impact Mitigation Final Report","values": [{"type": "sortorder", "value": "30"}]}'::json,
+                '{"label": "Site Assessment Plan","values": [{"type": "sortorder", "value": "35"}]}'::json,
+                '{"label": "Site Assessment Final Report","values": [{"type": "sortorder", "value": "40"}]}'::json,
+                '{"label": "Other Requirement","values": [{"type": "sortorder", "value": "45"}]}'::json];
             top_values json;
         BEGIN
             -- This needs to be well known to match with the IPA resource model node
@@ -29,10 +30,11 @@ add_concepts = """
                           p_child_collection_uuid => top_collection_uuid);
             raise Notice 'Top values: %', top_values;
             foreach value in ARRAY requirements loop
-                    child_values := import_vocabulary_item_with_collection(
+                    child_values := import_vocabulary_item_with_values(
                             p_parent_concept_uuid => (top_values->>'concept_id')::uuid,
-                            p_child_label => value,
-                            p_parent_collection_uuid => (top_values->>'collection_id')::uuid);
+                            p_child_label => value->>'label',
+                            p_parent_collection_uuid => (top_values->>'collection_id')::uuid,
+                            p_additional_values => value->'values');
                 end loop;
         END $$;
     """
